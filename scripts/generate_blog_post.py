@@ -124,6 +124,24 @@ Wikipedia summary, or a bullet-point status report:
 - Give it room to breathe — don't rush to wrap up in three short
   paragraphs if the topic has more to say.
 
+STRUCTURE: this must read as one continuous, cumulative explanation —
+never a set of independent, interchangeable sections bolted together
+under headings. Every section has to build on what the previous one
+just established: refer back to concepts you already introduced by
+name, extend them, complicate them, apply them — don't introduce a
+fresh, disconnected angle just because it's related to the topic.
+Before adding a facet (an analogy, a cost angle, a "why it matters for
+developers" aside), ask: does this deepen what's already been
+explained, or is it a different mini-topic wearing the same headline?
+If a section could be lifted out and dropped into an unrelated article
+about the same topic without rewriting a word, that's the failure mode
+— rewrite it so it only makes sense here, after what came before it.
+Go deep enough that a technical-but-not-AI-specialist reader finishes
+with real, durable understanding — able to reason about this concept
+next time they hit it, not just recall a definition. Add depth by
+explaining mechanism and following through on implications, not by
+piling on more loosely-related sub-topics.
+
 The example posts below are for topical scope and this blog's subject
 matter only — they're shorter and drier than the voice above calls
 for, so don't mimic their brevity, override it:
@@ -168,7 +186,12 @@ The post should stand on its own as an explanation of the topic for a
 technical reader — what it is, why it matters, how it's typically used
 or implemented. Do NOT structure this as a summary or rewrite of the
 article below; use it only as background/reference for a concrete,
-current example, and cite it as the source.
+current example, and cite it as the source. This is an explainer, so
+the STRUCTURE rule above matters most here: build one idea on top of
+the previous one toward a real, connected understanding of the topic —
+don't cover separate facets of it (e.g. "how it works", then "the
+cost angle", then "why it matters") as if they were independent
+mini-sections with nothing to do with each other.
 
 BACKGROUND ARTICLE (reference only, not the subject)
 Title: "{article_title}"
@@ -184,7 +207,11 @@ there is no source article to reference or cite. Their message below
 is the brief: it names the topic and may also include specific
 requirements (things to cover, an angle to take, a style to write in,
 etc). Follow it as closely as possible while still fitting the voice
-and audience described above.
+and audience described above. If this reads as an explainer (it
+usually will), the STRUCTURE rule above matters most: build one idea
+on top of the previous one toward a real, connected understanding —
+don't cover separate facets as if they were independent mini-sections
+with nothing to do with each other.
 
 USER'S REQUEST (verbatim):
 {brief}"""
