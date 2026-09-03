@@ -59,5 +59,19 @@
     "link": "https://www.theverge.com/ai-artificial-intelligence/987695/openai-astra-unreleased-model-cybersecurity-delay",
     "source": "The Verge AI",
     "cached_at": 1788444811.3151693
+  },
+  "dbc767aca8ae5c39": {
+    "title": "Google’s latest AI weather model gives you no excuse to forget your umbrella",
+    "link": "https://techcrunch.com/2026/09/03/googles-latest-ai-weather-model-gives-you-no-excuse-to-forget-your-umbrella/",
+    "source": "TechCrunch AI",
+    "message_id": 24,
+    "cached_at": 1788448527.7327762
+  },
+  "9c728a917ee7351d": {
+    "title": "Google says its AI weather model is getting better",
+    "link": "https://www.theverge.com/tech/988921/weather-forecast-ai-model-google-satellite-update",
+    "source": "The Verge AI",
+    "message_id": 25,
+    "cached_at": 1788448530.8561287
   }
 }
