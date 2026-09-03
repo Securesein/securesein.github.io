@@ -28,5 +28,29 @@
     "link": "https://www.wired.com/story/nvidia-rtx-spark-laptops-first-look/",
     "source": "Wired AI",
     "cached_at": 1788441075.009524
+  },
+  "3e8f807cf35cebcb": {
+    "title": "A day in the life of a wealth manager, with and without AI",
+    "link": "https://cohere.com/blog/a-day-in-the-life-of-a-wealth-manager-with-and-without-ai",
+    "source": "Cohere Blog",
+    "cached_at": 1788444349.6322508
+  },
+  "7fa31d1e182a6763": {
+    "title": "Muse Video leaks 📹, Ramp Router launch 🔀, why Stripe bought OpenRouter 💰",
+    "link": "https://tldr.tech/ai/2026-08-20",
+    "source": "TLDR AI",
+    "cached_at": 1788444352.792099
+  },
+  "fffbcba03b0b217e": {
+    "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
+    "link": "https://huggingface.co/blog/Hcompany/neomme",
+    "source": "Hugging Face Blog",
+    "cached_at": 1788444356.5823913
+  },
+  "f3f9ecd1d55d517d": {
+    "title": "I Asked ChatGPT to Analyze 3 Datasets. It Made the Same Mistakes Every Time",
+    "link": "https://www.kdnuggets.com/i-asked-chatgpt-to-analyze-3-datasets-it-made-the-same-mistakes-every-time",
+    "source": "KDnuggets",
+    "cached_at": 1788444359.8147347
   }
 }
