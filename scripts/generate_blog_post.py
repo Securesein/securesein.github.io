@@ -50,6 +50,13 @@ BLOG_MODEL = os.environ.get("OPENAI_BLOG_MODEL", "gpt-4o")
 ARTICLE_MAX_CHARS = 8000
 STYLE_EXAMPLE_COUNT = 2
 
+# Length instructions alone (however forceful) reliably underperform
+# for this model — it converges on ~700 words regardless. Below
+# MIN_WORDS, we ask it to expand the actual draft instead of just
+# repeating "write more" in a fresh prompt; that's far more reliable.
+MIN_WORDS = 850
+TARGET_WORDS = 1200
+
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 
@@ -79,10 +86,14 @@ def load_style_examples() -> list[str]:
 # Generation
 # ---------------------------------------------------------------------------
 
-def build_prompt(task_block: str, categories: dict, style_examples: list[str]) -> str:
+def build_system_prompt(categories: dict, style_examples: list[str]) -> str:
     """Shared scaffolding (voice, style examples, category list, JSON
-    contract) around a task-specific block — see build_article_task()
-    and build_concept_task()."""
+    contract) — sent as the system message, with the specific task
+    (see build_article_task() etc.) as the user message. Splitting
+    them this way, instead of one long user message, makes the model
+    noticeably more likely to actually follow the hard constraints
+    below (length, structure) rather than treating them as background
+    color."""
     category_list = "\n".join(
         f'- "{slug}": {info["label"]} — {info["description"]}'
         for slug, info in categories.items()
@@ -142,15 +153,35 @@ next time they hit it, not just recall a definition. Add depth by
 explaining mechanism and following through on implications, not by
 piling on more loosely-related sub-topics.
 
+LENGTH & EXAMPLES — hard requirement, not a suggestion: this post must
+be AT LEAST 900 words, target 1100-1500. A post under 900 words is a
+failed draft, full stop — treat that as a signal you didn't develop
+your examples enough, not as an acceptable outcome for a shorter
+topic. The way to hit this honestly (not by padding) is examples: at
+least TWO points in the post need a fully worked example — a
+scenario, a before/after, a walkthrough — shown happening step by
+step with real specifics (concrete numbers, what a user or developer
+literally sees or does at each stage). "For example, X helps with Y"
+is not a worked example, it's a gesture at one; a real one runs a
+paragraph or more of concrete detail. If you're tempted to end a
+section in one or two sentences, that's exactly where a worked example
+belongs instead. Every added paragraph still has to obey the STRUCTURE
+rule above (build on what came before) — you're going deeper and
+wider on the same throughline, not padding with tangents.
+
+Concretely: write 6-8 sections (##), most of them 2-4 paragraphs, with
+at least two sections built around one of those fully worked examples
+(150+ words each) rather than a one-line mention. Before you write a
+conclusion, check: am I under 1100 words? If so, you are not done —
+go deeper on an angle you haven't covered yet (a failure mode, a
+concrete implementation detail, how this is typically handled in
+practice) rather than padding the conclusion to compensate.
+
 The example posts below are for topical scope and this blog's subject
 matter only — they're shorter and drier than the voice above calls
 for, so don't mimic their brevity, override it:
 
 {examples_block}
-
----
-
-{task_block}
 
 ---
 
@@ -217,11 +248,63 @@ USER'S REQUEST (verbatim):
 {brief}"""
 
 
-def _call_openai(prompt: str, categories: dict) -> dict | None:
+def _expand_body(body: str, task: str, system_prompt: str) -> str | None:
+    """Second pass, only used when the first draft came in under
+    MIN_WORDS: asks the model to expand the existing draft (not
+    rewrite from scratch) by adding worked examples and an uncovered
+    angle. Returns the expanded body, or None if this pass fails or
+    doesn't actually help."""
+    word_count = len(body.split())
+    expand_task = f"""Below is a draft blog post body that came in at
+{word_count} words — under the {MIN_WORDS}-word minimum. Expand it to
+at least {TARGET_WORDS} words:
+- add 1-2 more fully worked examples (150+ words each, concrete
+  specifics — real numbers, what a user/developer sees at each step)
+  to sections that currently just gesture at a point
+- go deeper on an angle the draft hasn't covered yet (a failure mode,
+  an implementation detail, how this is handled in practice)
+
+Do not shorten, remove, or rewrite what's already good — keep the
+existing structure, voice, and throughline; only add material that
+connects into it, per the STRUCTURE rule. Return the SAME JSON shape
+as before (title, description, tags, body) with the expanded body.
+
+ORIGINAL TASK (for context):
+{task}
+
+DRAFT BODY TO EXPAND:
+{body}"""
+
     try:
         response = client.chat.completions.create(
             model=BLOG_MODEL,
-            messages=[{"role": "user", "content": prompt}],
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": expand_task},
+            ],
+            response_format={"type": "json_object"},
+            temperature=0.75,
+        )
+        expanded = json.loads(response.choices[0].message.content or "{}")
+        expanded_body = str(expanded.get("body", "")).strip()
+    except Exception as e:
+        print(f"    Expansion pass failed, keeping the {word_count}-word draft: {e}", file=sys.stderr)
+        return None
+
+    if len(expanded_body.split()) <= word_count:
+        return None  # didn't actually help — keep the original
+    return expanded_body
+
+
+def _call_openai(task: str, categories: dict, style_examples: list[str]) -> dict | None:
+    system_prompt = build_system_prompt(categories, style_examples)
+    try:
+        response = client.chat.completions.create(
+            model=BLOG_MODEL,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": task},
+            ],
             response_format={"type": "json_object"},
             temperature=0.75,
         )
@@ -241,11 +324,20 @@ def _call_openai(prompt: str, categories: dict) -> dict | None:
     if not valid_tags:
         valid_tags = ["meta"]
 
+    body = str(data["body"]).strip()
+    word_count = len(body.split())
+    if word_count < MIN_WORDS:
+        print(f"    Draft was {word_count} words (under {MIN_WORDS}) — expanding...", file=sys.stderr)
+        expanded = _expand_body(body, task, system_prompt)
+        if expanded:
+            body = expanded
+            print(f"    Expanded to {len(body.split())} words.", file=sys.stderr)
+
     return {
         "title": str(data["title"]).strip(),
         "description": str(data.get("description", "")).strip() or "Read more below.",
         "tags": valid_tags,
-        "body": str(data["body"]).strip(),
+        "body": body,
     }
 
 
@@ -257,7 +349,7 @@ def generate_post(title: str, source: str, link: str, categories: dict, style_ex
         return None
 
     task = build_article_task(title, source, article_text)
-    return _call_openai(build_prompt(task, categories, style_examples), categories)
+    return _call_openai(task, categories, style_examples)
 
 
 def generate_concept_post(
@@ -275,14 +367,14 @@ def generate_concept_post(
         article_text = "(not available)"
 
     task = build_concept_task(topic, article_title, source, article_text)
-    return _call_openai(build_prompt(task, categories, style_examples), categories)
+    return _call_openai(task, categories, style_examples)
 
 
 def generate_custom_post(brief: str, categories: dict, style_examples: list[str]) -> dict | None:
     """From-scratch post requested directly, no article involved at
     all — the plain-message flow."""
     task = build_custom_task(brief)
-    return _call_openai(build_prompt(task, categories, style_examples), categories)
+    return _call_openai(task, categories, style_examples)
 
 
 # ---------------------------------------------------------------------------

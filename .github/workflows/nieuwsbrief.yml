@@ -1,17 +1,18 @@
 name: AI news pipeline
 
-# Runs twice a day, targeting 08:00 and 20:00 Europe/Amsterdam time.
-# GitHub Actions cron is UTC-only and Amsterdam alternates between
-# UTC+1 (CET, winter) and UTC+2 (CEST, summer) — a single fixed UTC
-# cron would drift an hour off target after each clock change. Instead
-# this fires at all four candidate UTC times (covering both offsets)
-# and the "Determine whether to run now" step below only lets the rest
-# of the job proceed on the two that actually land on 08:00/20:00
-# Amsterdam time — the other two are a clean no-op (green, does
-# nothing), so no manual DST adjustment is ever needed.
+# Runs four times a day, targeting 08:00/12:00/16:00/20:00
+# Europe/Amsterdam time. GitHub Actions cron is UTC-only and Amsterdam
+# alternates between UTC+1 (CET, winter) and UTC+2 (CEST, summer) — a
+# set of fixed UTC times would drift an hour off target after each
+# clock change. Instead this fires at all eight candidate UTC times
+# (covering both offsets for all four target times) and the "Determine
+# whether to run now" step below only lets the rest of the job proceed
+# on the four that actually land on 08/12/16/20:00 Amsterdam time —
+# the other four are a clean no-op (green, does nothing), so no manual
+# DST adjustment is ever needed.
 on:
   schedule:
-    - cron: "0 6,7,18,19 * * *"
+    - cron: "0 6,7,10,11,14,15,18,19 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -32,11 +33,11 @@ jobs:
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             hour=$(TZ=Europe/Amsterdam date +%H)
-            if [ "$hour" = "08" ] || [ "$hour" = "20" ]; then
+            if [ "$hour" = "08" ] || [ "$hour" = "12" ] || [ "$hour" = "16" ] || [ "$hour" = "20" ]; then
               echo "It's $hour:xx in Amsterdam — this is a real run."
               echo "run=true" >> "$GITHUB_OUTPUT"
             else
-              echo "It's $hour:xx in Amsterdam, not 08:00/20:00 — this cron " \
+              echo "It's $hour:xx in Amsterdam, not 08/12/16/20:00 — this cron " \
                    "fire only exists to cover the other DST offset. Skipping."
               echo "run=false" >> "$GITHUB_OUTPUT"
             fi
