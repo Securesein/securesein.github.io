@@ -52,5 +52,11 @@
     "link": "https://www.kdnuggets.com/i-asked-chatgpt-to-analyze-3-datasets-it-made-the-same-mistakes-every-time",
     "source": "KDnuggets",
     "cached_at": 1788444359.8147347
+  },
+  "cf63341f69f38362": {
+    "title": "OpenAI delayed its new model’s development after the Hugging Face hack",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/987695/openai-astra-unreleased-model-cybersecurity-delay",
+    "source": "The Verge AI",
+    "cached_at": 1788444811.3151693
   }
 }

@@ -16,5 +16,15 @@
     "status": "published",
     "slug": "nvidia-s-acquisition-of-hugging-face-what-s-at-stake-for-ai-development",
     "published_at": 1788440338.9501019
+  },
+  "fffbcba03b0b217e": {
+    "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
+    "link": "https://huggingface.co/blog/Hcompany/neomme",
+    "source": "Hugging Face Blog",
+    "cached_at": 1788444356.5823913,
+    "marked_at": 1788444788.4842432,
+    "status": "published",
+    "slug": "neomme-bridging-multimodal-and-multilingual-processing-in-one-encoder",
+    "published_at": 1788444796.5619955
   }
 }
