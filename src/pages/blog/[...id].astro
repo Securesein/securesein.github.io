@@ -1,0 +1,100 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+import AiAvatar from "../../components/AiAvatar.astro";
+import { AUTHORS } from "../../authors";
+import { CATEGORIES } from "../../categories";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await render(post);
+const readingTime = remarkPluginFrontmatter?.minutesRead;
+const author = AUTHORS[post.data.author];
+const initials = author.name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
+---
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <article class="container post">
+    <a href="/blog" class="back">&larr; Back to blog</a>
+
+    {post.data.tags.length > 0 && (
+      <div class="post-tags">
+        {post.data.tags.map((tag) => <span class="pill">{CATEGORIES[tag].label}</span>)}
+      </div>
+    )}
+
+    <h1 class="post-title">{post.data.title}</h1>
+    <p class="post-lead">{post.data.description}</p>
+
+    <div class="post-byline">
+      <div class="author">
+        {author.isAI ? (
+          <AiAvatar />
+        ) : (
+          <span class="avatar">{initials}</span>
+        )}
+        <span class="author-text">
+          <strong>
+            {author.name}
+            {author.isAI && <span class="ai-badge">AI</span>}
+          </strong>
+          <span class="author-role">{author.role}</span>
+        </span>
+      </div>
+      <span class="post-meta">
+        <FormattedDate date={post.data.pubDate} />
+        {readingTime && <> &middot; {readingTime}</>}
+      </span>
+    </div>
+
+    {author.isAI && <p class="ai-note">{author.blurb}</p>}
+
+    {post.data.sourceUrl && (
+      <div class="post-source">
+        Based on: <a href={post.data.sourceUrl}>{post.data.sourceName ?? post.data.sourceUrl}</a>
+      </div>
+    )}
+
+    <hr class="rule" />
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .post { padding-top: 2.5rem; }
+  .back { color: var(--text-muted); font-size: 0.95rem; }
+  .back:hover { color: var(--text); text-decoration: none; }
+  .post-tags { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 2rem; }
+  .post-title { font-size: clamp(2rem, 5vw, 3rem); margin-top: 1.2rem; }
+  .post-lead { font-size: 1.25rem; color: var(--text-muted); margin-top: 1.2rem; }
+  .post-byline { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+  .author { display: flex; align-items: center; gap: 0.8rem; }
+  .avatar {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; border-radius: 999px;
+    background: var(--bg-elevated); border: 1px solid var(--border-strong);
+    font-size: 0.85rem; font-weight: 700; color: var(--text);
+  }
+  .author-text { display: flex; flex-direction: column; line-height: 1.3; }
+  .author-role { color: var(--text-muted); font-size: 0.85rem; }
+  .ai-badge {
+    display: inline-block; margin-left: 0.5rem; padding: 0.1rem 0.45rem;
+    border-radius: 999px; background: var(--bg-pill); border: 1px solid var(--border-strong);
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-muted);
+    vertical-align: middle;
+  }
+  .post-meta { color: var(--text-muted); font-size: 0.9rem; }
+  .ai-note { margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted); font-style: italic; }
+  .post-source { margin-top: 1.2rem; font-size: 0.9rem; color: var(--text-muted); }
+  .rule { border: none; border-top: 1px solid var(--border); margin-block: 2.2rem; }
+</style>

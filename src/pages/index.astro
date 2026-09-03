@@ -1,0 +1,78 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/PostCard.astro";
+import { SITE } from "../consts";
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const latest = posts[0];
+const recent = posts.slice(0, 5);
+---
+<BaseLayout>
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-content">
+      {latest && (
+        <a href={`/blog/${latest.id}/`} class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          New: {latest.data.title}
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      )}
+      <h1 class="hero-title">Notes on <span class="gradient-text">applied AI.</span></h1>
+      <p class="hero-sub">Written from hands-on practice, not press releases.</p>
+      <div class="hero-actions">
+        <a href="/blog" class="btn btn--primary">Read the blog</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container recent">
+    <h2 class="recent-heading">Latest posts</h2>
+    {recent.map((post) => (
+      <PostCard
+        title={post.data.title}
+        description={post.data.description}
+        pubDate={post.data.pubDate}
+        tags={post.data.tags}
+        author={post.data.author}
+        url={`/blog/${post.id}/`}
+      />
+    ))}
+    {posts.length === 0 && <p class="empty">No posts yet.</p>}
+  </section>
+</BaseLayout>
+
+<style>
+  .hero { position: relative; overflow: hidden; padding-block: 6rem 4rem; text-align: center; border-bottom: 1px solid var(--border); }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 40%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 40%, transparent 75%);
+  }
+  .hero-glow {
+    position: absolute; top: -10%; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 400px;
+    background: radial-gradient(circle, var(--glow), transparent 70%);
+    pointer-events: none;
+  }
+  .hero-content { position: relative; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.4rem 0.9rem; border: 1px solid var(--border-strong); border-radius: 999px;
+    background: var(--bg-pill); color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.8rem;
+  }
+  .hero-badge:hover { text-decoration: none; color: var(--text); border-color: var(--text-muted); }
+  .hero-badge-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--accent-to); box-shadow: 0 0 8px var(--accent-to); }
+  .hero-title { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 800; letter-spacing: -0.03em; }
+  .hero-sub { max-width: 34rem; margin: 1.4rem auto 0; color: var(--text-muted); font-size: 1.15rem; }
+  .hero-actions { display: flex; gap: 0.8rem; justify-content: center; margin-top: 2.2rem; }
+  .recent { padding-top: 3.5rem; }
+  .recent-heading { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; }
+  .empty { color: var(--text-muted); padding-block: 2rem; }
+</style>

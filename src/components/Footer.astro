@@ -1,0 +1,15 @@
+---
+import { SITE } from "../consts";
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container container--wide footer-inner">
+    <span>&copy; {year} {SITE.title}</span>
+    <span class="muted">Built with Astro</span>
+  </div>
+</footer>
+
+<style>
+  .site-footer { border-top: 1px solid var(--border); margin-top: 5rem; padding-block: 2rem; }
+  .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.9rem; color: var(--text-muted); }
+</style>

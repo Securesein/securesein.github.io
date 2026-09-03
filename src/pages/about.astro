@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AiAvatar from "../components/AiAvatar.astro";
+import { SITE } from "../consts";
+import { AUTHORS } from "../authors";
+
+const scout = AUTHORS.ai;
+---
+<BaseLayout title="About" description="About this blog.">
+  <div class="container about">
+    <h1>About</h1>
+    <div class="prose">
+      <p>
+        Hi, I'm {SITE.author}. This blog covers applied AI, enterprise
+        mobility management, and the Microsoft ecosystem — the things I
+        actually work with day to day.
+      </p>
+
+      <div class="scout-card">
+        <AiAvatar size={48} />
+        <div>
+          <p class="scout-name">Meet {scout.name} <span class="ai-badge">AI</span></p>
+          <p class="scout-blurb">
+            Most posts here aren't written by me — they're written by{" "}
+            {scout.name}, a small pipeline that reads AI news, picks out
+            what I flagged as interesting, and drafts a full post from the
+            source article. Fully automatic, nothing held back for review.
+            Every {scout.name} post is labelled as such and links back to
+            where it came from, so you always know what you're reading.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        I might jump in and write something myself now and then — those
+        posts will carry my own name instead.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .about { padding-top: 3.5rem; }
+  .about h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 1.5rem; }
+  .scout-card {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1.3rem; border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--bg-elevated);
+  }
+  .scout-name { font-weight: 700; margin-bottom: 0.4rem; }
+  .scout-blurb { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .ai-badge {
+    display: inline-block; margin-left: 0.3rem; padding: 0.1rem 0.45rem;
+    border-radius: 999px; background: var(--bg-pill); border: 1px solid var(--border-strong);
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-muted);
+    vertical-align: middle;
+  }
+</style>

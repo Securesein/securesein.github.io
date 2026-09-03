@@ -1,0 +1,46 @@
+---
+import { SITE, NAV_LINKS } from "../consts";
+import ThemeToggle from "./ThemeToggle.astro";
+---
+<header class="site-header">
+  <div class="container container--wide header-inner">
+    <a href="/" class="brand" aria-label="Go to homepage">
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="url(#brandGradient)"/>
+        <defs>
+          <linearGradient id="brandGradient" x1="0" y1="0" x2="24" y2="24">
+            <stop offset="0" stop-color="#8b5cf6"/>
+            <stop offset="1" stop-color="#22d3ee"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="brand-name">{SITE.title}</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      {NAV_LINKS.map((link) => <a href={link.href} class="nav-link">{link.label}</a>)}
+    </nav>
+    <div class="header-actions">
+      <ThemeToggle />
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--bg) 80%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner { display: flex; align-items: center; gap: 1.5rem; height: 64px; }
+  .brand { display: inline-flex; align-items: center; gap: 0.55rem; color: var(--text); font-weight: 700; letter-spacing: -0.02em; }
+  .brand:hover { text-decoration: none; }
+  .brand-mark { width: 22px; height: 22px; }
+  .nav { display: flex; gap: 1.3rem; margin-right: auto; }
+  .nav-link { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; }
+  .nav-link:hover { color: var(--text); text-decoration: none; }
+  .header-actions { display: flex; align-items: center; gap: 0.6rem; }
+  @media (max-width: 480px) { .brand-name { display: none; } }
+</style>
