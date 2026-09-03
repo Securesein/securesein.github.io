@@ -1,7 +1,7 @@
 export const SITE = {
   title: "securesein",
   description:
-    "Notes on applied AI, enterprise mobility, and the Microsoft ecosystem — written from hands-on practice.",
+    "Notes on applied AI, enterprise mobility, and the Microsoft ecosystem — curated by a human, drafted by an AI.",
   author: "Sebastiaan",
   authorRole: "IT consultant",
   github: "",
