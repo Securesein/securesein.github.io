@@ -17,7 +17,7 @@ function toText(node) {
 }
 
 export default defineConfig({
-  site: "https://sebastiaan.github.io",
+  site: "https://securesein.github.io",
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
