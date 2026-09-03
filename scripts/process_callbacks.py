@@ -1,14 +1,21 @@
 """
 Poll Telegram for updates since the last run and turn them into blog
-post requests, in two ways:
+post requests, in three ways:
 
 - callback_query (the ☆ button): marks the article itself for a post —
   a direct write-up of that specific news item. Confirmed by swapping
   the button to a filled star.
-- a plain reply to one of our messages: marks a *concept* post — the
-  reply text is the topic (e.g. "multimodality"), the article is only
-  background/reference, not the subject. Confirmed with a threaded
-  reply. Both can exist for the same article at once.
+- a reply to one of our messages: marks a *concept* post — the reply
+  text is the topic (e.g. "multimodality"), the article is only
+  background/reference, not the subject. Both this and the button can
+  exist for the same article at once.
+- a plain message, not a reply to anything: marks a *custom* post with
+  no source article at all — the message text (topic plus whatever
+  else the user adds: extra angles, things to cover, style requests)
+  goes to the model as the brief, verbatim.
+
+All three get a threaded/inline confirmation so a press or message
+never just disappears silently.
 
 Runs as its own step in .github/workflows/nieuwsbrief.yml, *before*
 fetch_and_notify.py — matching the pipeline order in the project brief:
@@ -77,13 +84,13 @@ def handle_button_press(callback: dict, item_cache: dict, marked: dict) -> None:
 
 
 def handle_reply(message: dict, item_cache: dict, marked: dict, msgid_to_sid: dict) -> None:
-    reply_to = message.get("reply_to_message")
-    if not reply_to or reply_to.get("from", {}).get("id") != telegram_api.BOT_ID:
-        return  # not a reply, or replying to something other than us
-
+    reply_to = message["reply_to_message"]
     topic = (message.get("text") or "").strip()
     if not topic:
         return  # e.g. a reply that's a photo/sticker with no text — nothing to act on
+
+    if reply_to.get("from", {}).get("id") != telegram_api.BOT_ID:
+        return  # replying to something other than one of our article messages
 
     sid = msgid_to_sid.get(reply_to.get("message_id"))
     item = item_cache.get(sid) if sid else None
@@ -109,6 +116,26 @@ def handle_reply(message: dict, item_cache: dict, marked: dict, msgid_to_sid: di
     )
 
 
+def handle_custom_request(message: dict, marked: dict) -> None:
+    """A plain message, not a reply to anything — the user's own
+    words, with no article attached. The whole message (topic plus
+    any extra requirements) becomes the brief, verbatim."""
+    brief = (message.get("text") or "").strip()
+    if not brief:
+        return  # e.g. a photo/sticker with no caption — nothing to act on
+
+    key = f"custom:{message['message_id']}"
+    marked[key] = {
+        "brief": brief,
+        "kind": "custom",
+        "marked_at": time.time(),
+        "status": "pending",
+    }
+    preview = brief if len(brief) <= 80 else brief[:79] + "…"
+    print(f"  Marked custom post: \"{preview}\"")
+    telegram_api.send_reply(f"Got it — queued a post: “{preview}”. 📝", message["message_id"])
+
+
 def main() -> None:
     offset_state = load_json(OFFSET_FILE, {})
     offset = offset_state.get("offset")
@@ -131,10 +158,13 @@ def main() -> None:
         message = update.get("message")
         if callback:
             handle_button_press(callback, item_cache, marked)
-        elif message:
-            handle_reply(message, item_cache, marked, msgid_to_sid)
-        # anything else (edited messages, other update types) — ignore,
-        # still advance the offset past it
+        elif message and not message.get("from", {}).get("is_bot"):
+            if message.get("reply_to_message"):
+                handle_reply(message, item_cache, marked, msgid_to_sid)
+            else:
+                handle_custom_request(message, marked)
+        # anything else (edited messages, our own messages, other update
+        # types) — ignore, still advance the offset past it
 
     save_json(OFFSET_FILE, {"offset": highest_update_id + 1})
     save_json(MARKED_FILE, marked)

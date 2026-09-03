@@ -178,6 +178,18 @@ Article text:
 {article_text}"""
 
 
+def build_custom_task(brief: str) -> str:
+    return f"""The user requested this post directly, from scratch —
+there is no source article to reference or cite. Their message below
+is the brief: it names the topic and may also include specific
+requirements (things to cover, an angle to take, a style to write in,
+etc). Follow it as closely as possible while still fitting the voice
+and audience described above.
+
+USER'S REQUEST (verbatim):
+{brief}"""
+
+
 def _call_openai(prompt: str, categories: dict) -> dict | None:
     try:
         response = client.chat.completions.create(
@@ -239,6 +251,13 @@ def generate_concept_post(
     return _call_openai(build_prompt(task, categories, style_examples), categories)
 
 
+def generate_custom_post(brief: str, categories: dict, style_examples: list[str]) -> dict | None:
+    """From-scratch post requested directly, no article involved at
+    all — the plain-message flow."""
+    task = build_custom_task(brief)
+    return _call_openai(build_prompt(task, categories, style_examples), categories)
+
+
 # ---------------------------------------------------------------------------
 # Writing the post file
 # ---------------------------------------------------------------------------
@@ -258,25 +277,29 @@ def unique_slug(base_slug: str) -> str:
     return slug
 
 
-def write_post_file(post: dict, source_url: str, source_name: str) -> str:
+def write_post_file(post: dict, source_url: str | None = None, source_name: str | None = None) -> str:
+    """source_url/source_name are omitted from the frontmatter entirely
+    when absent (both are optional in content.config.ts) — a custom,
+    from-scratch post has no article to attribute."""
     slug = unique_slug(slugify(post["title"]))
     pub_date = time.strftime("%Y-%m-%d")
     tags_yaml = ", ".join(f'"{t}"' for t in post["tags"])
 
-    frontmatter = f"""---
-title: {json.dumps(post["title"])}
-description: {json.dumps(post["description"])}
-pubDate: {pub_date}
-tags: [{tags_yaml}]
-sourceUrl: {json.dumps(source_url)}
-sourceName: {json.dumps(source_name)}
-author: "ai"
----
+    lines = [
+        "---",
+        f'title: {json.dumps(post["title"])}',
+        f'description: {json.dumps(post["description"])}',
+        f"pubDate: {pub_date}",
+        f"tags: [{tags_yaml}]",
+    ]
+    if source_url:
+        lines.append(f"sourceUrl: {json.dumps(source_url)}")
+    if source_name:
+        lines.append(f"sourceName: {json.dumps(source_name)}")
+    lines += ['author: "ai"', "---", "", post["body"], ""]
 
-{post["body"]}
-"""
     path = BLOG_DIR / f"{slug}.md"
-    path.write_text(frontmatter, encoding="utf-8")
+    path.write_text("\n".join(lines), encoding="utf-8")
     return slug
 
 
@@ -306,19 +329,27 @@ def main() -> None:
 
     for sid, item in pending.items():
         kind = item.get("kind", "article")
+        source_url = source_name = None
+
         if kind == "concept":
             print(f"  Writing concept post \"{item['topic']}\" (from: {item['title'][:50]})...")
             post = generate_concept_post(
                 item["topic"], item["title"], item["source"], item["link"], categories, style_examples
             )
+            source_url, source_name = item["link"], item["source"]
+        elif kind == "custom":
+            preview = item["brief"] if len(item["brief"]) <= 60 else item["brief"][:59] + "…"
+            print(f"  Writing custom post: \"{preview}\"...")
+            post = generate_custom_post(item["brief"], categories, style_examples)
         else:
             print(f"  Writing: {item['title'][:60]}...")
             post = generate_post(item["title"], item["source"], item["link"], categories, style_examples)
+            source_url, source_name = item["link"], item["source"]
 
         if post is None:
             continue  # leave status "pending" — will retry next run
 
-        slug = write_post_file(post, item["link"], item["source"])
+        slug = write_post_file(post, source_url, source_name)
         print(f"    -> src/content/blog/{slug}.md")
 
         marked[sid]["status"] = "published"

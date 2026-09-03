@@ -18,6 +18,11 @@ const { post } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await render(post);
 const readingTime = remarkPluginFrontmatter?.minutesRead;
 const author = AUTHORS[post.data.author];
+// The default blurb assumes a source article; a from-scratch request
+// (no sourceUrl) gets an accurate variant instead.
+const aiNote = post.data.sourceUrl
+  ? author.blurb
+  : "Scout drafted this post directly from a request — no source article, and no human edits it before it publishes.";
 const initials = author.name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
 ---
 <BaseLayout title={post.data.title} description={post.data.description}>
@@ -54,7 +59,7 @@ const initials = author.name.split(" ").map((w) => w[0]).slice(0, 2).join("").to
       </span>
     </div>
 
-    {author.isAI && <p class="ai-note">{author.blurb}</p>}
+    {author.isAI && <p class="ai-note">{aiNote}</p>}
 
     {post.data.sourceUrl && (
       <div class="post-source">
