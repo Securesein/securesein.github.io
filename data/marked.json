@@ -39,5 +39,13 @@
     "status": "published",
     "slug": "understanding-venturebeat-s-role-in-the-ai-industry",
     "published_at": 1788446003.397011
+  },
+  "custom:22": {
+    "brief": "Tokens zijn een fundamenteel concept maar veel mensen begrijpen niet goed wat ze nu precies zijn. Vaakt wordt over tokens geeacht als de currency in bijvoorbeeld claude. Kun je een diepgaande uitleg geven over wat tokens nu precies zijn",
+    "kind": "custom",
+    "marked_at": 1788447114.8890467,
+    "status": "published",
+    "slug": "decoding-tokens-the-building-blocks-of-ai-language-models",
+    "published_at": 1788447141.4090078
   }
 }
