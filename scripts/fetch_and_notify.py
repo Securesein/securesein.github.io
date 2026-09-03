@@ -28,14 +28,18 @@ import requests
 from bs4 import BeautifulSoup
 from openai import OpenAI
 
+import telegram_api
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 FEEDS_FILE = REPO_ROOT / "feeds.json"
 DATA_DIR = REPO_ROOT / "data"
 SEEN_FILE = DATA_DIR / "gezien.json"
 ITEM_CACHE_FILE = DATA_DIR / "item_cache.json"
 
-TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
-TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
+# Empty star until pressed — process_callbacks.py swaps it to a filled,
+# gold star on click so a press is unmistakable at a glance.
+PENDING_BUTTON = "☆ Write blog post"
+
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 # Kept as an env var (not hardcoded) so a deprecated/renamed model doesn't
 # require a code change — just update the workflow env.
@@ -206,29 +210,10 @@ like "here is a summary". Return ONLY the summary text, nothing else."""
 # Telegram
 # ---------------------------------------------------------------------------
 
-def send_telegram_message(item: dict, summary: str, sid: str) -> bool:
+def notify_telegram(item: dict, summary: str, sid: str) -> bool:
     text = f"📰 {item['title']}\n({item['source']})\n\n{summary}\n\n{item['link']}"
-    payload = {
-        "chat_id": TELEGRAM_CHAT_ID,
-        "text": text,
-        "disable_web_page_preview": False,
-        "reply_markup": {
-            "inline_keyboard": [[
-                {"text": "⭐ Write blog post", "callback_data": sid}
-            ]]
-        },
-    }
-    try:
-        response = requests.post(
-            f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage",
-            json=payload,
-            timeout=15,
-        )
-        response.raise_for_status()
-        return True
-    except requests.RequestException as e:
-        print(f"    Telegram send failed: {e}", file=sys.stderr)
-        return False
+    result = telegram_api.send_message(text, PENDING_BUTTON, sid)
+    return result is not None and result.get("ok", False)
 
 
 # ---------------------------------------------------------------------------
@@ -268,7 +253,7 @@ def main() -> None:
         summary = summarize_item(item)
         sid = short_id(item["id"])
 
-        sent = send_telegram_message(item, summary, sid)
+        sent = notify_telegram(item, summary, sid)
         # Only mark as seen (and cache it) once it's actually been sent —
         # otherwise a failed Telegram send would silently drop the item
         # instead of retrying it on the next run.
@@ -306,7 +291,7 @@ def send_test_message() -> bool:
         "source": "fetch_and_notify.py --test",
     }
     summary = summarize_item(test_item)
-    ok = send_telegram_message(test_item, summary, short_id("test"))
+    ok = notify_telegram(test_item, summary, short_id("test"))
     print("OK!" if ok else "Failed — see error above.")
     return ok
 
