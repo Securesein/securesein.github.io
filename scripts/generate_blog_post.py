@@ -79,7 +79,10 @@ def load_style_examples() -> list[str]:
 # Generation
 # ---------------------------------------------------------------------------
 
-def build_prompt(title: str, source: str, article_text: str, categories: dict, style_examples: list[str]) -> str:
+def build_prompt(task_block: str, categories: dict, style_examples: list[str]) -> str:
+    """Shared scaffolding (voice, style examples, category list, JSON
+    contract) around a task-specific block — see build_article_task()
+    and build_concept_task()."""
     category_list = "\n".join(
         f'- "{slug}": {info["label"]} — {info["description"]}'
         for slug, info in categories.items()
@@ -99,12 +102,7 @@ not these):
 
 ---
 
-NEW ARTICLE TO WRITE ABOUT
-Title: "{title}"
-Source: {source}
-
-Article text:
-{article_text}
+{task_block}
 
 ---
 
@@ -114,21 +112,43 @@ the exact slug in quotes, nothing else):
 
 Return ONLY a JSON object with exactly these keys, nothing else:
 {{
-  "title": "a clear, specific headline for the post (not identical to the source title necessarily)",
+  "title": "a clear, specific headline for the post",
   "description": "one sentence, shown under the title as a lede",
   "tags": ["one-or-two-category-slugs-from-the-list-above"],
   "body": "the full post body in Markdown, no frontmatter, no h1 (the title is rendered separately) — start with a short lead paragraph, use ## for section headings"
 }}"""
 
 
-def generate_post(title: str, source: str, link: str, categories: dict, style_examples: list[str]) -> dict | None:
-    article_text = fetch_article_text(link, ARTICLE_MAX_CHARS)
-    if len(article_text) < 200:
-        print(f"    Skipping — couldn't fetch enough article text from {link}", file=sys.stderr)
-        return None
+def build_article_task(title: str, source: str, article_text: str) -> str:
+    return f"""NEW ARTICLE TO WRITE ABOUT
+Title: "{title}"
+Source: {source}
 
-    prompt = build_prompt(title, source, article_text, categories, style_examples)
+Article text:
+{article_text}"""
 
+
+def build_concept_task(topic: str, article_title: str, source: str, article_text: str) -> str:
+    return f"""Write an EXPLAINER post about the following concept/topic —
+this is the actual subject of the post, not the article below:
+
+TOPIC: "{topic}"
+
+The post should stand on its own as an explanation of the topic for a
+technical reader — what it is, why it matters, how it's typically used
+or implemented. Do NOT structure this as a summary or rewrite of the
+article below; use it only as background/reference for a concrete,
+current example, and cite it as the source.
+
+BACKGROUND ARTICLE (reference only, not the subject)
+Title: "{article_title}"
+Source: {source}
+
+Article text:
+{article_text}"""
+
+
+def _call_openai(prompt: str, categories: dict) -> dict | None:
     try:
         response = client.chat.completions.create(
             model=BLOG_MODEL,
@@ -158,6 +178,35 @@ def generate_post(title: str, source: str, link: str, categories: dict, style_ex
         "tags": valid_tags,
         "body": str(data["body"]).strip(),
     }
+
+
+def generate_post(title: str, source: str, link: str, categories: dict, style_examples: list[str]) -> dict | None:
+    """Direct write-up of the article itself — the ☆ button flow."""
+    article_text = fetch_article_text(link, ARTICLE_MAX_CHARS)
+    if len(article_text) < 200:
+        print(f"    Skipping — couldn't fetch enough article text from {link}", file=sys.stderr)
+        return None
+
+    task = build_article_task(title, source, article_text)
+    return _call_openai(build_prompt(task, categories, style_examples), categories)
+
+
+def generate_concept_post(
+    topic: str, article_title: str, source: str, link: str, categories: dict, style_examples: list[str]
+) -> dict | None:
+    """Explainer about a concept the user named in a reply — the
+    article is background/reference, not the subject, so (unlike
+    generate_post) a thin or failed scrape doesn't block this: the
+    model can still write the explainer from its own knowledge of the
+    topic, just with less concrete grounding to cite."""
+    article_text = fetch_article_text(link, ARTICLE_MAX_CHARS)
+    if len(article_text) < 200:
+        print(f"    Note: little/no article text available from {link} — "
+              f"writing from general knowledge of the topic instead.", file=sys.stderr)
+        article_text = "(not available)"
+
+    task = build_concept_task(topic, article_title, source, article_text)
+    return _call_openai(build_prompt(task, categories, style_examples), categories)
 
 
 # ---------------------------------------------------------------------------
@@ -226,8 +275,16 @@ def main() -> None:
     print(f"{len(pending)} item(s) pending a blog post.")
 
     for sid, item in pending.items():
-        print(f"  Writing: {item['title'][:60]}...")
-        post = generate_post(item["title"], item["source"], item["link"], categories, style_examples)
+        kind = item.get("kind", "article")
+        if kind == "concept":
+            print(f"  Writing concept post \"{item['topic']}\" (from: {item['title'][:50]})...")
+            post = generate_concept_post(
+                item["topic"], item["title"], item["source"], item["link"], categories, style_examples
+            )
+        else:
+            print(f"  Writing: {item['title'][:60]}...")
+            post = generate_post(item["title"], item["source"], item["link"], categories, style_examples)
+
         if post is None:
             continue  # leave status "pending" — will retry next run
 

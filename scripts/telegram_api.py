@@ -14,6 +14,11 @@ TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
 API_BASE = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
 
+# A bot token is formatted "<bot_id>:<secret>" — the id half tells us
+# which messages are *from this bot* without an extra getMe() call, so
+# a reply can be checked against "is this actually replying to us".
+BOT_ID = int(TELEGRAM_BOT_TOKEN.split(":")[0])
+
 
 def _post(method: str, payload: dict) -> dict | None:
     try:
@@ -50,6 +55,16 @@ def edit_button(message_id: int, button_text: str, button_callback_data: str) ->
                 {"text": button_text, "callback_data": button_callback_data}
             ]]
         },
+    })
+
+
+def send_reply(text: str, reply_to_message_id: int) -> dict | None:
+    """Plain confirmation message, threaded under the user's reply —
+    no button, unlike send_message()."""
+    return _post("sendMessage", {
+        "chat_id": TELEGRAM_CHAT_ID,
+        "text": text,
+        "reply_to_message_id": reply_to_message_id,
     })
 
 

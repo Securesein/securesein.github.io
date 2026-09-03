@@ -185,10 +185,14 @@ like "here is a summary". Return ONLY the summary text, nothing else."""
 # Telegram
 # ---------------------------------------------------------------------------
 
-def notify_telegram(item: dict, summary: str, sid: str) -> bool:
+def notify_telegram(item: dict, summary: str, sid: str) -> int | None:
+    """Returns the sent message's Telegram message_id (so it can be
+    cached and later matched against a reply), or None on failure."""
     text = f"📰 {item['title']}\n({item['source']})\n\n{summary}\n\n{item['link']}"
     result = telegram_api.send_message(text, PENDING_BUTTON, sid)
-    return result is not None and result.get("ok", False)
+    if result is None or not result.get("ok"):
+        return None
+    return result.get("result", {}).get("message_id")
 
 
 # ---------------------------------------------------------------------------
@@ -228,16 +232,17 @@ def main() -> None:
         summary = summarize_item(item)
         sid = short_id(item["id"])
 
-        sent = notify_telegram(item, summary, sid)
+        message_id = notify_telegram(item, summary, sid)
         # Only mark as seen (and cache it) once it's actually been sent —
         # otherwise a failed Telegram send would silently drop the item
         # instead of retrying it on the next run.
-        if sent:
+        if message_id is not None:
             seen_ids.add(item["id"])
             item_cache[sid] = {
                 "title": item["title"],
                 "link": item["link"],
                 "source": item["source"],
+                "message_id": message_id,
                 "cached_at": time.time(),
             }
             save_seen(seen_ids)
