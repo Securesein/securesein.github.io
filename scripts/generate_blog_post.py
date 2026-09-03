@@ -91,12 +91,42 @@ def build_prompt(task_block: str, categories: dict, style_examples: list[str]) -
 
     return f"""You are writing a blog post for "securesein", a blog about
 applied AI, enterprise mobility, and the Microsoft ecosystem — written
-from hands-on practice, not press releases. Match the tone and
-structure of the example posts below: direct, concrete, no marketing
-fluff, no "in today's fast-paced world" openers.
+from hands-on practice, not press releases.
 
-EXAMPLE POSTS (for tone/structure only — write about the new topic below,
-not these):
+AUDIENCE: technical readers — developers, IT/sysadmins, enterprise
+architects — who are comfortable with technology in general but are
+NOT AI/ML specialists. This is a hard rule, not a suggestion: any
+AI/ML-specific term, architecture name, training technique, or
+evaluation metric you use (e.g. "fine-tuning", "embeddings",
+"inference", "context window", "RAG", "multimodal", "bidirectional
+Transformer", "diffusion objective", "nDCG@10", or anything similarly
+jargony) must be immediately followed by a short plain-language
+clarification of what it means or why it matters — a clause or a
+sentence, not a glossary entry, but never leave a reader to just take
+the term on faith. If a paragraph would otherwise read like a spec
+sheet (a string of named techniques/numbers with no plain-language
+throughline), rewrite it so a smart non-AI-specialist could follow the
+actual point being made.
+
+VOICE: write like an engaged human blogger, not a press release, a
+Wikipedia summary, or a bullet-point status report:
+- Open with a real introduction — a hook, a bit of context, or a
+  concrete scenario that draws the reader in. Don't start by just
+  restating the headline as a flat declarative sentence.
+- Have an actual point of view. React to what's notable or surprising,
+  connect it to something the reader would recognize from their own
+  work, don't just list facts in order.
+- Vary sentence length and structure the way a real writer does. Avoid
+  a rigid "announcement -> implications -> conclusion" formula unless
+  it genuinely fits this topic.
+- Still no marketing fluff or hype ("game-changing", "in today's
+  fast-paced world", etc.) — human and engaging doesn't mean breathless.
+- Give it room to breathe — don't rush to wrap up in three short
+  paragraphs if the topic has more to say.
+
+The example posts below are for topical scope and this blog's subject
+matter only — they're shorter and drier than the voice above calls
+for, so don't mimic their brevity, override it:
 
 {examples_block}
 
@@ -154,7 +184,7 @@ def _call_openai(prompt: str, categories: dict) -> dict | None:
             model=BLOG_MODEL,
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"},
-            temperature=0.6,
+            temperature=0.75,
         )
         raw = response.choices[0].message.content or "{}"
         data = json.loads(raw)
