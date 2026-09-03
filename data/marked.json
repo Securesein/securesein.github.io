@@ -26,5 +26,18 @@
     "status": "published",
     "slug": "neomme-bridging-multimodal-and-multilingual-processing-in-one-encoder",
     "published_at": 1788444796.5619955
+  },
+  "e95cfdea8b522c3c:concept:20": {
+    "title": "VentureBeat names Rob Strechay as its first Lead Analyst, expanding its enterprise AI research push",
+    "link": "https://venturebeat.com/ai/venturebeat-names-rob-strechay-as-its-first-lead-analyst-expanding-its-enterprise-ai-research-push",
+    "source": "VentureBeat AI",
+    "message_id": 19,
+    "cached_at": 1788445577.8053386,
+    "topic": "Wat is Venturebeat",
+    "kind": "concept",
+    "marked_at": 1788445995.5412931,
+    "status": "published",
+    "slug": "understanding-venturebeat-s-role-in-the-ai-industry",
+    "published_at": 1788446003.397011
   }
 }
