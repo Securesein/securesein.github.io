@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   run-pipeline:
@@ -41,13 +42,26 @@ jobs:
         run: python scripts/fetch_and_notify.py
 
       - name: Commit and push state changes
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ src/content/blog/
           if git diff --cached --quiet; then
             echo "No state changes to commit."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Update pipeline state"
             git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Trigger site deploy
+        # Pushes made with the default GITHUB_TOKEN don't trigger other
+        # workflows (GitHub's anti-recursion guard on `push`), so
+        # deploy.yml wouldn't otherwise pick up this commit — kick it
+        # off explicitly instead of adding a separate PAT just for this.
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --repo ${{ github.repository }}
