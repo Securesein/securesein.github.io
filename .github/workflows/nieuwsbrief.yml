@@ -1,9 +1,17 @@
 name: AI news pipeline
 
-# Manual trigger only for now, while each step is still being tested.
-# The `schedule:` cron gets added once the full pipeline (RSS -> Telegram
-# -> button -> blogpost) has been verified end-to-end.
+# Runs twice a day, targeting 08:00 and 20:00 Europe/Amsterdam time.
+# GitHub Actions cron is UTC-only and Amsterdam alternates between
+# UTC+1 (CET, winter) and UTC+2 (CEST, summer) — a single fixed UTC
+# cron would drift an hour off target after each clock change. Instead
+# this fires at all four candidate UTC times (covering both offsets)
+# and the "Determine whether to run now" step below only lets the rest
+# of the job proceed on the two that actually land on 08:00/20:00
+# Amsterdam time — the other two are a clean no-op (green, does
+# nothing), so no manual DST adjustment is ever needed.
 on:
+  schedule:
+    - cron: "0 6,7,18,19 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -16,25 +24,48 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Determine whether to run now
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Manually triggered — always runs."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            hour=$(TZ=Europe/Amsterdam date +%H)
+            if [ "$hour" = "08" ] || [ "$hour" = "20" ]; then
+              echo "It's $hour:xx in Amsterdam — this is a real run."
+              echo "run=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "It's $hour:xx in Amsterdam, not 08:00/20:00 — this cron " \
+                   "fire only exists to cover the other DST offset. Skipping."
+              echo "run=false" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
         with:
           python-version: "3.12"
 
       - name: Install dependencies
+        if: steps.gate.outputs.run == 'true'
         run: pip install -r scripts/requirements.txt
 
       - name: Process Telegram button presses since last run
+        if: steps.gate.outputs.run == 'true'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/process_callbacks.py
 
       - name: Write blog posts for marked items
+        if: steps.gate.outputs.run == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/generate_blog_post.py
 
       - name: Fetch RSS, summarize, notify Telegram
+        if: steps.gate.outputs.run == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -42,6 +73,7 @@ jobs:
         run: python scripts/fetch_and_notify.py
 
       - name: Commit and push state changes
+        if: steps.gate.outputs.run == 'true'
         id: commit
         run: |
           git config user.name "github-actions[bot]"
