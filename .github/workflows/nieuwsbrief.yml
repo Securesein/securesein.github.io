@@ -28,6 +28,11 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/process_callbacks.py
 
+      - name: Write blog posts for marked items
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python scripts/generate_blog_post.py
+
       - name: Fetch RSS, summarize, notify Telegram
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -39,7 +44,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add data/ src/content/blog/
           if git diff --cached --quiet; then
             echo "No state changes to commit."
           else

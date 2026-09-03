@@ -1,0 +1,34 @@
+{
+  "models": {
+    "label": "Models",
+    "description": "New model releases, capability updates, benchmarks."
+  },
+  "agents-tooling": {
+    "label": "Agents & Tooling",
+    "description": "Agentic workflows, dev tools, frameworks, APIs."
+  },
+  "safety-alignment": {
+    "label": "Safety & Alignment",
+    "description": "Safety research, red-teaming, alignment, evals."
+  },
+  "research": {
+    "label": "Research",
+    "description": "Papers and technical research that don't fit elsewhere."
+  },
+  "policy-regulation": {
+    "label": "Policy & Regulation",
+    "description": "AI law, governance, standards, government action."
+  },
+  "industry-business": {
+    "label": "Industry & Business",
+    "description": "Funding, partnerships, market moves, company news."
+  },
+  "enterprise-microsoft": {
+    "label": "Enterprise & Microsoft",
+    "description": "EMM, Intune, Microsoft 365 and enterprise IT topics."
+  },
+  "meta": {
+    "label": "Meta",
+    "description": "Site announcements and personal notes about this blog."
+  }
+}

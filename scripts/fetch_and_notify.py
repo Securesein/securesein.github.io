@@ -18,17 +18,15 @@ from __future__ import annotations
 import hashlib
 import json
 import os
-import re
 import sys
 import time
 from pathlib import Path
 
 import feedparser
-import requests
-from bs4 import BeautifulSoup
 from openai import OpenAI
 
 import telegram_api
+from article_fetch import fetch_article_text
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 FEEDS_FILE = REPO_ROOT / "feeds.json"
@@ -50,7 +48,6 @@ SUMMARY_MODEL = os.environ.get("OPENAI_SUMMARY_MODEL", "gpt-4o-mini")
 MAX_ITEMS_PER_RUN = int(os.environ.get("MAX_ITEMS_PER_RUN", "15"))
 ITEMS_PER_FEED_CHECK = 10
 ARTICLE_MAX_CHARS = 3000
-ARTICLE_FETCH_TIMEOUT = 15
 ITEM_CACHE_RETENTION_DAYS = 14
 
 client = OpenAI(api_key=OPENAI_API_KEY)
@@ -146,34 +143,12 @@ def fetch_new_items(feeds: list[dict], seen_ids: set[str]) -> list[dict]:
     return items
 
 
-def fetch_article_text(url: str) -> str:
-    """Best-effort plain-text scrape. Returns "" on any failure so
-    callers fall back to the RSS summary instead of crashing the run."""
-    if not url:
-        return ""
-    try:
-        response = requests.get(
-            url,
-            timeout=ARTICLE_FETCH_TIMEOUT,
-            headers={"User-Agent": "Mozilla/5.0 (compatible; securesein-pipeline/1.0)"},
-        )
-        response.raise_for_status()
-    except requests.RequestException:
-        return ""
-
-    soup = BeautifulSoup(response.text, "html.parser")
-    for tag in soup(["script", "style", "nav", "header", "footer", "aside", "form"]):
-        tag.decompose()
-    text = soup.get_text(separator=" ", strip=True)
-    return re.sub(r"\s+", " ", text).strip()[:ARTICLE_MAX_CHARS]
-
-
 # ---------------------------------------------------------------------------
 # Summarizing
 # ---------------------------------------------------------------------------
 
 def summarize_item(item: dict) -> str:
-    article_text = fetch_article_text(item["link"])
+    article_text = fetch_article_text(item["link"], ARTICLE_MAX_CHARS)
     source_text = article_text if len(article_text) >= 200 else item["rss_summary"]
 
     if len(source_text) < 50:
