@@ -1,0 +1,118 @@
+[
+  {
+    "naam": "Ai2 News",
+    "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/allenai-news.xml"
+  },
+  {
+    "naam": "AISI Blog",
+    "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/aisi-blog.xml"
+  },
+  {
+    "naam": "Anthropic News",
+    "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/anthropic-news.xml"
+  },
+  {
+    "naam": "Anthropic Research",
+    "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/anthropic-research.xml"
+  },
+  {
+    "naam": "Claude Blog",
+    "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/claude-blog.xml"
+  },
+  {
+    "naam": "Cohere Blog",
+    "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/cohere-blog.xml"
+  },
+  {
+    "naam": "Cosine Blog",
+    "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/cosine-blog.xml"
+  },
+  {
+    "naam": "Mila News",
+    "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/mila-news.xml"
+  },
+  {
+    "naam": "Mistral News",
+    "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml"
+  },
+  {
+    "naam": "TLDR AI",
+    "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/tldr-ai.xml"
+  },
+  {
+    "naam": "Turing Blog",
+    "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/turing-blog.xml"
+  },
+  {
+    "naam": "Turing News",
+    "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/turing-news.xml"
+  },
+  {
+    "naam": "OpenAI News",
+    "url": "https://openai.com/news/rss.xml"
+  },
+  {
+    "naam": "Hugging Face Blog",
+    "url": "https://huggingface.co/blog/feed.xml"
+  },
+  {
+    "naam": "The Gradient",
+    "url": "https://thegradient.pub/rss/"
+  },
+  {
+    "naam": "Simon Willison's Weblog",
+    "url": "https://simonwillison.net/atom/everything/"
+  },
+  {
+    "naam": "Microsoft Research Blog",
+    "url": "https://www.microsoft.com/en-us/research/feed/"
+  },
+  {
+    "naam": "NVIDIA Blog",
+    "url": "https://blogs.nvidia.com/feed/"
+  },
+  {
+    "naam": "TechCrunch AI",
+    "url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+  },
+  {
+    "naam": "VentureBeat AI",
+    "url": "https://venturebeat.com/category/ai/feed/"
+  },
+  {
+    "naam": "Ars Technica AI",
+    "url": "https://arstechnica.com/tag/ai/feed/"
+  },
+  {
+    "naam": "Wired AI",
+    "url": "https://www.wired.com/feed/tag/ai/latest/rss"
+  },
+  {
+    "naam": "MIT Technology Review AI",
+    "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed"
+  },
+  {
+    "naam": "AI News",
+    "url": "https://www.artificialintelligence-news.com/feed/"
+  },
+  {
+    "naam": "MarkTechPost",
+    "url": "https://www.marktechpost.com/feed/"
+  },
+  {
+    "naam": "Synced Review",
+    "url": "https://syncedreview.com/feed/"
+  },
+  {
+    "naam": "KDnuggets",
+    "url": "https://www.kdnuggets.com/feed"
+  },
+  {
+    "naam": "Analytics India Magazine",
+    "url": "https://analyticsindiamag.com/feed/"
+  },
+  {
+    "naam": "The Verge AI",
+    "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+  }
+]
