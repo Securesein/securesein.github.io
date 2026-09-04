@@ -40,6 +40,10 @@ import SectionNav from "./SectionNav.astro";
   .brand { display: inline-flex; align-items: center; gap: 0.55rem; color: var(--text); font-weight: 700; letter-spacing: -0.02em; }
   .brand:hover { text-decoration: none; }
   .brand-mark { width: 22px; height: 22px; }
+  /* Same 1px flex-row text-centering quirk as the Sections button —
+     text next to an icon inside an align-items: center row lands a
+     pixel off from the plain-text .nav-link items beside it. */
+  .brand-name { position: relative; top: -1px; }
   .nav { display: flex; gap: 1.3rem; margin-right: auto; }
   .nav-link { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; }
   .nav-link:hover { color: var(--text); text-decoration: none; }
