@@ -269,5 +269,47 @@
     "source": "Simon Willison's Weblog",
     "message_id": 64,
     "cached_at": 1788501536.1466231
+  },
+  "a7f01c3d4174f6e7": {
+    "title": "AI Use in the Job Market Is Creating an Infinite Doom Loop",
+    "link": "https://www.wired.com/story/ai-job-market-infinite-doom-loop/",
+    "source": "Wired AI",
+    "message_id": 65,
+    "cached_at": 1788521693.1395657
+  },
+  "647bc25f294fb477": {
+    "title": "Data from drones in Ukraine is fueling a new Wild West marketplace",
+    "link": "https://www.technologyreview.com/2026/09/04/1143452/drone-data-wild-west/",
+    "source": "MIT Technology Review AI",
+    "message_id": 66,
+    "cached_at": 1788521695.9510024
+  },
+  "3f7e51329ab1b128": {
+    "title": "Why AI food looks like that",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/989376/ai-generated-food-why-does-it-look-like-that",
+    "source": "The Verge AI",
+    "message_id": 67,
+    "cached_at": 1788521698.8270104
+  },
+  "92e9659cfb55e0be": {
+    "title": "Microsoft’s Project Zenith is a ‘distraction-free Windows experience’ for developers",
+    "link": "https://www.theverge.com/news/990051/microsoft-project-zenith-windows-developers",
+    "source": "The Verge AI",
+    "message_id": 68,
+    "cached_at": 1788521701.5759377
+  },
+  "27e25cc50293359d": {
+    "title": "Sam Altman apologizes for &#8216;messy&#8217; GPT-6 Astra rollout that’s locked out paying users",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/990060/altman-apologizes-messy-astra-rollout",
+    "source": "The Verge AI",
+    "message_id": 69,
+    "cached_at": 1788521704.7611833
+  },
+  "540a9a9b12fe6708": {
+    "title": "This NAS company wants to run your local smart home",
+    "link": "https://www.theverge.com/tech/990006/this-nas-company-wants-to-run-your-local-smart-home",
+    "source": "The Verge AI",
+    "message_id": 70,
+    "cached_at": 1788521707.400908
   }
 }
