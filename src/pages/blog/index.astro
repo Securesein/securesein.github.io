@@ -20,6 +20,7 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
         pubDate={post.data.pubDate}
         tags={post.data.tags}
         author={post.data.author}
+        section={post.data.section}
         url={`/blog/${post.id}/`}
       />
     ))}

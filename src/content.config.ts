@@ -19,6 +19,13 @@ const blog = defineCollection({
     // that's what the pipeline writes; "sebastiaan" is for occasional
     // hand-written posts.
     author: z.enum(["ai", "sebastiaan"]).default("ai"),
+    // Content track, orthogonal to `tags` (topic). "news" is the
+    // automated Telegram pipeline's timely, per-article output.
+    // "fundamentals" is evergreen, deliberately-composed explainer
+    // content (usually with images) — hand-curated via a chat app,
+    // not the pipeline, so these are typically author: "sebastiaan".
+    // See src/pages/fundamentals/index.astro.
+    section: z.enum(["news", "fundamentals"]).default("news"),
   }),
 });
 

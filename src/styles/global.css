@@ -138,6 +138,19 @@ code, pre { font-family: var(--font-mono); }
 .prose h3 { font-size: 1.3rem; margin-top: 2rem; }
 .prose ul, .prose ol { padding-left: 1.3rem; }
 .prose li + li { margin-top: 0.4rem; }
+.prose img {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+/* Markdown convention for a caption: an italic line right after an
+   image, e.g. "![alt](src)\n*Figure 1: ...*" — each becomes its own
+   paragraph, so this targets the second one specifically. */
+.prose p:has(> img) + p:has(> em:only-child) {
+  margin-top: -0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
 .prose blockquote {
   border-left: 3px solid var(--accent-from);
   padding-left: 1.2rem;

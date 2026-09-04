@@ -11,8 +11,9 @@ interface Props {
   tags: (typeof CATEGORY_SLUGS)[number][];
   url: string;
   author: AuthorKey;
+  section?: "news" | "fundamentals";
 }
-const { title, description, pubDate, tags, url, author: authorKey } = Astro.props;
+const { title, description, pubDate, tags, url, author: authorKey, section } = Astro.props;
 const author = AUTHORS[authorKey];
 ---
 <article class="post-card">
@@ -24,6 +25,7 @@ const author = AUTHORS[authorKey];
         <span class="post-card-avatar">{author.name[0]}</span>
       )}
       <FormattedDate date={pubDate} />
+      {section === "fundamentals" && <span class="post-card-badge">Fundamentals</span>}
       {tags.length > 0 && <span class="dot">&middot;</span>}
       {tags.slice(0, 2).map((tag) => <span class="post-card-tag">{CATEGORIES[tag].label}</span>)}
     </div>
@@ -51,6 +53,11 @@ const author = AUTHORS[authorKey];
     font-size: 0.6rem; font-weight: 700; color: var(--text);
   }
   .post-card-tag { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; font-weight: 600; }
+  .post-card-badge {
+    display: inline-flex; align-items: center; padding: 0.15rem 0.55rem;
+    border-radius: 999px; background: var(--gradient); color: #0a0a0c;
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+  }
   .post-card-title { font-size: 1.5rem; margin-top: 0.5rem; transition: color 0.2s ease; }
   .post-card-desc { color: var(--text-muted); margin-top: 0.5rem; }
   .post-card-more { display: inline-block; margin-top: 0.8rem; font-size: 0.9rem; font-weight: 600; color: var(--link); }

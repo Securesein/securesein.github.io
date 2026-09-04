@@ -9,5 +9,6 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { label: "Blog", href: "/blog" },
+  { label: "Fundamentals", href: "/fundamentals" },
   { label: "About", href: "/about" },
 ];

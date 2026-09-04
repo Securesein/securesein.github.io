@@ -24,13 +24,19 @@ const aiNote = post.data.sourceUrl
   ? author.blurb
   : "Scout drafted this post directly from a request — no source article, and no human edits it before it publishes.";
 const initials = author.name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
+const isFundamentals = post.data.section === "fundamentals";
 ---
 <BaseLayout title={post.data.title} description={post.data.description}>
   <article class="container post">
-    <a href="/blog" class="back">&larr; Back to blog</a>
+    {isFundamentals ? (
+      <a href="/fundamentals" class="back">&larr; Back to Fundamentals</a>
+    ) : (
+      <a href="/blog" class="back">&larr; Back to blog</a>
+    )}
 
-    {post.data.tags.length > 0 && (
+    {(isFundamentals || post.data.tags.length > 0) && (
       <div class="post-tags">
+        {isFundamentals && <span class="fundamentals-badge">Fundamentals</span>}
         {post.data.tags.map((tag) => <span class="pill">{CATEGORIES[tag].label}</span>)}
       </div>
     )}
@@ -80,6 +86,11 @@ const initials = author.name.split(" ").map((w) => w[0]).slice(0, 2).join("").to
   .back { color: var(--text-muted); font-size: 0.95rem; }
   .back:hover { color: var(--text); text-decoration: none; }
   .post-tags { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 2rem; }
+  .fundamentals-badge {
+    display: inline-block; padding: 0.3rem 0.7rem; border-radius: 999px;
+    background: var(--gradient); color: #0a0a0c;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  }
   .post-title { font-size: clamp(2rem, 5vw, 3rem); margin-top: 1.2rem; }
   .post-lead { font-size: 1.25rem; color: var(--text-muted); margin-top: 1.2rem; }
   .post-byline { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }

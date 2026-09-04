@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostCard from "../../components/PostCard.astro";
+
+const posts = (
+  await getCollection("blog", ({ data }) => !data.draft && data.section === "fundamentals")
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<BaseLayout
+  title="Fundamentals"
+  description="Deeper, evergreen explainers of AI concepts — not tied to any day's news."
+>
+  <div class="container blog-index">
+    <header class="blog-header">
+      <h1>Fundamentals</h1>
+      <p>
+        Deeper explainers of AI concepts — how things actually work, written
+        to still make sense next year. Separate from the news feed on
+        purpose: these aren't tied to any day's headlines.
+      </p>
+    </header>
+    {posts.map((post) => (
+      <PostCard
+        title={post.data.title}
+        description={post.data.description}
+        pubDate={post.data.pubDate}
+        tags={post.data.tags}
+        author={post.data.author}
+        section={post.data.section}
+        url={`/blog/${post.id}/`}
+      />
+    ))}
+    {posts.length === 0 && <p class="empty">Nothing here yet — check back soon.</p>}
+  </div>
+</BaseLayout>
+
+<style>
+  .blog-index { padding-top: 3.5rem; }
+  .blog-header { margin-bottom: 1rem; max-width: 38rem; }
+  .blog-header h1 { font-size: clamp(2rem, 5vw, 2.8rem); }
+  .blog-header p { color: var(--text-muted); margin-top: 0.5rem; }
+  .empty { color: var(--text-muted); padding-block: 2rem; }
+</style>
