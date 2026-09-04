@@ -73,5 +73,110 @@
     "source": "The Verge AI",
     "message_id": 25,
     "cached_at": 1788448530.8561287
+  },
+  "fc40ddafdd41e0cc": {
+    "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+    "link": "https://openai.com/index/daybreak-for-frontline-defenders",
+    "source": "OpenAI News",
+    "message_id": 26,
+    "cached_at": 1788496100.557403
+  },
+  "9c15d28a330d5e62": {
+    "title": "GPT‑6 Astra",
+    "link": "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 27,
+    "cached_at": 1788496103.3458915
+  },
+  "c11be18a8186e859": {
+    "title": "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026",
+    "link": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
+    "source": "NVIDIA Blog",
+    "message_id": 28,
+    "cached_at": 1788496106.3301225
+  },
+  "f4976d49d59e56d1": {
+    "title": "The sameness problem behind those unappetizing AI-generated menus",
+    "link": "https://techcrunch.com/2026/09/03/the-sameness-problem-behind-those-unappetizing-ai-generated-menus/",
+    "source": "TechCrunch AI",
+    "message_id": 29,
+    "cached_at": 1788496109.0271049
+  },
+  "d13d8f5f8293fa1e": {
+    "title": "Nobody Is Saying Why OpenAI and Anthropic Had Outages Today",
+    "link": "https://www.wired.com/story/nobody-is-saying-why-openai-and-anthropic-had-outages-today/",
+    "source": "Wired AI",
+    "message_id": 30,
+    "cached_at": 1788496112.2819793
+  },
+  "6440c7fe7781c1fa": {
+    "title": "OneRail uses Nvidia AI for real-time last-mile delivery optimisation",
+    "link": "https://www.artificialintelligence-news.com/news/ai-last-mile-delivery-optimisation/",
+    "source": "AI News",
+    "message_id": 31,
+    "cached_at": 1788496114.8098931
+  },
+  "c0d7c7a40be6cc09": {
+    "title": "Google DeepMind’s WeatherNext 3 Trains on Weather Station Observations to Deliver 5 km Global Forecasts, Refreshed Every Hour",
+    "link": "https://www.marktechpost.com/2026/09/03/google-deepminds-weathernext-3-trains-on-weather-station-observations-to-deliver-5-km-global-forecasts-refreshed-every-hour/",
+    "source": "MarkTechPost",
+    "message_id": 32,
+    "cached_at": 1788496118.4859133
+  },
+  "f2cb8c593af4d277": {
+    "title": "OpenAI’s next big AI model has ‘entered the AGI era’",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
+    "source": "The Verge AI",
+    "message_id": 33,
+    "cached_at": 1788496120.9577725
+  },
+  "9281d6906e8350b6": {
+    "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+    "link": "https://openai.com/index/legora-financial-statement-review-with-astra",
+    "source": "OpenAI News",
+    "message_id": 34,
+    "cached_at": 1788496123.6346147
+  },
+  "358b86051a326ab4": {
+    "title": "Crusoe reportedly raises $3B at a  $30B valuation",
+    "link": "https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/",
+    "source": "TechCrunch AI",
+    "message_id": 35,
+    "cached_at": 1788496125.980749
+  },
+  "3fc146398ec9c151": {
+    "title": "Prediction Market Betting Is Getting People Banned and Arrested",
+    "link": "https://www.wired.com/story/prediction-market-betting-is-getting-people-banned-and-arrested/",
+    "source": "Wired AI",
+    "message_id": 36,
+    "cached_at": 1788496128.9156752
+  },
+  "a264c7e6f2fc5071": {
+    "title": "NVIDIA to acquire Hugging Face for $12.93B",
+    "link": "https://www.artificialintelligence-news.com/news/nvidia-to-acquire-hugging-face-for-12-93b/",
+    "source": "AI News",
+    "message_id": 37,
+    "cached_at": 1788496131.3172288
+  },
+  "af74e8aeb919d5a8": {
+    "title": "OpenAI Releases GPT-6 Astra: A 1.05M-Context Computer-Use Model Gated Behind a ‘Critical’ Cyber Threshold",
+    "link": "https://www.marktechpost.com/2026/09/03/openai-releases-gpt-6-astra-a-1-05m-context-computer-use-model-gated-behind-a-critical-cyber-threshold/",
+    "source": "MarkTechPost",
+    "message_id": 38,
+    "cached_at": 1788496133.6957436
+  },
+  "949b0300f3a89582": {
+    "title": "Nvidia launches free tool that links idle computers into a personal AI data center",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook",
+    "source": "The Verge AI",
+    "message_id": 39,
+    "cached_at": 1788496136.1276588
+  },
+  "325e9dcd840a97e9": {
+    "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+    "link": "https://openai.com/index/playco-game-prototyping-with-astra",
+    "source": "OpenAI News",
+    "message_id": 40,
+    "cached_at": 1788496138.3587592
   }
 }
