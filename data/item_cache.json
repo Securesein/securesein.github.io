@@ -311,5 +311,54 @@
     "source": "The Verge AI",
     "message_id": 70,
     "cached_at": 1788521707.400908
+  },
+  "88fd8c271c69dc9f": {
+    "title": "ChatGPT Apple Messages 💬, Anthropic’s meeting recorder 💼, Mistral Agentic Search 🔍",
+    "link": "https://tldr.tech/ai/2026-08-21",
+    "source": "TLDR AI",
+    "message_id": 71,
+    "cached_at": 1788530457.9123032
+  },
+  "f6a2cf1487e94745": {
+    "title": "M&T Bank expands enterprise AI after years of technology overhaul",
+    "link": "https://www.artificialintelligence-news.com/news/mt-bank-enterprise-ai-15000-employees/",
+    "source": "AI News",
+    "message_id": 72,
+    "cached_at": 1788530460.9256277
+  },
+  "22361569aad05a65": {
+    "title": "Switchyard: NVIDIA’s Open Source Routing Library",
+    "link": "https://www.kdnuggets.com/switchyard-nvidias-open-source-routing-library",
+    "source": "KDnuggets",
+    "message_id": 73,
+    "cached_at": 1788530463.9578767
+  },
+  "5729fffba93d38e5": {
+    "title": "Oh good, looks like yet another swarm of rogue AI agents from OpenAI",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
+    "source": "The Verge AI",
+    "message_id": 74,
+    "cached_at": 1788530466.7631605
+  },
+  "b3f821c3c0b9cf7e": {
+    "title": "50.5% of Americans Say AI Romance Can Count as Cheating",
+    "link": "https://www.artificialintelligence-news.com/news/50-5-of-americans-say-ai-romance-can-count-as-cheating/",
+    "source": "AI News",
+    "message_id": 75,
+    "cached_at": 1788530469.6549556
+  },
+  "ad8b7b24a3c3f096": {
+    "title": "5 Free LLM API Providers You Can Use in 2026",
+    "link": "https://www.kdnuggets.com/5-free-llm-api-providers-you-can-use-in-2026",
+    "source": "KDnuggets",
+    "message_id": 76,
+    "cached_at": 1788530472.3412843
+  },
+  "607bea11f497bf71": {
+    "title": "Instagram’s AI detection is a mess (again)",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/989617/instagram-ai-content-label-confusion",
+    "source": "The Verge AI",
+    "message_id": 77,
+    "cached_at": 1788530475.0334928
   }
 }
