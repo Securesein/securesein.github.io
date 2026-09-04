@@ -30,50 +30,22 @@ def _post(method: str, payload: dict) -> dict | None:
         return None
 
 
-def send_message(text: str, button_text: str, button_callback_data: str) -> dict | None:
+def send_message(text: str) -> dict | None:
+    """Plain message, no button — the only way to act on an article is
+    to reply to it (see process_callbacks.py)."""
     return _post("sendMessage", {
         "chat_id": TELEGRAM_CHAT_ID,
         "text": text,
         "disable_web_page_preview": False,
-        "reply_markup": {
-            "inline_keyboard": [[
-                {"text": button_text, "callback_data": button_callback_data}
-            ]]
-        },
-    })
-
-
-def edit_button(message_id: int, button_text: str, button_callback_data: str) -> dict | None:
-    """Swaps the inline button's label in place — used to visibly
-    confirm a press (e.g. the star turning solid/gold) without
-    touching the message text."""
-    return _post("editMessageReplyMarkup", {
-        "chat_id": TELEGRAM_CHAT_ID,
-        "message_id": message_id,
-        "reply_markup": {
-            "inline_keyboard": [[
-                {"text": button_text, "callback_data": button_callback_data}
-            ]]
-        },
     })
 
 
 def send_reply(text: str, reply_to_message_id: int) -> dict | None:
-    """Plain confirmation message, threaded under the user's reply —
-    no button, unlike send_message()."""
+    """Plain confirmation message, threaded under the user's reply."""
     return _post("sendMessage", {
         "chat_id": TELEGRAM_CHAT_ID,
         "text": text,
         "reply_to_message_id": reply_to_message_id,
-    })
-
-
-def answer_callback_query(callback_query_id: str, text: str = "") -> dict | None:
-    """Stops the loading spinner on the pressed button. Telegram expects
-    this after every callback_query, whether or not we act on it."""
-    return _post("answerCallbackQuery", {
-        "callback_query_id": callback_query_id,
-        "text": text,
     })
 
 

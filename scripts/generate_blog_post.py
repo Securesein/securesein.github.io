@@ -4,6 +4,14 @@ a new Markdown file in src/content/blog/, matching the Astro content
 schema exactly (title, description, pubDate, tags, sourceUrl,
 sourceName, author — see src/content.config.ts).
 
+Two kinds of marked item, from process_callbacks.py:
+- "article" (default): a reply to an article's Telegram message.
+  Writes about that article, optionally steered by the reply's text
+  ("instructions" — e.g. "focus on pricing"), or with full creative
+  freedom if the reply was empty.
+- "custom": a plain message, not a reply — a from-scratch post with
+  no source article, using the message text as the brief.
+
 Two ways to run:
 
   python scripts/generate_blog_post.py --test <article-url>
@@ -198,38 +206,25 @@ Return ONLY a JSON object with exactly these keys, nothing else:
 }}"""
 
 
-def build_article_task(title: str, source: str, article_text: str) -> str:
+def build_article_task(title: str, source: str, article_text: str, instructions: str | None = None) -> str:
+    instructions_block = ""
+    if instructions:
+        instructions_block = f"""
+
+ADDITIONAL INSTRUCTIONS FROM THE USER — follow these closely (they
+might redirect the angle entirely, e.g. toward a broader concept the
+article only touches on; that's fine, the article just needs to stay
+the anchor/reference point), but don't let them override the
+AUDIENCE/VOICE/STRUCTURE rules above (still explain jargon, still
+build cumulatively, still hit the length target):
+"{instructions}\""""
+
     return f"""NEW ARTICLE TO WRITE ABOUT
 Title: "{title}"
 Source: {source}
 
 Article text:
-{article_text}"""
-
-
-def build_concept_task(topic: str, article_title: str, source: str, article_text: str) -> str:
-    return f"""Write an EXPLAINER post about the following concept/topic —
-this is the actual subject of the post, not the article below:
-
-TOPIC: "{topic}"
-
-The post should stand on its own as an explanation of the topic for a
-technical reader — what it is, why it matters, how it's typically used
-or implemented. Do NOT structure this as a summary or rewrite of the
-article below; use it only as background/reference for a concrete,
-current example, and cite it as the source. This is an explainer, so
-the STRUCTURE rule above matters most here: build one idea on top of
-the previous one toward a real, connected understanding of the topic —
-don't cover separate facets of it (e.g. "how it works", then "the
-cost angle", then "why it matters") as if they were independent
-mini-sections with nothing to do with each other.
-
-BACKGROUND ARTICLE (reference only, not the subject)
-Title: "{article_title}"
-Source: {source}
-
-Article text:
-{article_text}"""
+{article_text}{instructions_block}"""
 
 
 def build_custom_task(brief: str) -> str:
@@ -341,32 +336,28 @@ def _call_openai(task: str, categories: dict, style_examples: list[str]) -> dict
     }
 
 
-def generate_post(title: str, source: str, link: str, categories: dict, style_examples: list[str]) -> dict | None:
-    """Direct write-up of the article itself — the ☆ button flow."""
-    article_text = fetch_article_text(link, ARTICLE_MAX_CHARS)
-    if len(article_text) < 200:
-        print(f"    Skipping — couldn't fetch enough article text from {link}", file=sys.stderr)
-        return None
-
-    task = build_article_task(title, source, article_text)
-    return _call_openai(task, categories, style_examples)
-
-
-def generate_concept_post(
-    topic: str, article_title: str, source: str, link: str, categories: dict, style_examples: list[str]
+def generate_post(
+    title: str, source: str, link: str, categories: dict, style_examples: list[str],
+    instructions: str | None = None,
 ) -> dict | None:
-    """Explainer about a concept the user named in a reply — the
-    article is background/reference, not the subject, so (unlike
-    generate_post) a thin or failed scrape doesn't block this: the
-    model can still write the explainer from its own knowledge of the
-    topic, just with less concrete grounding to cite."""
+    """Write-up of the article, optionally steered by `instructions`
+    (from a reply's text — see process_callbacks.py). With
+    instructions, a thin/failed scrape doesn't block this (the user
+    may have redirected toward a broader concept anyway, needing the
+    article only as an anchor) — the model falls back to its own
+    knowledge. Without instructions, the article text is the whole
+    point, so a failed scrape means retrying next run instead."""
     article_text = fetch_article_text(link, ARTICLE_MAX_CHARS)
     if len(article_text) < 200:
-        print(f"    Note: little/no article text available from {link} — "
-              f"writing from general knowledge of the topic instead.", file=sys.stderr)
-        article_text = "(not available)"
+        if instructions:
+            print(f"    Note: little/no article text available from {link} — "
+                  f"writing from general knowledge instead.", file=sys.stderr)
+            article_text = "(not available)"
+        else:
+            print(f"    Skipping — couldn't fetch enough article text from {link}", file=sys.stderr)
+            return None
 
-    task = build_concept_task(topic, article_title, source, article_text)
+    task = build_article_task(title, source, article_text, instructions)
     return _call_openai(task, categories, style_examples)
 
 
@@ -450,19 +441,17 @@ def main() -> None:
         kind = item.get("kind", "article")
         source_url = source_name = None
 
-        if kind == "concept":
-            print(f"  Writing concept post \"{item['topic']}\" (from: {item['title'][:50]})...")
-            post = generate_concept_post(
-                item["topic"], item["title"], item["source"], item["link"], categories, style_examples
-            )
-            source_url, source_name = item["link"], item["source"]
-        elif kind == "custom":
+        if kind == "custom":
             preview = item["brief"] if len(item["brief"]) <= 60 else item["brief"][:59] + "…"
             print(f"  Writing custom post: \"{preview}\"...")
             post = generate_custom_post(item["brief"], categories, style_examples)
         else:
-            print(f"  Writing: {item['title'][:60]}...")
-            post = generate_post(item["title"], item["source"], item["link"], categories, style_examples)
+            instructions = item.get("instructions")
+            suffix = f" — focus: \"{instructions}\"" if instructions else ""
+            print(f"  Writing: {item['title'][:60]}...{suffix}")
+            post = generate_post(
+                item["title"], item["source"], item["link"], categories, style_examples, instructions
+            )
             source_url, source_name = item["link"], item["source"]
 
         if post is None:

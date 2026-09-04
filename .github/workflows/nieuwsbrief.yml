@@ -43,7 +43,7 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         run: pip install -r scripts/requirements.txt
 
-      - name: Process Telegram button presses since last run
+      - name: Process Telegram replies since last run
         if: steps.gate.outputs.run == 'true'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

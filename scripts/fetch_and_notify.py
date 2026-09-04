@@ -1,6 +1,7 @@
 """
 Fetch new AI-news RSS items, summarize each with OpenAI, and send it to
-Telegram with a "Write blog post" button attached.
+Telegram. To turn one into a blog post, reply to its message (see
+process_callbacks.py) — no button involved.
 
 Run via GitHub Actions (workflow_dispatch for now, cron later — see
 .github/workflows/nieuwsbrief.yml). State lives in JSON files under
@@ -33,10 +34,6 @@ FEEDS_FILE = REPO_ROOT / "feeds.json"
 DATA_DIR = REPO_ROOT / "data"
 SEEN_FILE = DATA_DIR / "gezien.json"
 ITEM_CACHE_FILE = DATA_DIR / "item_cache.json"
-
-# Empty star until pressed — process_callbacks.py swaps it to a filled,
-# gold star on click so a press is unmistakable at a glance.
-PENDING_BUTTON = "☆ Write blog post"
 
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 # Kept as an env var (not hardcoded) so a deprecated/renamed model doesn't
@@ -103,9 +100,10 @@ def item_id(entry) -> str:
 
 
 def short_id(full_id: str) -> str:
-    """Telegram callback_data is capped at 64 bytes, and RSS guids/links
-    routinely exceed that — so buttons carry this short hash instead, and
-    item_cache.json maps it back to the real item (title/link/source)."""
+    """A short, stable key for item_cache.json — RSS guids/links can be
+    long and awkward to use as dict keys/filenames, so this hash is
+    what process_callbacks.py actually looks items up by (via each
+    cached item's message_id, matched against an incoming reply)."""
     return hashlib.sha256(full_id.encode("utf-8")).hexdigest()[:16]
 
 
@@ -185,11 +183,15 @@ like "here is a summary". Return ONLY the summary text, nothing else."""
 # Telegram
 # ---------------------------------------------------------------------------
 
-def notify_telegram(item: dict, summary: str, sid: str) -> int | None:
+def notify_telegram(item: dict, summary: str) -> int | None:
     """Returns the sent message's Telegram message_id (so it can be
     cached and later matched against a reply), or None on failure."""
-    text = f"📰 {item['title']}\n({item['source']})\n\n{summary}\n\n{item['link']}"
-    result = telegram_api.send_message(text, PENDING_BUTTON, sid)
+    text = (
+        f"📰 {item['title']}\n({item['source']})\n\n{summary}\n\n{item['link']}"
+        f"\n\n💬 Reply to write a post about this — add instructions "
+        f"(e.g. \"focus on pricing\") or leave it blank for a free hand."
+    )
+    result = telegram_api.send_message(text)
     if result is None or not result.get("ok"):
         return None
     return result.get("result", {}).get("message_id")
@@ -232,7 +234,7 @@ def main() -> None:
         summary = summarize_item(item)
         sid = short_id(item["id"])
 
-        message_id = notify_telegram(item, summary, sid)
+        message_id = notify_telegram(item, summary)
         # Only mark as seen (and cache it) once it's actually been sent —
         # otherwise a failed Telegram send would silently drop the item
         # instead of retrying it on the next run.
@@ -271,7 +273,7 @@ def send_test_message() -> bool:
         "source": "fetch_and_notify.py --test",
     }
     summary = summarize_item(test_item)
-    ok = notify_telegram(test_item, summary, short_id("test"))
+    ok = notify_telegram(test_item, summary)
     print("OK!" if ok else "Failed — see error above.")
     return ok
 

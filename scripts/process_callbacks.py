@@ -1,26 +1,23 @@
 """
-Poll Telegram for updates since the last run and turn them into blog
-post requests, in three ways:
+Poll Telegram for messages since the last run and turn them into blog
+post requests, in two ways:
 
-- callback_query (the ☆ button): marks the article itself for a post —
-  a direct write-up of that specific news item. Confirmed by swapping
-  the button to a filled star.
-- a reply to one of our messages: marks a *concept* post — the reply
-  text is the topic (e.g. "multimodality"), the article is only
-  background/reference, not the subject. Both this and the button can
-  exist for the same article at once.
+- a reply to one of our article messages: marks that article for a
+  post. The reply text (if any) becomes "instructions" — free-form
+  guidance for how to write it (e.g. "focus on pricing", "spend more
+  time on the security angle"). An empty reply just means full
+  creative freedom under the usual voice/structure rules. Confirmed
+  with a threaded reply. Multiple replies to the same article each
+  queue their own post, so different angles can be requested over time.
 - a plain message, not a reply to anything: marks a *custom* post with
-  no source article at all — the message text (topic plus whatever
-  else the user adds: extra angles, things to cover, style requests)
-  goes to the model as the brief, verbatim.
+  no source article at all — the message text becomes the brief,
+  verbatim.
 
-All three get a threaded/inline confirmation so a press or message
-never just disappears silently.
+There is no button — a reply is the only way to act on an article.
 
 Runs as its own step in .github/workflows/nieuwsbrief.yml, *before*
 fetch_and_notify.py — matching the pipeline order in the project brief:
-process button presses from last time first, then look for new RSS
-items.
+process messages from last time first, then look for new RSS items.
 """
 
 from __future__ import annotations
@@ -37,10 +34,6 @@ OFFSET_FILE = DATA_DIR / "telegram_offset.json"
 ITEM_CACHE_FILE = DATA_DIR / "item_cache.json"
 MARKED_FILE = DATA_DIR / "marked.json"
 
-# Must match PENDING_BUTTON in fetch_and_notify.py — this is what a
-# press changes the button *into*.
-MARKED_BUTTON = "⭐ Marked for blog post"
-
 
 def load_json(path: Path, default):
     if not path.exists():
@@ -55,40 +48,8 @@ def save_json(path: Path, data) -> None:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def handle_button_press(callback: dict, item_cache: dict, marked: dict) -> None:
-    callback_id = callback["id"]
-    sid = callback.get("data", "")
-    message = callback.get("message") or {}
-    message_id = message.get("message_id")
-
-    if sid in marked:
-        # Double-press (or a re-run that saw it again) — acknowledge
-        # without re-editing or re-adding.
-        telegram_api.answer_callback_query(callback_id, "Already marked ✅")
-        return
-
-    item = item_cache.get(sid)
-    if not item:
-        telegram_api.answer_callback_query(
-            callback_id,
-            "Sorry — this one's too old, its details already expired from cache.",
-        )
-        return
-
-    marked[sid] = {**item, "kind": "article", "marked_at": time.time(), "status": "pending"}
-    print(f"  Marked article for a blog post: {item['title'][:60]}")
-
-    if message_id is not None:
-        telegram_api.edit_button(message_id, MARKED_BUTTON, sid)
-    telegram_api.answer_callback_query(callback_id, "Marked for a blog post! 🌟")
-
-
-def handle_reply(message: dict, item_cache: dict, marked: dict, msgid_to_sid: dict) -> None:
+def handle_article_reply(message: dict, item_cache: dict, marked: dict, msgid_to_sid: dict) -> None:
     reply_to = message["reply_to_message"]
-    topic = (message.get("text") or "").strip()
-    if not topic:
-        return  # e.g. a reply that's a photo/sticker with no text — nothing to act on
-
     if reply_to.get("from", {}).get("id") != telegram_api.BOT_ID:
         return  # replying to something other than one of our article messages
 
@@ -101,25 +62,29 @@ def handle_reply(message: dict, item_cache: dict, marked: dict, msgid_to_sid: di
         )
         return
 
-    concept_key = f"{sid}:concept:{message['message_id']}"
-    marked[concept_key] = {
+    instructions = (message.get("text") or "").strip() or None
+    key = f"{sid}:{message['message_id']}"
+    marked[key] = {
         **item,
-        "topic": topic,
-        "kind": "concept",
+        "instructions": instructions,
+        "kind": "article",
         "marked_at": time.time(),
         "status": "pending",
     }
-    print(f"  Marked concept post: \"{topic}\" (from: {item['title'][:60]})")
-    telegram_api.send_reply(
-        f"Got it — queued a post about “{topic}”, using this article as reference. 📝",
-        message["message_id"],
-    )
+
+    if instructions:
+        print(f"  Marked for a blog post — focus: \"{instructions}\" ({item['title'][:50]})")
+        confirm = f"Got it — queued a post about this article, focusing on: “{instructions}”. 📝"
+    else:
+        print(f"  Marked for a blog post (no specific instructions): {item['title'][:60]}")
+        confirm = "Got it — queued a post about this article. 📝"
+    telegram_api.send_reply(confirm, message["message_id"])
 
 
 def handle_custom_request(message: dict, marked: dict) -> None:
     """A plain message, not a reply to anything — the user's own
-    words, with no article attached. The whole message (topic plus
-    any extra requirements) becomes the brief, verbatim."""
+    words, with no article attached. The whole message becomes the
+    brief, verbatim."""
     brief = (message.get("text") or "").strip()
     if not brief:
         return  # e.g. a photo/sticker with no caption — nothing to act on
@@ -154,17 +119,14 @@ def main() -> None:
     for update in updates:
         highest_update_id = max(highest_update_id, update["update_id"])
 
-        callback = update.get("callback_query")
         message = update.get("message")
-        if callback:
-            handle_button_press(callback, item_cache, marked)
-        elif message and not message.get("from", {}).get("is_bot"):
-            if message.get("reply_to_message"):
-                handle_reply(message, item_cache, marked, msgid_to_sid)
-            else:
-                handle_custom_request(message, marked)
-        # anything else (edited messages, our own messages, other update
-        # types) — ignore, still advance the offset past it
+        if not message or message.get("from", {}).get("is_bot"):
+            continue  # not a message, or one of our own — ignore, still advance offset
+
+        if message.get("reply_to_message"):
+            handle_article_reply(message, item_cache, marked, msgid_to_sid)
+        else:
+            handle_custom_request(message, marked)
 
     save_json(OFFSET_FILE, {"offset": highest_update_id + 1})
     save_json(MARKED_FILE, marked)
