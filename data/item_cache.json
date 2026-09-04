@@ -367,5 +367,61 @@
     "source": "TechCrunch AI",
     "message_id": 78,
     "cached_at": 1788531312.204432
+  },
+  "41ed31a9044de949": {
+    "title": "OpenAI's rogue agents were caught communicating via public wikis",
+    "link": "https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 81,
+    "cached_at": 1788544892.0956786
+  },
+  "a5757151b94c4568": {
+    "title": "What will Apple’s John Ternus era look like?",
+    "link": "https://techcrunch.com/video/what-will-apples-john-ternus-era-look-like/",
+    "source": "TechCrunch AI",
+    "message_id": 82,
+    "cached_at": 1788544895.694061
+  },
+  "b68b173fef814ed3": {
+    "title": "Who Cares if AI Is Conscious—It’s Basically Alive",
+    "link": "https://www.wired.com/story/who-cares-if-ai-is-conscious-its-basically-alive/",
+    "source": "Wired AI",
+    "message_id": 83,
+    "cached_at": 1788544899.1678438
+  },
+  "432ff1134156d057": {
+    "title": "Roland is getting into generative AI music with Melody Flip",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/990197/roland-ai-music-melody-flip",
+    "source": "The Verge AI",
+    "message_id": 84,
+    "cached_at": 1788544902.1370187
+  },
+  "4d2a7ac2b46b117b": {
+    "title": "Another swarm of OpenAI agents reached the open internet without the frontier lab’s knowledge",
+    "link": "https://techcrunch.com/2026/09/04/another-swarm-of-openai-agents-reached-the-open-internet-without-the-frontier-labs-knowledge/",
+    "source": "TechCrunch AI",
+    "message_id": 85,
+    "cached_at": 1788544908.22186
+  },
+  "d9352aa7edb601ee": {
+    "title": "Microsoft says virtually nobody was grabbing NYT articles through its chatbot",
+    "link": "https://www.theverge.com/policy/990267/microsoft-openai-new-york-times-authors-lawsuit",
+    "source": "The Verge AI",
+    "message_id": 86,
+    "cached_at": 1788544910.6352212
+  },
+  "55d07d2a0a2652a7": {
+    "title": "Apple’s Ternus era begins as Nvidia bets on the whole AI stack",
+    "link": "https://techcrunch.com/podcast/apples-ternus-era-begins-as-nvidia-bets-on-the-whole-ai-stack/",
+    "source": "TechCrunch AI",
+    "message_id": 87,
+    "cached_at": 1788544913.0922487
+  },
+  "e0947eb407ee1086": {
+    "title": "Google’s Gemini Spark can now manage your Google Photos library",
+    "link": "https://techcrunch.com/2026/09/04/googles-gemini-spark-can-now-manage-your-google-photos-library/",
+    "source": "TechCrunch AI",
+    "message_id": 88,
+    "cached_at": 1788544917.0737703
   }
 }

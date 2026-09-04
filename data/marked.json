@@ -97,5 +97,18 @@
     "kind": "article",
     "marked_at": 1788501504.921641,
     "status": "pending"
+  },
+  "92e9659cfb55e0be:79": {
+    "title": "Microsoft’s Project Zenith is a ‘distraction-free Windows experience’ for developers",
+    "link": "https://www.theverge.com/news/990051/microsoft-project-zenith-windows-developers",
+    "source": "The Verge AI",
+    "message_id": 68,
+    "cached_at": 1788521701.5759377,
+    "instructions": "Post maken",
+    "kind": "article",
+    "marked_at": 1788544844.6461093,
+    "status": "published",
+    "slug": "inside-microsoft-s-project-zenith-a-new-era-for-developer-focused-windows",
+    "published_at": 1788544881.4868774
   }
 }
