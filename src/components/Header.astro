@@ -45,4 +45,12 @@ import SectionNav from "./SectionNav.astro";
   .nav-link:hover { color: var(--text); text-decoration: none; }
   .header-actions { display: flex; align-items: center; gap: 0.6rem; }
   @media (max-width: 480px) { .brand-name { display: none; } }
+  /* Longer nav labels ("AI Fundamentals") don't all fit at very narrow
+     widths with the default sizing — shrink gaps/text instead of
+     letting the theme toggle overflow off-screen. */
+  @media (max-width: 420px) {
+    .header-inner { gap: 0.7rem; }
+    .nav { gap: 0.7rem; }
+    .nav-link { font-size: 0.85rem; }
+  }
 </style>
