@@ -178,5 +178,75 @@
     "source": "OpenAI News",
     "message_id": 40,
     "cached_at": 1788496138.3587592
+  },
+  "39210f987919e80e": {
+    "title": "Safety overview: GPT-6 Astra",
+    "link": "https://openai.com/index/safety-overview-gpt-6-astra",
+    "source": "OpenAI News",
+    "message_id": 46,
+    "cached_at": 1788500718.5386465
+  },
+  "93af45384674c196": {
+    "title": "Accel reportedly in talks to lead $1B round for Thinking Machines at $40B valuation",
+    "link": "https://techcrunch.com/2026/09/03/accel-reportedly-in-talks-to-lead-1b-round-for-thinking-machines-at-40b-valuation/",
+    "source": "TechCrunch AI",
+    "message_id": 47,
+    "cached_at": 1788500721.0868137
+  },
+  "abc49ce917a429c9": {
+    "title": "GPT-6 Astra Is Here—and OpenAI Thinks It May Kick Off the AGI Era",
+    "link": "https://www.wired.com/story/openai-says-gpt-6-can-use-a-computer-better-than-a-human/",
+    "source": "Wired AI",
+    "message_id": 48,
+    "cached_at": 1788500723.7864227
+  },
+  "9d0ae0d981530e12": {
+    "title": "Google now lets you chat with Gmail, Docs, and Keep",
+    "link": "https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini",
+    "source": "The Verge AI",
+    "message_id": 49,
+    "cached_at": 1788500726.2868898
+  },
+  "96dc402781ef96d7": {
+    "title": "Abliteration.ai is making a business out of removing AI guardrails",
+    "link": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
+    "source": "TechCrunch AI",
+    "message_id": 50,
+    "cached_at": 1788500728.8977468
+  },
+  "4e777cc533f78028": {
+    "title": "OpenAI Cut Off a Billion-Dollar Customer to Avoid Elon Musk",
+    "link": "https://www.wired.com/story/openai-elon-musk-cursor-billion-revenue/",
+    "source": "Wired AI",
+    "message_id": 51,
+    "cached_at": 1788500731.7692196
+  },
+  "b0ddbb06fe59b6cf": {
+    "title": "ChatGPT, Grok, and Claude all went down at the same time",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/989503/chatgpt-grok-claude-outage-down",
+    "source": "The Verge AI",
+    "message_id": 52,
+    "cached_at": 1788500734.1146944
+  },
+  "24457d2666e9c3bd": {
+    "title": "Meta is paying to peek at how you use their latest AI model",
+    "link": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
+    "source": "TechCrunch AI",
+    "message_id": 53,
+    "cached_at": 1788500736.4112313
+  },
+  "8d6613a28ff0945d": {
+    "title": "OpenAI launches Astra, its powerful (and controversial) new model",
+    "link": "https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/",
+    "source": "TechCrunch AI",
+    "message_id": 54,
+    "cached_at": 1788500738.7429361
+  },
+  "f99db1019d665670": {
+    "title": "Ollie is betting its focus on privacy can help it win the AI assistant race",
+    "link": "https://techcrunch.com/2026/09/03/ollie-is-betting-privacy-can-win-the-ai-assistant-race/",
+    "source": "TechCrunch AI",
+    "message_id": 55,
+    "cached_at": 1788500740.923041
   }
 }
