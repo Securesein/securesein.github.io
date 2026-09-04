@@ -60,5 +60,18 @@
     "status": "published",
     "slug": "understanding-the-impact-of-openai-s-gpt-6-astra-on-enterprise-operations",
     "published_at": 1788500709.0165627
+  },
+  "96dc402781ef96d7:56": {
+    "title": "Abliteration.ai is making a business out of removing AI guardrails",
+    "link": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
+    "source": "TechCrunch AI",
+    "message_id": 50,
+    "cached_at": 1788500728.8977468,
+    "instructions": "Kun je uitleggen waarom dit mag en hoe dit gebruikt gaat worden research, of ook echt consumenten? Wel zeer interessante ontwikkeling",
+    "kind": "article",
+    "marked_at": 1788501079.5299914,
+    "status": "published",
+    "slug": "unpacking-abliteration-ai-the-business-of-removing-ai-guardrails",
+    "published_at": 1788501099.8481798
   }
 }
