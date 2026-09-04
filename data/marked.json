@@ -73,5 +73,29 @@
     "status": "published",
     "slug": "unpacking-abliteration-ai-the-business-of-removing-ai-guardrails",
     "published_at": 1788501099.8481798
+  },
+  "6b349f3cdb6a8720:60": {
+    "title": "Anthropic Released Claude Commerce Agents: An Apache-2.0 Blueprint for Shopping and Merchant Agents Across Retail, Travel, Telecom and Entertainment",
+    "link": "https://www.marktechpost.com/2026/09/03/anthropic-released-claude-commerce-agents-an-apache-2-0-blueprint-for-shopping-and-merchant-agents-across-retail-travel-telecom-and-entertainment/",
+    "source": "MarkTechPost",
+    "message_id": 58,
+    "cached_at": 1788501171.4187167,
+    "instructions": "Focus on pricing",
+    "kind": "article",
+    "marked_at": 1788501504.513712,
+    "status": "published",
+    "slug": "navigating-the-pricing-maze-with-anthropic-s-claude-commerce-agents",
+    "published_at": 1788501524.2003846
+  },
+  "fb34fab4c6d61eb0:61": {
+    "title": "Meta AI Released Muse Spark 1.3: An Agentic Coding Model That Uses ~20% Fewer Tool Calls and ~25% Fewer Tokens Than Muse Spark 1.2",
+    "link": "https://www.marktechpost.com/2026/09/03/meta-ai-released-muse-spark-1-3-an-agentic-coding-model-that-uses-20-fewer-tool-calls-and-25-fewer-tokens-than-muse-spark-1-2/",
+    "source": "MarkTechPost",
+    "message_id": 59,
+    "cached_at": 1788501174.1212275,
+    "instructions": null,
+    "kind": "article",
+    "marked_at": 1788501504.921641,
+    "status": "pending"
   }
 }
