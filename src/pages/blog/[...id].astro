@@ -85,10 +85,18 @@ const isFundamentals = post.data.section === "fundamentals";
   .post { padding-top: 2.5rem; }
   .back { color: var(--text-muted); font-size: 0.95rem; }
   .back:hover { color: var(--text); text-decoration: none; }
-  .post-tags { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 2rem; }
+  .post-tags { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 2rem; }
   .fundamentals-badge {
     display: inline-block; padding: 0.3rem 0.7rem; border-radius: 999px;
-    background: var(--gradient); color: #0a0a0c;
+    /* Transparent border matching .pill's real one, not just matching
+       padding — box-sizing: border-box *should* make these equal
+       either way, but browsers round the border-vs-no-border case
+       differently at fractional pixel sizes (seen on Safari/macOS),
+       so give both elements the exact same box model instead of
+       relying on that arithmetic to land identically everywhere. */
+    border: 1px solid transparent;
+    background: var(--gradient);
+    color: #0a0a0c;
     font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
   }
   .post-title { font-size: clamp(2rem, 5vw, 3rem); margin-top: 1.2rem; }
