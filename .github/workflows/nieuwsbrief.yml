@@ -1,18 +1,22 @@
 name: AI news pipeline
 
-# Runs four times a day, targeting 08:00/12:00/16:00/20:00
-# Europe/Amsterdam time. GitHub Actions cron is UTC-only and Amsterdam
-# alternates between UTC+1 (CET, winter) and UTC+2 (CEST, summer) — a
-# set of fixed UTC times would drift an hour off target after each
-# clock change. Instead this fires at all eight candidate UTC times
-# (covering both offsets for all four target times) and the "Determine
-# whether to run now" step below only lets the rest of the job proceed
-# on the four that actually land on 08/12/16/20:00 Amsterdam time —
-# the other four are a clean no-op (green, does nothing), so no manual
-# DST adjustment is ever needed.
+# Targets four daily windows in Europe/Amsterdam time (see SLOTS in
+# scripts/check_schedule_gate.py: currently ~08:00, 12:00, 16:00,
+# 20:00 — all daytime, nothing runs overnight).
+#
+# GitHub Actions' `schedule` trigger is not reliable enough to hand-pick
+# exact UTC times for this: runs can be delayed by a long margin or
+# dropped entirely, especially at the top of the hour under GitHub load
+# — a single dropped fire used to mean a fully missed run. So instead
+# this fires every hour, all day (cheap — most hours are an instant
+# no-op), and check_schedule_gate.py decides which firings actually
+# count, based on generous ~2-hour windows: if the exact top-of-hour
+# fire for a window is dropped, the next hourly fire still lands inside
+# the same window and catches it. That script also owns Amsterdam-time
+# handling, so DST needs no manual adjustment here either.
 on:
   schedule:
-    - cron: "0 6,7,10,11,14,15,18,19 * * *"
+    - cron: "7 * * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -25,28 +29,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - name: Determine whether to run now
         id: gate
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "Manually triggered — always runs."
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            hour=$(TZ=Europe/Amsterdam date +%H)
-            if [ "$hour" = "08" ] || [ "$hour" = "12" ] || [ "$hour" = "16" ] || [ "$hour" = "20" ]; then
-              echo "It's $hour:xx in Amsterdam — this is a real run."
-              echo "run=true" >> "$GITHUB_OUTPUT"
-            else
-              echo "It's $hour:xx in Amsterdam, not 08/12/16/20:00 — this cron " \
-                   "fire only exists to cover the other DST offset. Skipping."
-              echo "run=false" >> "$GITHUB_OUTPUT"
-            fi
-          fi
-
-      - uses: actions/setup-python@v5
-        if: steps.gate.outputs.run == 'true'
-        with:
-          python-version: "3.12"
+          python scripts/check_schedule_gate.py | tee /tmp/gate.log
+          grep '^run=' /tmp/gate.log >> "$GITHUB_OUTPUT"
 
       - name: Install dependencies
         if: steps.gate.outputs.run == 'true'
