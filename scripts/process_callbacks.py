@@ -28,6 +28,14 @@ from pathlib import Path
 
 import telegram_api
 
+# Telegram can't send a truly empty message, so "no instructions,
+# just do your best" tends to show up as one of these placeholders —
+# treat them the same as an empty reply instead of literally as an
+# instruction (an LLM told to focus on "empty" would get confused).
+NO_INSTRUCTION_PLACEHOLDERS = {
+    "empty", "leeg", "none", "n/a", "na", "-", ".", "geen", "niks", "nvt",
+}
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
 OFFSET_FILE = DATA_DIR / "telegram_offset.json"
@@ -63,6 +71,8 @@ def handle_article_reply(message: dict, item_cache: dict, marked: dict, msgid_to
         return
 
     instructions = (message.get("text") or "").strip() or None
+    if instructions and instructions.strip(" .!").lower() in NO_INSTRUCTION_PLACEHOLDERS:
+        instructions = None
     key = f"{sid}:{message['message_id']}"
     marked[key] = {
         **item,

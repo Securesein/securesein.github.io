@@ -189,7 +189,7 @@ def notify_telegram(item: dict, summary: str) -> int | None:
     text = (
         f"📰 {item['title']}\n({item['source']})\n\n{summary}\n\n{item['link']}"
         f"\n\n💬 Reply to write a post about this — add instructions "
-        f"(e.g. \"focus on pricing\") or leave it blank for a free hand."
+        f"(e.g. \"focus on pricing\"), or just reply \"-\" for a free hand."
     )
     result = telegram_api.send_message(text)
     if result is None or not result.get("ok"):
