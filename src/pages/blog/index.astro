@@ -3,15 +3,15 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PostCard from "../../components/PostCard.astro";
 
-const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = (
+  await getCollection("blog", ({ data }) => !data.draft && data.section === "news")
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
-<BaseLayout title="Blog" description="All posts">
+<BaseLayout title="News" description="Timely AI news, auto-summarized from RSS.">
   <div class="container blog-index">
     <header class="blog-header">
-      <h1>Blog</h1>
-      <p>Everything I've written, newest first.</p>
+      <h1>News</h1>
+      <p>AI news as it happens, newest first. Looking for deeper explainers instead? See <a href="/fundamentals">AI Fundamentals</a>.</p>
     </header>
     {posts.map((post) => (
       <PostCard

@@ -25,7 +25,7 @@ const author = AUTHORS[authorKey];
         <span class="post-card-avatar">{author.name[0]}</span>
       )}
       <FormattedDate date={pubDate} />
-      {section === "fundamentals" && <span class="post-card-badge">Fundamentals</span>}
+      {section === "fundamentals" && <span class="post-card-badge">AI Fundamentals</span>}
       {tags.length > 0 && <span class="dot">&middot;</span>}
       {tags.slice(0, 2).map((tag) => <span class="post-card-tag">{CATEGORIES[tag].label}</span>)}
     </div>

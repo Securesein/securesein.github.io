@@ -29,14 +29,14 @@ const isFundamentals = post.data.section === "fundamentals";
 <BaseLayout title={post.data.title} description={post.data.description}>
   <article class="container post">
     {isFundamentals ? (
-      <a href="/fundamentals" class="back">&larr; Back to Fundamentals</a>
+      <a href="/fundamentals" class="back">&larr; Back to AI Fundamentals</a>
     ) : (
-      <a href="/blog" class="back">&larr; Back to blog</a>
+      <a href="/blog" class="back">&larr; Back to News</a>
     )}
 
     {(isFundamentals || post.data.tags.length > 0) && (
       <div class="post-tags">
-        {isFundamentals && <span class="fundamentals-badge">Fundamentals</span>}
+        {isFundamentals && <span class="fundamentals-badge">AI Fundamentals</span>}
         {post.data.tags.map((tag) => <span class="pill">{CATEGORIES[tag].label}</span>)}
       </div>
     )}

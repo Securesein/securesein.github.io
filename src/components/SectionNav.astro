@@ -1,0 +1,93 @@
+---
+import { SECTIONS } from "../consts";
+
+const { pathname } = Astro.url;
+const active = SECTIONS.find((s) => pathname.startsWith(s.href));
+const label = active?.label ?? "Sections";
+---
+<div class="section-nav">
+  <button
+    id="section-toggle"
+    class="section-toggle"
+    type="button"
+    aria-haspopup="true"
+    aria-expanded="false"
+    aria-controls="section-menu"
+  >
+    {label}
+    <svg class="chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <div id="section-menu" class="section-menu" role="menu">
+    {SECTIONS.map((section) => (
+      <a
+        href={section.href}
+        role="menuitem"
+        class:list={["section-menu-item", { active: section === active }]}
+      >
+        <span class="section-menu-label">{section.label}</span>
+        <span class="section-menu-desc">{section.description}</span>
+      </a>
+    ))}
+  </div>
+</div>
+
+<style>
+  .section-nav { position: relative; }
+  .section-toggle {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    background: none; border: none; padding: 0;
+    color: var(--text-muted); font-size: 0.95rem; font-weight: 500; font-family: inherit;
+    cursor: pointer;
+  }
+  .section-toggle:hover { color: var(--text); }
+  .chevron { width: 16px; height: 16px; transition: transform 0.15s ease; }
+  .section-nav.open .chevron { transform: rotate(180deg); }
+
+  .section-menu {
+    position: absolute; top: calc(100% + 0.8rem); left: 0;
+    min-width: 15rem;
+    background: var(--bg-elevated); border: 1px solid var(--border-strong); border-radius: var(--radius);
+    box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.4);
+    padding: 0.4rem;
+    display: none;
+    flex-direction: column;
+    z-index: 60;
+  }
+  .section-nav.open .section-menu { display: flex; }
+
+  .section-menu-item {
+    display: flex; flex-direction: column; gap: 0.15rem;
+    padding: 0.6rem 0.7rem; border-radius: var(--radius-sm);
+    color: var(--text);
+  }
+  .section-menu-item:hover { background: var(--bg-pill); text-decoration: none; }
+  .section-menu-item.active { background: var(--bg-pill); }
+  .section-menu-label { font-weight: 600; font-size: 0.9rem; }
+  .section-menu-desc { font-size: 0.8rem; color: var(--text-muted); }
+</style>
+
+<script>
+  const nav = document.querySelector<HTMLElement>(".section-nav");
+  const toggle = document.getElementById("section-toggle");
+
+  function close() {
+    nav?.classList.remove("open");
+    toggle?.setAttribute("aria-expanded", "false");
+  }
+
+  toggle?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = nav?.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(!!isOpen));
+  });
+
+  document.addEventListener("click", (e) => {
+    if (nav && !nav.contains(e.target as Node)) close();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
+</script>

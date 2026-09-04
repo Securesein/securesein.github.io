@@ -1,6 +1,7 @@
 ---
 import { SITE, NAV_LINKS } from "../consts";
 import ThemeToggle from "./ThemeToggle.astro";
+import SectionNav from "./SectionNav.astro";
 ---
 <header class="site-header">
   <div class="container container--wide header-inner">
@@ -17,6 +18,7 @@ import ThemeToggle from "./ThemeToggle.astro";
       <span class="brand-name">{SITE.title}</span>
     </a>
     <nav class="nav" aria-label="Main navigation">
+      <SectionNav />
       {NAV_LINKS.map((link) => <a href={link.href} class="nav-link">{link.label}</a>)}
     </nav>
     <div class="header-actions">

@@ -7,8 +7,21 @@ export const SITE = {
   github: "",
 };
 
-export const NAV_LINKS = [
-  { label: "Blog", href: "/blog" },
-  { label: "Fundamentals", href: "/fundamentals" },
-  { label: "About", href: "/about" },
+// The two content sections, shown together in the header's dropdown
+// (see SectionNav.astro) — kept as one explicit choice instead of two
+// separate flat nav links, since "Blog" alone read as the only path
+// and left "News" only implicit.
+export const SECTIONS = [
+  {
+    label: "News",
+    href: "/blog",
+    description: "Timely AI news, auto-summarized from RSS.",
+  },
+  {
+    label: "AI Fundamentals",
+    href: "/fundamentals",
+    description: "Evergreen explainers, hand-curated.",
+  },
 ];
+
+export const NAV_LINKS = [{ label: "About", href: "/about" }];
