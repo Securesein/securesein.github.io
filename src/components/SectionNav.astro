@@ -39,6 +39,10 @@ const label = active?.label ?? "Sections";
     display: inline-flex; align-items: center; gap: 0.35rem;
     background: none; border: none; padding: 0;
     color: var(--text-muted); font-size: 0.95rem; font-weight: 500; font-family: inherit;
+    /* Buttons don't inherit the body's line-height the way <a> does —
+       without this, this button's text box comes out shorter than the
+       .nav-link anchors next to it and the two don't line up. */
+    line-height: inherit;
     cursor: pointer;
   }
   .section-toggle:hover { color: var(--text); }
