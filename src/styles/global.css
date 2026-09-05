@@ -151,6 +151,30 @@ code, pre { font-family: var(--font-mono); }
   font-size: 0.9rem;
   color: var(--text-muted);
 }
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  /* Tables get wide (esp. with 3+ columns) — scroll the table itself
+     rather than letting it overflow the page on narrow screens. */
+  display: block;
+  overflow-x: auto;
+}
+.prose th, .prose td {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+.prose th {
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.prose tbody tr:nth-child(even) td {
+  background: var(--bg-pill);
+}
 .prose blockquote {
   border-left: 3px solid var(--accent-from);
   padding-left: 1.2rem;
