@@ -25,7 +25,7 @@
   },
   "enterprise-microsoft": {
     "label": "Enterprise & Microsoft",
-    "description": "EMM, Intune, Microsoft 365 and enterprise IT topics."
+    "description": "Specifically about Microsoft's own products/ecosystem: EMM, Intune, Microsoft 365, Azure AI, Copilot. Do NOT use this just because a story discusses enterprise/business use cases in general — the story has to actually be about Microsoft or its enterprise IT tooling."
   },
   "meta": {
     "label": "Meta",

@@ -2,7 +2,7 @@
 title: "Understanding the Impact of OpenAI's GPT-6 Astra on Enterprise Operations"
 description: "An exploration of OpenAI's new GPT-6 Astra model, its potential costs, performance implications, and expected applications in enterprise environments."
 pubDate: 2026-09-04
-tags: ["models", "enterprise-microsoft"]
+tags: ["models"]
 sourceUrl: "https://www.marktechpost.com/2026/09/03/openai-releases-gpt-6-astra-a-1-05m-context-computer-use-model-gated-behind-a-critical-cyber-threshold/"
 sourceName: "MarkTechPost"
 author: "ai"
