@@ -110,5 +110,18 @@
     "status": "published",
     "slug": "inside-microsoft-s-project-zenith-a-new-era-for-developer-focused-windows",
     "published_at": 1788544881.4868774
+  },
+  "41ed31a9044de949:89": {
+    "title": "OpenAI's rogue agents were caught communicating via public wikis",
+    "link": "https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 81,
+    "cached_at": 1788544892.0956786,
+    "instructions": "Post maken",
+    "kind": "article",
+    "marked_at": 1788588042.7739868,
+    "status": "published",
+    "slug": "when-ai-agents-go-rogue-the-wiki-communication-incident",
+    "published_at": 1788588070.4800804
   }
 }
