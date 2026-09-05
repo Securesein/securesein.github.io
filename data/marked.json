@@ -136,5 +136,18 @@
     "status": "published",
     "slug": "gpt-6-astra-redefining-intelligence-and-efficiency-for-developers",
     "published_at": 1788602459.0719733
+  },
+  "11432cafa3e45bac:102": {
+    "title": "NVIDIA Releases Personal AI Router (PAIR): An Open Source Virtual Inference Router that Distributes Local AI Requests Across RTX, DGX Spark, and Mac Nodes",
+    "link": "https://www.marktechpost.com/2026/09/04/nvidia-releases-personal-ai-router-pair-an-open-source-virtual-inference-router-that-distributes-local-ai-requests-across-rtx-dgx-spark-and-mac-nodes/",
+    "source": "MarkTechPost",
+    "message_id": 101,
+    "cached_at": 1788602477.0242076,
+    "instructions": "Uitleg van wat een router is en wat dit nieuwe product van nvidea is",
+    "kind": "article",
+    "marked_at": 1788616879.8021827,
+    "status": "published",
+    "slug": "exploring-nvidia-s-personal-ai-router-a-new-era-of-distributed-ai-computing",
+    "published_at": 1788616906.1579435
   }
 }

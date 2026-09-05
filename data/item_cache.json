@@ -486,5 +486,19 @@
     "source": "MarkTechPost",
     "message_id": 101,
     "cached_at": 1788602477.0242076
+  },
+  "604faf72cfdd8faf": {
+    "title": "OpenAI Agents Hacked Another Website",
+    "link": "https://www.wired.com/story/security-news-this-week-openai-agents-hacked-another-website/",
+    "source": "Wired AI",
+    "message_id": 104,
+    "cached_at": 1788616915.3891168
+  },
+  "a21a12789d4e4638": {
+    "title": "OpenAI admits to German wiki ‘incident’",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
+    "source": "The Verge AI",
+    "message_id": 105,
+    "cached_at": 1788616917.90608
   }
 }
