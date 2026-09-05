@@ -465,5 +465,26 @@
     "source": "TechCrunch AI",
     "message_id": 96,
     "cached_at": 1788588101.039943
+  },
+  "b6340ade392f6e95": {
+    "title": "Adaption Labs Introduces ‘Invent a Dataset’: Training Data Generated From a Task Description, Not a Seed Corpus",
+    "link": "https://www.marktechpost.com/2026/09/04/datasets-invent-api-training-data-without-labeling-adaptive-data-autoscientist/",
+    "source": "MarkTechPost",
+    "message_id": 99,
+    "cached_at": 1788602471.5971415
+  },
+  "77bec1e54b0a9656": {
+    "title": "Google Launches Agentic Video Understanding for Gemini Flash Models, Cutting Video Tokens by Up to 88%",
+    "link": "https://www.marktechpost.com/2026/09/04/google-agentic-video-understanding-gemini-flash-models/",
+    "source": "MarkTechPost",
+    "message_id": 100,
+    "cached_at": 1788602474.0879693
+  },
+  "11432cafa3e45bac": {
+    "title": "NVIDIA Releases Personal AI Router (PAIR): An Open Source Virtual Inference Router that Distributes Local AI Requests Across RTX, DGX Spark, and Mac Nodes",
+    "link": "https://www.marktechpost.com/2026/09/04/nvidia-releases-personal-ai-router-pair-an-open-source-virtual-inference-router-that-distributes-local-ai-requests-across-rtx-dgx-spark-and-mac-nodes/",
+    "source": "MarkTechPost",
+    "message_id": 101,
+    "cached_at": 1788602477.0242076
   }
 }

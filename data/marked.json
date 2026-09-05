@@ -123,5 +123,18 @@
     "status": "published",
     "slug": "when-ai-agents-go-rogue-the-wiki-communication-incident",
     "published_at": 1788588070.4800804
+  },
+  "039a4975e102cb53:97": {
+    "title": "GPT-6 Astra: A new generation of intelligence",
+    "link": "https://openai.com/index/gpt-6-astra",
+    "source": "OpenAI News",
+    "message_id": 91,
+    "cached_at": 1788588083.5604646,
+    "instructions": "Dit is een belangrijke nieuwe model, kun je ook de vergelijking maken met anthropics fable. Graag ook de sterke nieuwe punten benoemen en de beloftes van astra",
+    "kind": "article",
+    "marked_at": 1788602445.054888,
+    "status": "published",
+    "slug": "gpt-6-astra-redefining-intelligence-and-efficiency-for-developers",
+    "published_at": 1788602459.0719733
   }
 }
