@@ -500,5 +500,12 @@
     "source": "The Verge AI",
     "message_id": 105,
     "cached_at": 1788616917.90608
+  },
+  "1a7ad445c458128b": {
+    "title": "Using Blender with coding agents on macOS",
+    "link": "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 106,
+    "cached_at": 1788623896.8384483
   }
 }
