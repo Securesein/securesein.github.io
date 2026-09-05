@@ -36,7 +36,7 @@ const isFundamentals = post.data.section === "fundamentals";
 
     {(isFundamentals || post.data.tags.length > 0) && (
       <div class="post-tags">
-        {isFundamentals && <span class="fundamentals-badge">AI Fundamentals</span>}
+        {isFundamentals && <span class="pill fundamentals-badge">AI Fundamentals</span>}
         {post.data.tags.map((tag) => <span class="pill">{CATEGORIES[tag].label}</span>)}
       </div>
     )}
@@ -86,18 +86,18 @@ const isFundamentals = post.data.section === "fundamentals";
   .back { color: var(--text-muted); font-size: 0.95rem; }
   .back:hover { color: var(--text); text-decoration: none; }
   .post-tags { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 2rem; }
+  /* Reuses .pill (same markup: class="pill fundamentals-badge") so the
+     box model — padding, border width, border-radius, font-size,
+     font-weight, letter-spacing — is the exact same CSS rule as the
+     category pill beside it, not just matching values in a second
+     rule. Two attempts at "matching values" (padding, then a
+     transparent border) both still rendered a few px off on
+     Safari/macOS at this font size; sharing the literal rule is the
+     only way to be sure. Only the accent colors differ here. */
   .fundamentals-badge {
-    display: inline-block; padding: 0.3rem 0.7rem; border-radius: 999px;
-    /* Transparent border matching .pill's real one, not just matching
-       padding — box-sizing: border-box *should* make these equal
-       either way, but browsers round the border-vs-no-border case
-       differently at fractional pixel sizes (seen on Safari/macOS),
-       so give both elements the exact same box model instead of
-       relying on that arithmetic to land identically everywhere. */
-    border: 1px solid transparent;
+    border-color: transparent;
     background: var(--gradient);
     color: #0a0a0c;
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
   }
   .post-title { font-size: clamp(2rem, 5vw, 3rem); margin-top: 1.2rem; }
   .post-lead { font-size: 1.25rem; color: var(--text-muted); margin-top: 1.2rem; }
