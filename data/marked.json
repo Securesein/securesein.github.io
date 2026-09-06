@@ -162,5 +162,18 @@
     "status": "published",
     "slug": "gpt-6-astra-a-new-era-for-developers",
     "published_at": 1788688866.6764708
+  },
+  "e0f75446731d598c:124": {
+    "title": "An Alien Mind",
+    "link": "https://openai.com/index/an-alien-mind",
+    "source": "OpenAI News",
+    "message_id": 120,
+    "cached_at": 1788717657.1193957,
+    "instructions": "Post maken",
+    "kind": "article",
+    "marked_at": 1788721410.3963096,
+    "status": "published",
+    "slug": "navigating-the-unknown-preparing-for-a-world-with-reasoning-ais",
+    "published_at": 1788721433.0854373
   }
 }
