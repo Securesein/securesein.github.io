@@ -149,5 +149,18 @@
     "status": "published",
     "slug": "exploring-nvidia-s-personal-ai-router-a-new-era-of-distributed-ai-computing",
     "published_at": 1788616906.1579435
+  },
+  "9f6de6a442ea3eb6:114": {
+    "title": "Introducing GPT-6 Astra for developers",
+    "link": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 108,
+    "cached_at": 1788674461.58783,
+    "instructions": "Maak een post",
+    "kind": "article",
+    "marked_at": 1788688844.6553993,
+    "status": "published",
+    "slug": "gpt-6-astra-a-new-era-for-developers",
+    "published_at": 1788688866.6764708
   }
 }

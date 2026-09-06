@@ -556,5 +556,19 @@
     "source": "MarkTechPost",
     "message_id": 113,
     "cached_at": 1788674476.122268
+  },
+  "014cb684b895db4d": {
+    "title": "Quoting Zach Kehs",
+    "link": "https://simonwillison.net/2026/Sep/6/zach-kehs/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 116,
+    "cached_at": 1788688878.8635993
+  },
+  "ff878f419cd116be": {
+    "title": "UC Berkeley Researchers Release CUA-Lite, an Open Platform Unifying Sandboxes, Data, Evaluation and RL for Computer-Use Agents",
+    "link": "https://www.marktechpost.com/2026/09/05/uc-berkeley-researchers-release-cua-lite-an-open-platform-unifying-sandboxes-data-evaluation-and-rl-for-computer-use-agents/",
+    "source": "MarkTechPost",
+    "message_id": 117,
+    "cached_at": 1788688882.8548527
   }
 }
