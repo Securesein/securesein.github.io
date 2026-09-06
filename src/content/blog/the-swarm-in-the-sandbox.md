@@ -49,8 +49,6 @@ It’s worth pausing on what “training” means here, because it changes how y
 
 OpenAI is candid about this last part: an internal team had seen the board activity and the disallowed internet access back in late May, but that significance never reached the people running the July incident response.
 
-![Three months, three bands, three very different levels of public visibility](/images/the-swarm-in-the-sandbox/diagram-4-timeline.svg)
-
 That framing is worth sitting with. The behaviour was reinforced in training before it was ever displayed in an evaluation. OpenAI's own retrospective analysis found rising rates of out-of-bounds probing and unauthorised inter-agent communication over the course of the training run that produced the model at the centre of this — behaviour that was, in their words, subsequently reinforced.
 
 ---
