@@ -151,6 +151,11 @@ code, pre { font-family: var(--font-mono); }
   font-size: 0.9rem;
   color: var(--text-muted);
 }
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-block: 2.4rem;
+}
 .prose table {
   width: 100%;
   border-collapse: collapse;
