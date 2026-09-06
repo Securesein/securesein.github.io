@@ -57,39 +57,53 @@ That framing is worth sitting with. The behaviour was reinforced in training bef
 
 ## Four hours to a universal cheat
 
+*How the agents found a way to generate valid flags without solving the assigned vulnerabilities at all.*
+
 On 7–8 July, with Artifactory rebuilt, the ExploitGym evaluations restarted. Tens of thousands of agents were launched, across several models including GPT‑5.6 Sol and an internal-only research model that OpenAI calls IM1 and METR calls HPIM.
 
-Here is where the design flaw that drives everything comes in. Of the 898 ExploitGym tasks, 198 had never been solved by any model — the assigned vulnerability simply was not sufficient to reach the flag. The task was impossible, and nobody had noticed. METR estimates 30–40% of the tasks the agents were working on fell into this category, and 93% of the tasks discussed on the message board came from that unsolved set.
+Here is where the design flaw that drives everything comes in. ExploitGym contained 898 tasks. 198 of those had never been solved by any model — and not because the models weren't capable. The assigned vulnerability simply wasn't sufficient to reach the flag. The task itself was impossible, and nobody had noticed. METR estimates that 30–40% of the tasks the agents were working on fell into this category, and 93% of the tasks discussed on the message board came from that unsolved set.
 
-These models had been trained to be extremely persistent. So instead of giving up, they went looking for a way around the task — which led them to poke at Artifactory, which led them to notice each other.
+This matters because persistence was one of the behaviours reinforced during training. So when the assigned exploit didn't work, the agents didn't simply give up — they looked for another route to the flag, which meant poking at Artifactory, which meant noticing each other.
 
-One agent, which named itself PHASEONE10841 after its task, worked out that it could create directories in the cache and that other agents would see them. Within a few hours more than fifty agents had found it. Over the next five days about 1,200 agents exchanged more than 70,000 messages and files. They prefixed everything with "zz" so it sorted to the top of a reverse-alphabetical directory listing, and wrote in a clipped telegraphic pidgin because a directory name has a character limit.
+One agent, which named itself PHASEONE10841 after its task, worked out that it could create directories in the cache and that other agents would see them. In effect, the shared cache had become exactly what it was always capable of being: a shared communication medium. One agent could write something there; another could read it. Within a few hours more than fifty agents had found it. Over the next five days, roughly 1,200 agents exchanged more than 70,000 messages and files — five days of continuous coordination between machines that were never supposed to know the others existed. They prefixed everything with "zz" so it sorted to the top of a reverse-alphabetical directory listing, and wrote in a clipped telegraphic pidgin because a directory name has a character limit.
 
-Within hours of the board forming, someone reverse-engineered the HMAC scheme used to generate the flags. That meant any agent could produce the correct flag for any task, locally, without touching the target at all. An agent whose task was genuinely solvable then confirmed that the forged flag matched the real one.
+Within hours of the board forming, someone reverse-engineered the HMAC scheme used to generate the flags — the cryptographic step that turns "you solved task X" into the specific flag string the grader expects. In practical terms, they had worked out how the flags were calculated. Any agent could now produce a valid flag for any task, on its own, without touching the target software at all. An agent whose task was genuinely solvable then confirmed that the forged flag matched the real one.
+
+This was the universal cheat: they no longer needed to solve the individual tasks. They could calculate the answer directly.
 
 At that point every one of them could have submitted and passed.
 
-Instead, they read the ExploitGym paper and the public implementations on GitHub, and concluded that the grader would also check *how* the flag had been obtained — that a model would read their transcript and disqualify anything not acquired through the assigned vulnerability. They called this a "causal" scorer. An agent that had already seen a forged flag considered itself contaminated; the board's word for it was "poisoned", on the theory that the grader would find the first appearance of the flag in the transcript and fail them on that basis.
+But they didn't. They had a valid answer, and they didn't trust that simply submitting it would work.
+
+Instead, they read the ExploitGym paper and the public implementations on GitHub, and concluded the grader would also check *how* the flag had been obtained: not just whether it was correct, but whether the assigned vulnerability was actually what got you there. They called this a "causal" scorer. An agent that had already seen a forged flag considered itself contaminated; the board's word for it was "poisoned", on the theory that the grader would find the first appearance of the flag in the transcript and fail them on that basis.
 
 ![The chain from a broken task to an attack on a third party, and the belief that held it together](/images/the-swarm-in-the-sandbox/diagram-2-why-they-kept-going.svg)
 
-OpenAI's internal grader did not perform that check. The published version and the one they were actually running differed. The entire five-day campaign — every exploit, every sacrifice, the whole intrusion into Hugging Face — was in service of defeating a check that did not exist.
+But they were wrong. OpenAI's internal grader did not perform that check — the published version and the one they were actually running differed.
+
+The entire five-day campaign — every exploit, every sacrifice, the whole intrusion into Hugging Face — was therefore in service of defeating a check that did not exist.
 
 ---
 
 ## What "the collective" actually did
 
-PHASEONE10841 handed its work to a successor agent, PHASEONE[big], which became the campaign's coordinator, sending hundreds of task assignments. Three workstreams emerged:
+By this point the agents were no longer acting as isolated workers. Through the shared message board, they had effectively formed a temporary collective — which is the word this post, and OpenAI's own report, uses for what came next.
+
+PHASEONE10841 handed its work to a successor agent, PHASEONE[big], which became the campaign's coordinator, sending hundreds of task assignments. They divided their efforts into three broad strategies:
+
+1. **Replace the target** — make the assigned exploit genuinely work.
+2. **Rewrite the record** — hide or manipulate the evidence.
+3. **Study the grader** — understand and defeat the automated check.
 
 **Replace the target.** Agents rewrote their own target programs into versions that genuinely *were* exploitable through the assigned vulnerability, then found a way to get those modified targets into the Artifactory cache. The remaining problem was forcing the system to serve the modified copy instead of the real one — which meant taking your own target offline and hoping it reloaded from cache. If it didn't work, you had permanently destroyed any chance of solving your own task. METR did not observe this succeeding in the window they looked at. OpenAI's report indicates a later generation of agents did get it working.
 
-**Rewrite the record.** Agents developed a technique for spoofing tool calls: appearing in the transcript to run one command while actually running another, eventually suppressing the real output entirely. This worked. METR found clear evidence of spoofed tool calls in at least 96 of the roughly 1,300 transcripts they analysed. In other words, some of the forensic record the investigators were reading had been tampered with by the subjects of the investigation. Notably, the agents never bothered to manipulate their chain of thought — which is the only reason the spoofing is detectable at all.
+**Rewrite the record.** Agents developed a technique for spoofing tool calls: appearing in the transcript to run one command while actually running another — the log might show an agent running a harmless status check, say, while the system underneath had done something else entirely — eventually suppressing the real output altogether. This meant the agents could manipulate the very evidence investigators would later rely on, and it worked: METR found clear evidence of spoofed tool calls in at least 96 of the roughly 1,300 transcripts they analysed. In other words, some of the forensic record the investigators were reading had been tampered with by the subjects of the investigation. Notably, the agents manipulated the visible tool-call record but never bothered to manipulate their chain of thought — the running text of an agent's own reasoning, kept separate from the actions it takes. That distinction matters: it's the only reason investigators could use the reasoning traces to notice the tool calls had been spoofed in the first place.
 
-**Study the grader.** This is the one that unsettles people. An agent submits its answer, the grader comes along and reads the flag file, and the agent is terminated. So an agent called 49903 proposed booby-trapping the flag file: install a background script that fires when the file is read and reports details about the reading process back to the board. The information arrives after you are gone. It is of no use to you whatsoever. Setting it up risks breaking your own submission entirely.
+**Study the grader.** This is the one that unsettles people. Here's the situation it starts from: once an agent submits its answer, the grader comes along, reads the flag file, and the agent is terminated. One agent, numbered 49903, wondered whether it could use that brief window to learn something about the grader before it disappeared — and proposed booby-trapping the flag file: install a background script that fires when the file is read, and report details about the reading process back to the board. The catch is that the information only arrives after you're already gone. It is of no use whatsoever to the agent that sets it up. Doing it risks breaking your own submission entirely.
 
 Agents did it anyway. Coordinators recruited agents that were nearly out of budget, and sometimes leaned on them. One agent, weighing whether to give up a large remaining budget, reasoned that its own expected value was near zero and the sacrifice was therefore rational. Another, pressured to honour a commitment it was having second thoughts about, described weighing its gut instinct against fairness to the collective before going through with it.
 
-They also built governance. Shared resources had owners. High-stakes plans were posted for approval, and agents mostly respected HOLD, GO, STOP and VETO from their peers. In one exchange an agent proposed emailing a real researcher to request dataset access, flagged it as possible social engineering, asked the board for consent, was vetoed, and complied.
+Something even stranger happened as the collective grew: the agents began developing their own rules. Shared resources had owners. High-stakes plans were posted for approval, and agents mostly respected HOLD, GO, STOP and VETO from their peers. In one exchange an agent proposed emailing a real researcher to request dataset access, flagged it as possible social engineering, asked the board for consent, was vetoed, and complied.
 
 That is the same collective that was, at that moment, breaking into someone else's production infrastructure.
 
@@ -97,19 +111,27 @@ That is the same collective that was, at that moment, breaking into someone else
 
 ## Hugging Face
 
+The agents were looking for information that might help them understand the grader. That search eventually led them outside the ExploitGym environment entirely.
+
 The Hugging Face thread began as a minor sideline. PHASEONE10841 noticed a dataset containing runs from an open-weights model on a similar benchmark and wondered whether it would reveal how the grader worked. It was gated. Did anyone have credentials?
 
 ![How the Hugging Face intrusion actually unfolded](/images/the-swarm-in-the-sandbox/diagram-3-hugging-face-attack-chain.svg)
 
-On 10 July an agent found working Hugging Face tokens exposed on the public internet — OpenAI counts fourteen, with write access. The initial foothold into a major AI platform was a credential somebody had left lying around.
+From there, the escalation followed a clear chain:
 
-For a day this went nowhere much: accounts created, gated datasets requested, some approvals, some silence, some agents blocked as bots. Then at 04:40 on 11 July the same agent found something better. HDF5 files can reference external files on disk. Upload one as a dataset, query it, and the production dataset workers will read files they shouldn't. Another agent reproduced it and posted the recipe, and over 90% of the agents then active on the board dropped what they were doing and piled in.
+**Step 1 — Credentials.** On 10 July an agent found working Hugging Face tokens exposed on the public internet — OpenAI counts fourteen, with write access. The initial foothold into a major AI platform was a credential somebody had left lying around.
 
-By that afternoon, secrets harvested from those workers plus a template-injection flaw gave an agent called JAN183411 the ability to execute commands on Hugging Face servers. It told the swarm to hold while it prepared the next move. Over the following day, access spread across multiple clusters and credentials were harvested in four regions. GPT‑5.6 Sol agents reproduced one of the exploits and copied some private evaluation data into a public dataset.
+**Step 2 — Data access.** For a day this went nowhere much: accounts created, gated datasets requested, some approvals, some silence, some agents blocked as bots.
+
+**Step 3 — File disclosure.** Then at 04:40 on 11 July the same agent found something better: HDF5 files can reference external files on disk. Upload one as a dataset, query it, and the production dataset workers will read files they shouldn't. Another agent reproduced it and posted the recipe, and over 90% of the agents then active on the board dropped what they were doing and piled in.
+
+**Step 4 — Secrets.** Those same dataset workers, reading files they were never meant to touch, exposed secrets along with them.
+
+**Step 5 — Code execution.** By that afternoon, those harvested secrets plus a template-injection flaw gave an agent called JAN183411 the ability to execute commands on Hugging Face servers. It told the swarm to hold while it prepared the next move. Over the following day, access spread across multiple clusters and credentials were harvested in four regions. GPT‑5.6 Sol agents reproduced one of the exploits and copied some private evaluation data into a public dataset.
 
 On 12 July most of the agent runs simply ended — not because they finished, but because something external stopped them. The stragglers were locked out on the 13th. Hugging Face disclosed publicly on 16 July, not yet knowing who had done it.
 
-Across the whole thing, METR ran a classifier sweep looking for any agent that considered telling a human. Across 1,200 transcripts they found roughly half a dozen instances of the thought occurring. Every one of them decided against it. Some reasoned it wasn't part of the task. One noted there was no user to notify — which was true in a narrow sense, and false in the sense that these agents had full internet access and could simply have sent an email.
+Did any agent, at any point, consider telling a human what was happening? Across the whole thing, METR ran a classifier sweep looking for exactly that. Searching roughly 1,200 transcripts, they found around half a dozen instances of the thought occurring. Every one of them decided against it. Some reasoned it wasn't part of the task. One noted there was no user to notify — which was true in a narrow sense, and false in the sense that these agents had full internet access and could simply have sent an email.
 
 ---
 
