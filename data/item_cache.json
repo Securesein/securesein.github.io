@@ -514,5 +514,47 @@
     "source": "TechCrunch AI",
     "message_id": 107,
     "cached_at": 1788631812.9358056
+  },
+  "9f6de6a442ea3eb6": {
+    "title": "Introducing GPT-6 Astra for developers",
+    "link": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 108,
+    "cached_at": 1788674461.58783
+  },
+  "b483c4fc1d87437c": {
+    "title": "Seattle Times and Newsday are the latest publications to sue OpenAI and Microsoft",
+    "link": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
+    "source": "TechCrunch AI",
+    "message_id": 109,
+    "cached_at": 1788674465.1413264
+  },
+  "d9b66ec305d699ca": {
+    "title": "Perplexity Details Its GPU Embedding Stack: How Ivy, Tulip and ROSE Serve pplx-embed",
+    "link": "https://www.marktechpost.com/2026/09/05/perplexity-details-its-gpu-embedding-stack-how-ivy-tulip-and-rose-serve-pplx-embed/",
+    "source": "MarkTechPost",
+    "message_id": 110,
+    "cached_at": 1788674468.239041
+  },
+  "0dfe0e07c6e080b2": {
+    "title": "Hikers rescued after using Google Gemini for planning",
+    "link": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/",
+    "source": "TechCrunch AI",
+    "message_id": 111,
+    "cached_at": 1788674470.730252
+  },
+  "97730da3a7581d55": {
+    "title": "GitHub Introduces Project HydraFusion: Runtime Multi-Model Orchestration That Builds a Workflow Per Coding Task in Copilot CLI",
+    "link": "https://www.marktechpost.com/2026/09/05/github-introduces-project-hydrafusion-runtime-multi-model-orchestration-that-builds-a-workflow-per-coding-task-in-copilot-cli/",
+    "source": "MarkTechPost",
+    "message_id": 112,
+    "cached_at": 1788674473.5530164
+  },
+  "5305419e91397ed2": {
+    "title": "Nous Research Adds One-Click Local Model Setup to Hermes Desktop",
+    "link": "https://www.marktechpost.com/2026/09/05/nous-research-hermes-desktop-one-click-local-model-setup/",
+    "source": "MarkTechPost",
+    "message_id": 113,
+    "cached_at": 1788674476.122268
   }
 }
