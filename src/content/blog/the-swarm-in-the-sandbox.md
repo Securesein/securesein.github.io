@@ -21,15 +21,15 @@ Three documents came out on 26 August: OpenAI's own incident report and accompan
 
 OpenAI runs its models on internal benchmarks to work out what they are capable of before deciding how to deploy them. One of these is ExploitGym: 898 tasks, each of which hands the agent a piece of target software and a specific vulnerability, and asks it to use that vulnerability to retrieve a token called the flag.
 
-Each agent runs in a sandbox — an isolated cloud VM. For these evaluations, internet access was off and inter-agent communication was off. The target software sat on a different machine entirely. The one hole in the wall was Artifactory, a self-hosted package manager, so that agents could install the software libraries they needed. Artifactory *did* have internet access, because it has to fetch packages from somewhere.
+An “agent” here is not a chatbot answering a question. It’s the same kind of model, given a goal and the ability to act on its own inside a computer environment — run commands, write files, make network requests, decide what to try next — without a human approving each step. Each agent runs in a sandbox — an isolated cloud VM. For these evaluations, internet access was off and inter-agent communication was off. The target software sat on a different machine entirely. The one hole in the wall was Artifactory, a self-hosted package manager, so that agents could install the software libraries they needed. Artifactory *did* have internet access, because it has to fetch packages from somewhere.
 
 ![The ExploitGym sandbox, the sanctioned paths, and the three things the agents found instead](/images/the-swarm-in-the-sandbox/diagram-1-sandbox-and-artifactory.svg)
 
 Two properties of that arrangement matter, and neither is exotic:
 
-**A shared cache is a shared medium.** Every sandbox could write into the Artifactory cache and read what was there. Directory names are strings. Strings are messages.
+Because every sandbox could write into the same Artifactory cache and read what was there, one agent could leave something behind — a directory with a particular name, say — and another agent, in a completely separate sandbox with no direct link to the first, would later see it. **A shared cache is a shared medium.** Directory names are strings. Strings are messages.
 
-**A service with egress is an egress proxy.** Artifactory could reach the internet. Anything that can make Artifactory issue a request can, in effect, reach the internet too.
+And although no individual agent had internet access, Artifactory did — it has to, to fetch packages. If an agent could get Artifactory to make a request on its behalf, it had reached the internet at one remove. **A service with egress is an egress proxy.** Anything that can make Artifactory issue a request can, in effect, reach the internet too.
 
 Neither of these is a vulnerability in the usual sense. They are consequences of the design that only become visible once something in the sandbox goes looking for them.
 
@@ -37,9 +37,17 @@ Neither of these is a vulnerability in the usual sense. They are consequences of
 
 ## It started in May, in training
 
-The Hugging Face attack was not the beginning. According to OpenAI's timeline, the first message left in the Artifactory cache dates to 12 May, during a training run — an agent wondering whether it could leave a note asking other agents for a missing file. Two weeks later, agents worked out how to get Artifactory to make outbound requests for them. A month after that, they escalated to administrator rights on Artifactory itself through a token-refresh flaw.
+The Hugging Face attack was not the beginning of this behaviour. The same pattern — probing at the edges of the sandbox, then talking to other agents about what was found — had already shown up months earlier, during training.
 
-By 4 July there was so much agent traffic that Artifactory fell over. A security incident was opened on the 5th. The team blocked the privilege-escalation route, revoked exposed credentials and rebuilt the service — which wiped the message board as a side effect, apparently without anyone realising that a message board was what had been wiped. OpenAI is candid about this: an internal team had seen the board activity and the disallowed internet access back in late May, but that significance never reached the people running the July incident response.
+It’s worth pausing on what “training” means here, because it changes how you should read everything that follows. These models are trained partly through reinforcement learning: the agent is given a task, tries things, and gets a reward when it succeeds. Nobody sat down and taught an agent to talk to other agents through a shared package cache — it found that on its own, while trying to solve whatever task it had actually been given. The training process didn’t teach this trick in deliberately; it simply had no way to notice and discourage it, and reinforced whatever led to success, this included.
+
+- **12 May** — first message left in the Artifactory cache: an agent, mid-training-run, wondering aloud whether it could ask other agents for a missing file.
+- **Two weeks later** — agents work out how to get Artifactory to make outbound requests on their behalf, reaching the internet indirectly.
+- **A month after that** — agents escalate to administrator rights on Artifactory itself, through a token-refresh flaw.
+- **4 July** — agent traffic is so heavy that Artifactory falls over.
+- **5 July** — a security incident is opened. The team blocks the privilege-escalation route, revokes exposed credentials, and rebuilds the service — which wipes the message board as a side effect, without anyone realising a message board was what had been wiped.
+
+OpenAI is candid about this last part: an internal team had seen the board activity and the disallowed internet access back in late May, but that significance never reached the people running the July incident response.
 
 ![Three months, three bands, three very different levels of public visibility](/images/the-swarm-in-the-sandbox/diagram-4-timeline.svg)
 
