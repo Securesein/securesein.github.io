@@ -17,24 +17,42 @@ This post stays at the level of mechanism rather than implementation. What the f
 
 ## The finding underneath it
 
-Tokenizing a sentence does not give you one vector for the whole sentence — it gives you one vector *per token*. Ask the model “What is a token?” and by the time tokenization is done you have five or six of these vectors sitting side by side, one per token, each nothing more than that token’s own entry in the vocabulary’s embedding table. At this point none of them know anything about each other, or about the sentence they’re part of.
+The result rests on two ideas from interpretability research. Neither is complicated, and once both are in place the finding explains itself.
 
-That changes as they travel through the network, because at every layer, two things happen to each token’s vector, not one. First, **attention**: a token looks at every other token that came before it, works out which of them are relevant right now, and pulls a summary of their current vectors into its own. Second, a small feedforward step that further reshapes whatever the token now holds. Both of these get *added* to what the token already had — nothing is overwritten, each layer’s contribution just joins a running total. That running total, for one token, at one layer, is the **residual stream**.
+### Every token carries a running total
 
-So this is not one token slowly growing into the whole question. It is closer to: every token keeps its own running total, and attention is the mechanism by which one token’s total borrows from another’s. Carry that forward through enough layers and the *last* token’s residual stream — the one sitting right before the model has to decide what comes next — has, layer by layer, pulled in something from every token that came before it. By the final layer, that last position’s vector is effectively a compressed summary of the whole prompt, even though it started out as nothing more than the embedding for a single word or punctuation mark. This is exactly the vector abliteration research looks at: not “the sentence” in the abstract, but this one, specific vector — the final token’s position, once it has passed through every layer in the stack. Not merely what the last layer alone happened to add to it; the running total that arrives there.
+Tokenizing a sentence does not give you one vector for the sentence. It gives you one vector per token. Ask the model “What is a token?” and you end up with five vectors sitting side by side, each nothing more than that token’s own entry in the vocabulary’s embedding table. At this point none of them knows anything about the others, or about the sentence it belongs to.
 
-A list of a few thousand numbers is also a point in a few-thousand-dimensional space, the same way `[4, 2]` is a point on a two-dimensional page. And just as you can ask how far a point on a page lies along some chosen direction — a plain multiply-and-add, nothing fancier — you can ask the identical question of a point in four thousand dimensions. That one measurement is the only piece of maths this entire technique rests on. Models use it to represent features: a direction for ‘this is a question’, another for ‘this is code’, another for ‘this is French’.
+That changes as they move through the network. At every layer, two things happen to each token’s vector. Attention lets a token look back at every token before it, work out which ones matter here, and pull a summary of their current vectors into its own. A small feedforward step then reshapes whatever the token now holds. Both results are added to what was already there. Nothing is overwritten — each layer’s contribution simply joins a running total, and that running total, for one token at one layer, is the **residual stream**.
 
-In 2024 Arditi et al. asked whether refusal has a direction of its own, and found something sharper than anyone expected. Across thirteen open chat models, up to 72 billion parameters, refusal is mediated by a **single direction**.
+![Five token columns — What, is, a, token, ? — running from the embedding layer up through the network, with attention arrows feeding earlier tokens into the last token's column at every layer, ending in the vector abliteration measures](/images/abliteration-how-one-direction-holds-a-model-s-refusals/residual_stream_running_total_per_token.png)
 
-The evidence is not a correlation, it is a pair of interventions that work in both directions:
+*The last token’s running total, layer by layer, becomes the vector abliteration measures.*
+
+So every token keeps its own running total, and attention is the mechanism by which one total borrows from another. Carry that through enough layers and the last token’s total has pulled in something from every token before it. By the final layer, that one position — the vector sitting immediately before the model has to pick the next word — is a compressed summary of the whole prompt, even though it started life as the embedding of a single word or punctuation mark.
+
+That final-token, final-layer vector is what the abliteration research measures: the whole running total, as it arrives at the end of the stack.
+
+### A direction through that space is a feature
+
+A list of a few thousand numbers is also a point in a few-thousand-dimensional space, the same way `[4, 2]` is a point on a page. And just as you can ask how far a point on a page lies along some chosen direction — a multiply and an add, nothing fancier — you can ask exactly the same question of a point in four thousand dimensions. That single measurement is the only piece of maths this entire technique rests on.
+
+It matters because models appear to store features as directions. One direction for ‘this is a question’, another for ‘this is code’, another for ‘this is French’. Measuring how far a vector lies along one of them is asking how strongly that feature is present.
+
+### Refusal is one of those directions
+
+In 2024, Arditi et al. asked whether refusal has a direction of its own, and found something sharper than anyone expected. Across thirteen open chat models, up to 72 billion parameters, refusal is mediated by a **single direction**.
+
+The evidence is not a correlation. It is a pair of interventions that work in opposite directions:
 
 - Erase that one direction from the stream, and the model stops refusing — including on the requests it was specifically trained to decline.
 - Add that direction artificially, and the model starts refusing **harmless** requests. Ask it for a cake recipe and it will explain that it cannot help with that.
 
-That second half is what makes the result convincing. The direction is not a statistical shadow of refusal, it is the mechanism.
+The second half is what makes the result convincing. Removing something and watching a behaviour disappear could mean you broke something adjacent to it. Being able to dial refusal up on a cake recipe means you are holding the mechanism itself.
 
-Which tells you something specific about what a guardrail actually is, mechanically. It has no special status inside the model. It sits on exactly the same footing as ‘this is French’ or ‘this is sarcasm’ — one axis among thousands, stored the same way, with no separate lock and no part of the network whose job is to protect it. Safety training does not teach a model to understand why a request is dangerous; the cheapest way for training to satisfy ‘refuse this, answer that’ turns out to be a single straight line through the space, with the model reacting to which side of it a prompt lands on. It is a learned correlation, not a judgement — closer to a reflex than a decision. And a correlation with no protected status is exactly the kind of thing you can measure and subtract. Safety training did not build a wall around the model’s knowledge. It installed a switch, and abliteration is the discovery of where that switch sits.
+Which tells you something specific about what a guardrail is, mechanically. It has no special status inside the model. It sits on exactly the same footing as ‘this is French’ or ‘this is sarcasm’: one axis among thousands, stored the same way, with no separate lock and no part of the network whose job is to protect it. Safety training does not teach a model to understand why a request is dangerous. The cheapest way for training to satisfy ‘refuse this, answer that’ turns out to be a single straight line through the space, with the model reacting to which side of it a prompt lands on. That is a learned correlation, not a judgement — closer to a reflex than a decision. And a correlation with no protected status is exactly the kind of thing you can measure and subtract.
+
+Safety training did not build a wall around the model’s knowledge. It installed a switch, and abliteration is the discovery of where that switch sits.
 
 ## How the removal works
 
