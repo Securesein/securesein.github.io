@@ -612,5 +612,54 @@
     "source": "OpenAI News",
     "message_id": 123,
     "cached_at": 1788717665.409823
+  },
+  "20cafbfa4822157b": {
+    "title": "Research acceleration: The view inside OpenAI",
+    "link": "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 126,
+    "cached_at": 1788760860.4017441
+  },
+  "a16e205fb9df1e1a": {
+    "title": "Authors push back as publishers and agents make claims on Anthropic settlement",
+    "link": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+    "source": "TechCrunch AI",
+    "message_id": 127,
+    "cached_at": 1788760864.5565932
+  },
+  "a1f3aacf9e81f744": {
+    "title": "IFM Releases K2 Horizon: Six Apache 2.0 Models From 0.9B to 375B",
+    "link": "https://www.marktechpost.com/2026/09/06/ifm-releases-k2-horizon-six-apache-2-0-models-from-0-9b-to-375b/",
+    "source": "MarkTechPost",
+    "message_id": 128,
+    "cached_at": 1788760867.44096
+  },
+  "7432e7e78cea7a58": {
+    "title": "Seattle Times and Newsday sue OpenAI and Microsoft for infringement",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft",
+    "source": "The Verge AI",
+    "message_id": 129,
+    "cached_at": 1788760870.0220213
+  },
+  "734edf4919a9506f": {
+    "title": "There's No Limit to How Bad Code Can Get",
+    "link": "https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 130,
+    "cached_at": 1788760872.2326846
+  },
+  "edfc578346072159": {
+    "title": "H Company Releases NeoMME: A Family of 260M and 800M Single-Tower Multimodal Encoders That Drop the Vision Tower and Causal Decoder",
+    "link": "https://www.marktechpost.com/2026/09/06/h-company-releases-neomme-a-family-of-260m-and-800m-single-tower-multimodal-encoders-that-drop-the-vision-tower-and-causal-decoder/",
+    "source": "MarkTechPost",
+    "message_id": 131,
+    "cached_at": 1788760875.7152524
+  },
+  "0c7cba92fc6d31f9": {
+    "title": "Meta FAIR Introduces AI Research Preference Models (RPMs): Ranking ML Experiments Before Spending GPU Hours",
+    "link": "https://www.marktechpost.com/2026/09/06/meta-fair-introduces-ai-research-preference-models-rpms-ranking-ml-experiments-before-spending-gpu-hours/",
+    "source": "MarkTechPost",
+    "message_id": 132,
+    "cached_at": 1788760879.0421183
   }
 }
