@@ -668,5 +668,26 @@
     "source": "OpenAI News",
     "message_id": 133,
     "cached_at": 1788775264.1347258
+  },
+  "d80bd87f56025f83": {
+    "title": "DeepSeek Flash Vision 👀, Claude Mythos security 🛡️, inside Grok Bot 🤖",
+    "link": "https://tldr.tech/ai/2026-08-24",
+    "source": "TLDR AI",
+    "message_id": 134,
+    "cached_at": 1788789665.1385677
+  },
+  "7a0294912336a556": {
+    "title": "Whispering Complaints Into Your Phone May Be the Future of Customer Feedback",
+    "link": "https://www.wired.com/story/whispering-complaints-into-your-phone-may-be-the-future-of-customer-feedback/",
+    "source": "Wired AI",
+    "message_id": 135,
+    "cached_at": 1788789669.291981
+  },
+  "be07125bbacfc221": {
+    "title": "MG Ship adds AI route optimisation as logistics returns accelerate",
+    "link": "https://www.artificialintelligence-news.com/news/mg-ship-ai-route-optimisation-logistics-returns-accelerate/",
+    "source": "AI News",
+    "message_id": 136,
+    "cached_at": 1788789674.080697
   }
 }
