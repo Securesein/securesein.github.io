@@ -114,5 +114,25 @@
   {
     "naam": "The Verge AI",
     "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+  },
+  {
+    "naam": "arXiv cs.AI",
+    "url": "https://rss.arxiv.org/rss/cs.AI"
+  },
+  {
+    "naam": "arXiv cs.CL",
+    "url": "https://rss.arxiv.org/rss/cs.CL"
+  },
+  {
+    "naam": "arXiv cs.LG",
+    "url": "https://rss.arxiv.org/rss/cs.LG"
+  },
+  {
+    "naam": "arXiv cs.CV",
+    "url": "https://rss.arxiv.org/rss/cs.CV"
+  },
+  {
+    "naam": "Hugging Face Daily Papers",
+    "url": "https://raw.githubusercontent.com/huangboming/huggingface-daily-paper-feed/refs/heads/main/feed.xml"
   }
 ]
