@@ -731,5 +731,47 @@
     "source": "Simon Willison's Weblog",
     "message_id": 142,
     "cached_at": 1788847275.3873768
+  },
+  "25c280de435bd9b9": {
+    "title": "Coca-Cola uses AI to improve retailer ordering in Malaysia",
+    "link": "https://www.artificialintelligence-news.com/news/coca-cola-ai-retailer-ordering-malaysia/",
+    "source": "AI News",
+    "message_id": 143,
+    "cached_at": 1788861663.4641244
+  },
+  "a3d75cc9b1801e1e": {
+    "title": "Reducto Releases r-1: A Single Pass Document Parsing Model That Cuts Errors 20% at 1 Cent Per Page",
+    "link": "https://www.marktechpost.com/2026/09/07/reducto-releases-r-1-a-single-pass-document-parsing-model-that-cuts-errors-20-at-1-cent-per-page/",
+    "source": "MarkTechPost",
+    "message_id": 144,
+    "cached_at": 1788861667.5201676
+  },
+  "2ca0db7c0cd973e9": {
+    "title": "AI weather forecasting enters the energy market as Google targets grid operators with WeatherNext 3",
+    "link": "https://www.artificialintelligence-news.com/news/ai-weather-forecasting-google-weathernext-3-energy/",
+    "source": "AI News",
+    "message_id": 145,
+    "cached_at": 1788861673.9723768
+  },
+  "35642c4b0776833a": {
+    "title": "OpenBMB Releases MiniCPM5-2B: A 2.52B Dense Model Averaging 53.9 Across 34 Benchmarks and Built to Run On Device",
+    "link": "https://www.marktechpost.com/2026/09/07/openbmb-releases-minicpm5-2b-a-2-52b-dense-model-averaging-53-9-across-34-benchmarks-and-built-to-run-on-device/",
+    "source": "MarkTechPost",
+    "message_id": 146,
+    "cached_at": 1788861676.9694185
+  },
+  "445ef0f50b6ca081": {
+    "title": "YouTube Appears in 53% of Google AI Overviews for Vitamin and Supplement Searches",
+    "link": "https://www.artificialintelligence-news.com/news/youtube-appears-in-53-of-google-ai-overviews-for-vitamin-and-supplement-searches/",
+    "source": "AI News",
+    "message_id": 147,
+    "cached_at": 1788861680.454837
+  },
+  "073fa6a4431c7649": {
+    "title": "Axis Robotics Releases AXIS: A Browser-Based Data Engine With 207 Robot Manipulation Tasks and 50,129 Trajectories",
+    "link": "https://www.marktechpost.com/2026/09/07/axis-robotics-releases-axis-a-browser-based-data-engine-with-207-robot-manipulation-tasks-and-50129-trajectories/",
+    "source": "MarkTechPost",
+    "message_id": 148,
+    "cached_at": 1788861683.1185014
   }
 }
