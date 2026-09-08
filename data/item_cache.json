@@ -773,5 +773,110 @@
     "source": "MarkTechPost",
     "message_id": 148,
     "cached_at": 1788861683.1185014
+  },
+  "879a418db6cc7990": {
+    "title": "Nvidia’s Groq chip ⚡, frontier economics 💰, Ox Alpha mystery 🕵️",
+    "link": "https://tldr.tech/ai/2026-08-25",
+    "source": "TLDR AI",
+    "message_id": 149,
+    "cached_at": 1788876078.3472447
+  },
+  "a00fc889a2dd293b": {
+    "title": "The Work Now Within Reach",
+    "link": "https://openai.com/index/the-work-now-within-reach",
+    "source": "OpenAI News",
+    "message_id": 150,
+    "cached_at": 1788876081.4972157
+  },
+  "09ee36a2ffd0be6c": {
+    "title": "This AI entrepreneur is developing agents that can plan ahead for the unexpected",
+    "link": "https://www.technologyreview.com/2026/09/08/1142088/danijar-hafner-developing-plan-ahead-agents/",
+    "source": "MIT Technology Review AI",
+    "message_id": 151,
+    "cached_at": 1788876084.416433
+  },
+  "16039c9b64d46bc2": {
+    "title": "Arm launches Total Design for Physical AI and robotics framework",
+    "link": "https://www.artificialintelligence-news.com/news/arm-total-design-for-physical-ai-and-robotics-framework/",
+    "source": "AI News",
+    "message_id": 152,
+    "cached_at": 1788876087.7726133
+  },
+  "fa4f3b32dbc2e3f4": {
+    "title": "Adobe is trying to make its AI generators idiot-proof in Premiere",
+    "link": "https://www.theverge.com/tech/991133/adobe-is-trying-to-make-its-ai-generators-idiot-proof-in-premiere",
+    "source": "The Verge AI",
+    "message_id": 153,
+    "cached_at": 1788876091.1959782
+  },
+  "9a91114e04e5f288": {
+    "title": "Training-Free Speech-Centric Omni Understanding with Frozen VLMs",
+    "link": "https://arxiv.org/abs/2609.04242",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 154,
+    "cached_at": 1788876094.0435903
+  },
+  "2b0379511ea05114": {
+    "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
+    "link": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
+    "source": "Google DeepMind Blog",
+    "message_id": 155,
+    "cached_at": 1788876096.7007127
+  },
+  "8d723f6dece8e3e6": {
+    "title": "Transfer learning for genomic prediction in underrepresented populations",
+    "link": "https://research.google/blog/transfer-learning-for-genomic-prediction-in-underrepresented-populations/",
+    "source": "Google Research Blog",
+    "message_id": 156,
+    "cached_at": 1788876099.307229
+  },
+  "5eb2aa71a90a9c91": {
+    "title": "Proactive cyber defense for governments and enterprises",
+    "link": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+    "source": "Google AI Blog",
+    "message_id": 157,
+    "cached_at": 1788876102.3097699
+  },
+  "6e093c7d1bb9165c": {
+    "title": "REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs",
+    "link": "https://machinelearning.apple.com/research/refactor-vla-motor-programs",
+    "source": "Apple Machine Learning Research",
+    "message_id": 158,
+    "cached_at": 1788876105.5080833
+  },
+  "f3946aaad0fd1f2f": {
+    "title": "Developing provably correct Rust code with Verus",
+    "link": "https://www.amazon.science/blog/developing-provably-correct-rust-code-with-verus",
+    "source": "Amazon Science",
+    "message_id": 159,
+    "cached_at": 1788876107.7737322
+  },
+  "b695cf3b668be679": {
+    "title": "Deploy a multimodal WhatsApp ordering assistant with Amazon Bedrock AgentCore",
+    "link": "https://aws.amazon.com/blogs/machine-learning/deploy-a-multimodal-whatsapp-ordering-assistant-with-amazon-bedrock-agentcore/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 160,
+    "cached_at": 1788876110.6079206
+  },
+  "aad1b1d43726ae99": {
+    "title": "Achieving Extreme Efficiency through Specialized GPU Kernel Generation",
+    "link": "https://www.databricks.com/blog/achieving-extreme-efficiency-through-specialized-gpu-kernel-generation",
+    "source": "Databricks Blog",
+    "message_id": 161,
+    "cached_at": 1788876113.1931605
+  },
+  "9f416c27c79d1981": {
+    "title": "ZGateway: Learnings from Putting a Proxy in Front of ZippyDB",
+    "link": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/",
+    "source": "Engineering at Meta",
+    "message_id": 162,
+    "cached_at": 1788876116.1659086
+  },
+  "e447383e93fc0704": {
+    "title": "Introducing CUDA Rust: Two Tracks for Writing GPU Kernels",
+    "link": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 163,
+    "cached_at": 1788876119.7182527
   }
 }
