@@ -175,5 +175,44 @@
     "status": "published",
     "slug": "navigating-the-unknown-preparing-for-a-world-with-reasoning-ais",
     "published_at": 1788721433.0854373
+  },
+  "5eb2aa71a90a9c91:179": {
+    "title": "Proactive cyber defense for governments and enterprises",
+    "link": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+    "source": "Google AI Blog",
+    "message_id": 157,
+    "cached_at": 1788876102.3097699,
+    "instructions": "Algemene uitleg wat dit is en wat het kan en wat een enterprise eraan heeft",
+    "kind": "article",
+    "marked_at": 1788890450.1253965,
+    "status": "published",
+    "slug": "proactive-cyber-defense-for-governments-and-enterprises-google-s-fairwind-program-unpacked",
+    "published_at": 1788890477.9606397
+  },
+  "78436b4070833db6:180": {
+    "title": "An Organizational Second Brain: Building an AI That Learns From Experts",
+    "link": "https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/",
+    "source": "Engineering at Meta",
+    "message_id": 177,
+    "cached_at": 1788877546.2188058,
+    "instructions": "Post maken",
+    "kind": "article",
+    "marked_at": 1788890450.6606915,
+    "status": "published",
+    "slug": "building-an-ai-that-learns-from-experts-creating-an-organizational-second-brain",
+    "published_at": 1788890501.0476072
+  },
+  "c97fc05837957282:181": {
+    "title": "The latest AI news we announced in August 2026",
+    "link": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
+    "source": "Google AI Blog",
+    "message_id": 172,
+    "cached_at": 1788877530.9008808,
+    "instructions": "Post maken",
+    "kind": "article",
+    "marked_at": 1788890451.2252321,
+    "status": "published",
+    "slug": "google-s-august-ai-announcements-a-closer-look-at-gemini-and-pixel-11",
+    "published_at": 1788890519.7499685
   }
 }

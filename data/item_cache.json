@@ -983,5 +983,110 @@
     "source": "NVIDIA Technical Blog",
     "message_id": 178,
     "cached_at": 1788877549.1145344
+  },
+  "46d2da6d9db5a9fe": {
+    "title": "Cohere signs EU Code of Practice on Transparency of AI-Generated Content",
+    "link": "https://cohere.com/blog/cohere-signs-eu-code-of-practice",
+    "source": "Cohere Blog",
+    "message_id": 185,
+    "cached_at": 1788890545.3904967
+  },
+  "7948c39493cbd65e": {
+    "title": "Funding grants for new research into AI and teen development",
+    "link": "https://openai.com/index/teen-development-research-grants",
+    "source": "OpenAI News",
+    "message_id": 186,
+    "cached_at": 1788890548.1538014
+  },
+  "39ae0b14351f4528": {
+    "title": "OpenAI fought dirty on career-making math problem, says NYU mathematician",
+    "link": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/",
+    "source": "TechCrunch AI",
+    "message_id": 187,
+    "cached_at": 1788890550.9122515
+  },
+  "6e9fdec44861ee9f": {
+    "title": "OpenAI Just Claimed a Huge Math Discovery. Some Academics Are Crying Foul",
+    "link": "https://www.wired.com/story/openai-navier-stokes-math-discovery-academics/",
+    "source": "Wired AI",
+    "message_id": 188,
+    "cached_at": 1788890553.6818707
+  },
+  "9a2c696b09310cc7": {
+    "title": "From RAG to Agentic AI: Building the Next Generation of Intelligent Enterprise Systems",
+    "link": "https://www.kdnuggets.com/from-rag-to-agentic-ai-building-the-next-generation-of-intelligent-enterprise-systems",
+    "source": "KDnuggets",
+    "message_id": 189,
+    "cached_at": 1788890556.6570098
+  },
+  "d31204f69aa6994b": {
+    "title": "A new class action lawsuit questions whether Anthropic broke the law by misleading power users",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/990313/anthropic-class-action-lawsuit-pricing-subscription-plans",
+    "source": "The Verge AI",
+    "message_id": 190,
+    "cached_at": 1788890559.7372506
+  },
+  "4c09d445a6298061": {
+    "title": "Motion-Omni: End-to-End Joint Speech and Full-Body Motion for Spoken Dialogue",
+    "link": "https://arxiv.org/abs/2609.04250",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 191,
+    "cached_at": 1788890562.7506876
+  },
+  "d721843382f3485e": {
+    "title": "Proactive cyber defense for governments and enterprises",
+    "link": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
+    "source": "Google DeepMind Blog",
+    "message_id": 192,
+    "cached_at": 1788890565.6787257
+  },
+  "62800b7caea9d844": {
+    "title": "Mapping global methane emissions from space with deep learning",
+    "link": "https://research.google/blog/mapping-global-methane-emissions-from-space-with-deep-learning/",
+    "source": "Google Research Blog",
+    "message_id": 193,
+    "cached_at": 1788890568.574685
+  },
+  "7415c6bcd9dd29da": {
+    "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+    "link": "https://blog.google/products-and-platforms/products/workspace/google-pics/",
+    "source": "Google AI Blog",
+    "message_id": 194,
+    "cached_at": 1788890571.4319491
+  },
+  "e1ed915f70f969a9": {
+    "title": "Agent Seer: Synthesizing Scenarios from Specification Understanding",
+    "link": "https://machinelearning.apple.com/research/agent-seer-synthesizing-scenarios",
+    "source": "Apple Machine Learning Research",
+    "message_id": 195,
+    "cached_at": 1788890574.502721
+  },
+  "f50a7a25c3b647ba": {
+    "title": "SOP-Bench: A new benchmark for evaluating AI agents on real business procedures",
+    "link": "https://www.amazon.science/blog/sop-bench-a-new-benchmark-for-evaluating-ai-agents-on-real-business-procedures",
+    "source": "Amazon Science",
+    "message_id": 196,
+    "cached_at": 1788890576.766652
+  },
+  "5219ecb68ad00ca7": {
+    "title": "Govern models with MLflow and Amazon SageMaker AI Model Registry sync: Part 2",
+    "link": "https://aws.amazon.com/blogs/machine-learning/govern-models-with-mlflow-and-amazon-sagemaker-ai-model-registry-sync-part-2/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 197,
+    "cached_at": 1788890580.2846596
+  },
+  "13817e0e116aa71e": {
+    "title": "Build durable agents with Temporal and Lakebase",
+    "link": "https://www.databricks.com/blog/build-durable-agents-temporal-and-lakebase",
+    "source": "Databricks Blog",
+    "message_id": 198,
+    "cached_at": 1788890582.8071992
+  },
+  "1f7c5a4363d50c8a": {
+    "title": "MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet",
+    "link": "https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/",
+    "source": "Engineering at Meta",
+    "message_id": 199,
+    "cached_at": 1788890586.3504026
   }
 }
