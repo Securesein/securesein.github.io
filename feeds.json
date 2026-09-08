@@ -134,5 +134,117 @@
   {
     "naam": "Hugging Face Daily Papers",
     "url": "https://raw.githubusercontent.com/huangboming/huggingface-daily-paper-feed/refs/heads/main/feed.xml"
+  },
+  {
+    "naam": "Google DeepMind Blog",
+    "url": "https://deepmind.google/blog/rss.xml"
+  },
+  {
+    "naam": "Google Research Blog",
+    "url": "https://research.google/blog/rss/"
+  },
+  {
+    "naam": "Google AI Blog",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/rss/"
+  },
+  {
+    "naam": "Apple Machine Learning Research",
+    "url": "https://machinelearning.apple.com/rss.xml"
+  },
+  {
+    "naam": "Amazon Science",
+    "url": "https://www.amazon.science/index.rss"
+  },
+  {
+    "naam": "AWS Machine Learning Blog",
+    "url": "https://aws.amazon.com/blogs/machine-learning/feed/"
+  },
+  {
+    "naam": "Databricks Blog",
+    "url": "https://www.databricks.com/feed"
+  },
+  {
+    "naam": "Engineering at Meta",
+    "url": "https://engineering.fb.com/feed/"
+  },
+  {
+    "naam": "NVIDIA Technical Blog",
+    "url": "https://developer.nvidia.com/blog/feed"
+  },
+  {
+    "naam": "IBM Research",
+    "url": "https://research.ibm.com/rss"
+  },
+  {
+    "naam": "ML@CMU Blog",
+    "url": "https://blog.ml.cmu.edu/feed/"
+  },
+  {
+    "naam": "MIT News - Artificial Intelligence",
+    "url": "https://news.mit.edu/rss/topic/artificial-intelligence2"
+  },
+  {
+    "naam": "JMLR (Journal of Machine Learning Research)",
+    "url": "https://www.jmlr.org/jmlr.xml"
+  },
+  {
+    "naam": "EleutherAI Blog",
+    "url": "https://blog.eleuther.ai/index.xml"
+  },
+  {
+    "naam": "Epoch AI",
+    "url": "https://epochai.substack.com/feed"
+  },
+  {
+    "naam": "Ahead of AI (Sebastian Raschka)",
+    "url": "https://magazine.sebastianraschka.com/feed"
+  },
+  {
+    "naam": "Lil'Log (Lilian Weng)",
+    "url": "https://lilianweng.github.io/index.xml"
+  },
+  {
+    "naam": "Nicholas Carlini",
+    "url": "https://nicholas.carlini.com/writing/feed.xml"
+  },
+  {
+    "naam": "arXiv stat.ML",
+    "url": "https://rss.arxiv.org/rss/stat.ML"
+  },
+  {
+    "naam": "arXiv cs.NE",
+    "url": "https://rss.arxiv.org/rss/cs.NE"
+  },
+  {
+    "naam": "arXiv cs.MA",
+    "url": "https://rss.arxiv.org/rss/cs.MA"
+  },
+  {
+    "naam": "Claude Code Releases",
+    "url": "https://github.com/anthropics/claude-code/releases.atom"
+  },
+  {
+    "naam": "OpenAI Codex Releases",
+    "url": "https://github.com/openai/codex/releases.atom"
+  },
+  {
+    "naam": "Gemini CLI Releases",
+    "url": "https://github.com/google-gemini/gemini-cli/releases.atom"
+  },
+  {
+    "naam": "llama.cpp Releases",
+    "url": "https://github.com/ggml-org/llama.cpp/releases.atom"
+  },
+  {
+    "naam": "vLLM Releases",
+    "url": "https://github.com/vllm-project/vllm/releases.atom"
+  },
+  {
+    "naam": "Ollama Releases",
+    "url": "https://github.com/ollama/ollama/releases.atom"
+  },
+  {
+    "naam": "Hugging Face Transformers Releases",
+    "url": "https://github.com/huggingface/transformers/releases.atom"
   }
 ]
