@@ -1088,5 +1088,110 @@
     "source": "Engineering at Meta",
     "message_id": 199,
     "cached_at": 1788890586.3504026
+  },
+  "2c827cba158d2f26": {
+    "title": "On the Navier–Stokes Millennium Prize Problem",
+    "link": "https://openai.com/index/navier-stokes-solution",
+    "source": "OpenAI News",
+    "message_id": 200,
+    "cached_at": 1788892405.9587116
+  },
+  "7bd27c76b66ba8b4": {
+    "title": "Google Cloud races to catch up in the AI deployment wars with Accenture deal",
+    "link": "https://techcrunch.com/2026/09/08/google-cloud-races-to-catch-up-in-the-ai-deployment-wars-with-accenture-deal/",
+    "source": "TechCrunch AI",
+    "message_id": 201,
+    "cached_at": 1788892408.9675493
+  },
+  "b7bda0595b01e32d": {
+    "title": "Is ArrowJS Really the UI for the Agentic Era? Here’s What I Found",
+    "link": "https://www.kdnuggets.com/is-arrowjs-really-the-ui-for-the-agentic-era",
+    "source": "KDnuggets",
+    "message_id": 202,
+    "cached_at": 1788892412.12169
+  },
+  "b2dd9e366daf5a8c": {
+    "title": "To See a World in a Living Context: Unified Indoor-Outdoor Urban World Generation",
+    "link": "https://arxiv.org/abs/2608.05879",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 203,
+    "cached_at": 1788892415.0758898
+  },
+  "63b19b50b4021cb5": {
+    "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+    "link": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+    "source": "Google DeepMind Blog",
+    "message_id": 204,
+    "cached_at": 1788892418.1297772
+  },
+  "e61516fc5f0a08ab": {
+    "title": "TimesFM-3: A zero-shot foundation model for multivariate forecasting",
+    "link": "https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/",
+    "source": "Google Research Blog",
+    "message_id": 205,
+    "cached_at": 1788892421.253756
+  },
+  "a1c9c66d73112465": {
+    "title": "3 new ways to plan and book travel in Search",
+    "link": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+    "source": "Google AI Blog",
+    "message_id": 206,
+    "cached_at": 1788892424.6633985
+  },
+  "8dece58a6b00fa43": {
+    "title": "From Preferences to Principles: Rubric-Based Alignment for Grounded Knowledge Answers",
+    "link": "https://machinelearning.apple.com/research/rubric-based-alignment",
+    "source": "Apple Machine Learning Research",
+    "message_id": 207,
+    "cached_at": 1788892427.300132
+  },
+  "806d8bbac4d5422b": {
+    "title": "A decade of mathematical certainty: Reflections on the Automated Reasoning Group",
+    "link": "https://www.amazon.science/blog/a-decade-of-mathematical-certainty-reflections-on-the-automated-reasoning-group",
+    "source": "Amazon Science",
+    "message_id": 208,
+    "cached_at": 1788892430.627076
+  },
+  "adcea6ac68fcc207": {
+    "title": "Amazon SageMaker Feature Store introduces UpdateRecord for feature-level writes",
+    "link": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-feature-store-introduces-updaterecord-for-feature-level-writes/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 209,
+    "cached_at": 1788892434.1754217
+  },
+  "45df2e1f3aab23f9": {
+    "title": "Governance beyond security: knowledge, context & ontology on the lakehouse",
+    "link": "https://www.databricks.com/blog/governance-beyond-security-knowledge-context-ontology-lakehouse",
+    "source": "Databricks Blog",
+    "message_id": 210,
+    "cached_at": 1788892436.6813233
+  },
+  "8a0505962c4f7798": {
+    "title": "MTIA 300: Meta’s First Training Chip with Built-in NICs and Communication-Offloading Engines",
+    "link": "https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/",
+    "source": "Engineering at Meta",
+    "message_id": 211,
+    "cached_at": 1788892439.2829247
+  },
+  "e5dad6d706203fa9": {
+    "title": "Frontier Reasoning Reaches the Edge: How to Deploy and Optimize Models on NVIDIA Jetson",
+    "link": "https://developer.nvidia.com/blog/frontier-reasoning-reaches-the-edge-how-to-deploy-and-optimize-models-on-nvidia-jetson/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 212,
+    "cached_at": 1788892443.4312565
+  },
+  "3305cf71a0cf8309": {
+    "title": "How llm-d makes the most of the hardware you already have",
+    "link": "https://research.ibm.com/blog/running-open-models-on-h100-gpus-with-llmd?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 213,
+    "cached_at": 1788892447.3703332
+  },
+  "dfcebbf0bd0c91e8": {
+    "title": "Forking-Sequences — Part II: Multi-Horizon Forecast Ensembling with Reduced Volatility",
+    "link": "https://blog.ml.cmu.edu/2026/08/10/forking-sequences-part-ii-multi-horizon-forecast-ensembling-with-reduced-volatility/",
+    "source": "ML@CMU Blog",
+    "message_id": 214,
+    "cached_at": 1788892450.5991921
   }
 }
