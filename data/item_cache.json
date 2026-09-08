@@ -878,5 +878,110 @@
     "source": "NVIDIA Technical Blog",
     "message_id": 163,
     "cached_at": 1788876119.7182527
+  },
+  "4a36ea7ba6bb268a": {
+    "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
+    "link": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+    "source": "OpenAI News",
+    "message_id": 164,
+    "cached_at": 1788877505.329025
+  },
+  "5cbcf08e288841ac": {
+    "title": "Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic",
+    "link": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+    "source": "Hugging Face Blog",
+    "message_id": 165,
+    "cached_at": 1788877508.7924936
+  },
+  "015bc2d314ebcad6": {
+    "title": "Mistral raises €3B as sovereign AI becomes big business",
+    "link": "https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/",
+    "source": "TechCrunch AI",
+    "message_id": 166,
+    "cached_at": 1788877511.8008666
+  },
+  "a4a81f6ae1e5d29e": {
+    "title": "5 Ways I Access Coding Models for Free",
+    "link": "https://www.kdnuggets.com/5-ways-i-access-coding-models-for-free",
+    "source": "KDnuggets",
+    "message_id": 167,
+    "cached_at": 1788877515.851942
+  },
+  "959f541e1cba51e7": {
+    "title": "Google’s Atlas of the human genome could pave the way for new treatments",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/991180/google-launches-alpha-genome-atlas",
+    "source": "The Verge AI",
+    "message_id": 168,
+    "cached_at": 1788877518.386152
+  },
+  "12e4368f5b90a3d8": {
+    "title": "Real-World Knowledge-Guided Change Data Synthesis for Remote Sensing",
+    "link": "https://arxiv.org/abs/2608.24263",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 169,
+    "cached_at": 1788877521.3966353
+  },
+  "f0e27f432f48fb86": {
+    "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
+    "link": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+    "source": "Google DeepMind Blog",
+    "message_id": 170,
+    "cached_at": 1788877524.3929498
+  },
+  "8b075fa7888e4c35": {
+    "title": "A connectomics milestone: Mapping the complete male fruit fly brain",
+    "link": "https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/",
+    "source": "Google Research Blog",
+    "message_id": 171,
+    "cached_at": 1788877527.692257
+  },
+  "c97fc05837957282": {
+    "title": "The latest AI news we announced in August 2026",
+    "link": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
+    "source": "Google AI Blog",
+    "message_id": 172,
+    "cached_at": 1788877530.9008808
+  },
+  "7b4321a514a83270": {
+    "title": "LLMs Are Not (Consistently) Bayesian: Quantifying Internal (In)consistencies of LLMs’ Probabilistic Beliefs",
+    "link": "https://machinelearning.apple.com/research/llms-not-consistently-bayesian",
+    "source": "Apple Machine Learning Research",
+    "message_id": 173,
+    "cached_at": 1788877533.7787533
+  },
+  "5728c436a7598b96": {
+    "title": "When LLM judges agree, should we believe them?",
+    "link": "https://www.amazon.science/blog/when-llm-judges-agree-should-we-believe-them",
+    "source": "Amazon Science",
+    "message_id": 174,
+    "cached_at": 1788877536.4631693
+  },
+  "c03f82cab7173ea2": {
+    "title": "Designing lifecycle policies for AgentCore memory",
+    "link": "https://aws.amazon.com/blogs/machine-learning/designing-lifecycle-policies-for-agentcore-memory/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 175,
+    "cached_at": 1788877539.1201947
+  },
+  "c108aaae6a5513c1": {
+    "title": "Five ways marketers can use Genie One",
+    "link": "https://www.databricks.com/blog/five-ways-marketers-can-use-genie-one",
+    "source": "Databricks Blog",
+    "message_id": 176,
+    "cached_at": 1788877542.825596
+  },
+  "78436b4070833db6": {
+    "title": "An Organizational Second Brain: Building an AI That Learns From Experts",
+    "link": "https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/",
+    "source": "Engineering at Meta",
+    "message_id": 177,
+    "cached_at": 1788877546.2188058
+  },
+  "7fdf45215451bf8a": {
+    "title": "Building a Memory-Driven Agent with NVIDIA NemoClaw",
+    "link": "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 178,
+    "cached_at": 1788877549.1145344
   }
 }
