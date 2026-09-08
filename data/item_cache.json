@@ -689,5 +689,47 @@
     "source": "AI News",
     "message_id": 136,
     "cached_at": 1788789674.080697
+  },
+  "af3eb01e61119dd3": {
+    "title": "llm 0.35",
+    "link": "https://simonwillison.net/2026/Sep/7/llm/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 137,
+    "cached_at": 1788847261.0658655
+  },
+  "29dd19b8eeec3426": {
+    "title": "Opaque recurrence, and other AI terms that you should probably know",
+    "link": "https://techcrunch.com/2026/09/07/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
+    "source": "TechCrunch AI",
+    "message_id": 138,
+    "cached_at": 1788847265.221761
+  },
+  "dc08bf6b0254e5b1": {
+    "title": "Creepy crawlies",
+    "link": "https://simonwillison.net/2026/Sep/7/creepy-crawlies/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 139,
+    "cached_at": 1788847267.9677753
+  },
+  "c63c028916285fc2": {
+    "title": "Quoting Jakub Pachocki",
+    "link": "https://simonwillison.net/2026/Sep/7/jakub-pachocki/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 140,
+    "cached_at": 1788847270.637634
+  },
+  "656c3dbba15803a8": {
+    "title": "Video compressor",
+    "link": "https://simonwillison.net/2026/Sep/7/video-compressor/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 141,
+    "cached_at": 1788847273.0534081
+  },
+  "960f861c32aa6064": {
+    "title": "Mercator ↔ Equal Earth",
+    "link": "https://simonwillison.net/2026/Sep/7/equal-earth/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 142,
+    "cached_at": 1788847275.3873768
   }
 }
