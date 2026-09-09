@@ -1508,5 +1508,110 @@
     "source": "Hugging Face Daily Papers",
     "message_id": 263,
     "cached_at": 1788962610.1216362
+  },
+  "3c04cb3557a1cc65": {
+    "title": "AI spend per employee slumped at top firms in August — summer doldrums or a warning sign?",
+    "link": "https://techcrunch.com/2026/09/09/ai-spend-per-employee-slumped-at-top-firms-in-august-summer-doldrums-or-a-warning-sign/",
+    "source": "TechCrunch AI",
+    "message_id": 264,
+    "cached_at": 1788964053.3923721
+  },
+  "6aa7ec0a659c1be7": {
+    "title": "7 Approaches to Efficient LLM Training on Limited Hardware",
+    "link": "https://www.kdnuggets.com/7-approaches-to-efficient-llm-training-on-limited-hardware",
+    "source": "KDnuggets",
+    "message_id": 265,
+    "cached_at": 1788964056.5990157
+  },
+  "4dd688d72259b19c": {
+    "title": "Students who use AI generally score worse at school",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/991956/student-ai-use-scores-oecd-pisa",
+    "source": "The Verge AI",
+    "message_id": 266,
+    "cached_at": 1788964059.8637848
+  },
+  "0d756038e034fce3": {
+    "title": "AutoFyn Technical Report: Non-Parametric Expert Iteration for Long-Horizon Agents",
+    "link": "https://arxiv.org/abs/2609.05446",
+    "source": "arXiv cs.AI",
+    "message_id": 267,
+    "cached_at": 1788964064.9403996
+  },
+  "7f9ccc928b0ef96c": {
+    "title": "Who Maintains Agent Skills? A Longitudinal Study of Human-Governed, AI-Assisted Skill Maintenance",
+    "link": "https://arxiv.org/abs/2609.05677",
+    "source": "arXiv cs.CL",
+    "message_id": 268,
+    "cached_at": 1788964067.5894687
+  },
+  "9e4c97459638da6b": {
+    "title": "Capsule Lens: Locating and Tracking Concept Geometry in Model Representations",
+    "link": "https://arxiv.org/abs/2609.05575",
+    "source": "arXiv cs.LG",
+    "message_id": 269,
+    "cached_at": 1788964072.9710555
+  },
+  "74f389b2a8da9ebe": {
+    "title": "Emergent Goal-Directed Attention in Large Vision-Language Models",
+    "link": "https://arxiv.org/abs/2609.05517",
+    "source": "arXiv cs.CV",
+    "message_id": 270,
+    "cached_at": 1788964076.9236293
+  },
+  "3197c63815c71ee6": {
+    "title": "Unifying Conformal Language Tasks with In-Context Ensembles",
+    "link": "https://arxiv.org/abs/2609.03005",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 271,
+    "cached_at": 1788964079.4471872
+  },
+  "71c43cf780d371ee": {
+    "title": "Piloting the world's first double-blind AI evaluations",
+    "link": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+    "source": "Google DeepMind Blog",
+    "message_id": 272,
+    "cached_at": 1788964082.1039374
+  },
+  "16b919027b43c28e": {
+    "title": "AgentHands: Generating interactive hand gestures for spatially grounded agent conversations in XR",
+    "link": "https://research.google/blog/agenthands-generating-interactive-hand-gestures-for-spatially-grounded-agent-conversations-in-xr/",
+    "source": "Google Research Blog",
+    "message_id": 273,
+    "cached_at": 1788964084.788199
+  },
+  "abaed39cbc9c9b42": {
+    "title": "5 new ways to level up your learning with Search",
+    "link": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
+    "source": "Google AI Blog",
+    "message_id": 274,
+    "cached_at": 1788964088.271651
+  },
+  "3df33ea1c689ea7c": {
+    "title": "IDEA Prune: An Integrated Enlarge-and-Prune Pipeline in Generative Language Model Pretraining",
+    "link": "https://machinelearning.apple.com/research/idea-prune-pipeline",
+    "source": "Apple Machine Learning Research",
+    "message_id": 275,
+    "cached_at": 1788964090.9155717
+  },
+  "8f0ecee285483adc": {
+    "title": "34 Amazon Research Awards Build on Trainium recipients announced",
+    "link": "https://www.amazon.science/research-awards/latest-news/34-amazon-research-awards-build-on-trainium-recipients-announced",
+    "source": "Amazon Science",
+    "message_id": 276,
+    "cached_at": 1788964094.2514741
+  },
+  "0dc9258765d942bf": {
+    "title": "Take on your most ambitious work with GPT-6 Astra on Amazon Bedrock",
+    "link": "https://aws.amazon.com/blogs/machine-learning/take-on-your-most-ambitious-work-with-gpt-6-astra-on-amazon-bedrock/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 277,
+    "cached_at": 1788964096.6586232
+  },
+  "9dba62cbb9d1736b": {
+    "title": "Adaptive Instructed-Retriever: Frontier-Quality Search at 2x Lower Latency",
+    "link": "https://www.databricks.com/blog/adaptive-instructed-retriever-frontier-quality-search-2x-lower-latency",
+    "source": "Databricks Blog",
+    "message_id": 278,
+    "cached_at": 1788964099.189459
   }
 }
