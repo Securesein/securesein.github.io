@@ -1298,5 +1298,110 @@
     "source": "Google Research Blog",
     "message_id": 231,
     "cached_at": 1788933757.3987062
+  },
+  "1dcea8b0f8acab14": {
+    "title": "Introducing ChatGPT Images 2.5",
+    "link": "https://openai.com/index/introducing-chatgpt-images-2-5",
+    "source": "OpenAI News",
+    "message_id": 232,
+    "cached_at": 1788948218.915951
+  },
+  "33eea6358b5494ae": {
+    "title": "On the Navier–Stokes Millennium Prize Problem",
+    "link": "https://simonwillison.net/2026/Sep/8/on-navier-stokes/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 233,
+    "cached_at": 1788948221.9636438
+  },
+  "a82d4c1ec9c5dfb6": {
+    "title": "Cognition hits $48B valuation, signaling investors believe AI coding is far from a winner-take-all market",
+    "link": "https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/",
+    "source": "TechCrunch AI",
+    "message_id": 234,
+    "cached_at": 1788948224.5203269
+  },
+  "dd449092f1c6cb01": {
+    "title": "Gradium Launches Voice Design: Write a Prompt, Get a Brand New Synthetic Voice in Seconds",
+    "link": "https://www.marktechpost.com/2026/09/09/gradium-launches-voice-design-write-a-prompt-get-a-brand-new-synthetic-voice-in-seconds/",
+    "source": "MarkTechPost",
+    "message_id": 235,
+    "cached_at": 1788948227.5419188
+  },
+  "e264b8d33b6d5b3a": {
+    "title": "More than 1 in 10 chance AI ‘could kill all humans,’ says Anthropic safety lead after colleague quits",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/991927/anthropic-ai-kill-all-humans",
+    "source": "The Verge AI",
+    "message_id": 236,
+    "cached_at": 1788948230.0250537
+  },
+  "57348200f9fc7bfc": {
+    "title": "CriticGen: Generation-Aware Evaluation as Actionable Feedback",
+    "link": "https://arxiv.org/abs/2609.05439",
+    "source": "arXiv cs.AI",
+    "message_id": 237,
+    "cached_at": 1788948235.246481
+  },
+  "82ef1e40538ea35f": {
+    "title": "TamilEOT: A Dataset and Model for Semantic End-of-Turn Detection in Tamil Telephone Speech",
+    "link": "https://arxiv.org/abs/2609.05631",
+    "source": "arXiv cs.CL",
+    "message_id": 238,
+    "cached_at": 1788948237.9916556
+  },
+  "f62905443ebd3e74": {
+    "title": "When Do Options Help? Policy Necrosis and Redundant Coverage in Option-Critic",
+    "link": "https://arxiv.org/abs/2609.05508",
+    "source": "arXiv cs.LG",
+    "message_id": 239,
+    "cached_at": 1788948240.8063395
+  },
+  "b9f5a3a4676c3076": {
+    "title": "A Survey on Adversarial Attacks and Defenses for Diffusion Models Across Multiple Modalities",
+    "link": "https://arxiv.org/abs/2609.05503",
+    "source": "arXiv cs.CV",
+    "message_id": 240,
+    "cached_at": 1788948243.7112286
+  },
+  "800b7640bd8fa678": {
+    "title": "EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents",
+    "link": "https://arxiv.org/abs/2609.01281",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 241,
+    "cached_at": 1788948248.844286
+  },
+  "74b1125af8681de1": {
+    "title": "Gemini Omni 1.1 Flash lets you build with more control",
+    "link": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+    "source": "Google DeepMind Blog",
+    "message_id": 242,
+    "cached_at": 1788948251.5637147
+  },
+  "8b2ec93c5681d86c": {
+    "title": "GlucoFM: Foundation model for continuous glucose monitoring",
+    "link": "https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring/",
+    "source": "Google Research Blog",
+    "message_id": 243,
+    "cached_at": 1788948254.436922
+  },
+  "9ce79d4dded95af4": {
+    "title": "5 ways to upgrade your home decor with Google Search",
+    "link": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
+    "source": "Google AI Blog",
+    "message_id": 244,
+    "cached_at": 1788948256.9637728
+  },
+  "a2199423b9a37c17": {
+    "title": "PROOF-Gen: From Optimized Data to Better Distillation",
+    "link": "https://machinelearning.apple.com/research/proof-gen-optimized-distillation",
+    "source": "Apple Machine Learning Research",
+    "message_id": 245,
+    "cached_at": 1788948261.8430796
+  },
+  "5e48c22ba37fbf17": {
+    "title": "AWS Trainium Frontier competition: Co-design models and kernels on purpose-built AI chips",
+    "link": "https://www.amazon.science/news/aws-trainium-frontier-competition-co-design-models-and-kernels-on-purpose-built-ai-chips",
+    "source": "Amazon Science",
+    "message_id": 246,
+    "cached_at": 1788948264.4974442
   }
 }
