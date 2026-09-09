@@ -1193,5 +1193,110 @@
     "source": "ML@CMU Blog",
     "message_id": 214,
     "cached_at": 1788892450.5991921
+  },
+  "503e9c2326e78f3e": {
+    "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+    "link": "https://openai.com/index/codex-quantum-computing-experiments",
+    "source": "OpenAI News",
+    "message_id": 217,
+    "cached_at": 1788933716.66091
+  },
+  "93334b7607d9e35b": {
+    "title": "Quoting Terence Tao",
+    "link": "https://simonwillison.net/2026/Sep/9/terence-tao/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 218,
+    "cached_at": 1788933719.7534416
+  },
+  "9af6fd02f81ca2a1": {
+    "title": "Hackers are stealing Claude tokens from subscribers",
+    "link": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
+    "source": "TechCrunch AI",
+    "message_id": 219,
+    "cached_at": 1788933722.1708484
+  },
+  "3f0395b6eca99d46": {
+    "title": "Why this month's Microsoft patch release is a doozy",
+    "link": "https://arstechnica.com/security/2026/09/microsoft-patches-a-record-972-vulnerabilities-112-of-them-critical/",
+    "source": "Ars Technica AI",
+    "message_id": 220,
+    "cached_at": 1788933725.5578456
+  },
+  "f2f3525628d039a1": {
+    "title": "Muse, Meta’s New Personal AI Agent, Needs You to Trust It",
+    "link": "https://www.wired.com/story/meta-releases-muse-a-personal-ai-agent-with-privacy-built-into-it/",
+    "source": "Wired AI",
+    "message_id": 221,
+    "cached_at": 1788933728.1243854
+  },
+  "fdcd380c5652c8c1": {
+    "title": "What OpenAI’s latest controversy tells us about the future of math",
+    "link": "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/",
+    "source": "MIT Technology Review AI",
+    "message_id": 222,
+    "cached_at": 1788933730.655886
+  },
+  "bc074da85c227c52": {
+    "title": "Meta Introduces Muse, a Personal AI Agent That Runs on Its Own Dedicated Secure Cloud Computer",
+    "link": "https://www.marktechpost.com/2026/09/08/meta-introduces-muse-a-personal-ai-agent-that-runs-on-its-own-dedicated-secure-cloud-computer/",
+    "source": "MarkTechPost",
+    "message_id": 223,
+    "cached_at": 1788933732.942349
+  },
+  "2c7b2c15ab421844": {
+    "title": "Drama swirls around OpenAI’s legendary mathematical milestone",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/991710/openai-navier-stokes-solution",
+    "source": "The Verge AI",
+    "message_id": 224,
+    "cached_at": 1788933736.1519754
+  },
+  "e10476dccc914fdb": {
+    "title": "Beyond Right and Wrong: Evaluating Second-order Social Reasoning in Large Language Models",
+    "link": "https://arxiv.org/abs/2609.05437",
+    "source": "arXiv cs.AI",
+    "message_id": 225,
+    "cached_at": 1788933739.0170143
+  },
+  "6eb80465d79f0103": {
+    "title": "When Agent Governance Helps",
+    "link": "https://arxiv.org/abs/2609.05531",
+    "source": "arXiv cs.CL",
+    "message_id": 226,
+    "cached_at": 1788933742.4667954
+  },
+  "9b7ee096d4979751": {
+    "title": "AhaBench: Do Agents Learn from Prior Experience? A Benchmark for Long-Horizon Continual Learning",
+    "link": "https://arxiv.org/abs/2609.05435",
+    "source": "arXiv cs.LG",
+    "message_id": 227,
+    "cached_at": 1788933745.4486227
+  },
+  "7751dc9294fcb912": {
+    "title": "Architectural and Regularization Components in Deep Learning Medical Image Registration: Systematic Ablation Study",
+    "link": "https://arxiv.org/abs/2609.05484",
+    "source": "arXiv cs.CV",
+    "message_id": 228,
+    "cached_at": 1788933748.04598
+  },
+  "c3ffdbe25962faeb": {
+    "title": "One Symptom, Three Levers: A Critical Review of On-Policy Self-Distillation",
+    "link": "https://arxiv.org/abs/2608.25936",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 229,
+    "cached_at": 1788933751.3055267
+  },
+  "20b040f8e58f31e9": {
+    "title": "Introducing agentic video understanding with Gemini",
+    "link": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+    "source": "Google DeepMind Blog",
+    "message_id": 230,
+    "cached_at": 1788933754.2739518
+  },
+  "d4c4006fefc6f641": {
+    "title": "Planetary prediction engine: Automating global models via Earth AI",
+    "link": "https://research.google/blog/planetary-prediction-engine-automating-global-models-via-earth-ai/",
+    "source": "Google Research Blog",
+    "message_id": 231,
+    "cached_at": 1788933757.3987062
   }
 }

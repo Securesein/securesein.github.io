@@ -214,5 +214,18 @@
     "status": "published",
     "slug": "google-s-august-ai-announcements-a-closer-look-at-gemini-and-pixel-11",
     "published_at": 1788890519.7499685
+  },
+  "e5dad6d706203fa9:215": {
+    "title": "Frontier Reasoning Reaches the Edge: How to Deploy and Optimize Models on NVIDIA Jetson",
+    "link": "https://developer.nvidia.com/blog/frontier-reasoning-reaches-the-edge-how-to-deploy-and-optimize-models-on-nvidia-jetson/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 212,
+    "cached_at": 1788892443.4312565,
+    "instructions": "Graag uitleggen dat dit jaar steeds meer reasoning en agent modellen op de edge kunnen draaien en hoogover uitleggen wat dit artikel laat zien over dense va expert modellen",
+    "kind": "article",
+    "marked_at": 1788933647.5158594,
+    "status": "published",
+    "slug": "frontier-reasoning-on-the-edge-deploying-and-optimizing-models-with-nvidia-jetson",
+    "published_at": 1788933685.026208
   }
 }
