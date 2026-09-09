@@ -1718,5 +1718,110 @@
     "source": "Google Research Blog",
     "message_id": 293,
     "cached_at": 1788976930.125809
+  },
+  "b96bfe3652146112": {
+    "title": "Apple’s revamped Health app will calculate your ‘health age’ and readiness score",
+    "link": "https://techcrunch.com/2026/09/09/apples-revamped-health-app-will-calculate-your-health-age-and-readiness-score/",
+    "source": "TechCrunch AI",
+    "message_id": 294,
+    "cached_at": 1788978651.0893254
+  },
+  "a5e5940f84aa9e87": {
+    "title": "ChatGPT Sketch turns your bad drawings into detailed AI images",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/991727/openai-chatgpt-images-2-5-sketch",
+    "source": "The Verge AI",
+    "message_id": 295,
+    "cached_at": 1788978654.0139747
+  },
+  "c6071060ec984011": {
+    "title": "Compiling VGDL into Causal Models",
+    "link": "https://arxiv.org/abs/2609.05459",
+    "source": "arXiv cs.AI",
+    "message_id": 296,
+    "cached_at": 1788978657.999197
+  },
+  "ebc22792003934cf": {
+    "title": "Intra-Prompt Parallel Decoding for Common-Context Question Answering",
+    "link": "https://arxiv.org/abs/2609.05707",
+    "source": "arXiv cs.CL",
+    "message_id": 297,
+    "cached_at": 1788978661.0372057
+  },
+  "8e63ab8511ccc4b3": {
+    "title": "Endogenous Exploration in Reinforcement Learning with Intrinsic Curiosity",
+    "link": "https://arxiv.org/abs/2609.05650",
+    "source": "arXiv cs.LG",
+    "message_id": 298,
+    "cached_at": 1788978664.0306919
+  },
+  "cabeab30a4247d93": {
+    "title": "Contrastive Knowledge Distillation for Anomaly Detection in Multi-Illumination/Focus Display Images",
+    "link": "https://arxiv.org/abs/2609.05520",
+    "source": "arXiv cs.CV",
+    "message_id": 299,
+    "cached_at": 1788978667.2261279
+  },
+  "65cacb74f908c544": {
+    "title": "Causal Foundation Models",
+    "link": "https://arxiv.org/abs/2609.03003",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 300,
+    "cached_at": 1788978669.746792
+  },
+  "835a331a5b20ce16": {
+    "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+    "link": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+    "source": "Google DeepMind Blog",
+    "message_id": 301,
+    "cached_at": 1788978672.3308947
+  },
+  "4f98c5029119950e": {
+    "title": "How mobility gives language models a deeper understanding of place",
+    "link": "https://research.google/blog/how-mobility-gives-language-models-a-deeper-understanding-of-place/",
+    "source": "Google Research Blog",
+    "message_id": 302,
+    "cached_at": 1788978675.0298312
+  },
+  "73af7527f82e0ada": {
+    "title": "Get ready for the game with new football features in Search",
+    "link": "https://blog.google/products-and-platforms/products/search/football-features-google-search/",
+    "source": "Google AI Blog",
+    "message_id": 303,
+    "cached_at": 1788978677.845626
+  },
+  "73fb00b9a74c14ff": {
+    "title": "Luce: Relightable Gaussians for 3D Asset Generation",
+    "link": "https://machinelearning.apple.com/research/relightable-gaussians-3d-generation",
+    "source": "Apple Machine Learning Research",
+    "message_id": 304,
+    "cached_at": 1788978680.6287708
+  },
+  "ebac5287cf1f4cd6": {
+    "title": "How controllers from industrial machinery can coordinate multitask machine learning",
+    "link": "https://www.amazon.science/blog/how-controllers-from-industrial-machinery-can-coordinate-multitask-machine-learning",
+    "source": "Amazon Science",
+    "message_id": 305,
+    "cached_at": 1788978683.1117644
+  },
+  "5b2f01c74deb67e7": {
+    "title": "How Heurist Finance built an AI-native investment workbench on Amazon Bedrock AgentCore",
+    "link": "https://aws.amazon.com/blogs/machine-learning/how-heurist-finance-built-an-ai-native-investment-workbench-on-amazon-bedrock-agentcore/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 306,
+    "cached_at": 1788978685.949706
+  },
+  "973ccf0e6944ad42": {
+    "title": "A practical approach to end-to-end Solvency II reporting in Databricks",
+    "link": "https://www.databricks.com/blog/practical-approach-end-end-solvency-ii-reporting-databricks",
+    "source": "Databricks Blog",
+    "message_id": 307,
+    "cached_at": 1788978688.8234177
+  },
+  "d3645ec1a40924bd": {
+    "title": "How We’re Building Scam Alert on WhatsApp With End-to-End Encryption and Verifiability Guarantees",
+    "link": "https://engineering.fb.com/2026/08/12/security/how-were-building-scam-alert-whatsapp/",
+    "source": "Engineering at Meta",
+    "message_id": 308,
+    "cached_at": 1788978691.5481951
   }
 }
