@@ -1403,5 +1403,110 @@
     "source": "Amazon Science",
     "message_id": 246,
     "cached_at": 1788948264.4974442
+  },
+  "d71f01295af42d46": {
+    "title": "OpenAI Jalapeño 🌶️, Perplexity Portable Computer  💻, Claude combines memory 🧠",
+    "link": "https://tldr.tech/ai/2026-08-26",
+    "source": "TLDR AI",
+    "message_id": 249,
+    "cached_at": 1788962565.1646054
+  },
+  "2bfc2c31d1ed21b0": {
+    "title": "Building and procuring sustainable Defence AI will boost force resilience",
+    "link": "https://www.turing.ac.uk/news/building-and-procuring-sustainable-defence-ai-will-boost-force-resilience",
+    "source": "Turing News",
+    "message_id": 250,
+    "cached_at": 1788962566.8315217
+  },
+  "a1b72811dd254b50": {
+    "title": "1Password increases engineering productivity 21% with Codex",
+    "link": "https://openai.com/index/1password",
+    "source": "OpenAI News",
+    "message_id": 251,
+    "cached_at": 1788962570.143026
+  },
+  "78524e1fb74fd82c": {
+    "title": "Introducing ChatGPT Images 2.5",
+    "link": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 252,
+    "cached_at": 1788962573.807691
+  },
+  "e44ec9815e67584e": {
+    "title": "Sequoia doubles down on Cymphony as AI agents create new enterprise security risks",
+    "link": "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/",
+    "source": "TechCrunch AI",
+    "message_id": 253,
+    "cached_at": 1788962577.080447
+  },
+  "b793230d83f5b368": {
+    "title": "A Stealth Startup Thinks It Just Hacked the Memory Shortage",
+    "link": "https://www.wired.com/story/a-new-dollar400-million-startup-wants-to-fix-the-ai-memory-bottleneck/",
+    "source": "Wired AI",
+    "message_id": 254,
+    "cached_at": 1788962580.4325624
+  },
+  "ab98541bb7cfb320": {
+    "title": "CloudNC aims to accelerate AI supply chain machining",
+    "link": "https://www.artificialintelligence-news.com/news/cloudnc-aims-to-accelerate-ai-supply-chain-machining/",
+    "source": "AI News",
+    "message_id": 255,
+    "cached_at": 1788962585.3759115
+  },
+  "c82a0d8d12038a0e": {
+    "title": "NVIDIA Announces CUDA Rust with cuda-oxide (SIMT) and cutile-rs (Tile) for Compile-Time-Safe GPU Kernels",
+    "link": "https://www.marktechpost.com/2026/09/08/nvidia-announces-cuda-rust-with-cuda-oxide-simt-and-cutile-rs-tile-for-compile-time-safe-gpu-kernels/",
+    "source": "MarkTechPost",
+    "message_id": 256,
+    "cached_at": 1788962588.128192
+  },
+  "49c0e8d66bbc9b85": {
+    "title": "Build an AI Data Analyst That Thinks Like a Senior Analyst",
+    "link": "https://www.kdnuggets.com/build-an-ai-data-analyst-that-thinks-like-a-senior-analyst",
+    "source": "KDnuggets",
+    "message_id": 257,
+    "cached_at": 1788962590.8798022
+  },
+  "ad3764223cfc5bbf": {
+    "title": "Amazon Prime Video’s new AI tech matches lips to dubbed audio",
+    "link": "https://www.theverge.com/tech/991809/amazon-prime-video-ai-lip-sync-dubbing",
+    "source": "The Verge AI",
+    "message_id": 258,
+    "cached_at": 1788962594.5592
+  },
+  "c718e258b306c0cd": {
+    "title": "When Does Memory Help? A Cost-Aware Evaluation of Long-Term Memory in Tool-Using LLM Agents",
+    "link": "https://arxiv.org/abs/2609.05441",
+    "source": "arXiv cs.AI",
+    "message_id": 259,
+    "cached_at": 1788962597.4233968
+  },
+  "1a9c84d0425c66c5": {
+    "title": "Better Together: Complementary Query Rewriting Under a Strong RAG Baseline",
+    "link": "https://arxiv.org/abs/2609.05637",
+    "source": "arXiv cs.CL",
+    "message_id": 260,
+    "cached_at": 1788962600.5068295
+  },
+  "5ee2d3c624a26e37": {
+    "title": "Multi-granularity Adaptive Hypergraph Representation Learning via Granular-ball",
+    "link": "https://arxiv.org/abs/2609.05574",
+    "source": "arXiv cs.LG",
+    "message_id": 261,
+    "cached_at": 1788962603.8391652
+  },
+  "07c872547d4b62c6": {
+    "title": "An Exploratory Study of Frequency-Aware Task Weighting for YOLOv8-Based Unified Driving Perception",
+    "link": "https://arxiv.org/abs/2609.05516",
+    "source": "arXiv cs.CV",
+    "message_id": 262,
+    "cached_at": 1788962606.789764
+  },
+  "be70a7bbb80f22f5": {
+    "title": "SimpleMemVLA: A Simple but Effective Native-Video Memory for Vision-Language-Action Models",
+    "link": "https://arxiv.org/abs/2609.05533",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 263,
+    "cached_at": 1788962610.1216362
   }
 }

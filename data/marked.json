@@ -227,5 +227,18 @@
     "status": "published",
     "slug": "frontier-reasoning-on-the-edge-deploying-and-optimizing-models-with-nvidia-jetson",
     "published_at": 1788933685.026208
+  },
+  "fdcd380c5652c8c1:247": {
+    "title": "What OpenAI’s latest controversy tells us about the future of math",
+    "link": "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/",
+    "source": "MIT Technology Review AI",
+    "message_id": 222,
+    "cached_at": 1788933730.655886,
+    "instructions": "Maak post",
+    "kind": "article",
+    "marked_at": 1788962451.5443876,
+    "status": "published",
+    "slug": "when-ai-solves-math-the-ethics-and-implications-of-openai-s-latest-breakthrough",
+    "published_at": 1788962526.9602969
   }
 }
