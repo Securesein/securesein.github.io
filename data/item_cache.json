@@ -1613,5 +1613,110 @@
     "source": "Databricks Blog",
     "message_id": 278,
     "cached_at": 1788964099.189459
+  },
+  "3eb3e9557eb7038e": {
+    "title": "Paul Christiano joins OpenAI Foundation Board",
+    "link": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+    "source": "OpenAI News",
+    "message_id": 279,
+    "cached_at": 1788976886.0543008
+  },
+  "46660cb2ea4362f6": {
+    "title": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
+    "link": "https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series",
+    "source": "Hugging Face Blog",
+    "message_id": 280,
+    "cached_at": 1788976888.9910989
+  },
+  "4bd74036563787bd": {
+    "title": "NVIDIA Brings Real-Time AI to Broadcast, Sports and Global Streaming at IBC",
+    "link": "https://blogs.nvidia.com/blog/ibc-news-2026/",
+    "source": "NVIDIA Blog",
+    "message_id": 281,
+    "cached_at": 1788976893.8850436
+  },
+  "ffe0b72566969417": {
+    "title": "Apple CEO John Ternus says the best AI device is still the iPhone",
+    "link": "https://techcrunch.com/2026/09/09/apple-ceo-john-ternus-says-the-best-ai-device-is-still-the-iphone/",
+    "source": "TechCrunch AI",
+    "message_id": 282,
+    "cached_at": 1788976896.8458436
+  },
+  "a579fccc1aba1528": {
+    "title": "Anthropic researcher quits with a warning: Self-improving AI could \"kill us all\"",
+    "link": "https://arstechnica.com/ai/2026/09/anthropic-researcher-quits-with-a-warning-self-improving-ai-could-kill-us-all/",
+    "source": "Ars Technica AI",
+    "message_id": 283,
+    "cached_at": 1788976899.8942308
+  },
+  "0a90e55cc0475eea": {
+    "title": "Samsung taps Mistral AI models for semiconductor manufacturing",
+    "link": "https://www.artificialintelligence-news.com/news/samsung-mistral-ai-models-for-semiconductor-manufacturing/",
+    "source": "AI News",
+    "message_id": 284,
+    "cached_at": 1788976903.7445335
+  },
+  "90853d31086438fb": {
+    "title": "Google DeepMind Releases AlphaGenome Atlas With Precomputed Molecular Effect Predictions and AVI Scores for 9 Billion Human DNA Variants",
+    "link": "https://www.marktechpost.com/2026/09/08/google-deepmind-releases-alphagenome-atlas-with-precomputed-molecular-effect-predictions-and-avi-scores-for-9-billion-human-dna-variants/",
+    "source": "MarkTechPost",
+    "message_id": 285,
+    "cached_at": 1788976906.4889724
+  },
+  "7f49826f4edc006b": {
+    "title": "Microsoft has new AI privacy rules for schools",
+    "link": "https://www.theverge.com/policy/992359/microsoft-aft-schools-ai-privacy",
+    "source": "The Verge AI",
+    "message_id": 286,
+    "cached_at": 1788976909.026463
+  },
+  "4decffadab164b7c": {
+    "title": "Damage-Aware Bandit Pruning for Vision and Language Transformers",
+    "link": "https://arxiv.org/abs/2609.05448",
+    "source": "arXiv cs.AI",
+    "message_id": 287,
+    "cached_at": 1788976912.2770545
+  },
+  "75cc7f5cce7dd81f": {
+    "title": "A Rubric-Guided Large Language Model Solution for Opioid Use Disorder Computable Phenotyping",
+    "link": "https://arxiv.org/abs/2609.05682",
+    "source": "arXiv cs.CL",
+    "message_id": 288,
+    "cached_at": 1788976914.7962291
+  },
+  "03075fbdb5cebbc8": {
+    "title": "HB-PVI: A Hierarchical Bayesian Personalization and Value-of-Information Framework for Complex Activity Recognition",
+    "link": "https://arxiv.org/abs/2609.05582",
+    "source": "arXiv cs.LG",
+    "message_id": 289,
+    "cached_at": 1788976918.222596
+  },
+  "fd161d788326f22b": {
+    "title": "CrossModalQA: A Cross-modal and Multi-hop Benchmark for Multimodal Retrieval-augmented Generation",
+    "link": "https://arxiv.org/abs/2609.05518",
+    "source": "arXiv cs.CV",
+    "message_id": 290,
+    "cached_at": 1788976921.2065835
+  },
+  "7d986e0d54bb1cb3": {
+    "title": "Verify Before You Distill: Prompt-Level Teacher Gating for On-Policy Distillation",
+    "link": "https://arxiv.org/abs/2609.02998",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 291,
+    "cached_at": 1788976924.5027163
+  },
+  "ac6eb9276806c2f8": {
+    "title": "Intelligent transcription with Gemini 3.5 Transcribe",
+    "link": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
+    "source": "Google DeepMind Blog",
+    "message_id": 292,
+    "cached_at": 1788976927.6270754
+  },
+  "a21cee4b91bda9f5": {
+    "title": "An AI tool for prioritizing candidate biomarkers from wearable sensor data",
+    "link": "https://research.google/blog/an-ai-tool-for-prioritizing-candidate-biomarkers-from-wearable-sensor-data/",
+    "source": "Google Research Blog",
+    "message_id": 293,
+    "cached_at": 1788976930.125809
   }
 }
