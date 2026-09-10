@@ -2348,5 +2348,110 @@
     "source": "AWS Machine Learning Blog",
     "message_id": 387,
     "cached_at": 1789063375.660601
+  },
+  "6a886414536a09e3": {
+    "title": "Now everyone can put data to work",
+    "link": "https://openai.com/index/put-data-to-work",
+    "source": "OpenAI News",
+    "message_id": 388,
+    "cached_at": 1789064435.1335623
+  },
+  "2c2c39776d194ae7": {
+    "title": "Physical AI Takes the Wheel: How the World’s Robotaxi Leaders Are Building With NVIDIA Technologies",
+    "link": "https://blogs.nvidia.com/blog/robotaxi-leaders-full-stack-open-platform/",
+    "source": "NVIDIA Blog",
+    "message_id": 389,
+    "cached_at": 1789064438.341843
+  },
+  "5f6c125fae86f392": {
+    "title": "India’s Pocket FM doubles revenue run rate to $500M as AI powers 93% of audio content",
+    "link": "https://techcrunch.com/2026/09/10/indias-pocket-fm-doubles-revenue-run-rate-to-500m-as-ai-powers-93-of-audio-content/",
+    "source": "TechCrunch AI",
+    "message_id": 390,
+    "cached_at": 1789064441.7523196
+  },
+  "8092a78523f469a3": {
+    "title": "Supply chains detect fast, act slow: How AI agents fix it",
+    "link": "https://www.artificialintelligence-news.com/news/supply-chains-detect-fast-act-slow-how-ai-agents-fix-it/",
+    "source": "AI News",
+    "message_id": 391,
+    "cached_at": 1789064445.4139552
+  },
+  "f4c0e0c5fdf350af": {
+    "title": "Google Open-Sources Mantis: A Modular Skills Toolkit That Lets Coding Agents Find, Reproduce and Patch Vulnerabilities",
+    "link": "https://www.marktechpost.com/2026/09/09/google-open-sources-mantis-a-modular-skills-toolkit-that-lets-coding-agents-find-reproduce-and-patch-vulnerabilities/",
+    "source": "MarkTechPost",
+    "message_id": 392,
+    "cached_at": 1789064448.7830126
+  },
+  "43f09d10876a632f": {
+    "title": "Feature Engineering in Scikit-Learn: A KDnuggets Cheat Sheet",
+    "link": "https://www.kdnuggets.com/feature-engineering-in-scikit-learn-a-kdnuggets-cheat-sheet",
+    "source": "KDnuggets",
+    "message_id": 393,
+    "cached_at": 1789064452.1189435
+  },
+  "b1a91aa554684a71": {
+    "title": "Meta’s Muse AI works and creeps me out",
+    "link": "https://www.theverge.com/tech/993391/meta-muse-ai-hands-on",
+    "source": "The Verge AI",
+    "message_id": 394,
+    "cached_at": 1789064454.8866954
+  },
+  "f1f80f1aa910dabb": {
+    "title": "The Menu Is an Execution Prior: State-Path Tool Menus for Online Agents",
+    "link": "https://arxiv.org/abs/2609.09395",
+    "source": "arXiv cs.AI",
+    "message_id": 395,
+    "cached_at": 1789064457.7821474
+  },
+  "05105d25c5a9e35b": {
+    "title": "Do LLMs Make More Mistakes If They Do Not Believe the Input Data?",
+    "link": "https://arxiv.org/abs/2609.09363",
+    "source": "arXiv cs.CL",
+    "message_id": 396,
+    "cached_at": 1789064461.2607646
+  },
+  "67b17667ae4f953d": {
+    "title": "DiffLUT-Net: Differentiable Training of FPGA LUT Networks with Learnable Connectivity",
+    "link": "https://arxiv.org/abs/2609.09254",
+    "source": "arXiv cs.LG",
+    "message_id": 397,
+    "cached_at": 1789064464.0362246
+  },
+  "56c9a61d7ee641d6": {
+    "title": "MLLMs Hallucinate when Information Distribution Drifts in Synergy Heads",
+    "link": "https://arxiv.org/abs/2609.09206",
+    "source": "arXiv cs.CV",
+    "message_id": 398,
+    "cached_at": 1789064469.3691063
+  },
+  "9416fa0e0210cc84": {
+    "title": "Learning 3D Editing without Paired Supervision via Generative Prior Distillation",
+    "link": "https://arxiv.org/abs/2609.04942",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 399,
+    "cached_at": 1789064472.5281763
+  },
+  "fe5d25f27a1ce3e9": {
+    "title": "Amazon Quick is now generally available on desktop",
+    "link": "https://aws.amazon.com/blogs/machine-learning/amazon-quick-is-now-generally-available-on-desktop/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 400,
+    "cached_at": 1789064476.8262806
+  },
+  "5e0906e6e4477447": {
+    "title": "Improving Lakebase Postgres compute cache",
+    "link": "https://www.databricks.com/blog/improving-lakebase-postgres-compute-cache",
+    "source": "Databricks Blog",
+    "message_id": 401,
+    "cached_at": 1789064479.734594
+  },
+  "0d4808deec190454": {
+    "title": "GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model",
+    "link": "https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/",
+    "source": "Engineering at Meta",
+    "message_id": 402,
+    "cached_at": 1789064483.4677184
   }
 }
