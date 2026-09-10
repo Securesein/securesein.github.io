@@ -1823,5 +1823,110 @@
     "source": "Engineering at Meta",
     "message_id": 308,
     "cached_at": 1788978691.5481951
+  },
+  "a7c183de5112de47": {
+    "title": "The AI policy window is open. We need to act.",
+    "link": "https://openai.com/index/ai-policy-window",
+    "source": "OpenAI News",
+    "message_id": 309,
+    "cached_at": 1789020090.4325666
+  },
+  "8bb8a5d2f8afb2a8": {
+    "title": "Quoting Calif Research",
+    "link": "https://simonwillison.net/2026/Sep/10/calif-research/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 310,
+    "cached_at": 1789020093.7324023
+  },
+  "3105def6eeb95a45": {
+    "title": "AI research startup Listen Labs scrubbed a $1.5B funding round for Salesforce talks",
+    "link": "https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/",
+    "source": "TechCrunch AI",
+    "message_id": 311,
+    "cached_at": 1789020096.3359885
+  },
+  "6a9b6b354bd2470b": {
+    "title": "The AI Researcher Who Just Quit Anthropic Says It’s ‘Crunch Time for Humanity’",
+    "link": "https://www.wired.com/story/anthropic-researcher-quits-jacob-coxon-ai-fears-humanity/",
+    "source": "Wired AI",
+    "message_id": 312,
+    "cached_at": 1789020099.507229
+  },
+  "8564d4a4c6b88312": {
+    "title": "Suno releases its first AI music model made with record industry help",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/991977/suno-releases-its-first-ai-music-model-made-with-record-industry-help",
+    "source": "The Verge AI",
+    "message_id": 313,
+    "cached_at": 1789020102.5080714
+  },
+  "c47e511d7c6f6049": {
+    "title": "OpenDiscoveryTrace: Process Traces for Evaluating AI Scientist Workflows",
+    "link": "https://arxiv.org/abs/2609.09203",
+    "source": "arXiv cs.AI",
+    "message_id": 314,
+    "cached_at": 1789020105.2743835
+  },
+  "6f1876b24efc97d2": {
+    "title": "X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding",
+    "link": "https://arxiv.org/abs/2609.09166",
+    "source": "arXiv cs.CL",
+    "message_id": 315,
+    "cached_at": 1789020108.186265
+  },
+  "4506abd845d866ab": {
+    "title": "Spectral origin of the topological gap exponent d + {\\eta}: mechanism, kernel, decomposition, and scope",
+    "link": "https://arxiv.org/abs/2609.09159",
+    "source": "arXiv cs.LG",
+    "message_id": 316,
+    "cached_at": 1789020111.7486296
+  },
+  "c6b8b795e58e2590": {
+    "title": "Evidence-Order Calibration for Selective Visual Reasoning under Progressive Loss of Question-Critical Evidence",
+    "link": "https://arxiv.org/abs/2609.09184",
+    "source": "arXiv cs.CV",
+    "message_id": 317,
+    "cached_at": 1789020114.4933813
+  },
+  "8a69825c315df997": {
+    "title": "Recognition-Refusal Misalignment in LLMs: Why Models Answer Structurally Unanswerable Questions",
+    "link": "https://arxiv.org/abs/2608.29109",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 318,
+    "cached_at": 1789020117.4001591
+  },
+  "43643a3dd841363b": {
+    "title": "Introducing Gemini 3.7 Flash",
+    "link": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+    "source": "Google DeepMind Blog",
+    "message_id": 319,
+    "cached_at": 1789020120.4144468
+  },
+  "3610856e0c1fd406": {
+    "title": "Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery",
+    "link": "https://research.google/blog/seeing-beyond-bmi-estimating-cardiometabolic-risk-with-smartphone-imagery/",
+    "source": "Google Research Blog",
+    "message_id": 320,
+    "cached_at": 1789020123.0822883
+  },
+  "82b8bf7db8ec7233": {
+    "title": "Recreating a 70-year love story frame by frame",
+    "link": "https://blog.google/innovation-and-ai/technology/ai/love-rendered-film/",
+    "source": "Google AI Blog",
+    "message_id": 321,
+    "cached_at": 1789020125.8963108
+  },
+  "fcad62dadc164ac0": {
+    "title": "STARFlow2: Bridging Language Models and Normalizing Flows for Unified Multimodal Generation",
+    "link": "https://machinelearning.apple.com/research/starflow2-multimodal-generation",
+    "source": "Apple Machine Learning Research",
+    "message_id": 322,
+    "cached_at": 1789020129.010191
+  },
+  "e9306b21f52e1679": {
+    "title": "A new benchmark for evaluating patient-facing health AI agents",
+    "link": "https://www.amazon.science/blog/a-new-benchmark-for-evaluating-patient-facing-health-ai-agents",
+    "source": "Amazon Science",
+    "message_id": 323,
+    "cached_at": 1789020131.9080439
   }
 }
