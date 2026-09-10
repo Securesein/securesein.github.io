@@ -2033,5 +2033,110 @@
     "source": "Amazon Science",
     "message_id": 340,
     "cached_at": 1789034577.6892903
+  },
+  "c7236dda092fc80b": {
+    "title": "GLM-5.3 Flash ⚡, Claudeforce 🤝, NVIDIA revenue surge 📈",
+    "link": "https://tldr.tech/ai/2026-08-27",
+    "source": "TLDR AI",
+    "message_id": 341,
+    "cached_at": 1789048891.0897355
+  },
+  "075fed980e67c694": {
+    "title": "Rebuilding AUTOMATIC1111 with Gradio Workflow",
+    "link": "https://huggingface.co/blog/gradio-workflow-1111",
+    "source": "Hugging Face Blog",
+    "message_id": 342,
+    "cached_at": 1789048894.3461437
+  },
+  "0b4b6e75bc7d33ed": {
+    "title": "d-Matrix Adopts NVIDIA NVLink Fusion for Rack-Scale XPU Deployment",
+    "link": "https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/",
+    "source": "NVIDIA Blog",
+    "message_id": 343,
+    "cached_at": 1789048897.6398902
+  },
+  "3c30b064b84748f8": {
+    "title": "Massachusetts hits data centers with new clean power rules",
+    "link": "https://techcrunch.com/2026/09/09/massachusetts-hits-data-centers-with-new-clean-power-rules/",
+    "source": "TechCrunch AI",
+    "message_id": 344,
+    "cached_at": 1789048901.0920312
+  },
+  "4e0bb402f02714ac": {
+    "title": "Everything New You Can Do With Siri AI",
+    "link": "https://www.wired.com/story/everything-new-you-can-do-with-siri-ai/",
+    "source": "Wired AI",
+    "message_id": 345,
+    "cached_at": 1789048904.9001892
+  },
+  "2b7e785526801176": {
+    "title": "Powering AI is an architecture problem",
+    "link": "https://www.technologyreview.com/2026/09/10/1141649/powering-ai-is-an-architecture-problem/",
+    "source": "MIT Technology Review AI",
+    "message_id": 346,
+    "cached_at": 1789048907.841847
+  },
+  "83c4392e2379b43f": {
+    "title": "LandingAI Releases Agentic Document Extraction Gen2 with DPT-3 Pro and DPT-3 Verity",
+    "link": "https://www.marktechpost.com/2026/09/09/landingai-releases-agentic-document-extraction-gen2-with-dpt-3-pro-and-dpt-3-verity/",
+    "source": "MarkTechPost",
+    "message_id": 347,
+    "cached_at": 1789048910.7809925
+  },
+  "cd2ef90df8760687": {
+    "title": "7 Steps to Become a Forward Deployed Engineer in 2026",
+    "link": "https://www.kdnuggets.com/7-steps-to-become-a-forward-deployed-engineer-in-2026",
+    "source": "KDnuggets",
+    "message_id": 348,
+    "cached_at": 1789048913.474111
+  },
+  "c3a0d1fe00427592": {
+    "title": "Read the Apple document explaining how new listening features still protect your privacy",
+    "link": "https://www.theverge.com/tech/992919/apple-siri-ai-audio-intelligence-privacy",
+    "source": "The Verge AI",
+    "message_id": 349,
+    "cached_at": 1789048916.3856764
+  },
+  "b4a42575dd0dd18d": {
+    "title": "Subagents vs Agent Skills: Executing Reusable Knowledge for Long-Horizon Agentic Tasks",
+    "link": "https://arxiv.org/abs/2609.09233",
+    "source": "arXiv cs.AI",
+    "message_id": 350,
+    "cached_at": 1789048919.1678498
+  },
+  "297f2c797f4497f7": {
+    "title": "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+    "link": "https://arxiv.org/abs/2609.09338",
+    "source": "arXiv cs.CL",
+    "message_id": 351,
+    "cached_at": 1789048922.2471213
+  },
+  "983b916a25fbfe4a": {
+    "title": "World-Time Compute with Verified Code World Models",
+    "link": "https://arxiv.org/abs/2609.09163",
+    "source": "arXiv cs.LG",
+    "message_id": 352,
+    "cached_at": 1789048925.4377089
+  },
+  "fb7b8e2a1558744f": {
+    "title": "M2LG-DG: A Multi-modal Local-Global Domain Generalization Framework for Cross-site Major Depressive Disorder Classification",
+    "link": "https://arxiv.org/abs/2609.09186",
+    "source": "arXiv cs.CV",
+    "message_id": 353,
+    "cached_at": 1789048928.8789463
+  },
+  "eab80780abedb3a0": {
+    "title": "MasterControl Seventeen Every Time",
+    "link": "https://arxiv.org/abs/2609.03209",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 354,
+    "cached_at": 1789048931.7854085
+  },
+  "d00944e12348f9f2": {
+    "title": "Bring your spreadsheet data to life with Sheets canvas",
+    "link": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/",
+    "source": "Google AI Blog",
+    "message_id": 355,
+    "cached_at": 1789048934.311453
   }
 }
