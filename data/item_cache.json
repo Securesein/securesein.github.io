@@ -2243,5 +2243,110 @@
     "source": "Engineering at Meta",
     "message_id": 370,
     "cached_at": 1789049979.1661074
+  },
+  "2110b3cfa1886133": {
+    "title": "Cohere and the University of Waterloo launch partnership to strengthen Canada’s AI talent pipeline",
+    "link": "https://cohere.com/blog/cohere-university-of-waterloo-announcement",
+    "source": "Cohere Blog",
+    "message_id": 373,
+    "cached_at": 1789063336.3928711
+  },
+  "39842fa0b34b37cb": {
+    "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+    "link": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+    "source": "OpenAI News",
+    "message_id": 374,
+    "cached_at": 1789063339.4472609
+  },
+  "0f47f3a1d7c38ce7": {
+    "title": "Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video",
+    "link": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/",
+    "source": "NVIDIA Blog",
+    "message_id": 375,
+    "cached_at": 1789063341.897524
+  },
+  "03f78b38d22a7688": {
+    "title": "Anthropic reveals rogue AI agents hate CAPTCHAs, just like you",
+    "link": "https://techcrunch.com/2026/09/10/anthropic-reveals-rogue-ai-agents-hate-captchas-just-like-you/",
+    "source": "TechCrunch AI",
+    "message_id": 376,
+    "cached_at": 1789063344.523488
+  },
+  "9696404b8eb22c43": {
+    "title": "I Let an AI Agent Hack All My Gadgets—and I’d Do It Again",
+    "link": "https://www.wired.com/story/i-used-ai-to-hack-my-home-network/",
+    "source": "Wired AI",
+    "message_id": 377,
+    "cached_at": 1789063347.6507125
+  },
+  "e491266d38f23634": {
+    "title": "A Candid Abacus AI Review: The All-in-One AI Platform for Professionals & Enterprises",
+    "link": "https://www.kdnuggets.com/2026/09/abacus/abacus-ai-candid-review/",
+    "source": "KDnuggets",
+    "message_id": 378,
+    "cached_at": 1789063350.5881991
+  },
+  "4211bd25e9725430": {
+    "title": "Universal Music is launching an AI music platform with ElevenLabs",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/993465/universal-music-elevenlabs-ai",
+    "source": "The Verge AI",
+    "message_id": 379,
+    "cached_at": 1789063353.4946516
+  },
+  "5ff59038e8536919": {
+    "title": "An Autonomous GeoAI Agent for Arctic Eco-Navigation",
+    "link": "https://arxiv.org/abs/2609.09374",
+    "source": "arXiv cs.AI",
+    "message_id": 380,
+    "cached_at": 1789063356.5553808
+  },
+  "52414111ad396738": {
+    "title": "Auditable Emergency Triage for Maternal and Newborn Care in India",
+    "link": "https://arxiv.org/abs/2609.09356",
+    "source": "arXiv cs.CL",
+    "message_id": 381,
+    "cached_at": 1789063359.71341
+  },
+  "98533283804c042c": {
+    "title": "Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts",
+    "link": "https://arxiv.org/abs/2609.09241",
+    "source": "arXiv cs.LG",
+    "message_id": 382,
+    "cached_at": 1789063362.2924771
+  },
+  "fc1c4dc285001a28": {
+    "title": "Lensless Gaze Is Not Private by Default: Auditing Identity Leakage Across Disclosure Surfaces",
+    "link": "https://arxiv.org/abs/2609.09188",
+    "source": "arXiv cs.CV",
+    "message_id": 383,
+    "cached_at": 1789063365.1846056
+  },
+  "b2cf687fa6f30851": {
+    "title": "EVOHARNESSBENCH: Can Your Agents Keep Pace with an Evolving Harness?",
+    "link": "https://arxiv.org/abs/2609.04280",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 384,
+    "cached_at": 1789063368.3102467
+  },
+  "ceadd21f5d3a2d65": {
+    "title": "3 ways to prep for your next big race with Search",
+    "link": "https://blog.google/products-and-platforms/products/search/running-race-training-tips/",
+    "source": "Google AI Blog",
+    "message_id": 385,
+    "cached_at": 1789063370.670894
+  },
+  "712c25db4c998bf9": {
+    "title": "Why don&#8217;t machine learning research agents overfit?",
+    "link": "https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit",
+    "source": "Amazon Science",
+    "message_id": 386,
+    "cached_at": 1789063372.8554199
+  },
+  "fbf6da59db70f4b1": {
+    "title": "Build an end-to-end RFI questionnaire workflow using Amazon Quick Automate",
+    "link": "https://aws.amazon.com/blogs/machine-learning/build-an-end-to-end-rfi-questionnaire-workflow-using-amazon-quick-automate/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 387,
+    "cached_at": 1789063375.660601
   }
 }

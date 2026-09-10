@@ -253,5 +253,18 @@
     "status": "published",
     "slug": "gemini-3-7-flash-the-new-frontier-in-ai-workhorse-models",
     "published_at": 1789034512.0521626
+  },
+  "983b916a25fbfe4a:371": {
+    "title": "World-Time Compute with Verified Code World Models",
+    "link": "https://arxiv.org/abs/2609.09163",
+    "source": "arXiv cs.LG",
+    "message_id": 352,
+    "cached_at": 1789048925.4377089,
+    "instructions": "Post maken",
+    "kind": "article",
+    "marked_at": 1789063250.010107,
+    "status": "published",
+    "slug": "world-time-compute-lifting-ai-generalization-with-verified-code-world-models",
+    "published_at": 1789063273.813239
   }
 }
