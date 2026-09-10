@@ -2138,5 +2138,110 @@
     "source": "Google AI Blog",
     "message_id": 355,
     "cached_at": 1789048934.311453
+  },
+  "fee72947a02169d8": {
+    "title": "Boots on the Ground: ‘WARDOGS’ Goes All Out on GeForce NOW at Early-Access Launch",
+    "link": "https://blogs.nvidia.com/blog/geforce-now-thursday-wardogs/",
+    "source": "NVIDIA Blog",
+    "message_id": 356,
+    "cached_at": 1789049933.3655505
+  },
+  "8a94d361c08cece9": {
+    "title": "Maven Robotics wants to steal your robot deployment deal",
+    "link": "https://techcrunch.com/2026/09/10/maven-robotics-wants-to-steal-your-robot-deployment-deal/",
+    "source": "TechCrunch AI",
+    "message_id": 357,
+    "cached_at": 1789049936.231528
+  },
+  "62171ad40c959f22": {
+    "title": "Clearview AI Is Testing an AI Tool That Would Let Cops Unearth Your Life Online",
+    "link": "https://www.wired.com/story/clearview-ai-is-testing-an-ai-tool-that-lets-cops-instantly-unearth-your-online-activity/",
+    "source": "Wired AI",
+    "message_id": 358,
+    "cached_at": 1789049941.001627
+  },
+  "7f3545919a0c6e5a": {
+    "title": "5 Useful Python Scripts to Automate CSV Processing",
+    "link": "https://www.kdnuggets.com/5-useful-python-scripts-to-automate-csv-processing",
+    "source": "KDnuggets",
+    "message_id": 359,
+    "cached_at": 1789049943.5858383
+  },
+  "1ddcac0da9be0665": {
+    "title": "Why the current tech backlash feels different",
+    "link": "https://www.theverge.com/podcast/992141/decoder-mailbag-ai-backlash-surveillance-midterms-data-centers",
+    "source": "The Verge AI",
+    "message_id": 360,
+    "cached_at": 1789049947.7782366
+  },
+  "e2030e32d28f41ad": {
+    "title": "Gradland: On Phenomenal Experience, Differentiated Across Many Dimensions",
+    "link": "https://arxiv.org/abs/2609.09306",
+    "source": "arXiv cs.AI",
+    "message_id": 361,
+    "cached_at": 1789049950.3449419
+  },
+  "a6152b7bd82f6b1e": {
+    "title": "SWORD: Wikidata-based Distortions Reveal Hidden Cross-Lingual Inconsistencies in LLM Factual Error Rejection",
+    "link": "https://arxiv.org/abs/2609.09349",
+    "source": "arXiv cs.CL",
+    "message_id": 362,
+    "cached_at": 1789049953.3873637
+  },
+  "7f66f8902d10c2a5": {
+    "title": "Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution",
+    "link": "https://arxiv.org/abs/2609.09240",
+    "source": "arXiv cs.LG",
+    "message_id": 363,
+    "cached_at": 1789049956.2540553
+  },
+  "12b1f0d49798e983": {
+    "title": "AgenticGen: Reward-Guided Agentic Video Generation for Advertising",
+    "link": "https://arxiv.org/abs/2609.09187",
+    "source": "arXiv cs.CV",
+    "message_id": 364,
+    "cached_at": 1789049959.2025461
+  },
+  "177c31662a78e6fa": {
+    "title": "Graph Machine: Towards Better Pretraining via Edges",
+    "link": "https://arxiv.org/abs/2609.02881",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 365,
+    "cached_at": 1789049962.0121481
+  },
+  "f234e5bdf66efee6": {
+    "title": "Multilingual Knowledge Transfer under Data Constraints via Lexical Interventions",
+    "link": "https://machinelearning.apple.com/research/multilingual-knowledge-transfer-lexical-interventions",
+    "source": "Apple Machine Learning Research",
+    "message_id": 366,
+    "cached_at": 1789049965.3015125
+  },
+  "d9e422d39a6e84b4": {
+    "title": "Amazon and University of Michigan give robots a sense of touch",
+    "link": "https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch",
+    "source": "Amazon Science",
+    "message_id": 367,
+    "cached_at": 1789049968.3421462
+  },
+  "fb6ab28989b8e54a": {
+    "title": "Deploying Qwen3.8-2.4T-A95B on Amazon SageMaker HyperPod with vLLM",
+    "link": "https://aws.amazon.com/blogs/machine-learning/deploying-qwen3-8-2-4t-a95b-on-amazon-sagemaker-hyperpod-with-vllm/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 368,
+    "cached_at": 1789049973.406203
+  },
+  "547de81a8632694c": {
+    "title": "Five AI Questions We're Hearing from Financial Services Leaders",
+    "link": "https://www.databricks.com/blog/five-ai-questions-were-hearing-financial-services-leaders",
+    "source": "Databricks Blog",
+    "message_id": 369,
+    "cached_at": 1789049976.3218417
+  },
+  "e90e04dd478fae65": {
+    "title": "From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking",
+    "link": "https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/",
+    "source": "Engineering at Meta",
+    "message_id": 370,
+    "cached_at": 1789049979.1661074
   }
 }
