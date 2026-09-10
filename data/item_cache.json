@@ -1928,5 +1928,110 @@
     "source": "Amazon Science",
     "message_id": 323,
     "cached_at": 1789020131.9080439
+  },
+  "333ccaae81484d3a": {
+    "title": "GPT-6 Astra: The next generation in intelligence for work",
+    "link": "https://openai.com/index/gpt-6-astra-next-generation-work",
+    "source": "OpenAI News",
+    "message_id": 326,
+    "cached_at": 1789034538.9575076
+  },
+  "46bc2da24ce54d4e": {
+    "title": ".blend URL Viewer",
+    "link": "https://simonwillison.net/2026/Sep/9/blender-viewer/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 327,
+    "cached_at": 1789034541.5275016
+  },
+  "9b1339840542b6a6": {
+    "title": "OpenAI adds a prominent AI doomer to its board of directors",
+    "link": "https://techcrunch.com/2026/09/09/openai-adds-a-prominent-ai-doomer-to-its-board-of-directors/",
+    "source": "TechCrunch AI",
+    "message_id": 328,
+    "cached_at": 1789034544.2847948
+  },
+  "fad36c10f953e9cf": {
+    "title": "San Francisco Orders Meta to Stop ‘Allowing’ AI Child Abuse Ads",
+    "link": "https://www.wired.com/story/san-francisco-orders-meta-to-stop-allowing-ai-child-abuse-ads/",
+    "source": "Wired AI",
+    "message_id": 329,
+    "cached_at": 1789034546.8048134
+  },
+  "b13d654fc7eaab6c": {
+    "title": "JD.com expands physical AI in logistics with 3 million robots",
+    "link": "https://www.artificialintelligence-news.com/news/jd-com-physical-ai-logistics-3-million-robots/",
+    "source": "AI News",
+    "message_id": 330,
+    "cached_at": 1789034550.0320365
+  },
+  "1aca4935d2f6e911": {
+    "title": "DeepSeek AI Released DeepSeek-V4.1-Flash with 1M Context, FP4 KV Cache, and Cross-Layer Attention Reuse",
+    "link": "https://www.marktechpost.com/2026/09/10/deepseek-ai-released-deepseek-v4-1-flash-with-1m-context-fp4-kv-cache-and-cross-layer-attention-reuse/",
+    "source": "MarkTechPost",
+    "message_id": 331,
+    "cached_at": 1789034555.455983
+  },
+  "8d54077b46595e1b": {
+    "title": "OpenAI’s sly mathematical breakthrough sends a chill through academia",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes",
+    "source": "The Verge AI",
+    "message_id": 332,
+    "cached_at": 1789034557.558438
+  },
+  "e5ce9e32a0b2b622": {
+    "title": "Adaptive Entangled Game Modules in Artificial General Intelligence",
+    "link": "https://arxiv.org/abs/2609.09226",
+    "source": "arXiv cs.AI",
+    "message_id": 333,
+    "cached_at": 1789034560.2043378
+  },
+  "b9178ac3935fd770": {
+    "title": "StochBench: A Domain-Specific Benchmark for Stochastic Processes in Lean",
+    "link": "https://arxiv.org/abs/2609.09264",
+    "source": "arXiv cs.CL",
+    "message_id": 334,
+    "cached_at": 1789034562.7987063
+  },
+  "61b62e5e0dcabe94": {
+    "title": "Physics-informed neural networks by Gradient-Guided Gaussian Adaptive Sampling (3GAS-PINNs)",
+    "link": "https://arxiv.org/abs/2609.09162",
+    "source": "arXiv cs.LG",
+    "message_id": 335,
+    "cached_at": 1789034565.497248
+  },
+  "e2602bdb90591ac5": {
+    "title": "Integrating Unimodal and Vision-Language Representations in Latent Space for Multi-Label Chest X-Ray Classification",
+    "link": "https://arxiv.org/abs/2609.09185",
+    "source": "arXiv cs.CV",
+    "message_id": 336,
+    "cached_at": 1789034567.7923496
+  },
+  "989b1e2b951f4f9a": {
+    "title": "StudyBench: Can Self-Evolution Squeeze Textbooks for Olympiad Capability?",
+    "link": "https://arxiv.org/abs/2609.00787",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 337,
+    "cached_at": 1789034570.1810064
+  },
+  "4001c007c7b53144": {
+    "title": "Get closer to the game with Gemini and Pixel",
+    "link": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/",
+    "source": "Google AI Blog",
+    "message_id": 338,
+    "cached_at": 1789034572.7852757
+  },
+  "622dfef4414b42ae": {
+    "title": "Beyond Visual CoT: Internalized Visual Thinking for Proactive Video Reasoning",
+    "link": "https://machinelearning.apple.com/research/internalized-visual-thinking",
+    "source": "Apple Machine Learning Research",
+    "message_id": 339,
+    "cached_at": 1789034575.521736
+  },
+  "78190ca6d25612da": {
+    "title": "Amazon is investing in the Lean Focused Research Organization",
+    "link": "https://www.amazon.science/news/amazon-is-investing-in-the-lean-focused-research-organization",
+    "source": "Amazon Science",
+    "message_id": 340,
+    "cached_at": 1789034577.6892903
   }
 }

@@ -240,5 +240,18 @@
     "status": "published",
     "slug": "when-ai-solves-math-the-ethics-and-implications-of-openai-s-latest-breakthrough",
     "published_at": 1788962526.9602969
+  },
+  "43643a3dd841363b:324": {
+    "title": "Introducing Gemini 3.7 Flash",
+    "link": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+    "source": "Google DeepMind Blog",
+    "message_id": 319,
+    "cached_at": 1789020120.4144468,
+    "instructions": "Graag dit nieuwe model uiteenzetten, wat is de belofte en wat is er nieuw",
+    "kind": "article",
+    "marked_at": 1789034481.3025694,
+    "status": "published",
+    "slug": "gemini-3-7-flash-the-new-frontier-in-ai-workhorse-models",
+    "published_at": 1789034512.0521626
   }
 }
