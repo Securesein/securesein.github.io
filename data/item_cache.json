@@ -2453,5 +2453,110 @@
     "source": "Engineering at Meta",
     "message_id": 402,
     "cached_at": 1789064483.4677184
+  },
+  "0bb946f0c4215389": {
+    "title": "Introducing ChatGPT for Financial Services",
+    "link": "https://openai.com/index/introducing-chatgpt-financial-services",
+    "source": "OpenAI News",
+    "message_id": 403,
+    "cached_at": 1789106490.0122933
+  },
+  "1e206d769558c6a9": {
+    "title": "Datasette 1.0a39 and 0.65.4 security releases",
+    "link": "https://simonwillison.net/2026/Sep/11/datasette-security/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 404,
+    "cached_at": 1789106492.8167198
+  },
+  "db4ea884f28819c7": {
+    "title": "Jensen Huang explains why Nvidia will grow an astounding 70% next year",
+    "link": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
+    "source": "TechCrunch AI",
+    "message_id": 405,
+    "cached_at": 1789106495.6699388
+  },
+  "526299bbdcb396ec": {
+    "title": "OpenAI Wants to Know if an AI Industry Slowdown Would Even Be Legal",
+    "link": "https://www.wired.com/story/openai-wants-to-know-if-an-ai-industry-slowdown-would-even-be-legal/",
+    "source": "Wired AI",
+    "message_id": 406,
+    "cached_at": 1789106499.336381
+  },
+  "3c6507c064de87f6": {
+    "title": "Meet Redis LangCache: A Managed Semantic Cache That Cuts LLM API Costs by Up to 90% and Returns Cache Hits Up to 15x Faster",
+    "link": "https://www.marktechpost.com/2026/09/10/meet-redis-langcache-a-managed-semantic-cache-that-cuts-llm-api-costs-by-up-to-90-and-returns-cache-hits-up-to-15x-faster/",
+    "source": "MarkTechPost",
+    "message_id": 407,
+    "cached_at": 1789106501.89312
+  },
+  "282ba679f0e00cf4": {
+    "title": "Slack can now vibe-code interactive charts and reports inside chats",
+    "link": "https://www.theverge.com/tech/989853/slackforce-surfaces-launch",
+    "source": "The Verge AI",
+    "message_id": 408,
+    "cached_at": 1789106504.682569
+  },
+  "53da553ae00ab826": {
+    "title": "Decision-Focused Active Learning for Scale-Aware Critical-Materials Recovery",
+    "link": "https://arxiv.org/abs/2609.09413",
+    "source": "arXiv cs.AI",
+    "message_id": 409,
+    "cached_at": 1789106508.4730585
+  },
+  "5face9fa2e1d63d2": {
+    "title": "Data-Efficient Language Modeling: From Frontier Advancement to Principle-Guided Model Improvement",
+    "link": "https://arxiv.org/abs/2609.10702",
+    "source": "arXiv cs.CL",
+    "message_id": 410,
+    "cached_at": 1789106512.6657288
+  },
+  "7849b8ba79dd8f19": {
+    "title": "M3-Former: Multimodal Transformer with Mixture-of-Experts for Long-Term Vessel Trajectory Prediction",
+    "link": "https://arxiv.org/abs/2609.10559",
+    "source": "arXiv cs.LG",
+    "message_id": 411,
+    "cached_at": 1789106515.3497963
+  },
+  "df5e75ba13a90dc8": {
+    "title": "Rethinking Handwritten Character Recognition",
+    "link": "https://arxiv.org/abs/2609.10572",
+    "source": "arXiv cs.CV",
+    "message_id": 412,
+    "cached_at": 1789106518.6996503
+  },
+  "805135c2e55e2546": {
+    "title": "A Three-Layer Caching Architecture for Low-Latency LLM Web Search on Commodity CPU Hardware",
+    "link": "https://arxiv.org/abs/2609.05463",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 413,
+    "cached_at": 1789106521.4165077
+  },
+  "aa8533b1c5b411fc": {
+    "title": "ToolGrad: Efficient tool-use dataset generation with textual \"gradients\"",
+    "link": "https://research.google/blog/toolgrad-efficient-tool-use-dataset-generation-with-textual-gradients/",
+    "source": "Google Research Blog",
+    "message_id": 414,
+    "cached_at": 1789106523.9384563
+  },
+  "931dcbb571fe67a5": {
+    "title": "Reduce LLM latency with prefix-aware routing on Amazon SageMaker Inference",
+    "link": "https://aws.amazon.com/blogs/machine-learning/reduce-llm-latency-with-prefix-aware-routing-on-amazon-sagemaker-inference/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 415,
+    "cached_at": 1789106527.262441
+  },
+  "c6176498419dd5f9": {
+    "title": "Unifying governance across engines and catalogs in the Open Lakehouse",
+    "link": "https://www.databricks.com/blog/unifying-governance-across-engines-and-catalogs-open-lakehouse",
+    "source": "Databricks Blog",
+    "message_id": 416,
+    "cached_at": 1789106529.6354573
+  },
+  "e646e5eba5aa90b1": {
+    "title": "Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization",
+    "link": "https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/",
+    "source": "Engineering at Meta",
+    "message_id": 417,
+    "cached_at": 1789106532.7347271
   }
 }
