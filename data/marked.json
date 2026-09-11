@@ -266,5 +266,18 @@
     "status": "published",
     "slug": "world-time-compute-lifting-ai-generalization-with-verified-code-world-models",
     "published_at": 1789063273.813239
+  },
+  "6a886414536a09e3:463": {
+    "title": "Now everyone can put data to work",
+    "link": "https://openai.com/index/put-data-to-work",
+    "source": "OpenAI News",
+    "message_id": 388,
+    "cached_at": 1789064435.1335623,
+    "instructions": "Maak een post en focus op enterprise use cases en wat het unieke is aan deze offering.",
+    "kind": "article",
+    "marked_at": 1789149651.7269163,
+    "status": "published",
+    "slug": "empowering-enterprises-with-chatgpt-s-new-data-agent",
+    "published_at": 1789149670.3077805
   }
 }

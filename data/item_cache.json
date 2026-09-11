@@ -2873,5 +2873,110 @@
     "source": "NVIDIA Technical Blog",
     "message_id": 462,
     "cached_at": 1789136436.5339026
+  },
+  "46fcf5bb7b99520f": {
+    "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+    "link": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+    "source": "OpenAI News",
+    "message_id": 465,
+    "cached_at": 1789149697.929145
+  },
+  "a747e45677404a77": {
+    "title": "Quoting Boris Cherny",
+    "link": "https://simonwillison.net/2026/Sep/11/boris-cherny/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 466,
+    "cached_at": 1789149700.4584758
+  },
+  "9c4a1d9709f16325": {
+    "title": "Nscale adds former OpenAI exec Fidji Simo to its board ahead of potential IPO",
+    "link": "https://techcrunch.com/2026/09/11/nscale-adds-former-openai-exec-fidji-simo-to-its-board-ahead-of-potential-ipo/",
+    "source": "TechCrunch AI",
+    "message_id": 467,
+    "cached_at": 1789149704.3036275
+  },
+  "2b7ce783279987fe": {
+    "title": "One of AI’s Fiercest Critics Says All the Doom Talk Is ‘Meant to Distract Us’",
+    "link": "https://www.wired.com/story/one-of-ais-fiercest-critics-says-all-the-doom-talk-is-meant-to-distract-us/",
+    "source": "Wired AI",
+    "message_id": 468,
+    "cached_at": 1789149707.2988985
+  },
+  "2655175d61526e22": {
+    "title": "NVIDIA Details BioNeMo Inference Runtime (BioIR): 2.90x Higher Boltz-2 Folding Throughput and 58.5K Residues per GPU-Hour on 8xH100",
+    "link": "https://www.marktechpost.com/2026/09/10/nvidia-details-bionemo-inference-runtime-bioir-2-90x-higher-boltz-2-folding-throughput-and-58-5k-residues-per-gpu-hour-on-8xh100/",
+    "source": "MarkTechPost",
+    "message_id": 469,
+    "cached_at": 1789149710.7269497
+  },
+  "cfd17545a26a16eb": {
+    "title": "Anthropic spent this week in hot water over cybersecurity",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity",
+    "source": "The Verge AI",
+    "message_id": 470,
+    "cached_at": 1789149713.9114335
+  },
+  "dfff7642361ed962": {
+    "title": "Multilingual in Name Only? Cultural and Linguistic Weaknesses of LLMs in Urdu",
+    "link": "https://arxiv.org/abs/2609.10758",
+    "source": "arXiv cs.CL",
+    "message_id": 471,
+    "cached_at": 1789149718.8535852
+  },
+  "f71672728afc443b": {
+    "title": "Artificial Intelligence Algorithms for the Detection of Pathologies Related to Lung Cancer through Image Analysis using Convolutional Neural Networks and Data Augmentation: a systematic mapping of the literature",
+    "link": "https://arxiv.org/abs/2609.10652",
+    "source": "arXiv cs.LG",
+    "message_id": 472,
+    "cached_at": 1789149721.760503
+  },
+  "1c8e658b0950ec2c": {
+    "title": "GRADE: Single-Frame Generative Radar Depth Estimation Under Visual Degradation",
+    "link": "https://arxiv.org/abs/2609.10756",
+    "source": "arXiv cs.CV",
+    "message_id": 473,
+    "cached_at": 1789149724.6677938
+  },
+  "ebd561b3ebfadbb3": {
+    "title": "From Reweighting to Rewriting: Unlocking the Intervention Effects of Influential Samples in Training Data Attribution",
+    "link": "https://arxiv.org/abs/2609.02771",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 474,
+    "cached_at": 1789149727.7623243
+  },
+  "82a8a2c3abaffb1c": {
+    "title": "Putting Captions to the Test: Evaluating Video Caption Quality through Multiple-Choice Question Answering",
+    "link": "https://machinelearning.apple.com/research/video-caption-quality",
+    "source": "Apple Machine Learning Research",
+    "message_id": 475,
+    "cached_at": 1789149730.898104
+  },
+  "b7baabb0bb4c870e": {
+    "title": "Model-agnostic PII detection with LLMs",
+    "link": "https://aws.amazon.com/blogs/machine-learning/model-agnostic-pii-detection-with-llms/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 476,
+    "cached_at": 1789149735.0970616
+  },
+  "3bfcc9ef73e9cf9d": {
+    "title": "Evaluation-First AI Agents: How Zepto Scales Customer Support on Databricks and MLflow",
+    "link": "https://www.databricks.com/blog/evaluation-first-ai-agents-how-zepto-scales-customer-support-databricks-and-mlflow",
+    "source": "Databricks Blog",
+    "message_id": 477,
+    "cached_at": 1789149738.1314292
+  },
+  "41aa45582bb68e10": {
+    "title": "From Wafer-Out to First Token: Codifying Supply Chain Expertise with Nemotron and Palantir Foundry",
+    "link": "https://developer.nvidia.com/blog/from-wafer-out-to-first-token-codifying-supply-chain-expertise-with-nemotron-and-palantir-foundry/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 478,
+    "cached_at": 1789149741.510044
+  },
+  "823109c0e7b7a244": {
+    "title": "Introducing IBM and NASA's new foundation model for the Moon",
+    "link": "https://research.ibm.com/blog/nasa-ibm-lunar-foundation-model?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 479,
+    "cached_at": 1789149744.6965117
   }
 }
