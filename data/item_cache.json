@@ -2768,5 +2768,110 @@
     "source": "Hugging Face Daily Papers",
     "message_id": 447,
     "cached_at": 1789135341.636172
+  },
+  "b32e9b8471353987": {
+    "title": "Introducing the Agents API",
+    "link": "https://openai.com/index/introducing-the-agents-api",
+    "source": "OpenAI News",
+    "message_id": 448,
+    "cached_at": 1789136393.577328
+  },
+  "f498dec7f81a4f85": {
+    "title": "Native is now the future of mobile at Shopify",
+    "link": "https://simonwillison.net/2026/Sep/10/shopify-react-native/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 449,
+    "cached_at": 1789136396.4885232
+  },
+  "427bf5f540140399": {
+    "title": "Anthropic details distillation campaigns from Alibaba, Moonshot AI, and DeepSeek",
+    "link": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
+    "source": "TechCrunch AI",
+    "message_id": 450,
+    "cached_at": 1789136399.6540885
+  },
+  "a361a227f56be176": {
+    "title": "Google Research Releases ToolGrad: Answer-First Framework Hits 99.8% Pass Rate for Tool-Use Data Generation",
+    "link": "https://www.marktechpost.com/2026/09/10/google-research-releases-toolgrad-answer-first-framework-hits-99-8-pass-rate-for-tool-use-data-generation/",
+    "source": "MarkTechPost",
+    "message_id": 451,
+    "cached_at": 1789136403.7932682
+  },
+  "018e84b05c7c2ab7": {
+    "title": "From Spaghetti Code to Clean Python: A Beginner’s Guide",
+    "link": "https://www.kdnuggets.com/from-spaghetti-code-to-clean-python-a-beginners-guide",
+    "source": "KDnuggets",
+    "message_id": 452,
+    "cached_at": 1789136406.7632422
+  },
+  "11e76098de529acf": {
+    "title": "Apple’s new iPhone camera mode promises to prove your photo isn’t AI",
+    "link": "https://www.theverge.com/tech/992766/apple-iphone-18-pro-reference-image",
+    "source": "The Verge AI",
+    "message_id": 453,
+    "cached_at": 1789136409.3910203
+  },
+  "71ff61c562ccf6df": {
+    "title": "Do Agents Know When They Succeed? Calibrating Agent Confidence from Internal Representations",
+    "link": "https://arxiv.org/abs/2609.09448",
+    "source": "arXiv cs.AI",
+    "message_id": 454,
+    "cached_at": 1789136412.802864
+  },
+  "2fd21836c096d266": {
+    "title": "Think Before You Link: Rarity, Reasoning, and Retrieval in Multilingual Entity Linking",
+    "link": "https://arxiv.org/abs/2609.10745",
+    "source": "arXiv cs.CL",
+    "message_id": 455,
+    "cached_at": 1789136415.6944137
+  },
+  "d51d1f12c64f4abb": {
+    "title": "Byzantine-Robust Federated Fire Detection with a Rotating Coordinator",
+    "link": "https://arxiv.org/abs/2609.10647",
+    "source": "arXiv cs.LG",
+    "message_id": 456,
+    "cached_at": 1789136418.5670424
+  },
+  "cc424b0cb3d421e4": {
+    "title": "Meta-Learning for Data-Efficient Plant Growth Estimation via Vision Transformers and Fuzzy Clustering",
+    "link": "https://arxiv.org/abs/2609.10749",
+    "source": "arXiv cs.CV",
+    "message_id": 457,
+    "cached_at": 1789136421.4960113
+  },
+  "e7b4413910578575": {
+    "title": "Puppeteer: Object-Grounded Posture-Aware Co-Speech Gesture Generation",
+    "link": "https://arxiv.org/abs/2609.00369",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 458,
+    "cached_at": 1789136424.1464682
+  },
+  "e80390a2f8601134": {
+    "title": "DiscoSign: Discourse-Aware Text to Sign Language Gloss Translation",
+    "link": "https://machinelearning.apple.com/research/discosign-gloss-translation",
+    "source": "Apple Machine Learning Research",
+    "message_id": 459,
+    "cached_at": 1789136426.9386456
+  },
+  "1e95adaed1b13ccd": {
+    "title": "Video and image search in Amazon Bedrock Knowledge Base using Marengo 3.0",
+    "link": "https://aws.amazon.com/blogs/machine-learning/video-and-image-search-in-amazon-bedrock-knowledge-base-using-marengo-3-0/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 460,
+    "cached_at": 1789136429.5323138
+  },
+  "d836e8160b409bd1": {
+    "title": "Introducing Consort: Test-driven development on a branching database",
+    "link": "https://www.databricks.com/blog/introducing-consort-test-driven-development-branching-database",
+    "source": "Databricks Blog",
+    "message_id": 461,
+    "cached_at": 1789136431.943656
+  },
+  "e7c3a6c0afb93754": {
+    "title": "High-Throughput Structure Prediction with BioNeMo Inference Runtime",
+    "link": "https://developer.nvidia.com/blog/high-throughput-structure-prediction-with-bionemo-inference-runtime/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 462,
+    "cached_at": 1789136436.5339026
   }
 }
