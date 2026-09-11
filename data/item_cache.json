@@ -2558,5 +2558,110 @@
     "source": "Engineering at Meta",
     "message_id": 417,
     "cached_at": 1789106532.7347271
+  },
+  "3802aa15c4b6ae22": {
+    "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+    "link": "https://openai.com/index/expanding-ai-access-us-government",
+    "source": "OpenAI News",
+    "message_id": 418,
+    "cached_at": 1789120878.034599
+  },
+  "a2c293f2ef6d41e4": {
+    "title": "Any Nix package, live in your browser",
+    "link": "https://simonwillison.net/2026/Sep/10/trynix/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 419,
+    "cached_at": 1789120884.2474725
+  },
+  "be366ad97d8c69ce": {
+    "title": "Mark Wahlberg is coming to TechCrunch Disrupt 2026, and he wants to talk about your work, not his",
+    "link": "https://techcrunch.com/2026/09/10/mark-wahlberg-is-coming-to-techcrunch-disrupt-2026/",
+    "source": "TechCrunch AI",
+    "message_id": 420,
+    "cached_at": 1789120886.7599518
+  },
+  "94f575146dd860fc": {
+    "title": "Why So Many AI Researchers Think the Machines Could Kill Everyone",
+    "link": "https://www.wired.com/story/why-so-many-ai-researchers-think-the-machines-could-kill-everyone/",
+    "source": "Wired AI",
+    "message_id": 421,
+    "cached_at": 1789120889.6569216
+  },
+  "6e6a5aeb4e4fb1bd": {
+    "title": "Cohere Releases North Small Translate: A 218B MoE Translation Model That Scores 83.6 on WMT26 Across 50 Languages",
+    "link": "https://www.marktechpost.com/2026/09/10/cohere-releases-north-small-translate-a-218b-moe-translation-model-that-scores-83-6-on-wmt26-across-50-languages/",
+    "source": "MarkTechPost",
+    "message_id": 422,
+    "cached_at": 1789120892.8378508
+  },
+  "1c419712aca5a9aa": {
+    "title": "Schools are catching on to Big Tech’s playbook",
+    "link": "https://www.theverge.com/policy/993308/computer-science-ai-education-coding-kids",
+    "source": "The Verge AI",
+    "message_id": 423,
+    "cached_at": 1789120895.8462684
+  },
+  "55f32bfcff6cf261": {
+    "title": "Valerant: An Automatic Navigable Game Map Generator via Action-Conditioned World Model Exploration",
+    "link": "https://arxiv.org/abs/2609.09418",
+    "source": "arXiv cs.AI",
+    "message_id": 424,
+    "cached_at": 1789120898.6494534
+  },
+  "e33a4abd6b18bde2": {
+    "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
+    "link": "https://arxiv.org/abs/2609.10715",
+    "source": "arXiv cs.CL",
+    "message_id": 425,
+    "cached_at": 1789120901.6014013
+  },
+  "a09268a942ac10a5": {
+    "title": "Halo: Improving forecast accuracy through heteroscedastic estimation",
+    "link": "https://arxiv.org/abs/2609.10589",
+    "source": "arXiv cs.LG",
+    "message_id": 426,
+    "cached_at": 1789120905.6577485
+  },
+  "ddc5ec605ab829f9": {
+    "title": "AcFlow: Controlling Text-to-Image Diffusion Transformers via Learned Conditional Activation Flow",
+    "link": "https://arxiv.org/abs/2609.10723",
+    "source": "arXiv cs.CV",
+    "message_id": 427,
+    "cached_at": 1789120909.2178218
+  },
+  "1feecdd1338f16c9": {
+    "title": "Scaling Automatic Research Agents via World Models",
+    "link": "https://arxiv.org/abs/2608.12564",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 428,
+    "cached_at": 1789120913.2548175
+  },
+  "8d418e0739939442": {
+    "title": "Reduce inference cold starts on Amazon SageMaker HyperPod with model caching",
+    "link": "https://aws.amazon.com/blogs/machine-learning/reduce-inference-cold-starts-on-amazon-sagemaker-hyperpod-with-model-caching/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 429,
+    "cached_at": 1789120915.7945104
+  },
+  "16d664462b4239a8": {
+    "title": "Beyond embedding: How to secure AI/BI Dashboards for every viewer",
+    "link": "https://www.databricks.com/blog/beyond-embedding-how-secure-aibi-dashboards-every-viewer",
+    "source": "Databricks Blog",
+    "message_id": 430,
+    "cached_at": 1789120918.8425055
+  },
+  "3254cf0d8d0d66b6": {
+    "title": "Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler",
+    "link": "https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/",
+    "source": "Engineering at Meta",
+    "message_id": 431,
+    "cached_at": 1789120922.0439475
+  },
+  "b8d6021112d2ddad": {
+    "title": "How Full-Stack NIM Optimizations Deliver 2.5x More Users on Nemotron 3 Ultra",
+    "link": "https://developer.nvidia.com/blog/how-full-stack-nim-optimizations-deliver-2-5x-more-users-on-nemotron-3-ultra/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 432,
+    "cached_at": 1789120925.8987076
   }
 }
