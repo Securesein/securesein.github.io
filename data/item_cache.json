@@ -2663,5 +2663,110 @@
     "source": "NVIDIA Technical Blog",
     "message_id": 432,
     "cached_at": 1789120925.8987076
+  },
+  "9e326dd212d4f380": {
+    "title": "Worldmodeldata and Mila partner to prove scaling law for world models",
+    "link": "https://mila.quebec/en/news/worldmodeldata-and-mila-partner-to-prove-scaling-law-for-world-models",
+    "source": "Mila News",
+    "message_id": 433,
+    "cached_at": 1789135301.0294867
+  },
+  "c1f1d703bfd392ae": {
+    "title": "Gemini Omni 1.1 🎬, Cohere Parse 📄, Codex persistent mode 👨‍💻",
+    "link": "https://tldr.tech/ai/2026-08-28",
+    "source": "TLDR AI",
+    "message_id": 434,
+    "cached_at": 1789135304.1713881
+  },
+  "b8a75fb67d817922": {
+    "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
+    "link": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+    "source": "OpenAI News",
+    "message_id": 435,
+    "cached_at": 1789135307.2724462
+  },
+  "3e146149ec29d0e1": {
+    "title": "Don't sleep on wrapture",
+    "link": "https://simonwillison.net/2026/Sep/11/wrapture/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 436,
+    "cached_at": 1789135309.7800958
+  },
+  "462bb003fcf9c87e": {
+    "title": "OpenAI puts Pro subscriptions on hold due to Astra demand",
+    "link": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/",
+    "source": "TechCrunch AI",
+    "message_id": 437,
+    "cached_at": 1789135312.7144191
+  },
+  "7fb99bcd92e8855b": {
+    "title": "Is AI Actually Going to Kill Us All?",
+    "link": "https://www.wired.com/story/uncanny-valley-podcast-is-ai-actually-going-to-kill-us-all/",
+    "source": "Wired AI",
+    "message_id": 438,
+    "cached_at": 1789135315.4667726
+  },
+  "ca7ffaf549f57db0": {
+    "title": "Palantir Foundry and cuOpt drive NVIDIA supply chain allocation",
+    "link": "https://www.artificialintelligence-news.com/news/palantir-foundry-cuopt-nvidia-supply-chain-allocation/",
+    "source": "AI News",
+    "message_id": 439,
+    "cached_at": 1789135318.520891
+  },
+  "3a60194e3914f519": {
+    "title": "Sakana AI Launches Fugu Max and Fugu Ultra v2 for Cheaper, Stronger Multi-Agent Orchestration",
+    "link": "https://www.marktechpost.com/2026/09/10/sakana-ai-launches-fugu-max-and-fugu-ultra-v2-for-cheaper-stronger-multi-agent-orchestration/",
+    "source": "MarkTechPost",
+    "message_id": 440,
+    "cached_at": 1789135321.7630446
+  },
+  "17099fb630856875": {
+    "title": "5 Python Techniques for Efficient Resource Orchestration",
+    "link": "https://www.kdnuggets.com/5-python-techniques-for-efficient-resource-orchestration",
+    "source": "KDnuggets",
+    "message_id": 441,
+    "cached_at": 1789135324.5064204
+  },
+  "d1f49bd18c06ee8c": {
+    "title": "Mathematicians want proof OpenAI didn’t use their work",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/993263/where-does-openai-get-mathematics-training-data",
+    "source": "The Verge AI",
+    "message_id": 442,
+    "cached_at": 1789135327.4013176
+  },
+  "500308e66e26f505": {
+    "title": "XAI-Arena: Can LLMs Assess the Quality of XAI Explanations?",
+    "link": "https://arxiv.org/abs/2609.09428",
+    "source": "arXiv cs.AI",
+    "message_id": 443,
+    "cached_at": 1789135330.5326042
+  },
+  "8460aa9aac5a3b7c": {
+    "title": "CMNIE: An Information Extraction Benchmark for Chinese Military News",
+    "link": "https://arxiv.org/abs/2609.10722",
+    "source": "arXiv cs.CL",
+    "message_id": 444,
+    "cached_at": 1789135333.0939677
+  },
+  "124676ae0a560f0a": {
+    "title": "Zero-shot rib design: merging training-free generative prior with topology optimization",
+    "link": "https://arxiv.org/abs/2609.10643",
+    "source": "arXiv cs.LG",
+    "message_id": 445,
+    "cached_at": 1789135335.8357832
+  },
+  "1b27b843e5f76740": {
+    "title": "MHE-Former: Multi-Hypothesis Transformers via Entropy Maximization for 3D Mesh Recovery",
+    "link": "https://arxiv.org/abs/2609.10743",
+    "source": "arXiv cs.CV",
+    "message_id": 446,
+    "cached_at": 1789135338.85279
+  },
+  "bdac1e4bda2f0ad4": {
+    "title": "AgenticGen: Reward-Guided Agentic Video Generation for Advertising",
+    "link": "https://arxiv.org/abs/2609.09187",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 447,
+    "cached_at": 1789135341.636172
   }
 }
