@@ -2978,5 +2978,110 @@
     "source": "IBM Research",
     "message_id": 479,
     "cached_at": 1789149744.6965117
+  },
+  "827d855fbddb5cbb": {
+    "title": "Quoting huggingface.co/security.txt",
+    "link": "https://simonwillison.net/2026/Sep/11/hugging-face-security/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 480,
+    "cached_at": 1789151050.4531012
+  },
+  "e9d10338789f41f0": {
+    "title": "Meta’s AI agent Muse is now the No. 2 app in the US",
+    "link": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
+    "source": "TechCrunch AI",
+    "message_id": 481,
+    "cached_at": 1789151053.1253796
+  },
+  "a2b21ad2a063aa66": {
+    "title": "Analyzing Traditional and Neural Approaches to Multilingual Readability Assessment",
+    "link": "https://arxiv.org/abs/2609.10792",
+    "source": "arXiv cs.CL",
+    "message_id": 482,
+    "cached_at": 1789151055.6963718
+  },
+  "866a42c00904c11d": {
+    "title": "GEOSTEER: Geodesic Optimization for Activation Steering in Large Language Models",
+    "link": "https://arxiv.org/abs/2609.10658",
+    "source": "arXiv cs.LG",
+    "message_id": 483,
+    "cached_at": 1789151058.7782476
+  },
+  "ceb8a1bee75ca53a": {
+    "title": "Shedding Light: A Benchmark for Evaluating Lighting Understanding in Generative Image Models",
+    "link": "https://arxiv.org/abs/2609.10787",
+    "source": "arXiv cs.CV",
+    "message_id": 484,
+    "cached_at": 1789151061.2906878
+  },
+  "677e0e950675cd1f": {
+    "title": "WearableQA: A Benchmark for Health Reasoning over Real-World Wearable Data",
+    "link": "https://arxiv.org/abs/2609.05405",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 485,
+    "cached_at": 1789151063.7306235
+  },
+  "72ce098e0b16c346": {
+    "title": "SimpleDesign: A Joint Model for Protein Sequence and Structure Codesign",
+    "link": "https://machinelearning.apple.com/research/simpledesign-protein-codesign",
+    "source": "Apple Machine Learning Research",
+    "message_id": 486,
+    "cached_at": 1789151066.5609825
+  },
+  "9a4cf2cb48da806f": {
+    "title": "Agent Evaluation Metric for multi-turn conversations",
+    "link": "https://aws.amazon.com/blogs/machine-learning/agent-evaluation-metric-for-multi-turn-conversations/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 487,
+    "cached_at": 1789151069.4186199
+  },
+  "7599a171e4cbaa65": {
+    "title": "SQL Data Types: Reference and Best Practices",
+    "link": "https://www.databricks.com/blog/sql-data-types",
+    "source": "Databricks Blog",
+    "message_id": 488,
+    "cached_at": 1789151071.9827065
+  },
+  "93db95fb6cd1a35d": {
+    "title": "When to Use Encode-Prefill-Decode Disaggregation to Accelerate Multimodal Model Serving",
+    "link": "https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 489,
+    "cached_at": 1789151075.7846198
+  },
+  "82dc9af1f2562444": {
+    "title": "Switzerland's first IBM Quantum System Two",
+    "link": "https://research.ibm.com/blog/swiss-innovation-hub?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 490,
+    "cached_at": 1789151079.3757317
+  },
+  "2d0dbb5662da80a4": {
+    "title": "Lifesaving Lincoln Laboratory device wins 2026 Excellence in Technology Transfer Award",
+    "link": "https://news.mit.edu/2026/lifesaving-lincoln-laboratory-technology-wins-tech-transfer-award-0911",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 491,
+    "cached_at": 1789151081.930262
+  },
+  "262694a7dca9440f": {
+    "title": "A Library for Learning Neural Operators",
+    "link": "http://jmlr.org/papers/v27/26-0434.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 492,
+    "cached_at": 1789151084.6805167
+  },
+  "9e8570698d4056f5": {
+    "title": "What We Learned Trying to Catch AI Liars: An Aletheia's Quest Retrospective",
+    "link": "https://blog.eleuther.ai/aletheia-retrospective/",
+    "source": "EleutherAI Blog",
+    "message_id": 493,
+    "cached_at": 1789151087.728044
+  },
+  "4ef1fa7cd0579165": {
+    "title": "GPT-6 Astra, Looped Transformers, and Hidden Reasoning",
+    "link": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 494,
+    "cached_at": 1789151090.4329698
   }
 }
