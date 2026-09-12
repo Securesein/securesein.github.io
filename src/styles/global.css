@@ -1,53 +1,78 @@
-:root {
-  --accent-from: #8b5cf6;
-  --accent-to: #22d3ee;
-  --gradient: linear-gradient(100deg, var(--accent-from), var(--accent-to));
+/* ---------------------------------------------------------------------
+   Instrument panel.
 
+   Cool, quiet, high-signal — a surface you read measurements off, not a
+   magazine. One accent, used sparingly. The three lanes are told apart
+   structurally (a left rule, type size, whitespace), never by giving
+   each one its own hue: three colours get noisy fast and break in dark
+   mode, whereas structure survives both.
+
+   Two typefaces, clearly distinct. Inter carries UI, metadata and the
+   News rows; Source Serif carries long-form body text in Fundamentals
+   and Deep dives. The typographic change alone tells a reader which
+   mode they are in before they read a word.
+--------------------------------------------------------------------- */
+
+:root {
   --content-width: 46rem;
-  --wide-width: 64rem;
-  --radius: 12px;
-  --radius-sm: 8px;
+  --wide-width: 68rem;
+  --radius: 10px;
+  --radius-sm: 6px;
 
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif;
+  --font-serif: "Source Serif 4", Charter, "Iowan Old Style", Georgia,
+    "Times New Roman", serif;
   --font-mono: "SF Mono", ui-monospace, "JetBrains Mono", "Fira Code", Menlo,
     Consolas, monospace;
 
-  /* Semantic aliases used by the new listing components. The palette
-     these resolve to is replaced wholesale in the design pass; the
-     names are what the components depend on. */
-  --rule: var(--border);
-  --surface: var(--bg-pill);
-  --signal: var(--accent-from);
-}
-
-:root,
-[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #0a0a0c;
-  --bg-elevated: #131318;
-  --bg-pill: rgba(255, 255, 255, 0.04);
-  --text: #ededf2;
-  --text-muted: #9a9aa8;
-  --border: #23232e;
-  --border-strong: #30303d;
-  --link: #c4b5fd;
-  --grid-line: rgba(255, 255, 255, 0.035);
-  --glow: rgba(139, 92, 246, 0.18);
-}
-
-[data-theme="light"] {
+  /* Light is the base palette; every token is defined here, so no
+     colour has its only definition inside a media query. */
   color-scheme: light;
-  --bg: #fbfbfd;
-  --bg-elevated: #ffffff;
-  --bg-pill: rgba(0, 0, 0, 0.03);
-  --text: #15151a;
-  --text-muted: #5b5b6b;
-  --border: #e8e8ef;
-  --border-strong: #d6d6e0;
-  --link: #6d28d9;
-  --grid-line: rgba(0, 0, 0, 0.035);
-  --glow: rgba(139, 92, 246, 0.1);
+  --ink: #14181d;      /* near-black, slightly cool */
+  --paper: #fbfbf9;    /* off-white with a trace of warmth */
+  --rule: #d8dce0;     /* hairlines and dividers */
+  --muted: #5c6670;    /* secondary text, dates, meta */
+  --signal: #1f5c4a;   /* the single accent — deep green, used sparingly */
+  --surface: #f1f3f4;  /* subtle fills: provenance box, chips */
+  --raised: #ffffff;   /* cards that need to sit above the page */
+
+  /* Names the components speak. Kept as a thin layer over the palette
+     above so a future repaint is one block, not a find-and-replace. */
+  --bg: var(--paper);
+  --bg-elevated: var(--raised);
+  --bg-pill: var(--surface);
+  --text: var(--ink);
+  --text-muted: var(--muted);
+  --border: var(--rule);
+  --border-strong: color-mix(in srgb, var(--rule) 70%, var(--muted));
+  --link: var(--signal);
+}
+
+/* Dark: same roles, re-measured. The accent lifts because a deep green
+   cannot carry AA contrast against a dark ground. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ink: #e6e9ec;
+    --paper: #0f1215;
+    --rule: #262b31;
+    --muted: #8c959e;
+    --signal: #5fbf9f;
+    --surface: #171b1f;
+    --raised: #161a1e;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #e6e9ec;
+  --paper: #0f1215;
+  --rule: #262b31;
+  --muted: #8c959e;
+  --signal: #5fbf9f;
+  --surface: #171b1f;
+  --raised: #161a1e;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -56,6 +81,40 @@
 /* Rows the client-side topic filter hides are toggled via the `hidden`
    property; a grid/flex display would otherwise win over it. */
 [hidden] { display: none !important; }
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+img { max-width: 100%; height: auto; display: block; }
+code, pre { font-family: var(--font-mono); }
+
+/* Every interactive element has a visible ring, including the topic
+   chips, which are the main way of moving sideways through the site. */
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
 
 .skip-link {
   position: absolute;
@@ -72,73 +131,29 @@
 .skip-link:focus { top: 1rem; text-decoration: none; }
 main:focus { outline: none; }
 
-html {
-  font-family: var(--font-sans);
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-size: 1.05rem;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-h1, h2, h3, h4 {
-  line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-a { color: var(--link); text-decoration: none; }
-a:hover { text-decoration: underline; text-underline-offset: 3px; }
-
-img { max-width: 100%; height: auto; display: block; }
-code, pre { font-family: var(--font-mono); }
-
-:focus-visible {
-  outline: 2px solid var(--accent-from);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
 .container {
   width: 100%;
   max-width: var(--content-width);
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: 1.25rem;
 }
 .container--wide { max-width: var(--wide-width); }
-
-.gradient-text {
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.7rem 1.3rem;
+  padding: 0.6rem 1.1rem;
   border-radius: var(--radius-sm);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: transform 0.15s ease, border-color 0.2s ease;
 }
-.btn:hover { text-decoration: none; transform: translateY(-1px); }
-.btn--primary {
-  background: var(--gradient);
-  color: #0a0a0c;
-  box-shadow: 0 8px 24px -8px var(--accent-from);
-}
+.btn:hover { text-decoration: none; }
+.btn--primary { background: var(--signal); color: var(--paper); }
+.btn--primary:hover { background: color-mix(in srgb, var(--signal) 85%, var(--ink)); }
 .btn--ghost {
   background: transparent;
   color: var(--text);
@@ -148,24 +163,41 @@ code, pre { font-family: var(--font-mono); }
 
 .pill {
   display: inline-block;
-  padding: 0.3rem 0.7rem;
-  border: 1px solid var(--border-strong);
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--rule);
   border-radius: 999px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  background: var(--surface);
+  font-size: 0.78rem;
+  font-weight: 500;
   color: var(--text-muted);
 }
 
-.prose { font-size: 1.1rem; }
-.prose > * + * { margin-top: 1.4rem; }
-.prose h2 { font-size: 1.6rem; margin-top: 2.6rem; }
-.prose h3 { font-size: 1.3rem; margin-top: 2rem; }
+/* ----- long-form body text -------------------------------------- */
+
+.prose {
+  font-size: 1.03rem;
+  line-height: 1.65;
+  max-width: 72ch;
+}
+/* Fundamentals and Deep dives switch to the reading serif, with more
+   line-height than the sans gets and a measure kept under 75
+   characters. News keeps the sans — it is a feed, not an essay. */
+body.reading .prose {
+  font-family: var(--font-serif);
+  font-size: 1.14rem;
+  line-height: 1.75;
+  max-width: 68ch;
+}
+body.reading .prose h2,
+body.reading .prose h3 { font-family: var(--font-sans); }
+
+.prose > * + * { margin-top: 1.35rem; }
+.prose h2 { font-size: 1.5rem; margin-top: 2.8rem; }
+.prose h3 { font-size: 1.2rem; margin-top: 2rem; }
 .prose ul, .prose ol { padding-left: 1.3rem; }
 .prose li + li { margin-top: 0.4rem; }
 .prose img {
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   border: 1px solid var(--border);
 }
 /* Markdown convention for a caption: an italic line right after an
@@ -174,7 +206,8 @@ code, pre { font-family: var(--font-mono); }
 .prose p:has(> img) + p:has(> em:only-child) {
   margin-top: 0.5rem;
   text-align: center;
-  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
 .prose hr {
@@ -185,54 +218,55 @@ code, pre { font-family: var(--font-mono); }
 .prose table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
   /* Tables get wide (esp. with 3+ columns) — scroll the table itself
      rather than letting it overflow the page on narrow screens. */
   display: block;
   overflow-x: auto;
 }
 .prose th, .prose td {
-  padding: 0.65rem 1rem;
+  padding: 0.6rem 0.9rem;
   border: 1px solid var(--border);
   text-align: left;
   vertical-align: top;
 }
 .prose th {
-  background: var(--bg-elevated);
+  background: var(--surface);
   color: var(--text);
   font-weight: 700;
   white-space: nowrap;
 }
-.prose tbody tr:nth-child(even) td {
-  background: var(--bg-pill);
-}
+.prose tbody tr:nth-child(even) td { background: var(--surface); }
 .prose blockquote {
-  border-left: 3px solid var(--accent-from);
+  border-left: 2px solid var(--signal);
   padding-left: 1.2rem;
   color: var(--text-muted);
-  font-style: italic;
 }
 .prose code {
-  background: var(--bg-pill);
+  background: var(--surface);
   border: 1px solid var(--border);
-  padding: 0.15em 0.4em;
-  border-radius: 6px;
-  font-size: 0.9em;
+  padding: 0.12em 0.35em;
+  border-radius: 4px;
+  font-size: 0.88em;
 }
 .prose pre {
-  background: var(--bg-elevated);
+  background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.1rem 1.3rem;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.2rem;
   overflow-x: auto;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
 }
 .prose pre code { background: none; border: none; padding: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  html { scroll-behavior: auto; }
 }

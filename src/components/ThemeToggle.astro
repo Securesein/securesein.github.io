@@ -21,25 +21,39 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 999px;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
     border: 1px solid var(--border-strong);
     background: transparent;
     color: var(--text-muted);
     cursor: pointer;
-    transition: color 0.2s ease, border-color 0.2s ease;
   }
   .theme-toggle:hover { color: var(--text); border-color: var(--text-muted); }
-  .icon { width: 20px; height: 20px; }
-  :global([data-theme="dark"]) .icon-sun,
-  :global([data-theme="light"]) .icon-moon { display: none; }
+  .icon { width: 18px; height: 18px; }
+
+  /* The root carries no data-theme until the reader picks one, so the
+     un-stamped case has to be handled by the media query as well —
+     otherwise both icons show before any choice is made. */
+  .icon-sun { display: none; }
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme="light"])) .icon-moon { display: none; }
+    :global(:root:not([data-theme="light"])) .icon-sun { display: block; }
+  }
+  :global(:root[data-theme="dark"]) .icon-moon { display: none; }
+  :global(:root[data-theme="dark"]) .icon-sun { display: block; }
+  :global(:root[data-theme="light"]) .icon-moon { display: block; }
+  :global(:root[data-theme="light"]) .icon-sun { display: none; }
 </style>
 
 <script>
   const toggle = document.getElementById("theme-toggle");
   toggle?.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme");
+    // With no explicit choice yet, "current" is whatever the OS says.
+    const stamped = document.documentElement.getAttribute("data-theme");
+    const current =
+      stamped ??
+      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     const next = current === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
     try {

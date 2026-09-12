@@ -1,71 +1,178 @@
 ---
-import { getCollection } from "astro:content";
+// The homepage's job is to teach the three-lane model in about four
+// seconds. It does that by contrast, not explanation: one deep dive
+// rendered large next to a dense column of news rows says everything a
+// paragraph would have said about the difference in weight.
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PostCard from "../components/PostCard.astro";
-import { SITE } from "../consts";
+import NewsRow from "../components/NewsRow.astro";
+import { SITE, SECTIONS } from "../consts";
+import { postsOfKind, threadsWithPosts } from "../posts";
 
-const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-const latest = posts[0];
-const recent = posts.slice(0, 5);
+const [news, explainers, dives, threads] = await Promise.all([
+  postsOfKind("news"),
+  postsOfKind("explainer"),
+  postsOfKind("deepdive"),
+  threadsWithPosts(),
+]);
+
+const featured = dives[0];
+const moreDives = dives.slice(1, 3);
+const latestNews = news.slice(0, 6);
+const startHere = explainers.slice(0, 4);
+const thread = threads.find(({ posts }) => posts.length > 1);
 ---
 <BaseLayout>
-  <section class="hero">
-    <div class="hero-grid" aria-hidden="true"></div>
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="container hero-content">
-      {latest && (
-        <a href={`/blog/${latest.id}/`} class="hero-badge">
-          <span class="hero-badge-dot"></span>
-          New: {latest.data.title}
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-      )}
-      <h1 class="hero-title">Notes on <span class="gradient-text">applied AI.</span></h1>
-      <p class="hero-sub">Curated by a human, drafted by an AI.</p>
-      <div class="hero-actions">
-        <a href="/news" class="btn btn--primary">Read the news</a>
-      </div>
+  <section class="intro">
+    <div class="container container--wide">
+      <h1 class="intro-title">{SITE.tagline}</h1>
+      <p class="intro-sub">{SITE.subTagline}</p>
+
+      <ul class="lanes">
+        {SECTIONS.map((section) => (
+          <li class={`lane lane--${section.kind}`}>
+            <a href={section.href} class="lane-label">{section.label}</a>
+            <span class="lane-desc">{section.description}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 
-  <section class="container recent">
-    <h2 class="recent-heading">Latest posts</h2>
-    {recent.map((post) => (
-      <PostCard post={post} />
-    ))}
-    {posts.length === 0 && <p class="empty">No posts yet.</p>}
-  </section>
+  <div class="container container--wide">
+    <div class="split">
+      <section class="split-main" aria-labelledby="featured-heading">
+        <h2 class="lane-heading" id="featured-heading">
+          <a href="/deep-dives/">Deep dives</a>
+        </h2>
+        {featured ? (
+          <PostCard post={featured} featured />
+        ) : (
+          <p class="empty">Nothing here yet.</p>
+        )}
+        {moreDives.map((post) => <PostCard post={post} compact />)}
+      </section>
+
+      <section class="split-side" aria-labelledby="scout-heading">
+        <h2 class="lane-heading" id="scout-heading">
+          <a href="/news/">Latest from Scout</a>
+        </h2>
+        <div class="side-rows">
+          {latestNews.map((post) => <NewsRow post={post} terse />)}
+        </div>
+        <p class="side-more"><a href="/news/">All news</a></p>
+      </section>
+    </div>
+
+    {startHere.length > 0 && (
+      <section class="start" aria-labelledby="start-heading">
+        <h2 class="lane-heading" id="start-heading">
+          <a href="/fundamentals/">Start here</a>
+        </h2>
+        <div class="start-grid">
+          {startHere.map((post, i) => <PostCard post={post} step={i + 1} compact />)}
+        </div>
+      </section>
+    )}
+
+    {thread && (
+      <section class="reading" aria-labelledby="reading-heading">
+        <h2 class="lane-heading" id="reading-heading">Reading now</h2>
+        <a href={`/threads/${thread.thread.id}/`} class="reading-link">
+          <span class="reading-title">{thread.thread.data.title}</span>
+          <span class="reading-count">{thread.posts.length} parts</span>
+        </a>
+        <p class="reading-blurb">{thread.thread.data.blurb}</p>
+      </section>
+    )}
+  </div>
 </BaseLayout>
 
 <style>
-  .hero { position: relative; overflow: hidden; padding-block: 6rem 4rem; text-align: center; border-bottom: 1px solid var(--border); }
-  .hero-grid {
-    position: absolute; inset: 0;
-    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-    background-size: 60px 60px;
-    mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 40%, transparent 75%);
-    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 40%, transparent 75%);
+  .intro { border-bottom: 1px solid var(--rule); padding-block: 4.5rem 2.6rem; }
+  .intro-title {
+    font-size: clamp(2rem, 5.5vw, 3.1rem);
+    letter-spacing: -0.035em;
+    max-width: 18ch;
   }
-  .hero-glow {
-    position: absolute; top: -10%; left: 50%; transform: translateX(-50%);
-    width: 600px; height: 400px;
-    background: radial-gradient(circle, var(--glow), transparent 70%);
-    pointer-events: none;
+  .intro-sub {
+    margin-top: 0.9rem;
+    color: var(--text-muted);
+    font-size: 1.05rem;
   }
-  .hero-content { position: relative; }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    padding: 0.4rem 0.9rem; border: 1px solid var(--border-strong); border-radius: 999px;
-    background: var(--bg-pill); color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.8rem;
+
+  /* One line each, and the left rules are the first sighting of the
+     marker system the cards below use. */
+  .lanes {
+    list-style: none;
+    padding: 0;
+    margin: 2.4rem 0 0;
+    display: grid;
+    gap: 1px 2rem;
   }
-  .hero-badge:hover { text-decoration: none; color: var(--text); border-color: var(--text-muted); }
-  .hero-badge-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--accent-to); box-shadow: 0 0 8px var(--accent-to); }
-  .hero-title { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 800; letter-spacing: -0.03em; }
-  .hero-sub { max-width: 34rem; margin: 1.4rem auto 0; color: var(--text-muted); font-size: 1.15rem; }
-  .hero-actions { display: flex; gap: 0.8rem; justify-content: center; margin-top: 2.2rem; }
-  .recent { padding-top: 3.5rem; }
-  .recent-heading { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; }
+  @media (min-width: 780px) {
+    .lanes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  .lane {
+    display: grid;
+    gap: 0.2rem;
+    padding: 0.55rem 0 0.55rem 0.9rem;
+    border-left: 2px solid var(--text-muted);
+  }
+  .lane--explainer { border-left-color: transparent; padding-left: 0; }
+  .lane--deepdive { border-left-color: var(--signal); }
+  .lane-label { color: var(--text); font-weight: 600; font-size: 0.95rem; }
+  .lane-desc { color: var(--text-muted); font-size: 0.86rem; }
+
+  .lane-heading {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: none;
+    color: var(--text-muted);
+  }
+  .lane-heading a { color: inherit; }
+
+  /* The asymmetry is the point: one large thing, one dense list. */
+  .split { display: grid; gap: 2.8rem; padding-top: 2.8rem; }
+  @media (min-width: 900px) {
+    .split { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 3.4rem; }
+  }
+  .split-side { min-width: 0; }
+  .side-rows :global(.news-row:first-of-type) { border-top: none; }
+  .side-more { margin-top: 1rem; font-size: 0.86rem; }
+
+  .start { padding-top: 3.2rem; }
+  .start-grid { display: grid; gap: 0 2.6rem; }
+  @media (min-width: 720px) {
+    .start-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  .reading {
+    margin-top: 3.2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--rule);
+    border-left: 2px solid var(--signal);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+  }
+  .reading .lane-heading { border-bottom-color: color-mix(in srgb, var(--rule) 60%, transparent); }
+  .reading-link { display: flex; align-items: baseline; gap: 1rem; color: var(--text); }
+  .reading-title { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.015em; }
+  .reading-count {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  .reading-blurb {
+    margin-top: 0.6rem;
+    max-width: 68ch;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+  }
   .empty { color: var(--text-muted); padding-block: 2rem; }
 </style>
