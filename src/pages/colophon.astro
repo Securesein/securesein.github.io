@@ -1,0 +1,153 @@
+---
+// The page that makes every credit line on the site mean something.
+// Without it, "Sebastiaan with AI" is just a nicer vague claim than
+// the one the About page used to make.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import { SITE } from "../consts";
+---
+<BaseLayout
+  title="Colophon"
+  description="Which models write what on this site, what being directed by a human actually involves, what can still go wrong, and how to tell me when it does."
+  reading={true}
+>
+  <div class="container">
+    <PageHeader
+      title="Colophon"
+      standfirst="A model drafts nearly every sentence on this site, including the long pieces. This page says exactly which model, exactly what I do on top of it, and exactly what that still fails to catch."
+    />
+
+    <div class="prose">
+      <h2>Which models, and for what</h2>
+      <p>
+        Two, doing different jobs.
+      </p>
+      <ul>
+        <li>
+          <strong>gpt-4o</strong> drafts the News items. It is the pipeline's
+          writer: it reads the source article and produces the whole post in
+          one pass. I picked a stronger model than the one that writes the
+          Telegram summaries because this is the part that actually gets
+          published.
+        </li>
+        <li>
+          <strong>Claude</strong> drafts the Fundamentals explainers and the
+          Deep dives, working from a subject and an angle I give it, plus
+          whatever source material the piece is about — a paper, a repository,
+          my own notes. Longer pieces need to hold an argument across several
+          thousand words, and it is better at that.
+        </li>
+      </ul>
+      <p>
+        Every post names the model that drafted it, in the box directly under
+        the title. If a post does not name one, nothing drafted it.
+      </p>
+
+      <h2>What "directed" actually involves</h2>
+      <p>
+        This is the credit on Fundamentals and Deep dives, and it is the one
+        most worth pinning down, because it is the one that could be read as
+        more than it is. Step by step:
+      </p>
+      <ol>
+        <li>
+          <strong>I pick the subject and the angle.</strong> Usually because
+          something came up at work, or because a news item I read left an
+          obvious question unanswered. This is the part that is entirely mine,
+          and it is the part that decides whether a piece is worth reading.
+        </li>
+        <li>
+          <strong>I supply the material.</strong> The paper, the documentation,
+          the output of whatever I ran. The model is not asked to recall facts
+          from training; it is asked to explain the thing in front of it.
+        </li>
+        <li>
+          <strong>The model drafts it.</strong> Most of the sentences you read
+          are its sentences.
+        </li>
+        <li>
+          <strong>I check specific things.</strong> Figures against the paper
+          they came from. Claims against the source article. Product and
+          licensing details against vendor documentation. Anything I have run
+          myself, against what actually happened when I ran it.
+        </li>
+        <li>
+          <strong>I rewrite where it is wrong or where it is dull.</strong>
+          Usually the opening, usually anything that has drifted into
+          summarising instead of explaining.
+        </li>
+      </ol>
+      <p>
+        The disclosure box on each post is generated from a record of which of
+        those steps happened, not written by hand. A step I did not do produces
+        no sentence about that step. If a post's box does not mention checking,
+        that is because nothing was checked.
+      </p>
+
+      <h2>What is not reviewed at all</h2>
+      <p>
+        Every News item. Scout reads the source, drafts the post, and publishes
+        it without me seeing it first. That is deliberate — the value of that
+        lane is that it is fast — but it means a News post can be wrong in ways
+        nobody has looked for. They always link the source. Read the source.
+      </p>
+
+      <h2>What can still go wrong</h2>
+      <p>
+        Naming the failure modes is more useful than claiming there are none:
+      </p>
+      <ul>
+        <li>
+          <strong>Confident wrong detail.</strong> A model will state a version
+          number, a price or a benchmark figure with complete assurance and get
+          it wrong. I catch these when I check; on News items nobody checks.
+        </li>
+        <li>
+          <strong>Plausible framing that the source does not support.</strong>
+          Harder to catch than a wrong number, because it reads well. A draft
+          will reach for a tidy conclusion the article never actually drew.
+        </li>
+        <li>
+          <strong>Stale by publication.</strong> News items are written from one
+          article at one moment. A retraction or a correction upstream does not
+          propagate here on its own.
+        </li>
+        <li>
+          <strong>My own checks are partial.</strong> On a directed piece I
+          verify the load-bearing claims, not every sentence. Somewhere in a
+          3,000-word explainer there is usually a clause I did not test.
+        </li>
+        <li>
+          <strong>Voice that sounds more certain than the evidence.</strong>
+          Drafts default to assurance. I take it out where I notice it.
+        </li>
+      </ul>
+
+      <h2>Corrections</h2>
+      <p>
+        If something here is wrong, tell me and I will fix it. Corrections to a
+        post are made in place, with an <em>Updated</em> date shown next to the
+        original publication date, and a note in the post itself when the change
+        is substantive rather than a typo. Nothing is quietly rewritten.
+      </p>
+      <p>
+        A post that turns out to be wrong at its foundation gets marked as such
+        rather than deleted — the whole archive is in public version control, so
+        deleting it would not hide anything anyway.
+      </p>
+
+      <h2>The rest of it</h2>
+      <p>
+        Built with Astro, hosted on GitHub Pages, written by {SITE.author}
+        and drafted by the models named above. The News pipeline is a handful of
+        Python scripts triggered on a schedule; it reads RSS, messages me the
+        items it finds, and drafts a post for whichever ones I flag.
+        <a href="/about/">More about that on the About page.</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose { margin-top: 1rem; padding-bottom: 2rem; }
+</style>

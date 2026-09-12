@@ -1,0 +1,94 @@
+---
+// One component, on EVERY post, in the same place and with the same
+// visual weight regardless of credit level. That uniformity is the
+// whole design: if disclosure only appeared on the Scout posts it
+// would read as a warning label, and readers would start treating the
+// undisclosed posts as the trustworthy default — when in fact a model
+// drafted those too.
+//
+// Not colour-coded, not badged in red, not apologetic. It should read
+// the way a film's "based on a true story" card reads: matter-of-fact,
+// and slightly interesting.
+import { CREDITS, disclosure } from "../credit";
+import type { Credit } from "../taxonomy";
+
+interface Props {
+  credit: Credit;
+  contributions?: { chose?: boolean; checked?: boolean; rewrote?: boolean; built?: boolean };
+  model?: string;
+  source?: { url: string; publisher: string; publishedAt?: Date };
+  pubDate: Date;
+}
+const { credit, contributions, model, source, pubDate } = Astro.props;
+const sentence = disclosure({ credit, contributions, model, source, pubDate });
+const info = CREDITS[credit];
+---
+<aside class="made" aria-labelledby="made-heading">
+  <span class="made-mark" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 Z" stroke-linejoin="round" />
+    </svg>
+  </span>
+  <div class="made-body">
+    <h2 class="made-heading" id="made-heading">
+      How this was made
+      <span class="made-credit">{info.byline}{info.qualifier && ` — ${info.qualifier}`}</span>
+    </h2>
+    <p class="made-text">{sentence}</p>
+    <p class="made-links">
+      {source && (
+        <a href={source.url} rel="nofollow noopener">Source: {source.publisher}</a>
+      )}
+      <a href="/colophon/">How this site is made</a>
+    </p>
+  </div>
+</aside>
+
+<style>
+  .made {
+    display: flex;
+    gap: 0.85rem;
+    margin-top: 1.8rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    /* Always the sans, even inside a serif long-form post — this is a
+       credit line, not part of the piece. */
+    font-family: var(--font-sans);
+  }
+  .made-mark {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 0.15rem;
+    color: var(--signal);
+  }
+  .made-mark svg { width: 100%; height: 100%; }
+  .made-body { min-width: 0; }
+  .made-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: var(--text);
+  }
+  .made-credit { font-weight: 400; color: var(--text-muted); }
+  .made-text {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+    max-width: 66ch;
+  }
+  .made-links {
+    display: flex;
+    gap: 1.1rem;
+    flex-wrap: wrap;
+    margin-top: 0.6rem;
+    font-size: 0.84rem;
+  }
+</style>

@@ -8,9 +8,11 @@ import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
 import TopicChips from "../../components/TopicChips.astro";
-import { CREDITS, disclosure } from "../../credit";
+import HowThisWasMade from "../../components/HowThisWasMade.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
+import { CREDITS } from "../../credit";
 import { FORMATS, KINDS, type Topic } from "../../taxonomy";
-import { postUrl, readingMinutes } from "../../posts";
+import { postUrl, readingMinutes, relatedPosts } from "../../posts";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
@@ -35,6 +37,10 @@ const betterPosts = data.betterCoveredBy
   ? await getCollection("blog", ({ id }) => id === data.betterCoveredBy)
   : [];
 const better = betterPosts[0];
+
+// Related reading prefers a *different* kind on a shared topic, so a
+// news reader lands on the deep dive rather than another short item.
+const related = await relatedPosts(post);
 ---
 <BaseLayout title={data.title} description={data.description} reading={longForm}>
   <article class="container post">
@@ -61,10 +67,13 @@ const better = betterPosts[0];
 
     <TopicChips topics={data.topics as Topic[]} />
 
-    <!-- Placeholder for the full "How this was made" block (phase 4);
-         the disclosure sentence itself is already generated from
-         credit + contributions, so no post ships without one. -->
-    <p class="made">{disclosure(data)}</p>
+    <HowThisWasMade
+      credit={data.credit}
+      contributions={data.contributions}
+      model={data.model}
+      source={data.source}
+      pubDate={data.pubDate}
+    />
 
     {better && (
       <aside class="crosslink">
@@ -86,6 +95,8 @@ const better = betterPosts[0];
     <div class="prose">
       <Content />
     </div>
+
+    <RelatedPosts posts={related} />
   </article>
 </BaseLayout>
 
@@ -117,17 +128,6 @@ const better = betterPosts[0];
   }
   .post :global(.topic-chips) { margin-top: 1rem; }
   .post-byline { color: var(--text); font-weight: 600; }
-  .made {
-    margin-top: 1.4rem;
-    padding: 0.85rem 1rem;
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    border-radius: var(--radius-sm);
-    font-family: var(--font-sans);
-    font-size: 0.86rem;
-    line-height: 1.55;
-    color: var(--text-muted);
-  }
   .crosslink {
     margin-top: 1.6rem;
     padding: 0.8rem 1rem;

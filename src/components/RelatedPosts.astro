@@ -1,0 +1,93 @@
+---
+// Ordered by src/posts.ts#relatedPosts: same thread first, then the
+// same topic in a *different* kind, then the same topic. The middle
+// rule is the one doing work — it is how someone who arrived on a
+// two-minute news item finds the twenty-minute teardown of the same
+// thing.
+import FormattedDate from "./FormattedDate.astro";
+import { postUrl, readingMinutes, type Post } from "../posts";
+import { FORMATS, KINDS } from "../taxonomy";
+
+interface Props {
+  posts: Post[];
+}
+const { posts } = Astro.props;
+---
+{posts.length > 0 && (
+  <nav class="related" aria-labelledby="related-heading">
+    <h2 class="related-heading" id="related-heading">Read next</h2>
+    <ul>
+      {posts.map((post) => (
+        <li class={`related-item related-item--${post.data.kind}`}>
+          <p class="related-meta">
+            <span class="related-kind">{KINDS[post.data.kind].label}</span>
+            {post.data.format && (
+              <span class="related-format">{FORMATS[post.data.format].label}</span>
+            )}
+            <span class="related-when">
+              <FormattedDate date={post.data.pubDate} short />
+              <span>{readingMinutes(post)} min</span>
+            </span>
+          </p>
+          <a href={postUrl(post)} class="related-title">{post.data.title}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .related {
+    margin-top: 3rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--font-sans);
+  }
+  .related-heading {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+  }
+  .related ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: grid;
+    gap: 0;
+  }
+  .related-item {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.9rem 0 0.9rem 0.9rem;
+    border-top: 1px solid var(--rule);
+    border-left: 2px solid var(--text-muted);
+  }
+  .related-item:first-child { border-top: none; }
+  .related-item--explainer { border-left-color: transparent; padding-left: 0; }
+  .related-item--deepdive { border-left-color: var(--signal); }
+  .related-meta {
+    display: flex;
+    gap: 0.85rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+  .related-kind { font-weight: 600; color: var(--text); }
+  .related-when {
+    margin-left: auto;
+    display: inline-flex;
+    gap: 0.85rem;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .related-title {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  @media (max-width: 480px) {
+    .related-meta { flex-wrap: wrap; }
+    .related-when { margin-left: 0; width: 100%; }
+  }
+</style>

@@ -1,60 +1,124 @@
 ---
+// Rewritten, and corrected. The previous version said the Fundamentals
+// explainers were ones "I put together myself" that "carry my own
+// name", in explicit contrast to Scout. That was not true — a model
+// drafts those too — and it was the one claim on this site a reader
+// could reasonably feel misled by. The full authorship story now lives
+// at /colophon; this page states the shape of it and links there.
+//
+// It also absorbs the old "Welcome to securesein" post, which was a
+// site announcement wearing a blog post's clothes.
 import BaseLayout from "../layouts/BaseLayout.astro";
-import AiAvatar from "../components/AiAvatar.astro";
-import { SITE } from "../consts";
-import { CREDITS } from "../credit";
-
-const scout = CREDITS.scout;
+import PageHeader from "../components/PageHeader.astro";
+import { SITE, SECTIONS } from "../consts";
 ---
-<BaseLayout title="About" description="About this blog.">
-  <div class="container about">
-    <h1>About</h1>
+<BaseLayout
+  title="About"
+  description="Who writes this, what the three sections are, and exactly how much of it a model drafted."
+  reading={true}
+>
+  <div class="container">
+    <PageHeader
+      title="About"
+      standfirst="Applied AI, enterprise mobility, and the Microsoft ecosystem — from hands-on practice, not press releases."
+    />
+
     <div class="prose">
       <p>
-        Hi, I'm {SITE.author}. This blog covers applied AI, enterprise
-        mobility management, and the Microsoft ecosystem — the things I
-        actually work with day to day.
+        I'm {SITE.author}. I work in enterprise device management: Intune,
+        Android Enterprise, Apple management, the machinery that decides what
+        thirty thousand company phones and laptops are allowed to do. That is
+        the angle here. There is no shortage of blogs explaining what a new
+        model can do; there are very few asking what happens when it has to be
+        rolled out to a managed fleet, under policy, by people who will be
+        paged if it breaks.
       </p>
 
-      <div class="scout-card">
-        <AiAvatar size={48} />
-        <div>
-          <p class="scout-name">Meet {scout.byline} <span class="ai-badge">AI</span></p>
-          <p class="scout-blurb">
-            Most posts here aren't written by me — they're written by{" "}
-            {scout.byline}, a small pipeline that reads AI news, picks out
-            what I flagged as interesting, and drafts a full post from the
-            source article. Fully automatic, nothing held back for review.
-            Every {scout.byline} post is labelled as such and links back to
-            where it came from, so you always know what you're reading.
-          </p>
-        </div>
-      </div>
-
+      <h2>How much of this is written by a model</h2>
       <p>
-        The <a href="/fundamentals">AI Fundamentals</a> section is different: those
-        are deeper, evergreen explainers I put together myself — not tied to
-        any day's news, and not part of {scout.byline}'s automatic pipeline.
-        They carry my own name.
+        Nearly all of the sentences. That is true of the news items, and it is
+        also true of the long explainers and the deep dives — which the old
+        version of this page implied were hand-written, and they are not.
+      </p>
+      <p>
+        What differs between them is how much of my judgement went in. On the
+        news items: none, in the sense that nobody reads them before they
+        publish. On everything else: I choose the subject, set the angle, supply
+        the source material, check the claims that carry weight, and rewrite
+        what comes back wrong. Every post says which of those things actually
+        happened to it, in a box directly under the title, generated from a
+        record rather than written by hand.
+      </p>
+      <p>
+        The long version — which models, what I verify, what I don't, and what
+        can still go wrong — is on the <a href="/colophon/">colophon</a>.
+      </p>
+
+      <h2>How Scout works</h2>
+      <p>
+        Scout is the pipeline behind the News section. It is not a person and
+        it is not a persona; it is a few hundred lines of Python on a schedule.
+      </p>
+      <ol>
+        <li>It reads a list of RSS feeds every few hours.</li>
+        <li>
+          It summarises what is new and messages the summaries to me on
+          Telegram.
+        </li>
+        <li>
+          I flag the ones worth writing up — sometimes with a one-line steer
+          about the angle, sometimes not.
+        </li>
+        <li>
+          A cloud model drafts a full post from the source article, usually
+          within the hour.
+        </li>
+        <li>
+          It publishes. Automatically. <strong>Nobody reads it first — not
+          me.</strong> Every one links back to the article it came from.
+        </li>
+      </ol>
+      <p>
+        What is <em>not</em> reviewed: the facts, the framing, the numbers, the
+        conclusion. My only editorial act is choosing which item gets written
+        up at all. If a News post here matters to you, open its source and check
+        it.
+      </p>
+
+      <h2>The three sections</h2>
+      <dl class="lanes">
+        {SECTIONS.map((section) => (
+          <div class="lane">
+            <dt><a href={section.href}>{section.label}</a></dt>
+            <dd>{section.description}</dd>
+          </div>
+        ))}
+      </dl>
+      <p>
+        Cutting across all three are the <a href="/topics/">topics</a> — seven
+        subjects, so a two-minute news item and a twenty-minute teardown on the
+        same thing end up on the same shelf. A few of those shelves are nearly
+        empty on purpose: they are where this blog is meant to grow.
+      </p>
+
+      <h2>Corrections</h2>
+      <p>
+        If something here is wrong, I would rather know. How corrections are
+        handled is on the <a href="/colophon/">colophon</a>.
       </p>
     </div>
   </div>
 </BaseLayout>
 
 <style>
-  .about { padding-top: 3.5rem; }
-  .about h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 1.5rem; }
-  .scout-card {
-    display: flex; gap: 1rem; align-items: flex-start;
-    padding: 1.3rem; border: 1px solid var(--border); border-radius: var(--radius);
-    background: var(--bg-elevated);
+  .prose { margin-top: 1rem; padding-bottom: 2rem; }
+  .lanes { display: grid; gap: 0; }
+  .lane {
+    display: grid;
+    gap: 0.15rem;
+    padding: 0.7rem 0 0.7rem 0.9rem;
+    border-left: 2px solid var(--rule);
   }
-  .scout-name { font-weight: 700; margin-bottom: 0.4rem; }
-  .scout-blurb { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
-  .ai-badge {
-    display: inline-block; margin-left: 0.3rem; padding: 0.1rem 0.45rem;
-    border-radius: 999px; background: var(--bg-pill); border: 1px solid var(--border-strong);
-    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-muted);
-    vertical-align: middle;
-  }
+  .lane dt { font-weight: 700; }
+  .lane dd { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
 </style>
