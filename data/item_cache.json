@@ -3188,5 +3188,110 @@
     "source": "EleutherAI Blog",
     "message_id": 509,
     "cached_at": 1789192926.888023
+  },
+  "4aeb82da9975e2f5": {
+    "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+    "link": "https://openai.com/index/cognition-devin-testing-with-astra",
+    "source": "OpenAI News",
+    "message_id": 510,
+    "cached_at": 1789207285.2396739
+  },
+  "28569c3c31a0d771": {
+    "title": "So you want to use OpenRouter?",
+    "link": "https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 511,
+    "cached_at": 1789207287.7974904
+  },
+  "3d1275ba69a615dd": {
+    "title": "Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill’ frontier models, too",
+    "link": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
+    "source": "TechCrunch AI",
+    "message_id": 512,
+    "cached_at": 1789207290.3973906
+  },
+  "cbd93ba75d299c5a": {
+    "title": "Can LLMs Engineer Their Own Agent Harness? ByteDance Seed’s HarnessDev Says Only 34 of 64 Changes Generalize",
+    "link": "https://www.marktechpost.com/2026/09/11/can-llms-engineer-their-own-agent-harness-bytedance-seeds-harnessdev-says-only-34-of-64-changes-generalize/",
+    "source": "MarkTechPost",
+    "message_id": 513,
+    "cached_at": 1789207293.270999
+  },
+  "ee7533f9f4eb4f7a": {
+    "title": "Meta says it&#8217;s changing AI suggestions after posing invasive personal questions",
+    "link": "https://www.theverge.com/tech/993974/meta-ai-prompt-invasive-suggestions",
+    "source": "The Verge AI",
+    "message_id": 514,
+    "cached_at": 1789207296.221428
+  },
+  "33adfa669d3447d4": {
+    "title": "Automating Quadratic Unconstrained Binary Optimization (QUBO) Formulation Generation from Natural Language",
+    "link": "https://arxiv.org/abs/2609.10629",
+    "source": "arXiv cs.AI",
+    "message_id": 515,
+    "cached_at": 1789207298.9856415
+  },
+  "5b6abb1439c2c580": {
+    "title": "TempCloze: Can Video-LLMs Identify the Missing Middle?",
+    "link": "https://arxiv.org/abs/2609.01515",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 516,
+    "cached_at": 1789207301.7536793
+  },
+  "50fd092ce026b45d": {
+    "title": "Beyond the price per token: Choosing the right OpenAI model on Amazon Bedrock for your workload",
+    "link": "https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 517,
+    "cached_at": 1789207304.8305244
+  },
+  "88c18f4ef388f1a8": {
+    "title": "Unify your marketing data with Lakeflow Connect",
+    "link": "https://www.databricks.com/blog/unify-your-marketing-data-lakeflow-connect",
+    "source": "Databricks Blog",
+    "message_id": 518,
+    "cached_at": 1789207307.521653
+  },
+  "13af96f13ab7c5bc": {
+    "title": "How to Carry User Identity Across Federated Kubernetes and AI Platforms",
+    "link": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 519,
+    "cached_at": 1789207312.6023445
+  },
+  "a939166d20278538": {
+    "title": "Ponder This Challenge - September 2026 - Loeschian Arithmetic Progressions",
+    "link": "https://research.ibm.com/blog/ponder-this-september-2026?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 520,
+    "cached_at": 1789207315.5274754
+  },
+  "4546ba65600cacfe": {
+    "title": "From MIT to IBM, expediting AI and quantum deployment",
+    "link": "https://news.mit.edu/2026/from-mit-to-ibm-expediting-ai-and-quantum-deployment-0902",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 521,
+    "cached_at": 1789207318.0334163
+  },
+  "482dbe5d2f8cf065": {
+    "title": "OptunaHub: A Platform for Black-Box Optimization",
+    "link": "http://jmlr.org/papers/v27/25-2424.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 522,
+    "cached_at": 1789207320.7720995
+  },
+  "0dba34b7d7961f08": {
+    "title": "Early Indicators of Reward Hacking via Reasoning Interpolation",
+    "link": "https://blog.eleuther.ai/reward-hacking-indicators/",
+    "source": "EleutherAI Blog",
+    "message_id": 523,
+    "cached_at": 1789207323.4489954
+  },
+  "ec1dae1d3407b62b": {
+    "title": "How Claude Watermarks AI-Generated Text",
+    "link": "https://magazine.sebastianraschka.com/p/claude-watermarking",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 524,
+    "cached_at": 1789207326.0571036
   }
 }
