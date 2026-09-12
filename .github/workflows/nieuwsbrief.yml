@@ -56,6 +56,34 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/generate_blog_post.py
 
+      # Scout publishes without review, so the content schema is the
+      # only quality gate that exists — and it has to run BEFORE the
+      # commit, not after. Validating here means a bad Scout run
+      # produces a red workflow and nothing on main; validating in
+      # deploy.yml would mean a bad post is already committed by the
+      # time anyone finds out. `astro build` is the validator: the
+      # collection schema in src/content.config.ts fails the build on
+      # any invalid frontmatter.
+      - name: Validate generated content against the schema
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Build the site (fails on invalid frontmatter)
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          npm ci
+          npm run build
+
+      # Non-blocking: reports the rules the schema deliberately does not
+      # hard-fail on (see scripts/check_content_warnings.mjs).
+      - name: Content warnings
+        if: steps.gate.outputs.run == 'true'
+        continue-on-error: true
+        run: npm run check:content
+
       - name: Fetch RSS, summarize, notify Telegram
         if: steps.gate.outputs.run == 'true'
         env:

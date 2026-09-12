@@ -23,9 +23,19 @@ jobs:
         with:
           node-version: 22
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+      # `npm run build` is also the schema gate: the collection schema
+      # in src/content.config.ts fails the build on invalid frontmatter,
+      # so a bad post never reaches Pages. (The pipeline workflow runs
+      # the same check before it commits, which catches it earlier.)
+      # postbuild builds the Pagefind index into dist/.
       - name: Build
         run: npm run build
+      # Informational only — the rules the schema deliberately warns
+      # about rather than failing on.
+      - name: Content warnings
+        continue-on-error: true
+        run: npm run check:content
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
