@@ -3398,5 +3398,110 @@
     "source": "Nicholas Carlini",
     "message_id": 539,
     "cached_at": 1789209518.9272761
+  },
+  "f86330f6327ebf55": {
+    "title": "Soft-deprecating re.match()",
+    "link": "https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 540,
+    "cached_at": 1789221677.1836119
+  },
+  "2fcd3adc78d01fef": {
+    "title": "One week left to book your exhibit table at TechCrunch Disrupt 2026",
+    "link": "https://techcrunch.com/2026/09/11/one-week-left-to-book-your-exhibit-table-at-techcrunch-disrupt-2026/",
+    "source": "TechCrunch AI",
+    "message_id": 541,
+    "cached_at": 1789221679.7522562
+  },
+  "539e0d2c04d7c271": {
+    "title": "OpenAI just wants to win",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/994255/openai-millennium-prize-problem-tristan-buckmaster-competition",
+    "source": "The Verge AI",
+    "message_id": 542,
+    "cached_at": 1789221682.7486863
+  },
+  "af32aec035214d31": {
+    "title": "Understanding LoRA Rank Trade-offs in Diffusion Model Fine-Tuning",
+    "link": "https://arxiv.org/abs/2609.10656",
+    "source": "arXiv cs.AI",
+    "message_id": 543,
+    "cached_at": 1789221686.1940398
+  },
+  "4e70afc5b93411c8": {
+    "title": "Adaptive Bridge: A Proxy-Based Decoupling Layer for Mitigating DDS Backpressure in ROS 2",
+    "link": "https://arxiv.org/abs/2608.15380",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 544,
+    "cached_at": 1789221689.679248
+  },
+  "d59155e2f8c702db": {
+    "title": "What happens when information theory accounts for reasoning?",
+    "link": "https://research.ibm.com/blog/information-theory-meaning?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 545,
+    "cached_at": 1789221692.8972275
+  },
+  "437ffb23ae2ef611": {
+    "title": "Walter Torous named executive director of MIT Center for Real Estate",
+    "link": "https://news.mit.edu/2026/walter-torous-named-executive-director-mit-center-real-estate-0901",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 546,
+    "cached_at": 1789221695.2827117
+  },
+  "cfa7541468db6c42": {
+    "title": "Prob-GParareal: A Probabilistic Numerical Parallel-in-Time Solver for Differential Equations",
+    "link": "http://jmlr.org/papers/v27/25-2146.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 547,
+    "cached_at": 1789221697.9564116
+  },
+  "5c7e698bed1fd902": {
+    "title": "Pretraining Data Filtering for Open-Weight AI Safety",
+    "link": "https://blog.eleuther.ai/deep-ignorance/",
+    "source": "EleutherAI Blog",
+    "message_id": 549,
+    "cached_at": 1789221701.0016456
+  },
+  "1e95bee9c26709cb": {
+    "title": "Controlling Reasoning Effort in LLMs",
+    "link": "https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 551,
+    "cached_at": 1789221704.252419
+  },
+  "d01eba4a302808d5": {
+    "title": "Scaling Laws, Carefully",
+    "link": "https://lilianweng.github.io/posts/2026-06-24-scaling-laws/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 553,
+    "cached_at": 1789221706.960665
+  },
+  "5cbfaaffdb7e2894": {
+    "title": "Are large language models worth it?",
+    "link": "https://nicholas.carlini.com/writing/2025/are-llms-worth-it.html",
+    "source": "Nicholas Carlini",
+    "message_id": 555,
+    "cached_at": 1789221710.316396
+  },
+  "a49486b299f43590": {
+    "title": "v2.1.269",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.269",
+    "source": "Claude Code Releases",
+    "message_id": 557,
+    "cached_at": 1789221713.1670623
+  },
+  "f709d9c6172e2544": {
+    "title": "0.155.0-alpha.3.10",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.10",
+    "source": "OpenAI Codex Releases",
+    "message_id": 559,
+    "cached_at": 1789221715.8874805
+  },
+  "77304b4fd99d8657": {
+    "title": "Release v0.61.0-nightly.20260912.g9c1b0a610",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260912.g9c1b0a610",
+    "source": "Gemini CLI Releases",
+    "message_id": 561,
+    "cached_at": 1789221718.8689148
   }
 }
