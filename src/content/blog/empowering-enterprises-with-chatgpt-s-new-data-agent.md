@@ -2,10 +2,13 @@
 title: "Empowering Enterprises with ChatGPT's New Data Agent"
 description: "How OpenAI's Data Agent in ChatGPT Work transforms enterprise data management with its intuitive and dynamic approach."
 pubDate: 2026-09-11
-tags: ["enterprise-microsoft", "agents-tooling"]
-sourceUrl: "https://openai.com/index/put-data-to-work"
-sourceName: "OpenAI News"
-author: "ai"
+kind: "news"
+topics: ["enterprise", "agents"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://openai.com/index/put-data-to-work"
+  publisher: "OpenAI News"
 ---
 
 Imagine sitting at your desk and suddenly needing to know why sales dipped last quarter or which clients are at risk of churning. You could wait for the next data report or hunt down an analyst, but what if you could simply ask and get the answer in seconds? Enter the new Data Agent in ChatGPT Work — a tool that promises to transform how enterprises interact with their data.

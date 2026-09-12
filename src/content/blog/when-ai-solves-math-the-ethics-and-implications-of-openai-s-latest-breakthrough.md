@@ -2,10 +2,13 @@
 title: "When AI Solves Math: The Ethics and Implications of OpenAI's Latest Breakthrough"
 description: "OpenAI's achievement in solving a Millennium Prize Problem raises questions about the role of AI in mathematics and the ethics of collaboration."
 pubDate: 2026-09-09
-tags: ["safety-alignment", "research"]
-sourceUrl: "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/"
-sourceName: "MIT Technology Review AI"
-author: "ai"
+kind: "news"
+topics: ["safety"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/"
+  publisher: "MIT Technology Review AI"
 ---
 
 In the realm of mathematics, the Millennium Prize Problems stand as towering challenges, akin to Mount Everest for mathematicians. Solving one is not just a significant academic achievement; it's a milestone that can redefine our understanding of complex systems. Recently, OpenAI announced that their agents have solved the Navier–Stokes existence and smoothness problem, one of these formidable challenges. Yet, the celebration was quickly overshadowed by controversy, as accusations emerged that OpenAI may have built upon the work of Tristan Buckmaster and Levent Alpöge without proper credit.

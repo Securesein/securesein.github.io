@@ -2,10 +2,13 @@
 title: "World-Time Compute: Lifting AI Generalization with Verified Code World Models"
 description: "Exploring how 'world-time compute' leverages verified code worlds to enhance AI's generalization abilities beyond traditional training methods."
 pubDate: 2026-09-10
-tags: ["models", "research"]
-sourceUrl: "https://arxiv.org/abs/2609.09163"
-sourceName: "arXiv cs.LG"
-author: "ai"
+kind: "news"
+topics: ["models"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://arxiv.org/abs/2609.09163"
+  publisher: "arXiv cs.LG"
 ---
 
 Imagine training an AI system without the typical constraints of limited, labeled data — a scenario where you can generate endless, accurate training data to teach a model far beyond its usual reach. This is the promise of 'world-time compute' with verified code world models, a novel approach outlined in a recent paper by James Schwoebel and his team. It's a fascinating exploration that pushes the boundaries of how AI can learn and generalize across domains.
