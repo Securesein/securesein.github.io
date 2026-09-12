@@ -38,17 +38,33 @@ const { topics, nested = false } = Astro.props;
     padding: 0.2rem 0.6rem;
     border: 1px solid var(--border);
     border-radius: 999px;
-    background: var(--surface);
+    /* A faint wash in the accent's own green→cyan family — just enough
+       gradient to lift the chip off the page, staying inside the
+       instrument-panel palette rather than colour-coding each topic. */
+    background: linear-gradient(
+      105deg,
+      color-mix(in srgb, var(--signal) 9%, var(--surface)),
+      color-mix(in srgb, #38bdf8 9%, var(--surface))
+    );
     color: var(--text-muted);
     font-family: var(--font-sans);
     font-size: 0.78rem;
     font-weight: 500;
     line-height: 1.5;
     white-space: nowrap;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   }
   .topic-chip:hover {
     color: var(--text);
-    border-color: var(--text-muted);
+    border-color: color-mix(in srgb, var(--border) 45%, var(--signal));
+    background: linear-gradient(
+      105deg,
+      color-mix(in srgb, var(--signal) 18%, var(--surface)),
+      color-mix(in srgb, #38bdf8 18%, var(--surface))
+    );
     text-decoration: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .topic-chip { transition: none; }
   }
 </style>
