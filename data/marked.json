@@ -5,7 +5,8 @@
     "source": "VentureBeat AI",
     "cached_at": 1788439329.000753,
     "marked_at": 1788439579.8175404,
-    "status": "pending"
+    "status": "skipped",
+    "skipped_reason": "duplicate"
   },
   "0d1a484865ecd3b0": {
     "title": "Nvidia confirms it will buy Hugging Face for $12.9 billion",

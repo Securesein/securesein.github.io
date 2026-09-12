@@ -3503,5 +3503,110 @@
     "source": "Gemini CLI Releases",
     "message_id": 561,
     "cached_at": 1789221718.8689148
+  },
+  "90c940affe028fc0": {
+    "title": "datasette-publish-fly 1.4",
+    "link": "https://simonwillison.net/2026/Sep/11/datasette-publish-fly/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 570,
+    "cached_at": 1789236102.9181473
+  },
+  "684a2e2a295c4490": {
+    "title": "Anthropic CEO outlines plan to ‘pace the frontier’",
+    "link": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/",
+    "source": "TechCrunch AI",
+    "message_id": 571,
+    "cached_at": 1789236105.9444933
+  },
+  "8543faceff6c9086": {
+    "title": "Anthropic CEO says it’s time to pump the brakes on AI",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/994337/anthropic-ceo-slow-down-ai-development",
+    "source": "The Verge AI",
+    "message_id": 572,
+    "cached_at": 1789236108.847107
+  },
+  "d230a2ea58abeabc": {
+    "title": "Quantifying the Memorization-to-Generalization Transition: Scaling Laws and Phase Structure in Grokking",
+    "link": "https://arxiv.org/abs/2609.10657",
+    "source": "arXiv cs.AI",
+    "message_id": 573,
+    "cached_at": 1789236112.0088599
+  },
+  "2900bd20a400c67d": {
+    "title": "CARDEA: Auditable Reasoning Grounded in Spatial Evidence for End-to-End Coronary Angiography Interpretation",
+    "link": "https://arxiv.org/abs/2609.06931",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 574,
+    "cached_at": 1789236115.2452672
+  },
+  "49bfb6265bc1aa27": {
+    "title": "Granite 4.2 brings native reasoning to enterprise agents",
+    "link": "https://research.ibm.com/blog/introducing-granite-4-2?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 575,
+    "cached_at": 1789236118.5027828
+  },
+  "7121e737b53f5c8f": {
+    "title": "Ila Kumar: Innovating with communities",
+    "link": "https://news.mit.edu/2026/ila-kumar-innovates-with-communities-0901",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 576,
+    "cached_at": 1789236121.4016993
+  },
+  "30a0d066e4da2fba": {
+    "title": "From learnable objects to learnable random objects",
+    "link": "http://jmlr.org/papers/v27/25-1196.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 577,
+    "cached_at": 1789236124.1412964
+  },
+  "efc79d79b9f3afa0": {
+    "title": "Attention Probes",
+    "link": "https://blog.eleuther.ai/attention-probes/",
+    "source": "EleutherAI Blog",
+    "message_id": 578,
+    "cached_at": 1789236127.1408424
+  },
+  "9b152c447df89686": {
+    "title": "Using Local Coding Agents",
+    "link": "https://magazine.sebastianraschka.com/p/using-local-coding-agents",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 579,
+    "cached_at": 1789236129.9005172
+  },
+  "ebb155c1ad2cd8bb": {
+    "title": "Why We Think",
+    "link": "https://lilianweng.github.io/posts/2025-05-01-thinking/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 580,
+    "cached_at": 1789236132.2486696
+  },
+  "1226d59280f949d1": {
+    "title": "Gate-level emulation of an Intel 4004 in 4004 bytes of C",
+    "link": "https://nicholas.carlini.com/writing/2025/ioccc-intel-4004-in-4004-bytes-c.html",
+    "source": "Nicholas Carlini",
+    "message_id": 581,
+    "cached_at": 1789236135.295948
+  },
+  "7af90191621c7860": {
+    "title": "v2.1.268",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.268",
+    "source": "Claude Code Releases",
+    "message_id": 582,
+    "cached_at": 1789236138.2472978
+  },
+  "7d4749a065fdc937": {
+    "title": "0.155.0-alpha.3.9",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.9",
+    "source": "OpenAI Codex Releases",
+    "message_id": 583,
+    "cached_at": 1789236141.1480582
+  },
+  "e42c1faabc5901c8": {
+    "title": "Release v0.61.0-nightly.20260911.ged2ac40df",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260911.ged2ac40df",
+    "source": "Gemini CLI Releases",
+    "message_id": 584,
+    "cached_at": 1789236144.2085798
   }
 }
