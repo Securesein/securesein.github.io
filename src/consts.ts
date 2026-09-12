@@ -1,8 +1,8 @@
 export const SITE = {
   title: "securesein",
   description:
-    "Applied AI and the devices it lands on — enterprise mobility, the Microsoft ecosystem, and what actually ships. Curated by a human, drafted in part by an AI.",
-  tagline: "Applied AI, and the devices it lands on.",
+    "Applied AI, taken apart — the news as it breaks, the fundamentals that stay true, and deep dives into the papers and systems behind it. Curated by a human, drafted in part by an AI.",
+  tagline: "Applied AI, taken apart.",
   subTagline: "Curated by a human, drafted in part by an AI.",
   author: "Sebastiaan",
   authorRole: "IT consultant",
