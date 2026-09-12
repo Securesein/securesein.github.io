@@ -9,11 +9,25 @@ interface Props {
   description?: string;
   /** Switches the body to the long-form reading typeface (§6). */
   reading?: boolean;
+  /** Absolute or site-relative share image; falls back to the default. */
+  image?: string;
+  /** "article" on post pages, so the OG type is honest. */
+  ogType?: "website" | "article";
 }
-const { title, description, reading = false } = Astro.props;
+const {
+  title,
+  description,
+  reading = false,
+  image,
+  ogType = "website",
+} = Astro.props;
 const pageTitle = title ? `${title} — ${SITE.title}` : SITE.title;
 const pageDesc = description ?? SITE.description;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+// Per-post OG images are the post's own hero where it has one, and a
+// single site card otherwise. Rendering a bespoke card per post would
+// mean a whole image pipeline for a handful of posts a week.
+const ogImage = new URL(image ?? "/og-default.png", Astro.site);
 ---
 <!doctype html>
 <html lang="en">
@@ -24,7 +38,22 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <title>{pageTitle}</title>
     <meta name="description" content={pageDesc} />
     <link rel="canonical" href={canonical} />
-    <!-- Per-page extras: RSS autodiscovery, JSON-LD, OG overrides. -->
+
+    <meta property="og:site_name" content={SITE.title} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDesc} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={`${SITE.title} — everything`}
+      href="/rss.xml"
+    />
+    <!-- Per-page extras: per-lane RSS, JSON-LD, OG overrides. -->
     <slot name="head" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />

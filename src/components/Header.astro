@@ -28,6 +28,12 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
       ))}
     </nav>
     <div class="header-actions">
+      <a href="/search/" class="icon-link" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8" />
+          <path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+      </a>
       <ThemeToggle />
     </div>
   </div>
@@ -76,7 +82,19 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
   }
   .nav-link:hover { color: var(--text); text-decoration: none; }
   .nav-link--on { color: var(--text); }
-  .header-actions { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
+  .header-actions { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+  .icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-strong);
+    color: var(--text-muted);
+  }
+  .icon-link:hover { color: var(--text); border-color: var(--text-muted); text-decoration: none; }
+  .icon-link svg { width: 18px; height: 18px; }
 
   @media (max-width: 560px) { .brand-name { display: none; } }
   @media (max-width: 420px) {

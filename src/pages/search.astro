@@ -1,0 +1,65 @@
+---
+// Pagefind: a static index built from dist/ after `astro build` (see
+// the postbuild script). No server, no third-party search service —
+// which is what makes it work on GitHub Pages at all.
+//
+// The assets under /pagefind/ only exist in a built site, so this page
+// shows nothing useful in `astro dev`. That is expected.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+---
+<BaseLayout
+  title="Search"
+  description="Search everything on securesein — news items, fundamentals and deep dives."
+>
+  <link slot="head" rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+
+  <div class="container container--wide">
+    <PageHeader
+      title="Search"
+      standfirst="Everything on the site, all three lanes at once."
+    />
+    <div id="search" class="search-mount"></div>
+    <noscript>
+      <p class="search-fallback">
+        Search needs JavaScript. Without it, the
+        <a href="/topics/">topic shelves</a> are the way through the archive.
+      </p>
+    </noscript>
+  </div>
+</BaseLayout>
+
+<!-- is:inline on both: /pagefind/ is generated into dist/ *after*
+     astro build, so it exists at runtime but never at bundle time.
+     Letting Vite try to resolve it fails the build. -->
+<script is:inline src="/pagefind/pagefind-ui.js"></script>
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", () => {
+    if (typeof PagefindUI === "undefined") return;
+    new PagefindUI({
+      element: "#search",
+      showSubResults: true,
+      showImages: false,
+      excerptLength: 24,
+    });
+  });
+</script>
+
+<style>
+  .search-mount { margin-top: 1.4rem; }
+  .search-fallback { color: var(--text-muted); margin-top: 1.4rem; }
+
+  /* Pagefind ships its own tokens; point them at the site palette so
+     the widget is not a light-mode rectangle sitting in a dark page. */
+  .search-mount {
+    --pagefind-ui-scale: 0.9;
+    --pagefind-ui-primary: var(--text);
+    --pagefind-ui-text: var(--text);
+    --pagefind-ui-background: var(--bg);
+    --pagefind-ui-border: var(--rule);
+    --pagefind-ui-tag: var(--surface);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: var(--radius-sm);
+    --pagefind-ui-font: var(--font-sans);
+  }
+</style>

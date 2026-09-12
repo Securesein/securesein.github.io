@@ -1,15 +1,76 @@
 ---
-import { SITE } from "../consts";
+import { SITE, SECTIONS } from "../consts";
 const year = new Date().getFullYear();
+
+// Per-lane feeds, because the lanes have wildly different volumes —
+// four deep dives a month should not arrive with forty Scout items.
+const feeds = [
+  { label: "Everything", href: "/rss.xml" },
+  ...SECTIONS.map((s) => ({ label: s.label, href: `${s.href}/rss.xml` })),
+];
 ---
 <footer class="site-footer">
-  <div class="container container--wide footer-inner">
-    <span>&copy; {year} {SITE.title}</span>
-    <span class="muted">Built with Astro</span>
+  <div class="container container--wide">
+    <div class="footer-cols">
+      <nav class="footer-col" aria-label="Sections">
+        <h2>Read</h2>
+        <ul>
+          {SECTIONS.map((s) => <li><a href={s.href}>{s.label}</a></li>)}
+          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/threads/">Threads</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Feeds">
+        <h2>Feeds</h2>
+        <ul>
+          {feeds.map((f) => <li><a href={f.href}>{f.label}</a></li>)}
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="This site">
+        <h2>This site</h2>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/colophon/">Colophon</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <p class="footer-note">
+      &copy; {year} {SITE.title}. Curated by a human, drafted in part by an AI —
+      <a href="/colophon/">which part, and by which model</a>.
+    </p>
   </div>
 </footer>
 
 <style>
-  .site-footer { border-top: 1px solid var(--border); margin-top: 5rem; padding-block: 2rem; }
-  .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.9rem; color: var(--text-muted); }
+  .site-footer {
+    border-top: 1px solid var(--rule);
+    margin-top: 5rem;
+    padding-block: 2.4rem 2.6rem;
+  }
+  .footer-cols {
+    display: grid;
+    gap: 1.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    max-width: 40rem;
+  }
+  .footer-col h2 {
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+  }
+  .footer-col ul { list-style: none; padding: 0; display: grid; gap: 0.35rem; }
+  .footer-col a { color: var(--text); font-size: 0.88rem; }
+  .footer-note {
+    margin-top: 2.2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
 </style>

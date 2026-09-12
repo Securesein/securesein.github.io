@@ -13,6 +13,7 @@ import RelatedPosts from "../../components/RelatedPosts.astro";
 import { CREDITS } from "../../credit";
 import { FORMATS, KINDS, type Topic } from "../../taxonomy";
 import { postUrl, readingMinutes, relatedPosts } from "../../posts";
+import { SITE } from "../../consts";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
@@ -41,9 +42,51 @@ const better = betterPosts[0];
 // Related reading prefers a *different* kind on a shared topic, so a
 // news reader lands on the deep dive rather than another short item.
 const related = await relatedPosts(post);
+
+// Structured data has to reflect the credit model rather than assert a
+// human author on everything. On a Scout post nobody wrote it in the
+// sense schema.org means, so `author` is the software agent and the
+// human is not named; on a directed piece Sebastiaan is the author and
+// the model is credited as a contributor. Claiming a human author on
+// an unreviewed auto-draft would be the one place where honesty and
+// SEO happen to want the same thing, and we'd be getting it wrong.
+const publisher = { "@type": "Organization", name: SITE.title, url: Astro.site?.href };
+const author =
+  data.credit === "scout"
+    ? { "@type": "SoftwareApplication", name: "Scout", applicationCategory: "Automated publishing pipeline" }
+    : { "@type": "Person", name: SITE.author, jobTitle: SITE.authorRole };
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: data.title,
+  description: data.description,
+  datePublished: data.pubDate.toISOString(),
+  ...(data.updatedDate && { dateModified: data.updatedDate.toISOString() }),
+  author,
+  publisher,
+  ...(data.model && {
+    contributor: { "@type": "SoftwareApplication", name: data.model },
+  }),
+  ...(data.hero && { image: new URL(data.hero, Astro.site).href }),
+  ...(data.source && { isBasedOn: data.source.url }),
+  mainEntityOfPage: new URL(postUrl(post), Astro.site).href,
+  keywords: data.topics.join(", "),
+};
 ---
-<BaseLayout title={data.title} description={data.description} reading={longForm}>
-  <article class="container post">
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  reading={longForm}
+  image={data.hero}
+  ogType="article"
+>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(jsonLd)}
+  />
+
+  <article class="container post" data-pagefind-body data-pagefind-meta={`kind:${kind.label}`}>
     <nav class="crumbs" aria-label="Breadcrumb">
       <a href={kind.href}>{kind.plural}</a>
       {format && (

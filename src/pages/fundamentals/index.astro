@@ -13,6 +13,14 @@ const posts = await postsOfKind("explainer");
   title="Fundamentals"
   description="Evergreen explainers: one AI concept at a time, explained properly and written to still make sense next year."
 >
+  <link
+    slot="head"
+    rel="alternate"
+    type="application/rss+xml"
+    title="securesein — Fundamentals"
+    href="/fundamentals/rss.xml"
+  />
+
   <div class="container container--wide">
     <PageHeader
       title="Fundamentals"

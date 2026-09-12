@@ -29,6 +29,14 @@ const topics = (Object.keys(TOPICS) as Topic[]).filter((t) => present.has(t));
   title="News"
   description="AI news, drafted automatically from the source article and published without review. Newest first."
 >
+  <link
+    slot="head"
+    rel="alternate"
+    type="application/rss+xml"
+    title="securesein — News"
+    href="/news/rss.xml"
+  />
+
   <div class="container container--wide">
     <PageHeader
       title="News"

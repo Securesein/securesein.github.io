@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 
 function remarkReadingTime() {
   return function (tree, file) {
@@ -21,6 +22,12 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
+  integrations: [
+    sitemap({
+      // The two redirect stubs are meta-refresh pages, not content.
+      filter: (page) => !/\/blog\/?$|\/blog\/welcome\/?$/.test(page),
+    }),
+  ],
   // Individual post URLs never change — /blog/<slug>/ is already
   // indexed and shared, and GitHub Pages has no server-side redirects
   // to soften a rename with. Only the two routes that stopped existing
