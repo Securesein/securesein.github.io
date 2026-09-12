@@ -47,6 +47,18 @@
   --border: var(--rule);
   --border-strong: color-mix(in srgb, var(--rule) 70%, var(--muted));
   --link: var(--signal);
+
+  /* The securesein brand gradient — violet→cyan, the site's identity
+     mark. Deliberately restrained to the places the site signs its
+     name: the logo star and the kind pill at the head of a post. The
+     green --signal stays the functional accent (links, focus, rules);
+     keeping the gradient rare is what lets it read as identity rather
+     than decoration. The same hues, at a whisper, wash the topic chips
+     so the whole palette speaks one language. */
+  --brand: linear-gradient(105deg, #8b5cf6, #22d3ee);
+  --brand-ink: #0d0f12;
+  --brand-from: #8b5cf6;
+  --brand-to: #22d3ee;
 }
 
 /* Dark: same roles, re-measured. The accent lifts because a deep green

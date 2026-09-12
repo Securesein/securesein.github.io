@@ -38,13 +38,13 @@ const { topics, nested = false } = Astro.props;
     padding: 0.2rem 0.6rem;
     border: 1px solid var(--border);
     border-radius: 999px;
-    /* A faint wash in the accent's own green→cyan family — just enough
-       gradient to lift the chip off the page, staying inside the
-       instrument-panel palette rather than colour-coding each topic. */
+    /* A faint wash in the brand's own violet→cyan family — the same
+       gradient as the logo and the kind pill, at a whisper, so the
+       chips belong to one palette rather than colour-coding each topic. */
     background: linear-gradient(
       105deg,
-      color-mix(in srgb, var(--signal) 9%, var(--surface)),
-      color-mix(in srgb, #38bdf8 9%, var(--surface))
+      color-mix(in srgb, var(--brand-from) 8%, var(--surface)),
+      color-mix(in srgb, var(--brand-to) 8%, var(--surface))
     );
     color: var(--text-muted);
     font-family: var(--font-sans);
@@ -56,11 +56,11 @@ const { topics, nested = false } = Astro.props;
   }
   .topic-chip:hover {
     color: var(--text);
-    border-color: color-mix(in srgb, var(--border) 45%, var(--signal));
+    border-color: color-mix(in srgb, var(--border) 45%, var(--brand-from));
     background: linear-gradient(
       105deg,
-      color-mix(in srgb, var(--signal) 18%, var(--surface)),
-      color-mix(in srgb, #38bdf8 18%, var(--surface))
+      color-mix(in srgb, var(--brand-from) 16%, var(--surface)),
+      color-mix(in srgb, var(--brand-to) 16%, var(--surface))
     );
     text-decoration: none;
   }

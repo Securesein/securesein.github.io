@@ -13,7 +13,15 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
 <header class="site-header">
   <div class="container container--wide header-inner">
     <a href="/" class="brand" aria-label="Go to homepage">
-      <span class="brand-mark" aria-hidden="true"></span>
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="url(#brandGradient)"/>
+        <defs>
+          <linearGradient id="brandGradient" x1="0" y1="0" x2="24" y2="24">
+            <stop offset="0" stop-color="#8b5cf6"/>
+            <stop offset="1" stop-color="#22d3ee"/>
+          </linearGradient>
+        </defs>
+      </svg>
       <span class="brand-name">{SITE.title}</span>
     </a>
     <nav class="nav" aria-label="Main navigation">
@@ -58,12 +66,11 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
     letter-spacing: -0.02em;
   }
   .brand:hover { text-decoration: none; }
-  /* A plain measurement tick rather than a gradient star — the whole
-     surface is meant to read as an instrument panel, not a template. */
+  /* The brand star — the one place the violet→cyan identity gradient
+     lives in the chrome. Small and quiet, but it signs the page. */
   .brand-mark {
-    width: 3px;
-    height: 15px;
-    background: var(--signal);
+    width: 22px;
+    height: 22px;
     flex-shrink: 0;
   }
   .nav {
