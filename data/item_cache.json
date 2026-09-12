@@ -3293,5 +3293,110 @@
     "source": "Ahead of AI (Sebastian Raschka)",
     "message_id": 524,
     "cached_at": 1789207326.0571036
+  },
+  "cffcc180737c911e": {
+    "title": "Feeling sad about AI",
+    "link": "https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 525,
+    "cached_at": 1789209479.2970438
+  },
+  "ca0dd492fbf012d3": {
+    "title": "OpenAI’s feud with mathematicians is only escalating",
+    "link": "https://techcrunch.com/2026/09/11/openais-feud-with-mathematicians-is-only-escalating/",
+    "source": "TechCrunch AI",
+    "message_id": 526,
+    "cached_at": 1789209481.9149313
+  },
+  "28c7b799615c8564": {
+    "title": "From Hacks to Bioweapons, Claude Misuse Is Now Everywhere",
+    "link": "https://www.wired.com/story/security-news-this-week-from-hacks-to-bioweapons-claude-misuse-is-now-everywhere/",
+    "source": "Wired AI",
+    "message_id": 527,
+    "cached_at": 1789209484.6400442
+  },
+  "15f70ea4738d8f2c": {
+    "title": "Anthropic Adds Plugin Evals to Claude Code: 6 Grader Types, a No-Plugin Baseline, and a CI Gate for Skills",
+    "link": "https://www.marktechpost.com/2026/09/11/anthropic-adds-plugin-evals-to-claude-code-6-grader-types-a-no-plugin-baseline-and-a-ci-gate-for-skills/",
+    "source": "MarkTechPost",
+    "message_id": 528,
+    "cached_at": 1789209487.254201
+  },
+  "02ff0bf4586f4da1": {
+    "title": "A Multi-Stage Rule-Chaining Framework for Compositional and Interpretable Cognitive Reasoning",
+    "link": "https://arxiv.org/abs/2609.10654",
+    "source": "arXiv cs.AI",
+    "message_id": 529,
+    "cached_at": 1789209491.2372956
+  },
+  "8fbf36d9a91c4e4a": {
+    "title": "EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents",
+    "link": "https://arxiv.org/abs/2609.05903",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 530,
+    "cached_at": 1789209493.7704566
+  },
+  "330d85f15d9dc267": {
+    "title": "Build interactive MCP Apps using Amazon Bedrock AgentCore",
+    "link": "https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 531,
+    "cached_at": 1789209496.28963
+  },
+  "2f4bc5729494727d": {
+    "title": "NVIDIA PAIR Virtual Inference Router Expands Available Compute on Your Local Network",
+    "link": "https://developer.nvidia.com/blog/nvidia-pair-virtual-inference-router-expands-available-compute-on-your-local-network/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 532,
+    "cached_at": 1789209499.3291495
+  },
+  "4701397f02b8e3cc": {
+    "title": "IBM Quantum Nighthawk r2—more circuits, faster",
+    "link": "https://research.ibm.com/blog/nighthawk-r2?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 533,
+    "cached_at": 1789209502.787624
+  },
+  "cde6039f103f885c": {
+    "title": "System helps humans predict when self-driving cars will make mistakes",
+    "link": "https://news.mit.edu/2026/system-helps-humans-predict-when-self-driving-cars-will-make-mistakes-0902",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 534,
+    "cached_at": 1789209505.3516166
+  },
+  "94bd9d5b1d4a9cda": {
+    "title": "Unveiling the Statistical Foundations of Chain-of-Thought Prompting Methods",
+    "link": "http://jmlr.org/papers/v27/25-2240.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 535,
+    "cached_at": 1789209508.399041
+  },
+  "ae1d7bbea6bb64f4": {
+    "title": "Reward Hacking Resarch Update",
+    "link": "https://blog.eleuther.ai/reward_hacking/",
+    "source": "EleutherAI Blog",
+    "message_id": 536,
+    "cached_at": 1789209510.833839
+  },
+  "fec51d95d54dbb56": {
+    "title": "Building an AI Text Detector From Scratch",
+    "link": "https://magazine.sebastianraschka.com/p/ai-detector-from-scratch",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 537,
+    "cached_at": 1789209513.4410045
+  },
+  "bc65587780a40f67": {
+    "title": "Harness Engineering for Self-Improvement",
+    "link": "https://lilianweng.github.io/posts/2026-07-04-harness/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 538,
+    "cached_at": 1789209516.2055032
+  },
+  "5422165199ac3606": {
+    "title": "How to win a best paper award",
+    "link": "https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html",
+    "source": "Nicholas Carlini",
+    "message_id": 539,
+    "cached_at": 1789209518.9272761
   }
 }
