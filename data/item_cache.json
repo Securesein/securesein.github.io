@@ -3083,5 +3083,110 @@
     "source": "Ahead of AI (Sebastian Raschka)",
     "message_id": 494,
     "cached_at": 1789151090.4329698
+  },
+  "968c32634dc2a1cb": {
+    "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+    "link": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+    "source": "OpenAI News",
+    "message_id": 495,
+    "cached_at": 1789192882.4593978
+  },
+  "7b2efff004017f35": {
+    "title": "OpenAI agents attacked RubyGems back in May",
+    "link": "https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 496,
+    "cached_at": 1789192885.874997
+  },
+  "48d46bfa6a41ef32": {
+    "title": "Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training data",
+    "link": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/",
+    "source": "TechCrunch AI",
+    "message_id": 497,
+    "cached_at": 1789192888.8019905
+  },
+  "bc2e38e9c12b074d": {
+    "title": "Meta Sued Over Training Data for Its AI and Face-Recognition Systems",
+    "link": "https://www.wired.com/story/meta-sued-over-training-data-for-its-ai-and-face-recognition-systems/",
+    "source": "Wired AI",
+    "message_id": 498,
+    "cached_at": 1789192891.741045
+  },
+  "eb2f5e625b9545d3": {
+    "title": "Roundtables: AI’s apocalypse crisis",
+    "link": "https://www.technologyreview.com/2026/09/11/1143936/roundtables-will-ai-really-kill-us-all/",
+    "source": "MIT Technology Review AI",
+    "message_id": 499,
+    "cached_at": 1789192894.2529674
+  },
+  "7af0cd61fc11ce24": {
+    "title": "Lawyer fined $5K over AI-hallucinated witnesses in a murder case",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/994207/chatgpt-new-mexico-lawyer-fined-murder-appeal",
+    "source": "The Verge AI",
+    "message_id": 500,
+    "cached_at": 1789192896.8615043
+  },
+  "c97c825e0e2f0b26": {
+    "title": "Probabilistic Focal Search: Accelerating Bounded-Suboptimal Search via Lower-Bound Advancement",
+    "link": "https://arxiv.org/abs/2609.10584",
+    "source": "arXiv cs.AI",
+    "message_id": 501,
+    "cached_at": 1789192899.8212266
+  },
+  "44f65e419f1f290a": {
+    "title": "HyQuant: Hybrid-Precision Quantization for LLM Attention",
+    "link": "https://arxiv.org/abs/2608.27875",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 502,
+    "cached_at": 1789192902.8712935
+  },
+  "f850aede166d652a": {
+    "title": "Monitoring production agent lifecycle with AWS DevOps Agent and AgentCore Evaluations",
+    "link": "https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 503,
+    "cached_at": 1789192906.2817893
+  },
+  "24c625bae7ea2f5e": {
+    "title": "Health Plans: Your BI Tells You MLR Moved. Can Your AI Tell You Why?",
+    "link": "https://www.databricks.com/blog/health-plans-your-bi-tells-you-mlr-moved-can-your-ai-tell-you-why",
+    "source": "Databricks Blog",
+    "message_id": 504,
+    "cached_at": 1789192909.543716
+  },
+  "15901f186f7335ed": {
+    "title": "CUDA Toolkit 13.4 Adds Windows on Arm Support and Greater Control over Shared GPUs",
+    "link": "https://developer.nvidia.com/blog/cuda-toolkit-13-4-adds-windows-on-arm-support-and-greater-control-over-shared-gpus/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 505,
+    "cached_at": 1789192913.6842897
+  },
+  "22bee03a4a3becf3": {
+    "title": "Cleveland Clinic, RIKEN, IBM named Gordon Bell finalists",
+    "link": "https://research.ibm.com/blog/gordon-bell-finalists-2026?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 506,
+    "cached_at": 1789192917.6701279
+  },
+  "5a44a55390429460": {
+    "title": "MIT Schwarzman College of Computing launches pilot to help educators teach AI across disciplines",
+    "link": "https://news.mit.edu/2026/mit-schwarzman-college-computing-launches-pilot-help-educators-teach-ai-across-disciplines-0909",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 507,
+    "cached_at": 1789192920.8486228
+  },
+  "1e794522b4bb25c9": {
+    "title": "MarkDiffusion: An Open-Source Toolkit for Generative Watermarking of Latent Diffusion Models",
+    "link": "http://jmlr.org/papers/v27/25-2553.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 508,
+    "cached_at": 1789192923.7321765
+  },
+  "7af73fc3caee2d28": {
+    "title": "A Dynamical Model of AI Governability",
+    "link": "https://blog.eleuther.ai/dynamical-models-of-ai-governability/",
+    "source": "EleutherAI Blog",
+    "message_id": 509,
+    "cached_at": 1789192926.888023
   }
 }
