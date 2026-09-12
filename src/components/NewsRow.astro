@@ -52,9 +52,11 @@ const { data } = post;
     gap: 0.2rem 1rem;
     padding: 1.05rem 0 1.05rem 1.1rem;
     border-top: 1px solid var(--rule);
-    /* The News marker: a 2px rule in the muted grey, never the accent.
-       Structure, not colour, is what separates the lanes. */
-    border-left: 2px solid var(--text-muted);
+    /* The News marker: a 2px rule, never the accent — structure, not
+       colour, separates the lanes. Kept at the soft border tone rather
+       than the darker muted text: stacked rows turn a dark 2px border
+       into one heavy vertical stripe in light mode. */
+    border-left: 2px solid var(--border-strong);
   }
   .news-row > time {
     color: var(--text-muted);
