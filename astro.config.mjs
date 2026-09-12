@@ -2,7 +2,12 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
+/** @returns {import("unified").Transformer<any>} */
 function remarkReadingTime() {
+  /**
+   * @param {any} tree
+   * @param {any} file
+   */
   return function (tree, file) {
     const text = toText(tree);
     const words = text.split(/\s+/).filter(Boolean).length;
@@ -11,6 +16,7 @@ function remarkReadingTime() {
   };
 }
 
+/** @param {any} node @returns {string} */
 function toText(node) {
   if (node.value) return node.value;
   if (node.children) return node.children.map(toText).join(" ");

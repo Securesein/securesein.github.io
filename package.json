@@ -21,8 +21,10 @@
     "astro": "^7.2.10"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
     "js-yaml": "^4.1.0",
-    "pagefind": "^1.5.2"
+    "pagefind": "^1.5.2",
+    "typescript": "^6.0.3"
   },
   "allowScripts": {
     "esbuild": true
