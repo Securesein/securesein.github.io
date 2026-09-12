@@ -1403,5 +1403,2105 @@
     "source": "Amazon Science",
     "message_id": 246,
     "cached_at": 1788948264.4974442
+  },
+  "d71f01295af42d46": {
+    "title": "OpenAI Jalapeño 🌶️, Perplexity Portable Computer  💻, Claude combines memory 🧠",
+    "link": "https://tldr.tech/ai/2026-08-26",
+    "source": "TLDR AI",
+    "message_id": 249,
+    "cached_at": 1788962565.1646054
+  },
+  "2bfc2c31d1ed21b0": {
+    "title": "Building and procuring sustainable Defence AI will boost force resilience",
+    "link": "https://www.turing.ac.uk/news/building-and-procuring-sustainable-defence-ai-will-boost-force-resilience",
+    "source": "Turing News",
+    "message_id": 250,
+    "cached_at": 1788962566.8315217
+  },
+  "a1b72811dd254b50": {
+    "title": "1Password increases engineering productivity 21% with Codex",
+    "link": "https://openai.com/index/1password",
+    "source": "OpenAI News",
+    "message_id": 251,
+    "cached_at": 1788962570.143026
+  },
+  "78524e1fb74fd82c": {
+    "title": "Introducing ChatGPT Images 2.5",
+    "link": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 252,
+    "cached_at": 1788962573.807691
+  },
+  "e44ec9815e67584e": {
+    "title": "Sequoia doubles down on Cymphony as AI agents create new enterprise security risks",
+    "link": "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/",
+    "source": "TechCrunch AI",
+    "message_id": 253,
+    "cached_at": 1788962577.080447
+  },
+  "b793230d83f5b368": {
+    "title": "A Stealth Startup Thinks It Just Hacked the Memory Shortage",
+    "link": "https://www.wired.com/story/a-new-dollar400-million-startup-wants-to-fix-the-ai-memory-bottleneck/",
+    "source": "Wired AI",
+    "message_id": 254,
+    "cached_at": 1788962580.4325624
+  },
+  "ab98541bb7cfb320": {
+    "title": "CloudNC aims to accelerate AI supply chain machining",
+    "link": "https://www.artificialintelligence-news.com/news/cloudnc-aims-to-accelerate-ai-supply-chain-machining/",
+    "source": "AI News",
+    "message_id": 255,
+    "cached_at": 1788962585.3759115
+  },
+  "c82a0d8d12038a0e": {
+    "title": "NVIDIA Announces CUDA Rust with cuda-oxide (SIMT) and cutile-rs (Tile) for Compile-Time-Safe GPU Kernels",
+    "link": "https://www.marktechpost.com/2026/09/08/nvidia-announces-cuda-rust-with-cuda-oxide-simt-and-cutile-rs-tile-for-compile-time-safe-gpu-kernels/",
+    "source": "MarkTechPost",
+    "message_id": 256,
+    "cached_at": 1788962588.128192
+  },
+  "49c0e8d66bbc9b85": {
+    "title": "Build an AI Data Analyst That Thinks Like a Senior Analyst",
+    "link": "https://www.kdnuggets.com/build-an-ai-data-analyst-that-thinks-like-a-senior-analyst",
+    "source": "KDnuggets",
+    "message_id": 257,
+    "cached_at": 1788962590.8798022
+  },
+  "ad3764223cfc5bbf": {
+    "title": "Amazon Prime Video’s new AI tech matches lips to dubbed audio",
+    "link": "https://www.theverge.com/tech/991809/amazon-prime-video-ai-lip-sync-dubbing",
+    "source": "The Verge AI",
+    "message_id": 258,
+    "cached_at": 1788962594.5592
+  },
+  "c718e258b306c0cd": {
+    "title": "When Does Memory Help? A Cost-Aware Evaluation of Long-Term Memory in Tool-Using LLM Agents",
+    "link": "https://arxiv.org/abs/2609.05441",
+    "source": "arXiv cs.AI",
+    "message_id": 259,
+    "cached_at": 1788962597.4233968
+  },
+  "1a9c84d0425c66c5": {
+    "title": "Better Together: Complementary Query Rewriting Under a Strong RAG Baseline",
+    "link": "https://arxiv.org/abs/2609.05637",
+    "source": "arXiv cs.CL",
+    "message_id": 260,
+    "cached_at": 1788962600.5068295
+  },
+  "5ee2d3c624a26e37": {
+    "title": "Multi-granularity Adaptive Hypergraph Representation Learning via Granular-ball",
+    "link": "https://arxiv.org/abs/2609.05574",
+    "source": "arXiv cs.LG",
+    "message_id": 261,
+    "cached_at": 1788962603.8391652
+  },
+  "07c872547d4b62c6": {
+    "title": "An Exploratory Study of Frequency-Aware Task Weighting for YOLOv8-Based Unified Driving Perception",
+    "link": "https://arxiv.org/abs/2609.05516",
+    "source": "arXiv cs.CV",
+    "message_id": 262,
+    "cached_at": 1788962606.789764
+  },
+  "be70a7bbb80f22f5": {
+    "title": "SimpleMemVLA: A Simple but Effective Native-Video Memory for Vision-Language-Action Models",
+    "link": "https://arxiv.org/abs/2609.05533",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 263,
+    "cached_at": 1788962610.1216362
+  },
+  "3c04cb3557a1cc65": {
+    "title": "AI spend per employee slumped at top firms in August — summer doldrums or a warning sign?",
+    "link": "https://techcrunch.com/2026/09/09/ai-spend-per-employee-slumped-at-top-firms-in-august-summer-doldrums-or-a-warning-sign/",
+    "source": "TechCrunch AI",
+    "message_id": 264,
+    "cached_at": 1788964053.3923721
+  },
+  "6aa7ec0a659c1be7": {
+    "title": "7 Approaches to Efficient LLM Training on Limited Hardware",
+    "link": "https://www.kdnuggets.com/7-approaches-to-efficient-llm-training-on-limited-hardware",
+    "source": "KDnuggets",
+    "message_id": 265,
+    "cached_at": 1788964056.5990157
+  },
+  "4dd688d72259b19c": {
+    "title": "Students who use AI generally score worse at school",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/991956/student-ai-use-scores-oecd-pisa",
+    "source": "The Verge AI",
+    "message_id": 266,
+    "cached_at": 1788964059.8637848
+  },
+  "0d756038e034fce3": {
+    "title": "AutoFyn Technical Report: Non-Parametric Expert Iteration for Long-Horizon Agents",
+    "link": "https://arxiv.org/abs/2609.05446",
+    "source": "arXiv cs.AI",
+    "message_id": 267,
+    "cached_at": 1788964064.9403996
+  },
+  "7f9ccc928b0ef96c": {
+    "title": "Who Maintains Agent Skills? A Longitudinal Study of Human-Governed, AI-Assisted Skill Maintenance",
+    "link": "https://arxiv.org/abs/2609.05677",
+    "source": "arXiv cs.CL",
+    "message_id": 268,
+    "cached_at": 1788964067.5894687
+  },
+  "9e4c97459638da6b": {
+    "title": "Capsule Lens: Locating and Tracking Concept Geometry in Model Representations",
+    "link": "https://arxiv.org/abs/2609.05575",
+    "source": "arXiv cs.LG",
+    "message_id": 269,
+    "cached_at": 1788964072.9710555
+  },
+  "74f389b2a8da9ebe": {
+    "title": "Emergent Goal-Directed Attention in Large Vision-Language Models",
+    "link": "https://arxiv.org/abs/2609.05517",
+    "source": "arXiv cs.CV",
+    "message_id": 270,
+    "cached_at": 1788964076.9236293
+  },
+  "3197c63815c71ee6": {
+    "title": "Unifying Conformal Language Tasks with In-Context Ensembles",
+    "link": "https://arxiv.org/abs/2609.03005",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 271,
+    "cached_at": 1788964079.4471872
+  },
+  "71c43cf780d371ee": {
+    "title": "Piloting the world's first double-blind AI evaluations",
+    "link": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+    "source": "Google DeepMind Blog",
+    "message_id": 272,
+    "cached_at": 1788964082.1039374
+  },
+  "16b919027b43c28e": {
+    "title": "AgentHands: Generating interactive hand gestures for spatially grounded agent conversations in XR",
+    "link": "https://research.google/blog/agenthands-generating-interactive-hand-gestures-for-spatially-grounded-agent-conversations-in-xr/",
+    "source": "Google Research Blog",
+    "message_id": 273,
+    "cached_at": 1788964084.788199
+  },
+  "abaed39cbc9c9b42": {
+    "title": "5 new ways to level up your learning with Search",
+    "link": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
+    "source": "Google AI Blog",
+    "message_id": 274,
+    "cached_at": 1788964088.271651
+  },
+  "3df33ea1c689ea7c": {
+    "title": "IDEA Prune: An Integrated Enlarge-and-Prune Pipeline in Generative Language Model Pretraining",
+    "link": "https://machinelearning.apple.com/research/idea-prune-pipeline",
+    "source": "Apple Machine Learning Research",
+    "message_id": 275,
+    "cached_at": 1788964090.9155717
+  },
+  "8f0ecee285483adc": {
+    "title": "34 Amazon Research Awards Build on Trainium recipients announced",
+    "link": "https://www.amazon.science/research-awards/latest-news/34-amazon-research-awards-build-on-trainium-recipients-announced",
+    "source": "Amazon Science",
+    "message_id": 276,
+    "cached_at": 1788964094.2514741
+  },
+  "0dc9258765d942bf": {
+    "title": "Take on your most ambitious work with GPT-6 Astra on Amazon Bedrock",
+    "link": "https://aws.amazon.com/blogs/machine-learning/take-on-your-most-ambitious-work-with-gpt-6-astra-on-amazon-bedrock/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 277,
+    "cached_at": 1788964096.6586232
+  },
+  "9dba62cbb9d1736b": {
+    "title": "Adaptive Instructed-Retriever: Frontier-Quality Search at 2x Lower Latency",
+    "link": "https://www.databricks.com/blog/adaptive-instructed-retriever-frontier-quality-search-2x-lower-latency",
+    "source": "Databricks Blog",
+    "message_id": 278,
+    "cached_at": 1788964099.189459
+  },
+  "3eb3e9557eb7038e": {
+    "title": "Paul Christiano joins OpenAI Foundation Board",
+    "link": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+    "source": "OpenAI News",
+    "message_id": 279,
+    "cached_at": 1788976886.0543008
+  },
+  "46660cb2ea4362f6": {
+    "title": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
+    "link": "https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series",
+    "source": "Hugging Face Blog",
+    "message_id": 280,
+    "cached_at": 1788976888.9910989
+  },
+  "4bd74036563787bd": {
+    "title": "NVIDIA Brings Real-Time AI to Broadcast, Sports and Global Streaming at IBC",
+    "link": "https://blogs.nvidia.com/blog/ibc-news-2026/",
+    "source": "NVIDIA Blog",
+    "message_id": 281,
+    "cached_at": 1788976893.8850436
+  },
+  "ffe0b72566969417": {
+    "title": "Apple CEO John Ternus says the best AI device is still the iPhone",
+    "link": "https://techcrunch.com/2026/09/09/apple-ceo-john-ternus-says-the-best-ai-device-is-still-the-iphone/",
+    "source": "TechCrunch AI",
+    "message_id": 282,
+    "cached_at": 1788976896.8458436
+  },
+  "a579fccc1aba1528": {
+    "title": "Anthropic researcher quits with a warning: Self-improving AI could \"kill us all\"",
+    "link": "https://arstechnica.com/ai/2026/09/anthropic-researcher-quits-with-a-warning-self-improving-ai-could-kill-us-all/",
+    "source": "Ars Technica AI",
+    "message_id": 283,
+    "cached_at": 1788976899.8942308
+  },
+  "0a90e55cc0475eea": {
+    "title": "Samsung taps Mistral AI models for semiconductor manufacturing",
+    "link": "https://www.artificialintelligence-news.com/news/samsung-mistral-ai-models-for-semiconductor-manufacturing/",
+    "source": "AI News",
+    "message_id": 284,
+    "cached_at": 1788976903.7445335
+  },
+  "90853d31086438fb": {
+    "title": "Google DeepMind Releases AlphaGenome Atlas With Precomputed Molecular Effect Predictions and AVI Scores for 9 Billion Human DNA Variants",
+    "link": "https://www.marktechpost.com/2026/09/08/google-deepmind-releases-alphagenome-atlas-with-precomputed-molecular-effect-predictions-and-avi-scores-for-9-billion-human-dna-variants/",
+    "source": "MarkTechPost",
+    "message_id": 285,
+    "cached_at": 1788976906.4889724
+  },
+  "7f49826f4edc006b": {
+    "title": "Microsoft has new AI privacy rules for schools",
+    "link": "https://www.theverge.com/policy/992359/microsoft-aft-schools-ai-privacy",
+    "source": "The Verge AI",
+    "message_id": 286,
+    "cached_at": 1788976909.026463
+  },
+  "4decffadab164b7c": {
+    "title": "Damage-Aware Bandit Pruning for Vision and Language Transformers",
+    "link": "https://arxiv.org/abs/2609.05448",
+    "source": "arXiv cs.AI",
+    "message_id": 287,
+    "cached_at": 1788976912.2770545
+  },
+  "75cc7f5cce7dd81f": {
+    "title": "A Rubric-Guided Large Language Model Solution for Opioid Use Disorder Computable Phenotyping",
+    "link": "https://arxiv.org/abs/2609.05682",
+    "source": "arXiv cs.CL",
+    "message_id": 288,
+    "cached_at": 1788976914.7962291
+  },
+  "03075fbdb5cebbc8": {
+    "title": "HB-PVI: A Hierarchical Bayesian Personalization and Value-of-Information Framework for Complex Activity Recognition",
+    "link": "https://arxiv.org/abs/2609.05582",
+    "source": "arXiv cs.LG",
+    "message_id": 289,
+    "cached_at": 1788976918.222596
+  },
+  "fd161d788326f22b": {
+    "title": "CrossModalQA: A Cross-modal and Multi-hop Benchmark for Multimodal Retrieval-augmented Generation",
+    "link": "https://arxiv.org/abs/2609.05518",
+    "source": "arXiv cs.CV",
+    "message_id": 290,
+    "cached_at": 1788976921.2065835
+  },
+  "7d986e0d54bb1cb3": {
+    "title": "Verify Before You Distill: Prompt-Level Teacher Gating for On-Policy Distillation",
+    "link": "https://arxiv.org/abs/2609.02998",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 291,
+    "cached_at": 1788976924.5027163
+  },
+  "ac6eb9276806c2f8": {
+    "title": "Intelligent transcription with Gemini 3.5 Transcribe",
+    "link": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
+    "source": "Google DeepMind Blog",
+    "message_id": 292,
+    "cached_at": 1788976927.6270754
+  },
+  "a21cee4b91bda9f5": {
+    "title": "An AI tool for prioritizing candidate biomarkers from wearable sensor data",
+    "link": "https://research.google/blog/an-ai-tool-for-prioritizing-candidate-biomarkers-from-wearable-sensor-data/",
+    "source": "Google Research Blog",
+    "message_id": 293,
+    "cached_at": 1788976930.125809
+  },
+  "b96bfe3652146112": {
+    "title": "Apple’s revamped Health app will calculate your ‘health age’ and readiness score",
+    "link": "https://techcrunch.com/2026/09/09/apples-revamped-health-app-will-calculate-your-health-age-and-readiness-score/",
+    "source": "TechCrunch AI",
+    "message_id": 294,
+    "cached_at": 1788978651.0893254
+  },
+  "a5e5940f84aa9e87": {
+    "title": "ChatGPT Sketch turns your bad drawings into detailed AI images",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/991727/openai-chatgpt-images-2-5-sketch",
+    "source": "The Verge AI",
+    "message_id": 295,
+    "cached_at": 1788978654.0139747
+  },
+  "c6071060ec984011": {
+    "title": "Compiling VGDL into Causal Models",
+    "link": "https://arxiv.org/abs/2609.05459",
+    "source": "arXiv cs.AI",
+    "message_id": 296,
+    "cached_at": 1788978657.999197
+  },
+  "ebc22792003934cf": {
+    "title": "Intra-Prompt Parallel Decoding for Common-Context Question Answering",
+    "link": "https://arxiv.org/abs/2609.05707",
+    "source": "arXiv cs.CL",
+    "message_id": 297,
+    "cached_at": 1788978661.0372057
+  },
+  "8e63ab8511ccc4b3": {
+    "title": "Endogenous Exploration in Reinforcement Learning with Intrinsic Curiosity",
+    "link": "https://arxiv.org/abs/2609.05650",
+    "source": "arXiv cs.LG",
+    "message_id": 298,
+    "cached_at": 1788978664.0306919
+  },
+  "cabeab30a4247d93": {
+    "title": "Contrastive Knowledge Distillation for Anomaly Detection in Multi-Illumination/Focus Display Images",
+    "link": "https://arxiv.org/abs/2609.05520",
+    "source": "arXiv cs.CV",
+    "message_id": 299,
+    "cached_at": 1788978667.2261279
+  },
+  "65cacb74f908c544": {
+    "title": "Causal Foundation Models",
+    "link": "https://arxiv.org/abs/2609.03003",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 300,
+    "cached_at": 1788978669.746792
+  },
+  "835a331a5b20ce16": {
+    "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+    "link": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+    "source": "Google DeepMind Blog",
+    "message_id": 301,
+    "cached_at": 1788978672.3308947
+  },
+  "4f98c5029119950e": {
+    "title": "How mobility gives language models a deeper understanding of place",
+    "link": "https://research.google/blog/how-mobility-gives-language-models-a-deeper-understanding-of-place/",
+    "source": "Google Research Blog",
+    "message_id": 302,
+    "cached_at": 1788978675.0298312
+  },
+  "73af7527f82e0ada": {
+    "title": "Get ready for the game with new football features in Search",
+    "link": "https://blog.google/products-and-platforms/products/search/football-features-google-search/",
+    "source": "Google AI Blog",
+    "message_id": 303,
+    "cached_at": 1788978677.845626
+  },
+  "73fb00b9a74c14ff": {
+    "title": "Luce: Relightable Gaussians for 3D Asset Generation",
+    "link": "https://machinelearning.apple.com/research/relightable-gaussians-3d-generation",
+    "source": "Apple Machine Learning Research",
+    "message_id": 304,
+    "cached_at": 1788978680.6287708
+  },
+  "ebac5287cf1f4cd6": {
+    "title": "How controllers from industrial machinery can coordinate multitask machine learning",
+    "link": "https://www.amazon.science/blog/how-controllers-from-industrial-machinery-can-coordinate-multitask-machine-learning",
+    "source": "Amazon Science",
+    "message_id": 305,
+    "cached_at": 1788978683.1117644
+  },
+  "5b2f01c74deb67e7": {
+    "title": "How Heurist Finance built an AI-native investment workbench on Amazon Bedrock AgentCore",
+    "link": "https://aws.amazon.com/blogs/machine-learning/how-heurist-finance-built-an-ai-native-investment-workbench-on-amazon-bedrock-agentcore/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 306,
+    "cached_at": 1788978685.949706
+  },
+  "973ccf0e6944ad42": {
+    "title": "A practical approach to end-to-end Solvency II reporting in Databricks",
+    "link": "https://www.databricks.com/blog/practical-approach-end-end-solvency-ii-reporting-databricks",
+    "source": "Databricks Blog",
+    "message_id": 307,
+    "cached_at": 1788978688.8234177
+  },
+  "d3645ec1a40924bd": {
+    "title": "How We’re Building Scam Alert on WhatsApp With End-to-End Encryption and Verifiability Guarantees",
+    "link": "https://engineering.fb.com/2026/08/12/security/how-were-building-scam-alert-whatsapp/",
+    "source": "Engineering at Meta",
+    "message_id": 308,
+    "cached_at": 1788978691.5481951
+  },
+  "a7c183de5112de47": {
+    "title": "The AI policy window is open. We need to act.",
+    "link": "https://openai.com/index/ai-policy-window",
+    "source": "OpenAI News",
+    "message_id": 309,
+    "cached_at": 1789020090.4325666
+  },
+  "8bb8a5d2f8afb2a8": {
+    "title": "Quoting Calif Research",
+    "link": "https://simonwillison.net/2026/Sep/10/calif-research/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 310,
+    "cached_at": 1789020093.7324023
+  },
+  "3105def6eeb95a45": {
+    "title": "AI research startup Listen Labs scrubbed a $1.5B funding round for Salesforce talks",
+    "link": "https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/",
+    "source": "TechCrunch AI",
+    "message_id": 311,
+    "cached_at": 1789020096.3359885
+  },
+  "6a9b6b354bd2470b": {
+    "title": "The AI Researcher Who Just Quit Anthropic Says It’s ‘Crunch Time for Humanity’",
+    "link": "https://www.wired.com/story/anthropic-researcher-quits-jacob-coxon-ai-fears-humanity/",
+    "source": "Wired AI",
+    "message_id": 312,
+    "cached_at": 1789020099.507229
+  },
+  "8564d4a4c6b88312": {
+    "title": "Suno releases its first AI music model made with record industry help",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/991977/suno-releases-its-first-ai-music-model-made-with-record-industry-help",
+    "source": "The Verge AI",
+    "message_id": 313,
+    "cached_at": 1789020102.5080714
+  },
+  "c47e511d7c6f6049": {
+    "title": "OpenDiscoveryTrace: Process Traces for Evaluating AI Scientist Workflows",
+    "link": "https://arxiv.org/abs/2609.09203",
+    "source": "arXiv cs.AI",
+    "message_id": 314,
+    "cached_at": 1789020105.2743835
+  },
+  "6f1876b24efc97d2": {
+    "title": "X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding",
+    "link": "https://arxiv.org/abs/2609.09166",
+    "source": "arXiv cs.CL",
+    "message_id": 315,
+    "cached_at": 1789020108.186265
+  },
+  "4506abd845d866ab": {
+    "title": "Spectral origin of the topological gap exponent d + {\\eta}: mechanism, kernel, decomposition, and scope",
+    "link": "https://arxiv.org/abs/2609.09159",
+    "source": "arXiv cs.LG",
+    "message_id": 316,
+    "cached_at": 1789020111.7486296
+  },
+  "c6b8b795e58e2590": {
+    "title": "Evidence-Order Calibration for Selective Visual Reasoning under Progressive Loss of Question-Critical Evidence",
+    "link": "https://arxiv.org/abs/2609.09184",
+    "source": "arXiv cs.CV",
+    "message_id": 317,
+    "cached_at": 1789020114.4933813
+  },
+  "8a69825c315df997": {
+    "title": "Recognition-Refusal Misalignment in LLMs: Why Models Answer Structurally Unanswerable Questions",
+    "link": "https://arxiv.org/abs/2608.29109",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 318,
+    "cached_at": 1789020117.4001591
+  },
+  "43643a3dd841363b": {
+    "title": "Introducing Gemini 3.7 Flash",
+    "link": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+    "source": "Google DeepMind Blog",
+    "message_id": 319,
+    "cached_at": 1789020120.4144468
+  },
+  "3610856e0c1fd406": {
+    "title": "Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery",
+    "link": "https://research.google/blog/seeing-beyond-bmi-estimating-cardiometabolic-risk-with-smartphone-imagery/",
+    "source": "Google Research Blog",
+    "message_id": 320,
+    "cached_at": 1789020123.0822883
+  },
+  "82b8bf7db8ec7233": {
+    "title": "Recreating a 70-year love story frame by frame",
+    "link": "https://blog.google/innovation-and-ai/technology/ai/love-rendered-film/",
+    "source": "Google AI Blog",
+    "message_id": 321,
+    "cached_at": 1789020125.8963108
+  },
+  "fcad62dadc164ac0": {
+    "title": "STARFlow2: Bridging Language Models and Normalizing Flows for Unified Multimodal Generation",
+    "link": "https://machinelearning.apple.com/research/starflow2-multimodal-generation",
+    "source": "Apple Machine Learning Research",
+    "message_id": 322,
+    "cached_at": 1789020129.010191
+  },
+  "e9306b21f52e1679": {
+    "title": "A new benchmark for evaluating patient-facing health AI agents",
+    "link": "https://www.amazon.science/blog/a-new-benchmark-for-evaluating-patient-facing-health-ai-agents",
+    "source": "Amazon Science",
+    "message_id": 323,
+    "cached_at": 1789020131.9080439
+  },
+  "333ccaae81484d3a": {
+    "title": "GPT-6 Astra: The next generation in intelligence for work",
+    "link": "https://openai.com/index/gpt-6-astra-next-generation-work",
+    "source": "OpenAI News",
+    "message_id": 326,
+    "cached_at": 1789034538.9575076
+  },
+  "46bc2da24ce54d4e": {
+    "title": ".blend URL Viewer",
+    "link": "https://simonwillison.net/2026/Sep/9/blender-viewer/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 327,
+    "cached_at": 1789034541.5275016
+  },
+  "9b1339840542b6a6": {
+    "title": "OpenAI adds a prominent AI doomer to its board of directors",
+    "link": "https://techcrunch.com/2026/09/09/openai-adds-a-prominent-ai-doomer-to-its-board-of-directors/",
+    "source": "TechCrunch AI",
+    "message_id": 328,
+    "cached_at": 1789034544.2847948
+  },
+  "fad36c10f953e9cf": {
+    "title": "San Francisco Orders Meta to Stop ‘Allowing’ AI Child Abuse Ads",
+    "link": "https://www.wired.com/story/san-francisco-orders-meta-to-stop-allowing-ai-child-abuse-ads/",
+    "source": "Wired AI",
+    "message_id": 329,
+    "cached_at": 1789034546.8048134
+  },
+  "b13d654fc7eaab6c": {
+    "title": "JD.com expands physical AI in logistics with 3 million robots",
+    "link": "https://www.artificialintelligence-news.com/news/jd-com-physical-ai-logistics-3-million-robots/",
+    "source": "AI News",
+    "message_id": 330,
+    "cached_at": 1789034550.0320365
+  },
+  "1aca4935d2f6e911": {
+    "title": "DeepSeek AI Released DeepSeek-V4.1-Flash with 1M Context, FP4 KV Cache, and Cross-Layer Attention Reuse",
+    "link": "https://www.marktechpost.com/2026/09/10/deepseek-ai-released-deepseek-v4-1-flash-with-1m-context-fp4-kv-cache-and-cross-layer-attention-reuse/",
+    "source": "MarkTechPost",
+    "message_id": 331,
+    "cached_at": 1789034555.455983
+  },
+  "8d54077b46595e1b": {
+    "title": "OpenAI’s sly mathematical breakthrough sends a chill through academia",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes",
+    "source": "The Verge AI",
+    "message_id": 332,
+    "cached_at": 1789034557.558438
+  },
+  "e5ce9e32a0b2b622": {
+    "title": "Adaptive Entangled Game Modules in Artificial General Intelligence",
+    "link": "https://arxiv.org/abs/2609.09226",
+    "source": "arXiv cs.AI",
+    "message_id": 333,
+    "cached_at": 1789034560.2043378
+  },
+  "b9178ac3935fd770": {
+    "title": "StochBench: A Domain-Specific Benchmark for Stochastic Processes in Lean",
+    "link": "https://arxiv.org/abs/2609.09264",
+    "source": "arXiv cs.CL",
+    "message_id": 334,
+    "cached_at": 1789034562.7987063
+  },
+  "61b62e5e0dcabe94": {
+    "title": "Physics-informed neural networks by Gradient-Guided Gaussian Adaptive Sampling (3GAS-PINNs)",
+    "link": "https://arxiv.org/abs/2609.09162",
+    "source": "arXiv cs.LG",
+    "message_id": 335,
+    "cached_at": 1789034565.497248
+  },
+  "e2602bdb90591ac5": {
+    "title": "Integrating Unimodal and Vision-Language Representations in Latent Space for Multi-Label Chest X-Ray Classification",
+    "link": "https://arxiv.org/abs/2609.09185",
+    "source": "arXiv cs.CV",
+    "message_id": 336,
+    "cached_at": 1789034567.7923496
+  },
+  "989b1e2b951f4f9a": {
+    "title": "StudyBench: Can Self-Evolution Squeeze Textbooks for Olympiad Capability?",
+    "link": "https://arxiv.org/abs/2609.00787",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 337,
+    "cached_at": 1789034570.1810064
+  },
+  "4001c007c7b53144": {
+    "title": "Get closer to the game with Gemini and Pixel",
+    "link": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/",
+    "source": "Google AI Blog",
+    "message_id": 338,
+    "cached_at": 1789034572.7852757
+  },
+  "622dfef4414b42ae": {
+    "title": "Beyond Visual CoT: Internalized Visual Thinking for Proactive Video Reasoning",
+    "link": "https://machinelearning.apple.com/research/internalized-visual-thinking",
+    "source": "Apple Machine Learning Research",
+    "message_id": 339,
+    "cached_at": 1789034575.521736
+  },
+  "78190ca6d25612da": {
+    "title": "Amazon is investing in the Lean Focused Research Organization",
+    "link": "https://www.amazon.science/news/amazon-is-investing-in-the-lean-focused-research-organization",
+    "source": "Amazon Science",
+    "message_id": 340,
+    "cached_at": 1789034577.6892903
+  },
+  "c7236dda092fc80b": {
+    "title": "GLM-5.3 Flash ⚡, Claudeforce 🤝, NVIDIA revenue surge 📈",
+    "link": "https://tldr.tech/ai/2026-08-27",
+    "source": "TLDR AI",
+    "message_id": 341,
+    "cached_at": 1789048891.0897355
+  },
+  "075fed980e67c694": {
+    "title": "Rebuilding AUTOMATIC1111 with Gradio Workflow",
+    "link": "https://huggingface.co/blog/gradio-workflow-1111",
+    "source": "Hugging Face Blog",
+    "message_id": 342,
+    "cached_at": 1789048894.3461437
+  },
+  "0b4b6e75bc7d33ed": {
+    "title": "d-Matrix Adopts NVIDIA NVLink Fusion for Rack-Scale XPU Deployment",
+    "link": "https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/",
+    "source": "NVIDIA Blog",
+    "message_id": 343,
+    "cached_at": 1789048897.6398902
+  },
+  "3c30b064b84748f8": {
+    "title": "Massachusetts hits data centers with new clean power rules",
+    "link": "https://techcrunch.com/2026/09/09/massachusetts-hits-data-centers-with-new-clean-power-rules/",
+    "source": "TechCrunch AI",
+    "message_id": 344,
+    "cached_at": 1789048901.0920312
+  },
+  "4e0bb402f02714ac": {
+    "title": "Everything New You Can Do With Siri AI",
+    "link": "https://www.wired.com/story/everything-new-you-can-do-with-siri-ai/",
+    "source": "Wired AI",
+    "message_id": 345,
+    "cached_at": 1789048904.9001892
+  },
+  "2b7e785526801176": {
+    "title": "Powering AI is an architecture problem",
+    "link": "https://www.technologyreview.com/2026/09/10/1141649/powering-ai-is-an-architecture-problem/",
+    "source": "MIT Technology Review AI",
+    "message_id": 346,
+    "cached_at": 1789048907.841847
+  },
+  "83c4392e2379b43f": {
+    "title": "LandingAI Releases Agentic Document Extraction Gen2 with DPT-3 Pro and DPT-3 Verity",
+    "link": "https://www.marktechpost.com/2026/09/09/landingai-releases-agentic-document-extraction-gen2-with-dpt-3-pro-and-dpt-3-verity/",
+    "source": "MarkTechPost",
+    "message_id": 347,
+    "cached_at": 1789048910.7809925
+  },
+  "cd2ef90df8760687": {
+    "title": "7 Steps to Become a Forward Deployed Engineer in 2026",
+    "link": "https://www.kdnuggets.com/7-steps-to-become-a-forward-deployed-engineer-in-2026",
+    "source": "KDnuggets",
+    "message_id": 348,
+    "cached_at": 1789048913.474111
+  },
+  "c3a0d1fe00427592": {
+    "title": "Read the Apple document explaining how new listening features still protect your privacy",
+    "link": "https://www.theverge.com/tech/992919/apple-siri-ai-audio-intelligence-privacy",
+    "source": "The Verge AI",
+    "message_id": 349,
+    "cached_at": 1789048916.3856764
+  },
+  "b4a42575dd0dd18d": {
+    "title": "Subagents vs Agent Skills: Executing Reusable Knowledge for Long-Horizon Agentic Tasks",
+    "link": "https://arxiv.org/abs/2609.09233",
+    "source": "arXiv cs.AI",
+    "message_id": 350,
+    "cached_at": 1789048919.1678498
+  },
+  "297f2c797f4497f7": {
+    "title": "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+    "link": "https://arxiv.org/abs/2609.09338",
+    "source": "arXiv cs.CL",
+    "message_id": 351,
+    "cached_at": 1789048922.2471213
+  },
+  "983b916a25fbfe4a": {
+    "title": "World-Time Compute with Verified Code World Models",
+    "link": "https://arxiv.org/abs/2609.09163",
+    "source": "arXiv cs.LG",
+    "message_id": 352,
+    "cached_at": 1789048925.4377089
+  },
+  "fb7b8e2a1558744f": {
+    "title": "M2LG-DG: A Multi-modal Local-Global Domain Generalization Framework for Cross-site Major Depressive Disorder Classification",
+    "link": "https://arxiv.org/abs/2609.09186",
+    "source": "arXiv cs.CV",
+    "message_id": 353,
+    "cached_at": 1789048928.8789463
+  },
+  "eab80780abedb3a0": {
+    "title": "MasterControl Seventeen Every Time",
+    "link": "https://arxiv.org/abs/2609.03209",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 354,
+    "cached_at": 1789048931.7854085
+  },
+  "d00944e12348f9f2": {
+    "title": "Bring your spreadsheet data to life with Sheets canvas",
+    "link": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/",
+    "source": "Google AI Blog",
+    "message_id": 355,
+    "cached_at": 1789048934.311453
+  },
+  "fee72947a02169d8": {
+    "title": "Boots on the Ground: ‘WARDOGS’ Goes All Out on GeForce NOW at Early-Access Launch",
+    "link": "https://blogs.nvidia.com/blog/geforce-now-thursday-wardogs/",
+    "source": "NVIDIA Blog",
+    "message_id": 356,
+    "cached_at": 1789049933.3655505
+  },
+  "8a94d361c08cece9": {
+    "title": "Maven Robotics wants to steal your robot deployment deal",
+    "link": "https://techcrunch.com/2026/09/10/maven-robotics-wants-to-steal-your-robot-deployment-deal/",
+    "source": "TechCrunch AI",
+    "message_id": 357,
+    "cached_at": 1789049936.231528
+  },
+  "62171ad40c959f22": {
+    "title": "Clearview AI Is Testing an AI Tool That Would Let Cops Unearth Your Life Online",
+    "link": "https://www.wired.com/story/clearview-ai-is-testing-an-ai-tool-that-lets-cops-instantly-unearth-your-online-activity/",
+    "source": "Wired AI",
+    "message_id": 358,
+    "cached_at": 1789049941.001627
+  },
+  "7f3545919a0c6e5a": {
+    "title": "5 Useful Python Scripts to Automate CSV Processing",
+    "link": "https://www.kdnuggets.com/5-useful-python-scripts-to-automate-csv-processing",
+    "source": "KDnuggets",
+    "message_id": 359,
+    "cached_at": 1789049943.5858383
+  },
+  "1ddcac0da9be0665": {
+    "title": "Why the current tech backlash feels different",
+    "link": "https://www.theverge.com/podcast/992141/decoder-mailbag-ai-backlash-surveillance-midterms-data-centers",
+    "source": "The Verge AI",
+    "message_id": 360,
+    "cached_at": 1789049947.7782366
+  },
+  "e2030e32d28f41ad": {
+    "title": "Gradland: On Phenomenal Experience, Differentiated Across Many Dimensions",
+    "link": "https://arxiv.org/abs/2609.09306",
+    "source": "arXiv cs.AI",
+    "message_id": 361,
+    "cached_at": 1789049950.3449419
+  },
+  "a6152b7bd82f6b1e": {
+    "title": "SWORD: Wikidata-based Distortions Reveal Hidden Cross-Lingual Inconsistencies in LLM Factual Error Rejection",
+    "link": "https://arxiv.org/abs/2609.09349",
+    "source": "arXiv cs.CL",
+    "message_id": 362,
+    "cached_at": 1789049953.3873637
+  },
+  "7f66f8902d10c2a5": {
+    "title": "Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution",
+    "link": "https://arxiv.org/abs/2609.09240",
+    "source": "arXiv cs.LG",
+    "message_id": 363,
+    "cached_at": 1789049956.2540553
+  },
+  "12b1f0d49798e983": {
+    "title": "AgenticGen: Reward-Guided Agentic Video Generation for Advertising",
+    "link": "https://arxiv.org/abs/2609.09187",
+    "source": "arXiv cs.CV",
+    "message_id": 364,
+    "cached_at": 1789049959.2025461
+  },
+  "177c31662a78e6fa": {
+    "title": "Graph Machine: Towards Better Pretraining via Edges",
+    "link": "https://arxiv.org/abs/2609.02881",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 365,
+    "cached_at": 1789049962.0121481
+  },
+  "f234e5bdf66efee6": {
+    "title": "Multilingual Knowledge Transfer under Data Constraints via Lexical Interventions",
+    "link": "https://machinelearning.apple.com/research/multilingual-knowledge-transfer-lexical-interventions",
+    "source": "Apple Machine Learning Research",
+    "message_id": 366,
+    "cached_at": 1789049965.3015125
+  },
+  "d9e422d39a6e84b4": {
+    "title": "Amazon and University of Michigan give robots a sense of touch",
+    "link": "https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch",
+    "source": "Amazon Science",
+    "message_id": 367,
+    "cached_at": 1789049968.3421462
+  },
+  "fb6ab28989b8e54a": {
+    "title": "Deploying Qwen3.8-2.4T-A95B on Amazon SageMaker HyperPod with vLLM",
+    "link": "https://aws.amazon.com/blogs/machine-learning/deploying-qwen3-8-2-4t-a95b-on-amazon-sagemaker-hyperpod-with-vllm/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 368,
+    "cached_at": 1789049973.406203
+  },
+  "547de81a8632694c": {
+    "title": "Five AI Questions We're Hearing from Financial Services Leaders",
+    "link": "https://www.databricks.com/blog/five-ai-questions-were-hearing-financial-services-leaders",
+    "source": "Databricks Blog",
+    "message_id": 369,
+    "cached_at": 1789049976.3218417
+  },
+  "e90e04dd478fae65": {
+    "title": "From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking",
+    "link": "https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/",
+    "source": "Engineering at Meta",
+    "message_id": 370,
+    "cached_at": 1789049979.1661074
+  },
+  "2110b3cfa1886133": {
+    "title": "Cohere and the University of Waterloo launch partnership to strengthen Canada’s AI talent pipeline",
+    "link": "https://cohere.com/blog/cohere-university-of-waterloo-announcement",
+    "source": "Cohere Blog",
+    "message_id": 373,
+    "cached_at": 1789063336.3928711
+  },
+  "39842fa0b34b37cb": {
+    "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+    "link": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+    "source": "OpenAI News",
+    "message_id": 374,
+    "cached_at": 1789063339.4472609
+  },
+  "0f47f3a1d7c38ce7": {
+    "title": "Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video",
+    "link": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/",
+    "source": "NVIDIA Blog",
+    "message_id": 375,
+    "cached_at": 1789063341.897524
+  },
+  "03f78b38d22a7688": {
+    "title": "Anthropic reveals rogue AI agents hate CAPTCHAs, just like you",
+    "link": "https://techcrunch.com/2026/09/10/anthropic-reveals-rogue-ai-agents-hate-captchas-just-like-you/",
+    "source": "TechCrunch AI",
+    "message_id": 376,
+    "cached_at": 1789063344.523488
+  },
+  "9696404b8eb22c43": {
+    "title": "I Let an AI Agent Hack All My Gadgets—and I’d Do It Again",
+    "link": "https://www.wired.com/story/i-used-ai-to-hack-my-home-network/",
+    "source": "Wired AI",
+    "message_id": 377,
+    "cached_at": 1789063347.6507125
+  },
+  "e491266d38f23634": {
+    "title": "A Candid Abacus AI Review: The All-in-One AI Platform for Professionals & Enterprises",
+    "link": "https://www.kdnuggets.com/2026/09/abacus/abacus-ai-candid-review/",
+    "source": "KDnuggets",
+    "message_id": 378,
+    "cached_at": 1789063350.5881991
+  },
+  "4211bd25e9725430": {
+    "title": "Universal Music is launching an AI music platform with ElevenLabs",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/993465/universal-music-elevenlabs-ai",
+    "source": "The Verge AI",
+    "message_id": 379,
+    "cached_at": 1789063353.4946516
+  },
+  "5ff59038e8536919": {
+    "title": "An Autonomous GeoAI Agent for Arctic Eco-Navigation",
+    "link": "https://arxiv.org/abs/2609.09374",
+    "source": "arXiv cs.AI",
+    "message_id": 380,
+    "cached_at": 1789063356.5553808
+  },
+  "52414111ad396738": {
+    "title": "Auditable Emergency Triage for Maternal and Newborn Care in India",
+    "link": "https://arxiv.org/abs/2609.09356",
+    "source": "arXiv cs.CL",
+    "message_id": 381,
+    "cached_at": 1789063359.71341
+  },
+  "98533283804c042c": {
+    "title": "Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts",
+    "link": "https://arxiv.org/abs/2609.09241",
+    "source": "arXiv cs.LG",
+    "message_id": 382,
+    "cached_at": 1789063362.2924771
+  },
+  "fc1c4dc285001a28": {
+    "title": "Lensless Gaze Is Not Private by Default: Auditing Identity Leakage Across Disclosure Surfaces",
+    "link": "https://arxiv.org/abs/2609.09188",
+    "source": "arXiv cs.CV",
+    "message_id": 383,
+    "cached_at": 1789063365.1846056
+  },
+  "b2cf687fa6f30851": {
+    "title": "EVOHARNESSBENCH: Can Your Agents Keep Pace with an Evolving Harness?",
+    "link": "https://arxiv.org/abs/2609.04280",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 384,
+    "cached_at": 1789063368.3102467
+  },
+  "ceadd21f5d3a2d65": {
+    "title": "3 ways to prep for your next big race with Search",
+    "link": "https://blog.google/products-and-platforms/products/search/running-race-training-tips/",
+    "source": "Google AI Blog",
+    "message_id": 385,
+    "cached_at": 1789063370.670894
+  },
+  "712c25db4c998bf9": {
+    "title": "Why don&#8217;t machine learning research agents overfit?",
+    "link": "https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit",
+    "source": "Amazon Science",
+    "message_id": 386,
+    "cached_at": 1789063372.8554199
+  },
+  "fbf6da59db70f4b1": {
+    "title": "Build an end-to-end RFI questionnaire workflow using Amazon Quick Automate",
+    "link": "https://aws.amazon.com/blogs/machine-learning/build-an-end-to-end-rfi-questionnaire-workflow-using-amazon-quick-automate/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 387,
+    "cached_at": 1789063375.660601
+  },
+  "6a886414536a09e3": {
+    "title": "Now everyone can put data to work",
+    "link": "https://openai.com/index/put-data-to-work",
+    "source": "OpenAI News",
+    "message_id": 388,
+    "cached_at": 1789064435.1335623
+  },
+  "2c2c39776d194ae7": {
+    "title": "Physical AI Takes the Wheel: How the World’s Robotaxi Leaders Are Building With NVIDIA Technologies",
+    "link": "https://blogs.nvidia.com/blog/robotaxi-leaders-full-stack-open-platform/",
+    "source": "NVIDIA Blog",
+    "message_id": 389,
+    "cached_at": 1789064438.341843
+  },
+  "5f6c125fae86f392": {
+    "title": "India’s Pocket FM doubles revenue run rate to $500M as AI powers 93% of audio content",
+    "link": "https://techcrunch.com/2026/09/10/indias-pocket-fm-doubles-revenue-run-rate-to-500m-as-ai-powers-93-of-audio-content/",
+    "source": "TechCrunch AI",
+    "message_id": 390,
+    "cached_at": 1789064441.7523196
+  },
+  "8092a78523f469a3": {
+    "title": "Supply chains detect fast, act slow: How AI agents fix it",
+    "link": "https://www.artificialintelligence-news.com/news/supply-chains-detect-fast-act-slow-how-ai-agents-fix-it/",
+    "source": "AI News",
+    "message_id": 391,
+    "cached_at": 1789064445.4139552
+  },
+  "f4c0e0c5fdf350af": {
+    "title": "Google Open-Sources Mantis: A Modular Skills Toolkit That Lets Coding Agents Find, Reproduce and Patch Vulnerabilities",
+    "link": "https://www.marktechpost.com/2026/09/09/google-open-sources-mantis-a-modular-skills-toolkit-that-lets-coding-agents-find-reproduce-and-patch-vulnerabilities/",
+    "source": "MarkTechPost",
+    "message_id": 392,
+    "cached_at": 1789064448.7830126
+  },
+  "43f09d10876a632f": {
+    "title": "Feature Engineering in Scikit-Learn: A KDnuggets Cheat Sheet",
+    "link": "https://www.kdnuggets.com/feature-engineering-in-scikit-learn-a-kdnuggets-cheat-sheet",
+    "source": "KDnuggets",
+    "message_id": 393,
+    "cached_at": 1789064452.1189435
+  },
+  "b1a91aa554684a71": {
+    "title": "Meta’s Muse AI works and creeps me out",
+    "link": "https://www.theverge.com/tech/993391/meta-muse-ai-hands-on",
+    "source": "The Verge AI",
+    "message_id": 394,
+    "cached_at": 1789064454.8866954
+  },
+  "f1f80f1aa910dabb": {
+    "title": "The Menu Is an Execution Prior: State-Path Tool Menus for Online Agents",
+    "link": "https://arxiv.org/abs/2609.09395",
+    "source": "arXiv cs.AI",
+    "message_id": 395,
+    "cached_at": 1789064457.7821474
+  },
+  "05105d25c5a9e35b": {
+    "title": "Do LLMs Make More Mistakes If They Do Not Believe the Input Data?",
+    "link": "https://arxiv.org/abs/2609.09363",
+    "source": "arXiv cs.CL",
+    "message_id": 396,
+    "cached_at": 1789064461.2607646
+  },
+  "67b17667ae4f953d": {
+    "title": "DiffLUT-Net: Differentiable Training of FPGA LUT Networks with Learnable Connectivity",
+    "link": "https://arxiv.org/abs/2609.09254",
+    "source": "arXiv cs.LG",
+    "message_id": 397,
+    "cached_at": 1789064464.0362246
+  },
+  "56c9a61d7ee641d6": {
+    "title": "MLLMs Hallucinate when Information Distribution Drifts in Synergy Heads",
+    "link": "https://arxiv.org/abs/2609.09206",
+    "source": "arXiv cs.CV",
+    "message_id": 398,
+    "cached_at": 1789064469.3691063
+  },
+  "9416fa0e0210cc84": {
+    "title": "Learning 3D Editing without Paired Supervision via Generative Prior Distillation",
+    "link": "https://arxiv.org/abs/2609.04942",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 399,
+    "cached_at": 1789064472.5281763
+  },
+  "fe5d25f27a1ce3e9": {
+    "title": "Amazon Quick is now generally available on desktop",
+    "link": "https://aws.amazon.com/blogs/machine-learning/amazon-quick-is-now-generally-available-on-desktop/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 400,
+    "cached_at": 1789064476.8262806
+  },
+  "5e0906e6e4477447": {
+    "title": "Improving Lakebase Postgres compute cache",
+    "link": "https://www.databricks.com/blog/improving-lakebase-postgres-compute-cache",
+    "source": "Databricks Blog",
+    "message_id": 401,
+    "cached_at": 1789064479.734594
+  },
+  "0d4808deec190454": {
+    "title": "GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model",
+    "link": "https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/",
+    "source": "Engineering at Meta",
+    "message_id": 402,
+    "cached_at": 1789064483.4677184
+  },
+  "0bb946f0c4215389": {
+    "title": "Introducing ChatGPT for Financial Services",
+    "link": "https://openai.com/index/introducing-chatgpt-financial-services",
+    "source": "OpenAI News",
+    "message_id": 403,
+    "cached_at": 1789106490.0122933
+  },
+  "1e206d769558c6a9": {
+    "title": "Datasette 1.0a39 and 0.65.4 security releases",
+    "link": "https://simonwillison.net/2026/Sep/11/datasette-security/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 404,
+    "cached_at": 1789106492.8167198
+  },
+  "db4ea884f28819c7": {
+    "title": "Jensen Huang explains why Nvidia will grow an astounding 70% next year",
+    "link": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
+    "source": "TechCrunch AI",
+    "message_id": 405,
+    "cached_at": 1789106495.6699388
+  },
+  "526299bbdcb396ec": {
+    "title": "OpenAI Wants to Know if an AI Industry Slowdown Would Even Be Legal",
+    "link": "https://www.wired.com/story/openai-wants-to-know-if-an-ai-industry-slowdown-would-even-be-legal/",
+    "source": "Wired AI",
+    "message_id": 406,
+    "cached_at": 1789106499.336381
+  },
+  "3c6507c064de87f6": {
+    "title": "Meet Redis LangCache: A Managed Semantic Cache That Cuts LLM API Costs by Up to 90% and Returns Cache Hits Up to 15x Faster",
+    "link": "https://www.marktechpost.com/2026/09/10/meet-redis-langcache-a-managed-semantic-cache-that-cuts-llm-api-costs-by-up-to-90-and-returns-cache-hits-up-to-15x-faster/",
+    "source": "MarkTechPost",
+    "message_id": 407,
+    "cached_at": 1789106501.89312
+  },
+  "282ba679f0e00cf4": {
+    "title": "Slack can now vibe-code interactive charts and reports inside chats",
+    "link": "https://www.theverge.com/tech/989853/slackforce-surfaces-launch",
+    "source": "The Verge AI",
+    "message_id": 408,
+    "cached_at": 1789106504.682569
+  },
+  "53da553ae00ab826": {
+    "title": "Decision-Focused Active Learning for Scale-Aware Critical-Materials Recovery",
+    "link": "https://arxiv.org/abs/2609.09413",
+    "source": "arXiv cs.AI",
+    "message_id": 409,
+    "cached_at": 1789106508.4730585
+  },
+  "5face9fa2e1d63d2": {
+    "title": "Data-Efficient Language Modeling: From Frontier Advancement to Principle-Guided Model Improvement",
+    "link": "https://arxiv.org/abs/2609.10702",
+    "source": "arXiv cs.CL",
+    "message_id": 410,
+    "cached_at": 1789106512.6657288
+  },
+  "7849b8ba79dd8f19": {
+    "title": "M3-Former: Multimodal Transformer with Mixture-of-Experts for Long-Term Vessel Trajectory Prediction",
+    "link": "https://arxiv.org/abs/2609.10559",
+    "source": "arXiv cs.LG",
+    "message_id": 411,
+    "cached_at": 1789106515.3497963
+  },
+  "df5e75ba13a90dc8": {
+    "title": "Rethinking Handwritten Character Recognition",
+    "link": "https://arxiv.org/abs/2609.10572",
+    "source": "arXiv cs.CV",
+    "message_id": 412,
+    "cached_at": 1789106518.6996503
+  },
+  "805135c2e55e2546": {
+    "title": "A Three-Layer Caching Architecture for Low-Latency LLM Web Search on Commodity CPU Hardware",
+    "link": "https://arxiv.org/abs/2609.05463",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 413,
+    "cached_at": 1789106521.4165077
+  },
+  "aa8533b1c5b411fc": {
+    "title": "ToolGrad: Efficient tool-use dataset generation with textual \"gradients\"",
+    "link": "https://research.google/blog/toolgrad-efficient-tool-use-dataset-generation-with-textual-gradients/",
+    "source": "Google Research Blog",
+    "message_id": 414,
+    "cached_at": 1789106523.9384563
+  },
+  "931dcbb571fe67a5": {
+    "title": "Reduce LLM latency with prefix-aware routing on Amazon SageMaker Inference",
+    "link": "https://aws.amazon.com/blogs/machine-learning/reduce-llm-latency-with-prefix-aware-routing-on-amazon-sagemaker-inference/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 415,
+    "cached_at": 1789106527.262441
+  },
+  "c6176498419dd5f9": {
+    "title": "Unifying governance across engines and catalogs in the Open Lakehouse",
+    "link": "https://www.databricks.com/blog/unifying-governance-across-engines-and-catalogs-open-lakehouse",
+    "source": "Databricks Blog",
+    "message_id": 416,
+    "cached_at": 1789106529.6354573
+  },
+  "e646e5eba5aa90b1": {
+    "title": "Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization",
+    "link": "https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/",
+    "source": "Engineering at Meta",
+    "message_id": 417,
+    "cached_at": 1789106532.7347271
+  },
+  "3802aa15c4b6ae22": {
+    "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+    "link": "https://openai.com/index/expanding-ai-access-us-government",
+    "source": "OpenAI News",
+    "message_id": 418,
+    "cached_at": 1789120878.034599
+  },
+  "a2c293f2ef6d41e4": {
+    "title": "Any Nix package, live in your browser",
+    "link": "https://simonwillison.net/2026/Sep/10/trynix/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 419,
+    "cached_at": 1789120884.2474725
+  },
+  "be366ad97d8c69ce": {
+    "title": "Mark Wahlberg is coming to TechCrunch Disrupt 2026, and he wants to talk about your work, not his",
+    "link": "https://techcrunch.com/2026/09/10/mark-wahlberg-is-coming-to-techcrunch-disrupt-2026/",
+    "source": "TechCrunch AI",
+    "message_id": 420,
+    "cached_at": 1789120886.7599518
+  },
+  "94f575146dd860fc": {
+    "title": "Why So Many AI Researchers Think the Machines Could Kill Everyone",
+    "link": "https://www.wired.com/story/why-so-many-ai-researchers-think-the-machines-could-kill-everyone/",
+    "source": "Wired AI",
+    "message_id": 421,
+    "cached_at": 1789120889.6569216
+  },
+  "6e6a5aeb4e4fb1bd": {
+    "title": "Cohere Releases North Small Translate: A 218B MoE Translation Model That Scores 83.6 on WMT26 Across 50 Languages",
+    "link": "https://www.marktechpost.com/2026/09/10/cohere-releases-north-small-translate-a-218b-moe-translation-model-that-scores-83-6-on-wmt26-across-50-languages/",
+    "source": "MarkTechPost",
+    "message_id": 422,
+    "cached_at": 1789120892.8378508
+  },
+  "1c419712aca5a9aa": {
+    "title": "Schools are catching on to Big Tech’s playbook",
+    "link": "https://www.theverge.com/policy/993308/computer-science-ai-education-coding-kids",
+    "source": "The Verge AI",
+    "message_id": 423,
+    "cached_at": 1789120895.8462684
+  },
+  "55f32bfcff6cf261": {
+    "title": "Valerant: An Automatic Navigable Game Map Generator via Action-Conditioned World Model Exploration",
+    "link": "https://arxiv.org/abs/2609.09418",
+    "source": "arXiv cs.AI",
+    "message_id": 424,
+    "cached_at": 1789120898.6494534
+  },
+  "e33a4abd6b18bde2": {
+    "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
+    "link": "https://arxiv.org/abs/2609.10715",
+    "source": "arXiv cs.CL",
+    "message_id": 425,
+    "cached_at": 1789120901.6014013
+  },
+  "a09268a942ac10a5": {
+    "title": "Halo: Improving forecast accuracy through heteroscedastic estimation",
+    "link": "https://arxiv.org/abs/2609.10589",
+    "source": "arXiv cs.LG",
+    "message_id": 426,
+    "cached_at": 1789120905.6577485
+  },
+  "ddc5ec605ab829f9": {
+    "title": "AcFlow: Controlling Text-to-Image Diffusion Transformers via Learned Conditional Activation Flow",
+    "link": "https://arxiv.org/abs/2609.10723",
+    "source": "arXiv cs.CV",
+    "message_id": 427,
+    "cached_at": 1789120909.2178218
+  },
+  "1feecdd1338f16c9": {
+    "title": "Scaling Automatic Research Agents via World Models",
+    "link": "https://arxiv.org/abs/2608.12564",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 428,
+    "cached_at": 1789120913.2548175
+  },
+  "8d418e0739939442": {
+    "title": "Reduce inference cold starts on Amazon SageMaker HyperPod with model caching",
+    "link": "https://aws.amazon.com/blogs/machine-learning/reduce-inference-cold-starts-on-amazon-sagemaker-hyperpod-with-model-caching/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 429,
+    "cached_at": 1789120915.7945104
+  },
+  "16d664462b4239a8": {
+    "title": "Beyond embedding: How to secure AI/BI Dashboards for every viewer",
+    "link": "https://www.databricks.com/blog/beyond-embedding-how-secure-aibi-dashboards-every-viewer",
+    "source": "Databricks Blog",
+    "message_id": 430,
+    "cached_at": 1789120918.8425055
+  },
+  "3254cf0d8d0d66b6": {
+    "title": "Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler",
+    "link": "https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/",
+    "source": "Engineering at Meta",
+    "message_id": 431,
+    "cached_at": 1789120922.0439475
+  },
+  "b8d6021112d2ddad": {
+    "title": "How Full-Stack NIM Optimizations Deliver 2.5x More Users on Nemotron 3 Ultra",
+    "link": "https://developer.nvidia.com/blog/how-full-stack-nim-optimizations-deliver-2-5x-more-users-on-nemotron-3-ultra/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 432,
+    "cached_at": 1789120925.8987076
+  },
+  "9e326dd212d4f380": {
+    "title": "Worldmodeldata and Mila partner to prove scaling law for world models",
+    "link": "https://mila.quebec/en/news/worldmodeldata-and-mila-partner-to-prove-scaling-law-for-world-models",
+    "source": "Mila News",
+    "message_id": 433,
+    "cached_at": 1789135301.0294867
+  },
+  "c1f1d703bfd392ae": {
+    "title": "Gemini Omni 1.1 🎬, Cohere Parse 📄, Codex persistent mode 👨‍💻",
+    "link": "https://tldr.tech/ai/2026-08-28",
+    "source": "TLDR AI",
+    "message_id": 434,
+    "cached_at": 1789135304.1713881
+  },
+  "b8a75fb67d817922": {
+    "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
+    "link": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+    "source": "OpenAI News",
+    "message_id": 435,
+    "cached_at": 1789135307.2724462
+  },
+  "3e146149ec29d0e1": {
+    "title": "Don't sleep on wrapture",
+    "link": "https://simonwillison.net/2026/Sep/11/wrapture/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 436,
+    "cached_at": 1789135309.7800958
+  },
+  "462bb003fcf9c87e": {
+    "title": "OpenAI puts Pro subscriptions on hold due to Astra demand",
+    "link": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/",
+    "source": "TechCrunch AI",
+    "message_id": 437,
+    "cached_at": 1789135312.7144191
+  },
+  "7fb99bcd92e8855b": {
+    "title": "Is AI Actually Going to Kill Us All?",
+    "link": "https://www.wired.com/story/uncanny-valley-podcast-is-ai-actually-going-to-kill-us-all/",
+    "source": "Wired AI",
+    "message_id": 438,
+    "cached_at": 1789135315.4667726
+  },
+  "ca7ffaf549f57db0": {
+    "title": "Palantir Foundry and cuOpt drive NVIDIA supply chain allocation",
+    "link": "https://www.artificialintelligence-news.com/news/palantir-foundry-cuopt-nvidia-supply-chain-allocation/",
+    "source": "AI News",
+    "message_id": 439,
+    "cached_at": 1789135318.520891
+  },
+  "3a60194e3914f519": {
+    "title": "Sakana AI Launches Fugu Max and Fugu Ultra v2 for Cheaper, Stronger Multi-Agent Orchestration",
+    "link": "https://www.marktechpost.com/2026/09/10/sakana-ai-launches-fugu-max-and-fugu-ultra-v2-for-cheaper-stronger-multi-agent-orchestration/",
+    "source": "MarkTechPost",
+    "message_id": 440,
+    "cached_at": 1789135321.7630446
+  },
+  "17099fb630856875": {
+    "title": "5 Python Techniques for Efficient Resource Orchestration",
+    "link": "https://www.kdnuggets.com/5-python-techniques-for-efficient-resource-orchestration",
+    "source": "KDnuggets",
+    "message_id": 441,
+    "cached_at": 1789135324.5064204
+  },
+  "d1f49bd18c06ee8c": {
+    "title": "Mathematicians want proof OpenAI didn’t use their work",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/993263/where-does-openai-get-mathematics-training-data",
+    "source": "The Verge AI",
+    "message_id": 442,
+    "cached_at": 1789135327.4013176
+  },
+  "500308e66e26f505": {
+    "title": "XAI-Arena: Can LLMs Assess the Quality of XAI Explanations?",
+    "link": "https://arxiv.org/abs/2609.09428",
+    "source": "arXiv cs.AI",
+    "message_id": 443,
+    "cached_at": 1789135330.5326042
+  },
+  "8460aa9aac5a3b7c": {
+    "title": "CMNIE: An Information Extraction Benchmark for Chinese Military News",
+    "link": "https://arxiv.org/abs/2609.10722",
+    "source": "arXiv cs.CL",
+    "message_id": 444,
+    "cached_at": 1789135333.0939677
+  },
+  "124676ae0a560f0a": {
+    "title": "Zero-shot rib design: merging training-free generative prior with topology optimization",
+    "link": "https://arxiv.org/abs/2609.10643",
+    "source": "arXiv cs.LG",
+    "message_id": 445,
+    "cached_at": 1789135335.8357832
+  },
+  "1b27b843e5f76740": {
+    "title": "MHE-Former: Multi-Hypothesis Transformers via Entropy Maximization for 3D Mesh Recovery",
+    "link": "https://arxiv.org/abs/2609.10743",
+    "source": "arXiv cs.CV",
+    "message_id": 446,
+    "cached_at": 1789135338.85279
+  },
+  "bdac1e4bda2f0ad4": {
+    "title": "AgenticGen: Reward-Guided Agentic Video Generation for Advertising",
+    "link": "https://arxiv.org/abs/2609.09187",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 447,
+    "cached_at": 1789135341.636172
+  },
+  "b32e9b8471353987": {
+    "title": "Introducing the Agents API",
+    "link": "https://openai.com/index/introducing-the-agents-api",
+    "source": "OpenAI News",
+    "message_id": 448,
+    "cached_at": 1789136393.577328
+  },
+  "f498dec7f81a4f85": {
+    "title": "Native is now the future of mobile at Shopify",
+    "link": "https://simonwillison.net/2026/Sep/10/shopify-react-native/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 449,
+    "cached_at": 1789136396.4885232
+  },
+  "427bf5f540140399": {
+    "title": "Anthropic details distillation campaigns from Alibaba, Moonshot AI, and DeepSeek",
+    "link": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
+    "source": "TechCrunch AI",
+    "message_id": 450,
+    "cached_at": 1789136399.6540885
+  },
+  "a361a227f56be176": {
+    "title": "Google Research Releases ToolGrad: Answer-First Framework Hits 99.8% Pass Rate for Tool-Use Data Generation",
+    "link": "https://www.marktechpost.com/2026/09/10/google-research-releases-toolgrad-answer-first-framework-hits-99-8-pass-rate-for-tool-use-data-generation/",
+    "source": "MarkTechPost",
+    "message_id": 451,
+    "cached_at": 1789136403.7932682
+  },
+  "018e84b05c7c2ab7": {
+    "title": "From Spaghetti Code to Clean Python: A Beginner’s Guide",
+    "link": "https://www.kdnuggets.com/from-spaghetti-code-to-clean-python-a-beginners-guide",
+    "source": "KDnuggets",
+    "message_id": 452,
+    "cached_at": 1789136406.7632422
+  },
+  "11e76098de529acf": {
+    "title": "Apple’s new iPhone camera mode promises to prove your photo isn’t AI",
+    "link": "https://www.theverge.com/tech/992766/apple-iphone-18-pro-reference-image",
+    "source": "The Verge AI",
+    "message_id": 453,
+    "cached_at": 1789136409.3910203
+  },
+  "71ff61c562ccf6df": {
+    "title": "Do Agents Know When They Succeed? Calibrating Agent Confidence from Internal Representations",
+    "link": "https://arxiv.org/abs/2609.09448",
+    "source": "arXiv cs.AI",
+    "message_id": 454,
+    "cached_at": 1789136412.802864
+  },
+  "2fd21836c096d266": {
+    "title": "Think Before You Link: Rarity, Reasoning, and Retrieval in Multilingual Entity Linking",
+    "link": "https://arxiv.org/abs/2609.10745",
+    "source": "arXiv cs.CL",
+    "message_id": 455,
+    "cached_at": 1789136415.6944137
+  },
+  "d51d1f12c64f4abb": {
+    "title": "Byzantine-Robust Federated Fire Detection with a Rotating Coordinator",
+    "link": "https://arxiv.org/abs/2609.10647",
+    "source": "arXiv cs.LG",
+    "message_id": 456,
+    "cached_at": 1789136418.5670424
+  },
+  "cc424b0cb3d421e4": {
+    "title": "Meta-Learning for Data-Efficient Plant Growth Estimation via Vision Transformers and Fuzzy Clustering",
+    "link": "https://arxiv.org/abs/2609.10749",
+    "source": "arXiv cs.CV",
+    "message_id": 457,
+    "cached_at": 1789136421.4960113
+  },
+  "e7b4413910578575": {
+    "title": "Puppeteer: Object-Grounded Posture-Aware Co-Speech Gesture Generation",
+    "link": "https://arxiv.org/abs/2609.00369",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 458,
+    "cached_at": 1789136424.1464682
+  },
+  "e80390a2f8601134": {
+    "title": "DiscoSign: Discourse-Aware Text to Sign Language Gloss Translation",
+    "link": "https://machinelearning.apple.com/research/discosign-gloss-translation",
+    "source": "Apple Machine Learning Research",
+    "message_id": 459,
+    "cached_at": 1789136426.9386456
+  },
+  "1e95adaed1b13ccd": {
+    "title": "Video and image search in Amazon Bedrock Knowledge Base using Marengo 3.0",
+    "link": "https://aws.amazon.com/blogs/machine-learning/video-and-image-search-in-amazon-bedrock-knowledge-base-using-marengo-3-0/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 460,
+    "cached_at": 1789136429.5323138
+  },
+  "d836e8160b409bd1": {
+    "title": "Introducing Consort: Test-driven development on a branching database",
+    "link": "https://www.databricks.com/blog/introducing-consort-test-driven-development-branching-database",
+    "source": "Databricks Blog",
+    "message_id": 461,
+    "cached_at": 1789136431.943656
+  },
+  "e7c3a6c0afb93754": {
+    "title": "High-Throughput Structure Prediction with BioNeMo Inference Runtime",
+    "link": "https://developer.nvidia.com/blog/high-throughput-structure-prediction-with-bionemo-inference-runtime/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 462,
+    "cached_at": 1789136436.5339026
+  },
+  "46fcf5bb7b99520f": {
+    "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+    "link": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+    "source": "OpenAI News",
+    "message_id": 465,
+    "cached_at": 1789149697.929145
+  },
+  "a747e45677404a77": {
+    "title": "Quoting Boris Cherny",
+    "link": "https://simonwillison.net/2026/Sep/11/boris-cherny/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 466,
+    "cached_at": 1789149700.4584758
+  },
+  "9c4a1d9709f16325": {
+    "title": "Nscale adds former OpenAI exec Fidji Simo to its board ahead of potential IPO",
+    "link": "https://techcrunch.com/2026/09/11/nscale-adds-former-openai-exec-fidji-simo-to-its-board-ahead-of-potential-ipo/",
+    "source": "TechCrunch AI",
+    "message_id": 467,
+    "cached_at": 1789149704.3036275
+  },
+  "2b7ce783279987fe": {
+    "title": "One of AI’s Fiercest Critics Says All the Doom Talk Is ‘Meant to Distract Us’",
+    "link": "https://www.wired.com/story/one-of-ais-fiercest-critics-says-all-the-doom-talk-is-meant-to-distract-us/",
+    "source": "Wired AI",
+    "message_id": 468,
+    "cached_at": 1789149707.2988985
+  },
+  "2655175d61526e22": {
+    "title": "NVIDIA Details BioNeMo Inference Runtime (BioIR): 2.90x Higher Boltz-2 Folding Throughput and 58.5K Residues per GPU-Hour on 8xH100",
+    "link": "https://www.marktechpost.com/2026/09/10/nvidia-details-bionemo-inference-runtime-bioir-2-90x-higher-boltz-2-folding-throughput-and-58-5k-residues-per-gpu-hour-on-8xh100/",
+    "source": "MarkTechPost",
+    "message_id": 469,
+    "cached_at": 1789149710.7269497
+  },
+  "cfd17545a26a16eb": {
+    "title": "Anthropic spent this week in hot water over cybersecurity",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity",
+    "source": "The Verge AI",
+    "message_id": 470,
+    "cached_at": 1789149713.9114335
+  },
+  "dfff7642361ed962": {
+    "title": "Multilingual in Name Only? Cultural and Linguistic Weaknesses of LLMs in Urdu",
+    "link": "https://arxiv.org/abs/2609.10758",
+    "source": "arXiv cs.CL",
+    "message_id": 471,
+    "cached_at": 1789149718.8535852
+  },
+  "f71672728afc443b": {
+    "title": "Artificial Intelligence Algorithms for the Detection of Pathologies Related to Lung Cancer through Image Analysis using Convolutional Neural Networks and Data Augmentation: a systematic mapping of the literature",
+    "link": "https://arxiv.org/abs/2609.10652",
+    "source": "arXiv cs.LG",
+    "message_id": 472,
+    "cached_at": 1789149721.760503
+  },
+  "1c8e658b0950ec2c": {
+    "title": "GRADE: Single-Frame Generative Radar Depth Estimation Under Visual Degradation",
+    "link": "https://arxiv.org/abs/2609.10756",
+    "source": "arXiv cs.CV",
+    "message_id": 473,
+    "cached_at": 1789149724.6677938
+  },
+  "ebd561b3ebfadbb3": {
+    "title": "From Reweighting to Rewriting: Unlocking the Intervention Effects of Influential Samples in Training Data Attribution",
+    "link": "https://arxiv.org/abs/2609.02771",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 474,
+    "cached_at": 1789149727.7623243
+  },
+  "82a8a2c3abaffb1c": {
+    "title": "Putting Captions to the Test: Evaluating Video Caption Quality through Multiple-Choice Question Answering",
+    "link": "https://machinelearning.apple.com/research/video-caption-quality",
+    "source": "Apple Machine Learning Research",
+    "message_id": 475,
+    "cached_at": 1789149730.898104
+  },
+  "b7baabb0bb4c870e": {
+    "title": "Model-agnostic PII detection with LLMs",
+    "link": "https://aws.amazon.com/blogs/machine-learning/model-agnostic-pii-detection-with-llms/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 476,
+    "cached_at": 1789149735.0970616
+  },
+  "3bfcc9ef73e9cf9d": {
+    "title": "Evaluation-First AI Agents: How Zepto Scales Customer Support on Databricks and MLflow",
+    "link": "https://www.databricks.com/blog/evaluation-first-ai-agents-how-zepto-scales-customer-support-databricks-and-mlflow",
+    "source": "Databricks Blog",
+    "message_id": 477,
+    "cached_at": 1789149738.1314292
+  },
+  "41aa45582bb68e10": {
+    "title": "From Wafer-Out to First Token: Codifying Supply Chain Expertise with Nemotron and Palantir Foundry",
+    "link": "https://developer.nvidia.com/blog/from-wafer-out-to-first-token-codifying-supply-chain-expertise-with-nemotron-and-palantir-foundry/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 478,
+    "cached_at": 1789149741.510044
+  },
+  "823109c0e7b7a244": {
+    "title": "Introducing IBM and NASA's new foundation model for the Moon",
+    "link": "https://research.ibm.com/blog/nasa-ibm-lunar-foundation-model?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 479,
+    "cached_at": 1789149744.6965117
+  },
+  "827d855fbddb5cbb": {
+    "title": "Quoting huggingface.co/security.txt",
+    "link": "https://simonwillison.net/2026/Sep/11/hugging-face-security/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 480,
+    "cached_at": 1789151050.4531012
+  },
+  "e9d10338789f41f0": {
+    "title": "Meta’s AI agent Muse is now the No. 2 app in the US",
+    "link": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
+    "source": "TechCrunch AI",
+    "message_id": 481,
+    "cached_at": 1789151053.1253796
+  },
+  "a2b21ad2a063aa66": {
+    "title": "Analyzing Traditional and Neural Approaches to Multilingual Readability Assessment",
+    "link": "https://arxiv.org/abs/2609.10792",
+    "source": "arXiv cs.CL",
+    "message_id": 482,
+    "cached_at": 1789151055.6963718
+  },
+  "866a42c00904c11d": {
+    "title": "GEOSTEER: Geodesic Optimization for Activation Steering in Large Language Models",
+    "link": "https://arxiv.org/abs/2609.10658",
+    "source": "arXiv cs.LG",
+    "message_id": 483,
+    "cached_at": 1789151058.7782476
+  },
+  "ceb8a1bee75ca53a": {
+    "title": "Shedding Light: A Benchmark for Evaluating Lighting Understanding in Generative Image Models",
+    "link": "https://arxiv.org/abs/2609.10787",
+    "source": "arXiv cs.CV",
+    "message_id": 484,
+    "cached_at": 1789151061.2906878
+  },
+  "677e0e950675cd1f": {
+    "title": "WearableQA: A Benchmark for Health Reasoning over Real-World Wearable Data",
+    "link": "https://arxiv.org/abs/2609.05405",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 485,
+    "cached_at": 1789151063.7306235
+  },
+  "72ce098e0b16c346": {
+    "title": "SimpleDesign: A Joint Model for Protein Sequence and Structure Codesign",
+    "link": "https://machinelearning.apple.com/research/simpledesign-protein-codesign",
+    "source": "Apple Machine Learning Research",
+    "message_id": 486,
+    "cached_at": 1789151066.5609825
+  },
+  "9a4cf2cb48da806f": {
+    "title": "Agent Evaluation Metric for multi-turn conversations",
+    "link": "https://aws.amazon.com/blogs/machine-learning/agent-evaluation-metric-for-multi-turn-conversations/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 487,
+    "cached_at": 1789151069.4186199
+  },
+  "7599a171e4cbaa65": {
+    "title": "SQL Data Types: Reference and Best Practices",
+    "link": "https://www.databricks.com/blog/sql-data-types",
+    "source": "Databricks Blog",
+    "message_id": 488,
+    "cached_at": 1789151071.9827065
+  },
+  "93db95fb6cd1a35d": {
+    "title": "When to Use Encode-Prefill-Decode Disaggregation to Accelerate Multimodal Model Serving",
+    "link": "https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 489,
+    "cached_at": 1789151075.7846198
+  },
+  "82dc9af1f2562444": {
+    "title": "Switzerland's first IBM Quantum System Two",
+    "link": "https://research.ibm.com/blog/swiss-innovation-hub?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 490,
+    "cached_at": 1789151079.3757317
+  },
+  "2d0dbb5662da80a4": {
+    "title": "Lifesaving Lincoln Laboratory device wins 2026 Excellence in Technology Transfer Award",
+    "link": "https://news.mit.edu/2026/lifesaving-lincoln-laboratory-technology-wins-tech-transfer-award-0911",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 491,
+    "cached_at": 1789151081.930262
+  },
+  "262694a7dca9440f": {
+    "title": "A Library for Learning Neural Operators",
+    "link": "http://jmlr.org/papers/v27/26-0434.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 492,
+    "cached_at": 1789151084.6805167
+  },
+  "9e8570698d4056f5": {
+    "title": "What We Learned Trying to Catch AI Liars: An Aletheia's Quest Retrospective",
+    "link": "https://blog.eleuther.ai/aletheia-retrospective/",
+    "source": "EleutherAI Blog",
+    "message_id": 493,
+    "cached_at": 1789151087.728044
+  },
+  "4ef1fa7cd0579165": {
+    "title": "GPT-6 Astra, Looped Transformers, and Hidden Reasoning",
+    "link": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 494,
+    "cached_at": 1789151090.4329698
+  },
+  "968c32634dc2a1cb": {
+    "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+    "link": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+    "source": "OpenAI News",
+    "message_id": 495,
+    "cached_at": 1789192882.4593978
+  },
+  "7b2efff004017f35": {
+    "title": "OpenAI agents attacked RubyGems back in May",
+    "link": "https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 496,
+    "cached_at": 1789192885.874997
+  },
+  "48d46bfa6a41ef32": {
+    "title": "Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training data",
+    "link": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/",
+    "source": "TechCrunch AI",
+    "message_id": 497,
+    "cached_at": 1789192888.8019905
+  },
+  "bc2e38e9c12b074d": {
+    "title": "Meta Sued Over Training Data for Its AI and Face-Recognition Systems",
+    "link": "https://www.wired.com/story/meta-sued-over-training-data-for-its-ai-and-face-recognition-systems/",
+    "source": "Wired AI",
+    "message_id": 498,
+    "cached_at": 1789192891.741045
+  },
+  "eb2f5e625b9545d3": {
+    "title": "Roundtables: AI’s apocalypse crisis",
+    "link": "https://www.technologyreview.com/2026/09/11/1143936/roundtables-will-ai-really-kill-us-all/",
+    "source": "MIT Technology Review AI",
+    "message_id": 499,
+    "cached_at": 1789192894.2529674
+  },
+  "7af0cd61fc11ce24": {
+    "title": "Lawyer fined $5K over AI-hallucinated witnesses in a murder case",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/994207/chatgpt-new-mexico-lawyer-fined-murder-appeal",
+    "source": "The Verge AI",
+    "message_id": 500,
+    "cached_at": 1789192896.8615043
+  },
+  "c97c825e0e2f0b26": {
+    "title": "Probabilistic Focal Search: Accelerating Bounded-Suboptimal Search via Lower-Bound Advancement",
+    "link": "https://arxiv.org/abs/2609.10584",
+    "source": "arXiv cs.AI",
+    "message_id": 501,
+    "cached_at": 1789192899.8212266
+  },
+  "44f65e419f1f290a": {
+    "title": "HyQuant: Hybrid-Precision Quantization for LLM Attention",
+    "link": "https://arxiv.org/abs/2608.27875",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 502,
+    "cached_at": 1789192902.8712935
+  },
+  "f850aede166d652a": {
+    "title": "Monitoring production agent lifecycle with AWS DevOps Agent and AgentCore Evaluations",
+    "link": "https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 503,
+    "cached_at": 1789192906.2817893
+  },
+  "24c625bae7ea2f5e": {
+    "title": "Health Plans: Your BI Tells You MLR Moved. Can Your AI Tell You Why?",
+    "link": "https://www.databricks.com/blog/health-plans-your-bi-tells-you-mlr-moved-can-your-ai-tell-you-why",
+    "source": "Databricks Blog",
+    "message_id": 504,
+    "cached_at": 1789192909.543716
+  },
+  "15901f186f7335ed": {
+    "title": "CUDA Toolkit 13.4 Adds Windows on Arm Support and Greater Control over Shared GPUs",
+    "link": "https://developer.nvidia.com/blog/cuda-toolkit-13-4-adds-windows-on-arm-support-and-greater-control-over-shared-gpus/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 505,
+    "cached_at": 1789192913.6842897
+  },
+  "22bee03a4a3becf3": {
+    "title": "Cleveland Clinic, RIKEN, IBM named Gordon Bell finalists",
+    "link": "https://research.ibm.com/blog/gordon-bell-finalists-2026?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 506,
+    "cached_at": 1789192917.6701279
+  },
+  "5a44a55390429460": {
+    "title": "MIT Schwarzman College of Computing launches pilot to help educators teach AI across disciplines",
+    "link": "https://news.mit.edu/2026/mit-schwarzman-college-computing-launches-pilot-help-educators-teach-ai-across-disciplines-0909",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 507,
+    "cached_at": 1789192920.8486228
+  },
+  "1e794522b4bb25c9": {
+    "title": "MarkDiffusion: An Open-Source Toolkit for Generative Watermarking of Latent Diffusion Models",
+    "link": "http://jmlr.org/papers/v27/25-2553.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 508,
+    "cached_at": 1789192923.7321765
+  },
+  "7af73fc3caee2d28": {
+    "title": "A Dynamical Model of AI Governability",
+    "link": "https://blog.eleuther.ai/dynamical-models-of-ai-governability/",
+    "source": "EleutherAI Blog",
+    "message_id": 509,
+    "cached_at": 1789192926.888023
+  },
+  "4aeb82da9975e2f5": {
+    "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+    "link": "https://openai.com/index/cognition-devin-testing-with-astra",
+    "source": "OpenAI News",
+    "message_id": 510,
+    "cached_at": 1789207285.2396739
+  },
+  "28569c3c31a0d771": {
+    "title": "So you want to use OpenRouter?",
+    "link": "https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 511,
+    "cached_at": 1789207287.7974904
+  },
+  "3d1275ba69a615dd": {
+    "title": "Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill’ frontier models, too",
+    "link": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
+    "source": "TechCrunch AI",
+    "message_id": 512,
+    "cached_at": 1789207290.3973906
+  },
+  "cbd93ba75d299c5a": {
+    "title": "Can LLMs Engineer Their Own Agent Harness? ByteDance Seed’s HarnessDev Says Only 34 of 64 Changes Generalize",
+    "link": "https://www.marktechpost.com/2026/09/11/can-llms-engineer-their-own-agent-harness-bytedance-seeds-harnessdev-says-only-34-of-64-changes-generalize/",
+    "source": "MarkTechPost",
+    "message_id": 513,
+    "cached_at": 1789207293.270999
+  },
+  "ee7533f9f4eb4f7a": {
+    "title": "Meta says it&#8217;s changing AI suggestions after posing invasive personal questions",
+    "link": "https://www.theverge.com/tech/993974/meta-ai-prompt-invasive-suggestions",
+    "source": "The Verge AI",
+    "message_id": 514,
+    "cached_at": 1789207296.221428
+  },
+  "33adfa669d3447d4": {
+    "title": "Automating Quadratic Unconstrained Binary Optimization (QUBO) Formulation Generation from Natural Language",
+    "link": "https://arxiv.org/abs/2609.10629",
+    "source": "arXiv cs.AI",
+    "message_id": 515,
+    "cached_at": 1789207298.9856415
+  },
+  "5b6abb1439c2c580": {
+    "title": "TempCloze: Can Video-LLMs Identify the Missing Middle?",
+    "link": "https://arxiv.org/abs/2609.01515",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 516,
+    "cached_at": 1789207301.7536793
+  },
+  "50fd092ce026b45d": {
+    "title": "Beyond the price per token: Choosing the right OpenAI model on Amazon Bedrock for your workload",
+    "link": "https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 517,
+    "cached_at": 1789207304.8305244
+  },
+  "88c18f4ef388f1a8": {
+    "title": "Unify your marketing data with Lakeflow Connect",
+    "link": "https://www.databricks.com/blog/unify-your-marketing-data-lakeflow-connect",
+    "source": "Databricks Blog",
+    "message_id": 518,
+    "cached_at": 1789207307.521653
+  },
+  "13af96f13ab7c5bc": {
+    "title": "How to Carry User Identity Across Federated Kubernetes and AI Platforms",
+    "link": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 519,
+    "cached_at": 1789207312.6023445
+  },
+  "a939166d20278538": {
+    "title": "Ponder This Challenge - September 2026 - Loeschian Arithmetic Progressions",
+    "link": "https://research.ibm.com/blog/ponder-this-september-2026?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 520,
+    "cached_at": 1789207315.5274754
+  },
+  "4546ba65600cacfe": {
+    "title": "From MIT to IBM, expediting AI and quantum deployment",
+    "link": "https://news.mit.edu/2026/from-mit-to-ibm-expediting-ai-and-quantum-deployment-0902",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 521,
+    "cached_at": 1789207318.0334163
+  },
+  "482dbe5d2f8cf065": {
+    "title": "OptunaHub: A Platform for Black-Box Optimization",
+    "link": "http://jmlr.org/papers/v27/25-2424.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 522,
+    "cached_at": 1789207320.7720995
+  },
+  "0dba34b7d7961f08": {
+    "title": "Early Indicators of Reward Hacking via Reasoning Interpolation",
+    "link": "https://blog.eleuther.ai/reward-hacking-indicators/",
+    "source": "EleutherAI Blog",
+    "message_id": 523,
+    "cached_at": 1789207323.4489954
+  },
+  "ec1dae1d3407b62b": {
+    "title": "How Claude Watermarks AI-Generated Text",
+    "link": "https://magazine.sebastianraschka.com/p/claude-watermarking",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 524,
+    "cached_at": 1789207326.0571036
+  },
+  "cffcc180737c911e": {
+    "title": "Feeling sad about AI",
+    "link": "https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 525,
+    "cached_at": 1789209479.2970438
+  },
+  "ca0dd492fbf012d3": {
+    "title": "OpenAI’s feud with mathematicians is only escalating",
+    "link": "https://techcrunch.com/2026/09/11/openais-feud-with-mathematicians-is-only-escalating/",
+    "source": "TechCrunch AI",
+    "message_id": 526,
+    "cached_at": 1789209481.9149313
+  },
+  "28c7b799615c8564": {
+    "title": "From Hacks to Bioweapons, Claude Misuse Is Now Everywhere",
+    "link": "https://www.wired.com/story/security-news-this-week-from-hacks-to-bioweapons-claude-misuse-is-now-everywhere/",
+    "source": "Wired AI",
+    "message_id": 527,
+    "cached_at": 1789209484.6400442
+  },
+  "15f70ea4738d8f2c": {
+    "title": "Anthropic Adds Plugin Evals to Claude Code: 6 Grader Types, a No-Plugin Baseline, and a CI Gate for Skills",
+    "link": "https://www.marktechpost.com/2026/09/11/anthropic-adds-plugin-evals-to-claude-code-6-grader-types-a-no-plugin-baseline-and-a-ci-gate-for-skills/",
+    "source": "MarkTechPost",
+    "message_id": 528,
+    "cached_at": 1789209487.254201
+  },
+  "02ff0bf4586f4da1": {
+    "title": "A Multi-Stage Rule-Chaining Framework for Compositional and Interpretable Cognitive Reasoning",
+    "link": "https://arxiv.org/abs/2609.10654",
+    "source": "arXiv cs.AI",
+    "message_id": 529,
+    "cached_at": 1789209491.2372956
+  },
+  "8fbf36d9a91c4e4a": {
+    "title": "EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents",
+    "link": "https://arxiv.org/abs/2609.05903",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 530,
+    "cached_at": 1789209493.7704566
+  },
+  "330d85f15d9dc267": {
+    "title": "Build interactive MCP Apps using Amazon Bedrock AgentCore",
+    "link": "https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 531,
+    "cached_at": 1789209496.28963
+  },
+  "2f4bc5729494727d": {
+    "title": "NVIDIA PAIR Virtual Inference Router Expands Available Compute on Your Local Network",
+    "link": "https://developer.nvidia.com/blog/nvidia-pair-virtual-inference-router-expands-available-compute-on-your-local-network/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 532,
+    "cached_at": 1789209499.3291495
+  },
+  "4701397f02b8e3cc": {
+    "title": "IBM Quantum Nighthawk r2—more circuits, faster",
+    "link": "https://research.ibm.com/blog/nighthawk-r2?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 533,
+    "cached_at": 1789209502.787624
+  },
+  "cde6039f103f885c": {
+    "title": "System helps humans predict when self-driving cars will make mistakes",
+    "link": "https://news.mit.edu/2026/system-helps-humans-predict-when-self-driving-cars-will-make-mistakes-0902",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 534,
+    "cached_at": 1789209505.3516166
+  },
+  "94bd9d5b1d4a9cda": {
+    "title": "Unveiling the Statistical Foundations of Chain-of-Thought Prompting Methods",
+    "link": "http://jmlr.org/papers/v27/25-2240.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 535,
+    "cached_at": 1789209508.399041
+  },
+  "ae1d7bbea6bb64f4": {
+    "title": "Reward Hacking Resarch Update",
+    "link": "https://blog.eleuther.ai/reward_hacking/",
+    "source": "EleutherAI Blog",
+    "message_id": 536,
+    "cached_at": 1789209510.833839
+  },
+  "fec51d95d54dbb56": {
+    "title": "Building an AI Text Detector From Scratch",
+    "link": "https://magazine.sebastianraschka.com/p/ai-detector-from-scratch",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 537,
+    "cached_at": 1789209513.4410045
+  },
+  "bc65587780a40f67": {
+    "title": "Harness Engineering for Self-Improvement",
+    "link": "https://lilianweng.github.io/posts/2026-07-04-harness/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 538,
+    "cached_at": 1789209516.2055032
+  },
+  "5422165199ac3606": {
+    "title": "How to win a best paper award",
+    "link": "https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html",
+    "source": "Nicholas Carlini",
+    "message_id": 539,
+    "cached_at": 1789209518.9272761
+  },
+  "f86330f6327ebf55": {
+    "title": "Soft-deprecating re.match()",
+    "link": "https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 540,
+    "cached_at": 1789221677.1836119
+  },
+  "2fcd3adc78d01fef": {
+    "title": "One week left to book your exhibit table at TechCrunch Disrupt 2026",
+    "link": "https://techcrunch.com/2026/09/11/one-week-left-to-book-your-exhibit-table-at-techcrunch-disrupt-2026/",
+    "source": "TechCrunch AI",
+    "message_id": 541,
+    "cached_at": 1789221679.7522562
+  },
+  "539e0d2c04d7c271": {
+    "title": "OpenAI just wants to win",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/994255/openai-millennium-prize-problem-tristan-buckmaster-competition",
+    "source": "The Verge AI",
+    "message_id": 542,
+    "cached_at": 1789221682.7486863
+  },
+  "af32aec035214d31": {
+    "title": "Understanding LoRA Rank Trade-offs in Diffusion Model Fine-Tuning",
+    "link": "https://arxiv.org/abs/2609.10656",
+    "source": "arXiv cs.AI",
+    "message_id": 543,
+    "cached_at": 1789221686.1940398
+  },
+  "4e70afc5b93411c8": {
+    "title": "Adaptive Bridge: A Proxy-Based Decoupling Layer for Mitigating DDS Backpressure in ROS 2",
+    "link": "https://arxiv.org/abs/2608.15380",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 544,
+    "cached_at": 1789221689.679248
+  },
+  "d59155e2f8c702db": {
+    "title": "What happens when information theory accounts for reasoning?",
+    "link": "https://research.ibm.com/blog/information-theory-meaning?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 545,
+    "cached_at": 1789221692.8972275
+  },
+  "437ffb23ae2ef611": {
+    "title": "Walter Torous named executive director of MIT Center for Real Estate",
+    "link": "https://news.mit.edu/2026/walter-torous-named-executive-director-mit-center-real-estate-0901",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 546,
+    "cached_at": 1789221695.2827117
+  },
+  "cfa7541468db6c42": {
+    "title": "Prob-GParareal: A Probabilistic Numerical Parallel-in-Time Solver for Differential Equations",
+    "link": "http://jmlr.org/papers/v27/25-2146.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 547,
+    "cached_at": 1789221697.9564116
+  },
+  "5c7e698bed1fd902": {
+    "title": "Pretraining Data Filtering for Open-Weight AI Safety",
+    "link": "https://blog.eleuther.ai/deep-ignorance/",
+    "source": "EleutherAI Blog",
+    "message_id": 549,
+    "cached_at": 1789221701.0016456
+  },
+  "1e95bee9c26709cb": {
+    "title": "Controlling Reasoning Effort in LLMs",
+    "link": "https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 551,
+    "cached_at": 1789221704.252419
+  },
+  "d01eba4a302808d5": {
+    "title": "Scaling Laws, Carefully",
+    "link": "https://lilianweng.github.io/posts/2026-06-24-scaling-laws/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 553,
+    "cached_at": 1789221706.960665
+  },
+  "5cbfaaffdb7e2894": {
+    "title": "Are large language models worth it?",
+    "link": "https://nicholas.carlini.com/writing/2025/are-llms-worth-it.html",
+    "source": "Nicholas Carlini",
+    "message_id": 555,
+    "cached_at": 1789221710.316396
+  },
+  "a49486b299f43590": {
+    "title": "v2.1.269",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.269",
+    "source": "Claude Code Releases",
+    "message_id": 557,
+    "cached_at": 1789221713.1670623
+  },
+  "f709d9c6172e2544": {
+    "title": "0.155.0-alpha.3.10",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.10",
+    "source": "OpenAI Codex Releases",
+    "message_id": 559,
+    "cached_at": 1789221715.8874805
+  },
+  "77304b4fd99d8657": {
+    "title": "Release v0.61.0-nightly.20260912.g9c1b0a610",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260912.g9c1b0a610",
+    "source": "Gemini CLI Releases",
+    "message_id": 561,
+    "cached_at": 1789221718.8689148
   }
 }
