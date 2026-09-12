@@ -18,7 +18,7 @@ const { post, showDate = true, terse = false } = Astro.props;
 const { data } = post;
 ---
 <article
-  class:list={["news-row", { "news-row--terse": terse }]}
+  class:list={["news-row", { "news-row--terse": terse, "news-row--nodate": !showDate }]}
   data-topics={data.topics.join(" ")}
 >
   {showDate && (
@@ -101,6 +101,11 @@ const { data } = post;
     padding-block: 0.62rem;
   }
   .news-row--terse .news-row-title { font-size: 0.95rem; font-weight: 500; }
+
+  /* No date column (the list is grouped under a date rule): the body is
+     the only child, so collapse to one column — otherwise it lands in
+     the empty fixed date track and gets squeezed to ~4.5rem wide. */
+  .news-row--nodate { grid-template-columns: 1fr; }
 
   @media (max-width: 560px) {
     .news-row,
