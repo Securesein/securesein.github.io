@@ -1,0 +1,81 @@
+---
+// Curated storylines. Nothing auto-generates these — the entire value
+// of a thread is that a human chose which posts belong in it and what
+// order they go in.
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+import { postUrl, threadsWithPosts } from "../../posts";
+import { KINDS } from "../../taxonomy";
+
+const threads = await threadsWithPosts();
+---
+<BaseLayout
+  title="Threads"
+  description="Curated storylines that pull news items and deep dives into reading order."
+>
+  <div class="container container--wide">
+    <PageHeader
+      title="Threads"
+      standfirst="Some stories arrive in pieces over a week — a news item, then the explanation of what was actually going on, then the thing that happened next. A thread puts those pieces back in order."
+    />
+
+    {threads.map(({ thread, posts }) => (
+      <section class="thread">
+        <h2 class="thread-title">
+          <a href={`/threads/${thread.id}/`}>{thread.data.title}</a>
+        </h2>
+        <p class="thread-blurb">{thread.data.blurb}</p>
+        <ol class="thread-list">
+          {posts.map((post) => (
+            <li>
+              <span class="thread-kind">{KINDS[post.data.kind].label}</span>
+              <a href={postUrl(post)}>{post.data.title}</a>
+              <FormattedDate date={post.data.pubDate} day />
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))}
+
+    {threads.length === 0 && <p class="empty">No threads yet.</p>}
+  </div>
+</BaseLayout>
+
+<style>
+  .thread {
+    padding-block: 1.8rem;
+    border-top: 1px solid var(--rule);
+  }
+  .thread-title { font-size: 1.4rem; }
+  .thread-title a { color: var(--text); }
+  .thread-title a:hover { color: var(--signal); text-decoration: none; }
+  .thread-blurb {
+    margin-top: 0.6rem;
+    max-width: 62ch;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+  .thread-list {
+    margin-top: 1.1rem;
+    padding-left: 1.4rem;
+    display: grid;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .thread-list li { display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; }
+  .thread-list a { color: var(--text); }
+  .thread-kind {
+    min-width: 5.6rem;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+  }
+  .thread-list :global(time) {
+    margin-left: auto;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .empty { color: var(--text-muted); padding-block: 2rem; }
+</style>

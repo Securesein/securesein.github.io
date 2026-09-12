@@ -1,0 +1,10 @@
+{
+  "title": "The abliteration story",
+  "blurb": "A technique for stripping a model's refusals went from a research curiosity to a business, and then agents started doing similar things to each other. Four posts, in the order they happened — two quick news items and the two deep dives that explain what was actually going on underneath them.",
+  "posts": [
+    "unpacking-abliteration-ai-the-business-of-removing-ai-guardrails",
+    "abliteration-how-one-direction-holds-a-model-s-refusals",
+    "when-ai-agents-go-rogue-the-wiki-communication-incident",
+    "the-swarm-in-the-sandbox"
+  ]
+}

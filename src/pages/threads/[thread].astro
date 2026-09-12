@@ -1,0 +1,56 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import PostCard from "../../components/PostCard.astro";
+import { threadsWithPosts, type Post, type Thread } from "../../posts";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const threads = await threadsWithPosts();
+  return threads.map(({ thread, posts }) => ({
+    params: { thread: thread.id },
+    props: { thread, posts },
+  }));
+};
+
+const { thread, posts } = Astro.props as { thread: Thread; posts: Post[] };
+---
+<BaseLayout title={thread.data.title} description={thread.data.blurb}>
+  <div class="container container--wide">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/threads/">Threads</a>
+    </nav>
+
+    <PageHeader
+      title={thread.data.title}
+      standfirst={thread.data.blurb}
+      note={`${posts.length} parts, in reading order. Chosen and ordered by hand.`}
+    />
+
+    <ol class="parts">
+      {posts.map((post, i) => (
+        <li class="part">
+          <p class="part-number">Part {i + 1} of {posts.length}</p>
+          <PostCard post={post} compact />
+        </li>
+      ))}
+    </ol>
+  </div>
+</BaseLayout>
+
+<style>
+  .crumbs { padding-top: 2.4rem; font-size: 0.85rem; }
+  .crumbs a { color: var(--text-muted); }
+  .crumbs + :global(.page-header) { padding-top: 0.8rem; }
+  .parts { list-style: none; padding: 0; margin: 1.4rem 0 0; }
+  .part { position: relative; padding-left: 0; }
+  .part-number {
+    margin-top: 1.4rem;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .part :global(.card) { border-top: none; padding-top: 0.3rem; }
+</style>

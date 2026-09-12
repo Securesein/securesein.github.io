@@ -1,0 +1,113 @@
+---
+// Deep dives, plus the per-format views at /deep-dives/<format>/.
+//
+// Formats are chips on one landing page rather than four sub-sections:
+// it reads as categories without adding four nav items, and without
+// putting a scary word ("Research", "Papers") on the front door.
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import PostCard from "../../components/PostCard.astro";
+import { postsOfKind, type Post } from "../../posts";
+import { FORMATS, type Format } from "../../taxonomy";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const posts = await postsOfKind("deepdive");
+  const formats = [...new Set(posts.map((p) => p.data.format as Format))];
+  return [
+    { params: { format: undefined }, props: { posts, active: undefined } },
+    // Empty formats are hidden, not greyed out — no route, no chip.
+    ...formats.map((format) => ({
+      params: { format: FORMATS[format].slug },
+      props: {
+        posts: posts.filter((p) => p.data.format === format),
+        active: format,
+      },
+    })),
+  ];
+};
+
+const { posts, active } = Astro.props as {
+  posts: Post[];
+  active?: Format;
+};
+
+const all = await postsOfKind("deepdive");
+const counts = new Map<Format, number>();
+for (const post of all) {
+  const f = post.data.format as Format;
+  counts.set(f, (counts.get(f) ?? 0) + 1);
+}
+const chips = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+const activeLabel = active ? FORMATS[active].label : undefined;
+---
+<BaseLayout
+  title={activeLabel ? `Deep dives — ${activeLabel}` : "Deep dives"}
+  description={
+    activeLabel
+      ? `${FORMATS[active!].description} Part of the deep dives on securesein.`
+      : "One thing taken apart properly — usually a paper, sometimes a system, sometimes something I built and broke. No prior reading required."
+  }
+>
+  <div class="container container--wide">
+    <PageHeader
+      title="Deep dives"
+      standfirst="One thing, taken apart properly. Usually a paper, sometimes a system, sometimes something I built and broke. No prior reading required — each one starts from the top."
+    >
+      <nav class="formats" aria-label="Deep dive formats">
+        <a
+          href="/deep-dives/"
+          class:list={["format-chip", { "format-chip--on": !active }]}
+          aria-current={!active ? "page" : undefined}
+        >
+          All <span class="format-count">{all.length}</span>
+        </a>
+        {chips.map(([format, count]) => (
+          <a
+            href={`/deep-dives/${FORMATS[format].slug}/`}
+            class:list={["format-chip", { "format-chip--on": active === format }]}
+            aria-current={active === format ? "page" : undefined}
+          >
+            {FORMATS[format].label} <span class="format-count">{count}</span>
+          </a>
+        ))}
+      </nav>
+    </PageHeader>
+
+    {activeLabel && <p class="format-desc">{FORMATS[active!].description}</p>}
+
+    <div class="dives">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+
+    {posts.length === 0 && <p class="empty">Nothing here yet.</p>}
+  </div>
+</BaseLayout>
+
+<style>
+  .formats { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1.5rem; }
+  .format-chip {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+  }
+  .format-chip:hover { color: var(--text); border-color: var(--text-muted); text-decoration: none; }
+  .format-chip--on {
+    background: var(--text);
+    border-color: var(--text);
+    color: var(--bg);
+  }
+  .format-count { font-size: 0.74rem; font-variant-numeric: tabular-nums; opacity: 0.7; }
+  .format-desc { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 0.6rem; }
+
+  .dives { display: grid; gap: 0; }
+  @media (min-width: 880px) {
+    .dives { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.6rem; }
+  }
+  .empty { color: var(--text-muted); padding-block: 2rem; }
+</style>

@@ -4,6 +4,7 @@ description: "Why a model that can explain quantum tunnelling cannot count the l
 pubDate: 2026-09-04
 kind: "explainer"
 topics: ["models"]
+order: 1
 credit: "directed"
 model: "Claude"
 contributions:

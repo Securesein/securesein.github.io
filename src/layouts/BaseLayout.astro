@@ -7,10 +7,13 @@ import "../styles/global.css";
 interface Props {
   title?: string;
   description?: string;
+  /** Switches the body to the long-form reading typeface (§6). */
+  reading?: boolean;
 }
-const { title, description } = Astro.props;
+const { title, description, reading = false } = Astro.props;
 const pageTitle = title ? `${title} — ${SITE.title}` : SITE.title;
 const pageDesc = description ?? SITE.description;
+const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
 <html lang="en">
@@ -20,6 +23,9 @@ const pageDesc = description ?? SITE.description;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDesc} />
+    <link rel="canonical" href={canonical} />
+    <!-- Per-page extras: RSS autodiscovery, JSON-LD, OG overrides. -->
+    <slot name="head" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,9 +44,10 @@ const pageDesc = description ?? SITE.description;
       })();
     </script>
   </head>
-  <body>
+  <body class:list={{ reading }}>
+    <a href="#main" class="skip-link">Skip to content</a>
     <Header />
-    <main><slot /></main>
+    <main id="main" tabindex="-1"><slot /></main>
     <Footer />
   </body>
 </html>

@@ -1,12 +1,19 @@
 ---
+// Always a real <time datetime> element — the machine-readable value
+// is the ISO date, whatever the human-facing format.
 interface Props {
   date: Date;
+  /** "9 Sep 2026" — for card meta lines, where space is the constraint. */
+  short?: boolean;
+  /** "9 Sep" — inside a list already grouped under a year/day heading. */
+  day?: boolean;
 }
-const { date } = Astro.props;
-const formatted = date.toLocaleDateString("en-US", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
+const { date, short = false, day = false } = Astro.props;
+const options: Intl.DateTimeFormatOptions = day
+  ? { day: "numeric", month: "short" }
+  : short
+    ? { day: "numeric", month: "short", year: "numeric" }
+    : { day: "numeric", month: "long", year: "numeric" };
+const formatted = date.toLocaleDateString("en-GB", options);
 ---
-<time datetime={date.toISOString()}>{formatted}</time>
+<time datetime={date.toISOString().slice(0, 10)}>{formatted}</time>

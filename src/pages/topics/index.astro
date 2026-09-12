@@ -1,0 +1,101 @@
+---
+// The subject directory. This axis is what makes a post appear in more
+// than one place: a news item tagged `safety` lives in /news/ and on
+// this shelf, with no duplicated file.
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+import { allPosts, postUrl, topicCounts } from "../../posts";
+import { TOPICS, type Topic } from "../../taxonomy";
+
+const counts = await topicCounts();
+const posts = await allPosts();
+const latest = new Map<Topic, (typeof posts)[number]>();
+for (const post of posts) {
+  for (const topic of post.data.topics as Topic[]) {
+    if (!latest.has(topic)) latest.set(topic, post);
+  }
+}
+const topics = Object.keys(TOPICS) as Topic[];
+---
+<BaseLayout
+  title="Topics"
+  description="Seven subjects this blog covers, each pulling together news, fundamentals and deep dives on the same shelf."
+>
+  <div class="container container--wide">
+    <PageHeader
+      title="Topics"
+      standfirst="Seven shelves, deliberately few. Each one pulls together everything on that subject — the two-minute news item and the twenty-minute teardown sit side by side."
+    />
+
+    <ul class="topic-grid">
+      {topics.map((topic) => {
+        const count = counts[topic] ?? 0;
+        const recent = latest.get(topic);
+        return (
+          <li class="topic-card">
+            <h2 class="topic-card-title">
+              <a href={`/topics/${topic}/`}>{TOPICS[topic].label}</a>
+            </h2>
+            <p class="topic-card-desc">{TOPICS[topic].description}</p>
+            <p class="topic-card-foot">
+              <span class="topic-card-count">
+                {count === 0 ? "Nothing yet" : count === 1 ? "1 post" : `${count} posts`}
+              </span>
+              {recent && (
+                <span class="topic-card-latest">
+                  Latest <FormattedDate date={recent.data.pubDate} short />
+                </span>
+              )}
+            </p>
+            {recent && (
+              <p class="topic-card-recent">
+                <a href={postUrl(recent)}>{recent.data.title}</a>
+              </p>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .topic-grid {
+    list-style: none;
+    padding: 0;
+    margin: 1.4rem 0 0;
+    display: grid;
+    gap: 1px;
+    background: var(--rule);
+    border-block: 1px solid var(--rule);
+  }
+  @media (min-width: 700px) {
+    .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (min-width: 1000px) {
+    .topic-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  .topic-card {
+    display: grid;
+    align-content: start;
+    gap: 0.45rem;
+    padding: 1.4rem 1.3rem;
+    background: var(--bg);
+  }
+  .topic-card-title { font-size: 1.1rem; }
+  .topic-card-title a { color: var(--text); }
+  .topic-card-title a:hover { color: var(--signal); text-decoration: none; }
+  .topic-card-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.55; }
+  .topic-card-foot {
+    display: flex;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+  }
+  .topic-card-latest { margin-left: auto; }
+  .topic-card-recent { font-size: 0.88rem; }
+  .topic-card-recent a { color: var(--text-muted); }
+</style>

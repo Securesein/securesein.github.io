@@ -1,10 +1,16 @@
 ---
+// Post URLs stay at /blog/<slug>/ — they are already indexed and
+// shared, and GitHub Pages has no server-side redirects to soften a
+// rename with. What gets fixed here is the *breadcrumb*: it reflects
+// the post's `kind`, not the URL segment, so a Fundamentals post no
+// longer announces itself as News.
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
-import AiAvatar from "../../components/AiAvatar.astro";
+import TopicChips from "../../components/TopicChips.astro";
 import { CREDITS, disclosure } from "../../credit";
-import { KINDS, TOPICS } from "../../taxonomy";
+import { FORMATS, KINDS, type Topic } from "../../taxonomy";
+import { postUrl, readingMinutes } from "../../posts";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
@@ -15,63 +21,67 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content, remarkPluginFrontmatter } = await render(post);
-const readingTime = remarkPluginFrontmatter?.minutesRead;
-const credit = CREDITS[post.data.credit];
-const isAI = post.data.credit === "scout";
-const aiNote = disclosure(post.data);
-const initials = credit.byline.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
-const kindInfo = KINDS[post.data.kind];
-const isFundamentals = post.data.kind !== "news";
+const { data } = post;
+const { Content } = await render(post);
+
+const kind = KINDS[data.kind];
+const format = data.format ? FORMATS[data.format] : undefined;
+const minutes = readingMinutes(post);
+const longForm = data.kind !== "news";
+
+// The weaker of two posts on the same subject points at the better
+// one rather than leaving the reader on it.
+const betterPosts = data.betterCoveredBy
+  ? await getCollection("blog", ({ id }) => id === data.betterCoveredBy)
+  : [];
+const better = betterPosts[0];
 ---
-<BaseLayout title={post.data.title} description={post.data.description}>
+<BaseLayout title={data.title} description={data.description} reading={longForm}>
   <article class="container post">
-    {isFundamentals ? (
-      <a href={kindInfo.href} class="back">&larr; Back to {kindInfo.plural}</a>
-    ) : (
-      <a href="/news" class="back">&larr; Back to News</a>
-    )}
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href={kind.href}>{kind.plural}</a>
+      {format && (
+        <a href={`/deep-dives/${format.slug}/`}>{format.label}</a>
+      )}
+    </nav>
 
-    {(isFundamentals || post.data.topics.length > 0) && (
-      <div class="post-tags">
-        {isFundamentals && <span class="pill fundamentals-badge">{kindInfo.label}</span>}
-        {post.data.topics.map((topic) => <span class="pill">{TOPICS[topic].label}</span>)}
-      </div>
-    )}
+    <h1 class="post-title">{data.title}</h1>
+    <p class="post-lead">{data.description}</p>
 
-    <h1 class="post-title">{post.data.title}</h1>
-    <p class="post-lead">{post.data.description}</p>
-
-    <div class="post-byline">
-      <div class="author">
-        {isAI ? (
-          <AiAvatar />
-        ) : (
-          <span class="avatar">{initials}</span>
-        )}
-        <span class="author-text">
-          <strong>
-            {credit.byline}
-            {isAI && <span class="ai-badge">AI</span>}
-          </strong>
-          {credit.qualifier && <span class="author-role">{credit.qualifier}</span>}
+    <p class="post-meta">
+      <span class="post-byline">{CREDITS[data.credit].byline}</span>
+      <FormattedDate date={data.pubDate} />
+      <span class="post-length">{minutes} min read</span>
+      {data.updatedDate && (
+        <span class="post-updated">
+          Updated <FormattedDate date={data.updatedDate} short />
         </span>
-      </div>
-      <span class="post-meta">
-        <FormattedDate date={post.data.pubDate} />
-        {readingTime && <> &middot; {readingTime}</>}
-      </span>
-    </div>
+      )}
+    </p>
 
-    <p class="ai-note">{aiNote}</p>
+    <TopicChips topics={data.topics as Topic[]} />
 
-    {post.data.source && (
-      <div class="post-source">
-        Based on: <a href={post.data.source.url}>{post.data.source.publisher}</a>
-      </div>
+    <!-- Placeholder for the full "How this was made" block (phase 4);
+         the disclosure sentence itself is already generated from
+         credit + contributions, so no post ships without one. -->
+    <p class="made">{disclosure(data)}</p>
+
+    {better && (
+      <aside class="crosslink">
+        There is a better piece on this subject in Fundamentals:
+        <a href={postUrl(better)}>{better.data.title}</a>
+      </aside>
     )}
 
-    <hr class="rule" />
+    {data.hero && (
+      <img
+        class="post-hero"
+        src={data.hero}
+        alt={data.heroAlt}
+        width="1200"
+        height="630"
+      />
+    )}
 
     <div class="prose">
       <Content />
@@ -80,43 +90,59 @@ const isFundamentals = post.data.kind !== "news";
 </BaseLayout>
 
 <style>
-  .post { padding-top: 2.5rem; }
-  .back { color: var(--text-muted); font-size: 0.95rem; }
-  .back:hover { color: var(--text); text-decoration: none; }
-  .post-tags { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 2rem; }
-  /* Reuses .pill (same markup: class="pill fundamentals-badge") so the
-     box model — padding, border width, border-radius, font-size,
-     font-weight, letter-spacing — is the exact same CSS rule as the
-     category pill beside it, not just matching values in a second
-     rule. Two attempts at "matching values" (padding, then a
-     transparent border) both still rendered a few px off on
-     Safari/macOS at this font size; sharing the literal rule is the
-     only way to be sure. Only the accent colors differ here. */
-  .fundamentals-badge {
-    border-color: transparent;
-    background: var(--gradient);
-    color: #0a0a0c;
+  .post { padding-top: 2.4rem; }
+  .crumbs { display: flex; gap: 0.8rem; font-size: 0.84rem; }
+  .crumbs a { color: var(--text-muted); }
+  .post-title {
+    font-size: clamp(1.9rem, 5vw, 2.9rem);
+    margin-top: 1.1rem;
+    letter-spacing: -0.025em;
   }
-  .post-title { font-size: clamp(2rem, 5vw, 3rem); margin-top: 1.2rem; }
-  .post-lead { font-size: 1.25rem; color: var(--text-muted); margin-top: 1.2rem; }
-  .post-byline { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
-  .author { display: flex; align-items: center; gap: 0.8rem; }
-  .avatar {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 44px; height: 44px; border-radius: 999px;
-    background: var(--bg-elevated); border: 1px solid var(--border-strong);
-    font-size: 0.85rem; font-weight: 700; color: var(--text);
+  .post-lead {
+    font-size: 1.18rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    max-width: 56ch;
   }
-  .author-text { display: flex; flex-direction: column; line-height: 1.3; }
-  .author-role { color: var(--text-muted); font-size: 0.85rem; }
-  .ai-badge {
-    display: inline-block; margin-left: 0.5rem; padding: 0.1rem 0.45rem;
-    border-radius: 999px; background: var(--bg-pill); border: 1px solid var(--border-strong);
-    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-muted);
-    vertical-align: middle;
+  .post-meta {
+    display: flex;
+    gap: 1.1rem;
+    flex-wrap: wrap;
+    margin-top: 1.4rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
   }
-  .post-meta { color: var(--text-muted); font-size: 0.9rem; }
-  .ai-note { margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted); font-style: italic; }
-  .post-source { margin-top: 1.2rem; font-size: 0.9rem; color: var(--text-muted); }
-  .rule { border: none; border-top: 1px solid var(--border); margin-block: 2.2rem; }
+  .post :global(.topic-chips) { margin-top: 1rem; }
+  .post-byline { color: var(--text); font-weight: 600; }
+  .made {
+    margin-top: 1.4rem;
+    padding: 0.85rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: 0.86rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+  .crosslink {
+    margin-top: 1.6rem;
+    padding: 0.8rem 1rem;
+    border-left: 2px solid var(--signal);
+    background: var(--surface);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  .crosslink a { margin-left: 0.35rem; }
+  .post-hero {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-sm);
+  }
+  .prose { margin-top: 2.4rem; }
 </style>

@@ -1,0 +1,111 @@
+---
+// The dense News row. Dense is correct for this lane: these are
+// two-minute auto-drafted items and the reader is scanning, not
+// browsing. No card chrome, just a rule and a grid.
+import FormattedDate from "./FormattedDate.astro";
+import TopicChips from "./TopicChips.astro";
+import { postUrl, readingMinutes, type Post } from "../posts";
+import type { Topic } from "../taxonomy";
+
+interface Props {
+  post: Post;
+  /** Omit the date when the list is already grouped under a date rule. */
+  showDate?: boolean;
+  /** Homepage sidebar: title and date only. */
+  terse?: boolean;
+}
+const { post, showDate = true, terse = false } = Astro.props;
+const { data } = post;
+---
+<article
+  class:list={["news-row", { "news-row--terse": terse }]}
+  data-topics={data.topics.join(" ")}
+>
+  {showDate && (
+    <FormattedDate date={data.pubDate} day={true} />
+  )}
+  <div class="news-row-body">
+    <h3 class="news-row-title">
+      <a href={postUrl(post)}>{data.title}</a>
+    </h3>
+    {!terse && (
+      <Fragment>
+        <p class="news-row-desc">{data.description}</p>
+        <div class="news-row-meta">
+          <TopicChips topics={data.topics as Topic[]} nested />
+          <span class="news-row-provenance">
+            <span class="news-row-scout">Scout</span>
+            {data.source && <span class="news-row-publisher">{data.source.publisher}</span>}
+            <span class="news-row-length">{readingMinutes(post)} min</span>
+          </span>
+        </div>
+      </Fragment>
+    )}
+  </div>
+</article>
+
+<style>
+  .news-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.2rem 1rem;
+    padding: 1.05rem 0 1.05rem 1.1rem;
+    border-top: 1px solid var(--rule);
+    /* The News marker: a 2px rule in the muted grey, never the accent.
+       Structure, not colour, is what separates the lanes. */
+    border-left: 2px solid var(--text-muted);
+  }
+  .news-row > time {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    padding-top: 0.2rem;
+  }
+  .news-row-body { display: grid; gap: 0.4rem; min-width: 0; }
+  .news-row-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+  .news-row-title a { color: var(--text); }
+  .news-row-title a:hover { color: var(--signal); text-decoration: none; }
+  .news-row-title a::after { content: ""; position: absolute; inset: 0; }
+  .news-row-desc {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    max-width: 62ch;
+  }
+  .news-row-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin-top: 0.15rem;
+  }
+  .news-row-provenance {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+  .news-row-scout { font-weight: 600; }
+
+  .news-row--terse {
+    grid-template-columns: 3.6rem 1fr;
+    padding-block: 0.62rem;
+  }
+  .news-row--terse .news-row-title { font-size: 0.95rem; font-weight: 500; }
+
+  @media (max-width: 560px) {
+    .news-row,
+    .news-row--terse { grid-template-columns: 1fr; }
+    .news-row > time { padding-top: 0; }
+    .news-row-provenance { margin-left: 0; width: 100%; }
+  }
+</style>

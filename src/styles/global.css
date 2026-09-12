@@ -12,6 +12,13 @@
     Helvetica, Arial, sans-serif;
   --font-mono: "SF Mono", ui-monospace, "JetBrains Mono", "Fira Code", Menlo,
     Consolas, monospace;
+
+  /* Semantic aliases used by the new listing components. The palette
+     these resolve to is replaced wholesale in the design pass; the
+     names are what the components depend on. */
+  --rule: var(--border);
+  --surface: var(--bg-pill);
+  --signal: var(--accent-from);
 }
 
 :root,
@@ -45,6 +52,25 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
+
+/* Rows the client-side topic filter hides are toggled via the `hidden`
+   property; a grid/flex display would otherwise win over it. */
+[hidden] { display: none !important; }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 1rem; text-decoration: none; }
+main:focus { outline: none; }
 
 html {
   font-family: var(--font-sans);

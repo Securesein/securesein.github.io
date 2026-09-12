@@ -1,0 +1,44 @@
+---
+// Shared H1 + standfirst for the section and shelf landing pages, so
+// every index opens the same way. No all-caps tracked-out eyebrow
+// above the heading — that's a template tell, and the section is
+// already named in the nav.
+interface Props {
+  title: string;
+  /** One or two sentences of human framing, in the author's voice. */
+  standfirst?: string;
+  /** Small, calm, never a banner — e.g. the standing Scout note. */
+  note?: string;
+}
+const { title, standfirst, note } = Astro.props;
+---
+<header class="page-header">
+  <h1>{title}</h1>
+  {standfirst && <p class="page-standfirst">{standfirst}</p>}
+  <slot />
+  {note && <p class="page-note">{note}</p>}
+</header>
+
+<style>
+  .page-header { padding-top: 3rem; margin-bottom: 1.6rem; }
+  .page-header h1 {
+    font-size: clamp(1.9rem, 5vw, 2.6rem);
+    letter-spacing: -0.025em;
+  }
+  .page-standfirst {
+    margin-top: 0.9rem;
+    max-width: 46ch;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .page-note {
+    margin-top: 1.4rem;
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--rule);
+    max-width: 58ch;
+    color: var(--text-muted);
+    font-size: 0.86rem;
+    line-height: 1.6;
+  }
+</style>

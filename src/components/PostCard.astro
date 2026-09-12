@@ -1,61 +1,203 @@
 ---
+// The four-line card. Four lines, four jobs:
+//   1  kind (and format) on the left, date and length right-aligned
+//   2  title — the anchor, and the only thing with real weight
+//   3  description
+//   4  topic chips, each its own link
+//
+// No "Read more" (the whole card is already a link) and no meta string
+// chained with middle dots: the fields are separate elements with
+// space between them, not one run-on line.
+//
+// Kinds are differentiated structurally, not by colour — a left rule,
+// type size and whitespace — so the distinction survives dark mode.
 import FormattedDate from "./FormattedDate.astro";
-import AiAvatar from "./AiAvatar.astro";
+import TopicChips from "./TopicChips.astro";
 import { CREDITS } from "../credit";
-import { KINDS, TOPICS, type Credit, type Kind, type Topic } from "../taxonomy";
+import { FORMATS, KINDS, type Topic } from "../taxonomy";
+import { postUrl, readingMinutes, type Post } from "../posts";
 
 interface Props {
-  title: string;
-  description: string;
-  pubDate: Date;
-  topics: Topic[];
-  url: string;
-  credit: Credit;
-  kind: Kind;
+  post: Post;
+  /** The single place the design spends any boldness — homepage hero. */
+  featured?: boolean;
+  /** Position in the Fundamentals reading path, rendered as a numeral. */
+  step?: number;
+  /** Hide the hero even on a deep dive (dense contexts, e.g. topic pages). */
+  compact?: boolean;
 }
-const { title, description, pubDate, topics, url, credit, kind } = Astro.props;
-const creditInfo = CREDITS[credit];
+const { post, featured = false, step, compact = false } = Astro.props;
+const { data } = post;
+const kind = KINDS[data.kind];
+const format = data.format ? FORMATS[data.format] : undefined;
+const showHero = !!data.hero && !compact;
 ---
-<article class="post-card">
-  <a href={url} class="post-card-link">
-    <div class="post-card-meta">
-      {credit === "scout" ? (
-        <AiAvatar size={18} />
-      ) : (
-        <span class="post-card-avatar">{creditInfo.byline[0]}</span>
-      )}
-      <FormattedDate date={pubDate} />
-      {kind !== "news" && <span class="post-card-badge">{KINDS[kind].label}</span>}
-      {topics.slice(0, 2).map((topic) => <span class="post-card-tag">{TOPICS[topic].label}</span>)}
+<article
+  class:list={[
+    "card",
+    `card--${data.kind}`,
+    { "card--featured": featured, "card--hero": showHero },
+  ]}
+>
+  {showHero && (
+    <a href={postUrl(post)} class="card-hero" tabindex="-1" aria-hidden="true">
+      <img src={data.hero} alt="" loading="lazy" decoding="async" />
+    </a>
+  )}
+
+  <div class="card-body">
+    <p class="card-line-1">
+      <span class="card-kind">
+        {step !== undefined && <span class="card-step">{step}</span>}
+        {kind.label}
+      </span>
+      {format && <span class="card-format">{format.label}</span>}
+      <span class="card-when">
+        <FormattedDate date={data.pubDate} short />
+        <span class="card-length">{readingMinutes(post)} min</span>
+      </span>
+    </p>
+
+    <h2 class="card-title">
+      <a href={postUrl(post)}>{data.title}</a>
+    </h2>
+
+    <p class="card-desc">{data.description}</p>
+
+    <div class="card-line-4">
+      <TopicChips topics={data.topics as Topic[]} nested />
+      <span class="card-credit">{CREDITS[data.credit].short}</span>
     </div>
-    <h2 class="post-card-title">{title}</h2>
-    <p class="post-card-desc">{description}</p>
-  </a>
+  </div>
 </article>
 
 <style>
-  .post-card { border-top: 1px solid var(--border); padding-block: 1.8rem; }
-  .post-card-link { display: block; color: inherit; }
-  .post-card-link:hover { text-decoration: none; }
-  .post-card-link:hover .post-card-title {
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  .card {
+    position: relative;
+    display: grid;
+    gap: 1rem;
+    padding-block: 1.6rem;
+    border-top: 1px solid var(--rule);
   }
-  .post-card-meta { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: var(--text-muted); flex-wrap: wrap; }
-  .post-card-avatar {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 18px; height: 18px; border-radius: 999px; flex-shrink: 0;
-    background: var(--bg-elevated); border: 1px solid var(--border-strong);
-    font-size: 0.6rem; font-weight: 700; color: var(--text);
+  .card-body { display: grid; gap: 0.55rem; }
+
+  /* The whole card is the link; the title is the accessible anchor
+     text, stretched over the card by this pseudo-element. Chips and
+     the hero sit above it so they keep their own hit areas. */
+  .card-title a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
   }
-  .post-card-tag { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; font-weight: 600; }
-  .post-card-badge {
-    display: inline-flex; align-items: center; padding: 0.15rem 0.55rem;
-    border-radius: 999px; background: var(--gradient); color: #0a0a0c;
-    font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+
+  /* --- line 1: kind / format, then date and length, right-aligned --- */
+  .card-line-1 {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-muted);
   }
-  .post-card-title { font-size: 1.5rem; margin-top: 0.5rem; transition: color 0.2s ease; }
-  .post-card-desc { color: var(--text-muted); margin-top: 0.5rem; }
+  .card-kind {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    color: var(--text);
+    font-weight: 600;
+  }
+  .card-step {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.35rem;
+    height: 1.35rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-muted);
+    align-self: center;
+  }
+  .card-format { font-weight: 500; }
+  .card-when {
+    margin-left: auto;
+    display: inline-flex;
+    gap: 0.85rem;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* --- line 2: the title --- */
+  .card-title {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+  .card-title a { color: var(--text); }
+  .card-title a:hover { color: var(--signal); text-decoration: none; }
+
+  /* --- line 3 --- */
+  .card-desc {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.6;
+    max-width: 62ch;
+  }
+
+  /* --- line 4 --- */
+  .card-line-4 {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin-top: 0.2rem;
+  }
+  /* Disclosure sits at exactly the weight of the read time: always
+     present, never styled as a warning. */
+  .card-credit {
+    margin-left: auto;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  /* --- structural differentiation by kind --- */
+  .card--news {
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--text-muted);
+  }
+  .card--news .card-title { font-size: 1.15rem; }
+  .card--news .card-desc { font-size: 0.92rem; }
+
+  /* Fundamentals: no rule, more air. */
+  .card--explainer { padding-block: 2.1rem; }
+  .card--explainer .card-desc { font-size: 1.02rem; }
+
+  .card--deepdive {
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--signal);
+  }
+  .card--deepdive .card-title { font-size: 1.5rem; }
+
+  .card--hero { gap: 1.2rem; }
+  .card-hero { display: block; position: relative; z-index: 1; }
+  .card-hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+  }
+
+  /* The one place the design raises its voice. */
+  .card--featured .card-title { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
+  .card--featured .card-desc { font-size: 1.08rem; }
+  .card--featured { border-top: none; padding-top: 0; }
+
+  @media (max-width: 520px) {
+    .card-line-1 { flex-wrap: wrap; gap: 0.5rem 0.85rem; }
+    .card-when { margin-left: 0; width: 100%; }
+    .card-credit { margin-left: 0; width: 100%; }
+  }
 </style>

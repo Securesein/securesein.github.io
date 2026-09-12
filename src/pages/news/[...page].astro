@@ -1,0 +1,102 @@
+---
+// The News index: dense, date-grouped, filterable, paginated at 30.
+import type { GetStaticPaths, Page } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import NewsRow from "../../components/NewsRow.astro";
+import TopicFilter from "../../components/TopicFilter.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+import { groupByDay, postsOfKind, type Post } from "../../posts";
+import { TOPICS, type Topic } from "../../taxonomy";
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const posts = await postsOfKind("news");
+  return paginate(posts, { pageSize: 30 });
+};
+
+const { page } = Astro.props as { page: Page<Post> };
+const days = groupByDay(page.data);
+
+// Only the topics actually present on this page get a filter chip —
+// a chip that filters to nothing is noise.
+const present = new Set<Topic>();
+for (const post of page.data) {
+  for (const topic of post.data.topics as Topic[]) present.add(topic);
+}
+const topics = (Object.keys(TOPICS) as Topic[]).filter((t) => present.has(t));
+---
+<BaseLayout
+  title="News"
+  description="AI news, drafted automatically from the source article and published without review. Newest first."
+>
+  <div class="container container--wide">
+    <PageHeader
+      title="News"
+      standfirst="What happened, usually within a few hours of it happening. Short items, always linked back to where they came from."
+      note="These are drafted automatically by Scout from the source article and published without a human reading them first. Every one links to its source, and every one says so on the post itself."
+    >
+      {topics.length > 1 && <TopicFilter topics={topics} />}
+    </PageHeader>
+
+    <div class="news-list" data-news-list>
+      {days.map(({ date, posts }) => (
+        <section class="news-day" data-news-day>
+          <h2 class="news-day-rule">
+            <FormattedDate date={date} />
+          </h2>
+          {posts.map((post) => <NewsRow post={post} showDate={false} />)}
+        </section>
+      ))}
+      <p class="news-empty" data-news-empty hidden>
+        Nothing on this page matches that topic. Try another, or clear the filter.
+      </p>
+    </div>
+
+    {(page.url.prev || page.url.next) && (
+      <nav class="pager" aria-label="Pagination">
+        {page.url.prev ? (
+          <a href={page.url.prev} rel="prev">Newer</a>
+        ) : (
+          <span class="pager-off">Newer</span>
+        )}
+        <span class="pager-count">Page {page.currentPage} of {page.lastPage}</span>
+        {page.url.next ? (
+          <a href={page.url.next} rel="next">Older</a>
+        ) : (
+          <span class="pager-off">Older</span>
+        )}
+      </nav>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .news-list { margin-top: 1.4rem; }
+  .news-day { margin-bottom: 0.6rem; }
+  .news-day-rule {
+    position: sticky;
+    top: 64px;
+    z-index: 2;
+    padding: 0.55rem 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
+  }
+  .news-day :global(.news-row:first-of-type) { border-top: none; }
+  .news-empty { color: var(--text-muted); padding-block: 3rem; }
+
+  .pager {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    margin-top: 2.4rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.9rem;
+  }
+  .pager-count { margin-inline: auto; color: var(--text-muted); }
+  .pager-off { color: var(--rule); }
+</style>

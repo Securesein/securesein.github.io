@@ -66,6 +66,10 @@ const blog = defineCollection({
       heroAlt: z.string().optional(),
       // Slugs from the `threads` collection this post is a part of.
       threads: z.array(z.string()).default([]),
+      // Position in the Fundamentals reading path. Lower reads first;
+      // anything without one falls to the end in publication order.
+      // Recency is the wrong sort for evergreen explainers.
+      order: z.number().optional(),
       // Set on a post that is superseded by a better one elsewhere on
       // the site — renders a cross-link instead of leaving the reader
       // on the weaker piece.

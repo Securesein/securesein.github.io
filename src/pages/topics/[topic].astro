@@ -1,0 +1,98 @@
+---
+// One subject shelf. Grouped by kind, best material first (deep dives
+// → fundamentals → news), because this is where a reader who arrived
+// from a two-minute news item gets pulled into the long stuff.
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import PostCard from "../../components/PostCard.astro";
+import NewsRow from "../../components/NewsRow.astro";
+import { groupByKind, postsByTopic, type Post } from "../../posts";
+import { KINDS, TOPICS, type Topic } from "../../taxonomy";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const topics = Object.keys(TOPICS) as Topic[];
+  return Promise.all(
+    topics.map(async (topic) => ({
+      params: { topic },
+      props: { topic, posts: await postsByTopic(topic) },
+    }))
+  );
+};
+
+const { topic, posts } = Astro.props as { topic: Topic; posts: Post[] };
+const info = TOPICS[topic];
+const groups = groupByKind(posts);
+---
+<BaseLayout title={info.label} description={info.description}>
+  <link
+    slot="head"
+    rel="alternate"
+    type="application/rss+xml"
+    title={`securesein — ${info.label}`}
+    href={`/topics/${topic}/rss.xml`}
+  />
+  <div class="container container--wide">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/topics/">Topics</a>
+    </nav>
+
+    <PageHeader title={info.label} standfirst={info.blurb} />
+
+    <p class="shelf-feed">
+      <a href={`/topics/${topic}/rss.xml`}>Feed for this topic</a>
+    </p>
+
+    {groups.map(({ kind, posts }) => (
+      <section class="shelf">
+        <h2 class="shelf-heading">
+          <a href={KINDS[kind].href}>{KINDS[kind].plural}</a>
+          <span class="shelf-count">{posts.length}</span>
+        </h2>
+        {kind === "news" ? (
+          <div class="shelf-rows">
+            {posts.map((post) => <NewsRow post={post} />)}
+          </div>
+        ) : (
+          <div class="shelf-cards">
+            {posts.map((post) => <PostCard post={post} compact />)}
+          </div>
+        )}
+      </section>
+    ))}
+
+    {posts.length === 0 && (
+      <p class="empty">
+        Nothing on this shelf yet. It is here because it is where this blog
+        is meant to grow, not because there is a backlog to show you.
+      </p>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .crumbs { padding-top: 2.4rem; font-size: 0.85rem; }
+  .crumbs a { color: var(--text-muted); }
+  .crumbs + :global(.page-header) { padding-top: 0.8rem; }
+  .shelf-feed { font-size: 0.84rem; margin-bottom: 1.6rem; }
+  .shelf { margin-bottom: 2.4rem; }
+  .shelf-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
+  }
+  .shelf-heading a { color: inherit; }
+  .shelf-count { font-variant-numeric: tabular-nums; opacity: 0.7; }
+  .shelf-cards { display: grid; gap: 0; }
+  @media (min-width: 880px) {
+    .shelf-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.6rem; }
+  }
+  .shelf-rows :global(.news-row:first-of-type) { border-top: none; }
+  .empty { color: var(--text-muted); padding-block: 2rem; max-width: 46ch; }
+</style>

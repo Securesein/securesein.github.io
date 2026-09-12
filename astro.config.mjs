@@ -21,4 +21,15 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
+  // Individual post URLs never change — /blog/<slug>/ is already
+  // indexed and shared, and GitHub Pages has no server-side redirects
+  // to soften a rename with. Only the two routes that stopped existing
+  // get one, and in a static build Astro emits each as a small
+  // meta-refresh page.
+  redirects: {
+    // /blog was the News listing before the three lanes existed.
+    "/blog": "/news/",
+    // The "Welcome to securesein" post; its content now lives on About.
+    "/blog/welcome": "/about/",
+  },
 });

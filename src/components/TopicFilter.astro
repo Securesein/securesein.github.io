@@ -1,0 +1,88 @@
+---
+// Client-side topic filter for the News index. No page reload and no
+// network: the rows are already on the page, this just hides the ones
+// that don't match. Rendered as real <button>s so keyboard users reach
+// every one of them, with the state mirrored in aria-pressed.
+import { TOPICS, type Topic } from "../taxonomy";
+
+interface Props {
+  topics: Topic[];
+}
+const { topics } = Astro.props;
+---
+<div class="topic-filter" data-topic-filter>
+  <span class="topic-filter-label" id="topic-filter-label">Filter</span>
+  <div class="topic-filter-chips" role="group" aria-labelledby="topic-filter-label">
+    <button type="button" class="filter-chip" data-topic="" aria-pressed="true">All</button>
+    {topics.map((topic) => (
+      <button type="button" class="filter-chip" data-topic={topic} aria-pressed="false">
+        {TOPICS[topic].label}
+      </button>
+    ))}
+  </div>
+</div>
+
+<style>
+  .topic-filter {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  .topic-filter-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+  .topic-filter-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .filter-chip {
+    padding: 0.25rem 0.7rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    font-family: inherit;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  .filter-chip:hover { color: var(--text); border-color: var(--text-muted); }
+  .filter-chip[aria-pressed="true"] {
+    background: var(--text);
+    border-color: var(--text);
+    color: var(--bg);
+  }
+</style>
+
+<script>
+  const filter = document.querySelector<HTMLElement>("[data-topic-filter]");
+  const list = document.querySelector<HTMLElement>("[data-news-list]");
+  if (filter && list) {
+    const empty = list.querySelector<HTMLElement>("[data-news-empty]");
+    const chips = [...filter.querySelectorAll<HTMLButtonElement>(".filter-chip")];
+
+    const apply = (topic: string) => {
+      for (const chip of chips) {
+        chip.setAttribute("aria-pressed", String(chip.dataset.topic === topic));
+      }
+      let shown = 0;
+      for (const day of list.querySelectorAll<HTMLElement>("[data-news-day]")) {
+        let inDay = 0;
+        for (const row of day.querySelectorAll<HTMLElement>(".news-row")) {
+          const match =
+            !topic || (row.dataset.topics ?? "").split(" ").includes(topic);
+          row.hidden = !match;
+          if (match) inDay++;
+        }
+        // An empty date heading is worse than no heading.
+        day.hidden = inDay === 0;
+        shown += inDay;
+      }
+      if (empty) empty.hidden = shown > 0;
+    };
+
+    for (const chip of chips) {
+      chip.addEventListener("click", () => apply(chip.dataset.topic ?? ""));
+    }
+  }
+</script>

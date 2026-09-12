@@ -25,7 +25,7 @@ const recent = posts.slice(0, 5);
       <h1 class="hero-title">Notes on <span class="gradient-text">applied AI.</span></h1>
       <p class="hero-sub">Curated by a human, drafted by an AI.</p>
       <div class="hero-actions">
-        <a href="/blog" class="btn btn--primary">Read the blog</a>
+        <a href="/news" class="btn btn--primary">Read the news</a>
       </div>
     </div>
   </section>
@@ -33,15 +33,7 @@ const recent = posts.slice(0, 5);
   <section class="container recent">
     <h2 class="recent-heading">Latest posts</h2>
     {recent.map((post) => (
-      <PostCard
-        title={post.data.title}
-        description={post.data.description}
-        pubDate={post.data.pubDate}
-        topics={post.data.topics}
-        credit={post.data.credit}
-        kind={post.data.kind}
-        url={`/blog/${post.id}/`}
-      />
+      <PostCard post={post} />
     ))}
     {posts.length === 0 && <p class="empty">No posts yet.</p>}
   </section>

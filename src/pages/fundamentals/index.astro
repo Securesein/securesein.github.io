@@ -1,44 +1,56 @@
 ---
-import { getCollection } from "astro:content";
+// Fundamentals is a reading path, not a feed — see byReadingPath in
+// src/posts.ts. Ordering evergreen explainers by date tells a newcomer
+// to start in the wrong place.
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
 import PostCard from "../../components/PostCard.astro";
+import { postsOfKind } from "../../posts";
 
-const posts = (
-  await getCollection("blog", ({ data }) => !data.draft && data.kind === "explainer")
-).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = await postsOfKind("explainer");
 ---
 <BaseLayout
-  title="AI Fundamentals"
-  description="Deeper, evergreen explainers of AI concepts — not tied to any day's news."
+  title="Fundamentals"
+  description="Evergreen explainers: one AI concept at a time, explained properly and written to still make sense next year."
 >
-  <div class="container blog-index">
-    <header class="blog-header">
-      <h1>AI Fundamentals</h1>
-      <p>
-        Deeper explainers of AI concepts — how things actually work, written
-        to still make sense next year. Separate from the news feed on
-        purpose: these aren't tied to any day's headlines.
-      </p>
-    </header>
-    {posts.map((post) => (
-      <PostCard
-        title={post.data.title}
-        description={post.data.description}
-        pubDate={post.data.pubDate}
-        topics={post.data.topics}
-        credit={post.data.credit}
-        kind={post.data.kind}
-        url={`/blog/${post.id}/`}
-      />
-    ))}
-    {posts.length === 0 && <p class="empty">Nothing here yet — check back soon.</p>}
+  <div class="container container--wide">
+    <PageHeader
+      title="Fundamentals"
+      standfirst="One idea at a time, explained properly. Nothing here is tied to a particular week's news, and all of it should still be true next year. Read them in order if you're starting from scratch."
+    />
+
+    <ol class="path">
+      {posts.map((post, i) => (
+        <li>
+          <PostCard post={post} step={i + 1} />
+          {i === 0 && <p class="path-start">Start here.</p>}
+        </li>
+      ))}
+    </ol>
+
+    {posts.length === 0 && <p class="empty">Nothing here yet.</p>}
   </div>
 </BaseLayout>
 
 <style>
-  .blog-index { padding-top: 3.5rem; }
-  .blog-header { margin-bottom: 1rem; max-width: 38rem; }
-  .blog-header h1 { font-size: clamp(2rem, 5vw, 2.8rem); }
-  .blog-header p { color: var(--text-muted); margin-top: 0.5rem; }
+  .path {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0;
+  }
+  /* Two columns once there is enough to fill them; a single-item path
+     rendered half-width just looks broken. */
+  @media (min-width: 900px) {
+    .path { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.6rem; }
+    .path:has(> li:only-child) { grid-template-columns: minmax(0, 34rem); }
+  }
+  .path-start {
+    margin-top: -0.6rem;
+    color: var(--signal);
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
   .empty { color: var(--text-muted); padding-block: 2rem; }
 </style>

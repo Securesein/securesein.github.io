@@ -1,0 +1,54 @@
+---
+// Topic chips are links, always. They are the mechanism by which a
+// post appears in more than one place — a news item tagged `safety`
+// is reachable from /news/, from /topics/safety/, and from search —
+// and on the old site they were switched off, rendered as inert spans.
+import { TOPICS, type Topic } from "../taxonomy";
+
+interface Props {
+  topics: Topic[];
+  /** Rendered inside a card whose whole surface is already a link. */
+  nested?: boolean;
+}
+const { topics, nested = false } = Astro.props;
+---
+<ul class:list={["topic-chips", { "topic-chips--nested": nested }]}>
+  {topics.map((topic) => (
+    <li>
+      <a class="topic-chip" href={`/topics/${topic}/`}>{TOPICS[topic].label}</a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .topic-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  /* A card is one big anchor; the chips sit above it in the stacking
+     order so they keep their own hit areas instead of being swallowed
+     by the card link that covers them. */
+  .topic-chips--nested { position: relative; z-index: 1; }
+  .topic-chip {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+  .topic-chip:hover {
+    color: var(--text);
+    border-color: var(--text-muted);
+    text-decoration: none;
+  }
+</style>
