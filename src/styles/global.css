@@ -30,7 +30,7 @@
      colour has its only definition inside a media query. */
   color-scheme: light;
   --ink: #14181d;      /* near-black, slightly cool */
-  --paper: #fbfbf9;    /* off-white with a trace of warmth */
+  --paper: #f2f4f7;    /* soft cool ground, so white cards lift off it */
   --rule: #d8dce0;     /* hairlines and dividers */
   --muted: #5c6670;    /* secondary text, dates, meta */
   --signal: #1f5c4a;   /* the single accent — deep green, used sparingly */
@@ -59,6 +59,23 @@
   --brand-ink: #0d0f12;
   --brand-from: #8b5cf6;
   --brand-to: #22d3ee;
+
+  /* Card model. Light lifts each item onto a soft raised card with a
+     hairline ring and a gentle shadow; dark keeps the flat, rule-
+     separated instrument panel. Every component reads these, so the two
+     modes flip from one place and dark stays exactly as it was: there,
+     the card fill/radius/shadow all go to nothing and a top divider does
+     the separating instead. */
+  --card-bg: var(--raised);
+  --card-radius: 14px;
+  --card-shadow: 0 0 0 1px rgba(20, 24, 29, 0.06), 0 6px 18px -8px rgba(20, 24, 29, 0.16);
+  --card-shadow-hover: 0 0 0 1px rgba(20, 24, 29, 0.09), 0 14px 30px -10px rgba(20, 24, 29, 0.24);
+  --card-gap: 0.8rem;
+  --card-pad: 1.4rem;
+  --card-lift: -2px;
+  --row-divider: none;
+  --news-pad: 1.05rem 1.35rem;
+  --dd-edge: var(--brand);   /* deep-dive cards get a brand-gradient edge in light */
 }
 
 /* Dark: same roles, re-measured. The accent lifts because a deep green
@@ -73,6 +90,21 @@
     --signal: #5fbf9f;
     --surface: #171b1f;
     --raised: #161a1e;
+
+    /* Subtle cards, same model as light: a raised surface with a hairline
+       ring, spaced by margin — no shadow (it barely reads on a dark
+       ground; the ring does the lifting). This makes each lane marker a
+       short per-card edge instead of one long stripe down the column. */
+    --card-bg: var(--raised);
+    --card-radius: 14px;
+    --card-shadow: 0 0 0 1px var(--rule);
+    --card-shadow-hover: 0 0 0 1px color-mix(in srgb, var(--rule) 50%, var(--muted));
+    --card-gap: 0.8rem;
+    --card-pad: 1.4rem;
+    --card-lift: -2px;
+    --row-divider: none;
+    --news-pad: 1.05rem 1.35rem;
+    --dd-edge: transparent;
   }
 }
 
@@ -85,6 +117,18 @@
   --signal: #5fbf9f;
   --surface: #171b1f;
   --raised: #161a1e;
+
+  /* Subtle cards, same model as light — see the media-query block above. */
+  --card-bg: var(--raised);
+  --card-radius: 14px;
+  --card-shadow: 0 0 0 1px var(--rule);
+  --card-shadow-hover: 0 0 0 1px color-mix(in srgb, var(--rule) 50%, var(--muted));
+  --card-gap: 0.8rem;
+  --card-pad: 1.4rem;
+  --card-lift: -2px;
+  --row-divider: none;
+  --news-pad: 1.05rem 1.35rem;
+  --dd-edge: transparent;
 }
 
 *, *::before, *::after { box-sizing: border-box; }

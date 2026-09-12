@@ -141,6 +141,10 @@ const thread = threads.find(({ posts }) => posts.length > 1);
   @media (min-width: 900px) {
     .split { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 3.4rem; }
   }
+  /* The featured hero is un-boxed (margin-bottom:0 in the component); a
+     list of deep-dive cards follows it here, so give it room — otherwise
+     the first card is glued to the featured's topic chips. */
+  .split-main > :global(.card--featured) { margin-bottom: 2.6rem; }
   .split-side { min-width: 0; }
   .side-rows :global(.news-row:first-of-type) { border-top: none; }
   .side-more { margin-top: 1rem; font-size: 0.86rem; }

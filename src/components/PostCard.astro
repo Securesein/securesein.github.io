@@ -76,8 +76,29 @@ const showHero = !!data.hero && !compact;
     position: relative;
     display: grid;
     gap: 1rem;
-    padding-block: 1.6rem;
-    border-top: 1px solid var(--rule);
+    /* Clip the gradient edge (::before) to the rounded card so it follows
+       the corners instead of a 4px bar pinching under a 14px radius and
+       exposing the rule beneath it. The generous padding keeps focus
+       rings on inner links well clear of the clip. */
+    overflow: hidden;
+    padding: 1.6rem var(--card-pad);
+    /* Light: a raised card (bg + ring/shadow + radius, spaced by margin).
+       Dark: all of that collapses to nothing and a top rule divides the
+       rows instead — the flat instrument panel, unchanged. */
+    border-top: var(--row-divider);
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    margin-bottom: var(--card-gap);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(var(--card-lift, 0));
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card { transition: none; }
+    .card:hover { transform: none; }
   }
   .card-body { display: grid; gap: 0.55rem; }
 
@@ -163,7 +184,7 @@ const showHero = !!data.hero && !compact;
 
   /* --- structural differentiation by kind --- */
   .card--news {
-    padding-left: 1.1rem;
+    padding-left: calc(var(--card-pad) + 1.1rem);
     border-left: 2px solid var(--border-strong);
   }
   .card--news .card-title { font-size: 1.15rem; }
@@ -174,8 +195,19 @@ const showHero = !!data.hero && !compact;
   .card--explainer .card-desc { font-size: 1.02rem; }
 
   .card--deepdive {
-    padding-left: 1.1rem;
+    padding-left: calc(var(--card-pad) + 1.1rem);
     border-left: 2px solid var(--signal);
+  }
+  /* Light: a brand-gradient edge sits over the green rule; in dark
+     --dd-edge is transparent, so the green border does the marking. */
+  .card--deepdive::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: var(--dd-edge);
+    /* Square — the card's overflow:hidden + radius does the rounding. */
+    border-radius: 0;
   }
   .card--deepdive .card-title { font-size: 1.5rem; }
 
@@ -190,10 +222,21 @@ const showHero = !!data.hero && !compact;
     background: var(--surface);
   }
 
-  /* The one place the design raises its voice. */
+  /* The one place the design raises its voice — a clean hero, not a
+     boxed card, in both modes. */
   .card--featured .card-title { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
   .card--featured .card-desc { font-size: 1.08rem; }
-  .card--featured { border-top: none; padding-top: 0; }
+  .card--featured {
+    border-top: none;
+    border-left: none;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .card--featured:hover { transform: none; box-shadow: none; }
+  .card--featured::before { display: none; }
 
   @media (max-width: 520px) {
     .card-line-1 { flex-wrap: wrap; gap: 0.5rem 0.85rem; }

@@ -50,13 +50,26 @@ const { data } = post;
     display: grid;
     grid-template-columns: 4.5rem 1fr;
     gap: 0.2rem 1rem;
-    padding: 1.05rem 0 1.05rem 1.1rem;
-    border-top: 1px solid var(--rule);
-    /* The News marker: a 2px rule, never the accent — structure, not
-       colour, separates the lanes. Kept at the soft border tone rather
-       than the darker muted text: stacked rows turn a dark 2px border
-       into one heavy vertical stripe in light mode. */
+    padding: var(--news-pad);
+    /* Light: a raised card spaced by margin; dark: a flat row with a top
+       divider — the whole flip lives in the theme tokens. */
+    border-top: var(--row-divider);
+    /* The News marker: a soft 2px left rule, never the accent. On a card
+       it's a gentle left edge; in dark it's the lane marker as before. */
     border-left: 2px solid var(--border-strong);
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    margin-bottom: var(--card-gap);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .news-row:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(var(--card-lift, 0));
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .news-row { transition: none; }
+    .news-row:hover { transform: none; }
   }
   .news-row > time {
     color: var(--text-muted);
@@ -98,10 +111,22 @@ const { data } = post;
   }
   .news-row-scout { font-weight: 600; }
 
+  /* The homepage sidebar list stays a compact flat list, not cards —
+       reset the card treatment and keep a simple divider. */
   .news-row--terse {
     grid-template-columns: 3.6rem 1fr;
-    padding-block: 0.62rem;
+    padding: 0.62rem 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    border-left: none;
+    margin-bottom: 0;
+    /* Its own hairline, independent of the card model, so the compact
+       list stays separated in both themes. First row's is removed by the
+       homepage (.side-rows). */
+    border-top: 1px solid var(--rule);
   }
+  .news-row--terse:hover { box-shadow: none; transform: none; }
   .news-row--terse .news-row-title { font-size: 0.95rem; font-weight: 500; }
 
   /* No date column (the list is grouped under a date rule): the body is

@@ -57,14 +57,29 @@ const { posts } = Astro.props;
     gap: 0;
   }
   .related-item {
+    position: relative;
     display: grid;
     gap: 0.25rem;
-    padding: 0.9rem 0 0.9rem 0.9rem;
-    border-top: 1px solid var(--rule);
-    border-left: 2px solid var(--text-muted);
+    padding: 0.9rem var(--card-pad) 0.9rem calc(var(--card-pad) + 0.9rem);
+    /* Same card-in-light / flat-in-dark model as the other listings. */
+    border-top: var(--row-divider);
+    border-left: 2px solid var(--border-strong);
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    margin-bottom: var(--card-gap);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .related-item:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(var(--card-lift, 0));
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .related-item { transition: none; }
+    .related-item:hover { transform: none; }
   }
   .related-item:first-child { border-top: none; }
-  .related-item--explainer { border-left-color: transparent; padding-left: 0; }
+  .related-item--explainer { border-left-color: transparent; }
   .related-item--deepdive { border-left-color: var(--signal); }
   .related-meta {
     display: flex;
