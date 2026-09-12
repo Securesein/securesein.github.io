@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" font-family="Georgia, 'Iowan Old Style', serif" role="img" aria-label="Diagram comparing agent-skill execution in a single growing context window with subagent execution across several smaller context windows" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2Zjg2NDM4Mi1kNGI3LTRmZGUtYTFhZi1kNGVlNDQ4YTBjZjAAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaKQ0guLFsVDxSIGJUV/CawcAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpiMTVhZjIzZS0xN2NmLTQ2OGYtODI0Mi00Y2Y0MzE2YjIyM2JscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNocjZca/9Eb32VoKjOAskCCgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggeEs8J/9wYmSiRblAtncRAXPJT09i5tRNntLGbP09MyakZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaKcFaEjIlRMwpE/I/BSxwGQAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIPHxj6wZXQ+WiRdMBZ8bbBqhE3U+SeFBrjw2ohFM1snTZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQFoZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjZmODY0MzgyLWQ0YjctNGZkZS1hMWFmLWQ0ZWU0NDhhMGNmMC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmIwZTY4ZDU1LTUzZDMtNDg4Zi1hYWEyLWY2N2RiN2JlNDI0N3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCB4Szwn/3BiZKJFuUC2dxEBc8lPT2Lm1E2e0sZs/T0zJqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggt8hIy708p49rnl6hLGqcrZ46Il54BtTJAjCrM6BSIdaiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg076UuZl7G7Yb3XY//jyXqtNh6D9M9/s6Ocrtz9GR0xl0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQIqHyv20c+gn6HD1bOYmN0m9X8Lf9OeqYxDvAzCMJ53sODUc/vTlDQ3VPHXNBJxA5v17cBg7Iw4Mlfv27byfrQA=</c2pa:manifest></metadata>
+  <rect width="960" height="540" fill="#F6F5F2"/>
+
+  <!-- ================= LEFT: agent-skill execution ================= -->
+  <text x="56" y="52" font-size="21" fill="#1A2430">Agent-skill execution</text>
+  <text x="56" y="74" font-size="14" font-family="Helvetica, Arial, sans-serif" fill="#5C6874">One context window. Everything accumulates.</text>
+
+  <!-- context window frame -->
+  <rect x="56" y="96" width="300" height="376" rx="4" fill="#FFFFFF" stroke="#C3BEB4" stroke-width="1.5"/>
+  <text x="70" y="118" font-size="11.5" font-family="Helvetica, Arial, sans-serif" fill="#8A8378" letter-spacing="0.4">main context</text>
+
+  <!-- stacked blocks -->
+  <rect x="70" y="130" width="272" height="30" rx="3" fill="#E8E4DB"/>
+  <text x="84" y="150" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#3A4550">task + tool descriptions</text>
+
+  <rect x="70" y="166" width="272" height="30" rx="3" fill="#DCE6EE"/>
+  <text x="84" y="186" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#2B4257">SKILL.md — skill A</text>
+
+  <rect x="70" y="202" width="272" height="26" rx="3" fill="#EFEDE7"/>
+  <text x="84" y="220" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#5C6874">tool calls + outputs</text>
+
+  <rect x="70" y="234" width="272" height="30" rx="3" fill="#DCE6EE"/>
+  <text x="84" y="254" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#2B4257">SKILL.md — skill B</text>
+
+  <rect x="70" y="270" width="272" height="26" rx="3" fill="#EFEDE7"/>
+  <text x="84" y="288" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#5C6874">tool calls + outputs</text>
+
+  <rect x="70" y="302" width="272" height="30" rx="3" fill="#DCE6EE"/>
+  <text x="84" y="322" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#2B4257">SKILL.md — skill C</text>
+
+  <rect x="70" y="338" width="272" height="26" rx="3" fill="#EFEDE7"/>
+  <text x="84" y="356" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#5C6874">tool calls + outputs</text>
+
+  <rect x="70" y="370" width="272" height="26" rx="3" fill="#EFEDE7"/>
+  <text x="84" y="388" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#5C6874">intermediate reasoning</text>
+
+  <rect x="70" y="402" width="272" height="26" rx="3" fill="#EFEDE7"/>
+  <text x="84" y="420" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#5C6874">tool calls + outputs</text>
+
+  <text x="70" y="452" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#A33A1E">reasoning quality drops as this fills up</text>
+
+  <!-- peak context measure -->
+  <line x1="376" y1="130" x2="376" y2="428" stroke="#A33A1E" stroke-width="1.5"/>
+  <line x1="371" y1="130" x2="381" y2="130" stroke="#A33A1E" stroke-width="1.5"/>
+  <line x1="371" y1="428" x2="381" y2="428" stroke="#A33A1E" stroke-width="1.5"/>
+  <text x="390" y="272" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#A33A1E">peak</text>
+  <text x="390" y="290" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#A33A1E">context</text>
+
+  <!-- divider -->
+  <line x1="466" y1="40" x2="466" y2="500" stroke="#D8D3C8" stroke-width="1"/>
+
+  <!-- ================= RIGHT: subagent execution ================= -->
+  <text x="504" y="52" font-size="21" fill="#1A2430">Subagent execution</text>
+  <text x="504" y="74" font-size="14" font-family="Helvetica, Arial, sans-serif" fill="#5C6874">Same skill packages, separate context windows.</text>
+
+  <!-- main context frame (short) -->
+  <rect x="504" y="96" width="212" height="206" rx="4" fill="#FFFFFF" stroke="#C3BEB4" stroke-width="1.5"/>
+  <text x="518" y="118" font-size="11.5" font-family="Helvetica, Arial, sans-serif" fill="#8A8378" letter-spacing="0.4">main context</text>
+
+  <rect x="518" y="130" width="184" height="30" rx="3" fill="#E8E4DB"/>
+  <text x="532" y="150" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#3A4550">task + skill list</text>
+
+  <rect x="518" y="168" width="184" height="26" rx="3" fill="#E1EDE4"/>
+  <text x="532" y="186" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#1F5C42">call A → result</text>
+
+  <rect x="518" y="202" width="184" height="26" rx="3" fill="#E1EDE4"/>
+  <text x="532" y="220" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#1F5C42">call B → result</text>
+
+  <rect x="518" y="236" width="184" height="26" rx="3" fill="#E1EDE4"/>
+  <text x="532" y="254" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#1F5C42">call C → result</text>
+
+  <text x="518" y="286" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#1F5C42">stays short and readable</text>
+
+  <!-- peak context measure (right) -->
+  <line x1="496" y1="130" x2="496" y2="262" stroke="#1F5C42" stroke-width="1.5"/>
+  <line x1="491" y1="130" x2="501" y2="130" stroke="#1F5C42" stroke-width="1.5"/>
+  <line x1="491" y1="262" x2="501" y2="262" stroke="#1F5C42" stroke-width="1.5"/>
+  <text x="486" y="196" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#1F5C42" text-anchor="middle" transform="rotate(-90 486 196)">lower peak</text>
+
+  <!-- subagent windows -->
+  <g>
+    <rect x="800" y="96" width="120" height="86" rx="4" fill="#FFFFFF" stroke="#9BB8A6" stroke-width="1.5"/>
+    <text x="812" y="116" font-size="11.5" font-family="Helvetica, Arial, sans-serif" fill="#8A8378">subagent A</text>
+    <rect x="812" y="124" width="96" height="20" rx="3" fill="#DCE6EE"/>
+    <text x="820" y="138" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#2B4257">SKILL.md</text>
+    <rect x="812" y="150" width="96" height="20" rx="3" fill="#EFEDE7"/>
+    <text x="820" y="164" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5C6874">its own work</text>
+  </g>
+  <g>
+    <rect x="800" y="196" width="120" height="86" rx="4" fill="#FFFFFF" stroke="#9BB8A6" stroke-width="1.5"/>
+    <text x="812" y="216" font-size="11.5" font-family="Helvetica, Arial, sans-serif" fill="#8A8378">subagent B</text>
+    <rect x="812" y="224" width="96" height="20" rx="3" fill="#DCE6EE"/>
+    <text x="820" y="238" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#2B4257">SKILL.md</text>
+    <rect x="812" y="250" width="96" height="20" rx="3" fill="#EFEDE7"/>
+    <text x="820" y="264" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5C6874">its own work</text>
+  </g>
+  <g>
+    <rect x="800" y="296" width="120" height="86" rx="4" fill="#FFFFFF" stroke="#9BB8A6" stroke-width="1.5"/>
+    <text x="812" y="316" font-size="11.5" font-family="Helvetica, Arial, sans-serif" fill="#8A8378">subagent C</text>
+    <rect x="812" y="324" width="96" height="20" rx="3" fill="#DCE6EE"/>
+    <text x="820" y="338" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#2B4257">SKILL.md</text>
+    <rect x="812" y="350" width="96" height="20" rx="3" fill="#EFEDE7"/>
+    <text x="820" y="364" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5C6874">its own work</text>
+  </g>
+
+  <!-- arrows main <-> subagents -->
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1F5C42"/>
+    </marker>
+  </defs>
+  <path d="M 706 176 C 760 176 760 132 796 132" fill="none" stroke="#1F5C42" stroke-width="1.4" marker-end="url(#ah)"/>
+  <path d="M 796 156 C 762 156 762 188 708 188" fill="none" stroke="#1F5C42" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ah)"/>
+  <path d="M 706 210 C 762 210 762 232 796 232" fill="none" stroke="#1F5C42" stroke-width="1.4" marker-end="url(#ah)"/>
+  <path d="M 796 256 C 764 256 764 222 708 222" fill="none" stroke="#1F5C42" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ah)"/>
+  <path d="M 706 244 C 764 244 764 332 796 332" fill="none" stroke="#1F5C42" stroke-width="1.4" marker-end="url(#ah)"/>
+  <path d="M 796 356 C 766 356 766 256 708 256" fill="none" stroke="#1F5C42" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ah)"/>
+
+  <!-- contract legend -->
+  <line x1="504" y1="424" x2="536" y2="424" stroke="#1F5C42" stroke-width="1.4" marker-end="url(#ah)"/>
+  <text x="546" y="429" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#3A4550">input contract: what the subagent needs to start</text>
+  <line x1="504" y1="452" x2="536" y2="452" stroke="#1F5C42" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ah)"/>
+  <text x="546" y="457" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#3A4550">output contract: the only thing it hands back</text>
+  <text x="504" y="484" font-size="13" font-family="Helvetica, Arial, sans-serif" fill="#8A6B1F">Trade-off: lower peak context, more tokens in total.</text>
+</svg>
