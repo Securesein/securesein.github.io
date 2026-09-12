@@ -4,7 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import PostCard from "../../components/PostCard.astro";
 
 const posts = (
-  await getCollection("blog", ({ data }) => !data.draft && data.section === "news")
+  await getCollection("blog", ({ data }) => !data.draft && data.kind === "news")
 ).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 <BaseLayout title="News" description="Timely AI news, auto-summarized from RSS.">
@@ -18,9 +18,9 @@ const posts = (
         title={post.data.title}
         description={post.data.description}
         pubDate={post.data.pubDate}
-        tags={post.data.tags}
-        author={post.data.author}
-        section={post.data.section}
+        topics={post.data.topics}
+        credit={post.data.credit}
+        kind={post.data.kind}
         url={`/blog/${post.id}/`}
       />
     ))}

@@ -2,13 +2,18 @@
 title: "Abliteration: how one direction holds a model's refusals"
 description: "Open-weight models ship with guardrails. A technique borrowed from interpretability research removes them in minutes, with no retraining and no prompt trickery. What it actually does, how far it goes, and whether anything can be done about it."
 pubDate: 2026-09-05
-tags: ["safety-alignment"]
-author: "sebastiaan"
-section: "fundamentals"
+kind: "deepdive"
+format: "teardown"
+topics: ["safety"]
+credit: "directed"
+model: "Claude"
+contributions:
+  chose: true
+  checked: true
+hero: "/images/abliteration-how-one-direction-holds-a-model-s-refusals/abl_hero.png"
+heroAlt: "Two clusters of points, harmless prompts and refused prompts, with a single arrow marking the direction between them"
+threads: ["the-abliteration-story"]
 ---
-
-![Two clusters of points, harmless prompts and refused prompts, with a single arrow marking the direction between them](/images/abliteration-how-one-direction-holds-a-model-s-refusals/abl_hero.png)
-
 Download an open-weight chat model, ask it something it was trained to decline, and it declines. Spend twenty minutes editing its weights, ask again, and it answers. No jailbreak prompt, no clever roleplay, no fine-tuning run — and on most benchmarks it is still the same model.
 
 The technique is called **abliteration**, a portmanteau of *ablation* and *obliterated*, published by Maxime Labonne in June 2024 and built on a paper by Arditi and colleagues. It is worth understanding for two reasons. It is the clearest demonstration of what safety training actually is inside a model, which is not what most people assume. And if you are responsible for anything that runs local models, it tells you exactly how much weight a vendor’s guardrails can carry in your threat model. Spoiler: less than the marketing suggests.

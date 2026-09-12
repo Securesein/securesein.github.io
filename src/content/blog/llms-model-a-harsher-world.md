@@ -2,13 +2,17 @@
 title: "LLMs Model a Harsher World Than the One We Live In"
 description: "A new benchmark shows language models know what's wrong but not how people actually react to it — and the bias may come from alignment itself."
 pubDate: 2026-09-09
-tags: ["safety-alignment", "research"]
-author: "sebastiaan"
-section: "fundamentals"
+kind: "deepdive"
+format: "paper"
+topics: ["safety", "models"]
+credit: "directed"
+model: "Claude"
+contributions:
+  chose: true
+  checked: true
+hero: "/images/llms-model-a-harsher-world/hero.svg"
+heroAlt: "A chart contrasting how harshly language models predict social reactions to a wrongdoing versus how humans actually react"
 ---
-
-![A chart contrasting how harshly language models predict social reactions to a wrongdoing versus how humans actually react](/images/llms-model-a-harsher-world/hero.svg)
-
 Ask a language model whether taking credit for a colleague's work is wrong, and it will tell you yes. Ask it what the colleague sitting two desks away would *do* about it, and the answer starts drifting away from reality. That gap is the subject of [Beyond Right and Wrong](https://arxiv.org/abs/2609.05437), a paper from the University of Pennsylvania and the World Bank, and it turns out to be a more interesting gap than it first sounds.
 
 ## Two layers of a social norm

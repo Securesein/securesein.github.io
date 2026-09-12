@@ -1,37 +1,35 @@
 ---
 import FormattedDate from "./FormattedDate.astro";
 import AiAvatar from "./AiAvatar.astro";
-import { AUTHORS, type AuthorKey } from "../authors";
-import { CATEGORIES, type CATEGORY_SLUGS } from "../categories";
+import { CREDITS } from "../credit";
+import { KINDS, TOPICS, type Credit, type Kind, type Topic } from "../taxonomy";
 
 interface Props {
   title: string;
   description: string;
   pubDate: Date;
-  tags: (typeof CATEGORY_SLUGS)[number][];
+  topics: Topic[];
   url: string;
-  author: AuthorKey;
-  section?: "news" | "fundamentals";
+  credit: Credit;
+  kind: Kind;
 }
-const { title, description, pubDate, tags, url, author: authorKey, section } = Astro.props;
-const author = AUTHORS[authorKey];
+const { title, description, pubDate, topics, url, credit, kind } = Astro.props;
+const creditInfo = CREDITS[credit];
 ---
 <article class="post-card">
   <a href={url} class="post-card-link">
     <div class="post-card-meta">
-      {author.isAI ? (
+      {credit === "scout" ? (
         <AiAvatar size={18} />
       ) : (
-        <span class="post-card-avatar">{author.name[0]}</span>
+        <span class="post-card-avatar">{creditInfo.byline[0]}</span>
       )}
       <FormattedDate date={pubDate} />
-      {section === "fundamentals" && <span class="post-card-badge">AI Fundamentals</span>}
-      {tags.length > 0 && <span class="dot">&middot;</span>}
-      {tags.slice(0, 2).map((tag) => <span class="post-card-tag">{CATEGORIES[tag].label}</span>)}
+      {kind !== "news" && <span class="post-card-badge">{KINDS[kind].label}</span>}
+      {topics.slice(0, 2).map((topic) => <span class="post-card-tag">{TOPICS[topic].label}</span>)}
     </div>
     <h2 class="post-card-title">{title}</h2>
     <p class="post-card-desc">{description}</p>
-    <span class="post-card-more">Read more &rarr;</span>
   </a>
 </article>
 
@@ -60,5 +58,4 @@ const author = AUTHORS[authorKey];
   }
   .post-card-title { font-size: 1.5rem; margin-top: 0.5rem; transition: color 0.2s ease; }
   .post-card-desc { color: var(--text-muted); margin-top: 0.5rem; }
-  .post-card-more { display: inline-block; margin-top: 0.8rem; font-size: 0.9rem; font-weight: 600; color: var(--link); }
 </style>

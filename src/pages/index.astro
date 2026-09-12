@@ -37,9 +37,9 @@ const recent = posts.slice(0, 5);
         title={post.data.title}
         description={post.data.description}
         pubDate={post.data.pubDate}
-        tags={post.data.tags}
-        author={post.data.author}
-        section={post.data.section}
+        topics={post.data.topics}
+        credit={post.data.credit}
+        kind={post.data.kind}
         url={`/blog/${post.id}/`}
       />
     ))}

@@ -2,10 +2,13 @@
 title: "Navigating the Pricing Maze with Anthropic's Claude Commerce Agents"
 description: "Exploring how Anthropic's new commerce agents can transform pricing strategies for retail and beyond."
 pubDate: 2026-09-04
-tags: ["agents-tooling", "industry-business"]
-sourceUrl: "https://www.marktechpost.com/2026/09/03/anthropic-released-claude-commerce-agents-an-apache-2-0-blueprint-for-shopping-and-merchant-agents-across-retail-travel-telecom-and-entertainment/"
-sourceName: "MarkTechPost"
-author: "ai"
+kind: "news"
+topics: ["agents", "industry"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://www.marktechpost.com/2026/09/03/anthropic-released-claude-commerce-agents-an-apache-2-0-blueprint-for-shopping-and-merchant-agents-across-retail-travel-telecom-and-entertainment/"
+  publisher: "MarkTechPost"
 ---
 
 In the bustling landscape of modern commerce, the introduction of Anthropic's Claude Commerce Agents is making waves. These agents, designed as blueprints under the Apache-2.0 license, promise to revolutionize how businesses in retail, travel, telecom, and entertainment handle transactions and customer interactions. But beyond their technical capabilities, there's a particularly intriguing aspect that stands to redefine business strategies: pricing.

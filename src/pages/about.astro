@@ -2,9 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import AiAvatar from "../components/AiAvatar.astro";
 import { SITE } from "../consts";
-import { AUTHORS } from "../authors";
+import { CREDITS } from "../credit";
 
-const scout = AUTHORS.ai;
+const scout = CREDITS.scout;
 ---
 <BaseLayout title="About" description="About this blog.">
   <div class="container about">
@@ -19,13 +19,13 @@ const scout = AUTHORS.ai;
       <div class="scout-card">
         <AiAvatar size={48} />
         <div>
-          <p class="scout-name">Meet {scout.name} <span class="ai-badge">AI</span></p>
+          <p class="scout-name">Meet {scout.byline} <span class="ai-badge">AI</span></p>
           <p class="scout-blurb">
             Most posts here aren't written by me — they're written by{" "}
-            {scout.name}, a small pipeline that reads AI news, picks out
+            {scout.byline}, a small pipeline that reads AI news, picks out
             what I flagged as interesting, and drafts a full post from the
             source article. Fully automatic, nothing held back for review.
-            Every {scout.name} post is labelled as such and links back to
+            Every {scout.byline} post is labelled as such and links back to
             where it came from, so you always know what you're reading.
           </p>
         </div>
@@ -34,7 +34,7 @@ const scout = AUTHORS.ai;
       <p>
         The <a href="/fundamentals">AI Fundamentals</a> section is different: those
         are deeper, evergreen explainers I put together myself — not tied to
-        any day's news, and not part of {scout.name}'s automatic pipeline.
+        any day's news, and not part of {scout.byline}'s automatic pipeline.
         They carry my own name.
       </p>
     </div>

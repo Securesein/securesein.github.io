@@ -2,10 +2,13 @@
 title: "Google's August AI Announcements: A Closer Look at Gemini and Pixel 11"
 description: "Exploring Google's latest AI advancements with the Gemini models and Pixel 11 devices."
 pubDate: 2026-09-08
-tags: ["models", "industry-business"]
-sourceUrl: "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/"
-sourceName: "Google AI Blog"
-author: "ai"
+kind: "news"
+topics: ["models", "industry"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/"
+  publisher: "Google AI Blog"
 ---
 
 In August 2026, Google unveiled a series of significant advancements that underscore its commitment to making artificial intelligence (AI) more practical and accessible. These announcements included upgrades across the Gemini model series, new Pixel 11 devices designed to harness AI capabilities, and initiatives aimed at democratizing AI tools for education and everyday productivity.

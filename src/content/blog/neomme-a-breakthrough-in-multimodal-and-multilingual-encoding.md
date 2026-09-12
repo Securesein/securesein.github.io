@@ -2,10 +2,13 @@
 title: "NeoMME: A Breakthrough in Multimodal and Multilingual Encoding"
 description: "Exploring how NeoMME's efficient design reshapes visual document retrieval."
 pubDate: 2026-09-03
-tags: ["models"]
-sourceUrl: "https://huggingface.co/blog/Hcompany/neomme"
-sourceName: "Hugging Face Blog"
-author: "ai"
+kind: "news"
+topics: ["models"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://huggingface.co/blog/Hcompany/neomme"
+  publisher: "Hugging Face Blog"
 ---
 
 Imagine you're tasked with building a system that can not only understand text but also seamlessly interpret images. This is no easy feat when you consider the complexities involved in processing these two different types of data. Enter NeoMME, the latest innovation from Hugging Face, which promises to streamline this process.

@@ -3,8 +3,8 @@ import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
 import AiAvatar from "../../components/AiAvatar.astro";
-import { AUTHORS } from "../../authors";
-import { CATEGORIES } from "../../categories";
+import { CREDITS, disclosure } from "../../credit";
+import { KINDS, TOPICS } from "../../taxonomy";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
@@ -17,27 +17,25 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await render(post);
 const readingTime = remarkPluginFrontmatter?.minutesRead;
-const author = AUTHORS[post.data.author];
-// The default blurb assumes a source article; a from-scratch request
-// (no sourceUrl) gets an accurate variant instead.
-const aiNote = post.data.sourceUrl
-  ? author.blurb
-  : "Scout drafted this post directly from a request — no source article, and no human edits it before it publishes.";
-const initials = author.name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
-const isFundamentals = post.data.section === "fundamentals";
+const credit = CREDITS[post.data.credit];
+const isAI = post.data.credit === "scout";
+const aiNote = disclosure(post.data);
+const initials = credit.byline.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
+const kindInfo = KINDS[post.data.kind];
+const isFundamentals = post.data.kind !== "news";
 ---
 <BaseLayout title={post.data.title} description={post.data.description}>
   <article class="container post">
     {isFundamentals ? (
-      <a href="/fundamentals" class="back">&larr; Back to AI Fundamentals</a>
+      <a href={kindInfo.href} class="back">&larr; Back to {kindInfo.plural}</a>
     ) : (
-      <a href="/blog" class="back">&larr; Back to News</a>
+      <a href="/news" class="back">&larr; Back to News</a>
     )}
 
-    {(isFundamentals || post.data.tags.length > 0) && (
+    {(isFundamentals || post.data.topics.length > 0) && (
       <div class="post-tags">
-        {isFundamentals && <span class="pill fundamentals-badge">AI Fundamentals</span>}
-        {post.data.tags.map((tag) => <span class="pill">{CATEGORIES[tag].label}</span>)}
+        {isFundamentals && <span class="pill fundamentals-badge">{kindInfo.label}</span>}
+        {post.data.topics.map((topic) => <span class="pill">{TOPICS[topic].label}</span>)}
       </div>
     )}
 
@@ -46,17 +44,17 @@ const isFundamentals = post.data.section === "fundamentals";
 
     <div class="post-byline">
       <div class="author">
-        {author.isAI ? (
+        {isAI ? (
           <AiAvatar />
         ) : (
           <span class="avatar">{initials}</span>
         )}
         <span class="author-text">
           <strong>
-            {author.name}
-            {author.isAI && <span class="ai-badge">AI</span>}
+            {credit.byline}
+            {isAI && <span class="ai-badge">AI</span>}
           </strong>
-          <span class="author-role">{author.role}</span>
+          {credit.qualifier && <span class="author-role">{credit.qualifier}</span>}
         </span>
       </div>
       <span class="post-meta">
@@ -65,11 +63,11 @@ const isFundamentals = post.data.section === "fundamentals";
       </span>
     </div>
 
-    {author.isAI && <p class="ai-note">{aiNote}</p>}
+    <p class="ai-note">{aiNote}</p>
 
-    {post.data.sourceUrl && (
+    {post.data.source && (
       <div class="post-source">
-        Based on: <a href={post.data.sourceUrl}>{post.data.sourceName ?? post.data.sourceUrl}</a>
+        Based on: <a href={post.data.source.url}>{post.data.source.publisher}</a>
       </div>
     )}
 

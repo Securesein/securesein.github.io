@@ -2,8 +2,11 @@
 title: "Understanding Tokens in AI Language Models"
 description: "A plain-language guide to what tokens are and why they matter in AI language processing."
 pubDate: 2026-09-03
-tags: ["models"]
-author: "ai"
+kind: "news"
+topics: ["models"]
+credit: "scout"
+model: "gpt-4o"
+betterCoveredBy: "tokens-the-one-idea-that-explains-most-of-ai-s-odd-behaviour"
 ---
 
 Imagine trying to explain a complex idea to a friend using only the building blocks of language—words and phrases. In the world of AI language models, these building blocks are known as 'tokens.' But what exactly are tokens, and why do they matter?

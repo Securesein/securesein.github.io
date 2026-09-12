@@ -2,10 +2,13 @@
 title: "Anthropic ships a faster, cheaper reasoning model"
 description: "What the new release changes for everyday agent workloads."
 pubDate: 2026-08-29
-tags: ["models"]
-sourceUrl: "https://www.anthropic.com/news/example"
-sourceName: "Anthropic News"
-author: "ai"
+kind: "news"
+topics: ["models"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://www.anthropic.com/news/example"
+  publisher: "Anthropic News"
 ---
 
 Anthropic's latest release focuses on lowering the cost and latency of

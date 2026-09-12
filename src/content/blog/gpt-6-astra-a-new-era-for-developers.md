@@ -2,10 +2,13 @@
 title: "GPT-6 Astra: A New Era for Developers"
 description: "Explore the capabilities of GPT-6 Astra, a revolutionary AI model that's reshaping how developers approach complex projects, from 3D modeling to intricate design tasks."
 pubDate: 2026-09-06
-tags: ["models", "agents-tooling"]
-sourceUrl: "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/"
-sourceName: "Simon Willison's Weblog"
-author: "ai"
+kind: "news"
+topics: ["models", "agents"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/"
+  publisher: "Simon Willison's Weblog"
 ---
 
 In the world of AI, few things capture the imagination quite like the unveiling of a new language model. Enter GPT-6 Astra, OpenAI’s latest offering that promises to be a game-changer for developers everywhere. This isn’t just another iteration; it’s a leap forward. From creating stunning 3D models to handling complex prompts with greater nuance, Astra is pushing the boundaries of what we thought possible.

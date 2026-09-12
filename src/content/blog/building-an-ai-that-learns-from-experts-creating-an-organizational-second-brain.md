@@ -2,10 +2,13 @@
 title: "Building an AI That Learns From Experts: Creating an Organizational Second Brain"
 description: "How Meta's AI agent captures and preserves expert knowledge, turning fleeting insights into durable institutional memory."
 pubDate: 2026-09-08
-tags: ["agents-tooling", "industry-business"]
-sourceUrl: "https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/"
-sourceName: "Engineering at Meta"
-author: "ai"
+kind: "news"
+topics: ["agents", "industry"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/"
+  publisher: "Engineering at Meta"
 ---
 
 In today's complex organizational landscapes, where specialist knowledge often resides in the minds of a few key individuals, the challenge is not just accessing this knowledge, but preserving and sharing it. Imagine capturing the expertise of your top compliance officer, not just as static documents, but as a dynamic, evolving system that adapts and learns. This is the promise of Meta's 'Organizational Second Brain' — an AI agent designed to act as a secondary expert by integrating and preserving deep specialist knowledge across domains.

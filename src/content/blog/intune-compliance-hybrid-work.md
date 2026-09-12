@@ -2,10 +2,13 @@
 title: "What Intune's new compliance rules mean for hybrid work"
 description: "A practical read on the rollout, not a changelog summary."
 pubDate: 2026-08-30
-tags: ["enterprise-microsoft"]
-sourceUrl: "https://www.microsoft.com/en-us/research/example"
-sourceName: "Microsoft Research Blog"
-author: "ai"
+kind: "news"
+topics: ["enterprise", "mobility"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://www.microsoft.com/en-us/research/example"
+  publisher: "Microsoft Research Blog"
 ---
 
 Microsoft's latest compliance policy update tightens how conditional access

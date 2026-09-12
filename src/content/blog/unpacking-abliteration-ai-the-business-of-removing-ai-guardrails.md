@@ -2,10 +2,14 @@
 title: "Unpacking Abliteration.ai: The Business of Removing AI Guardrails"
 description: "Exploring the implications and applications of Abliteration.ai's unguarded models in cybersecurity and beyond."
 pubDate: 2026-09-04
-tags: ["safety-alignment", "industry-business"]
-sourceUrl: "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/"
-sourceName: "TechCrunch AI"
-author: "ai"
+kind: "news"
+topics: ["safety", "industry"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/"
+  publisher: "TechCrunch AI"
+threads: ["the-abliteration-story"]
 ---
 
 In the rapidly evolving landscape of artificial intelligence, Abliteration.ai has emerged as a provocative player by offering a service that removes the "guardrails" from AI models. These guardrails typically prevent models from performing potentially harmful tasks, but Abliteration.ai's service makes it easier to access and utilize these unguarded models. This raises significant questions about safety, ethics, and the broader implications for both research and potential consumer applications.

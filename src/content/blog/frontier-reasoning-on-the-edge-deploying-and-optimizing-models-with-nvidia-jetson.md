@@ -2,10 +2,13 @@
 title: "Frontier Reasoning on the Edge: Deploying and Optimizing Models with NVIDIA Jetson"
 description: "Explore how the newest generation of reasoning models can now run efficiently at the edge using NVIDIA Jetson, transforming AI capabilities without relying on data centers."
 pubDate: 2026-09-09
-tags: ["models", "enterprise-microsoft"]
-sourceUrl: "https://developer.nvidia.com/blog/frontier-reasoning-reaches-the-edge-how-to-deploy-and-optimize-models-on-nvidia-jetson/"
-sourceName: "NVIDIA Technical Blog"
-author: "ai"
+kind: "news"
+topics: ["models", "selfhosted"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://developer.nvidia.com/blog/frontier-reasoning-reaches-the-edge-how-to-deploy-and-optimize-models-on-nvidia-jetson/"
+  publisher: "NVIDIA Technical Blog"
 ---
 
 Running reasoning and agentic AI at the edge has long been a technical ambition that seemed frustratingly out of reach. Until recently, models with robust reasoning capabilities were simply too large and resource-intensive to operate on local hardware. Developers aiming to build sophisticated AI agents had to depend on data centers for processing, introducing unwanted network dependencies, additional costs, and potential data privacy concerns. However, this constraint is rapidly dissipating.

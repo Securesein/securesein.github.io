@@ -2,13 +2,16 @@
 title: "Tokens: the one idea that explains most of AI's odd behaviour"
 description: "Why a model that can explain quantum tunnelling cannot count the letters in strawberry, why long conversations get slow and expensive, and why Dutch costs more than English. It all comes back to the very first thing that happens to your text."
 pubDate: 2026-09-04
-tags: ["models"]
-author: "sebastiaan"
-section: "fundamentals"
+kind: "explainer"
+topics: ["models"]
+credit: "directed"
+model: "Claude"
+contributions:
+  chose: true
+  checked: true
+hero: "/images/tokens-the-one-idea-that-explains-most-of-ai-s-odd-behaviour/hero.png"
+heroAlt: "A sentence being cut into eight token tiles, each with its own integer ID"
 ---
-
-![A sentence being cut into eight token tiles, each with its own integer ID](/images/tokens-the-one-idea-that-explains-most-of-ai-s-odd-behaviour/hero.png)
-
 How many times does the letter *r* appear in *strawberry*? Ask a model that can walk you through quantum tunnelling, and there is a fair chance it says two. For a long time I filed that sort of thing under *AI is weird* and moved on.
 
 It is not weird. It is a predictable consequence of the very first thing that happens to your text, before the model does anything clever at all. That step is called **tokenization**, and once you see it, a pile of unrelated-looking mysteries collapses into a single explanation: the line items on your invoice, the *prompt is too long* error, the assistant forgetting what you agreed twenty messages ago, the fact that your Dutch prompt costs more than the English one — and the strawberry.

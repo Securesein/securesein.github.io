@@ -1,0 +1,84 @@
+{
+  "kinds": {
+    "news": {
+      "label": "News",
+      "href": "/news",
+      "plural": "News",
+      "blurb": "Timely items drafted automatically from the source article.",
+      "description": "Auto-drafted from the feed. Timely, disposable, always links to the source."
+    },
+    "explainer": {
+      "label": "Fundamentals",
+      "href": "/fundamentals",
+      "plural": "Fundamentals",
+      "blurb": "One concept, properly explained. Still useful next year.",
+      "description": "One concept, properly explained, no news hook."
+    },
+    "deepdive": {
+      "label": "Deep dive",
+      "href": "/deep-dives",
+      "plural": "Deep dives",
+      "blurb": "One thing taken apart: a paper, a system, or something I built.",
+      "description": "One thing taken apart properly — a paper, a system, or something I built and broke."
+    }
+  },
+  "formats": {
+    "paper": {
+      "label": "Paper trail",
+      "slug": "paper-trail",
+      "description": "One paper, read properly, findings and caveats in plain language."
+    },
+    "teardown": {
+      "label": "Teardown",
+      "slug": "teardown",
+      "description": "How a technique or system actually works, mechanism first."
+    },
+    "postmortem": {
+      "label": "What happened",
+      "slug": "what-happened",
+      "description": "An incident or event reconstructed from the record."
+    },
+    "notebook": {
+      "label": "Notebook",
+      "slug": "notebook",
+      "description": "Something I built, what broke, what it cost."
+    }
+  },
+  "topics": {
+    "models": {
+      "label": "Models",
+      "description": "Releases, capabilities, benchmarks, architectures.",
+      "blurb": "New models land constantly and most of the coverage is scorecards. What I care about is what actually changed in how the thing behaves, and whether it changes anything about how you'd build with it."
+    },
+    "agents": {
+      "label": "Agents & tooling",
+      "description": "Agent frameworks, coding tools, MCP, automation.",
+      "blurb": "Agents are the part of this field where the demo and the production system are furthest apart. This shelf is about the tooling underneath — what it does when nobody is watching the demo."
+    },
+    "safety": {
+      "label": "Safety & alignment",
+      "description": "Alignment, guardrails, misuse, governance, incidents.",
+      "blurb": "Guardrails matter to me as an operational question, not a philosophical one: if you are responsible for a system, you need to know how much weight a vendor's safety claims can carry in your threat model."
+    },
+    "enterprise": {
+      "label": "Enterprise & Microsoft",
+      "description": "Copilot, Azure AI, M365, rollout and adoption.",
+      "blurb": "The gap between an AI feature shipping and an AI feature being rolled out to thirty thousand seats is where I spend my working life. This shelf is about that gap."
+    },
+    "mobility": {
+      "label": "Devices & mobility",
+      "description": "Intune, Android Enterprise, Apple, EMM, AI on managed devices.",
+      "blurb": "Device management is my background, and it is the place where AI stops being an abstraction: models on managed endpoints, policy, compliance, and what a fleet actually allows."
+    },
+    "selfhosted": {
+      "label": "Local & self-hosted",
+      "description": "Ollama, open weights, running things on your own hardware.",
+      "blurb": "Running models on hardware you control changes the trade-offs completely — cost, privacy, and what happens when the vendor changes the deal. Mostly written from a home lab."
+    },
+    "industry": {
+      "label": "Money & industry",
+      "description": "Funding, acquisitions, pricing, market structure.",
+      "blurb": "Who owns what, who pays for what, and what that means for anyone building on top of it. Market structure decides which tools still exist in two years."
+    }
+  }
+}

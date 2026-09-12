@@ -1,27 +1,41 @@
 export const SITE = {
   title: "securesein",
   description:
-    "Notes on applied AI, enterprise mobility, and the Microsoft ecosystem — curated by a human, drafted by an AI.",
+    "Applied AI and the devices it lands on — enterprise mobility, the Microsoft ecosystem, and what actually ships. Curated by a human, drafted in part by an AI.",
+  tagline: "Applied AI, and the devices it lands on.",
+  subTagline: "Curated by a human, drafted in part by an AI.",
   author: "Sebastiaan",
   authorRole: "IT consultant",
   github: "",
 };
 
-// The two content sections, shown together in the header's dropdown
-// (see SectionNav.astro) — kept as one explicit choice instead of two
-// separate flat nav links, since "Blog" alone read as the only path
-// and left "News" only implicit.
+// The three lanes, in nav order — fastest and shallowest first. These
+// are the `kind` axis from /taxonomy.json (how a post was made and how
+// long it takes), deliberately not mixed with the `topics` axis (what
+// it is about), which has its own directory at /topics/. Mixing the
+// two into one flat pill list is what the old nav did.
 export const SECTIONS = [
   {
+    kind: "news" as const,
     label: "News",
-    href: "/blog",
-    description: "Timely AI news, auto-summarized from RSS.",
+    href: "/news",
+    description: "Drafted automatically from the source, minutes old.",
   },
   {
-    label: "AI Fundamentals",
+    kind: "explainer" as const,
+    label: "Fundamentals",
     href: "/fundamentals",
-    description: "Evergreen explainers, hand-curated.",
+    description: "One concept at a time, still true next year.",
+  },
+  {
+    kind: "deepdive" as const,
+    label: "Deep dives",
+    href: "/deep-dives",
+    description: "One paper or system, taken apart properly.",
   },
 ];
 
-export const NAV_LINKS = [{ label: "About", href: "/about" }];
+export const NAV_LINKS = [
+  { label: "Topics", href: "/topics" },
+  { label: "About", href: "/about" },
+];

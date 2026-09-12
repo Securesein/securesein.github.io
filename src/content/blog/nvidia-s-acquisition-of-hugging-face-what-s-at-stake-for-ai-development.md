@@ -2,10 +2,13 @@
 title: "Nvidia's Acquisition of Hugging Face: What's at Stake for AI Development"
 description: "Analyzing the implications of Nvidia's $12.9 billion purchase of Hugging Face."
 pubDate: 2026-09-03
-tags: ["industry-business"]
-sourceUrl: "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/"
-sourceName: "TechCrunch AI"
-author: "ai"
+kind: "news"
+topics: ["industry"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/"
+  publisher: "TechCrunch AI"
 ---
 
 Nvidia's confirmation of its $12.9 billion acquisition of Hugging Face marks a significant move in the AI landscape, impacting developers, enterprises, and the broader AI ecosystem.

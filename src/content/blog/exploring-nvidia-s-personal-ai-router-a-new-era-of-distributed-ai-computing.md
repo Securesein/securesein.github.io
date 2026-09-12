@@ -2,10 +2,13 @@
 title: "Exploring NVIDIA's Personal AI Router: A New Era of Distributed AI Computing"
 description: "Understanding NVIDIA's open-source PAIR and its potential to transform local AI processing."
 pubDate: 2026-09-05
-tags: ["models", "agents-tooling"]
-sourceUrl: "https://www.marktechpost.com/2026/09/04/nvidia-releases-personal-ai-router-pair-an-open-source-virtual-inference-router-that-distributes-local-ai-requests-across-rtx-dgx-spark-and-mac-nodes/"
-sourceName: "MarkTechPost"
-author: "ai"
+kind: "news"
+topics: ["models", "selfhosted"]
+credit: "scout"
+model: "gpt-4o"
+source:
+  url: "https://www.marktechpost.com/2026/09/04/nvidia-releases-personal-ai-router-pair-an-open-source-virtual-inference-router-that-distributes-local-ai-requests-across-rtx-dgx-spark-and-mac-nodes/"
+  publisher: "MarkTechPost"
 ---
 
 In the dynamic world of AI and machine learning, a new player has emerged on the scene, promising to revolutionize how we handle AI requests locally. NVIDIA's latest innovation, the Personal AI Router (PAIR), is not just a new piece of software—it's a game-changer for those looking to optimize their AI processing capabilities across a range of hardware platforms.
