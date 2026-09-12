@@ -114,6 +114,36 @@ export async function threadsWithPosts(): Promise<
   }));
 }
 
+export interface ThreadPosition {
+  thread: Thread;
+  index: number; // 1-based
+  total: number;
+  prev?: Post;
+  next?: Post;
+}
+
+/**
+ * Where this post sits in each thread it belongs to, so the post page
+ * can render a "part 2 of 4" strip with working prev/next links.
+ * Reads from the thread's own ordered list rather than the post's
+ * `threads` array, so the curated order is the only source of order.
+ */
+export async function threadPositions(post: Post): Promise<ThreadPosition[]> {
+  const positions: ThreadPosition[] = [];
+  for (const { thread, posts } of await threadsWithPosts()) {
+    const i = posts.findIndex((p) => p.id === post.id);
+    if (i === -1) continue;
+    positions.push({
+      thread,
+      index: i + 1,
+      total: posts.length,
+      prev: posts[i - 1],
+      next: posts[i + 1],
+    });
+  }
+  return positions;
+}
+
 /**
  * Related reading, in priority order:
  *   1. the rest of a thread this post belongs to

@@ -1,0 +1,86 @@
+---
+// "Part 2 of 4" — rendered at the top and again at the bottom of any
+// post that belongs to a curated thread. At the top it tells a reader
+// who arrived from search that there is a bigger story; at the bottom
+// it gives them the next instalment while they are still interested.
+import { postUrl, type ThreadPosition } from "../posts";
+
+interface Props {
+  positions: ThreadPosition[];
+  /** The bottom strip shows next/previous; the top one stays compact. */
+  full?: boolean;
+}
+const { positions, full = false } = Astro.props;
+---
+{positions.map(({ thread, index, total, prev, next }) => (
+  <aside class:list={["strip", { "strip--full": full }]}>
+    <p class="strip-head">
+      <a href={`/threads/${thread.id}/`} class="strip-title">{thread.data.title}</a>
+      <span class="strip-part">Part {index} of {total}</span>
+    </p>
+    {full && (
+      <ul class="strip-nav">
+        {prev && (
+          <li class="strip-prev">
+            <span class="strip-label">Previous</span>
+            <a href={postUrl(prev)}>{prev.data.title}</a>
+          </li>
+        )}
+        {next && (
+          <li class="strip-next">
+            <span class="strip-label">Next</span>
+            <a href={postUrl(next)}>{next.data.title}</a>
+          </li>
+        )}
+      </ul>
+    )}
+  </aside>
+))}
+
+<style>
+  .strip {
+    margin-top: 1.6rem;
+    padding: 0.7rem 0.95rem;
+    border: 1px solid var(--rule);
+    border-left: 2px solid var(--signal);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    font-family: var(--font-sans);
+  }
+  .strip--full { margin-top: 2.4rem; padding: 1rem 1.1rem; }
+  .strip-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.86rem;
+  }
+  .strip-title { color: var(--text); font-weight: 600; }
+  .strip-part {
+    margin-left: auto;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .strip-nav {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.8rem;
+    display: grid;
+    gap: 0.7rem;
+  }
+  @media (min-width: 640px) {
+    .strip-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .strip-next { text-align: right; }
+    /* Keep "Next" on the right even when there is no previous part. */
+    .strip-next:only-child { grid-column: 2; }
+  }
+  .strip-nav li { display: grid; gap: 0.15rem; font-size: 0.88rem; }
+  .strip-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+  }
+  .strip-nav a { color: var(--text); font-weight: 500; }
+</style>

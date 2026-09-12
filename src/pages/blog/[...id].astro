@@ -10,9 +10,10 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import TopicChips from "../../components/TopicChips.astro";
 import HowThisWasMade from "../../components/HowThisWasMade.astro";
 import RelatedPosts from "../../components/RelatedPosts.astro";
+import ThreadStrip from "../../components/ThreadStrip.astro";
 import { CREDITS } from "../../credit";
 import { FORMATS, KINDS, type Topic } from "../../taxonomy";
-import { postUrl, readingMinutes, relatedPosts } from "../../posts";
+import { postUrl, readingMinutes, relatedPosts, threadPositions } from "../../posts";
 import { SITE } from "../../consts";
 
 export async function getStaticPaths() {
@@ -42,6 +43,7 @@ const better = betterPosts[0];
 // Related reading prefers a *different* kind on a shared topic, so a
 // news reader lands on the deep dive rather than another short item.
 const related = await relatedPosts(post);
+const threads = await threadPositions(post);
 
 // Structured data has to reflect the credit model rather than assert a
 // human author on everything. On a Scout post nobody wrote it in the
@@ -125,6 +127,8 @@ const jsonLd = {
       </aside>
     )}
 
+    <ThreadStrip positions={threads} />
+
     {data.hero && (
       <img
         class="post-hero"
@@ -138,6 +142,8 @@ const jsonLd = {
     <div class="prose">
       <Content />
     </div>
+
+    <ThreadStrip positions={threads} full />
 
     <RelatedPosts posts={related} />
   </article>
