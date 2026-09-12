@@ -3608,5 +3608,110 @@
     "source": "Gemini CLI Releases",
     "message_id": 584,
     "cached_at": 1789236144.2085798
+  },
+  "b30b0408a14795de": {
+    "title": "Quoting Paul Ford",
+    "link": "https://simonwillison.net/2026/Sep/12/paul-ford/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 585,
+    "cached_at": 1789240332.6354582
+  },
+  "efda5aafc8d77f3f": {
+    "title": "Final, final, final call for TechCrunch Disrupt 2026 Side Events",
+    "link": "https://techcrunch.com/2026/09/11/final-final-final-call-for-techcrunch-disrupt-2026-side-events/",
+    "source": "TechCrunch AI",
+    "message_id": 586,
+    "cached_at": 1789240335.3158996
+  },
+  "201155f9a1fbb838": {
+    "title": "Fly Language Model (FLM) Wires the Full Fruit Fly Connectome Into a Frozen 1.2B LLM, and Its Own Controls Show the Wiring Does Not Help",
+    "link": "https://www.marktechpost.com/2026/09/12/fly-language-model-flm-wires-the-full-fruit-fly-connectome-into-a-frozen-1-2b-llm-and-its-own-controls-show-the-wiring-does-not-help/",
+    "source": "MarkTechPost",
+    "message_id": 587,
+    "cached_at": 1789240338.4340804
+  },
+  "ddf15a5cdc703381": {
+    "title": "Trump is giving data centers a pass to pollute",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/994112/ai-data-center-pollution-health-epa",
+    "source": "The Verge AI",
+    "message_id": 588,
+    "cached_at": 1789240341.0562675
+  },
+  "5a8fa1d3887eef65": {
+    "title": "An Open Recipe for IMO Gold: Training Nemotron for Olympiad Mathematics",
+    "link": "https://arxiv.org/abs/2609.10712",
+    "source": "arXiv cs.AI",
+    "message_id": 589,
+    "cached_at": 1789240343.896383
+  },
+  "0cd84c816942ecbc": {
+    "title": "SpatialBlock: Enhancing Spatial Intelligence in LVLMs via Synthetic Block-Stacking Problem",
+    "link": "https://arxiv.org/abs/2609.07064",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 590,
+    "cached_at": 1789240347.024703
+  },
+  "0b0de09583cbb34f": {
+    "title": "Qiskit Fermions: a modular toolbox for fermionic systems",
+    "link": "https://research.ibm.com/blog/qiskit-fermions?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 591,
+    "cached_at": 1789240350.282574
+  },
+  "2454552264b02567": {
+    "title": "MIT Quantum Initiative launches postdoctoral fellowship program",
+    "link": "https://news.mit.edu/2026/mit-quantum-initiative-launches-postdoctoral-fellowship-0831",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 592,
+    "cached_at": 1789240352.5473356
+  },
+  "fbf21ac656e7092f": {
+    "title": "A Theoretical Framework for Masked Pretraining (MPT)",
+    "link": "http://jmlr.org/papers/v27/25-0477.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 593,
+    "cached_at": 1789240355.1119697
+  },
+  "955e516d33ee7a72": {
+    "title": "Research Update: Applications of Local Volume Measurement",
+    "link": "https://blog.eleuther.ai/tyche-poser-comparison/",
+    "source": "EleutherAI Blog",
+    "message_id": 594,
+    "cached_at": 1789240357.9391186
+  },
+  "31775d7bc5032529": {
+    "title": "LLM Research Papers: The 2026 List (January to May)",
+    "link": "https://magazine.sebastianraschka.com/p/llm-research-papers-2026-part1",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 595,
+    "cached_at": 1789240360.4776516
+  },
+  "570615e019d1cc74": {
+    "title": "Reward Hacking in Reinforcement Learning",
+    "link": "https://lilianweng.github.io/posts/2024-11-28-reward-hacking/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 596,
+    "cached_at": 1789240363.4198651
+  },
+  "534b5e82df2995da": {
+    "title": "miniHDL: A Python Hardware Description Language DSL",
+    "link": "https://nicholas.carlini.com/writing/2025/minihdl-python-hardware-description-dsl.html",
+    "source": "Nicholas Carlini",
+    "message_id": 597,
+    "cached_at": 1789240366.0885415
+  },
+  "45d8acbcd92e7e35": {
+    "title": "v2.1.267",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.267",
+    "source": "Claude Code Releases",
+    "message_id": 598,
+    "cached_at": 1789240369.27129
+  },
+  "83eb3d5a2ed6cec4": {
+    "title": "0.155.0-alpha.3.8",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.8",
+    "source": "OpenAI Codex Releases",
+    "message_id": 599,
+    "cached_at": 1789240372.2883368
   }
 }
