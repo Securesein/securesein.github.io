@@ -3923,5 +3923,110 @@
     "source": "vLLM Releases",
     "message_id": 635,
     "cached_at": 1789293739.8367658
+  },
+  "a610785ca1eac881": {
+    "title": "An Anthropic researcher’s doomsday warning comes at a very interesting time",
+    "link": "https://techcrunch.com/podcast/an-anthropic-researchers-doomsday-warning-comes-at-a-very-interesting-time/",
+    "source": "TechCrunch AI",
+    "message_id": 636,
+    "cached_at": 1789299658.989005
+  },
+  "aa1316a333d5d369": {
+    "title": "AI Agents Are Thirsty for Power",
+    "link": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/",
+    "source": "Wired AI",
+    "message_id": 637,
+    "cached_at": 1789299661.7248921
+  },
+  "b7ea4be179417840": {
+    "title": "AWS Introduces Pizza Bot: An Open Source Inbox for Background AI Agents",
+    "link": "https://www.marktechpost.com/2026/09/13/aws-introduces-pizza-bot-an-open-source-inbox-for-background-ai-agents/",
+    "source": "MarkTechPost",
+    "message_id": 638,
+    "cached_at": 1789299664.499265
+  },
+  "d2f98d7f4d3acb54": {
+    "title": "Think Before You Link: Rarity, Reasoning, and Retrieval in Multilingual Entity Linking",
+    "link": "https://arxiv.org/abs/2609.10745",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 639,
+    "cached_at": 1789299667.4071393
+  },
+  "29facfa5780b28e7": {
+    "title": "AI helps design new materials that work in the real world",
+    "link": "https://news.mit.edu/2026/ai-helps-design-new-materials-that-work-in-real-world-0826",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 640,
+    "cached_at": 1789299670.2669747
+  },
+  "17d189782728eb43": {
+    "title": "Bayesian Transfer Learning for Artificially Intelligent Geospatial Systems: A Predictive Stacking Approach",
+    "link": "http://jmlr.org/papers/v27/26-0307.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 641,
+    "cached_at": 1789299672.8317187
+  },
+  "466138f39ded81dc": {
+    "title": "Product Key Memory Sparse Coders",
+    "link": "https://blog.eleuther.ai/pkm-coders/",
+    "source": "EleutherAI Blog",
+    "message_id": 642,
+    "cached_at": 1789299675.2612622
+  },
+  "4b5942c9e4a3eb42": {
+    "title": "Components of A Coding Agent",
+    "link": "https://magazine.sebastianraschka.com/p/components-of-a-coding-agent",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 643,
+    "cached_at": 1789299677.6140337
+  },
+  "fe9d3bc7a1c8514a": {
+    "title": "Thinking about High-Quality Human Data",
+    "link": "https://lilianweng.github.io/posts/2024-02-05-human-data-quality/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 644,
+    "cached_at": 1789299680.0327637
+  },
+  "dc9ec483cea3e087": {
+    "title": "What my privacy papers (don't) have to say about copyright and generative AI",
+    "link": "https://nicholas.carlini.com/writing/2025/privacy-copyright-and-generative-models.html",
+    "source": "Nicholas Carlini",
+    "message_id": 645,
+    "cached_at": 1789299682.2038748
+  },
+  "a1aa29ded91e4f27": {
+    "title": "v2.1.265",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.265",
+    "source": "Claude Code Releases",
+    "message_id": 646,
+    "cached_at": 1789299684.8909428
+  },
+  "82d7415cb69c0f03": {
+    "title": "rust-v0.155.0-alpha.3.5",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.5",
+    "source": "OpenAI Codex Releases",
+    "message_id": 647,
+    "cached_at": 1789299687.1962314
+  },
+  "7b32cd02882de294": {
+    "title": "Release v0.61.0-nightly.20260909.ged2ac40df",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260909.ged2ac40df",
+    "source": "Gemini CLI Releases",
+    "message_id": 648,
+    "cached_at": 1789299689.91363
+  },
+  "80efbe2197a085b7": {
+    "title": "b10941",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10941",
+    "source": "llama.cpp Releases",
+    "message_id": 649,
+    "cached_at": 1789299692.6821191
+  },
+  "f79b2c497d211b4e": {
+    "title": "proto-v0.1.0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.1.0",
+    "source": "vLLM Releases",
+    "message_id": 650,
+    "cached_at": 1789299695.2561543
   }
 }
