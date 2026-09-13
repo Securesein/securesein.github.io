@@ -4238,5 +4238,110 @@
     "source": "vLLM Releases",
     "message_id": 680,
     "cached_at": 1789322534.312574
+  },
+  "8cb07806132f819b": {
+    "title": "v2.1.259",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
+    "source": "Claude Code Releases",
+    "message_id": 681,
+    "cached_at": 1789327326.0000174
+  },
+  "8c6adf663764dbe6": {
+    "title": "rust-v0.155.0-alpha.3.1",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.1",
+    "source": "OpenAI Codex Releases",
+    "message_id": 682,
+    "cached_at": 1789327328.9406211
+  },
+  "7cf0851cd4695ae3": {
+    "title": "Release v0.60.0-nightly.20260907.g85aca163f",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0-nightly.20260907.g85aca163f",
+    "source": "Gemini CLI Releases",
+    "message_id": 683,
+    "cached_at": 1789327332.1224802
+  },
+  "62c8fe137a970e88": {
+    "title": "b10948",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10948",
+    "source": "llama.cpp Releases",
+    "message_id": 684,
+    "cached_at": 1789327335.9726894
+  },
+  "554c98e8f41e539d": {
+    "title": "v0.29.0rc4: [Bugfix] Avoid sync in TRT-LLM ragged prefill",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc4",
+    "source": "vLLM Releases",
+    "message_id": 685,
+    "cached_at": 1789327338.8972685
+  },
+  "271ca60a579f687f": {
+    "title": "v0.34.0-rc4",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc4",
+    "source": "Ollama Releases",
+    "message_id": 686,
+    "cached_at": 1789327341.79525
+  },
+  "8226b4829661f025": {
+    "title": "Release: v5.16.0",
+    "link": "https://github.com/huggingface/transformers/releases/tag/v5.16.0",
+    "source": "Hugging Face Transformers Releases",
+    "message_id": 687,
+    "cached_at": 1789327345.6261723
+  },
+  "f66525eca470831e": {
+    "title": "Release v0.60.0-nightly.20260906.g85aca163f",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0-nightly.20260906.g85aca163f",
+    "source": "Gemini CLI Releases",
+    "message_id": 688,
+    "cached_at": 1789327349.0666423
+  },
+  "f7f636fbf26b90fd": {
+    "title": "b10947",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10947",
+    "source": "llama.cpp Releases",
+    "message_id": 689,
+    "cached_at": 1789327352.1525326
+  },
+  "1b7d369b3f847ee4": {
+    "title": "v0.29.0rc3",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc3",
+    "source": "vLLM Releases",
+    "message_id": 690,
+    "cached_at": 1789327355.257458
+  },
+  "242a5d6aa881b255": {
+    "title": "v0.34.0-rc3",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc3",
+    "source": "Ollama Releases",
+    "message_id": 691,
+    "cached_at": 1789327358.0398996
+  },
+  "0a307970e5eaf238": {
+    "title": "Patch release: v5.15.1",
+    "link": "https://github.com/huggingface/transformers/releases/tag/v5.15.1",
+    "source": "Hugging Face Transformers Releases",
+    "message_id": 692,
+    "cached_at": 1789327360.8118336
+  },
+  "30aa69305532626e": {
+    "title": "b10946",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10946",
+    "source": "llama.cpp Releases",
+    "message_id": 693,
+    "cached_at": 1789327363.942851
+  },
+  "c6bc7e1aa5f84e16": {
+    "title": "v0.29.0rc2",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc2",
+    "source": "vLLM Releases",
+    "message_id": 694,
+    "cached_at": 1789327366.70367
+  },
+  "051460a49ec75662": {
+    "title": "v0.34.0-rc2",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc2",
+    "source": "Ollama Releases",
+    "message_id": 695,
+    "cached_at": 1789327369.612045
   }
 }
