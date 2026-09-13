@@ -4133,5 +4133,110 @@
     "source": "Nicholas Carlini",
     "message_id": 665,
     "cached_at": 1789308139.8844821
+  },
+  "03309ffe3ff54d7d": {
+    "title": "Obama urges Democrats to have a ‘clear plan’ for AI safeguards",
+    "link": "https://techcrunch.com/2026/09/13/obama-urges-democrats-to-have-a-clear-plan-for-ai-safeguards/",
+    "source": "TechCrunch AI",
+    "message_id": 666,
+    "cached_at": 1789322490.7990556
+  },
+  "f9519c51d5d4feb4": {
+    "title": "Prompt Engineering",
+    "link": "https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 667,
+    "cached_at": 1789322493.8118205
+  },
+  "a2d87f6b47053a78": {
+    "title": "A 2-ply minimax chess engine in 84,688 regular expressions",
+    "link": "https://nicholas.carlini.com/writing/2025/regex-chess.html",
+    "source": "Nicholas Carlini",
+    "message_id": 668,
+    "cached_at": 1789322496.6556313
+  },
+  "7d369a98b4904b39": {
+    "title": "v2.1.261",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261",
+    "source": "Claude Code Releases",
+    "message_id": 669,
+    "cached_at": 1789322500.3619955
+  },
+  "b1353dd71daca1f6": {
+    "title": "rust-v0.155.0-alpha.3.3",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.3",
+    "source": "OpenAI Codex Releases",
+    "message_id": 670,
+    "cached_at": 1789322503.798413
+  },
+  "b81e084dc188178d": {
+    "title": "Release v0.60.0-nightly.20260908.g85aca163f",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0-nightly.20260908.g85aca163f",
+    "source": "Gemini CLI Releases",
+    "message_id": 671,
+    "cached_at": 1789322507.2416985
+  },
+  "6062e24f63f2aaac": {
+    "title": "b10944",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10944",
+    "source": "llama.cpp Releases",
+    "message_id": 672,
+    "cached_at": 1789322510.52418
+  },
+  "698e0598ddf96268": {
+    "title": "v0.29.0rc6",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc6",
+    "source": "vLLM Releases",
+    "message_id": 673,
+    "cached_at": 1789322513.2580485
+  },
+  "9fb890b0d22fd975": {
+    "title": "v0.34.0-rc5",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc5",
+    "source": "Ollama Releases",
+    "message_id": 674,
+    "cached_at": 1789322516.0897117
+  },
+  "3223e2cceab722f0": {
+    "title": "Release v5.16.1",
+    "link": "https://github.com/huggingface/transformers/releases/tag/v5.16.1",
+    "source": "Hugging Face Transformers Releases",
+    "message_id": 675,
+    "cached_at": 1789322519.187111
+  },
+  "0a11be683f2edff3": {
+    "title": "v2.1.260",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260",
+    "source": "Claude Code Releases",
+    "message_id": 676,
+    "cached_at": 1789322522.3603864
+  },
+  "418dcf63d8152a4a": {
+    "title": "rust-v0.155.0-alpha.3.2",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.2",
+    "source": "OpenAI Codex Releases",
+    "message_id": 677,
+    "cached_at": 1789322525.2459567
+  },
+  "8e8e4f83ef92160c": {
+    "title": "Release v0.59.0",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0",
+    "source": "Gemini CLI Releases",
+    "message_id": 678,
+    "cached_at": 1789322528.187284
+  },
+  "373f0e1cb279a0c7": {
+    "title": "b10935",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10935",
+    "source": "llama.cpp Releases",
+    "message_id": 679,
+    "cached_at": 1789322531.487454
+  },
+  "37aead185d0058b9": {
+    "title": "v0.29.0rc5",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc5",
+    "source": "vLLM Releases",
+    "message_id": 680,
+    "cached_at": 1789322534.312574
   }
 }
