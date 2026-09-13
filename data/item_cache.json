@@ -3818,5 +3818,110 @@
     "source": "llama.cpp Releases",
     "message_id": 620,
     "cached_at": 1789279410.2240608
+  },
+  "eb1d15483d6f2a53": {
+    "title": "California Brown Pelican",
+    "link": "https://simonwillison.net/2026/Sep/12/sighting-399708714/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 621,
+    "cached_at": 1789293696.061882
+  },
+  "7afb277a608b0200": {
+    "title": "Kimi-maker Moonshot AI targets $2B in annual revenue",
+    "link": "https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/",
+    "source": "TechCrunch AI",
+    "message_id": 622,
+    "cached_at": 1789293699.513901
+  },
+  "83dc17bd42cd9181": {
+    "title": "Sam Altman says OpenAI going public in 2026 would be ‘ill-advised’",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/994384/sam-altman-no-openai-ipo-ill-advised",
+    "source": "The Verge AI",
+    "message_id": 623,
+    "cached_at": 1789293702.2694104
+  },
+  "09a365603210b174": {
+    "title": "Studying Image Tokenizers as Visual Languages in Unified Multimodal Models",
+    "link": "https://arxiv.org/abs/2609.09143",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 624,
+    "cached_at": 1789293705.4119077
+  },
+  "6116da9c839ce217": {
+    "title": "Looking beyond natural sequences",
+    "link": "https://news.mit.edu/2026/looking-beyond-natural-sequences-0827",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 625,
+    "cached_at": 1789293707.764107
+  },
+  "f897f71f4ab72b83": {
+    "title": "Optimising Utility Functions in Multi-Objective Markov Decision Processes",
+    "link": "http://jmlr.org/papers/v27/26-1034.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 626,
+    "cached_at": 1789293710.5710983
+  },
+  "58c32d5856605cd7": {
+    "title": "The Common Pile v0.1",
+    "link": "https://blog.eleuther.ai/common-pile/",
+    "source": "EleutherAI Blog",
+    "message_id": 627,
+    "cached_at": 1789293714.594329
+  },
+  "e9f89571e8825880": {
+    "title": "My Workflow for Understanding LLM Architectures",
+    "link": "https://magazine.sebastianraschka.com/p/workflow-for-understanding-llms",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 628,
+    "cached_at": 1789293717.127758
+  },
+  "001c923ae8027edf": {
+    "title": "Diffusion Models for Video Generation",
+    "link": "https://lilianweng.github.io/posts/2024-04-12-diffusion-video/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 629,
+    "cached_at": 1789293719.926638
+  },
+  "ea0ab417ecfb162f": {
+    "title": "My Thoughts on the Future of \"AI\"",
+    "link": "https://nicholas.carlini.com/writing/2025/thoughts-on-future-ai.html",
+    "source": "Nicholas Carlini",
+    "message_id": 630,
+    "cached_at": 1789293723.928434
+  },
+  "525006d7890ec471": {
+    "title": "v2.1.266",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.266",
+    "source": "Claude Code Releases",
+    "message_id": 631,
+    "cached_at": 1789293726.8903563
+  },
+  "759182a0eab8da5f": {
+    "title": "rust-v0.155.0-alpha.3.6",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.6",
+    "source": "OpenAI Codex Releases",
+    "message_id": 632,
+    "cached_at": 1789293729.5491564
+  },
+  "b850da632e31aaf1": {
+    "title": "Release v0.61.0-nightly.20260910.ged2ac40df",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260910.ged2ac40df",
+    "source": "Gemini CLI Releases",
+    "message_id": 633,
+    "cached_at": 1789293733.0461907
+  },
+  "10483fa61a4708ec": {
+    "title": "b10938",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10938",
+    "source": "llama.cpp Releases",
+    "message_id": 634,
+    "cached_at": 1789293736.9184482
+  },
+  "b0062d6666ecfe94": {
+    "title": "v0.29.1rc0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.1rc0",
+    "source": "vLLM Releases",
+    "message_id": 635,
+    "cached_at": 1789293739.8367658
   }
 }
