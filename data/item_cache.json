@@ -3713,5 +3713,110 @@
     "source": "OpenAI Codex Releases",
     "message_id": 599,
     "cached_at": 1789240372.2883368
+  },
+  "56ed9309de330598": {
+    "title": "Generating running routes with GPT-6 Astra and ChatGPT Work",
+    "link": "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 606,
+    "cached_at": 1789279366.449758
+  },
+  "e8834f138455b5b0": {
+    "title": "OpenAI’s Sam Altman says it would be ‘ill-advised’ to go public in 2026",
+    "link": "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/",
+    "source": "TechCrunch AI",
+    "message_id": 607,
+    "cached_at": 1789279368.9874814
+  },
+  "c4486871a260b19f": {
+    "title": "OpenAI’s rogue AI tried to hack another company in May",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
+    "source": "The Verge AI",
+    "message_id": 608,
+    "cached_at": 1789279371.4932303
+  },
+  "a96ad0ae5ed56c67": {
+    "title": "ActReview: Rebuttal-Guided Training Data and Rubric Rewards for Actionable Peer Review Generation",
+    "link": "https://arxiv.org/abs/2609.09076",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 609,
+    "cached_at": 1789279374.889628
+  },
+  "887249f4bf1b2976": {
+    "title": "IBM’s new modular architecture for cryogenic systems",
+    "link": "https://research.ibm.com/blog/modular-cryogenics?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 610,
+    "cached_at": 1789279378.4283452
+  },
+  "97eaaf36b3550f03": {
+    "title": "How an MIT research project became a global programming language",
+    "link": "https://news.mit.edu/2026/how-mit-research-project-became-global-programming-language-0831",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 611,
+    "cached_at": 1789279381.5856924
+  },
+  "f80a67270d9f8867": {
+    "title": "Robustness Against Weak or Invalid Instruments: Exploring Nonlinear Treatment Models with Machine Learning",
+    "link": "http://jmlr.org/papers/v27/24-0515.html",
+    "source": "JMLR (Journal of Machine Learning Research)",
+    "message_id": 612,
+    "cached_at": 1789279384.44576
+  },
+  "9b28a7ab807d3a00": {
+    "title": "Studying inductive biases of random networks via local volumes",
+    "link": "https://blog.eleuther.ai/inductive-bias/",
+    "source": "EleutherAI Blog",
+    "message_id": 613,
+    "cached_at": 1789279387.1255875
+  },
+  "45902f284acb2417": {
+    "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+    "link": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 614,
+    "cached_at": 1789279390.100846
+  },
+  "d342305e68818550": {
+    "title": "Extrinsic Hallucinations in LLMs",
+    "link": "https://lilianweng.github.io/posts/2024-07-07-hallucination/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 615,
+    "cached_at": 1789279392.7270584
+  },
+  "ce7078d61b434160": {
+    "title": "Machines of Ruthless Efficiency",
+    "link": "https://nicholas.carlini.com/writing/2025/machines-of-ruthless-efficiency.html",
+    "source": "Nicholas Carlini",
+    "message_id": 616,
+    "cached_at": 1789279395.7321384
+  },
+  "f92b74e4fc4e44c6": {
+    "title": "v2.1.270",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
+    "source": "Claude Code Releases",
+    "message_id": 617,
+    "cached_at": 1789279399.4490764
+  },
+  "ae12a0f0c680640d": {
+    "title": "0.155.0-alpha.3.7",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.7",
+    "source": "OpenAI Codex Releases",
+    "message_id": 618,
+    "cached_at": 1789279402.666731
+  },
+  "0e50e09ace7d1f21": {
+    "title": "Release v0.61.0-nightly.20260913.g9c1b0a610",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260913.g9c1b0a610",
+    "source": "Gemini CLI Releases",
+    "message_id": 619,
+    "cached_at": 1789279405.950108
+  },
+  "a3e3d67a9229eb97": {
+    "title": "b10937",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10937",
+    "source": "llama.cpp Releases",
+    "message_id": 620,
+    "cached_at": 1789279410.2240608
   }
 }

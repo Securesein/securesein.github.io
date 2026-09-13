@@ -280,5 +280,44 @@
     "status": "published",
     "slug": "empowering-enterprises-with-chatgpt-s-new-data-agent",
     "published_at": 1789149670.3077805
+  },
+  "d59155e2f8c702db:600": {
+    "title": "What happens when information theory accounts for reasoning?",
+    "link": "https://research.ibm.com/blog/information-theory-meaning?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 545,
+    "cached_at": 1789221692.8972275,
+    "instructions": "Maak post",
+    "kind": "article",
+    "marked_at": 1789279250.9778583,
+    "status": "published",
+    "slug": "rethinking-communication-when-reasoning-meets-information-theory",
+    "published_at": 1789279282.4490535
+  },
+  "83eb3d5a2ed6cec4:601": {
+    "title": "0.155.0-alpha.3.8",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.8",
+    "source": "OpenAI Codex Releases",
+    "message_id": 599,
+    "cached_at": 1789240372.2883368,
+    "instructions": "Bespreek veranderingen",
+    "kind": "article",
+    "marked_at": 1789279252.5983913,
+    "status": "published",
+    "slug": "navigating-the-0-155-0-alpha-3-8-release-what-s-new-in-openai-codex",
+    "published_at": 1789279305.9845452
+  },
+  "45d8acbcd92e7e35:602": {
+    "title": "v2.1.267",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.267",
+    "source": "Claude Code Releases",
+    "message_id": 598,
+    "cached_at": 1789240369.27129,
+    "instructions": "Bespreek verandering",
+    "kind": "article",
+    "marked_at": 1789279253.795383,
+    "status": "published",
+    "slug": "claude-code-v2-1-267-enhancements-and-fixes-you-need-to-know",
+    "published_at": 1789279329.762059
   }
 }
