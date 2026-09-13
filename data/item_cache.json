@@ -4028,5 +4028,110 @@
     "source": "vLLM Releases",
     "message_id": 650,
     "cached_at": 1789299695.2561543
+  },
+  "bb94d6f71e33ad09": {
+    "title": "Context Engineering Inside the Harness: 4 Mechanisms That Beat Context Overflow and Goal Loss on Long-Horizon Tasks",
+    "link": "https://www.marktechpost.com/2026/09/12/context-engineering-inside-the-harness-4-mechanisms-that-beat-context-overflow-and-goal-loss-on-long-horizon-tasks/",
+    "source": "MarkTechPost",
+    "message_id": 651,
+    "cached_at": 1789308092.5200074
+  },
+  "23b3940b561b4824": {
+    "title": "IdeaAMBIG: Benchmarking Implementation-Critical Gaps in Research-Idea Specifications",
+    "link": "https://arxiv.org/abs/2609.10539",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 652,
+    "cached_at": 1789308095.3619955
+  },
+  "4bd90b22eede110e": {
+    "title": "A Visual Guide to Attention Variants in Modern LLMs",
+    "link": "https://magazine.sebastianraschka.com/p/visual-attention-variants",
+    "source": "Ahead of AI (Sebastian Raschka)",
+    "message_id": 653,
+    "cached_at": 1789308099.8101444
+  },
+  "3092873dd67884e1": {
+    "title": "Adversarial Attacks on LLMs",
+    "link": "https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 654,
+    "cached_at": 1789308102.997735
+  },
+  "a303aef48dc49065": {
+    "title": "Career Update: Google DeepMind -> Anthropic",
+    "link": "https://nicholas.carlini.com/writing/2025/career-update.html",
+    "source": "Nicholas Carlini",
+    "message_id": 655,
+    "cached_at": 1789308105.9205496
+  },
+  "b6e5aa31eb537745": {
+    "title": "v2.1.263",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.263",
+    "source": "Claude Code Releases",
+    "message_id": 656,
+    "cached_at": 1789308109.0784476
+  },
+  "5a89bc3ab9abf18c": {
+    "title": "rust-v0.155.0-alpha.3.4",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.4",
+    "source": "OpenAI Codex Releases",
+    "message_id": 657,
+    "cached_at": 1789308112.3979008
+  },
+  "cbd555d711c59f27": {
+    "title": "Release v0.60.0-preview.0",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0-preview.0",
+    "source": "Gemini CLI Releases",
+    "message_id": 658,
+    "cached_at": 1789308115.5259738
+  },
+  "26c200a22c07d7e5": {
+    "title": "b10936",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10936",
+    "source": "llama.cpp Releases",
+    "message_id": 659,
+    "cached_at": 1789308119.687975
+  },
+  "92408966ac98d452": {
+    "title": "v0.29.0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0",
+    "source": "vLLM Releases",
+    "message_id": 660,
+    "cached_at": 1789308123.3111825
+  },
+  "e9eff6d3dcb04593": {
+    "title": "v0.34.0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.0",
+    "source": "Ollama Releases",
+    "message_id": 661,
+    "cached_at": 1789308126.1912432
+  },
+  "9f974add1930f725": {
+    "title": "Release 5.17.0",
+    "link": "https://github.com/huggingface/transformers/releases/tag/v5.17.0",
+    "source": "Hugging Face Transformers Releases",
+    "message_id": 662,
+    "cached_at": 1789308130.0757396
+  },
+  "c7e2a2b418f46993": {
+    "title": "Implementation of Machine Learning Workflows with NVIDIA cuML, RAPIDS, GPU Benchmarking, Explainability, Clustering, and Model Inference",
+    "link": "https://www.marktechpost.com/2026/09/12/implementation-of-machine-learning-workflows-with-nvidia-cuml-rapids-gpu-benchmarking-explainability-clustering-and-model-inference/",
+    "source": "MarkTechPost",
+    "message_id": 663,
+    "cached_at": 1789308133.0386338
+  },
+  "19472db6d6f483d5": {
+    "title": "LLM Powered Autonomous Agents",
+    "link": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 664,
+    "cached_at": 1789308136.9710448
+  },
+  "79ebac19d53a18ae": {
+    "title": "AI forecasting retrospective: you're (probably) over-confident",
+    "link": "https://nicholas.carlini.com/writing/2025/forecasting-ai-2025-update.html",
+    "source": "Nicholas Carlini",
+    "message_id": 665,
+    "cached_at": 1789308139.8844821
   }
 }
