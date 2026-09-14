@@ -4448,5 +4448,110 @@
     "source": "llama.cpp Releases",
     "message_id": 710,
     "cached_at": 1789365725.151123
+  },
+  "3c2f6dcb128bccaf": {
+    "title": "shot-scraper 1.12",
+    "link": "https://simonwillison.net/2026/Sep/13/shot-scraper/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 711,
+    "cached_at": 1789365991.57662
+  },
+  "39dd5798b26040e1": {
+    "title": "Hierarchical NeRF with JAX3D for Volumetric Rendering, Novel-View Synthesis, and 3D Reconstruction",
+    "link": "https://www.marktechpost.com/2026/09/13/hierarchical-nerf-with-jax3d-for-volumetric-rendering-novel-view-synthesis-and-3d-reconstruction/",
+    "source": "MarkTechPost",
+    "message_id": 712,
+    "cached_at": 1789365993.9111748
+  },
+  "250ed8678dc32cbc": {
+    "title": "Harness or Model? Isolating the Harness Effect in Agentic Coding with a Contamination-Controlled Private Suite",
+    "link": "https://arxiv.org/abs/2609.11987",
+    "source": "arXiv cs.AI",
+    "message_id": 713,
+    "cached_at": 1789365996.5251105
+  },
+  "4de4c7774077618d": {
+    "title": "What Counts as a Mistake? Annotating Recitation Events in Quran Memorization Transcripts",
+    "link": "https://arxiv.org/abs/2609.12085",
+    "source": "arXiv cs.CL",
+    "message_id": 714,
+    "cached_at": 1789365998.8782372
+  },
+  "5e55af5604775dae": {
+    "title": "Physics-Informed Conformal Prediction: Embedding PDE Consistency into Distribution-Free Uncertainty Quantification for Neural Operators",
+    "link": "https://arxiv.org/abs/2609.11935",
+    "source": "arXiv cs.LG",
+    "message_id": 715,
+    "cached_at": 1789366001.2958546
+  },
+  "815fd74e324b6652": {
+    "title": "Does Video Memory Use What It Retrieves? A Causal Audit of Memory Specificity",
+    "link": "https://arxiv.org/abs/2609.12090",
+    "source": "arXiv cs.CV",
+    "message_id": 716,
+    "cached_at": 1789366004.1060095
+  },
+  "dd371037d70c737f": {
+    "title": "MIT spinout turns plastic waste into resilient building materials",
+    "link": "https://news.mit.edu/2026/mit-spinout-turns-plastic-waste-into-resilient-building-materials-0914",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 717,
+    "cached_at": 1789366006.3874006
+  },
+  "441ca4ea3e32e9fe": {
+    "title": "Membership Inference via Pairwise Likelihood Ratios",
+    "link": "https://arxiv.org/abs/2609.12367",
+    "source": "arXiv stat.ML",
+    "message_id": 718,
+    "cached_at": 1789366009.2590878
+  },
+  "e041b205cfbf2de6": {
+    "title": "MAAPO:an innovative membrane algorithm based on artificial protozoa optimizer for multilevel threshold image segmentation",
+    "link": "https://arxiv.org/abs/2609.12756",
+    "source": "arXiv cs.NE",
+    "message_id": 719,
+    "cached_at": 1789366011.8391502
+  },
+  "5919caff7eaa05f0": {
+    "title": "Information Design in Smooth Games",
+    "link": "https://arxiv.org/abs/2202.10883",
+    "source": "arXiv cs.MA",
+    "message_id": 720,
+    "cached_at": 1789366014.8532417
+  },
+  "86eabec45b58b3ae": {
+    "title": "b10950",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10950",
+    "source": "llama.cpp Releases",
+    "message_id": 721,
+    "cached_at": 1789366017.3750572
+  },
+  "ef2e1bd870ac4154": {
+    "title": "v0.29.0rc1: [Bugfix] Handle padded routes in CUTLASS MoE permutations (#54747)",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc1",
+    "source": "vLLM Releases",
+    "message_id": 722,
+    "cached_at": 1789366019.7724855
+  },
+  "a4e04c6a6cbac077": {
+    "title": "v0.34.0-rc1",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc1",
+    "source": "Ollama Releases",
+    "message_id": 723,
+    "cached_at": 1789366022.4379063
+  },
+  "a00897e4988fbe14": {
+    "title": "Release: v5.15.0",
+    "link": "https://github.com/huggingface/transformers/releases/tag/v5.15.0",
+    "source": "Hugging Face Transformers Releases",
+    "message_id": 724,
+    "cached_at": 1789366025.5516846
+  },
+  "6e4b88cbd90cd38f": {
+    "title": "A Princeton Researcher Proposes Recurrent Looped Transformer (RLT) that Carries Decoder State across Every Token, Fixing 96 Blocks per Token with Unbounded Temporal Depth",
+    "link": "https://www.marktechpost.com/2026/09/13/a-princeton-researcher-proposes-recurrent-looped-transformer-rlt/",
+    "source": "MarkTechPost",
+    "message_id": 725,
+    "cached_at": 1789366027.9535358
   }
 }
