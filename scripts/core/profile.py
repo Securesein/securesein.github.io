@@ -655,8 +655,13 @@ class TopicActivity:
         write_json(TOPIC_ACTIVITY_FILE, {"topics": self.last})
 
     def starved(self, all_topics: list[str]) -> list[tuple[str, int]]:
-        """(topic, days since last touched) for the report, newest-last.
-        A topic that has never been published comes back as -1."""
+        """(topic, days since last touched), HUNGRIEST FIRST.
+
+        A topic that has never been published comes back as -1 and sorts
+        FIRST, because never is the most starved a topic can be. An
+        earlier version sorted it last, which put the one thing the
+        report exists to surface at the bottom of a truncated list.
+        """
         today = date.today()
         rows = []
         for topic in all_topics:
@@ -668,7 +673,9 @@ class TopicActivity:
                 rows.append((topic, (today - date.fromisoformat(last[:10])).days))
             except ValueError:
                 rows.append((topic, -1))
-        return sorted(rows, key=lambda r: (-1 if r[1] < 0 else -r[1]))
+        # Sort key: never-published is infinitely starved, then by days
+        # descending.
+        return sorted(rows, key=lambda r: (-(10**6) if r[1] < 0 else -r[1]))
 
 
 # --- discovery mix (§7.1, checked weekly not per run) -----------------

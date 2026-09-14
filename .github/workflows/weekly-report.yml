@@ -1,0 +1,51 @@
+name: Weekly pipeline report
+
+# ############################################################
+# #  MANUAL TRIGGER ONLY. THERE IS DELIBERATELY NO `schedule`. #
+# #                                                            #
+# #  It also defaults to NOT SENDING. `send` has to be set to  #
+# #  true by hand, per run, for a message to leave the         #
+# #  process; without it the digest is rendered into the job   #
+# #  log and nothing reaches anyone's phone. That is how the   #
+# #  format was verified during the build — no real message    #
+# #  was ever sent.                                            #
+# #                                                            #
+# #  To activate (§13 wants this Mondays at 07:00 UTC — Telegram #
+# #  only), all of which would have to happen and  #
+# #  none of which have:                                       #
+# #    1. confirm TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID are  #
+# #       set as repository secrets;                           #
+# #    2. create a cron-job.org job hitting this workflow's    #
+# #       dispatch API Mondays at 07:00 UTC, with send=true;     #
+# #    3. nothing else. The report is read-only: it counts what #
+# #       the ledger, the rejection log and the Radar already   #
+# #       contain and changes none of them.                     #
+# ############################################################
+on:
+  workflow_dispatch:
+    inputs:
+      send:
+        description: "Actually send it to Telegram (leave false to render only)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+      - name: Render the report
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python scripts/run.py --report \
+            ${{ inputs.send && '--publish --send' || '--dry-run' }}

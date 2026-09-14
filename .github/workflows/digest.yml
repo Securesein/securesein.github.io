@@ -1,0 +1,52 @@
+name: Daily Telegram digest
+
+# ############################################################
+# #  MANUAL TRIGGER ONLY. THERE IS DELIBERATELY NO `schedule`. #
+# #                                                            #
+# #  It also defaults to NOT SENDING. `send` has to be set to  #
+# #  true by hand, per run, for a message to leave the         #
+# #  process; without it the digest is rendered into the job   #
+# #  log and nothing reaches anyone's phone. That is how the   #
+# #  format was verified during the build — no real message    #
+# #  was ever sent.                                            #
+# #                                                            #
+# #  To activate (§13 wants this daily at 18:00 UTC, after the #
+# #  day's publishing), all of which would have to happen and  #
+# #  none of which have:                                       #
+# #    1. confirm TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID are  #
+# #       set as repository secrets;                           #
+# #    2. create a cron-job.org job hitting this workflow's    #
+# #       dispatch API daily at 18:00 UTC, with send=true;     #
+# #    3. decide whether the interactive form (one message per #
+# #       item, with reaction buttons) is wanted — it is built #
+# #       as telegram/digest.send_interactive and is not what  #
+# #       this workflow currently calls.                       #
+# ############################################################
+on:
+  workflow_dispatch:
+    inputs:
+      send:
+        description: "Actually send it to Telegram (leave false to render only)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+      - name: Render the digest
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python scripts/run.py --digest \
+            ${{ inputs.send && '--publish --send' || '--dry-run' }}
