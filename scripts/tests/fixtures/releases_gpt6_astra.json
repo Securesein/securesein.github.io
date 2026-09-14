@@ -1,0 +1,89 @@
+{
+  "_comment": "The failure the Releases channel exists to prevent, recorded as input. The News archive currently holds THREE separate posts about ONE GPT-6 Astra release — gpt-6-astra-a-new-era-for-developers, gpt-6-astra-redefining-intelligence-and-efficiency-for-developers and understanding-the-impact-of-openai-s-gpt-6-astra-on-enterprise-operations — published on 4, 5 and 6 September 2026 from three different URLs under three different headlines. URL dedup cannot see that they are one story; title dedup catches some of it and missed these; entity dedup on (vendor, family, version, eventType) collapses all of them. The source URLs below are the real ones from those three posts' frontmatter. The fourth item is a press pickup, present to show that a corroborating source adds a point and can never trigger a post on its own; the fifth is an unrelated release that must survive as its own candidate, so the test is measuring dedup rather than over-merging.",
+  "items": [
+    {
+      "id": "https://openai.com/index/gpt-6-astra",
+      "title": "Introducing GPT-6 Astra",
+      "url": "https://openai.com/index/gpt-6-astra",
+      "published": "2026-09-03T17:00:00+00:00",
+      "summary": "GPT-6 Astra is our most capable model. It represents years of work in pre-training, reinforcement learning and alignment. Astra saturates top-tier benchmarks including FrontierMath Tier 4 at 98% and ARC-AGI-3 at 99.9%, and completes professional tasks with 47% less time per task than GPT-5.6 Sol. Available today in the API with a 1.05 million token context window.",
+      "source": {
+        "naam": "OpenAI — News",
+        "url": "https://openai.com/news/rss.xml",
+        "type": "rss",
+        "tier": "primary",
+        "vendor": "openai"
+      }
+    },
+    {
+      "id": "https://developers.openai.com/api/docs/changelog#gpt-6-astra",
+      "title": "GPT-6 Astra: a new era for developers",
+      "url": "https://developers.openai.com/api/docs/changelog#gpt-6-astra",
+      "published": "2026-09-03T18:20:00+00:00",
+      "summary": "gpt-6-astra is now available in the API. The model supports a 1.05M context window, computer use, and structured outputs. See the model card for benchmark results including FrontierMath Tier 4 (98%).",
+      "source": {
+        "naam": "OpenAI — API docs changelog",
+        "url": "https://developers.openai.com/api/docs/changelog",
+        "type": "rss",
+        "tier": "primary",
+        "vendor": "openai"
+      }
+    },
+    {
+      "id": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/",
+      "title": "Introducing GPT-6 Astra for developers",
+      "url": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/",
+      "published": "2026-09-05T09:10:00+00:00",
+      "summary": "I have been playing with GPT-6 Astra since yesterday. The 1.05M context window is the headline but the interesting part is how much better it is at long multi-step tasks.",
+      "source": {
+        "naam": "Simon Willison — Weblog",
+        "url": "https://simonwillison.net/atom/everything/",
+        "type": "atom",
+        "tier": "community",
+        "vendor": "-"
+      }
+    },
+    {
+      "id": "https://www.marktechpost.com/2026/09/03/openai-releases-gpt-6-astra/",
+      "title": "OpenAI releases GPT-6 Astra, a 1.05M-context computer-use model gated behind a critical cyber threshold",
+      "url": "https://www.marktechpost.com/2026/09/03/openai-releases-gpt-6-astra/",
+      "published": "2026-09-03T21:45:00+00:00",
+      "summary": "OpenAI has released GPT-6 Astra. The model is notable for its enhanced performance and cost-effectiveness on reasoning-heavy tasks, with a 1.05 million token context window.",
+      "source": {
+        "naam": "MarkTechPost",
+        "url": "https://www.marktechpost.com/feed/",
+        "type": "rss",
+        "tier": "corroborating",
+        "vendor": "-"
+      }
+    },
+    {
+      "id": "https://ai.googleblog.com/2026/08/gemini-3-7-flash",
+      "title": "Introducing Gemini 3.7 Flash",
+      "url": "https://ai.googleblog.com/2026/08/gemini-3-7-flash",
+      "published": "2026-08-13T15:00:00+00:00",
+      "summary": "Gemini 3.7 Flash is our new workhorse model, with a significant uptick in first-pass code accuracy. It scores 43.6% on FrontierCode 1.1 Main and 65.3% on DeepSWE v1.1, against 34.4% and 49.0% for 3.6 Flash.",
+      "source": {
+        "naam": "Google Developers Blog",
+        "url": "https://developers.googleblog.com/feeds/posts/default",
+        "type": "atom",
+        "tier": "primary",
+        "vendor": "google"
+      }
+    },
+    {
+      "id": "https://github.com/ollama/ollama/releases/tag/v0.14.2",
+      "title": "Ollama v0.14.2",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.14.2",
+      "published": "2026-09-04T10:00:00+00:00",
+      "summary": "Fixes a regression in model unloading. Adds support for the new GPT-6 Astra tokenizer.",
+      "source": {
+        "naam": "Ollama releases",
+        "url": "https://github.com/ollama/ollama/releases.atom",
+        "type": "atom",
+        "tier": "corroborating",
+        "vendor": "-"
+      }
+    }
+  ]
+}

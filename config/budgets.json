@@ -1,0 +1,19 @@
+{
+  "_comment": "Publication budgets, keyed by SECTION (the `kind` axis), not by channel — two channels reading the same feed file must still share one counter per section. hard_cap_7d is a CIRCUIT BREAKER, not a target: the targets below it are the operating point, and the cap exists so a misconfigured threshold cannot put fifty posts on the site in a week. Reaching it is an INCIDENT to report, not routine truncation. The window is a ROLLING 7 days, deliberately not a calendar week: a calendar week resets on Monday and would permit two full weeks' output inside 48 hours across the boundary.",
+
+  "_comment_a1": "DECISION A1, as confirmed by the site owner: ~21 posts/week (about 3/day), the brief's own lower assumption, with the section 9 table taken as written EXCEPT the `practice` row, which decision A2 removed along with the section. The targets therefore sum to 19/week rather than the brief's stated ~21. That shortfall is expected and is not a bug to fix — the difference routes into the Radar, which is the whole structural point of section 6.",
+
+  "hard_cap_7d": 50,
+  "targets_7d": {
+    "release": 6,
+    "research": 6,
+    "security": 4,
+    "benchmark": 2,
+    "explainer": 1
+  },
+  "per_day_cap": 5,
+  "per_run_cap": 2,
+  "queue_ttl_days": 7,
+
+  "_comment_rollover": "Unused budget does NOT roll over. A quiet week is a quiet week, and a correct outcome rather than a failure to hit target (section 16). Nothing in ledger.py carries a remainder forward; this line exists so nobody adds it later thinking it was an oversight."
+}

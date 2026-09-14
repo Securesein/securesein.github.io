@@ -1,0 +1,27 @@
+{
+  "_comment": "Post triggers for the Benchmarks channel. Measurements are committed on every run and consume NO post budget; only a roundup does. A roundup is written when the triggers that have fired since the last one add up to at least `threshold`.",
+
+  "_comment_gap": "vendor_vs_thirdparty_gap is the single most valuable thing this channel can produce and is weighted accordingly. It fires when an independent measurement differs from the vendor's own published claim for the SAME model on the SAME benchmark by at least vendor_gap_threshold_pp percentage points. It is never suppressed for being unflattering to a vendor; that is the entire point of keeping both numbers in one table.",
+
+  "triggers": {
+    "new_leader": 4,
+    "new_top5_entrant": 2,
+    "vendor_vs_thirdparty_gap": 4,
+    "benchmark_erratum_or_retraction": 5,
+    "first_measurement_of_tier1_model": 2
+  },
+  "vendor_gap_threshold_pp": 5,
+  "threshold": 4,
+  "max_roundups_per_week": 2,
+
+  "_comment_tier1": "Which vendors count as tier-1 for first_measurement_of_tier1_model. Kept in step with config/releases.json by hand; if they ever disagree, releases.json is the one that decides publishing volume and this one only decides what is worth a roundup sentence.",
+  "tier1_vendors": [
+    "openai",
+    "anthropic",
+    "google",
+    "meta",
+    "microsoft",
+    "mistral",
+    "nvidia"
+  ]
+}

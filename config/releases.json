@@ -1,0 +1,45 @@
+{
+  "_comment": "Scoring rubric for the Releases channel. These are STARTING DEFAULTS and are expected to be wrong: the brief says so explicitly (§12.2). The way to fix the channel's volume is to change a number in this file, never to reword a prompt — a prompt change is unmeasurable and a threshold change is not. Run the channel in --dry-run for a week, read the score distribution out of state/queue.json and state/rejected.jsonl, and raise `threshold` until the output is the eight-a-week the budget targets.",
+
+  "_comment_tier1": "Tier-1 vendors (brief §14.4). DEFAULT APPLIED, NOT CONFIRMED WITH THE SITE OWNER. The decision taken here: track EVERY vendor present in models.json and feeds-releases.json, but make it harder for a non-tier-1 vendor to clear the bar. Of the two mechanisms the brief offers — an extra negative weight, or a different effective threshold — this uses the negative weight `non_tier1`, because it keeps one threshold to reason about and puts the whole tier-1 policy in two adjacent lines you can see at once. Net effect: a tier-1 release scores +1 (tier1_vendor) and a non-tier-1 release scores -2 (non_tier1), a 3-point spread on a threshold of 6. THIS IS THE SINGLE MOST LIKELY NUMBER IN THIS FILE TO BE WRONG — if the channel goes quiet on the Chinese open-weights labs, this is why, and softening it to -1 is the first thing to try.",
+  "tier1_vendors": [
+    "openai",
+    "anthropic",
+    "google",
+    "meta",
+    "microsoft",
+    "mistral",
+    "nvidia"
+  ],
+
+  "weights": {
+    "primary_source": 3,
+    "event_new_model": 4,
+    "event_version_bump_major": 3,
+    "event_version_bump_minor": 1,
+    "event_capability_update": 2,
+    "event_deprecation": 2,
+    "event_availability": 1,
+    "open_weights": 2,
+    "tier1_vendor": 1,
+    "non_tier1": -2,
+    "benchmark_claims_present": 1,
+    "corroborated_48h": 1,
+    "press_release_only": -3,
+    "no_product_angle": -3,
+    "entity_in_cooldown": -5
+  },
+
+  "threshold": 6,
+  "cooldown_days": 10,
+  "per_run_cap": 2,
+
+  "_comment_age": "A release is news for about a fortnight. Several sources here are back CATALOGUES rather than feeds — every Hugging Face org endpoint hands back thirty repositories whether they landed this morning or in 2023 — so an age filter, not just a seen-before check, is what keeps history out of the candidate pool. Found by the Phase 3 dry run, which without it enqueued OpenAI's 2023 diffusion checkpoints as new model releases.",
+  "max_item_age_days": 14,
+
+  "_comment_volume": "Two high-volume feeds need filtering before scoring or they drown the candidate pool in unrelated product news (brief §12.1d): Microsoft's Azure updates feed carries all of Azure, and AWS What's New carries all of AWS. An item from one of these is only considered when its title or summary mentions one of the families below.",
+  "volume_filtered_sources": {
+    "Microsoft — Azure updates": ["ai foundry", "azure openai", "azure ai", "phi-", "phi ", "maia", "mai-"],
+    "AWS — What's New": ["bedrock", "nova", "sagemaker", "titan", "anthropic on aws"]
+  }
+}
