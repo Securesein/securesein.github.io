@@ -1,4 +1,28 @@
 """
+SUPERSEDED — NOT INVOKED BY ANYTHING. KEPT ON PURPOSE.
+
+This is the pre-refactor Scout script. Nothing runs it any more:
+.github/workflows/nieuwsbrief.yml now calls
+
+    python scripts/run.py --channel research --publish --marked-only
+
+which is the same logic, moved into scripts/core/ + scripts/channels/,
+and which emits the three-axis frontmatter the current schema requires
+(`format` and `scout`, which this file does not write and which would
+therefore fail the build).
+
+It stays in the tree for one reason: scripts/tests/test_parity.py loads
+it, strips its imports and module-level side effects, and compares the
+refactored implementation against it function by function over the real
+archive — title tokenising, story similarity, the whole is_duplicate
+decision, the publisher-self-reference heuristic, slugify, the
+frontmatter reader, and both task prompts. Delete this file and that
+proof goes with it.
+
+Do not run it. Do not edit it to "fix" the schema — editing it would
+mean the parity test compares the new code against itself.
+"""
+"""
 Turn a marked news item into a full English blog post and write it as
 a new Markdown file in src/content/blog/, matching the Astro content
 schema exactly (see src/content.config.ts).

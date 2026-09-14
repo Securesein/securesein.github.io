@@ -66,6 +66,8 @@ class Context:
     radar: Radar
     limit: int | None = None
     fixtures: Path | None = None
+    # Legacy path only: the Telegram marked-item flow, no feed sweep.
+    marked_only: bool = False
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -106,6 +108,14 @@ def build_parser() -> argparse.ArgumentParser:
              "all. Implied when OPENAI_API_KEY is unset.",
     )
     parser.add_argument("--limit", type=int, default=None, help="cap items examined")
+    parser.add_argument(
+        "--marked-only",
+        action="store_true",
+        help="research only: run ONLY the legacy Telegram marked-item path and "
+             "skip the feed sweep entirely. This is what the existing live "
+             "workflow calls. It publishes only what the owner has replied to "
+             "by hand, so it activates no autonomous publishing.",
+    )
     parser.add_argument(
         "--fixtures",
         type=Path,
@@ -174,6 +184,7 @@ def main(argv: list[str] | None = None) -> int:
         radar=radar,
         limit=args.limit,
         fixtures=args.fixtures,
+        marked_only=args.marked_only,
     )
 
     if args.channel == "releases":

@@ -210,7 +210,33 @@ def run_marked(ctx) -> int:
             )
 
         if drafted is None:
-            continue  # leave status "pending" — will retry next run
+            continue  # leave status "pending" — tried again next run
+
+        # §10: the gates are enforced on EVERY publication path, and
+        # this one is no exception. The owner choosing the article is
+        # not a review of the prose the model then wrote from it, and an
+        # invented number is exactly as wrong here as anywhere else.
+        #
+        # The CUSTOM path is the one documented exemption: a from-scratch
+        # Telegram brief has no source article, so there is nothing for
+        # G1 to ground against — the same legacy exemption the schema
+        # already grants that path for `source`.
+        if source_url:
+            results = pipeline.run_gates(llm, drafted, article_text)
+            for result in results:
+                print(f"    {result.gate} "
+                      f"{'pass' if result.passed else 'FAIL'}: {result.detail}")
+            failed = next((r for r in results if not r.passed), None)
+            if failed is not None:
+                reject(
+                    CHANNEL,
+                    pipeline.GATE_REASONS.get(failed.gate, "below_quality_gate"),
+                    title=drafted["title"], url=source_url,
+                    detail={"gate": failed.gate, "why": failed.detail,
+                            "offending": failed.offending},
+                    dry_run=dry_run,
+                )
+                continue
 
         # Second duplicate pass, on the DRAFTED headline: two feeds can
         # carry one story under different words and converge once a
@@ -264,7 +290,22 @@ def _write_marked(ctx, drafted, section, fmt, source_url, source_name, sid) -> s
 
 
 def run(ctx) -> int:
+    """Two paths, and they have very different risk profiles.
+
+    `run_marked` publishes what the OWNER replied to in Telegram. It has
+    been live since long before this build, it is human-initiated, and
+    it is what the existing nieuwsbrief.yml workflow calls — with
+    --marked-only, which skips the feed sweep entirely.
+
+    `run_feeds` is the autonomous half. Nothing in this repository runs
+    it with --publish: no workflow passes the flag, no schedule fires
+    one, and no cron-job.org job exists.
+    """
     published = run_marked(ctx)
+    if getattr(ctx, "marked_only", False):
+        print("  --marked-only: skipping the feed sweep.")
+        print("Done.")
+        return published
     published += run_feeds(ctx)
     print("Done.")
     return published

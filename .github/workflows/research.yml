@@ -1,0 +1,98 @@
+name: Research channel
+
+# ############################################################
+# #  MANUAL TRIGGER ONLY. THERE IS DELIBERATELY NO `schedule`. #
+# #                                                            #
+# #  This channel is built, tested and DORMANT. It cannot run  #
+# #  unattended, because nothing fires it: no `schedule:` here #
+# #  and no cron-job.org job pointed at it. Running it takes a #
+# #  person clicking "Run workflow".                           #
+# #                                                            #
+# #  It also defaults to a DRY RUN. The `publish` input has to #
+# #  be set to true by hand, per run, for anything to be       #
+# #  written — and doing that is a deliberate decision the     #
+# #  site owner takes, not a default anyone can fall into.     #
+# #                                                            #
+# #  To actually activate the channel, three separate things   #
+# #  have to happen and none of them have:                     #
+# #    1. run it in dry-run for a week and re-check the        #
+# #       thresholds against the score distribution;           #
+# #    2. create a cron-job.org job hitting this workflow's    #
+# #       dispatch API every 4 hours (§13), with publish=true;      #
+# #    3. confirm OPENAI_API_KEY is set for the repo.          #
+# ############################################################
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Write posts for real (leave false for a dry run)"
+        type: boolean
+        default: false
+      offline_llm:
+        description: "Use the deterministic classifiers, no API calls at all"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run the research channel
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python scripts/run.py --channel research \
+            ${{ inputs.publish && '--publish' || '--dry-run' }} \
+            ${{ inputs.offline_llm && '--offline-llm' || '' }}
+
+      # G4. The content schema is the only verification gate that runs
+      # AFTER a post is written, and it has to run before the commit: a
+      # bad post produces a red workflow and nothing on main.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Validate against the schema (gate G4)
+        run: |
+          npm ci
+          npm run build
+
+      - name: Reference integrity (gate G5 in CI)
+        run: npm run check:content
+
+      - name: Commit state, Radar and any new posts
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/ src/content/blog/ src/content/benchmarks/ src/content/radar/
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Research channel run"
+            git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trigger site deploy
+        # A GITHUB_TOKEN push does not cascade into other workflows, so
+        # deploy.yml has to be kicked off explicitly.
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --repo ${{ github.repository }}

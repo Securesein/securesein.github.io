@@ -50,11 +50,23 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/process_callbacks.py
 
+      # MIGRATED, not activated. This step used to call
+      # scripts/generate_blog_post.py, which emits the pre-three-axis
+      # frontmatter (`kind: news`, no `format`, no `scout`) and would now
+      # fail the schema validation two steps below — so leaving it alone
+      # would have broken the one pipeline that is actually live.
+      #
+      # --marked-only runs ONLY the legacy Telegram marked-item path: it
+      # publishes what the owner has replied to by hand and does not
+      # touch the feed sweep. The autonomous half of the research
+      # channel is NOT reachable from this workflow. scripts/tests/
+      # test_parity.py asserts the moved logic matches the script it
+      # replaced, decision by decision, over the real archive.
       - name: Write blog posts for marked items
         if: steps.gate.outputs.run == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: python scripts/generate_blog_post.py
+        run: python scripts/run.py --channel research --publish --marked-only
 
       # Scout publishes without review, so the content schema is the
       # only quality gate that exists — and it has to run BEFORE the
@@ -98,7 +110,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ src/content/blog/
+          git add data/ src/content/blog/ state/ src/content/radar/
           if git diff --cached --quiet; then
             echo "No state changes to commit."
             echo "pushed=false" >> "$GITHUB_OUTPUT"

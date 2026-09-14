@@ -434,27 +434,6 @@ def publish(
     llm, dry_run = ctx.llm, ctx.dry_run
     item = candidate.item
 
-    if llm.offline:
-        # There is deliberately NO deterministic stand-in for prose.
-        # Everything upstream of here — classification, both scoring
-        # stages, dedup, the budget — has one, because those are
-        # decisions and a decision can be replayed. Writing a post is
-        # not a decision, and a template that pretended to be one would
-        # make an offline dry run look like it had proved something it
-        # had not. So an offline run reports what it WOULD have drafted
-        # and stops, which is exactly what the Phase 3 calibration
-        # needs and nothing more.
-        print(f"    [offline] would draft and verify "
-              f"{item.title[:60]!r} for {candidate.section} "
-              f"(q={candidate.quality.total if candidate.quality else '-'} "
-              f"r={candidate.relevance.total if candidate.relevance else '-'})")
-        ctx.ledger.record(
-            "would-publish:" + candidate.id, channel, candidate.section,
-            quality=candidate.quality.total if candidate.quality else None,
-            relevance=candidate.relevance.total if candidate.relevance else None,
-        )
-        return "would-publish:" + candidate.id
-
     source_text = fetch_article_text(item.url, draft_module.ARTICLE_MAX_CHARS)
     if len(source_text) < 200:
         # No source text means G1 has nothing to check against, and a
@@ -479,6 +458,31 @@ def publish(
         fallback_topics=candidate.topics,
     )
     if drafted is None:
+        if llm.offline:
+            # There is deliberately NO deterministic stand-in for prose.
+            # Everything upstream — classification, both scoring stages,
+            # dedup, the budget — has one, because those are DECISIONS
+            # and a decision can be replayed. Writing a post is not, and
+            # a template pretending to be one would make an offline dry
+            # run look like it had proved something it had not.
+            #
+            # This branch reports what would have been drafted so the
+            # budget arithmetic is still answerable. It sits AFTER the
+            # draft attempt and not before it, deliberately: an earlier
+            # version short-circuited at the top of this function and
+            # thereby skipped the gates entirely, which meant an offline
+            # run could report "would publish" for a draft the gates
+            # would have rejected. There is now no path to a slug that
+            # does not pass through run_gates below.
+            print(f"    [offline] no draft (no model); would have verified "
+                  f"{item.title[:60]!r} for {candidate.section} "
+                  f"(q={candidate.quality.total if candidate.quality else '-'} "
+                  f"r={candidate.relevance.total if candidate.relevance else '-'})")
+            ctx.ledger.record(
+                "would-publish:" + candidate.id, channel, candidate.section,
+                quality=candidate.quality.total if candidate.quality else None,
+                relevance=candidate.relevance.total if candidate.relevance else None,
+            )
         return None
 
     results = run_gates(

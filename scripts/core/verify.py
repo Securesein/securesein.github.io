@@ -66,7 +66,15 @@ NUMBER = re.compile(
     r"(k|m|mn|b|bn|t|thousand|million|billion|trillion)?"
     r"\s*"
     r"(%)?"
-    r"(?![\w.])",
+    # A following "." is fine as long as it is not the start of another
+    # number component. The original lookahead was `(?![\w.])`, which
+    # meant a SENTENCE-FINAL figure was never extracted at all: "up from
+    # 61.5% for Aurora 2.0." put no 2.0 in the source set, so a draft
+    # that said "Aurora 2.0," with a comma was rejected by G1 for
+    # stating a number the source plainly contained. Found by
+    # scripts/tests/test_publication_paths.py, which reproduced it on a
+    # draft that differed from an honest one by nothing at all.
+    r"(?!\w|\.\d)",
     re.I,
 )
 
