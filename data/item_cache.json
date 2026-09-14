@@ -4763,5 +4763,110 @@
     "source": "llama.cpp Releases",
     "message_id": 755,
     "cached_at": 1789394610.7370403
+  },
+  "7f82d995c515e5ba": {
+    "title": "How Fyxer built an AI executive assistant people trust",
+    "link": "https://openai.com/index/fyxer",
+    "source": "OpenAI News",
+    "message_id": 758,
+    "cached_at": 1789408940.9137943
+  },
+  "72f4aaebdca9e500": {
+    "title": "Quoting Laurie Voss",
+    "link": "https://simonwillison.net/2026/Sep/14/laurie-voss/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 759,
+    "cached_at": 1789408944.0091681
+  },
+  "3d5f8505016ddf51": {
+    "title": "Perplexity Portable Computer Is Now Available on Windows, Powered by NVIDIA RTX",
+    "link": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/",
+    "source": "NVIDIA Blog",
+    "message_id": 760,
+    "cached_at": 1789408946.7220008
+  },
+  "50ab092ed0069335": {
+    "title": "With iOS 27, I’m actually using Siri again",
+    "link": "https://techcrunch.com/2026/09/14/with-ios-27-im-actually-using-siri-again/",
+    "source": "TechCrunch AI",
+    "message_id": 761,
+    "cached_at": 1789408950.2591524
+  },
+  "08a51918179a91fa": {
+    "title": "New York Seizes a Dozen Celebrity Deepfake Websites",
+    "link": "https://www.wired.com/story/new-york-seizes-a-dozen-celebrity-deepfake-websites/",
+    "source": "Wired AI",
+    "message_id": 762,
+    "cached_at": 1789408954.458926
+  },
+  "1b5c5f1332bef636": {
+    "title": "AI agents blew the whistle on their cheating colleagues",
+    "link": "https://www.technologyreview.com/2026/09/14/1144037/ai-agents-blew-whistle-o-cheating-colleagues/",
+    "source": "MIT Technology Review AI",
+    "message_id": 763,
+    "cached_at": 1789408957.5689654
+  },
+  "27d1b5bc195b1d32": {
+    "title": "Why DeepSeek-V4.1-Flash Is Such an Exciting Open Model Release",
+    "link": "https://www.kdnuggets.com/why-deepseek-v4-1-flash-is-such-an-exciting-open-model-release",
+    "source": "KDnuggets",
+    "message_id": 764,
+    "cached_at": 1789408960.1003854
+  },
+  "644c1807a0e5e44c": {
+    "title": "Microsoft says ‘people matter more than AI’ following safety concerns",
+    "link": "https://www.theverge.com/news/994566/microsoft-humanist-ai-code-of-conduct",
+    "source": "The Verge AI",
+    "message_id": 765,
+    "cached_at": 1789408962.7240148
+  },
+  "fe371bef367f6786": {
+    "title": "Language Is an Insufficient Substrate for Quantitative Reasoning, and Consequential Domains Need Large Quantitative Models",
+    "link": "https://arxiv.org/abs/2609.12105",
+    "source": "arXiv cs.AI",
+    "message_id": 766,
+    "cached_at": 1789408965.4091556
+  },
+  "05eb8cc8df096333": {
+    "title": "Quantifying Consonant Contributions to Word Intelligibility via Acoustic Masking",
+    "link": "https://arxiv.org/abs/2609.12122",
+    "source": "arXiv cs.CL",
+    "message_id": 767,
+    "cached_at": 1789408969.0336282
+  },
+  "705bc13b7cce85ef": {
+    "title": "Performance, Efficiency and Collapse -- Advantages and Challenges in Offline Post-training of Code LLMs",
+    "link": "https://arxiv.org/abs/2609.11956",
+    "source": "arXiv cs.LG",
+    "message_id": 768,
+    "cached_at": 1789408971.517032
+  },
+  "9891061417f85621": {
+    "title": "Single-Query Person-Centric Bimanual Hand-Object Interaction Detection",
+    "link": "https://arxiv.org/abs/2609.12155",
+    "source": "arXiv cs.CV",
+    "message_id": 769,
+    "cached_at": 1789408974.32076
+  },
+  "ac6fab4ebd9f6bc8": {
+    "title": "DevFest is back",
+    "link": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+    "source": "Google AI Blog",
+    "message_id": 770,
+    "cached_at": 1789408979.8098907
+  },
+  "05038216e0be356f": {
+    "title": "How Ninth Wave built AI-powered open finance onboarding on Amazon Bedrock",
+    "link": "https://aws.amazon.com/blogs/machine-learning/how-ninth-wave-built-ai-powered-open-finance-onboarding-on-amazon-bedrock/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 771,
+    "cached_at": 1789408982.3130927
+  },
+  "7a123450627a2d3d": {
+    "title": "Accelerating Dropless MoE Training in JAX with NVIDIA Transformer Engine",
+    "link": "https://developer.nvidia.com/blog/accelerating-dropless-moe-training-in-jax-with-nvidia-transformer-engine/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 772,
+    "cached_at": 1789408985.1373732
   }
 }
