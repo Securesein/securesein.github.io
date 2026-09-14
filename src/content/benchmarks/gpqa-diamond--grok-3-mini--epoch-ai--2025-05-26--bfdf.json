@@ -1,0 +1,22 @@
+{
+  "model": "grok-3-mini",
+  "vendor": "xai",
+  "benchmark": "gpqa-diamond",
+  "metric": "accuracy",
+  "value": 75.51,
+  "unit": "percent",
+  "measuredBy": "thirdparty",
+  "evaluator": "Epoch AI",
+  "harness": "inspect",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "high",
+    "shots": 0,
+    "notes": "stderr 0.0277; Epoch AI house conditions: zero-shot chain-of-thought, empty system prompt, API-default temperature, chat/instruct variant"
+  },
+  "measuredAt": "2025-05-26",
+  "sourceUrl": "https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FJFZMWFVGNi5R5TdZrvQUFw.eval",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

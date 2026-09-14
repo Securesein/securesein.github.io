@@ -1,0 +1,19 @@
+{
+  "model": "glm-4-5-air",
+  "vendor": "zhipu",
+  "benchmark": "hle",
+  "metric": "accuracy",
+  "value": 8.12,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Humanity's Last Exam leaderboard",
+  "conditions": {
+    "tools": false,
+    "notes": "stderr 0.0107"
+  },
+  "measuredAt": "2025-07-20",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

@@ -1,0 +1,22 @@
+{
+  "model": "claude-opus-4-8",
+  "vendor": "anthropic",
+  "benchmark": "frontiermath",
+  "metric": "accuracy",
+  "value": 47.24,
+  "unit": "percent",
+  "measuredBy": "thirdparty",
+  "evaluator": "Epoch AI",
+  "harness": "inspect",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "max",
+    "shots": 0,
+    "notes": "FrontierMath 2025-02-28 (private); stderr 0.0294; Epoch AI house conditions: zero-shot chain-of-thought, empty system prompt, API-default temperature, chat/instruct variant"
+  },
+  "measuredAt": "2026-06-08",
+  "sourceUrl": "https://epoch-benchmarks-staging-private.s3.us-east-2.amazonaws.com/inspect_ai_logs/6dUEQ3YfeMZzSm9ytgiuDi.eval",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

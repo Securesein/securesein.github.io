@@ -1,0 +1,20 @@
+{
+  "model": "claude-opus-4-5",
+  "vendor": "anthropic",
+  "benchmark": "terminal-bench",
+  "metric": "accuracy",
+  "value": 51.9,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Terminal-Bench leaderboard",
+  "conditions": {
+    "tools": true,
+    "reasoningEffort": "unknown",
+    "notes": "agent: OpenHands; stderr 0.029"
+  },
+  "measuredAt": "2026-01-04",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

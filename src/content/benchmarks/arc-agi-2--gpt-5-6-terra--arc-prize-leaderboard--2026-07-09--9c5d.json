@@ -1,0 +1,20 @@
+{
+  "model": "gpt-5-6-terra",
+  "vendor": "openai",
+  "benchmark": "arc-agi-2",
+  "metric": "accuracy",
+  "value": 37.5,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "ARC Prize leaderboard",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "medium",
+    "notes": "Redistributed by Epoch AI from ARC Prize leaderboard; run conditions not published per-row"
+  },
+  "measuredAt": "2026-07-09",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

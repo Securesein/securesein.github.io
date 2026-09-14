@@ -1,0 +1,19 @@
+{
+  "model": "gpt-5-codex",
+  "vendor": "openai",
+  "benchmark": "terminal-bench",
+  "metric": "accuracy",
+  "value": 41.3,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Terminal-Bench leaderboard",
+  "conditions": {
+    "tools": true,
+    "notes": "agent: Mini-SWE-Agent; stderr 0.028"
+  },
+  "measuredAt": "2025-11-03",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

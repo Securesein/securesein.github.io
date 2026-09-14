@@ -1,0 +1,21 @@
+{
+  "model": "claude-opus-5",
+  "vendor": "anthropic",
+  "benchmark": "gpqa-diamond",
+  "metric": "accuracy",
+  "value": 92.93,
+  "unit": "percent",
+  "measuredBy": "thirdparty",
+  "evaluator": "Epoch AI",
+  "harness": "inspect",
+  "conditions": {
+    "tools": false,
+    "shots": 0,
+    "notes": "stderr 0.0183; Epoch AI house conditions: zero-shot chain-of-thought, empty system prompt, API-default temperature, chat/instruct variant"
+  },
+  "measuredAt": "2026-08-06",
+  "sourceUrl": "https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FmLmUnBuX6DYKtb6x46GteM.eval",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

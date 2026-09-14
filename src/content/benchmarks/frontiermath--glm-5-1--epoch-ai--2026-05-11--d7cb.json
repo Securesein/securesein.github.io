@@ -1,0 +1,21 @@
+{
+  "model": "glm-5-1",
+  "vendor": "zhipu",
+  "benchmark": "frontiermath",
+  "metric": "accuracy",
+  "value": 33.45,
+  "unit": "percent",
+  "measuredBy": "thirdparty",
+  "evaluator": "Epoch AI",
+  "harness": "inspect",
+  "conditions": {
+    "tools": false,
+    "shots": 0,
+    "notes": "FrontierMath 2025-02-28 (private); stderr 0.0278; Epoch AI house conditions: zero-shot chain-of-thought, empty system prompt, API-default temperature, chat/instruct variant"
+  },
+  "measuredAt": "2026-05-11",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

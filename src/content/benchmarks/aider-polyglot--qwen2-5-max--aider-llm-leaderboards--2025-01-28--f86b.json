@@ -1,0 +1,19 @@
+{
+  "model": "qwen2-5-max",
+  "vendor": "alibaba",
+  "benchmark": "aider-polyglot",
+  "metric": "pass@1",
+  "value": 21.8,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Aider LLM Leaderboards",
+  "conditions": {
+    "tools": true,
+    "notes": "edit format: diff"
+  },
+  "measuredAt": "2025-01-28",
+  "sourceUrl": "https://aider.chat/docs/leaderboards/#polyglot-leaderboard",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

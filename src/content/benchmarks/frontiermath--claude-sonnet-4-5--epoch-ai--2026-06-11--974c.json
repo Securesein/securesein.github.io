@@ -1,0 +1,21 @@
+{
+  "model": "claude-sonnet-4-5",
+  "vendor": "anthropic",
+  "benchmark": "frontiermath",
+  "metric": "accuracy",
+  "value": 23.86,
+  "unit": "percent",
+  "measuredBy": "thirdparty",
+  "evaluator": "Epoch AI",
+  "harness": "inspect",
+  "conditions": {
+    "tools": false,
+    "shots": 0,
+    "notes": "FrontierMath Tiers 1-3 v2 (private); stderr 0.0253; Epoch AI house conditions: zero-shot chain-of-thought, empty system prompt, API-default temperature, chat/instruct variant"
+  },
+  "measuredAt": "2026-06-11",
+  "sourceUrl": "https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2F7oUkeLfwMK3MtkSNHX6QPu.eval",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

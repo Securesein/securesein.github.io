@@ -1,0 +1,19 @@
+{
+  "model": "gemini-2-5-flash-sep-2025",
+  "vendor": "google",
+  "benchmark": "terminal-bench",
+  "metric": "accuracy",
+  "value": 16.9,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Terminal-Bench v2 Leaderboard",
+  "conditions": {
+    "tools": true,
+    "notes": "agent: Terminus 2; stderr 0.024"
+  },
+  "measuredAt": "2025-10-31",
+  "sourceUrl": "https://www.tbench.ai/leaderboard/terminal-bench/2.0",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

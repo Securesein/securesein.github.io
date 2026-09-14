@@ -1,0 +1,19 @@
+{
+  "model": "qwen3-coder-480b-a35b",
+  "vendor": "alibaba",
+  "benchmark": "terminal-bench",
+  "metric": "accuracy",
+  "value": 23.9,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Terminal-Bench v2 Leaderboard",
+  "conditions": {
+    "tools": true,
+    "notes": "agent: Terminus 2; stderr 0.028"
+  },
+  "measuredAt": "2025-11-01",
+  "sourceUrl": "https://www.tbench.ai/leaderboard/terminal-bench/2.0",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

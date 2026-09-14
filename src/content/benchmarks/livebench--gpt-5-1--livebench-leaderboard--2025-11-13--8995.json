@@ -1,0 +1,20 @@
+{
+  "model": "gpt-5-1",
+  "vendor": "openai",
+  "benchmark": "livebench",
+  "metric": "score",
+  "value": 78.79,
+  "unit": "score",
+  "measuredBy": "community",
+  "evaluator": "LiveBench Leaderboard",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "high",
+    "notes": "Redistributed by Epoch AI from LiveBench Leaderboard; run conditions not published per-row"
+  },
+  "measuredAt": "2025-11-13",
+  "sourceUrl": "https://livebench.ai/#/",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

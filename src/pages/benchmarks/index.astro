@@ -1,13 +1,262 @@
 ---
-// Benchmarks — "How good is it actually?"
+// The Benchmarks page: the tracker table first, roundup posts under it.
 //
-// Two things on one page, and the order is deliberate: the tracked
-// measurements first (the data is the section; the posts are a reading
-// of it), then any benchmark posts underneath.
+// The order is deliberate. The measurements are the channel — most days
+// produce data and no post — and a roundup is a reading of them, so the
+// data leads and the prose follows.
 //
-// PHASE 1: the listing only. The tracker table, its `measuredBy` badges
-// and the CC-BY attribution land in Phase 4, into the default slot
-// below — the collection is defined but empty until then.
-import SectionIndex from "../../components/SectionIndex.astro";
+// Vendor-reported and independently-measured numbers sit in the *same*
+// table, distinguished by a badge rather than separated into two.
+// Hiding vendor claims would throw away the only thing this page has
+// that a leaderboard does not: the contrast between them.
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import NewsRow from "../../components/NewsRow.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+import { postsOfKind } from "../../posts";
+import { SECTION_INFO } from "../../taxonomy";
+import {
+  attributions,
+  benchmarkGroups,
+  conditionsFull,
+  conditionsSummary,
+  formatValue,
+  label,
+  MEASURED_BY,
+} from "../../benchmarks";
+
+const [groups, posts, credits] = await Promise.all([
+  benchmarkGroups(),
+  postsOfKind("benchmark"),
+  attributions(),
+]);
+
+const total = groups.reduce((n, g) => n + g.total, 0);
 ---
-<SectionIndex section="benchmark" />
+<BaseLayout
+  title={SECTION_INFO.benchmark.label}
+  description={SECTION_INFO.benchmark.description}
+>
+  <link
+    slot="head"
+    rel="alternate"
+    type="application/rss+xml"
+    title={`securesein — ${SECTION_INFO.benchmark.label}`}
+    href="/benchmarks/rss.xml"
+  />
+
+  <div class="container container--wide">
+    <PageHeader
+      title={SECTION_INFO.benchmark.label}
+      standfirst={`${SECTION_INFO.benchmark.question} A dozen benchmarks, tracked as data rather than written up as scorecards. Every row says who measured it and under what conditions, because a score without a harness and a shot count is a number, not a finding.`}
+      note="Vendor-reported numbers are kept in the table alongside independent ones and labelled as vendor claims. The contrast is the point; hiding the claims would remove it."
+    />
+
+    {groups.length === 0 ? (
+      <p class="empty">
+        No measurements ingested yet. The tracker fills itself from published
+        evaluation datasets; until it runs, this page has nothing honest to
+        show.
+      </p>
+    ) : (
+      <>
+        <p class="tracker-count">{total} current measurements across {groups.length} benchmarks.</p>
+
+        {groups.map((group) => (
+          <section class="tracker">
+            <h2 class="tracker-heading">
+              <a href={group.homepage} rel="nofollow noopener">{group.name}</a>
+              <span class="tracker-total">{group.total}</span>
+            </h2>
+            <p class="tracker-desc">{group.description}</p>
+
+            <div class="tracker-scroll">
+              <table class="tracker-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Model</th>
+                    <th scope="col" class="num">Score</th>
+                    <th scope="col">Measured by</th>
+                    <th scope="col">Evaluator</th>
+                    <th scope="col">Conditions</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Source</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {group.rows.map((m) => (
+                    <tr>
+                      <th scope="row">{label(m)}</th>
+                      <td class="num">{formatValue(m)}</td>
+                      <td>
+                        <span
+                          class:list={[
+                            "pill",
+                            "measured-by",
+                            { "measured-by--vendor": m.data.measuredBy === "vendor" },
+                          ]}
+                          title={MEASURED_BY[m.data.measuredBy].title}
+                        >
+                          {MEASURED_BY[m.data.measuredBy].label}
+                        </span>
+                      </td>
+                      <td>{m.data.evaluator}</td>
+                      <td class="conditions" title={conditionsFull(m)}>{conditionsSummary(m)}</td>
+                      <td class="when"><FormattedDate date={m.data.measuredAt} short /></td>
+                      <td>
+                        <a href={m.data.sourceUrl} rel="nofollow noopener">Link</a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {group.total > group.rows.length && (
+              <p class="tracker-more">
+                Showing the top {group.rows.length} of {group.total} tracked
+                measurements on this benchmark.
+              </p>
+            )}
+          </section>
+        ))}
+
+        {credits.length > 0 && (
+          <aside class="tracker-credit">
+            <h2>Where these numbers come from</h2>
+            <ul>{credits.map((line) => <li>{line}</li>)}</ul>
+          </aside>
+        )}
+      </>
+    )}
+
+    <section class="roundups">
+      <h2 class="lane-heading">Roundups</h2>
+      {posts.length === 0 ? (
+        <p class="empty">
+          No roundups yet. They are written only when the data does something
+          worth writing about — a new leader, a retraction, or a vendor's own
+          number failing to reproduce.
+        </p>
+      ) : (
+        <div class="roundup-rows">
+          {posts.map((post) => <NewsRow post={post} />)}
+        </div>
+      )}
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .tracker-count {
+    color: var(--text-muted);
+    font-size: 0.86rem;
+    margin-bottom: 1.6rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tracker { margin-bottom: 2.8rem; }
+  .tracker-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
+  }
+  .tracker-heading a { color: inherit; }
+  .tracker-total { font-variant-numeric: tabular-nums; opacity: 0.7; }
+  .tracker-desc {
+    margin-top: 0.6rem;
+    max-width: 68ch;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+  }
+
+  /* A seven-column table is wide by construction: scroll the table, not
+     the page — the same rule the long-form prose tables follow. */
+  .tracker-scroll { overflow-x: auto; margin-top: 0.9rem; }
+  .tracker-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+  .tracker-table th,
+  .tracker-table td {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  .tracker-table thead th {
+    background: var(--surface);
+    color: var(--text);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .tracker-table tbody th {
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .tracker-table tbody tr:nth-child(even) td,
+  .tracker-table tbody tr:nth-child(even) th { background: var(--surface); }
+  .tracker-table .num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .tracker-table .when { white-space: nowrap; color: var(--text-muted); }
+  .tracker-table .conditions {
+    color: var(--text-muted);
+    min-width: 18ch;
+    max-width: 44ch;
+  }
+
+  /* Vendor claims are marked with the site's one functional accent
+     rather than a new colour: same pill, ringed in --signal. Third-party
+     and community rows keep the plain pill, so the eye picks out the
+     claims without the table turning into a traffic light. */
+  .measured-by { white-space: nowrap; }
+  .measured-by--vendor {
+    border-color: var(--signal);
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .tracker-more {
+    margin-top: 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+  }
+
+  .tracker-credit {
+    margin: 2.4rem 0 3.2rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--rule);
+    border-left: 2px solid var(--signal);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--text-muted);
+    font-size: 0.84rem;
+  }
+  .tracker-credit h2 { font-size: 0.82rem; letter-spacing: 0.02em; }
+  .tracker-credit ul { margin-top: 0.5rem; padding-left: 1.1rem; }
+
+  .roundups { padding-top: 1.2rem; }
+  .lane-heading {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+  }
+  .roundup-rows :global(.news-row:first-of-type) { border-top: none; }
+  .empty { color: var(--text-muted); padding-block: 2rem; max-width: 56ch; }
+</style>

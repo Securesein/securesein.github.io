@@ -1,0 +1,20 @@
+{
+  "model": "o3",
+  "vendor": "openai",
+  "benchmark": "aider-polyglot",
+  "metric": "pass@1",
+  "value": 81.3,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Aider LLM Leaderboards",
+  "conditions": {
+    "tools": true,
+    "reasoningEffort": "high",
+    "notes": "edit format: diff"
+  },
+  "measuredAt": "2025-06-25",
+  "sourceUrl": "https://aider.chat/docs/leaderboards/#polyglot-leaderboard",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

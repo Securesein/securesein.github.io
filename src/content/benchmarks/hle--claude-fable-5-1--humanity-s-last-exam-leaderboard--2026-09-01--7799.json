@@ -1,0 +1,20 @@
+{
+  "model": "claude-fable-5-1",
+  "vendor": "anthropic",
+  "benchmark": "hle",
+  "metric": "accuracy",
+  "value": 46.5,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Humanity's Last Exam leaderboard",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "xhigh",
+    "notes": "stderr 0.02"
+  },
+  "measuredAt": "2026-09-01",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

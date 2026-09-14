@@ -1,0 +1,21 @@
+{
+  "model": "gemini-2-5-pro-jun-2025",
+  "vendor": "google",
+  "benchmark": "frontiermath",
+  "metric": "accuracy",
+  "value": 10.34,
+  "unit": "percent",
+  "measuredBy": "thirdparty",
+  "evaluator": "Epoch AI",
+  "harness": "inspect",
+  "conditions": {
+    "tools": false,
+    "shots": 0,
+    "notes": "FrontierMath 2025-02-28 (private); stderr 0.0179; Epoch AI house conditions: zero-shot chain-of-thought, empty system prompt, API-default temperature, chat/instruct variant"
+  },
+  "measuredAt": "2025-07-03",
+  "sourceUrl": "https://epoch-benchmarks-production-private.s3.us-east-2.amazonaws.com/inspect_ai_logs/hNLQNC6TASXNNzat8kVS77.eval",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

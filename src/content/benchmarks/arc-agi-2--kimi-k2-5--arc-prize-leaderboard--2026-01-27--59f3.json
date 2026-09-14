@@ -1,0 +1,19 @@
+{
+  "model": "kimi-k2-5",
+  "vendor": "moonshot",
+  "benchmark": "arc-agi-2",
+  "metric": "accuracy",
+  "value": 11.81,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "ARC Prize leaderboard",
+  "conditions": {
+    "tools": false,
+    "notes": "Redistributed by Epoch AI from ARC Prize leaderboard; run conditions not published per-row"
+  },
+  "measuredAt": "2026-01-27",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

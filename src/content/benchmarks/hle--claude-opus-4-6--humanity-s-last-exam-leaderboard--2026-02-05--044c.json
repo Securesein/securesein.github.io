@@ -1,0 +1,20 @@
+{
+  "model": "claude-opus-4-6",
+  "vendor": "anthropic",
+  "benchmark": "hle",
+  "metric": "accuracy",
+  "value": 34.44,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Humanity's Last Exam leaderboard",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "max",
+    "notes": "stderr 0.0186"
+  },
+  "measuredAt": "2026-02-05",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

@@ -1,0 +1,19 @@
+{
+  "model": "deepseek-v3-mar-2025",
+  "vendor": "deepseek",
+  "benchmark": "livebench",
+  "metric": "score",
+  "value": 66.86,
+  "unit": "score",
+  "measuredBy": "community",
+  "evaluator": "LiveBench Leaderboard",
+  "conditions": {
+    "tools": false,
+    "notes": "question set: LiveBench-2024-11-25"
+  },
+  "measuredAt": "2025-03-24",
+  "sourceUrl": "https://livebench.ai/#/",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

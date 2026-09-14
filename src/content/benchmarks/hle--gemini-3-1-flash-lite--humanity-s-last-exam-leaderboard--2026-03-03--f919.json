@@ -1,0 +1,19 @@
+{
+  "model": "gemini-3-1-flash-lite",
+  "vendor": "google",
+  "benchmark": "hle",
+  "metric": "accuracy",
+  "value": 8.64,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Humanity's Last Exam leaderboard",
+  "conditions": {
+    "tools": false,
+    "notes": "stderr 0.011"
+  },
+  "measuredAt": "2026-03-03",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

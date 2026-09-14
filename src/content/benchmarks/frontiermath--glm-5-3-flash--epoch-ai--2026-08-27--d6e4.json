@@ -1,0 +1,22 @@
+{
+  "model": "glm-5-3-flash",
+  "vendor": "zhipu",
+  "benchmark": "frontiermath",
+  "metric": "accuracy",
+  "value": 55.79,
+  "unit": "percent",
+  "measuredBy": "thirdparty",
+  "evaluator": "Epoch AI",
+  "harness": "inspect",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "max",
+    "shots": 0,
+    "notes": "FrontierMath Tiers 1-3 v2 (private); stderr 0.0295; Epoch AI house conditions: zero-shot chain-of-thought, empty system prompt, API-default temperature, chat/instruct variant"
+  },
+  "measuredAt": "2026-08-27",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

@@ -1,0 +1,20 @@
+{
+  "model": "gpt-5-mini",
+  "vendor": "openai",
+  "benchmark": "terminal-bench",
+  "metric": "accuracy",
+  "value": 22.2,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Terminal-Bench v2 Leaderboard",
+  "conditions": {
+    "tools": true,
+    "reasoningEffort": "medium",
+    "notes": "agent: Mini-SWE-Agent; stderr 0.026"
+  },
+  "measuredAt": "2025-11-03",
+  "sourceUrl": "https://www.tbench.ai/leaderboard/terminal-bench/2.0",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

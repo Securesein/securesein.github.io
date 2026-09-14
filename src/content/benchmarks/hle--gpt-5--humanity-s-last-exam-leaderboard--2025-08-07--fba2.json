@@ -1,0 +1,20 @@
+{
+  "model": "gpt-5",
+  "vendor": "openai",
+  "benchmark": "hle",
+  "metric": "accuracy",
+  "value": 25.32,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Humanity's Last Exam leaderboard",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "high",
+    "notes": "stderr 0.017"
+  },
+  "measuredAt": "2025-08-07",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

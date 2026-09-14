@@ -1,0 +1,22 @@
+{
+  "model": "gpt-5-1",
+  "vendor": "openai",
+  "benchmark": "frontiermath",
+  "metric": "accuracy",
+  "value": 31.03,
+  "unit": "percent",
+  "measuredBy": "thirdparty",
+  "evaluator": "Epoch AI",
+  "harness": "inspect",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "high",
+    "shots": 0,
+    "notes": "FrontierMath 2025-02-28 (private); stderr 0.0272; Epoch AI house conditions: zero-shot chain-of-thought, empty system prompt, API-default temperature, chat/instruct variant"
+  },
+  "measuredAt": "2025-11-13",
+  "sourceUrl": "https://epoch-benchmarks-production-private.s3.us-east-2.amazonaws.com/inspect_ai_logs/nveMCdbvDijDTBN9JPWNve.eval",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

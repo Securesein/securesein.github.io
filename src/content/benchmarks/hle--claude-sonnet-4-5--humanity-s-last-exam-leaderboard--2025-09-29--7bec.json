@@ -1,0 +1,20 @@
+{
+  "model": "claude-sonnet-4-5",
+  "vendor": "anthropic",
+  "benchmark": "hle",
+  "metric": "accuracy",
+  "value": 13.72,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Humanity's Last Exam leaderboard",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "unknown",
+    "notes": "stderr 0.0135"
+  },
+  "measuredAt": "2025-09-29",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

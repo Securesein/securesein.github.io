@@ -1,0 +1,22 @@
+{
+  "model": "o3-mini",
+  "vendor": "openai",
+  "benchmark": "frontiermath",
+  "metric": "accuracy",
+  "value": 8.08,
+  "unit": "percent",
+  "measuredBy": "thirdparty",
+  "evaluator": "Epoch AI",
+  "harness": "inspect",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "medium",
+    "shots": 0,
+    "notes": "FrontierMath 2025-02-28 (private); stderr 0.0128; Epoch AI house conditions: zero-shot chain-of-thought, empty system prompt, API-default temperature, chat/instruct variant"
+  },
+  "measuredAt": "2025-03-06",
+  "sourceUrl": "https://epoch-benchmarks-production-private.s3.us-east-2.amazonaws.com/inspect_ai_logs/U8CjtcxudQeP2cnMNixfJH.eval",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

@@ -1,0 +1,19 @@
+{
+  "model": "mistral-medium-3",
+  "vendor": "mistral",
+  "benchmark": "hle",
+  "metric": "accuracy",
+  "value": 4.52,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Humanity's Last Exam leaderboard",
+  "conditions": {
+    "tools": false,
+    "notes": "stderr 0.0081"
+  },
+  "measuredAt": "2025-05-07",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

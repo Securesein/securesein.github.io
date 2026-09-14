@@ -1,0 +1,19 @@
+{
+  "model": "gemini-2-0-pro",
+  "vendor": "google",
+  "benchmark": "aider-polyglot",
+  "metric": "pass@1",
+  "value": 35.6,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Aider LLM Leaderboards",
+  "conditions": {
+    "tools": true,
+    "notes": "edit format: whole"
+  },
+  "measuredAt": "2025-02-25",
+  "sourceUrl": "https://aider.chat/docs/leaderboards/#polyglot-leaderboard",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

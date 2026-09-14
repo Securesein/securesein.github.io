@@ -1,0 +1,20 @@
+{
+  "model": "o3-mini",
+  "vendor": "openai",
+  "benchmark": "livebench",
+  "metric": "score",
+  "value": 75.88,
+  "unit": "score",
+  "measuredBy": "community",
+  "evaluator": "LiveBench Leaderboard",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "high",
+    "notes": "question set: LiveBench-2024-11-25"
+  },
+  "measuredAt": "2025-01-31",
+  "sourceUrl": "https://livebench.ai/#/",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

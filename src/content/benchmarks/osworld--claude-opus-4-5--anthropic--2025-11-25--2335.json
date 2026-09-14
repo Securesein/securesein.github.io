@@ -1,0 +1,19 @@
+{
+  "model": "claude-opus-4-5",
+  "vendor": "anthropic",
+  "benchmark": "osworld",
+  "metric": "accuracy",
+  "value": 66.3,
+  "unit": "percent",
+  "measuredBy": "vendor",
+  "evaluator": "Anthropic",
+  "conditions": {
+    "tools": true,
+    "notes": "agent: Claude Opus 4.5"
+  },
+  "measuredAt": "2025-11-25",
+  "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-5",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

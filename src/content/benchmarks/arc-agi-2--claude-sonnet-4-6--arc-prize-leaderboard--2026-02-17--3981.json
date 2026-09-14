@@ -1,0 +1,20 @@
+{
+  "model": "claude-sonnet-4-6",
+  "vendor": "anthropic",
+  "benchmark": "arc-agi-2",
+  "metric": "accuracy",
+  "value": 60.42,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "ARC Prize leaderboard",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "high",
+    "notes": "Redistributed by Epoch AI from ARC Prize leaderboard; run conditions not published per-row"
+  },
+  "measuredAt": "2026-02-17",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

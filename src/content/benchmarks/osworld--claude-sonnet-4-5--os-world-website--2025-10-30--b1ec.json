@@ -1,0 +1,19 @@
+{
+  "model": "claude-sonnet-4-5",
+  "vendor": "anthropic",
+  "benchmark": "osworld",
+  "metric": "accuracy",
+  "value": 42.9,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "OS World Website",
+  "conditions": {
+    "tools": true,
+    "notes": "agent: claude-sonnet-4-5-20250929 (15 steps)"
+  },
+  "measuredAt": "2025-10-30",
+  "sourceUrl": "https://os-world.github.io/",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

@@ -1,0 +1,19 @@
+{
+  "model": "deepseek-v3-mar-2025",
+  "vendor": "deepseek",
+  "benchmark": "aider-polyglot",
+  "metric": "pass@1",
+  "value": 55.1,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Aider LLM Leaderboards",
+  "conditions": {
+    "tools": true,
+    "notes": "edit format: diff"
+  },
+  "measuredAt": "2025-03-24",
+  "sourceUrl": "https://aider.chat/docs/leaderboards/#polyglot-leaderboard",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

@@ -1,0 +1,19 @@
+{
+  "model": "minimax-m2-7",
+  "vendor": "minimax",
+  "benchmark": "terminal-bench",
+  "metric": "accuracy",
+  "value": 42.9,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Terminal-Bench leaderboard",
+  "conditions": {
+    "tools": true,
+    "notes": "agent: Harness Agent; stderr 0.029"
+  },
+  "measuredAt": "2026-05-14",
+  "sourceUrl": "https://www.tbench.ai/leaderboard/terminal-bench/2.0",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

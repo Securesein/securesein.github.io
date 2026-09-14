@@ -1,0 +1,20 @@
+{
+  "model": "o4-mini",
+  "vendor": "openai",
+  "benchmark": "hle",
+  "metric": "accuracy",
+  "value": 18.08,
+  "unit": "percent",
+  "measuredBy": "community",
+  "evaluator": "Humanity's Last Exam leaderboard",
+  "conditions": {
+    "tools": false,
+    "reasoningEffort": "high",
+    "notes": "stderr 0.0151"
+  },
+  "measuredAt": "2025-04-16",
+  "sourceUrl": "https://epoch.ai/benchmarks",
+  "publisher": "Epoch AI",
+  "license": "CC-BY-4.0 (Epoch AI) — attribution required wherever the numbers are shown",
+  "attribution": "Epoch AI, 'Capabilities & Benchmarking', https://epoch.ai/benchmarks"
+}

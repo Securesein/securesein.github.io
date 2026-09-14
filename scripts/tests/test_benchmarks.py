@@ -241,8 +241,13 @@ def test_a_broken_adapter_does_not_take_the_run_down():
         "fine": lambda registry, ctx: ([_record()], []),
     }
     try:
+        from core.ledger import Queue
+        from core.radar import Radar
+
+        ledger = _FakeLedger([], dry_run=True)
         ctx = Context(channel="benchmarks", dry_run=True, llm=LLM(OFFLINE),
-                      ledger=_FakeLedger([], dry_run=True))
+                      ledger=ledger, queue=Queue(ledger),
+                      radar=Radar(dry_run=True))
         measurements, unresolved, failed = channel.collect(ctx)
     finally:
         channel.ADAPTERS = original
