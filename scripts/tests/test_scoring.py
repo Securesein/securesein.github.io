@@ -49,7 +49,10 @@ def test_profile_parses_and_survives_the_a2_reconciliation():
     """interest_profile.yaml had a YAML syntax error that made the whole
     file unparseable (an unquoted line starting with a quoted run). If
     that regresses, every exclusion silently stops firing."""
-    assert PROF.quality_minimum == 55
+    # 65 after the Phase 3 calibration — raised from the brief's
+    # starting default of 55 against the dry-run distribution. See the
+    # note in interest_profile.yaml for the data.
+    assert PROF.quality_minimum == 65
     assert set(PROF.quality_weights) == {
         "technical_substance", "source_quality", "novelty", "verifiability",
     }

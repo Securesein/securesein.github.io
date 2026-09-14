@@ -244,7 +244,40 @@ exclude:
 
 quality_gate:
   # Pass/fail. Below this, the item never reaches ranking regardless of topic.
-  minimum: 55
+  #
+  # RAISED FROM 55 TO 65 — Phase 3 calibration, 2026-09-14. This is the
+  # one threshold the brief expected to be corrected from dry-run data
+  # (§15 Phase 3: "expect to raise at least one threshold... this is the
+  # only calibration opportunity"), and the data is below so the change
+  # can be argued with rather than taken on trust.
+  #
+  # A full sweep of all three feed files (1,470 items visible at once,
+  # 1,110 of them reaching the gate after dedup, exclusions and the
+  # no-valid-topic drop) scored as follows:
+  #
+  #   threshold  survivors  share
+  #     55          341      31%     <- the starting default
+  #     65          286      26%     <- applied
+  #     75          172      15%
+  #     85           71       6%
+  #
+  # Gate FAILURES ran min 27.0, median 42.5, p90 54.5 — a clean, well-
+  # separated band. SURVIVORS ran min 55.1, p10 60.5, p25 68.5, median
+  # 76.5. The 55-65 band is therefore the tail of the survivor
+  # distribution, not its body: 55 items whose score comes almost
+  # entirely from source tier and recency rather than from substance,
+  # and not one of which reached the top of any channel's ranking.
+  #
+  # 65 is chosen over 75 deliberately. The gate feeds the RADAR as well
+  # as the post queue, and §6 wants the Radar broad (30-50 items/day) —
+  # it is retention and future deep dives, not a publication queue.
+  # Volume is already controlled by the budget, which takes the top 2
+  # per run whatever the gate lets through. Raising the gate to 75 would
+  # halve the Radar to buy nothing, because the items it would remove
+  # were never going to be published anyway.
+  #
+  # TO REVERT: set this back to 55. Nothing else changes.
+  minimum: 65
   components:
     technical_substance: 40   # does it contain a mechanism, a result, a number?
     source_quality: 25        # primary > lab blog > quality press > aggregator

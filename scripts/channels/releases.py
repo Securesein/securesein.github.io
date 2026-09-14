@@ -490,7 +490,6 @@ def run(ctx) -> int:
             url=candidate.item.url, title=candidate.item.title,
             source=candidate.item.source.name, section=SECTION, topics=topics,
             quality=quality.total, relevance=relevance.total, why=why,
-            seen_at=candidate.item.published or None,
         )
 
         row = candidate.as_row()

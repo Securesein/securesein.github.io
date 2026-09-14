@@ -60,6 +60,18 @@ REJECTED_FILE = STATE_DIR / "rejected.jsonl"
 FEEDBACK_FILE = STATE_DIR / "feedback.jsonl"
 UNRESOLVED_MODELS_FILE = STATE_DIR / "unresolved_models.jsonl"
 SEEN_RELEASES_FILE = STATE_DIR / "seen_releases.json"
+
+
+
+def seen_items_file(channel: str):
+    """One cursor PER CHANNEL, not one shared cursor.
+
+    Found in the Phase 3 dry run: with a single shared file, whichever
+    channel ran first consumed the baseline and every other channel saw
+    an empty feed forever. The channels read overlapping feed files and
+    own different sections, so each has to track what IT has looked at.
+    """
+    return STATE_DIR / f"seen_items_{channel}.json"
 ADAPTER_FAILURES_FILE = STATE_DIR / "adapter_failures.jsonl"
 DIGEST_STATE_FILE = STATE_DIR / "digest.json"
 PROFILE_PROPOSALS_FILE = STATE_DIR / "profile_proposals.jsonl"

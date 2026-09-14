@@ -106,7 +106,6 @@ def run(ctx) -> int:
         channel=CHANNEL,
         sections=(SECTION,),
         source_files=SOURCE_FILES,
-        section_hint=SECTION,
         extra_reject=_not_post_worthy,
     )
 

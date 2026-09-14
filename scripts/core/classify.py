@@ -392,7 +392,8 @@ SECTION_PATTERNS: list[tuple[str, "re.Pattern[str]"]] = [
     # of Research explicitly.
     ("security", re.compile(
         r"\b(prompt injection|jailbreak|jail[- ]break|guardrail|abliterat|"
-        r"adversarial|exfiltrat|data leakage|memoriz|poison|backdoor|"
+        r"adversarial (?:example|attack|input|perturbation|robustness)|"
+        r"exfiltrat|data leakage|memoriz|poison|backdoor|"
         r"supply chain|malicious|exploit|vulnerab|\bCVE\b|attack|threat|"
         r"hijack|sandbox escape|red[- ]team|reward hacking|specification gaming|"
         r"spec gaming|deceptive alignment|sabotage|scheming|"
@@ -496,7 +497,7 @@ PAPER_WORDS = re.compile(
     r"abstract:|preprint)\b", re.I)
 
 
-def deterministic_axes(item, section_hint: str = "") -> dict:
+def deterministic_axes(item) -> dict:
     """The offline classifier for the three axes.
 
     Deliberately conservative in one direction only: it will fall back
@@ -505,18 +506,23 @@ def deterministic_axes(item, section_hint: str = "") -> dict:
     """
     text = f"{item.title}\n{item.summary}"
 
-    # The hint is a FALLBACK, never an override. A channel says "if you
-    # cannot tell, assume mine"; it does not get to file a prompt-
-    # injection paper under Research because the research channel is
-    # the one that happened to fetch it. Overriding here would make
-    # every channel's Radar a copy of its own section.
+    # THE CHANNEL DOES NOT GET A VOTE. An earlier version let a channel
+    # pass a hint used as the fallback section, and the consequence was
+    # immediate and instructive in the Phase 3 dry run: the security
+    # channel claimed 364 of 381 gate survivors, because every item no
+    # pattern matched fell back to "security" simply because the
+    # security channel was the one that happened to fetch it. Its top
+    # candidate was a diffusion-models tutorial.
+    #
+    # The fallback is §3.4's own rule and is the same for every caller:
+    # anything unclassifiable is a Research candidate.
     section = ""
     for slug, pattern in SECTION_PATTERNS:
         if pattern.search(text):
             section = slug
             break
     if not tax.is_section(section):
-        section = section_hint if tax.is_section(section_hint) else FALLBACK_SECTION
+        section = FALLBACK_SECTION
 
     topics = [slug for slug, pattern in TOPIC_PATTERNS.items() if pattern.search(text)]
     # Ordering matters: the schema takes at most three, and the first
@@ -575,7 +581,7 @@ Return ONLY JSON:
 {{"section": "...", "format": "...", "topics": ["..."]}}"""
 
 
-def classify_axes(llm, item, section_hint: str = "") -> dict:
+def classify_axes(llm, item) -> dict:
     """Live path with the deterministic classifier as its offline
     stand-in. Every returned value is re-checked against the closed
     vocabulary here; nothing is trusted because the prompt asked."""
@@ -592,16 +598,16 @@ def classify_axes(llm, item, section_hint: str = "") -> dict:
         model=llm_module_classify_model(),
         temperature=0,
         label="axes classifier",
-        offline=lambda: deterministic_axes(item, section_hint),
+        offline=lambda: deterministic_axes(item),
     )
     if not isinstance(result, dict):
-        return deterministic_axes(item, section_hint)
+        return deterministic_axes(item)
 
     section = str(result.get("section") or "")
     if not tax.is_section(section) or section == "explainer":
         # Fundamentals is not feed-driven (§8.6); a classifier that says
         # so is wrong rather than interesting.
-        section = section_hint if tax.is_section(section_hint) else FALLBACK_SECTION
+        section = FALLBACK_SECTION
 
     fmt = str(result.get("format") or "")
     if not tax.is_format(fmt):

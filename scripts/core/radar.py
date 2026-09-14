@@ -69,11 +69,22 @@ class Radar:
         return self._months.setdefault(month, [])
 
     def _all(self) -> list[dict]:
-        """Every item across every month file on disk, newest first."""
-        rows: list[dict] = []
+        """Every item across every month, newest first — including
+        months this process has only in memory.
+
+        Reading the directory alone was a real bug: an item added and
+        then immediately looked up (which is exactly what
+        `set_status(..., "promoted")` does after a publish) was invisible
+        until save(), so a published post would never have been marked
+        promoted on the Radar and would have gone on appearing in the
+        digest as "not published".
+        """
+        months = set(self._months)
         if self.dir.exists():
-            for path in sorted(self.dir.glob("*.json")):
-                rows.extend(self._load(path.stem))
+            months |= {path.stem for path in self.dir.glob("*.json")}
+        rows: list[dict] = []
+        for month in sorted(months):
+            rows.extend(self._load(month))
         return sorted(rows, key=lambda r: r.get("seenAt", ""), reverse=True)
 
     # -- writing -----------------------------------------------------
@@ -91,7 +102,12 @@ class Radar:
         why: str,
         seen_at: str | None = None,
     ) -> dict:
-        """Idempotent on (url, title): seeing the same item on the next
+        """`seen_at` defaults to now, and callers should leave it that
+        way: it is when the pipeline SAW the item, not when the source
+        published it. Passing the article's own date was tried and
+        scattered one sweep across twenty-four monthly files.
+
+        Idempotent on (url, title): seeing the same item on the next
         hourly run refreshes its scores rather than adding a second row.
         Without that, a feed that carries an item for a week would put
         seven identical lines in the digest."""

@@ -1,7 +1,9 @@
 """
 Two-stage scoring, driven entirely by interest_profile.yaml (brief §7.1).
 
-    stage 1   QUALITY GATE     pass/fail, minimum 55
+    stage 1   QUALITY GATE     pass/fail, minimum from the profile
+                                (55 as the brief's default; 65 after the
+                                Phase 3 calibration)
     stage 2   RELEVANCE RANK   applied only to survivors; orders the queue
 
 **Never one weighted sum.** A single 0-100 score lets a technically
@@ -409,6 +411,38 @@ def _matches(text: str, tiers: list[tuple[str, list[str]]]) -> list[str]:
     return [topic for topic, phrases in tiers if any(p in lowered for p in phrases)]
 
 
+def _topic_vocabulary(topics: list[str]) -> str:
+    """The taxonomy's own words for the topics an item was classified
+    into.
+
+    CALIBRATION CHANGE, Phase 3. Matching the profile's signal phrases
+    against the item's title and summary alone was far too sparse: over
+    341 Radar survivors the relevance rank produced only eight distinct
+    values, with 104 items tied at 60.0 and 85 at 70.0, so the order of
+    the top ~90 candidates — which is what actually decides what gets
+    published — was effectively arbitrary.
+
+    The fix deliberately introduces NO new mapping table. It appends the
+    taxonomy's own label and description for each classified topic to
+    the text being matched, so the profile's vocabulary is matched
+    against the taxonomy's vocabulary: an item classified
+    `interpretability` carries "Features, circuits, probing, activation
+    steering, representation engineering", which is what the profile's
+    `mechanistic interpretability` entry already lists as its signals.
+    Two closed vocabularies written for the same site agreeing with each
+    other is not a coincidence to be exploited by a lookup table; it is
+    the thing the lookup table would have been approximating.
+    """
+    from . import taxonomy as tax
+
+    parts = []
+    for slug in topics:
+        info = tax.topics().get(slug)
+        if info:
+            parts.append(f"{info['label']} {info['description']}")
+    return " ".join(parts)
+
+
 def relevance_rank(
     item,
     section: str,
@@ -421,27 +455,44 @@ def relevance_rank(
     only ORDERS the queue — it can never push a gate-failing item into
     it. That asymmetry is the whole reason the two stages exist."""
     weights = prof.relevance_weights
-    text = f"{item.title}\n{item.summary}"
+    text = f"{item.title}\n{item.summary}\n{_topic_vocabulary(topics)}"
 
     strong = _matches(text, prof.strong)
     medium = _matches(text, prof.medium)
     low_hit = any(phrase in text.lower() for phrase in prof.low)
 
     components: dict[str, float] = {}
-    components["strong_interest_match"] = (
-        float(weights["strong_interest_match"]) if strong else 0.0
-    )
-    components["medium_interest_match"] = (
-        float(weights["medium_interest_match"]) if medium and not strong else 0.0
-    )
+    # Graded, not binary. Matching one strong interest is worth 70% of
+    # the component and each further one adds 15%, capped at the full
+    # weight. The Phase 3 dry run showed a binary term collapsing 104
+    # items onto one score; an item that touches interpretability AND
+    # inference is genuinely a better fit than one that touches only
+    # inference, and the ranking should be able to say so.
+    if strong:
+        share = min(1.0, 0.70 + 0.15 * (len(strong) - 1))
+        components["strong_interest_match"] = round(
+            float(weights["strong_interest_match"]) * share, 1
+        )
+    else:
+        components["strong_interest_match"] = 0.0
+    if medium and not strong:
+        share = min(1.0, 0.70 + 0.15 * (len(medium) - 1))
+        components["medium_interest_match"] = round(
+            float(weights["medium_interest_match"]) * share, 1
+        )
+    else:
+        components["medium_interest_match"] = 0.0
     # Section fit: a classified section that is not "none" and topics
     # that survived the closed vocabulary. An item nobody could file is
     # an item nobody asked for.
+    # Section fit is how confidently the item could be FILED, and an
+    # item nobody could file is an item nobody asked for. Graded by how
+    # much of the three-axis record the classifier could actually fill.
     fit = 0.0
     if section:
-        fit += 0.6
+        fit += 0.5
     if topics:
-        fit += 0.4
+        fit += 0.25 + 0.125 * min(2, len(topics) - 1)
     components["section_fit"] = round(fit * float(weights["section_fit"]), 1)
 
     # §8.3: mechanism over event. A piece explaining HOW something works

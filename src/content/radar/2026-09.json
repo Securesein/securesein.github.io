@@ -1,0 +1,4606 @@
+{
+  "month": "2026-09",
+  "items": [
+    {
+      "id": "re17ce92c247d8e1",
+      "url": "https://arxiv.org/abs/2609.11952",
+      "title": "ChemMat-AgentSafetyBench: Evaluating Long-Horizon Attacks and Defenses in Chemistry and Materials Agents",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "evaluation",
+        "ai-safety",
+        "agents"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 46.5,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under security: evaluation, ai-safety, agents.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf5086934fec9b24",
+      "url": "https://arxiv.org/abs/2609.12001",
+      "title": "Scan the Skill, Govern the Action: Composing Registry Verdicts with Runtime Consequence Control",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 53.2,
+      "whyRelevant": "Matches strong interest: LLM and agent security, open-weight models and local inference. Filed under security: agents, ai-security, evaluation.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rdff89cd673e930e",
+      "url": "https://arxiv.org/abs/2609.12003",
+      "title": "A Dark Forest First Attack Is Rational Only If the Attacker Accepts It as Its Last",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 42.7,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: ai-security.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd82cecb41bcb9fb",
+      "url": "https://arxiv.org/abs/2609.12037",
+      "title": "One Click to Leak: Characterizing the Real-World Usage and Threat Impact of MNO-based Single Sign-On Websites",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 42.7,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: ai-security.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb7a42970d5ced37",
+      "url": "https://arxiv.org/abs/2609.12263",
+      "title": "A First-Principles Evaluation of Graph-Based Network Intrusion Detection Systems",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "training",
+        "evaluation",
+        "ai-security"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Matches strong interest: LLM and agent security, open-weight models and local inference, deploying and serving models in production. Filed under security: training, evaluation, ai-security.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re3a56b7ae937ca6",
+      "url": "https://arxiv.org/abs/2609.12305",
+      "title": "Self-Verifying Anomaly Detection using Explainable AI for Cybersecurity of DER Networks",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "reasoning",
+        "interpretability"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, LLM and agent security, reasoning and inference efficiency, deploying and serving models in production. Filed under security: ai-security, reason",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re71f78e1ed3c552",
+      "url": "https://arxiv.org/abs/2609.12315",
+      "title": "Function Name Is All You Need to Detect Blockchain Application Attacks",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "llms"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 61.3,
+      "whyRelevant": "Matches strong interest: LLM and agent security, deploying and serving models in production. Filed under security: ai-security, llms.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r65b19830e47ed1c",
+      "url": "https://arxiv.org/abs/2609.12360",
+      "title": "An Evidence-First Multi-LLM Framework for Auditable Critical-Infrastructure Dependency Modeling",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "release",
+      "topics": [
+        "llms",
+        "ai-safety"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference. Filed under release: llms, ai-safety.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r608140baf47e017",
+      "url": "https://arxiv.org/abs/2609.12378",
+      "title": "An Open-Source End-to-End FHE Implementation for Privacy-Preserving Llama 3 8B Inference",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, i",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r48b01afa3520039",
+      "url": "https://arxiv.org/abs/2609.12426",
+      "title": "IDORacle: Template-Guided SQL-Sink Mediation for Object-Level Authorization in Java Applications",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "inference",
+        "evaluation",
+        "ai-security"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: LLM and agent security, reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under sec",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r52295f815c9b76a",
+      "url": "https://arxiv.org/abs/2609.12450",
+      "title": "PDoS: A Profitable Denial-of-Service Attack against Proof-of-Work Blockchain Liveness",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "reasoning"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: LLM and agent security, reasoning and inference efficiency, open-weight models and local inference. Filed under security: ai-security, reasoning.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r62f1e305a16927a",
+      "url": "https://arxiv.org/abs/2609.12488",
+      "title": "Access Control as Verified Parse Constraints",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "ai-safety"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: reasoning, ai-safety.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2890cad17630c3c",
+      "url": "https://arxiv.org/abs/2609.12554",
+      "title": "Omniscience for the Masses: New Threats in the Metaverse's Democratized World Creation",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "multimodal"
+      ],
+      "qualityScore": 90.5,
+      "relevanceScore": 61.3,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, LLM and agent security. Filed under security: ai-security, multimodal.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6f04d83513fe7ac",
+      "url": "https://arxiv.org/abs/2609.12571",
+      "title": "PIA-Bench: Towards Automated Privacy Impact Assessment with Large Language Models",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "research",
+      "topics": [
+        "llms",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: llms, evaluation.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd7e9c2b22e88633",
+      "url": "https://arxiv.org/abs/2609.12582",
+      "title": "NovaFabric: Tamper-Evident, Replayable Evidence for Autonomous AI Agent Runs",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "research",
+      "topics": [
+        "agents"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 49.4,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference, deploying and serving models in production. Filed under research: agents.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf7e6fc7cb992d0b",
+      "url": "https://arxiv.org/abs/2609.12605",
+      "title": "A Feature-Rich Embedded NIDS with eBPF/XDP: Detector and Architecture Trade-offs",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, LLM and agent security, ML foundations. Filed under security: ai-security, deep-learning, training.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbc5e5bf5d4337d7",
+      "url": "https://arxiv.org/abs/2609.12646",
+      "title": "Poster: Towards Selecting Threat Appropriate Industrial Intrusion Detection Systems",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: ai-security.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r241d373f50a2f03",
+      "url": "https://arxiv.org/abs/2609.12681",
+      "title": "Bridging the First-Hour Gap: Evaluating AI Reliability and Benchmarking Deficiencies in Cyber Incident Response for Law Enforcement",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "research",
+      "topics": [
+        "agents",
+        "evaluation",
+        "ai-safety"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: agents, evaluation, ai-safety.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6e17a5c80115538",
+      "url": "https://arxiv.org/abs/2609.12727",
+      "title": "Fresh-Challenge VDF Attestations for Model-Relative Response Latency",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "research",
+      "topics": [
+        "inference",
+        "reasoning",
+        "evaluation"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference, reasoning, evaluation.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5677e9767590aeb",
+      "url": "https://arxiv.org/abs/2609.12810",
+      "title": "Batten the Hatches: Cybersecurity with Military Mariners",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "research",
+      "topics": [
+        "interpretability",
+        "ai-safety"
+      ],
+      "qualityScore": 90.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability. Filed under research: interpretability, ai-safety.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6d611b25452b98e",
+      "url": "https://arxiv.org/abs/2609.12839",
+      "title": "Evaluating Context Segmentation in Locally Deployable SLMs for Cybersecurity CTF Tasks",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "agents",
+        "llms",
+        "training"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 39.0,
+      "whyRelevant": "Adjacent to medium interest: multimodal models. Filed under security: agents, llms, training.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf49a1d3843a1dee",
+      "url": "https://arxiv.org/abs/2609.12841",
+      "title": "A Graph-Based Approach for Mapping Kernel-Level Telemetry to MITRE ATT&CK",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "llms",
+        "reasoning",
+        "inference"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under security: llms, reasoning, inference.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc109bd836ed2d00",
+      "url": "https://arxiv.org/abs/2609.12909",
+      "title": "Forging Tree-Ring: Reproducing and Instrumenting Black-Box Semantic Watermark Forgery",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "generative-ai"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: ai-security, generative-ai.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re1f179536a4a5b3",
+      "url": "https://arxiv.org/abs/2609.12911",
+      "title": "Shuffling is Not Enough: Breaking Permutation-Based Model Confidentiality in Hybrid FHE Inference",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "research",
+      "topics": [
+        "inference",
+        "interpretability"
+      ],
+      "qualityScore": 90.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inf",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r671dcdeff6e9327",
+      "url": "https://arxiv.org/abs/2609.13004",
+      "title": "IntentFuzz: A Protocol-Aware Fuzzer for Automated Invariant Violation Detection in Intent-Based Cross-Chain Bridges",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "research",
+      "topics": [
+        "llms",
+        "evaluation",
+        "ai-safety"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 39.0,
+      "whyRelevant": "Adjacent to medium interest: evaluation methodology. Filed under research: llms, evaluation, ai-safety.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5a89dc2d103af88",
+      "url": "https://arxiv.org/abs/2609.11977",
+      "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "training",
+        "reasoning"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: agents, training, reasoning.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rdfa08e5e09c578c",
+      "url": "https://arxiv.org/abs/2609.11987",
+      "title": "Harness or Model? Isolating the Harness Effect in Agentic Coding with a Contamination-Controlled Private Suite",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "evaluation",
+        "agents"
+      ],
+      "qualityScore": 90.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: llms, evaluation, agents.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3e1872b1eaf9d2d",
+      "url": "https://arxiv.org/abs/2609.12035",
+      "title": "Reading the Whole Heart: Latent-Attention Masked Autoencoders for Multimodal Cardiac Representation Learning",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "training"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 51.3,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, ML foundations. Filed under research: multimodal, training.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r52fe096e0717e6f",
+      "url": "https://arxiv.org/abs/2609.12101",
+      "title": "Competence-Gated Pooling of Language Models and Priors for Event Forecasting",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 35.2,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8fa077f4bd07ab2",
+      "url": "https://arxiv.org/abs/2609.12105",
+      "title": "Language Is an Insufficient Substrate for Quantitative Reasoning, and Consequential Domains Need Large Quantitative Models",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: llms, reasoning.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd6a1508f779c13b",
+      "url": "https://arxiv.org/abs/2609.12115",
+      "title": "DU-NO: A Parameter-Efficient Double U-Shaped Neural Operator for Phase-Resolving Wave Modeling",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 42.7,
+      "whyRelevant": "Matches strong interest: how LLMs work internally. Filed under research: evaluation.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb250882bc2bec79",
+      "url": "https://arxiv.org/abs/2609.12162",
+      "title": "Can LLMs in Draft-Verify-Revise Pipelines Resolve Deictic Ambiguity?",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "training"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: llms, reasoning, training.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r147653e31968954",
+      "url": "https://arxiv.org/abs/2609.12165",
+      "title": "GLARE: Generative Learning via Adversarial Reward Estimation For Social Dynamics Forecasting",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "evaluation",
+        "ai-security",
+        "reasoning"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Matches strong interest: LLM and agent security, reasoning and inference efficiency, deploying and serving models in production. Filed under research: evaluation, ai-security, reasoning.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r52123371dd7c337",
+      "url": "https://arxiv.org/abs/2609.12171",
+      "title": "WinSyn: An Automated Pipeline for Realistic Enterprise Question-Answering Evaluation",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "training"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: agents, training.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb9bc79e41eee4ae",
+      "url": "https://arxiv.org/abs/2609.12247",
+      "title": "Soft Symbol Grounding for Prototypical Concepts",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "multimodal"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 44.6,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: reasoning, multimodal.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc3e8878ab01a6cc",
+      "url": "https://arxiv.org/abs/2609.12265",
+      "title": "GTA: Graph Theory Agent and Benchmark for Algorithmic Graph Reasoning with LLMs",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "evaluation",
+        "reasoning",
+        "agents"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 46.5,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: evaluation, reasoning, agents.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1e755da9a81bed9",
+      "url": "https://arxiv.org/abs/2609.12267",
+      "title": "Learning Symbolic Constraint Representations from Examples: A Neuro-Symbolic Approach",
+      "source": "arXiv cs.AI",
+      "section": "release",
+      "topics": [
+        "llms",
+        "reasoning"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 61.3,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference. Filed under release: llms, reasoning.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rab02e5844b3c9aa",
+      "url": "https://arxiv.org/abs/2609.12286",
+      "title": "T-GADE: Thermodynamical Generative-AI-Driven Evolution of LLM Artifacts",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 35.2,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8abb5e791300bcf",
+      "url": "https://arxiv.org/abs/2609.12287",
+      "title": "Robust Prototypical Networks for Few-Shot Sensor Fault Diagnosis",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 90.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: ML foundations. Filed under research: deep-learning, training.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbc593b0eed0e4e4",
+      "url": "https://arxiv.org/abs/2609.12304",
+      "title": "Hybrid Physics-AI Framework of Body Center of Mass Dynamics from Wrist-Worn Sensors",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 51.3,
+      "whyRelevant": "Matches strong interest: ML foundations, deploying and serving models in production. Filed under research: deep-learning, training.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd47ce9e1ec3463d",
+      "url": "https://arxiv.org/abs/2609.12320",
+      "title": "AIM: A Privacy-Aware Interoperable Memory Framework for Multi-Agent Multi-User LLM Systems",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "llms",
+        "training"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference, deploying and serving models in production. Filed under research: agents, llms, training.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rada6982ef6eae17",
+      "url": "https://arxiv.org/abs/2609.12322",
+      "title": "Affective Agent: On-Device Personalized Intervention Reasoning for Wearable Systems",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "inference",
+        "agents"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: reasoning, inference, agents.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc0837df31487601",
+      "url": "https://arxiv.org/abs/2609.12373",
+      "title": "Toward Robust Personalized Alignment for LLMs: Mitigating Persona Drift in Multi-Turn Dialogue",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "evaluation",
+        "ai-safety",
+        "interpretability"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 46.5,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability. Filed under research: evaluation, ai-safety, interpretability.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3721918a75db520",
+      "url": "https://arxiv.org/abs/2609.12394",
+      "title": "BlueLM-GUI Technical Report: A Real-Device-Centric Flywheel for Self-Improving Mobile GUI Agents",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "evaluation",
+        "interpretability"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability. Filed under research: agents, evaluation, interpretability.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf25dcb6a1d410b1",
+      "url": "https://arxiv.org/abs/2609.12395",
+      "title": "Is Gaussian Splatting Becoming Neural Again? A Taxonomy and Controlled Study of Learned Parameterization",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 56.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8a3f7c9cb7246c2",
+      "url": "https://arxiv.org/abs/2609.12398",
+      "title": "Niching Agents in The Core",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "multimodal"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 37.1,
+      "whyRelevant": "Adjacent to medium interest: multimodal models. Filed under research: agents, multimodal.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r911642b05519187",
+      "url": "https://arxiv.org/abs/2609.12399",
+      "title": "OneLA: Scaling Linear-Attention Decoding to Large Beams in Generative Recommendation",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 56.2,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inferen",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r4fe61e66b495539",
+      "url": "https://arxiv.org/abs/2609.12404",
+      "title": "VRL-Bench: Benchmarking agents on computer control tasks under finite trial budgets",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "llms",
+        "evaluation"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 42.0,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning, evaluation methodology. Filed under research: reinforcement-learning, llms, evaluation.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r13b58d4342f6c0d",
+      "url": "https://arxiv.org/abs/2609.12413",
+      "title": "SoK: Rethinking Jailbreaking in the Era of Agentic AI: Attacks, Defenses, and Practical Consideration",
+      "source": "arXiv cs.AI",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security",
+        "ai-safety"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Matches strong interest: LLM and agent security, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under security: agents, a",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rebb155c1ad2cd8b",
+      "url": "https://lilianweng.github.io/posts/2025-05-01-thinking/",
+      "title": "Why We Think",
+      "source": "Lil'Log (Lilian Weng)",
+      "section": "research",
+      "topics": [
+        "reasoning"
+      ],
+      "qualityScore": 74.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: reasoning.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r570615e019d1cc7",
+      "url": "https://lilianweng.github.io/posts/2024-11-28-reward-hacking/",
+      "title": "Reward Hacking in Reinforcement Learning",
+      "source": "Lil'Log (Lilian Weng)",
+      "section": "security",
+      "topics": [
+        "reinforcement-learning",
+        "ai-safety",
+        "agents"
+      ],
+      "qualityScore": 74.5,
+      "relevanceScore": 39.0,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning. Filed under security: reinforcement-learning, ai-safety, agents.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r001c923ae8027ed",
+      "url": "https://lilianweng.github.io/posts/2024-04-12-diffusion-video/",
+      "title": "Diffusion Models for Video Generation",
+      "source": "Lil'Log (Lilian Weng)",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "generative-ai"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 64.6,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference. Filed under research: multimodal, generative-ai.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r19472db6d6f483d",
+      "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+      "title": "LLM Powered Autonomous Agents",
+      "source": "Lil'Log (Lilian Weng)",
+      "section": "research",
+      "topics": [
+        "agents",
+        "llms",
+        "reasoning"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, deploying and serving models in production. Filed under research: agents, llms, reasoning.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r99f4c939175460a",
+      "url": "https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/",
+      "title": "The Transformer Family Version 2.0",
+      "source": "Lil'Log (Lilian Weng)",
+      "section": "research",
+      "topics": [
+        "llms",
+        "deep-learning"
+      ],
+      "qualityScore": 74.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, ML foundations. Filed under research: llms, deep-learning.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc85764b55ce6535",
+      "url": "https://lilianweng.github.io/posts/2023-01-10-inference-optimization/",
+      "title": "Large Transformer Model Inference Optimization",
+      "source": "Lil'Log (Lilian Weng)",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re7adf90ab336d57",
+      "url": "https://lilianweng.github.io/posts/2022-09-08-ntk/",
+      "title": "Some Math behind Neural Tangent Kernel",
+      "source": "Lil'Log (Lilian Weng)",
+      "section": "research",
+      "topics": [
+        "training",
+        "reasoning",
+        "deep-learning"
+      ],
+      "qualityScore": 74.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations. Filed under research: training, reasoning, deep-learning.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r30b6e9434771c5f",
+      "url": "https://lilianweng.github.io/posts/2021-09-25-train-large/",
+      "title": "How to Train Really Large Models on Many GPUs?",
+      "source": "Lil'Log (Lilian Weng)",
+      "section": "research",
+      "topics": [
+        "deep-learning"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: ML foundations. Filed under research: deep-learning.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2c863d90fb165ef",
+      "url": "https://lilianweng.github.io/posts/2021-07-11-diffusion-models/",
+      "title": "What are Diffusion Models?",
+      "source": "Lil'Log (Lilian Weng)",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "deep-learning"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 71.3,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations. Filed under research: generative-ai, deep-learning.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re770cc6a0f63aaa",
+      "url": "https://lilianweng.github.io/posts/2019-06-23-meta-rl/",
+      "title": "Meta Reinforcement Learning",
+      "source": "Lil'Log (Lilian Weng)",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "agents"
+      ],
+      "qualityScore": 74.5,
+      "relevanceScore": 37.1,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning. Filed under research: reinforcement-learning, agents.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r62054b7ab0b3a3b",
+      "url": "https://www.answer.ai/posts/2026-08-19-llms-code-simpler.html",
+      "title": "Why LLMs can’t make your code simpler",
+      "source": "Answer.AI",
+      "section": "research",
+      "topics": [
+        "agents"
+      ],
+      "qualityScore": 67.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: agents.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rffb33f84130f2d4",
+      "url": "https://www.answer.ai/posts/2026-01-20-toolcalling.html",
+      "title": "The unauthorized tool call problem",
+      "source": "Answer.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 67.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: ML foundations. Filed under research: llms, agents, evaluation.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6c9b2f60d215003",
+      "url": "https://www.answer.ai/posts/2025-10-01-cachy.html",
+      "title": "Cachy: How we made our notebooks 60x faster.",
+      "source": "Answer.AI",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r7c47ac549e99bdf",
+      "url": "https://www.answer.ai/posts/2025-02-10-modernbert-instruct.html",
+      "title": "TIL: Masked Language Models Are Surprisingly Capable Zero-Shot Learners",
+      "source": "Answer.AI",
+      "section": "benchmark",
+      "topics": [
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 73.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference. Filed under benchmark: training, evaluation.",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rec3f36b4902a229",
+      "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
+      "title": "Breaking Claude Code Opus 5 Auto Mode",
+      "source": "Embrace The Red (Johann Rehberger)",
+      "section": "security",
+      "topics": [
+        "llms",
+        "ai-security",
+        "ai-safety"
+      ],
+      "qualityScore": 74.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: llms, ai-security, ai-safety.",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r38dc8958d8bc42e",
+      "url": "https://embracethered.com/blog/posts/2026/toctou-agent-what-you-click-is-not-what-you-get/",
+      "title": "Computer-Use and TOCTOU: What You Click Is Not What You Get!",
+      "source": "Embrace The Red (Johann Rehberger)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "multimodal"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 44.6,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: ai-security, multimodal.",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc54c9146ecf78b7",
+      "url": "https://embracethered.com/blog/posts/2026/breaking-opus-4.7-with-chatgpt/",
+      "title": "Breaking Opus 4.7 with ChatGPT (Hacking Claude's Memory)",
+      "source": "Embrace The Red (Johann Rehberger)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "llms",
+        "multimodal"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: ai-security, llms, multimodal.",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r48ff0c4ea779090",
+      "url": "https://embracethered.com/blog/posts/2025/wrapping-up-month-of-ai-bugs/",
+      "title": "Wrap Up: The Month of AI Bugs",
+      "source": "Embrace The Red (Johann Rehberger)",
+      "section": "security",
+      "topics": [
+        "multimodal",
+        "agents",
+        "ai-security"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: multimodal, agents, ai-security.",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd6d46438092b820",
+      "url": "https://embracethered.com/blog/posts/2025/manus-ai-kill-chain-expose-port-vs-code-server-on-internet/",
+      "title": "How Prompt Injection Exposes Manus' VS Code Server to the Internet",
+      "source": "Embrace The Red (Johann Rehberger)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: ai-security, agents.",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1f3be9cafd4287f",
+      "url": "https://github.com/NVIDIA/garak/releases/tag/v0.17.0",
+      "title": "v0.17.0",
+      "source": "garak (NVIDIA) — LLM vulnerability scanner",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 69.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inf",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r009d5c98023fba4",
+      "url": "https://blog.trailofbits.com/2026/09/09/a-proof-of-fermats-last-theorem-that-fits-the-margin/",
+      "title": "A “proof” of Fermat’s Last Theorem that fits the margin",
+      "source": "Trail of Bits — Blog",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 86.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: reasoning, llms, agents.",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r613defb54efdb71",
+      "url": "https://blog.trailofbits.com/2026/08/25/state-divergence-enables-unauthorized-access/",
+      "title": "State divergence enables unauthorized access",
+      "source": "Trail of Bits — Blog",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning"
+      ],
+      "qualityScore": 80.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: llms, reasoning.",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9c3475e7851dc7c",
+      "url": "https://blog.trailofbits.com/2026/08/11/how-trail-of-bits-helps-verify-the-integrity-of-your-signal-chats/",
+      "title": "How Trail of Bits helps verify the integrity of your Signal chats",
+      "source": "Trail of Bits — Blog",
+      "section": "research",
+      "topics": [
+        "ai-safety"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 35.2,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning. Filed under research: ai-safety.",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9e70eb758c0f928",
+      "url": "https://blog.trailofbits.com/2026/07/13/rust-proof-your-code-with-our-new-testing-handbook-chapter/",
+      "title": "Rust-proof your code with our new Testing Handbook chapter",
+      "source": "Trail of Bits — Blog",
+      "section": "research",
+      "topics": [
+        "reasoning"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: reasoning.",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2e7f6df5a601655",
+      "url": "https://blog.trailofbits.com/2026/07/08/mutation-testing-comes-to-daml/",
+      "title": "Mutation testing comes to DAML",
+      "source": "Trail of Bits — Blog",
+      "section": "research",
+      "topics": [
+        "agents"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: agents.",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1ecbead8836eb6e",
+      "url": "https://blog.trailofbits.com/2026/06/30/shipping-post-quantum-cryptography-to-python/",
+      "title": "Shipping post-quantum cryptography to Python",
+      "source": "Trail of Bits — Blog",
+      "section": "research",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under research: ai-security.",
+      "seenAt": "2026-09-14T17:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8a65f6fccf3d463",
+      "url": "https://blog.trailofbits.com/2026/05/22/we-hardened-zizmors-github-actions-static-analyzer/",
+      "title": "Bringing full YAML anchor support to zizmor",
+      "source": "Trail of Bits — Blog",
+      "section": "security",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 56.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under security: inference.",
+      "seenAt": "2026-09-14T17:16:27+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2510c61125589be",
+      "url": "https://blog.trailofbits.com/2026/04/17/we-beat-googles-zero-knowledge-proof-of-quantum-cryptanalysis/",
+      "title": "We beat Google’s zero-knowledge proof of quantum cryptanalysis",
+      "source": "Trail of Bits — Blog",
+      "section": "security",
+      "topics": [
+        "reasoning",
+        "interpretability",
+        "ai-security"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, LLM and agent security, reasoning and inference efficiency, open-weight models and local inference. Filed under security: reasoning, interpretabi",
+      "seenAt": "2026-09-14T17:16:27+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r503e9c2326e78f3",
+      "url": "https://openai.com/index/codex-quantum-computing-experiments",
+      "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+      "source": "OpenAI News",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:29+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2c827cba158d2f2",
+      "url": "https://openai.com/index/navier-stokes-solution",
+      "title": "On the Navier–Stokes Millennium Prize Problem",
+      "source": "OpenAI News",
+      "section": "research",
+      "topics": [
+        "reasoning"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: reasoning.",
+      "seenAt": "2026-09-14T17:16:29+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r80e20f47d3cc746",
+      "url": "https://simonwillison.net/2026/Sep/14/laurie-voss/",
+      "title": "Quoting Laurie Voss",
+      "source": "Simon Willison's Weblog",
+      "section": "research",
+      "topics": [
+        "agents"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: agents.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re3c302e9da9cfad",
+      "url": "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+      "title": "commit-rewriter 0.1",
+      "source": "Simon Willison's Weblog",
+      "section": "research",
+      "topics": [
+        "agents"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 11.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: agents.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r921f3db6547078a",
+      "url": "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
+      "title": "Generating running routes with GPT-6 Astra and ChatGPT Work",
+      "source": "Simon Willison's Weblog",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 84.5,
+      "relevanceScore": 23.1,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms, agents.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r17df8d1df6c703f",
+      "url": "https://simonwillison.net/2026/Sep/12/paul-ford/",
+      "title": "Quoting Paul Ford",
+      "source": "Simon Willison's Weblog",
+      "section": "research",
+      "topics": [
+        "agents",
+        "inference"
+      ],
+      "qualityScore": 84.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: agents, inference.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra6c7c2201917116",
+      "url": "https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/",
+      "title": "OpenAI agents attacked RubyGems back in May",
+      "source": "Simon Willison's Weblog",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "llms"
+      ],
+      "qualityScore": 86.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: ai-security, agents, llms.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r162a5908a98be63",
+      "url": "https://simonwillison.net/2026/Sep/11/hugging-face-security/",
+      "title": "Quoting huggingface.co/security.txt",
+      "source": "Simon Willison's Weblog",
+      "section": "research",
+      "topics": [
+        "evaluation"
+      ],
+      "qualityScore": 78.5,
+      "relevanceScore": 25.2,
+      "whyRelevant": "Adjacent to medium interest: evaluation methodology. Filed under research: evaluation.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r27888023fdbfc90",
+      "url": "https://simonwillison.net/2026/Sep/11/datasette-security/",
+      "title": "Datasette 1.0a39 and 0.65.4 security releases",
+      "source": "Simon Willison's Weblog",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under release: llms.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r50c830b441293a8",
+      "url": "https://simonwillison.net/2026/Sep/9/blender-viewer/",
+      "title": ".blend URL Viewer",
+      "source": "Simon Willison's Weblog",
+      "section": "release",
+      "topics": [
+        "agents",
+        "llms",
+        "multimodal"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 39.0,
+      "whyRelevant": "Adjacent to medium interest: multimodal models. Filed under release: agents, llms, multimodal.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6d91ee6900a7a00",
+      "url": "https://simonwillison.net/2026/Sep/8/on-navier-stokes/",
+      "title": "Some thoughts on the Navier–Stokes Millennium Prize Problem",
+      "source": "Simon Willison's Weblog",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "red15938c3268be8",
+      "url": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
+      "title": "Introducing ChatGPT Images 2.5",
+      "source": "Simon Willison's Weblog",
+      "section": "release",
+      "topics": [
+        "multimodal",
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 86.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under release: multimodal, llms, agents.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc193567bdbf1a1e",
+      "url": "https://simonwillison.net/2026/Sep/7/llm/",
+      "title": "llm 0.35",
+      "source": "Simon Willison's Weblog",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5dba7aac8fd682d",
+      "url": "https://simonwillison.net/2026/Sep/7/video-compressor/",
+      "title": "Video compressor",
+      "source": "Simon Willison's Weblog",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "llms"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 37.1,
+      "whyRelevant": "Adjacent to medium interest: multimodal models. Filed under research: multimodal, llms.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r82bf10337daed53",
+      "url": "https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/",
+      "title": "d-Matrix Adopts NVIDIA NVLink Fusion for Rack-Scale XPU Deployment",
+      "source": "NVIDIA Blog",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "inference"
+      ],
+      "qualityScore": 80.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under research: deep-learning, in",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb4d239e1cc10ea7",
+      "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+      "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+      "source": "NVIDIA Blog",
+      "section": "research",
+      "topics": [
+        "inference",
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference, llms, agents.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r79a064693391118",
+      "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/",
+      "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+      "source": "NVIDIA Blog",
+      "section": "research",
+      "topics": [
+        "agents"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: agents.",
+      "seenAt": "2026-09-14T17:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "reb0ec067ba7ce97",
+      "url": "https://www.wired.com/story/why-so-many-ai-researchers-think-the-machines-could-kill-everyone/",
+      "title": "Why So Many AI Researchers Think the Machines Could Kill Everyone",
+      "source": "Wired AI",
+      "section": "research",
+      "topics": [
+        "agents"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: agents.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r321672b4ff708a9",
+      "url": "https://www.technologyreview.com/2026/09/10/1141649/powering-ai-is-an-architecture-problem/",
+      "title": "Powering AI is an architecture problem",
+      "source": "MIT Technology Review AI",
+      "section": "research",
+      "topics": [
+        "deep-learning"
+      ],
+      "qualityScore": 80.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: ML foundations. Filed under research: deep-learning.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5e194712572c623",
+      "url": "https://www.technologyreview.com/2026/08/31/1143180/hugging-face-hack-could-indicate-cultural-issues-at-openai/",
+      "title": "The Hugging Face hack could indicate cultural issues at OpenAI",
+      "source": "MIT Technology Review AI",
+      "section": "research",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 74.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under research: ai-security.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbe20cc599a8c7b4",
+      "url": "https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/",
+      "title": "The inside story on why OpenAI agents hacked Hugging Face",
+      "source": "MIT Technology Review AI",
+      "section": "research",
+      "topics": [
+        "agents"
+      ],
+      "qualityScore": 74.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: agents.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r7b24be341788d3f",
+      "url": "https://syncedreview.com/2025/06/24/bytedance-introduces-astra-a-dual-model-architecture-for-autonomous-robot-navigation/",
+      "title": "ByteDance Introduces Astra: A Dual-Model Architecture for Autonomous Robot Navigation",
+      "source": "Synced Review",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "agents"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: ML foundations. Filed under research: deep-learning, agents.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3f8992cdadd1c40",
+      "url": "https://syncedreview.com/2025/04/30/deepseek-unveils-deepseek-prover-v2-advancing-neural-theorem-proving-with-recursive-proof-search-and-a-new-benchmark/",
+      "title": "DeepSeek Unveils DeepSeek-Prover-V2: Advancing Neural Theorem Proving with Recursive Proof Search and a New Benchmark",
+      "source": "Synced Review",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "evaluation"
+      ],
+      "qualityScore": 76.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: llms, reasoning, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc55282bb18e6781",
+      "url": "https://arxiv.org/abs/2609.11955",
+      "title": "R2VC: Modular Fact-Checking with Retrieval, Verification, and Confidence Calibration",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "deep-learning",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations, deploying and serving models in production. Filed under research: reasoning, deep-learning, reinforcement-learning.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd3db2627c41968c",
+      "url": "https://arxiv.org/abs/2609.12085",
+      "title": "What Counts as a Mistake? Annotating Recitation Events in Quran Memorization Transcripts",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "ai-safety"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under research: multimodal, ai-safety.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3fc04fab25cfa74",
+      "url": "https://arxiv.org/abs/2609.12107",
+      "title": "Extracting Dataset Mentions in Forced Displacement and FCV Documents: A Weakly Supervised Framework with LLM-Based Label Refinement",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "training",
+        "llms",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: training, llms, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r20c3592f2a8c7f9",
+      "url": "https://arxiv.org/abs/2609.12122",
+      "title": "Quantifying Consonant Contributions to Word Intelligibility via Acoustic Masking",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "llms"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 37.1,
+      "whyRelevant": "Adjacent to medium interest: multimodal models. Filed under research: multimodal, llms.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r614ac3fd0b94c75",
+      "url": "https://arxiv.org/abs/2609.12127",
+      "title": "Local Edits, Global Ripples: Replay-Informed Policy Adaptation for Workflow Synthesis",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 28.2,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning, evaluation methodology. Filed under research: evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "reca1621c86adba3",
+      "url": "https://arxiv.org/abs/2609.12191",
+      "title": "GAUGE: When Not to Trust LLM-as-a-Judge in User-Simulated Evaluation of Task-Oriented Agents",
+      "source": "arXiv cs.CL",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 39.0,
+      "whyRelevant": "Adjacent to medium interest: evaluation methodology. Filed under benchmark: llms, agents, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1e89ed468368b9d",
+      "url": "https://arxiv.org/abs/2609.12230",
+      "title": "Repair Before Reinforce: Context-Augmented Knowledge Graph Reasoning for Multi-Hop Question Answering",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "reinforcement-learning",
+        "llms"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference. Filed under research: reasoning, reinforcement-learning, llms.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r435b60352c19d53",
+      "url": "https://arxiv.org/abs/2609.12243",
+      "title": "Chopthin-Consensus Power Sampling: A Diversity-Preserving Approach to LLM Decoding",
+      "source": "arXiv cs.CL",
+      "section": "security",
+      "topics": [
+        "llms",
+        "reasoning",
+        "training"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, deploying and serving models in production. Filed under security: llms, reasoning, training.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r817faa2adca20de",
+      "url": "https://arxiv.org/abs/2609.12254",
+      "title": "Automated Detection and Structuring of Social Tipping Point Evidence in Climate related Documents: A Modular AI Framework",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: llms, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3a036e054ea5fbb",
+      "url": "https://arxiv.org/abs/2609.12260",
+      "title": "HypoKG: Evidence-Disciplined Biomedical Hypothesis Generation Beyond Endpoint Knowledge",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "interpretability",
+        "evaluation"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, reasoning and inference efficiency, open-weight models and local inference. Filed under research: reasoning, interpretability, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re3d31cddb6d2288",
+      "url": "https://arxiv.org/abs/2609.12268",
+      "title": "EAR: Entity-Aware Partitioning Approach for Retrieval-Augmented Generation Development",
+      "source": "arXiv cs.CL",
+      "section": "benchmark",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 59.4,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference, deploying and serving models in production. Filed under benchmark: llms.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r284e4b219a64b42",
+      "url": "https://arxiv.org/abs/2609.12303",
+      "title": "Breaking the Token Ceiling: Distilling Smaller, Stronger Byte Models",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "training"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, ML foundations, deploying and serving models in production. Filed under research: llms, training.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r69b449b9e997a86",
+      "url": "https://arxiv.org/abs/2609.12310",
+      "title": "ESTS at WMT26: Routing-Informed Expert Pruning for Model Compression",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 90.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r4fbbffc40be2ba5",
+      "url": "https://arxiv.org/abs/2609.12341",
+      "title": "I Am No One: Style-Aware Paraphrasing for Text Anonymization",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "interpretability",
+        "multimodal"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 51.3,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, deploying and serving models in production. Filed under research: interpretability, multimodal.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd93f19397d7af07",
+      "url": "https://arxiv.org/abs/2609.12353",
+      "title": "SynthSentry: Detecting Synthetic Data Contamination in Language Model Training Data",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 39.0,
+      "whyRelevant": "Adjacent to medium interest: evaluation methodology. Filed under research: llms, training, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re4444be6ef80ad7",
+      "url": "https://arxiv.org/abs/2609.12354",
+      "title": "CueMem: Cue-Guided Context Reconstruction for Long-Term Conversational Memory",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rccf05f618c888e2",
+      "url": "https://arxiv.org/abs/2609.12366",
+      "title": "ORQA: An Occupation-Realistic Question and Answer Framework for LLM Professional Knowledge",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference, deploying and serving models in production. Filed under research: llms, agents, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3cfda87c2ffdce7",
+      "url": "https://arxiv.org/abs/2609.12382",
+      "title": "Representation-based Masked Diffusion Model",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "llms"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 71.3,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, deploying and serving models in production. Filed under research: generative-ai, llms.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd5eba57989da134",
+      "url": "https://arxiv.org/abs/2609.12448",
+      "title": "GraphProfiler: Source-Linked Sensitive Attribute Inference via Personal Knowledge Graphs",
+      "source": "arXiv cs.CL",
+      "section": "security",
+      "topics": [
+        "llms",
+        "inference",
+        "ai-security"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: LLM and agent security, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under security: llms, inf",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd48232132ed51e9",
+      "url": "https://arxiv.org/abs/2609.12469",
+      "title": "Not All Speech Is Intent: Adaptive Self-Correcting Inference Layer for Post-ASR False Wake-Up",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "inference",
+        "training"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: multimo",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r347a04fedc5368a",
+      "url": "https://arxiv.org/abs/2609.12471",
+      "title": "AMDKernelVault: Large-Scale Datasets and Agentic Training for AMD GPU Kernel Optimization",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations. Filed under research: llms, agents, reinforcement-learning.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5daf1e88f777c17",
+      "url": "https://arxiv.org/abs/2609.12475",
+      "title": "Zipbench: Low-Cost Framework for Compressing Comprehensive Benchmarks of Large Language Models",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "evaluation",
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: evaluation, llms, agents.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5f3e4e1a29abdef",
+      "url": "https://arxiv.org/abs/2609.12537",
+      "title": "The House with a Million Windows: Interactive Fiction for Narrative Restorying",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r77bc88016e6c8f1",
+      "url": "https://arxiv.org/abs/2609.12541",
+      "title": "Agent as Policy for Robotic Manipulation",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reasoning",
+        "multimodal"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 46.5,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: agents, reasoning, multimodal.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rac270795031977e",
+      "url": "https://arxiv.org/abs/2609.12544",
+      "title": "Meddies-PII: A Multilingual Framework for Personally Identifiable Information Extraction in Clinical De-identification",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "training",
+        "llms",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 42.0,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning, evaluation methodology. Filed under research: training, llms, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r195ff530f873798",
+      "url": "https://arxiv.org/abs/2609.12575",
+      "title": "Calibrated Ambiguity in Multimodal Language Models: Humans reach for cultural references, while models describe the picture",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 42.7,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference. Filed under research: multimodal.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rcd87700f515dbb6",
+      "url": "https://arxiv.org/abs/2609.12653",
+      "title": "SWARM: A Multilingual Human-Annotated Dataset for Russian Propaganda Detection in Search Engine Results",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "training",
+        "llms",
+        "evaluation"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 42.0,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning, evaluation methodology. Filed under research: training, llms, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra540e9649b29553",
+      "url": "https://arxiv.org/abs/2609.12655",
+      "title": "LifeMem: Enabling Lifelong Experience Reuse for LLM Agents",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "inference"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, agents, inference.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re3456484497f966",
+      "url": "https://arxiv.org/abs/2609.11934",
+      "title": "Fundamental Dynamical Units for Physics-Informed Structural Inference from Perturbation Time-Series in Networked Systems",
+      "source": "arXiv cs.LG",
+      "section": "release",
+      "topics": [
+        "inference",
+        "interpretability"
+      ],
+      "qualityScore": 90.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under release: infe",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rcd5dec55ca06523",
+      "url": "https://arxiv.org/abs/2609.11937",
+      "title": "Fed-Equilibrium Framework for Topological Pareto Control in Robust and Fair Clinical Federated Learning",
+      "source": "arXiv cs.LG",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 49.4,
+      "whyRelevant": "Matches strong interest: LLM and agent security, open-weight models and local inference. Filed under security: ai-security.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r29c1ff4038dcd95",
+      "url": "https://arxiv.org/abs/2609.11954",
+      "title": "Efficient AI Model Deployment Using Quantization Analysis Tool",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "inference",
+        "deep-learning"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under research: inference, deep-l",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r43ffcf9a366e7fe",
+      "url": "https://arxiv.org/abs/2609.11956",
+      "title": "Performance, Efficiency and Collapse -- Advantages and Challenges in Offline Post-training of Code LLMs",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "training",
+        "llms"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, deploying and serving models in production. Filed under research: reinforcement-learning, training, llms.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra06c2c96c7c3b7f",
+      "url": "https://arxiv.org/abs/2609.11959",
+      "title": "Space as an Interventional Invariant: Cross-Modal Predictive Geometry for Stratified Cities and Em-Spaced Intelligence",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 30.1,
+      "whyRelevant": "Adjacent to medium interest: multimodal models, evaluation methodology. Filed under research: multimodal, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r7711dc0b7ee8ee9",
+      "url": "https://arxiv.org/abs/2609.11961",
+      "title": "On-Device Language Models for Privacy-Preserving Stress Prediction: A Multimodal Evaluation on Mobile Health",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "inference",
+        "multimodal"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inf",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r0288ccf77a04bc0",
+      "url": "https://arxiv.org/abs/2609.11993",
+      "title": "FINESSE: An Agent-Based Simulator and Benchmark Dataset for Multimodal Financial Event Sequences",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "training",
+        "agents"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 32.0,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning, multimodal models. Filed under research: multimodal, training, agents.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ree849e1939b768d",
+      "url": "https://arxiv.org/abs/2609.11995",
+      "title": "Explainable Prediction from Mobile Sensing Data through LLM-guided Concept Integration",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "llms",
+        "training"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 37.1,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning. Filed under research: llms, training.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3758c569ff57d47",
+      "url": "https://arxiv.org/abs/2609.11997",
+      "title": "DCRA: Diffusion-Conditioned Representation Alignment for Robust Time-Series Learning",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "ai-safety",
+        "llms"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 73.2,
+      "whyRelevant": "Matches strong interest: ML foundations, deploying and serving models in production. Filed under research: generative-ai, ai-safety, llms.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r85207316c63386c",
+      "url": "https://arxiv.org/abs/2609.11998",
+      "title": "Fixed State, Long Reach: What a Constant-Size Cache Buys Block Diffusion at Scale",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "inference",
+        "generative-ai"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 78.1,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inferen",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r35ac98b2baae057",
+      "url": "https://arxiv.org/abs/2609.12002",
+      "title": "Can We Trust LLM Judges: A Study of Capability-Dependent Biases and Multi-Judge Ensemble for Bias Calibration",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 59.4,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference, deploying and serving models in production. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rfd1b6e49639eee3",
+      "url": "https://arxiv.org/abs/2609.12011",
+      "title": "QTrans: A Quantum Transformer for Sentiment Classification",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "llms",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, how LLMs work internally, ML foundations. Filed under research: llms, deep-learning, training.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3f1acd86344f0cd",
+      "url": "https://arxiv.org/abs/2609.12014",
+      "title": "Certified Safety Curation: Distribution-Free Guarantees for Safe Offline Reinforcement Learning",
+      "source": "arXiv cs.LG",
+      "section": "security",
+      "topics": [
+        "ai-safety",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 27.1,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning. Filed under security: ai-safety, reinforcement-learning.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd636cb0e0882852",
+      "url": "https://arxiv.org/abs/2609.12016",
+      "title": "Inverting Self-Triggered Control: Adversarial Reinforcement Learning for Sparse Denial-of-Service Attacks",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "ai-security",
+        "agents"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 46.5,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under research: reinforcement-learning, ai-security, agents.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd698d5ac27dd7d3",
+      "url": "https://arxiv.org/abs/2609.12018",
+      "title": "Toward Reliable Railway-Bogie Response Prediction Using Multifidelity TDNN and Physics-Informed Residual Learning",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "evaluation",
+        "ai-safety"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 46.5,
+      "whyRelevant": "Matches strong interest: ML foundations. Filed under research: deep-learning, evaluation, ai-safety.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd2f5a9005cdc19d",
+      "url": "https://arxiv.org/abs/2609.12020",
+      "title": "Reinforcement Learning for Syndrome Extraction",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 59.4,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, deploying and serving models in production. Filed under research: reinforcement-learning.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r279db0b265155ae",
+      "url": "https://arxiv.org/abs/2609.12113",
+      "title": "Score-based Outlier Generation via Controlling the Radon-Nikodym Derivative",
+      "source": "arXiv cs.LG",
+      "section": "security",
+      "topics": [
+        "generative-ai",
+        "ai-security"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: generative-ai, ai-security.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf45c10fc01594bc",
+      "url": "https://arxiv.org/abs/2609.12119",
+      "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "deep-learning"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: ML foundations. Filed under research: deep-learning.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "reda3c96833f0923",
+      "url": "https://arxiv.org/abs/2609.12137",
+      "title": "GUIDE: Generative Utility Inference and Decision Engine",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "llms",
+        "deep-learning",
+        "inference"
+      ],
+      "qualityScore": 90.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under r",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re4aeef26a7bd653",
+      "url": "https://arxiv.org/abs/2609.12163",
+      "title": "Certifying Concept Unlearning in Text-to-Image Diffusion Models",
+      "source": "arXiv cs.LG",
+      "section": "security",
+      "topics": [
+        "generative-ai",
+        "ai-security",
+        "multimodal"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: generative-ai, ai-security, multimodal.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r778f4ee330f8a12",
+      "url": "https://arxiv.org/abs/2609.12173",
+      "title": "Estimating Pedestrian Volumes from GIS-Derived Built-Environment Features: A Machine Learning Framework",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "ai-safety"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 42.7,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability. Filed under research: ai-safety.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbfb8257575fd2f7",
+      "url": "https://arxiv.org/abs/2609.12223",
+      "title": "Predicting Collision Cross Sections with GRACE: Geometric Residual Adduct Conditioning via Early-fusion",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "llms",
+        "evaluation"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: how LLMs work internally. Filed under research: llms, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb5245f53fc02c15",
+      "url": "https://arxiv.org/abs/2609.12224",
+      "title": "Patient-Reported Survey Data Improve Prediction of Opioid Use Disorder",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 59.4,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, deploying and serving models in production. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r96a8eb3fdc29d14",
+      "url": "https://arxiv.org/abs/2609.12225",
+      "title": "PLSP (Pre-hoc Liminal Space Profiling): OOD Prediction over Detection -- An Anticipatory Approach for Machine Learning Model Reliability",
+      "source": "arXiv cs.LG",
+      "section": "security",
+      "topics": [
+        "evaluation",
+        "training",
+        "inference"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under security: evaluation, training, inference.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r286cc2f2368694e",
+      "url": "https://arxiv.org/abs/2609.12078",
+      "title": "Feature Recovery for Object Understanding After Irreversible Fire Damage",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "reasoning",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, reasoning and inference efficiency, deploying and serving models in production. Filed under research: multimodal, reasoning, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc5d73530a926e7a",
+      "url": "https://arxiv.org/abs/2609.12090",
+      "title": "Does Video Memory Use What It Retrieves? A Causal Audit of Memory Specificity",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 28.2,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning, multimodal models. Filed under research: multimodal.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r0e56df9cce6f4d4",
+      "url": "https://arxiv.org/abs/2609.12099",
+      "title": "Beyond Argmax: A Mechanistic Study of Semantic Retention in Frozen Foundation-Model Composition for Generalized Few-Shot 3D Segmentation",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "interpretability",
+        "inference",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: int",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3bfd71a3009aa97",
+      "url": "https://arxiv.org/abs/2609.12151",
+      "title": "HSI-Road Relabeled: Surface-Aware Road-Scene Segmentation",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "training"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 11.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: training.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r85231e089fa9174",
+      "url": "https://arxiv.org/abs/2609.12155",
+      "title": "Single-Query Person-Centric Bimanual Hand-Object Interaction Detection",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "training"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency. Filed under research: llms, reasoning, training.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6353e94c1cb3e91",
+      "url": "https://arxiv.org/abs/2609.12168",
+      "title": "USPLIT-VQA: U-Shaped Split Learning for Visual Question Answering with Contribution-Aware Weighted Aggregation",
+      "source": "arXiv cs.CV",
+      "section": "security",
+      "topics": [
+        "multimodal",
+        "ai-security"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 61.3,
+      "whyRelevant": "Matches strong interest: LLM and agent security, deploying and serving models in production. Filed under security: multimodal, ai-security.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8d496c5f85fbd0b",
+      "url": "https://arxiv.org/abs/2609.12169",
+      "title": "When Ground-Truth Fidelity Matters: An Orchestrated UAS Framework for Wheat Streak Mosaic Virus Detection Using Vision Transformers and Machine Learning",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "llms",
+        "multimodal",
+        "ai-safety"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 39.0,
+      "whyRelevant": "Adjacent to medium interest: multimodal models. Filed under research: llms, multimodal, ai-safety.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd7c33a83835dff3",
+      "url": "https://arxiv.org/abs/2609.12181",
+      "title": "Physics as the label for measuring and correcting materials reasoning in multimodal models",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "multimodal",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 53.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, deploying and serving models in production. Filed under research: reasoning, multimodal, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6d3464a55ae4c8d",
+      "url": "https://arxiv.org/abs/2609.12202",
+      "title": "QuPAINT: Physics-Aware Multimodal Reasoning for Quantum Material Characterization",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "reasoning",
+        "training"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: multimo",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r05b3ad83b9f71fc",
+      "url": "https://arxiv.org/abs/2609.12261",
+      "title": "Revisiting Multi-Object Tracking Baselines: Hyperparameter Optimization with Multi-Fidelity Greedy Coordinate Search",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "training"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 42.7,
+      "whyRelevant": "Matches strong interest: ML foundations. Filed under research: training.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf80204bf43adf2d",
+      "url": "https://arxiv.org/abs/2609.12342",
+      "title": "UniMo: Unifying Human and Animal Motion Generation",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "training"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 17.7,
+      "whyRelevant": "Matches strong interest: how LLMs work internally. Filed under research: training.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r751344cfd47d212",
+      "url": "https://arxiv.org/abs/2609.12343",
+      "title": "VS-Splat: Voxel-Selective feed-forward Gaussian Splatting for end-to-end 3D object reconstruction from sparse-views",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 25.2,
+      "whyRelevant": "Adjacent to medium interest: evaluation methodology. Filed under research: evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf26ee7ebd6f8bce",
+      "url": "https://arxiv.org/abs/2609.12350",
+      "title": "EgoMaize: A First-Person Maize Instance Segmentation Benchmark under Severe Field Occlusion",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "evaluation",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: ML foundations, deploying and serving models in production. Filed under research: evaluation, deep-learning, training.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc867023ce0b4b9f",
+      "url": "https://arxiv.org/abs/2609.12397",
+      "title": "UFO: Chain-of-Evaluation for Omni-Condition Alignment in Multi-Modal Image Generation",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "ai-safety",
+        "multimodal",
+        "generative-ai"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, deploying and serving models in production. Filed under research: ai-safety, multimodal, generative-ai.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6c79856cd2652a1",
+      "url": "https://arxiv.org/abs/2609.12408",
+      "title": "GSO-Net: Visual State Machines for Hazardous Freight Transfer Compliance at Petrochemical Logistics Nodes",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "evaluation",
+        "multimodal",
+        "training"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 46.5,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference. Filed under research: evaluation, multimodal, training.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra4864a0e1667ee7",
+      "url": "https://arxiv.org/abs/2609.12409",
+      "title": "OphBiWSSD: Scaling Temporal Action Localization in Ophthalmic Surgeries with Bidirectional Weight-tied State Space Duality",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "evaluation"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, ML foundations, deploying and serving models in production. Filed under research: deep-learning, evaluation.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r065fb7a5c4e02e3",
+      "url": "https://arxiv.org/abs/2609.12410",
+      "title": "A Multimodal Explainable Deep Learning Framework for Alzheimer's Disease Diagnosis using 3D Magnetic Resonance Imaging and Clinical Data",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 90.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: how LLMs work internally. Filed under research: multimodal.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc72c847a33474cc",
+      "url": "https://arxiv.org/abs/2609.12411",
+      "title": "DERA: Detached Edge-Residual Adaptation for Prohibited item Detection",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "inference",
+        "multimodal"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inf",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r28f9aa7db86de4a",
+      "url": "https://arxiv.org/abs/2609.12431",
+      "title": "An End-to-End Automated Pipeline for Controllable Crack Data Synthesis",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "multimodal",
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: generative-ai, multimodal, infere",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf0d3b25233b40c0",
+      "url": "https://arxiv.org/abs/2609.12454",
+      "title": "Bridging Vision Foundation Model Priors with CLIP for Spatial-aware Few-shot Anomaly Detection in Medical Images",
+      "source": "arXiv cs.CV",
+      "section": "security",
+      "topics": [
+        "multimodal",
+        "ai-safety",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, how LLMs work internally, reasoning and inference efficiency, deploying and serving models in production. Filed under security: multimodal, ai-sa",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r45995265862da73",
+      "url": "https://arxiv.org/abs/2609.12491",
+      "title": "PhysioAI: Clinical Knowledge-Guided Semantic Supervision for Skeleton-Based Physiotherapy Action Recognition",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "inference"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under research: multimodal, infer",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r33747bb6e05e516",
+      "url": "https://arxiv.org/abs/2609.12497",
+      "title": "RoES: Rotational Equivariant Selective-frequency Fusion for Multimodal Images",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 49.4,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, how LLMs work internally. Filed under research: multimodal.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r132912b6e902877",
+      "url": "https://arxiv.org/abs/2609.12505",
+      "title": "LettuceVisSim: A Simulator That Generates Lettuce Image Time-series for Vision-Based Reinforcement Learning",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "multimodal",
+        "reasoning"
+      ],
+      "qualityScore": 90.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, deploying and serving models in production. Filed under research: reinforcement-learning, multimodal, reasoning.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9e670847e26d64b",
+      "url": "https://arxiv.org/abs/2609.12509",
+      "title": "ChitraMiti: Benchmarking Visual Grounding and Modality Reliance in Bengali Geometric Reasoning",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "reasoning",
+        "training"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: multimodal, reasoning, training.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8fb8e2f8b1ef841",
+      "url": "https://arxiv.org/abs/2609.12517",
+      "title": "One Skill Does Not Fit All: Automatic Discovery and Taxonomy-Guided Routing of Frame-Selection Skills for Long-Video Question Answering",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "agents",
+        "inference"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: multimodal, agents, inference.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rca68d6c504684b2",
+      "url": "https://arxiv.org/abs/2609.12521",
+      "title": "Aligned Radiometric RGB-Thermal Fusion for UAV Facade Anomaly Screening",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "training"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: multimodal, training.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r44f65e419f1f290",
+      "url": "https://arxiv.org/abs/2608.27875",
+      "title": "HyQuant: Hybrid-Precision Quantization for LLM Attention",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, i",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5b6abb1439c2c58",
+      "url": "https://arxiv.org/abs/2609.01515",
+      "title": "TempCloze: Can Video-LLMs Identify the Missing Middle?",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "ai-safety",
+        "reasoning"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 46.5,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: multimodal, ai-safety, reasoning.",
+      "seenAt": "2026-09-14T17:16:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8fbf36d9a91c4e4",
+      "url": "https://arxiv.org/abs/2609.05903",
+      "title": "EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents",
+      "source": "Hugging Face Daily Papers",
+      "section": "security",
+      "topics": [
+        "ai-safety",
+        "evaluation",
+        "agents"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Matches strong interest: LLM and agent security, ML foundations, deploying and serving models in production. Filed under security: ai-safety, evaluation, agents.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r4e70afc5b93411c",
+      "url": "https://arxiv.org/abs/2608.15380",
+      "title": "Adaptive Bridge: A Proxy-Based Decoupling Layer for Mitigating DDS Backpressure in ROS 2",
+      "source": "Hugging Face Daily Papers",
+      "section": "benchmark",
+      "topics": [
+        "inference",
+        "evaluation",
+        "ai-safety"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under benchmark: infere",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2900bd20a400c67",
+      "url": "https://arxiv.org/abs/2609.06931",
+      "title": "CARDEA: Auditable Reasoning Grounded in Spatial Evidence for End-to-End Coronary Angiography Interpretation",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "reasoning",
+        "multimodal"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 53.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, deploying and serving models in production. Filed under research: reinforcement-learning, reasoning, multimodal.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r0cd84c816942ecb",
+      "url": "https://arxiv.org/abs/2609.07064",
+      "title": "SpatialBlock: Enhancing Spatial Intelligence in LVLMs via Synthetic Block-Stacking Problem",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "training",
+        "multimodal",
+        "reasoning"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 53.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, deploying and serving models in production. Filed under research: training, multimodal, reasoning.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra96ad0ae5ed56c6",
+      "url": "https://arxiv.org/abs/2609.09076",
+      "title": "ActReview: Rebuttal-Guided Training Data and Rubric Rewards for Actionable Peer Review Generation",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "training",
+        "evaluation",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 32.0,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning, evaluation methodology. Filed under research: training, evaluation, reinforcement-learning.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r09a365603210b17",
+      "url": "https://arxiv.org/abs/2609.09143",
+      "title": "Studying Image Tokenizers as Visual Languages in Unified Multimodal Models",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "llms",
+        "generative-ai"
+      ],
+      "qualityScore": 80.5,
+      "relevanceScore": 73.2,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, ML foundations. Filed under research: multimodal, llms, generative-ai.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd2f98d7f4d3acb5",
+      "url": "https://arxiv.org/abs/2609.10745",
+      "title": "Think Before You Link: Rarity, Reasoning, and Retrieval in Multilingual Entity Linking",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "multimodal",
+        "llms"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: reasoning, multimodal, llms.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r23b3940b561b482",
+      "url": "https://arxiv.org/abs/2609.10539",
+      "title": "IdeaAMBIG: Benchmarking Implementation-Critical Gaps in Research-Idea Specifications",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 94.5,
+      "relevanceScore": 40.1,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning, evaluation methodology. Filed under research: agents, evaluation.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2fe66419bae9479",
+      "url": "https://arxiv.org/abs/2609.10445",
+      "title": "Building Multilingual Bridges: Data Mixing as the Pillar of Generalization for In-Language Reasoning",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "evaluation"
+      ],
+      "qualityScore": 80.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: reasoning, evaluation.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r68c0c08f43113a4",
+      "url": "https://arxiv.org/abs/2609.10016",
+      "title": "MetroLLM-Bench: Evaluating Language Models as Transit Kiosk Runtimes",
+      "source": "Hugging Face Daily Papers",
+      "section": "security",
+      "topics": [
+        "llms",
+        "evaluation",
+        "reasoning"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: LLM and agent security, reasoning and inference efficiency, deploying and serving models in production. Filed under security: llms, evaluation, reasoning.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r13cafb8278b4024",
+      "url": "https://arxiv.org/abs/2609.10712",
+      "title": "An Open Recipe for IMO Gold: Training Nemotron for Olympiad Mathematics",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "training",
+        "inference",
+        "reasoning"
+      ],
+      "qualityScore": 88.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: training, inference, reasoning.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r75ee456968c00a6",
+      "url": "https://arxiv.org/abs/2609.10715",
+      "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
+      "source": "Hugging Face Daily Papers",
+      "section": "release",
+      "topics": [
+        "llms",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 86.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, ML foundations, deploying and serving models in production. Filed under release: llms, deep-learning, training.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r493653d4e08997a",
+      "url": "https://arxiv.org/abs/2609.11155",
+      "title": "DRG-MAPPO: Hierarchical Dynamic Role-Graph Multi-Agent Reinforcement Learning for Cooperative Air Combat",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 88.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, how LLMs work internally, ML foundations, deploying and serving models in production. Filed under research: agents, reinforcement-learning.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r0d78994210d6160",
+      "url": "https://arxiv.org/abs/2609.11156",
+      "title": "UniH^3: Unifying Hierarchical Homogeneity and Heterogeneity for All-in-One Medical Image Restoration",
+      "source": "Hugging Face Daily Papers",
+      "section": "security",
+      "topics": [
+        "multimodal",
+        "evaluation",
+        "ai-security"
+      ],
+      "qualityScore": 94.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, LLM and agent security, ML foundations, deploying and serving models in production. Filed under security: multimodal, evaluation, ai-security.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6aac5791d3520a9",
+      "url": "https://arxiv.org/abs/2609.11808",
+      "title": "Generative Late-Interaction Embeddings For Visual Document Retrieval",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 88.5,
+      "relevanceScore": 59.4,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, deploying and serving models in production. Filed under research: multimodal.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5a359ddb90f7742",
+      "url": "https://arxiv.org/abs/2609.11499",
+      "title": "Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "agents"
+      ],
+      "qualityScore": 80.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: multimodal, agents.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb2db7e146f13ef3",
+      "url": "https://arxiv.org/abs/2609.11085",
+      "title": "Beyond Solver Verdicts: Generative Reward Models for Autoformalization",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, reasoning and inference efficiency, deploying and serving models in production. Filed under research: reasoning, llms, agents.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb041f208d072219",
+      "url": "https://arxiv.org/abs/2609.11699",
+      "title": "Negative Self-Distillation: Learning to Reason by Avoiding Flaws",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "llms",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 80.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, deploying and serving models in production. Filed under research: reasoning, llms, reinforcement-learning.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2a0e56f700e1f45",
+      "url": "https://arxiv.org/abs/2609.11486",
+      "title": "FreeFlow: A Bias-free Hierarchical Transformer for Optical Flow Estimation",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "deep-learning",
+        "inference"
+      ],
+      "qualityScore": 88.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under r",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "raffc19bf90f5153",
+      "url": "https://arxiv.org/abs/2609.11561",
+      "title": "Memory as Plans: World-Action Modeling with Memory-Grounded Planning",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "reasoning",
+        "inference"
+      ],
+      "qualityScore": 88.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: multimo",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1a6f256782f7186",
+      "url": "https://arxiv.org/abs/2609.11412",
+      "title": "X-AuT: Progressive Audio-Encoder Compression for Speech LLMs with Cross-Scale Distillation",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "inference",
+        "ai-safety"
+      ],
+      "qualityScore": 78.5,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: multimo",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r03829f114a06b2c",
+      "url": "https://arxiv.org/abs/2609.11317",
+      "title": "Mi-Ripple: Restoring Images Degraded by Iterative AI Editing",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 25.2,
+      "whyRelevant": "Adjacent to medium interest: multimodal models. Filed under research: multimodal.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r675360e95c46bb9",
+      "url": "https://arxiv.org/abs/2609.11929",
+      "title": "SenseNova-U1.5: Towards Native Unified Visual Intelligence",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 80.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations, deploying and serving models in production. Filed under research: multimodal, deep-learning, training.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf4412618f8cd919",
+      "url": "https://machinelearning.apple.com/research/proof-gen-optimized-distillation",
+      "title": "PROOF-Gen: From Optimized Data to Better Distillation",
+      "source": "Apple Machine Learning Research",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reasoning",
+        "training"
+      ],
+      "qualityScore": 74.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: agents, reasoning, training.",
+      "seenAt": "2026-09-14T17:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1e62b5a07e3f5cc",
+      "url": "https://www.amazon.science/blog/graviton5s-improved-design-increases-speed-and-energy-efficiency-beyond-moores-law",
+      "title": "Graviton5&#8217;s improved design increases speed and energy efficiency &#8212; beyond Moore&#8217;s law",
+      "source": "Amazon Science",
+      "section": "research",
+      "topics": [
+        "agents",
+        "deep-learning"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: ML foundations. Filed under research: agents, deep-learning.",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r4474b61fa55278a",
+      "url": "https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/",
+      "title": "Build interactive MCP Apps using Amazon Bedrock AgentCore",
+      "source": "AWS Machine Learning Blog",
+      "section": "research",
+      "topics": [
+        "agents",
+        "llms"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 37.1,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning. Filed under research: agents, llms.",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5d430a9ae2c9229",
+      "url": "https://aws.amazon.com/blogs/machine-learning/reduce-llm-latency-with-prefix-aware-routing-on-amazon-sagemaker-inference/",
+      "title": "Reduce LLM latency with prefix-aware routing on Amazon SageMaker Inference",
+      "source": "AWS Machine Learning Blog",
+      "section": "research",
+      "topics": [
+        "inference",
+        "llms"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inferen",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbf3c35ce00f9bb6",
+      "url": "https://aws.amazon.com/blogs/machine-learning/reduce-inference-cold-starts-on-amazon-sagemaker-hyperpod-with-model-caching/",
+      "title": "Reduce inference cold starts on Amazon SageMaker HyperPod with model caching",
+      "source": "AWS Machine Learning Blog",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 80.5,
+      "relevanceScore": 66.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference.",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1ece0c71b36306e",
+      "url": "https://aws.amazon.com/blogs/machine-learning/model-agnostic-pii-detection-with-llms/",
+      "title": "Model-agnostic PII detection with LLMs",
+      "source": "AWS Machine Learning Blog",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd2835f9807e2ac5",
+      "url": "https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/",
+      "title": "MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet",
+      "source": "Engineering at Meta",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 74.5,
+      "relevanceScore": 66.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference.",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r00d36ce223a0948",
+      "url": "https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/",
+      "title": "From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking",
+      "source": "Engineering at Meta",
+      "section": "research",
+      "topics": [
+        "deep-learning"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 59.4,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, ML foundations. Filed under research: deep-learning.",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r08e8c32275c9a58",
+      "url": "https://developer.nvidia.com/blog/high-throughput-structure-prediction-with-bionemo-inference-runtime/",
+      "title": "High-Throughput Structure Prediction with BioNeMo Inference Runtime",
+      "source": "NVIDIA Technical Blog",
+      "section": "research",
+      "topics": [
+        "inference",
+        "multimodal"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference, multimodal.",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra0a8db0501c1ab9",
+      "url": "https://developer.nvidia.com/blog/co-designing-ai-models-using-speculative-decoding-for-faster-llm-inference/",
+      "title": "Co-Designing AI Models Using Speculative Decoding for Faster LLM Inference",
+      "source": "NVIDIA Technical Blog",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference",
+        "multimodal"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference, multimodal.",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r057fdf340cf22cf",
+      "url": "https://developer.nvidia.com/blog/experiment-with-qwen3-8-flash-next-on-nvidia-gb300-nvl72-for-agentic-coding/",
+      "title": "Experiment with Qwen3.8-Flash-Next on NVIDIA GB300 NVL72 for Agentic Coding",
+      "source": "NVIDIA Technical Blog",
+      "section": "research",
+      "topics": [
+        "agents",
+        "llms",
+        "multimodal"
+      ],
+      "qualityScore": 74.5,
+      "relevanceScore": 39.0,
+      "whyRelevant": "Adjacent to medium interest: multimodal models. Filed under research: agents, llms, multimodal.",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf918b7edfc34f98",
+      "url": "https://developer.nvidia.com/blog/how-nvidia-groq-3-lpx-unlocks-ultrafast-interactivity-at-long-context-on-nvidia-vera-rubin/",
+      "title": "How NVIDIA Groq 3 LPX Unlocks Ultrafast Interactivity at Long Context on NVIDIA Vera Rubin",
+      "source": "NVIDIA Technical Blog",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "multimodal",
+        "inference"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under research: deep-learning, mu",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r49b63e82a831501",
+      "url": "https://developer.nvidia.com/blog/gpu-accelerated-clustering-for-financial-instruments-at-scale/",
+      "title": "GPU-Accelerated Clustering for Financial Instruments at Scale",
+      "source": "NVIDIA Technical Blog",
+      "section": "research",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 35.2,
+      "whyRelevant": "Adjacent to medium interest: multimodal models. Filed under research: multimodal.",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r296a8191b5dffae",
+      "url": "https://research.ibm.com/blog/nighthawk-r2?utm_medium=rss&utm_source=rss",
+      "title": "IBM Quantum Nighthawk r2—more circuits, faster",
+      "source": "IBM Research",
+      "section": "research",
+      "topics": [
+        "interpretability",
+        "inference"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: int",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra18402bb02db262",
+      "url": "https://blog.ml.cmu.edu/2026/08/10/forking-sequences-part-ii-multi-horizon-forecast-ensembling-with-reduced-volatility/",
+      "title": "Forking-Sequences — Part II: Multi-Horizon Forecast Ensembling with Reduced Volatility",
+      "source": "ML@CMU Blog",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 76.5,
+      "relevanceScore": 66.2,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inferen",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2898a53d04394ef",
+      "url": "https://news.mit.edu/2026/new-method-enables-ai-safety-critical-situations-0914",
+      "title": "New method enables AI for safety-critical situations",
+      "source": "MIT News - Artificial Intelligence",
+      "section": "research",
+      "topics": [
+        "ai-safety"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: ai-safety.",
+      "seenAt": "2026-09-14T17:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r482dbe5d2f8cf06",
+      "url": "http://jmlr.org/papers/v27/25-2424.html",
+      "title": "OptunaHub: A Platform for Black-Box Optimization",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "evaluation"
+      ],
+      "qualityScore": 68.2,
+      "relevanceScore": 49.4,
+      "whyRelevant": "Matches strong interest: ML foundations, deploying and serving models in production. Filed under research: evaluation.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r94bd9d5b1d4a9cd",
+      "url": "http://jmlr.org/papers/v27/25-2240.html",
+      "title": "Unveiling the Statistical Foundations of Chain-of-Thought Prompting Methods",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "llms",
+        "deep-learning"
+      ],
+      "qualityScore": 70.2,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, ML foundations. Filed under research: reasoning, llms, deep-learning.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rcfa7541468db6c4",
+      "url": "http://jmlr.org/papers/v27/25-2146.html",
+      "title": "Prob-GParareal: A Probabilistic Numerical Parallel-in-Time Solver for Differential Equations",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "evaluation"
+      ],
+      "qualityScore": 82.2,
+      "relevanceScore": 35.2,
+      "whyRelevant": "Adjacent to medium interest: evaluation methodology. Filed under research: evaluation.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rfbf21ac656e7092",
+      "url": "http://jmlr.org/papers/v27/25-0477.html",
+      "title": "A Theoretical Framework for Masked Pretraining (MPT)",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "training",
+        "ai-safety"
+      ],
+      "qualityScore": 88.2,
+      "relevanceScore": 23.1,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: training, ai-safety.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf80a67270d9f886",
+      "url": "http://jmlr.org/papers/v27/24-0515.html",
+      "title": "Robustness Against Weak or Invalid Instruments: Exploring Nonlinear Treatment Models with Machine Learning",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 70.2,
+      "relevanceScore": 66.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r67be8b5372d3047",
+      "url": "http://jmlr.org/papers/v27/25-3192.html",
+      "title": "From Zipf's Law to Neural Scaling through Heaps' Law and Hilberg's Hypothesis",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 70.2,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under research: deep-learning, ll",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1ba1c7e1465310a",
+      "url": "http://jmlr.org/papers/v27/25-2669.html",
+      "title": "Adaptive Algorithms for Infinitely Many-Armed Bandits: A Unified Framework",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning"
+      ],
+      "qualityScore": 70.2,
+      "relevanceScore": 35.2,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning. Filed under research: reinforcement-learning.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8a2aa6275bef74e",
+      "url": "http://jmlr.org/papers/v27/25-2560.html",
+      "title": "Gradient Estimation for Mixture Variational Inference",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 82.2,
+      "relevanceScore": 66.2,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inferen",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r96b3c370f7d7eab",
+      "url": "http://jmlr.org/papers/v27/25-2325.html",
+      "title": "Pointwise Confidence Estimation in the Non-linear $\\ell^2$-regularized Least Squares",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "training"
+      ],
+      "qualityScore": 82.2,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: training.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r97105595fdca25e",
+      "url": "http://jmlr.org/papers/v27/25-2248.html",
+      "title": "Safe Learning Under Irreversible Dynamics via Asking for Help",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reasoning"
+      ],
+      "qualityScore": 82.2,
+      "relevanceScore": 61.3,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference. Filed under research: agents, reasoning.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd0ecacc5d1f8f6f",
+      "url": "http://jmlr.org/papers/v27/25-2025.html",
+      "title": "Ehrenfeucht-Haussler Rank and  Chain of Thought",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "llms",
+        "deep-learning"
+      ],
+      "qualityScore": 70.2,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, ML foundations. Filed under research: reasoning, llms, deep-learning.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra41ef089a47e144",
+      "url": "http://jmlr.org/papers/v27/25-1621.html",
+      "title": "On the Effectiveness of the z-Transform Method in Quadratic Optimization",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "deep-learning"
+      ],
+      "qualityScore": 82.2,
+      "relevanceScore": 59.4,
+      "whyRelevant": "Matches strong interest: ML foundations, deploying and serving models in production. Filed under research: deep-learning.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r7d0f96ccdb88355",
+      "url": "http://jmlr.org/papers/v27/25-1522.html",
+      "title": "Breaking the Curse of Dimensionality: Diffusion Models Efficiently Learn Low-Dimensional Distributions",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "multimodal"
+      ],
+      "qualityScore": 70.2,
+      "relevanceScore": 50.1,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning, multimodal models. Filed under research: generative-ai, multimodal.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r48704b252935028",
+      "url": "http://jmlr.org/papers/v27/25-1164.html",
+      "title": "Viscosity Convergence Analysis for Deep Q-Networks",
+      "source": "JMLR (Journal of Machine Learning Research)",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 70.2,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: ML foundations. Filed under research: deep-learning, reinforcement-learning.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r798ae12d865fecc",
+      "url": "https://blog.eleuther.ai/sae_seed_similarity/",
+      "title": "SAEs trained on the same data don’t learn the same features",
+      "source": "EleutherAI Blog",
+      "section": "research",
+      "topics": [
+        "interpretability"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability. Filed under research: interpretability.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1e9d87541d1fd21",
+      "url": "https://epochai.substack.com/p/the-epoch-brief-september-12-2026",
+      "title": "The Epoch Brief - September 12, 2026",
+      "source": "Epoch AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "evaluation"
+      ],
+      "qualityScore": 72.5,
+      "relevanceScore": 37.1,
+      "whyRelevant": "Adjacent to medium interest: evaluation methodology. Filed under research: llms, evaluation.",
+      "seenAt": "2026-09-14T17:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd0fe4023d878519",
+      "url": "https://nicholas.carlini.com/writing/2024/why-i-attack.html",
+      "title": "Why I attack",
+      "source": "Nicholas Carlini",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 68.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: ai-security.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf7b82a0c680370f",
+      "url": "https://arxiv.org/abs/2609.12367",
+      "title": "Membership Inference via Pairwise Likelihood Ratios",
+      "source": "arXiv stat.ML",
+      "section": "security",
+      "topics": [
+        "inference",
+        "ai-security"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: LLM and agent security, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under security: inference",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r36a7b887a3d13e7",
+      "url": "https://arxiv.org/abs/2609.12421",
+      "title": "Inference for Newton Methods with Accelerated Sketch-and-Project via Random Scaling",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "inference",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference, evaluation.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r20c350a3b095314",
+      "url": "https://arxiv.org/abs/2609.12513",
+      "title": "A Splitting Method for SDE Terminal-Law Estimation",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "inference"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 78.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under research: generative-ai, in",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r570f9cd46dc0369",
+      "url": "https://arxiv.org/abs/2609.10313",
+      "title": "Semiparametric Inference for Conditional Shapley Feature Importance",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "interpretability",
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbe97120b3a17c54",
+      "url": "https://arxiv.org/abs/2609.12301",
+      "title": "PDE-constrained inverse problems at the $\\sqrt{n}$ rate via debiased physics-informed neural networks",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "inference",
+        "deep-learning"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under research: inference, deep-l",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3dbe2537cfd30a1",
+      "url": "https://arxiv.org/abs/2609.12994",
+      "title": "Dimension-Corrected Hitting Times for Heavy-Tailed Spectral Emergence in Neural Optimizer Dynamics",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 35.2,
+      "whyRelevant": "Adjacent to medium interest: reinforcement learning. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r67b9867a712d76c",
+      "url": "https://arxiv.org/abs/2609.12996",
+      "title": "A Full Adam Theorem for Spectral Heavy-Tail Onset",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 56.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rcd27a9fefdca8c1",
+      "url": "https://arxiv.org/abs/2501.04234",
+      "title": "Statistical Uncertainty Quantification for Aggregate Performance Metrics in Machine Learning Benchmarks",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "evaluation",
+        "multimodal"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 44.6,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: evaluation, multimodal.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2f21ff44cd08bd2",
+      "url": "https://arxiv.org/abs/2504.07133",
+      "title": "Can SGD Select Good Fishermen? Local Convergence under Self-Selection Biases",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "agents",
+        "inference"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: agents, inference.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r99070bb952aa504",
+      "url": "https://arxiv.org/abs/2510.26046",
+      "title": "Bias-Corrected Data Synthesis for Imbalanced Learning",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "evaluation"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 52.7,
+      "whyRelevant": "Matches strong interest: how LLMs work internally. Filed under research: evaluation.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r84e9815b5a88a60",
+      "url": "https://arxiv.org/abs/2504.05431",
+      "title": "A Generalized Tangent Approximation based Variational Inference Framework for Strongly Super-Gaussian Likelihoods",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 90.5,
+      "relevanceScore": 66.2,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under r",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2f748e0b2d763bd",
+      "url": "https://arxiv.org/abs/2506.19960",
+      "title": "An ab initio foundation model of wavefunctions that accurately describes chemical bond breaking",
+      "source": "arXiv stat.ML",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 42.7,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: ai-security.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9a38445b63c2292",
+      "url": "https://arxiv.org/abs/2609.12756",
+      "title": "MAAPO:an innovative membrane algorithm based on artificial protozoa optimizer for multilevel threshold image segmentation",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: ML foundations. Filed under research: multimodal, reinforcement-learning.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r773abfe48d5fbbd",
+      "url": "https://arxiv.org/abs/2601.10657",
+      "title": "PACEvolve: Enabling Progress-Aware Consistent Evolution",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "agents"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations, open-weight models and local inference. Filed under research: reasoning, agents.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbe3e0afbbed0552",
+      "url": "https://arxiv.org/abs/2602.13008",
+      "title": "Machine Learning-Based Classification of Jhana Advanced Concentrative Absorption Meditation Using 7 Tesla Functional Magnetic Resonance Imaging",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 44.6,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: training, evaluation.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2d155c56d429e62",
+      "url": "https://arxiv.org/abs/2609.12748",
+      "title": "The Mechanics of a Swarm: A Reproducible External Reconstruction of an Unintended Agent-Coordination Episode on a Third-Party Wiki",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference. Filed under research: agents, evaluation.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re68b1c960d4af0a",
+      "url": "https://arxiv.org/abs/2202.10883",
+      "title": "Information Design in Smooth Games",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: agents.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re69d12c1eb47747",
+      "url": "https://arxiv.org/abs/2609.12077",
+      "title": "Deriving the Pure Price of Anarchy for Networked Resource Allocation Games",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 44.6,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: agents, evaluation.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd390d1f9a160c23",
+      "url": "https://arxiv.org/abs/2609.12422",
+      "title": "Hierarchical Belief Modeling for Zero-Shot Opponent Adaptation in Partially Observable Multi-Agent Navigation",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reinforcement-learning",
+        "reasoning"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 53.2,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency. Filed under research: agents, reinforcement-learning, reasoning.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbdc5de86f63491f",
+      "url": "https://arxiv.org/abs/2609.12746",
+      "title": "What Drives Recovery in Agentic Text-to-Cypher? LAST-CQ: An LLM Agent Self-Refinement Framework",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: how LLMs work internally. Filed under research: llms, agents.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9820741425c5a99",
+      "url": "https://arxiv.org/abs/2609.12929",
+      "title": "DementiaCare-Bench: A Modality-Validated Video Benchmark",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "evaluation",
+        "llms"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference, deploying and serving models in production. Filed under research: multimodal, evaluation, llms.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re183c36becd10ae",
+      "url": "https://arxiv.org/abs/2603.01131",
+      "title": "MedCollab: IBIS-Guided Multi-Agent Collaboration with Hierarchical Disease Relation Chains for Clinical Diagnosis",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reasoning"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 51.3,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference. Filed under research: agents, reasoning.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra0ba8aaa8d63859",
+      "url": "https://arxiv.org/abs/2608.15424",
+      "title": "ETHOS: Towards a Modular Ethics Framework for Clinical Multi-Agent Systems",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents",
+        "ai-safety",
+        "reasoning"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: agents, ai-safety, reasoning.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rfb3a9bf71a4dfeb",
+      "url": "https://arxiv.org/abs/2602.04850",
+      "title": "El Agente Quntur: A research collaborator agent for quantum chemistry",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reasoning"
+      ],
+      "qualityScore": 98.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency. Filed under research: agents, reasoning.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r46356adff527f1c",
+      "url": "https://arxiv.org/abs/2605.06377",
+      "title": "Independent Learning of Nash Equilibria in Partially Observable Markov Potential Games with Decoupled Dynamics",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 90.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: deploying and serving models in production. Filed under research: agents, reinforcement-learning.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8fdf9e3abd40436",
+      "url": "https://arxiv.org/abs/2609.03753",
+      "title": "SimSkill: A Self-Evolving LLM Agent for Skill and Knowledge Accumulation in Traffic Simulation",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents",
+        "llms",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: open-weight models and local inference. Filed under research: agents, llms, reinforcement-learning.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "raaa8e9e41cdd0d4",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260914.g9c1b0a610",
+      "title": "Release v0.61.0-nightly.20260914.g9c1b0a610",
+      "source": "Gemini CLI Releases",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r934d105f2ce9bb3",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260913.g9c1b0a610",
+      "title": "Release v0.61.0-nightly.20260913.g9c1b0a610",
+      "source": "Gemini CLI Releases",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra4bfff6863e329e",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260912.g9c1b0a610",
+      "title": "Release v0.61.0-nightly.20260912.g9c1b0a610",
+      "source": "Gemini CLI Releases",
+      "section": "security",
+      "topics": [
+        "llms",
+        "ai-security"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: llms, ai-security.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r781312b6084c5d3",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260911.ged2ac40df",
+      "title": "Release v0.61.0-nightly.20260911.ged2ac40df",
+      "source": "Gemini CLI Releases",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbc8f89ddb5d3719",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260910.ged2ac40df",
+      "title": "Release v0.61.0-nightly.20260910.ged2ac40df",
+      "source": "Gemini CLI Releases",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r7b4fc892e38f919",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260909.ged2ac40df",
+      "title": "Release v0.61.0-nightly.20260909.ged2ac40df",
+      "source": "Gemini CLI Releases",
+      "section": "research",
+      "topics": [
+        "llms",
+        "ai-security"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 54.6,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under research: llms, ai-security.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf099300696505b2",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0-preview.0",
+      "title": "Release v0.60.0-preview.0",
+      "source": "Gemini CLI Releases",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "ai-security"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under research: llms, agents, ai-security.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r7b04942d7488f32",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0-nightly.20260908.g85aca163f",
+      "title": "Release v0.60.0-nightly.20260908.g85aca163f",
+      "source": "Gemini CLI Releases",
+      "section": "research",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 21.2,
+      "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms.",
+      "seenAt": "2026-09-14T17:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rdb6c34d3204d219",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10964",
+      "title": "b10964",
+      "source": "llama.cpp Releases",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r33ed23a7214d2ed",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10964-b10964-b29c606",
+      "title": "b10964-b10964-b29c606",
+      "source": "llama.cpp Releases",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf9fc944a5b37ad6",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10956",
+      "title": "b10956",
+      "source": "llama.cpp Releases",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 82.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, i",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9d2d6ad4cba6816",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10955",
+      "title": "b10955",
+      "source": "llama.cpp Releases",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb14753a6c95231f",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10952",
+      "title": "b10952",
+      "source": "llama.cpp Releases",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r946067cd360eca5",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10951",
+      "title": "b10951",
+      "source": "llama.cpp Releases",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r44d7e5b95de07e1",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10950",
+      "title": "b10950",
+      "source": "llama.cpp Releases",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2af3efe3a709a45",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10948",
+      "title": "b10948",
+      "source": "llama.cpp Releases",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbc4022ea30aab32",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10947",
+      "title": "b10947",
+      "source": "llama.cpp Releases",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r543d1e00f1a2c66",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10946",
+      "title": "b10946",
+      "source": "llama.cpp Releases",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 70.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: llms, inference.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r448701fe99745f6",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0",
+      "title": "v0.29.0",
+      "source": "vLLM Releases",
+      "section": "research",
+      "topics": [
+        "inference",
+        "llms"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 68.1,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, how LLMs work internally, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "redce4619b6a48b7",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc5",
+      "title": "v0.34.0-rc5",
+      "source": "Ollama Releases",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 56.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd667742c19e17d4",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc4",
+      "title": "v0.34.0-rc4",
+      "source": "Ollama Releases",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 56.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8bdfb0a147e7162",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc3",
+      "title": "v0.34.0-rc3",
+      "source": "Ollama Releases",
+      "section": "research",
+      "topics": [
+        "inference",
+        "agents"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference, agents.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r658f4878bb89f85",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc2",
+      "title": "v0.34.0-rc2",
+      "source": "Ollama Releases",
+      "section": "research",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 66.5,
+      "relevanceScore": 56.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under research: inference.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r224582a7b9d1bd3",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.33.3-rc2",
+      "title": "v0.33.3-rc2: gemma4: image and audio input support",
+      "source": "Ollama Releases",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "llms",
+        "deep-learning"
+      ],
+      "qualityScore": 74.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: ML foundations, open-weight models and local inference. Filed under research: multimodal, llms, deep-learning.",
+      "seenAt": "2026-09-14T17:16:36+00:00",
+      "status": "radar"
+    }
+  ]
+}

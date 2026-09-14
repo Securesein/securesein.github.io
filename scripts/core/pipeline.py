@@ -52,8 +52,9 @@ from .profile import (
     relevance_rank,
     why_relevant,
 )
+from .constants import seen_items_file
 from .radar import Radar, radar_id
-from .state import reject
+from .state import read_json, reject, write_json
 
 
 @dataclass
@@ -87,6 +88,7 @@ class Outcome:
     duplicates: int = 0
     gate_failed: int = 0
     scores: list[float] = field(default_factory=list)
+    first_run: bool = False
 
 
 def ingest(source_files, *, limit: int | None = None) -> list[Item]:
@@ -112,21 +114,52 @@ def ingest(source_files, *, limit: int | None = None) -> list[Item]:
     return items
 
 
+def _seen(channel: str) -> tuple[set[str], bool]:
+    """(already-seen item ids, is_first_run).
+
+    Added after the Phase 3 dry run, which showed the cost of not having
+    it: the research and security channels each scored ~780 items on
+    every invocation, and would have re-scored the same ~780 four hours
+    later. arXiv cs.AI alone hands back 270 entries per fetch whether
+    they are an hour or a month old.
+
+    The first run has no baseline, so everything currently visible would
+    read as new. It records a baseline and scores nothing — the same
+    protection the Releases channel already had, for the same reason.
+    """
+    path = seen_items_file(channel)
+    if not path.exists():
+        return set(), True
+    return set(read_json(path, {"ids": []})["ids"]), False
+
+
+def _remember(channel: str, ids: set[str], dry_run: bool) -> None:
+    """Written in a dry run too, deliberately: this is a CURSOR, not a
+    publication record, the same category as queue.json. Holding it back
+    would make every dry run a first run and would never show what a
+    SECOND run looks like — which is the only thing a calibration week
+    actually measures."""
+    write_json(seen_items_file(channel), {"ids": sorted(ids)[-40000:]})
+
+
 def run_flow(
     ctx,
     *,
     channel: str,
     sections: tuple[str, ...],
     source_files,
-    section_hint: str = "",
     extra_reject=None,
 ) -> Outcome:
     """Ingest through ranking, for a channel that owns one or more
-    sections. Items classified into a section this channel does not own
-    are not dropped — they go to the Radar, because another channel may
-    well pick the same item up on its own run, and an item silently
-    discarded because the wrong channel saw it first is exactly the kind
-    of loss the Radar exists to prevent.
+    sections.
+
+    The channel does NOT influence classification — see the note in
+    core/classify.deterministic_axes. Items classified into a section
+    this channel does not own are not dropped either: they go to the
+    Radar, because the channel that does own that section will meet the
+    same item on its own run, and an item silently discarded because the
+    wrong channel saw it first is exactly the loss the Radar exists to
+    prevent.
     """
     llm, dry_run = ctx.llm, ctx.dry_run
     prof: Profile = load_profile_object()
@@ -135,9 +168,33 @@ def run_flow(
     radar: Radar = ctx.radar
 
     outcome = Outcome()
-    items = ingest(source_files, limit=ctx.limit)
+    fetched = ingest(source_files, limit=ctx.limit)
+    seen, first_run = _seen(channel)
+    everything = set(seen) | {i.id for i in fetched}
+    items = [i for i in fetched if i.id not in seen]
+    _remember(channel, everything, dry_run)
+    outcome.first_run = first_run
+
     outcome.seen = len(items)
-    print(f"  {len(items)} item(s) ingested.")
+    if first_run:
+        # A first run SCORES everything currently visible and PUBLISHES
+        # nothing. Both halves matter and they are usually conflated.
+        #
+        # Publishing nothing, because everything a feed happens to be
+        # showing on the day the pipeline is switched on is not news —
+        # it is a month of arXiv, and a budget of two per run would work
+        # through it two at a time for a fortnight.
+        #
+        # Scoring everything, because the Radar is retention rather than
+        # a queue: those items are exactly the back catalogue a later
+        # deep dive is drawn from, they cost one cheap classification
+        # each, and a first run that scored nothing would leave the
+        # calibration pass with an empty distribution to tune against.
+        # They stay on the Radar and stay eligible for promotion.
+        print(f"  FIRST RUN: {len(items)} item(s) will be scored onto the "
+              f"Radar; nothing will be published or queued.")
+    else:
+        print(f"  {len(fetched)} fetched, {len(items)} new since the last run.")
 
     for item in items:
         # 1. dedup — cheapest first. A duplicate costs nothing to
@@ -170,7 +227,7 @@ def run_flow(
                 continue
 
         # 4. classification into the three closed vocabularies.
-        axes = classify.classify_axes(llm, item, section_hint)
+        axes = classify.classify_axes(llm, item)
         candidate = Candidate(
             item=item,
             section=axes["section"],
@@ -218,7 +275,12 @@ def run_flow(
             quality=candidate.quality.total,
             relevance=candidate.relevance.total,
             why=candidate.why,
-            seen_at=item.published or None,
+            # seenAt is when SCOUT saw it, deliberately not when the
+            # source published it. Using the article's own date put
+            # Lil'Log posts from 2021 into a 2021 Radar file and
+            # scattered 286 items across 24 monthly files, none of which
+            # answered the question the digest actually asks: what came
+            # past today.
         )
 
         if candidate.section in sections:
@@ -228,6 +290,11 @@ def run_flow(
 
     outcome.ranked.sort(key=lambda c: c.score, reverse=True)
     activity.save(dry_run)
+
+    if first_run:
+        # Everything scored is on the Radar; nothing is a candidate.
+        outcome.radared.extend(outcome.ranked)
+        outcome.ranked = []
 
     print(
         f"  {outcome.seen} seen · {outcome.duplicates} duplicate · "
