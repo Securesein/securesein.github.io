@@ -2,8 +2,9 @@
 title: "Understanding VentureBeat's Role in the AI Industry"
 description: "A technical explainer on VentureBeat's impact and utility in enterprise AI."
 pubDate: 2026-09-03
-kind: "news"
-topics: ["industry"]
+kind: "research"
+format: "news"
+topics: ["llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

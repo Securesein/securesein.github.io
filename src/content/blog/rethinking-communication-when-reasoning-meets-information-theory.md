@@ -2,8 +2,9 @@
 title: "Rethinking Communication: When Reasoning Meets Information Theory"
 description: "Exploring IBM Research's new framework that integrates reasoning into communication systems, challenging conventional information theory."
 pubDate: 2026-09-13
-kind: "news"
-topics: ["models", "enterprise", "industry"]
+kind: "research"
+format: "news"
+topics: ["reasoning", "deep-learning"]
 credit: "scout"
 model: "gpt-4o"
 source:

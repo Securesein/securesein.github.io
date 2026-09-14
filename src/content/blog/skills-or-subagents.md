@@ -2,9 +2,9 @@
 title: "Skills or subagents? How you run reusable knowledge matters as much as what's in it"
 description: "A new paper compares two ways of executing agent skill packages, and finds that subagents only win when a skill declares what it needs and what it returns."
 pubDate: 2026-09-10
-kind: "deepdive"
+kind: "research"
 format: "paper"
-topics: ["agents"]
+topics: ["agents", "llms"]
 credit: "directed"
 contributions:
   chose: true

@@ -2,8 +2,9 @@
 title: "World-Time Compute: Lifting AI Generalization with Verified Code World Models"
 description: "Exploring how 'world-time compute' leverages verified code worlds to enhance AI's generalization abilities beyond traditional training methods."
 pubDate: 2026-09-10
-kind: "news"
-topics: ["models"]
+kind: "research"
+format: "news"
+topics: ["reasoning", "training"]
 credit: "scout"
 model: "gpt-4o"
 source:

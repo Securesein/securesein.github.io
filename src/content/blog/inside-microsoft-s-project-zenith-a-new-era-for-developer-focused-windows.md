@@ -2,8 +2,9 @@
 title: "Inside Microsoft's Project Zenith: A New Era for Developer-Focused Windows"
 description: "Exploring how Project Zenith reshapes the Windows experience for developers with its focused, distraction-free setup."
 pubDate: 2026-09-04
-kind: "news"
-topics: ["enterprise", "agents"]
+kind: "research"
+format: "news"
+topics: ["agents", "llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

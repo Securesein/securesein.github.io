@@ -1,0 +1,54 @@
+---
+// A FORMAT view, not a section.
+//
+// Under the three-axis model (brief §3.1) "deep dive" stopped being a
+// section and became a shape a piece can take in any section: a deep
+// dive can sit in Research, in Security, or in Benchmarks. This page
+// and /news/ are kept at their existing URLs so nothing that already
+// links here breaks, and so the two published RSS feeds keep working —
+// but they are no longer front doors, and neither appears in the nav.
+// The section axis is what the header offers.
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import PostCard from "../../components/PostCard.astro";
+import { postsOfFormat } from "../../posts";
+import { FORMATS } from "../../taxonomy";
+
+const posts = await postsOfFormat("deepdive");
+---
+<BaseLayout
+  title="Deep dives"
+  description="One thing taken apart properly — a system, an incident, or something built and broken. A shape, not a section: these sit across Research, Security and Benchmarks."
+>
+  <link
+    slot="head"
+    rel="alternate"
+    type="application/rss+xml"
+    title="securesein — Deep dives"
+    href="/deep-dives/rss.xml"
+  />
+
+  <div class="container container--wide">
+    <PageHeader
+      title="Deep dives"
+      standfirst="One thing, taken apart properly. No prior reading required — each one starts from the top. This is a shape rather than a section: they live in Research, Security and Benchmarks, and this page collects them."
+    />
+
+    <p class="format-desc">{FORMATS.deepdive.description}</p>
+
+    <div class="dives">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+
+    {posts.length === 0 && <p class="empty">Nothing here yet.</p>}
+  </div>
+</BaseLayout>
+
+<style>
+  .format-desc { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 0.6rem; }
+  .dives { display: grid; gap: 0; }
+  @media (min-width: 880px) {
+    .dives { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.6rem; }
+  }
+  .empty { color: var(--text-muted); padding-block: 2rem; }
+</style>

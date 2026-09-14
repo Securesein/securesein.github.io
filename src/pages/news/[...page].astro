@@ -1,16 +1,25 @@
 ---
-// The News index: dense, date-grouped, filterable, paginated at 30.
+// Everything in the `news` FORMAT: dense, date-grouped, filterable,
+// paginated at 30.
+//
+// Under the three-axis model (brief §3.1) "news" stopped being a
+// section and became a shape — a short, timely item written from the
+// source, which now appears in Model Updates, Research and Security
+// alike. This page is kept at its existing URL so nothing that links
+// here breaks and /news/rss.xml keeps working, but it is no longer a
+// front door and does not appear in the nav: the header offers the
+// section axis.
 import type { GetStaticPaths, Page } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import NewsRow from "../../components/NewsRow.astro";
 import TopicFilter from "../../components/TopicFilter.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
-import { groupByDay, postsOfKind, type Post } from "../../posts";
+import { groupByDay, postsOfFormat, type Post } from "../../posts";
 import { TOPICS, type Topic } from "../../taxonomy";
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
-  const posts = await postsOfKind("news");
+  const posts = await postsOfFormat("news");
   return paginate(posts, { pageSize: 30 });
 };
 
@@ -27,7 +36,7 @@ const topics = (Object.keys(TOPICS) as Topic[]).filter((t) => present.has(t));
 ---
 <BaseLayout
   title="News"
-  description="AI news, drafted automatically from the source article and published without review. Newest first."
+  description="Short, timely items drafted automatically from the source article and published without review, from every section. Newest first."
 >
   <link
     slot="head"
@@ -40,7 +49,7 @@ const topics = (Object.keys(TOPICS) as Topic[]).filter((t) => present.has(t));
   <div class="container container--wide">
     <PageHeader
       title="News"
-      standfirst="What happened, usually within a few hours of it happening. Short items, always linked back to where they came from."
+      standfirst="What happened, usually within a few hours of it happening. Short items, always linked back to where they came from — across Model Updates, Research and Security."
       note="These are drafted automatically by Scout from the source article and published without a human reading them first. Every one links to its source, and every one says so on the post itself."
     >
       {topics.length > 1 && <TopicFilter topics={topics} />}

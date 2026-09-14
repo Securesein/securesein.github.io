@@ -1,0 +1,204 @@
+{
+  "_comment": "Benchmark channel sources for Securesein. These are mostly not RSS feeds — benchmark results live in datasets, git repos and APIs, and should be ingested as structured data rather than scraped from leaderboard HTML. Sources with role=measurement feed the benchmarks collection; role=finding sources feed roundup context and contradiction detection only, and can never write a measurement record.",
+  "sources": [
+    {
+      "naam": "Epoch AI — Benchmarking Hub (client library)",
+      "url": "https://epoch.ai/benchmarks",
+      "type": "python_client",
+      "client": "pip install epochai",
+      "role": "measurement",
+      "measuredBy": "thirdparty",
+      "tier": "primary",
+      "verified": true,
+      "license": "CC-BY — attribution required in the rendered table",
+      "note": "Build this adapter first and completely. Independent evaluations with documented conditions (chat/instruct variants, API-default temperature, zero-shot CoT, empty system prompt), covering 50+ benchmarks including FrontierMath, GPQA Diamond, SWE-bench Verified, ARC-AGI-2, Terminal-Bench, HLE and Aider Polyglot. Two bases: internal runs and external runs — keep them distinguishable in the evaluator field."
+    },
+    {
+      "naam": "Epoch AI — Benchmark data (CSV/ZIP)",
+      "url": "https://epoch.ai/benchmarks/use-this-data",
+      "type": "html",
+      "role": "measurement",
+      "measuredBy": "thirdparty",
+      "tier": "primary",
+      "verified": true,
+      "license": "CC-BY",
+      "note": "Fallback if the Airtable-backed client library is unavailable or rate-limited. Bulk ZIP download, same data, without entity relationships."
+    },
+    {
+      "naam": "LiveBench",
+      "url": "https://github.com/livebench/livebench",
+      "type": "git",
+      "role": "measurement",
+      "measuredBy": "thirdparty",
+      "tier": "primary",
+      "verified": true,
+      "note": "Contamination-limited benchmark with monthly question refreshes and objective ground truth (no LLM judge). Read results from the repo rather than the leaderboard page. Record the question-set month in conditions.notes — scores across different months are not comparable."
+    },
+    {
+      "naam": "LiveBench releases",
+      "url": "https://github.com/livebench/livebench/releases.atom",
+      "type": "atom",
+      "role": "finding",
+      "tier": "primary",
+      "verified": false,
+      "note": "Signals a new question set, which invalidates cross-month comparisons. A release here is a valid roundup trigger.",
+      "scopeNote": "verify_feeds 2026-09-14: FAIL (0 entries parsed) — the repo has no published releases, which is not the same as a broken URL. In scope; the `LiveBench` git entry is the one that carries the results."
+    },
+    {
+      "naam": "SWE-bench",
+      "url": "https://github.com/SWE-bench/SWE-bench/releases.atom",
+      "type": "atom",
+      "role": "finding",
+      "tier": "primary",
+      "verified": true,
+      "note": "10 entries returned on test. Harness changes and Verified-subset updates matter more than individual scores."
+    },
+    {
+      "naam": "SWE-bench experiments",
+      "url": "https://github.com/SWE-bench/experiments",
+      "type": "git",
+      "role": "measurement",
+      "measuredBy": "community",
+      "tier": "primary",
+      "verified": false,
+      "note": "Per-submission results including scaffold details. Scaffold is part of conditions — a SWE-bench number without it is meaningless."
+    },
+    {
+      "naam": "HELM",
+      "url": "https://github.com/stanford-crfm/helm/releases.atom",
+      "type": "atom",
+      "role": "finding",
+      "tier": "primary",
+      "verified": true,
+      "note": "10 entries returned on test. Scenario and metric changes across versions."
+    },
+    {
+      "naam": "Hugging Face — Open LLM Leaderboard contents",
+      "url": "https://huggingface.co/api/datasets/open-llm-leaderboard/contents",
+      "type": "json",
+      "role": "measurement",
+      "measuredBy": "community",
+      "tier": "primary",
+      "verified": false,
+      "note": "Open-weights only, single harness. Verify the dataset path is still current — this leaderboard has been restructured before."
+    },
+    {
+      "naam": "LMArena",
+      "url": "https://huggingface.co/spaces/lmarena-ai/chatbot-arena-leaderboard",
+      "type": "json",
+      "role": "measurement",
+      "measuredBy": "community",
+      "tier": "primary",
+      "verified": false,
+      "note": "Elo from blind human preference, not capability. Record metric=elo, unit=elo, and never mix it into an accuracy comparison. Pull the underlying data file from the Space rather than scraping the rendered table.",
+      "scopeNote": "verify_feeds 2026-09-14: FAIL (response is not JSON). Brief §14.1f says to pull the underlying data file from the HF Space rather than the rendered table; that path is still unconfirmed. In scope, no adapter built yet."
+    },
+    {
+      "naam": "Artificial Analysis",
+      "url": "https://artificialanalysis.ai/",
+      "type": "api",
+      "role": "measurement",
+      "measuredBy": "thirdparty",
+      "tier": "primary",
+      "verified": false,
+      "note": "Official API requires a key. READ THE TERMS before republishing their numbers in a table — this is an open question for the site owner, not a build decision. Useful for combined intelligence/speed/price indices.",
+      "inScope": false,
+      "scopeNote": "OUT OF SCOPE, no adapter built. Brief §14.1f gates this behind an API key and a reading of its terms before republishing scores; neither has happened. DEFAULT APPLIED, NOT CONFIRMED WITH THE SITE OWNER. The entry stays as a record of the decision, not as a source. Do not build the adapter until the owner has read the terms and said yes."
+    },
+    {
+      "naam": "Aider — Polyglot leaderboard",
+      "url": "https://aider.chat/docs/leaderboards/",
+      "type": "html",
+      "role": "measurement",
+      "measuredBy": "community",
+      "tier": "corroborating",
+      "verified": false,
+      "license": "Apache-2.0 for the derived data per Epoch AI's licensing note",
+      "note": "Already mirrored inside the Epoch hub — prefer the Epoch copy and skip this adapter unless you need fresher data."
+    },
+    {
+      "naam": "ARC Prize leaderboard",
+      "url": "https://arcprize.org/leaderboard",
+      "type": "html",
+      "role": "measurement",
+      "measuredBy": "thirdparty",
+      "tier": "corroborating",
+      "verified": false,
+      "note": "ARC-AGI-2 is also in the Epoch hub; use this only for cost-per-task figures Epoch does not carry."
+    },
+    {
+      "naam": "Terminal-Bench",
+      "url": "https://www.tbench.ai/leaderboard",
+      "type": "html",
+      "role": "measurement",
+      "measuredBy": "community",
+      "tier": "corroborating",
+      "verified": false,
+      "license": "Apache-2.0 for the derived data per Epoch AI's licensing note",
+      "note": "Also mirrored in the Epoch hub."
+    },
+    {
+      "naam": "MLCommons — inference results",
+      "url": "https://github.com/mlcommons/inference/releases.atom",
+      "type": "atom",
+      "role": "finding",
+      "tier": "community",
+      "verified": true,
+      "note": "10 entries returned on test. Hardware throughput, not model capability. Optional — include only if the benchmark scope decision includes serving performance."
+    },
+    {
+      "naam": "lm-evaluation-harness releases",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/releases.atom",
+      "type": "atom",
+      "role": "finding",
+      "tier": "primary",
+      "verified": true,
+      "note": "10 entries returned on test. Harness changes silently shift reported scores across the whole open-weights ecosystem — a genuinely underreported roundup subject."
+    },
+    {
+      "naam": "METR",
+      "url": "https://metr.org/blog/",
+      "type": "html",
+      "role": "finding",
+      "tier": "primary",
+      "verified": false,
+      "note": "Task-horizon and autonomy evaluations. Among the highest-quality independent findings published anywhere; often contradicts vendor framing."
+    },
+    {
+      "naam": "UK AI Security Institute — Blog",
+      "url": "https://www.aisi.gov.uk/blog",
+      "type": "html",
+      "role": "finding",
+      "tier": "primary",
+      "verified": false,
+      "note": "Already in feeds.json as 'AISI Blog' — reuse that entry's working URL. Pre-deployment evaluations."
+    },
+    {
+      "naam": "Hugging Face — Daily Papers",
+      "url": "https://huggingface.co/api/daily_papers",
+      "type": "json",
+      "role": "finding",
+      "tier": "corroborating",
+      "verified": false,
+      "note": "Already in feeds.json as an RSS entry. The JSON API is better for extracting eval tables. Papers are where contested replications first appear."
+    },
+    {
+      "naam": "arXiv cs.CL / cs.LG",
+      "url": "-",
+      "type": "rss",
+      "role": "finding",
+      "tier": "corroborating",
+      "verified": true,
+      "note": "Already in feeds.json. Use for contamination studies, failed replications and benchmark critiques — not for extracting numbers into the collection. Paper eval tables are too heterogeneous to parse safely without a human."
+    },
+    {
+      "naam": "Nicholas Carlini",
+      "url": "https://nicholas.carlini.com/writing/feed.xml",
+      "type": "rss",
+      "role": "finding",
+      "tier": "community",
+      "verified": false,
+      "note": "Already in feeds.json. Reliable source of benchmark scepticism; good roundup context, never a measurement."
+    }
+  ]
+}

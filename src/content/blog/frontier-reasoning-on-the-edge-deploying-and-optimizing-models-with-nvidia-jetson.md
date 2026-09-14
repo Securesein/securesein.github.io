@@ -2,8 +2,9 @@
 title: "Frontier Reasoning on the Edge: Deploying and Optimizing Models with NVIDIA Jetson"
 description: "Explore how the newest generation of reasoning models can now run efficiently at the edge using NVIDIA Jetson, transforming AI capabilities without relying on data centers."
 pubDate: 2026-09-09
-kind: "news"
-topics: ["models", "selfhosted"]
+kind: "research"
+format: "news"
+topics: ["inference", "reasoning"]
 credit: "scout"
 model: "gpt-4o"
 source:

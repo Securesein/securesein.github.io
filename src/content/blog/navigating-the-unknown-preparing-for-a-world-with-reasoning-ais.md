@@ -2,8 +2,9 @@
 title: "Navigating the Unknown: Preparing for a World with Reasoning AIs"
 description: "The emergence of reasoning language models presents both unprecedented opportunities and unique challenges. Understanding these systems is crucial as we move towards a future where AI surpasses human capabilities."
 pubDate: 2026-09-06
-kind: "news"
-topics: ["safety", "models"]
+kind: "research"
+format: "news"
+topics: ["reasoning", "ai-safety"]
 credit: "scout"
 model: "gpt-4o"
 source:

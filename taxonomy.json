@@ -1,84 +1,142 @@
 {
-  "kinds": {
-    "news": {
-      "label": "News",
-      "href": "/news",
-      "plural": "News",
-      "blurb": "Timely items drafted automatically from the source article.",
-      "description": "Auto-drafted from the feed. Timely, disposable, always links to the source."
+  "_comment": "Single source of truth for the three orthogonal axes (brief §3.1), read by both the Astro site (src/taxonomy.ts) and the Python pipeline (scripts/core/taxonomy.py). Nothing in src/ or scripts/ may hard-code a section, format or topic string; it reads this file. SECTION answers 'why would someone read this?' and lives in frontmatter as `kind`. FORMAT answers 'what shape is this piece?' and lives as `format`. TOPIC answers 'what is it technically about?' and lives as `topics[]`, 1-3 per post. Decision A2 (PURE AI RESEARCH RADAR) removed the Practice section, the `fieldnote` format, and the `mobility`/`enterprise`/`selfhosted` topics from the brief's fuller draft — see the build report.",
+
+  "sections": {
+    "release": {
+      "label": "Model Updates",
+      "href": "/model-updates",
+      "plural": "Model Updates",
+      "question": "What is new in the model landscape?",
+      "blurb": "A model shipped, changed or went away. What actually differs, from the vendor's own words.",
+      "description": "New and updated AI models, drafted automatically from the vendor's own announcement. Primary sources only; press is corroboration."
+    },
+    "research": {
+      "label": "Research",
+      "href": "/research",
+      "plural": "Research",
+      "question": "What have we learned?",
+      "blurb": "Mechanism over event: how something works beats the news that it happened.",
+      "description": "Papers, reproductions and critiques, read for the mechanism rather than the announcement. Replication failures and negative results count."
+    },
+    "benchmark": {
+      "label": "Benchmarks",
+      "href": "/benchmarks",
+      "plural": "Benchmarks",
+      "question": "How good is it actually?",
+      "blurb": "What the numbers say, and who measured them.",
+      "description": "A tracked set of benchmark measurements, vendor-claimed and third-party side by side, with the conditions that produced them."
+    },
+    "security": {
+      "label": "Security",
+      "href": "/security",
+      "plural": "Security",
+      "question": "What can go wrong?",
+      "blurb": "Prompt injection, agent hijacking, guardrail removal, supply chain — the failure modes of AI systems.",
+      "description": "The security and safety of AI systems: attacks, incidents and the failure modes behind them. Reward hacking lives here, not in Research."
     },
     "explainer": {
       "label": "Fundamentals",
       "href": "/fundamentals",
       "plural": "Fundamentals",
+      "question": "How does this work, from first principles?",
       "blurb": "One concept, properly explained. Still useful next year.",
-      "description": "One concept, properly explained, no news hook."
+      "description": "One concept, properly explained, no news hook. Written to still make sense in a year."
+    }
+  },
+
+  "formats": {
+    "news": {
+      "label": "News",
+      "slug": "news",
+      "description": "A short, timely item written from the source, always linked back to it."
+    },
+    "paper": {
+      "label": "Paper",
+      "slug": "paper",
+      "description": "One paper, read properly, findings and caveats in plain language."
+    },
+    "benchmark": {
+      "label": "Benchmark",
+      "slug": "benchmark",
+      "description": "A reading of measured numbers, with the harness and conditions stated."
+    },
+    "explainer": {
+      "label": "Explainer",
+      "slug": "explainer",
+      "description": "One concept taken from first principles, no news hook."
     },
     "deepdive": {
       "label": "Deep dive",
-      "href": "/deep-dives",
-      "plural": "Deep dives",
-      "blurb": "One thing taken apart: a paper, a system, or something I built.",
-      "description": "One thing taken apart properly — a paper, a system, or something I built and broke."
+      "slug": "deep-dive",
+      "description": "One thing taken apart properly — a system, an incident, or something built and broken."
     }
   },
-  "formats": {
-    "paper": {
-      "label": "Paper trail",
-      "slug": "paper-trail",
-      "description": "One paper, read properly, findings and caveats in plain language."
-    },
-    "teardown": {
-      "label": "Teardown",
-      "slug": "teardown",
-      "description": "How a technique or system actually works, mechanism first."
-    },
-    "postmortem": {
-      "label": "What happened",
-      "slug": "what-happened",
-      "description": "An incident or event reconstructed from the record."
-    },
-    "notebook": {
-      "label": "Notebook",
-      "slug": "notebook",
-      "description": "Something I built, what broke, what it cost."
-    }
-  },
+
   "topics": {
-    "models": {
-      "label": "Models",
-      "description": "Releases, capabilities, benchmarks, architectures.",
-      "blurb": "New models land constantly and most of the coverage is scorecards. What I care about is what actually changed in how the thing behaves, and whether it changes anything about how you'd build with it."
+    "llms": {
+      "label": "LLMs",
+      "description": "Language-model architecture, behaviour and capability.",
+      "blurb": "The workhorse of the field, and the thing most coverage describes without explaining. What I care about is the mechanism underneath a behaviour, not the demo that showed it off."
+    },
+    "reasoning": {
+      "label": "Reasoning",
+      "description": "Chain of thought, test-time compute, reasoning models and their limits.",
+      "blurb": "Making a model think for longer changed the shape of the field and the shape of the bill. This shelf is about what the extra compute actually buys and where it stops buying anything."
     },
     "agents": {
-      "label": "Agents & tooling",
-      "description": "Agent frameworks, coding tools, MCP, automation.",
-      "blurb": "Agents are the part of this field where the demo and the production system are furthest apart. This shelf is about the tooling underneath — what it does when nobody is watching the demo."
+      "label": "Agents",
+      "description": "Tool use, agent frameworks, MCP, multi-step autonomy.",
+      "blurb": "Agents are where the demo and the production system are furthest apart. This shelf is about the tooling underneath — what it does when nobody is watching the demo."
     },
-    "safety": {
-      "label": "Safety & alignment",
-      "description": "Alignment, guardrails, misuse, governance, incidents.",
-      "blurb": "Guardrails matter to me as an operational question, not a philosophical one: if you are responsible for a system, you need to know how much weight a vendor's safety claims can carry in your threat model."
+    "interpretability": {
+      "label": "Interpretability",
+      "description": "Features, circuits, probing, activation steering, representation engineering.",
+      "blurb": "Opening the box rather than describing the outside of it. The closest thing this field has to a mechanism-first discipline, and the source of most of the techniques that turn out to matter later."
     },
-    "enterprise": {
-      "label": "Enterprise & Microsoft",
-      "description": "Copilot, Azure AI, M365, rollout and adoption.",
-      "blurb": "The gap between an AI feature shipping and an AI feature being rolled out to thirty thousand seats is where I spend my working life. This shelf is about that gap."
+    "deep-learning": {
+      "label": "Deep learning",
+      "description": "Architectures, optimisation, scaling laws, training dynamics.",
+      "blurb": "The foundations under everything else: gradients, losses, what a network is doing when it learns. Concrete numerical examples before abstraction, wherever possible."
     },
-    "mobility": {
-      "label": "Devices & mobility",
-      "description": "Intune, Android Enterprise, Apple, EMM, AI on managed devices.",
-      "blurb": "Device management is my background, and it is the place where AI stops being an abstraction: models on managed endpoints, policy, compliance, and what a fleet actually allows."
+    "reinforcement-learning": {
+      "label": "Reinforcement learning",
+      "description": "RLHF, RLVR, reward models, policy optimisation.",
+      "blurb": "How a model gets pointed at a goal, and what happens when the goal is a proxy for the thing you actually wanted. Reward hacking itself is filed under Security, because it is a failure mode."
     },
-    "selfhosted": {
-      "label": "Local & self-hosted",
-      "description": "Ollama, open weights, running things on your own hardware.",
-      "blurb": "Running models on hardware you control changes the trade-offs completely — cost, privacy, and what happens when the vendor changes the deal. Mostly written from a home lab."
+    "multimodal": {
+      "label": "Multimodal",
+      "description": "Vision, audio, video and cross-modal models.",
+      "blurb": "Text stopped being the whole story a while ago. What changes when a model reads a screenshot, hears a voice, or has to keep track of both at once."
     },
-    "industry": {
-      "label": "Money & industry",
-      "description": "Funding, acquisitions, pricing, market structure.",
-      "blurb": "Who owns what, who pays for what, and what that means for anyone building on top of it. Market structure decides which tools still exist in two years."
+    "training": {
+      "label": "Training",
+      "description": "Pre-training, fine-tuning, data, tokenisation, curricula.",
+      "blurb": "What goes in and how, which decides more about a model's behaviour than most architecture changes do. Includes the unglamorous parts: data, tokenisers, curricula."
+    },
+    "inference": {
+      "label": "Inference",
+      "description": "Serving, quantisation, speculative decoding, caching, local and on-device.",
+      "blurb": "What makes a model cheap enough to actually run, including on hardware you own. Quantisation, caching, speculative decoding, and what any of it costs in quality."
+    },
+    "evaluation": {
+      "label": "Evaluation",
+      "description": "Benchmark design, contamination, harnesses, construct validity.",
+      "blurb": "A score without a harness and a shot count is a number, not a finding. Methodology critique ranks well above leaderboard movement here — a contamination paper beats ten posts about who is now first."
+    },
+    "ai-security": {
+      "label": "AI security",
+      "description": "Prompt injection, jailbreaks, agent hijacking, exfiltration, model supply chain.",
+      "blurb": "If you are responsible for a system, you need to know how much weight a vendor's safety claims can carry in your threat model. Attacks, incidents, and what a practitioner should actually do about them."
+    },
+    "ai-safety": {
+      "label": "AI safety",
+      "description": "Alignment, guardrails, deception, misuse, model behaviour under pressure.",
+      "blurb": "Alignment as an operational question rather than a philosophical one: what a model does when the training signal and the intent come apart, and how anyone would notice."
+    },
+    "generative-ai": {
+      "label": "Generative AI",
+      "description": "Diffusion, image, audio and video generation, and their systems.",
+      "blurb": "Generation outside the text stack — diffusion and its descendants. Mostly covered here when the mechanism generalises or the failure mode does."
     }
   }
 }

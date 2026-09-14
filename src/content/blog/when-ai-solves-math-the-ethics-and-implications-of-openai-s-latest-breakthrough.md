@@ -2,8 +2,9 @@
 title: "When AI Solves Math: The Ethics and Implications of OpenAI's Latest Breakthrough"
 description: "OpenAI's achievement in solving a Millennium Prize Problem raises questions about the role of AI in mathematics and the ethics of collaboration."
 pubDate: 2026-09-09
-kind: "news"
-topics: ["safety"]
+kind: "research"
+format: "news"
+topics: ["reasoning", "ai-safety"]
 credit: "scout"
 model: "gpt-4o"
 source:

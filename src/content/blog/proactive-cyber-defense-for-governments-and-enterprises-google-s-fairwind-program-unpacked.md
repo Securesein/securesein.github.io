@@ -2,8 +2,9 @@
 title: "Proactive Cyber Defense for Governments and Enterprises: Google's Fairwind Program Unpacked"
 description: "Exploring the impact of Google's Fairwind Program on cybersecurity for government and enterprise sectors."
 pubDate: 2026-09-08
-kind: "news"
-topics: ["safety", "enterprise"]
+kind: "security"
+format: "news"
+topics: ["ai-security"]
 credit: "scout"
 model: "gpt-4o"
 source:

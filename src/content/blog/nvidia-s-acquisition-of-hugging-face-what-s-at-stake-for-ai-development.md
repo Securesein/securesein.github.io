@@ -2,8 +2,9 @@
 title: "Nvidia's Acquisition of Hugging Face: What's at Stake for AI Development"
 description: "Analyzing the implications of Nvidia's $12.9 billion purchase of Hugging Face."
 pubDate: 2026-09-03
-kind: "news"
-topics: ["industry"]
+kind: "research"
+format: "news"
+topics: ["llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

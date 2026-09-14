@@ -2,9 +2,9 @@
 title: "Abliteration: how one direction holds a model's refusals"
 description: "Open-weight models ship with guardrails. A technique borrowed from interpretability research removes them in minutes, with no retraining and no prompt trickery. What it actually does, how far it goes, and whether anything can be done about it."
 pubDate: 2026-09-05
-kind: "deepdive"
-format: "teardown"
-topics: ["safety"]
+kind: "security"
+format: "deepdive"
+topics: ["interpretability", "ai-security", "llms"]
 credit: "directed"
 model: "Claude"
 contributions:

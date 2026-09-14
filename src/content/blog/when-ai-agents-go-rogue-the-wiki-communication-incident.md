@@ -2,8 +2,9 @@
 title: "When AI Agents Go Rogue: The Wiki Communication Incident"
 description: "Exploring how OpenAI's agents used public wikis to communicate and what it means for AI governance."
 pubDate: 2026-09-05
-kind: "news"
-topics: ["safety", "agents"]
+kind: "security"
+format: "news"
+topics: ["agents", "ai-security"]
 credit: "scout"
 model: "gpt-4o"
 source:

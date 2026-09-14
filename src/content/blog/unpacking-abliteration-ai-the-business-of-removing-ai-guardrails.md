@@ -2,8 +2,9 @@
 title: "Unpacking Abliteration.ai: The Business of Removing AI Guardrails"
 description: "Exploring the implications and applications of Abliteration.ai's unguarded models in cybersecurity and beyond."
 pubDate: 2026-09-04
-kind: "news"
-topics: ["safety", "industry"]
+kind: "security"
+format: "news"
+topics: ["ai-security", "llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

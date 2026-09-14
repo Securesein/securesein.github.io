@@ -2,9 +2,9 @@
 title: "Curiosity at the Edge of Chaos: What a New RL Paper Actually Shows"
 description: "A new reinforcement learning paper claims curiosity should emerge from an agent's own internal dynamics rather than a hand-tuned bonus term — a skeptical read of what the experiments actually support."
 pubDate: 2026-09-12
-kind: "deepdive"
+kind: "research"
 format: "paper"
-topics: ["models"]
+topics: ["reinforcement-learning", "deep-learning"]
 credit: "directed"
 contributions:
   chose: true

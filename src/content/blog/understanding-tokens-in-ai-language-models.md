@@ -2,8 +2,9 @@
 title: "Understanding Tokens in AI Language Models"
 description: "A plain-language guide to what tokens are and why they matter in AI language processing."
 pubDate: 2026-09-03
-kind: "news"
-topics: ["models"]
+kind: "explainer"
+format: "news"
+topics: ["llms"]
 credit: "scout"
 model: "gpt-4o"
 betterCoveredBy: "tokens-the-one-idea-that-explains-most-of-ai-s-odd-behaviour"

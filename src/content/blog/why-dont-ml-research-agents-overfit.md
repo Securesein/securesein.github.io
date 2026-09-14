@@ -2,9 +2,9 @@
 title: "Why Don't Machine Learning Research Agents Overfit?"
 description: "New research from Amazon Science offers a surprisingly elegant explanation for a decade-old puzzle: good solutions are simply too short to cheat with."
 pubDate: 2026-09-12
-kind: "deepdive"
+kind: "research"
 format: "paper"
-topics: ["models", "agents"]
+topics: ["agents", "training", "deep-learning"]
 credit: "directed"
 contributions:
   chose: true

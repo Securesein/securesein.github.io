@@ -34,10 +34,13 @@ jobs:
       # postbuild builds the Pagefind index into dist/.
       - name: Build
         run: npm run build
-      # Informational only — the rules the schema deliberately warns
-      # about rather than failing on.
-      - name: Content warnings
-        continue-on-error: true
+      # Two jobs: it reports the grandfathered archive informationally,
+      # and it HARD-FAILS on cross-collection referential integrity —
+      # a post citing a benchmark measurement that does not exist, or a
+      # section in taxonomy.json with no landing page. Neither is
+      # something a per-entry Zod schema can see, and both must block a
+      # deploy, so continue-on-error is deliberately absent.
+      - name: Content check
         run: npm run check:content
       - uses: actions/upload-pages-artifact@v3
         with:

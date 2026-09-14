@@ -2,8 +2,9 @@
 title: "What Intune's new compliance rules mean for hybrid work"
 description: "A practical read on the rollout, not a changelog summary."
 pubDate: 2026-08-30
-kind: "news"
-topics: ["enterprise", "mobility"]
+kind: "security"
+format: "news"
+topics: ["ai-security"]
 credit: "scout"
 model: "gpt-4o"
 source:

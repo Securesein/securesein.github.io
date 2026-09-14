@@ -2,8 +2,9 @@
 title: "Navigating the Pricing Maze with Anthropic's Claude Commerce Agents"
 description: "Exploring how Anthropic's new commerce agents can transform pricing strategies for retail and beyond."
 pubDate: 2026-09-04
-kind: "news"
-topics: ["agents", "industry"]
+kind: "release"
+format: "news"
+topics: ["agents", "llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

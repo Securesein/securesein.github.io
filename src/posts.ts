@@ -5,7 +5,12 @@
 // published", "what order does this lane use" and "how is reading time
 // measured" have exactly one answer each.
 import { getCollection, type CollectionEntry } from "astro:content";
-import { KIND_ORDER_BY_DEPTH, type Kind, type Topic } from "./taxonomy";
+import {
+  SECTION_ORDER_BY_DEPTH,
+  type Format,
+  type Kind,
+  type Topic,
+} from "./taxonomy";
 
 export type Post = CollectionEntry<"blog">;
 export type Thread = CollectionEntry<"threads">;
@@ -33,12 +38,30 @@ export async function allPosts(): Promise<Post[]> {
   return (await getCollection("blog", isPublished)).sort(byDateDesc);
 }
 
-/** Published posts in one lane. Fundamentals comes back in path order. */
+/**
+ * Published posts in one section. Fundamentals comes back in reading-path
+ * order; every other section is newest-first.
+ *
+ * The parameter is still called `kind` because that is the frontmatter
+ * field; the axis it represents is "section" (brief §3.1).
+ */
 export async function postsOfKind(kind: Kind): Promise<Post[]> {
   const posts = (await getCollection("blog", isPublished)).filter(
     (p) => p.data.kind === kind
   );
   return posts.sort(kind === "explainer" ? byReadingPath : byDateDesc);
+}
+
+/**
+ * Published posts of one shape, across every section. Format is an
+ * orthogonal axis now: a `news`-format piece can sit in Model Updates,
+ * Research or Security, and the two legacy listings at /news/ and
+ * /deep-dives/ are format views rather than section landing pages.
+ */
+export async function postsOfFormat(format: Format): Promise<Post[]> {
+  return (await getCollection("blog", isPublished))
+    .filter((p) => p.data.format === format)
+    .sort(byDateDesc);
 }
 
 /** Published posts on one subject shelf, newest first. */
@@ -89,9 +112,9 @@ export function groupByDay(posts: Post[]): { date: Date; posts: Post[] }[] {
   return groups;
 }
 
-/** Groups posts by kind, best material first (deep dives → news). */
+/** Groups posts by section, best material first (Fundamentals → Model Updates). */
 export function groupByKind(posts: Post[]): { kind: Kind; posts: Post[] }[] {
-  return KIND_ORDER_BY_DEPTH.map((kind) => ({
+  return SECTION_ORDER_BY_DEPTH.map((kind) => ({
     kind,
     posts: posts.filter((p) => p.data.kind === kind),
   })).filter((group) => group.posts.length > 0);

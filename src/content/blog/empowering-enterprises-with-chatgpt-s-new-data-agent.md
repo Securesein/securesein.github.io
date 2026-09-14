@@ -2,8 +2,9 @@
 title: "Empowering Enterprises with ChatGPT's New Data Agent"
 description: "How OpenAI's Data Agent in ChatGPT Work transforms enterprise data management with its intuitive and dynamic approach."
 pubDate: 2026-09-11
-kind: "news"
-topics: ["enterprise", "agents"]
+kind: "release"
+format: "news"
+topics: ["agents", "llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

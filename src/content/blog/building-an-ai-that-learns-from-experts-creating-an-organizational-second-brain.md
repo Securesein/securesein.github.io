@@ -2,8 +2,9 @@
 title: "Building an AI That Learns From Experts: Creating an Organizational Second Brain"
 description: "How Meta's AI agent captures and preserves expert knowledge, turning fleeting insights into durable institutional memory."
 pubDate: 2026-09-08
-kind: "news"
-topics: ["agents", "industry"]
+kind: "research"
+format: "news"
+topics: ["agents", "llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

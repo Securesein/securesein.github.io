@@ -1,14 +1,15 @@
 ---
-// One subject shelf. Grouped by kind, best material first (deep dives
-// → fundamentals → news), because this is where a reader who arrived
-// from a two-minute news item gets pulled into the long stuff.
+// One subject shelf. Grouped by SECTION, best material first
+// (Fundamentals → Research → Benchmarks → Security → Model Updates),
+// because this is where a reader who arrived from a two-minute release
+// item gets pulled into the long stuff.
 import type { GetStaticPaths } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import PostCard from "../../components/PostCard.astro";
 import NewsRow from "../../components/NewsRow.astro";
 import { groupByKind, postsByTopic, type Post } from "../../posts";
-import { KINDS, TOPICS, type Topic } from "../../taxonomy";
+import { SECTION_INFO, TOPICS, type Topic } from "../../taxonomy";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const topics = Object.keys(TOPICS) as Topic[];
@@ -46,10 +47,10 @@ const groups = groupByKind(posts);
     {groups.map(({ kind, posts }) => (
       <section class="shelf">
         <h2 class="shelf-heading">
-          <a href={KINDS[kind].href}>{KINDS[kind].plural}</a>
+          <a href={SECTION_INFO[kind].href}>{SECTION_INFO[kind].plural}</a>
           <span class="shelf-count">{posts.length}</span>
         </h2>
-        {kind === "news" ? (
+        {kind === "release" ? (
           <div class="shelf-rows">
             {posts.map((post) => <NewsRow post={post} />)}
           </div>

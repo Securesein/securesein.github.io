@@ -1,0 +1,327 @@
+# Securesein — interest profile
+#
+# Drives Scout's personal-relevance ranking. Read together with
+# securesein-channels-brief.md (§6 releases, §7 benchmarks).
+#
+# PROVENANCE: this profile is derived from observed behaviour, not from a
+# questionnaire. Every entry under `evidence:` points at something Sebastiaan
+# actually spent time on — posts he directed himself, papers he read through,
+# concepts he asked follow-up questions about, and his professional work.
+# That makes it a starting hypothesis, not ground truth. It is expected to be
+# wrong in places and is corrected through Telegram feedback, never by hand-
+# editing the classifier.
+#
+# NOT DERIVED FROM: what he clicked, how long he read, or any engagement
+# metric. There is no such data and there should not be.
+
+version: 2
+updated: 2026-09-14
+updated_by: manual
+
+# RECONCILED WITH DECISION A2 (PURE AI RESEARCH RADAR), 2026-09-14.
+#
+# This file was written assuming the *other* answer to A2 — "practitioner
+# blog with a serious AI pillar", keeping a Practice section and the
+# mobility/enterprise/selfhosted topics. The owner chose the pure AI
+# research radar instead. Three things follow, and none of them are done
+# by deletion: entries that no longer have a section or a topic to score
+# into are COMMENTED OUT IN PLACE with the reason, so the diff shows
+# exactly what changed and restoring any of them is uncommenting a
+# block rather than reconstructing it.
+#
+#   1. `mobile and endpoint management` — commented out. Its whole
+#      subject (Intune, Android Enterprise, Apple Business Manager,
+#      OEMConfig, mSCP, STIG) maps to no section and no topic in the
+#      thirteen-topic vocabulary. The four feed entries that fed it are
+#      marked inScope:false in feeds-research-security.json.
+#
+#   2. `enterprise AI in practice` — NARROWED, not removed. Azure
+#      OpenAI / AI Foundry / RAG / Semantic Kernel signals survive
+#      because they describe how models are deployed and served, which
+#      is `inference` and `agents` in the new vocabulary. The pure
+#      governance and tenancy signals (Copilot governance, data
+#      residency, tenant isolation) are commented out: they have no
+#      topic. The original note defending this entry against a previous
+#      draft is kept below, because it is still the right argument — it
+#      just no longer settles the question, since A2 did.
+#
+#   3. `AI policy and regulation` — commented out of medium_interests.
+#      Same reason: no section, no topic. Not an opinion about whether
+#      it matters.
+#
+# Nothing was added. The exclude[] list is untouched — §11.3 says only
+# the owner may add to it, and that applies to this reconciliation too.
+
+# ---------------------------------------------------------------------------
+# Editorial identity
+# ---------------------------------------------------------------------------
+# The single sentence the relevance gate is ultimately answering.
+
+# REVISED UNDER A2. The previous premise described a practitioner blog with
+# an AI pillar; the site is now an AI research radar written by a
+# practitioner. The difference is which half is the subject.
+premise: >
+  Securesein is an AI research radar written by a hands-on engineer. It
+  explains how AI systems actually work — mechanism first — to readers who
+  are technically strong but not AI researchers, and it takes the security
+  and reliability of those systems seriously because its author has to
+  deploy and defend things for a living. Mechanism over event, everywhere:
+  a piece explaining how something works outranks one reporting that it
+  happened.
+
+audience: practitioners — technically literate, not AI researchers
+language: English
+voice: explanatory, mechanism-first, no hype, willing to say "this is a vendor claim"
+
+# ---------------------------------------------------------------------------
+# Strong interests
+# ---------------------------------------------------------------------------
+# These should dominate the ranking. Each carries the evidence it rests on so
+# a wrong entry can be traced and removed rather than argued about.
+
+strong_interests:
+
+  - topic: mechanistic interpretability
+    evidence: >
+      Directed a full post on abliteration, read Arditi et al. (arXiv:2406.11717)
+      plus the circuit-breakers and TAR follow-ups, and worked through the
+      residual stream, embeddings-vs-token-ids, attention, dot products and the
+      two-cloud geometry of the refusal direction in detail.
+    signals: [residual stream, activation steering, probing, features, circuits,
+              refusal direction, representation engineering, sparse autoencoders]
+
+  - topic: how LLMs work internally
+    evidence: >
+      Directed a long-form post on tokens covering BPE, vocabulary construction,
+      embeddings, the autoregressive loop, context windows and caching, and
+      rewrote it twice for narrative coherence.
+    signals: [tokenization, BPE, embeddings, attention, context window, KV cache,
+              sampling, autoregressive]
+
+  - topic: LLM and agent security
+    evidence: >
+      Abliteration (guardrail removal), Carlini on memorization and data leakage,
+      and an explicit request for a Security section covering LLM, RL and general
+      AI security. Professionally responsible for locked-down device estates.
+    signals: [prompt injection, jailbreak, guardrail bypass, agent hijacking,
+              tool abuse, data exfiltration, memorization, adversarial, supply chain,
+              MCP security, sandbox escape]
+
+  - topic: reasoning and inference efficiency
+    evidence: >
+      Runs models on an 8GB integrated-graphics laptop; explicitly interested in
+      what makes inference cheaper and reasoning better.
+    signals: [speculative decoding, quantization, distillation, KV cache,
+              chain of thought, test-time compute, reasoning effort, MoE, latency]
+
+  - topic: ML foundations
+    evidence: >
+      Working through *Why Machines Learn* and Andrew Ng's deep learning course;
+      studied PCA, ADALINE/LMS, perceptrons and backpropagation. Prefers concrete
+      numerical examples before abstraction.
+    signals: [gradient descent, backpropagation, loss landscape, optimization,
+              representation learning, scaling laws, training dynamics]
+
+  - topic: open-weight models and local inference
+    evidence: >
+      Runs Ollama locally, tracks what is runnable on modest hardware, chose a
+      cloud/local split deliberately.
+    signals: [open weights, GGUF, llama.cpp, Ollama, vLLM, on-device, edge,
+              consumer hardware, VRAM]
+
+  - topic: deploying and serving models in production
+    evidence: >
+      Building professional Azure AI capability for client engagements —
+      Azure OpenAI, AI Search, AI Foundry, Semantic Kernel. This is his paid work.
+    # NARROWED UNDER A2 (was "enterprise AI in practice"). What survives is the
+    # half that describes how a model is actually served and retrieved against,
+    # which scores into `inference` and `agents`. Dropped from the signal list,
+    # because the new vocabulary has no topic for them:
+    #   enterprise deployment, data residency, tenant isolation, Copilot governance
+    signals: [Azure OpenAI, AI Foundry, RAG, AI Search, Semantic Kernel,
+              retrieval, serving, context engineering]
+    # NOTE, KEPT: a previous draft profile placed "enterprise AI" and "Microsoft
+    # Copilot" under low_interests. That is still the wrong instinct for this
+    # author — it is the material closest to his job. A2 is what removed the
+    # governance half, not a judgement that it does not matter.
+
+  # OUT OF SCOPE UNDER A2 — no section, no topic. Left here in full so
+  # the decision is visible and reversible; restoring it means
+  # uncommenting this block, re-adding a Practice section to
+  # taxonomy.json, and setting inScope:true on the four feed entries in
+  # feeds-research-security.json.
+  #
+  # - topic: mobile and endpoint management
+  #   evidence: >
+  #     Technical consultant in enterprise mobility management; Securesein's
+  #     existing readership and back catalogue are MDM/Intune/Android Enterprise.
+  #     Recent work: Samsung SDS on-prem EMM architecture, Samsung HDM signing
+  #     design, mSCP-based iOS/macOS baselines, STIG Manager.
+  #   signals: [Intune, Android Enterprise, Apple Business Manager, OEMConfig,
+  #             device management, security baseline, mSCP, STIG, compliance]
+  #   # Only include where there is a genuine AI or security angle, or a
+  #   # concrete practitioner finding. This is the section most at risk of
+  #   # drifting into vendor release notes.
+
+# ---------------------------------------------------------------------------
+# Medium interests
+# ---------------------------------------------------------------------------
+# Publishable when the item is strong, but they do not win ties.
+
+medium_interests:
+  - topic: reinforcement learning
+    signals: [RLHF, RLVR, reward model, policy optimization, GRPO, PPO,
+              reward hacking, specification gaming]
+    note: >
+      Reward hacking and specification gaming belong to the Security section and
+      should be treated as a strong interest there, not a medium one.
+
+  - topic: multimodal models
+    signals: [vision language, audio, video generation, speech, OCR]
+
+  - topic: evaluation methodology
+    signals: [contamination, benchmark design, harness, construct validity,
+              held-out set, replication]
+    note: >
+      Methodology critique ranks well above leaderboard movement. A paper showing
+      a benchmark is contaminated beats ten posts about who is now first.
+
+  # OUT OF SCOPE UNDER A2 — no section and no topic in the thirteen-topic
+  # vocabulary. Uncomment if a policy topic is ever added.
+  # - topic: AI policy and regulation
+  #   signals: [EU AI Act, export controls, compliance obligation, NIS2, BIO]
+  #   note: >
+  #     Only where it changes what a practitioner must actually do. Never
+  #     opinion pieces about what regulation ought to be.
+
+  - topic: philosophy of mind and AI
+    evidence: >
+      Leiden philosophy background, long-standing interest in the intersection.
+    note: >
+      Deliberately kept at medium. A previous decision shelved philosophy content
+      for a possible separate site. Do not let it colonise the Research section.
+
+# ---------------------------------------------------------------------------
+# Low interests — publishable only with an unusually high quality score
+# ---------------------------------------------------------------------------
+
+low_interests:
+  - AI productivity tooling and app roundups
+  - AI in creative industries
+  - hardware and datacenter buildouts, unless it changes what is runnable locally
+  - robotics
+  - autonomous vehicles
+  - AI and employment commentary
+
+# ---------------------------------------------------------------------------
+# Exclusions — hard drop, no score, no queue
+# ---------------------------------------------------------------------------
+
+exclude:
+  - funding rounds, valuations, IPOs, acquisitions
+  - executive hires, departures and org restructures
+  - corporate press releases with no technical substance
+  - partnership and customer-win announcements
+  # Requoted: the original line was `- "AI will transform <industry>" opinion
+  # pieces`, which is not valid YAML — a scalar may not start with a quoted
+  # run and then continue unquoted. As written the whole file failed to
+  # parse, so the exclude list would never have loaded. Content unchanged.
+  - '"AI will transform <industry>" opinion pieces' 
+  - publisher-about-itself stories
+  - conference and webinar announcements
+  - product marketing and sponsored content
+  - listicles and "top N tools" content
+  - restatements of a release already covered (handled by entity dedup, but
+    excluded here too as a second line of defence)
+
+# ---------------------------------------------------------------------------
+# Scoring
+# ---------------------------------------------------------------------------
+# Two stages, deliberately not one weighted sum.
+#
+# A single 0-100 score lets a technically excellent but irrelevant paper
+# outrank a merely good but highly relevant one. Gate first, then rank.
+
+quality_gate:
+  # Pass/fail. Below this, the item never reaches ranking regardless of topic.
+  minimum: 55
+  components:
+    technical_substance: 40   # does it contain a mechanism, a result, a number?
+    source_quality: 25        # primary > lab blog > quality press > aggregator
+    novelty: 20               # new, not a restatement
+    verifiability: 15         # claims traceable to something checkable
+
+relevance_rank:
+  # Only applied to items that passed the gate. This is what orders the queue.
+  components:
+    strong_interest_match: 45
+    medium_interest_match: 20
+    section_fit: 15           # does it clearly belong in one of the sections?
+    depth_bonus: 10           # explains a mechanism rather than reporting an event
+    topic_starvation: 10      # see below
+  low_interest_penalty: -25
+
+# Topic starvation keeps the site filling out evenly without lowering the bar.
+# It is a tie-breaker among items that already passed the quality gate — it can
+# reorder the queue, it can never push a failing item into it.
+topic_starvation:
+  enabled: true
+  days_before_bonus: 10
+  max_bonus: 10
+  applies_to: [topics]        # not to sections, not to vendors
+
+# Anti-filter-bubble. Percentages of the weekly published mix.
+discovery:
+  strong_interest_share: 0.70
+  adjacent_share: 0.20
+  serendipity_share: 0.10
+  note: >
+    The serendipity slot draws from items that passed the quality gate with a
+    high quality score but low relevance. It exists to find interests the
+    profile does not know about yet. Never fill it with low-quality items —
+    serendipity is about topic, not standards.
+
+# ---------------------------------------------------------------------------
+# Feedback → profile updates
+# ---------------------------------------------------------------------------
+
+feedback:
+  kinds:
+    interesting:    { weight: 1,  scope: item }
+    not_useful:     { weight: -1, scope: item }
+    not_my_topic:   { weight: -3, scope: topic }
+    deep_dive:      { weight: 3,  scope: topic }
+    retract:        { weight: -3, scope: item, action: unpublish }
+
+  # Accumulated evidence only. One reaction never moves the profile.
+  promotion_threshold: 8      # net positive signals before a topic moves up a tier
+  demotion_threshold: -8
+  min_observations: 10        # never act on a topic with fewer than this many rated items
+  requires_confirmation: true # Scout proposes a profile change; Sebastiaan approves
+
+  # Guard against the profile collapsing onto one subject.
+  floor:
+    min_topics_at_strong: 5
+    never_auto_exclude: true  # only Sebastiaan may add to the exclude list
+
+# ---------------------------------------------------------------------------
+# Reconciliation note (superseded)
+# ---------------------------------------------------------------------------
+# The original note here argued that dropping mobility, enterprise and
+# self-hosted would be "a strategic repositioning of the blog from
+# 'practitioner blog with a serious AI pillar' to 'AI research radar', not
+# an implementation detail", and asked for an explicit decision.
+#
+# The decision was made: the AI research radar. The repositioning is
+# deliberate and this file has been reconciled with it in place — see the
+# note at the top, and the commented-out blocks above, each of which
+# states what it was and what would restore it.
+#
+# What has NOT changed, and should not be changed by anything downstream
+# of this file:
+#   - exclude[] is owner-only (§11.3). The reconciliation added nothing
+#     to it and removed nothing from it.
+#   - the low_interests list is untouched; A2 is about what has a section
+#     to go to, not about what the author finds dull.
+#   - this profile is still a hypothesis derived from observed behaviour,
+#     corrected through Telegram feedback, never by editing the classifier.

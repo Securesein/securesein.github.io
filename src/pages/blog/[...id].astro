@@ -12,7 +12,7 @@ import HowThisWasMade from "../../components/HowThisWasMade.astro";
 import RelatedPosts from "../../components/RelatedPosts.astro";
 import ThreadStrip from "../../components/ThreadStrip.astro";
 import { CREDITS } from "../../credit";
-import { FORMATS, KINDS, type Topic } from "../../taxonomy";
+import { FORMATS, SECTION_INFO, type Topic } from "../../taxonomy";
 import { postUrl, readingMinutes, relatedPosts, threadPositions } from "../../posts";
 import { SITE } from "../../consts";
 
@@ -28,10 +28,13 @@ const { post } = Astro.props;
 const { data } = post;
 const { Content } = await render(post);
 
-const kind = KINDS[data.kind];
-const format = data.format ? FORMATS[data.format] : undefined;
+const section = SECTION_INFO[data.kind];
+const format = FORMATS[data.format];
 const minutes = readingMinutes(post);
-const longForm = data.kind !== "news";
+// Reading mode follows the FORMAT, not the section: a short timely item
+// is a short timely item whether it sits in Model Updates or Security,
+// and a deep dive is long-form wherever it is filed.
+const longForm = data.format !== "news";
 
 // The weaker of two posts on the same subject points at the better
 // one rather than leaving the reader on it.
@@ -89,12 +92,10 @@ const jsonLd = {
     set:html={JSON.stringify(jsonLd)}
   />
 
-  <article class="container post" data-pagefind-body data-pagefind-meta={`kind:${kind.label}`}>
+  <article class="container post" data-pagefind-body data-pagefind-meta={`section:${section.label}`}>
     <nav class="crumbs" aria-label="Breadcrumb">
-      <a href={kind.href} class="crumb-kind">{kind.plural}</a>
-      {format && (
-        <a href={`/deep-dives/${format.slug}/`} class="crumb-format">{format.label}</a>
-      )}
+      <a href={section.href} class="crumb-kind">{section.plural}</a>
+      <span class="crumb-format">{format.label}</span>
     </nav>
 
     <h1 class="post-title">{data.title}</h1>
@@ -186,7 +187,9 @@ const jsonLd = {
     letter-spacing: 0.01em;
     transition: color 0.2s ease, border-color 0.2s ease;
   }
-  .crumb-format:hover { color: var(--text); border-color: var(--text-muted); text-decoration: none; }
+  /* A label now, not a link: formats have no per-format route under the
+     three-axis model (the two that do, /news/ and /deep-dives/, are
+     kept for URL continuity rather than as front doors). */
   .post-title {
     font-size: clamp(1.9rem, 5vw, 2.9rem);
     margin-top: 1.1rem;

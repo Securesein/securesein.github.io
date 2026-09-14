@@ -6,7 +6,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
 import { postUrl, threadsWithPosts } from "../../posts";
-import { KINDS } from "../../taxonomy";
+import { SECTION_INFO } from "../../taxonomy";
 
 const threads = await threadsWithPosts();
 ---
@@ -29,7 +29,7 @@ const threads = await threadsWithPosts();
         <ol class="thread-list">
           {posts.map((post) => (
             <li>
-              <span class="thread-kind">{KINDS[post.data.kind].label}</span>
+              <span class="thread-kind">{SECTION_INFO[post.data.kind].label}</span>
               <a href={postUrl(post)}>{post.data.title}</a>
               <FormattedDate date={post.data.pubDate} day />
             </li>

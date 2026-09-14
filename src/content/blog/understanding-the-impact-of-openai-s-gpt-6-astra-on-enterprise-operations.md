@@ -2,8 +2,9 @@
 title: "Understanding the Impact of OpenAI's GPT-6 Astra on Enterprise Operations"
 description: "An exploration of OpenAI's new GPT-6 Astra model, its potential costs, performance implications, and expected applications in enterprise environments."
 pubDate: 2026-09-04
-kind: "news"
-topics: ["models", "enterprise"]
+kind: "release"
+format: "news"
+topics: ["llms", "inference"]
 credit: "scout"
 model: "gpt-4o"
 source:

@@ -2,9 +2,9 @@
 title: "LLMs Model a Harsher World Than the One We Live In"
 description: "A new benchmark shows language models know what's wrong but not how people actually react to it — and the bias may come from alignment itself."
 pubDate: 2026-09-09
-kind: "deepdive"
+kind: "research"
 format: "paper"
-topics: ["safety", "models"]
+topics: ["llms", "ai-safety", "evaluation"]
 credit: "directed"
 model: "Claude"
 contributions:

@@ -1,0 +1,3134 @@
+{
+  "_comment": "Canonical model registry — a CLOSED vocabulary. Resolution order is exact id, then exact alias, then normalised (lowercase, strip spaces/dashes/parentheses/reasoning-effort suffix), then UNRESOLVED. An unresolved name is parked in state/unresolved_models.jsonl and reported weekly; it is never auto-registered and never written into the benchmarks collection. Seeded from Epoch AI's CC-BY model catalogue by scripts/seed_models_registry.py, which is run by hand and never by the pipeline. Hand edits to an existing entry survive a re-seed; only aliases are merged in.",
+  "source": "https://epoch.ai/data/benchmark_data.zip",
+  "models": [
+    {
+      "id": "yi-1-5-34b",
+      "vendor": "01ai",
+      "family": "yi-34b",
+      "displayName": "Yi-1.5-34B",
+      "aliases": [
+        "Yi-1.5-34B-Chat"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-05-13"
+    },
+    {
+      "id": "yi-34b",
+      "vendor": "01ai",
+      "family": "yi-34b",
+      "displayName": "Yi-34B",
+      "aliases": [
+        "Yi-34B-Chat"
+      ],
+      "openWeights": true,
+      "releasedAt": "2023-11-02"
+    },
+    {
+      "id": "tulu-3-t-lu-3-70b",
+      "vendor": "ai2",
+      "family": "tulu-t-lu-70b",
+      "displayName": "Tulu 3 (Tülu 3) 70B",
+      "aliases": [
+        "Llama-3.1-Tulu-3-70B-DPO"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-11-21"
+    },
+    {
+      "id": "qwen-3-5-flash-hosted-35b-a3b",
+      "vendor": "alibaba",
+      "family": "qwen-flash-hosted-35b-a3b",
+      "displayName": "Qwen 3.5 Flash (hosted 35B-A3B)",
+      "aliases": [
+        "Qwen3.5 Flash",
+        "qwen3.5-flash",
+        "qwen3.5-flash_none"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-02-25"
+    },
+    {
+      "id": "qwen-3-5-plus-hosted-397b-a17b",
+      "vendor": "alibaba",
+      "family": "qwen-plus-hosted-397b-a17b",
+      "displayName": "Qwen 3.5 Plus (hosted 397B-A17B)",
+      "aliases": [
+        "Qwen3.5 Plus",
+        "qwen3.5-plus"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-02-16"
+    },
+    {
+      "id": "qwen-3-6-35b-a3b",
+      "vendor": "alibaba",
+      "family": "qwen-35b-a3b",
+      "displayName": "Qwen 3.6 35B-A3B",
+      "aliases": [
+        "Qwen3.6 35B-A3B",
+        "qwen3.6-35b-a3b",
+        "qwen3.6-35b-a3b_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-04-14"
+    },
+    {
+      "id": "qwen-3-6-flash",
+      "vendor": "alibaba",
+      "family": "qwen-flash",
+      "displayName": "Qwen 3.6 Flash",
+      "aliases": [
+        "Qwen 3.6 Flash (2026-04-16)",
+        "qwen3.6-flash",
+        "qwen3.6-flash_none"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-04-27"
+    },
+    {
+      "id": "qwen-3-6-max-preview",
+      "vendor": "alibaba",
+      "family": "qwen-max-preview",
+      "displayName": "Qwen 3.6 Max (Preview)",
+      "aliases": [
+        "qwen3.6-max-preview"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-04-20"
+    },
+    {
+      "id": "qwen-3-6-plus",
+      "vendor": "alibaba",
+      "family": "qwen-plus",
+      "displayName": "Qwen 3.6 Plus",
+      "aliases": [
+        "Qwen 3.6 Plus (2026-04-02)",
+        "qwen3.6-plus",
+        "qwen3.6-plus_none"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-03-31"
+    },
+    {
+      "id": "qwen-3-8-max",
+      "vendor": "alibaba",
+      "family": "qwen-max",
+      "displayName": "Qwen 3.8 Max",
+      "aliases": [
+        "Qwen3.8 Max (xhigh)",
+        "qwen3.8-max",
+        "qwen3.8-max_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-08-02"
+    },
+    {
+      "id": "qwen-plus-apr-2025",
+      "vendor": "alibaba",
+      "family": "qwen-plus-apr",
+      "displayName": "Qwen Plus (Apr 2025)",
+      "aliases": [
+        "qwen-plus-2025-04-28"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-04-28"
+    },
+    {
+      "id": "qwen-plus-jan-2025",
+      "vendor": "alibaba",
+      "family": "qwen-plus-jan",
+      "displayName": "Qwen Plus (Jan 2025)",
+      "aliases": [
+        "qwen-plus-2025-01-25"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-01-25"
+    },
+    {
+      "id": "qwen-turbo",
+      "vendor": "alibaba",
+      "family": "qwen-turbo",
+      "displayName": "Qwen-Turbo",
+      "aliases": [
+        "qwen-turbo-2024-11-01"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-11-01"
+    },
+    {
+      "id": "qwen1-5-32b",
+      "vendor": "alibaba",
+      "family": "qwen1-32b",
+      "displayName": "Qwen1.5-32B",
+      "aliases": [
+        "qwen1.5-32b-chat"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-04-03"
+    },
+    {
+      "id": "qwen1-5-72b",
+      "vendor": "alibaba",
+      "family": "qwen1-72b",
+      "displayName": "Qwen1.5-72B",
+      "aliases": [
+        "qwen1.5-72b-chat"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-02-04"
+    },
+    {
+      "id": "qwen2-5-32b",
+      "vendor": "alibaba",
+      "family": "qwen2-32b",
+      "displayName": "Qwen2.5-32B",
+      "aliases": [
+        "qwen2.5-32b-instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-09-17"
+    },
+    {
+      "id": "qwen2-5-72b",
+      "vendor": "alibaba",
+      "family": "qwen2-72b",
+      "displayName": "Qwen2.5-72B",
+      "aliases": [
+        "Qwen2.5-VL-72B-Instruct",
+        "qwen2.5-72b-instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-09-19"
+    },
+    {
+      "id": "qwen2-5-7b",
+      "vendor": "alibaba",
+      "family": "qwen2-7b",
+      "displayName": "Qwen2.5-7B",
+      "aliases": [
+        "qwen2.5-7b-instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-09-19"
+    },
+    {
+      "id": "qwen2-5-max",
+      "vendor": "alibaba",
+      "family": "qwen2-max",
+      "displayName": "Qwen2.5-Max",
+      "aliases": [
+        "qwen-max-2025-01-25"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-01-25"
+    },
+    {
+      "id": "qwen2-72b",
+      "vendor": "alibaba",
+      "family": "qwen2-72b",
+      "displayName": "Qwen2-72B",
+      "aliases": [
+        "qwen2-72b-instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-06-07"
+    },
+    {
+      "id": "qwen3-1-7b",
+      "vendor": "alibaba",
+      "family": "qwen3-7b",
+      "displayName": "Qwen3-1.7B",
+      "aliases": [
+        "qwen3-1.7b_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-04-29"
+    },
+    {
+      "id": "qwen3-14b",
+      "vendor": "alibaba",
+      "family": "qwen3-14b",
+      "displayName": "Qwen3-14B",
+      "aliases": [
+        "qwen3-14b_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-04-29"
+    },
+    {
+      "id": "qwen3-235b-a22b",
+      "vendor": "alibaba",
+      "family": "qwen3-235b-a22b",
+      "displayName": "Qwen3-235B-A22B",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2025-04-28"
+    },
+    {
+      "id": "qwen3-235b-a22b-instruct-jul-2025",
+      "vendor": "alibaba",
+      "family": "qwen3-235b-a22b-instruct-jul",
+      "displayName": "Qwen3-235B-A22B-Instruct (Jul 2025)",
+      "aliases": [
+        "Qwen3-235B-A22B-Instruct-2507"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-07-25"
+    },
+    {
+      "id": "qwen3-235b-a22b-thinking-jul-2025",
+      "vendor": "alibaba",
+      "family": "qwen3-235b-a22b-thinking-jul",
+      "displayName": "Qwen3-235B-A22B-Thinking (Jul 2025)",
+      "aliases": [
+        "Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "Qwen3-235B-A22B-Thinking-2507"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-07-25"
+    },
+    {
+      "id": "qwen3-30b-a3b",
+      "vendor": "alibaba",
+      "family": "qwen3-30b-a3b",
+      "displayName": "Qwen3-30B-A3B",
+      "aliases": [
+        "Qwen3-30B-A3B_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-04-28"
+    },
+    {
+      "id": "qwen3-30b-a3b-instruct-jul-2025",
+      "vendor": "alibaba",
+      "family": "qwen3-30b-a3b-instruct-jul",
+      "displayName": "Qwen3-30B-A3B-Instruct (Jul 2025)",
+      "aliases": [
+        "qwen3-30b-a3b-instruct-2507"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-07-29"
+    },
+    {
+      "id": "qwen3-30b-a3b-thinking-jul-2025",
+      "vendor": "alibaba",
+      "family": "qwen3-30b-a3b-thinking-jul",
+      "displayName": "Qwen3-30B-A3B-Thinking (Jul 2025)",
+      "aliases": [
+        "qwen3-30b-a3b-thinking-2507"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-07-30"
+    },
+    {
+      "id": "qwen3-32b",
+      "vendor": "alibaba",
+      "family": "qwen3-32b",
+      "displayName": "Qwen3-32B",
+      "aliases": [
+        "Qwen3-32B_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-04-28"
+    },
+    {
+      "id": "qwen3-4b",
+      "vendor": "alibaba",
+      "family": "qwen3-4b",
+      "displayName": "Qwen3-4B",
+      "aliases": [
+        "qwen3-4b_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-04-29"
+    },
+    {
+      "id": "qwen3-5-35b-a3b",
+      "vendor": "alibaba",
+      "family": "qwen3-35b-a3b",
+      "displayName": "Qwen3.5-35B-A3B",
+      "aliases": [
+        "qwen3.5-35b-a3b_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-02-24"
+    },
+    {
+      "id": "qwen3-5-397b-a17b",
+      "vendor": "alibaba",
+      "family": "qwen3-397b-a17b",
+      "displayName": "Qwen3.5 397B-A17B",
+      "aliases": [
+        "qwen3.5-397b-a17b_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-02-13"
+    },
+    {
+      "id": "qwen3-5-9b",
+      "vendor": "alibaba",
+      "family": "qwen3-9b",
+      "displayName": "Qwen3.5-9B",
+      "aliases": [
+        "qwen3.5-9B_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-02-24"
+    },
+    {
+      "id": "qwen3-6-27b",
+      "vendor": "alibaba",
+      "family": "qwen3-27b",
+      "displayName": "Qwen3.6 27B",
+      "aliases": [
+        "qwen3.6-27b_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-04-22"
+    },
+    {
+      "id": "qwen3-7-flash",
+      "vendor": "alibaba",
+      "family": "qwen3-flash",
+      "displayName": "Qwen3.7 Flash",
+      "aliases": [
+        "qwen3.7-flash_none"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-07-27"
+    },
+    {
+      "id": "qwen3-7-max",
+      "vendor": "alibaba",
+      "family": "qwen3-max",
+      "displayName": "Qwen3.7-Max",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2026-05-19"
+    },
+    {
+      "id": "qwen3-7-plus",
+      "vendor": "alibaba",
+      "family": "qwen3-plus",
+      "displayName": "Qwen3.7-Plus",
+      "aliases": [
+        "qwen3.7-plus_none"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-06-02"
+    },
+    {
+      "id": "qwen3-8-max-0902",
+      "vendor": "alibaba",
+      "family": "qwen3-max",
+      "displayName": "Qwen3.8 Max (0902)",
+      "aliases": [
+        "Qwen3.8 Max (0902) (xhigh)",
+        "qwen3.8-max-0902_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-09-01"
+    },
+    {
+      "id": "qwen3-8b",
+      "vendor": "alibaba",
+      "family": "qwen3-8b",
+      "displayName": "Qwen3-8B",
+      "aliases": [
+        "qwen3-8b_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-04-28"
+    },
+    {
+      "id": "qwen3-coder-480b-a35b",
+      "vendor": "alibaba",
+      "family": "qwen3-coder-480b-a35b",
+      "displayName": "Qwen3-Coder-480B-A35B",
+      "aliases": [
+        "Qwen3-Coder-480B-A35B-Instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-07-31"
+    },
+    {
+      "id": "qwen3-max",
+      "vendor": "alibaba",
+      "family": "qwen3-max",
+      "displayName": "Qwen3-Max",
+      "aliases": [
+        "Qwen3-Max-Instruct",
+        "qwen3-max-2025-09-23"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-09-24"
+    },
+    {
+      "id": "qwq-32b",
+      "vendor": "alibaba",
+      "family": "qwq-32b",
+      "displayName": "QwQ-32B",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2025-03-05"
+    },
+    {
+      "id": "qwq-plus",
+      "vendor": "alibaba",
+      "family": "qwq-plus",
+      "displayName": "QWQ-Plus",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-04-08"
+    },
+    {
+      "id": "claude-2",
+      "vendor": "anthropic",
+      "family": "claude",
+      "displayName": "Claude 2",
+      "aliases": [
+        "claude-2.0"
+      ],
+      "openWeights": false,
+      "releasedAt": "2023-07-11"
+    },
+    {
+      "id": "claude-2-1",
+      "vendor": "anthropic",
+      "family": "claude",
+      "displayName": "Claude 2.1",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2023-11-21"
+    },
+    {
+      "id": "claude-3-5-haiku",
+      "vendor": "anthropic",
+      "family": "claude-haiku",
+      "displayName": "Claude 3.5 Haiku",
+      "aliases": [
+        "Claude 3.5 Haiku (Oct 2024)",
+        "claude-3-5-haiku-20241022"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-10-22"
+    },
+    {
+      "id": "claude-3-5-sonnet",
+      "vendor": "anthropic",
+      "family": "claude-sonnet",
+      "displayName": "Claude 3.5 Sonnet",
+      "aliases": [
+        "Claude 3.5 Sonnet (Jun 2024)",
+        "claude-3-5-sonnet-20240620"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-06-20"
+    },
+    {
+      "id": "claude-3-5-sonnet-october-2024",
+      "vendor": "anthropic",
+      "family": "claude-sonnet-october",
+      "displayName": "Claude 3.5 Sonnet (October 2024)",
+      "aliases": [
+        "Claude 3.5 Sonnet (Oct 2024)",
+        "claude-3-5-sonnet-20241022"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-10-22"
+    },
+    {
+      "id": "claude-3-7-sonnet",
+      "vendor": "anthropic",
+      "family": "claude-sonnet",
+      "displayName": "Claude 3.7 Sonnet",
+      "aliases": [
+        "Claude 3.7 Sonnet (16k thinking)",
+        "Claude 3.7 Sonnet (1k thinking)",
+        "Claude 3.7 Sonnet (32k thinking)",
+        "Claude 3.7 Sonnet (64k thinking)",
+        "Claude 3.7 Sonnet (8k thinking)",
+        "Claude 3.7 Sonnet (unknown thinking)",
+        "claude-3-7-sonnet-20250219",
+        "claude-3-7-sonnet-20250219_16K",
+        "claude-3-7-sonnet-20250219_1K",
+        "claude-3-7-sonnet-20250219_32K",
+        "claude-3-7-sonnet-20250219_64K",
+        "claude-3-7-sonnet-20250219_8K",
+        "claude-3-7-sonnet-20250219_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-02-24"
+    },
+    {
+      "id": "claude-3-haiku",
+      "vendor": "anthropic",
+      "family": "claude-haiku",
+      "displayName": "Claude 3 Haiku",
+      "aliases": [
+        "claude-3-haiku-20240307"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-03-07"
+    },
+    {
+      "id": "claude-3-opus",
+      "vendor": "anthropic",
+      "family": "claude-opus",
+      "displayName": "Claude 3 Opus",
+      "aliases": [
+        "claude-3-opus-20240229"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-02-29"
+    },
+    {
+      "id": "claude-3-sonnet",
+      "vendor": "anthropic",
+      "family": "claude-sonnet",
+      "displayName": "Claude 3 Sonnet",
+      "aliases": [
+        "claude-3-sonnet-20240229"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-02-29"
+    },
+    {
+      "id": "claude-fable-5",
+      "vendor": "anthropic",
+      "family": "claude-fable",
+      "displayName": "Claude Fable 5",
+      "aliases": [
+        "Claude Fable 5 (high)",
+        "Claude Fable 5 (low)",
+        "Claude Fable 5 (max)",
+        "Claude Fable 5 (medium)",
+        "Claude Fable 5 (xhigh)",
+        "claude-fable-5_high",
+        "claude-fable-5_low",
+        "claude-fable-5_max",
+        "claude-fable-5_medium",
+        "claude-fable-5_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-06-09"
+    },
+    {
+      "id": "claude-fable-5-1",
+      "vendor": "anthropic",
+      "family": "claude-fable",
+      "displayName": "Claude Fable 5.1",
+      "aliases": [
+        "Claude Fable 5.1 (high)",
+        "Claude Fable 5.1 (low)",
+        "Claude Fable 5.1 (max)",
+        "Claude Fable 5.1 (medium)",
+        "Claude Fable 5.1 (xhigh)",
+        "claude-fable-5-1_high",
+        "claude-fable-5-1_low",
+        "claude-fable-5-1_max",
+        "claude-fable-5-1_medium",
+        "claude-fable-5-1_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-09-01"
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "vendor": "anthropic",
+      "family": "claude-haiku",
+      "displayName": "Claude Haiku 4.5",
+      "aliases": [
+        "Claude Haiku 4.5 (unknown thinking)",
+        "claude-haiku-4-5-20251001",
+        "claude-haiku-4-5-20251001_16K",
+        "claude-haiku-4-5-20251001_1K",
+        "claude-haiku-4-5-20251001_32K",
+        "claude-haiku-4-5-20251001_8K",
+        "claude-haiku-4-5-20251001_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-10-15"
+    },
+    {
+      "id": "claude-opus-4",
+      "vendor": "anthropic",
+      "family": "claude-opus",
+      "displayName": "Claude Opus 4",
+      "aliases": [
+        "claude-opus-4-20250514",
+        "claude-opus-4-20250514_16K",
+        "claude-opus-4-20250514_1K",
+        "claude-opus-4-20250514_27K",
+        "claude-opus-4-20250514_32K",
+        "claude-opus-4-20250514_8K",
+        "claude-opus-4-20250514_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-05-22"
+    },
+    {
+      "id": "claude-opus-4-1",
+      "vendor": "anthropic",
+      "family": "claude-opus",
+      "displayName": "Claude Opus 4.1",
+      "aliases": [
+        "Claude Opus 4.1 (unknown thinking)",
+        "claude-opus-4-1-20250805",
+        "claude-opus-4-1-20250805_16K",
+        "claude-opus-4-1-20250805_27K",
+        "claude-opus-4-1-20250805_32K",
+        "claude-opus-4-1-20250805_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-08-05"
+    },
+    {
+      "id": "claude-opus-4-5",
+      "vendor": "anthropic",
+      "family": "claude-opus",
+      "displayName": "Claude Opus 4.5",
+      "aliases": [
+        "Claude Opus 4.5 (128k thinking)",
+        "Claude Opus 4.5 (16k thinking)",
+        "Claude Opus 4.5 (32k thinking)",
+        "Claude Opus 4.5 (64k thinking)",
+        "Claude Opus 4.5 (8k thinking)",
+        "Claude Opus 4.5 (no thinking)",
+        "Claude Opus 4.5 (unknown thinking)",
+        "claude-opus-4-5-20251101",
+        "claude-opus-4-5-20251101_128K",
+        "claude-opus-4-5-20251101_16K",
+        "claude-opus-4-5-20251101_32K",
+        "claude-opus-4-5-20251101_64K",
+        "claude-opus-4-5-20251101_8K",
+        "claude-opus-4-5-20251101_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-11-24"
+    },
+    {
+      "id": "claude-opus-4-6",
+      "vendor": "anthropic",
+      "family": "claude-opus",
+      "displayName": "Claude Opus 4.6",
+      "aliases": [
+        "Claude Opus 4.6 (120k thinking)",
+        "Claude Opus 4.6 (32k thinking)",
+        "Claude Opus 4.6 (64k thinking)",
+        "Claude Opus 4.6 (max)",
+        "Claude Opus 4.6 (no thinking)",
+        "Claude Opus 4.6 (unknown thinking)",
+        "claude-opus-4-6_120K",
+        "claude-opus-4-6_32K",
+        "claude-opus-4-6_64K",
+        "claude-opus-4-6_max",
+        "claude-opus-4-6_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-02-05"
+    },
+    {
+      "id": "claude-opus-4-7",
+      "vendor": "anthropic",
+      "family": "claude-opus",
+      "displayName": "Claude Opus 4.7",
+      "aliases": [
+        "Claude Opus 4.7 (high)",
+        "Claude Opus 4.7 (low)",
+        "Claude Opus 4.7 (max)",
+        "Claude Opus 4.7 (medium)",
+        "Claude Opus 4.7 (unknown)",
+        "Claude Opus 4.7 (xhigh)",
+        "claude-opus-4-7_high",
+        "claude-opus-4-7_low",
+        "claude-opus-4-7_max",
+        "claude-opus-4-7_medium",
+        "claude-opus-4-7_unknown",
+        "claude-opus-4-7_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-04-16"
+    },
+    {
+      "id": "claude-opus-4-8",
+      "vendor": "anthropic",
+      "family": "claude-opus",
+      "displayName": "Claude Opus 4.8",
+      "aliases": [
+        "claude-opus-4-8_high",
+        "claude-opus-4-8_low",
+        "claude-opus-4-8_max",
+        "claude-opus-4-8_medium",
+        "claude-opus-4-8_none"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-05-28"
+    },
+    {
+      "id": "claude-opus-5",
+      "vendor": "anthropic",
+      "family": "claude-opus",
+      "displayName": "Claude Opus 5",
+      "aliases": [
+        "Claude Opus 5 (high)",
+        "Claude Opus 5 (low)",
+        "Claude Opus 5 (max)",
+        "claude-opus-5_high",
+        "claude-opus-5_low",
+        "claude-opus-5_max"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-07-24"
+    },
+    {
+      "id": "claude-sonnet-4",
+      "vendor": "anthropic",
+      "family": "claude-sonnet",
+      "displayName": "Claude Sonnet 4",
+      "aliases": [
+        "Claude Sonnet 4 (unknown thinking)",
+        "claude-sonnet-4-20250514",
+        "claude-sonnet-4-20250514_16K",
+        "claude-sonnet-4-20250514_1K",
+        "claude-sonnet-4-20250514_32K",
+        "claude-sonnet-4-20250514_59K",
+        "claude-sonnet-4-20250514_8K",
+        "claude-sonnet-4-20250514_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-05-22"
+    },
+    {
+      "id": "claude-sonnet-4-5",
+      "vendor": "anthropic",
+      "family": "claude-sonnet",
+      "displayName": "Claude Sonnet 4.5",
+      "aliases": [
+        "Claude Sonnet 4.5 (16k thinking)",
+        "Claude Sonnet 4.5 (1k thinking)",
+        "Claude Sonnet 4.5 (32k thinking)",
+        "Claude Sonnet 4.5 (59k thinking)",
+        "Claude Sonnet 4.5 (8k thinking)",
+        "Claude Sonnet 4.5 (no thinking)",
+        "Claude Sonnet 4.5 (unknown thinking)",
+        "claude-sonnet-4-5-20250929",
+        "claude-sonnet-4-5-20250929_16K",
+        "claude-sonnet-4-5-20250929_1K",
+        "claude-sonnet-4-5-20250929_32K",
+        "claude-sonnet-4-5-20250929_59K",
+        "claude-sonnet-4-5-20250929_8K",
+        "claude-sonnet-4-5-20250929_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-09-29"
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "vendor": "anthropic",
+      "family": "claude-sonnet",
+      "displayName": "Claude Sonnet 4.6",
+      "aliases": [
+        "Claude Sonnet 4.6 (16k thinking)",
+        "Claude Sonnet 4.6 (32k thinking)",
+        "Claude Sonnet 4.6 (high)",
+        "Claude Sonnet 4.6 (max)",
+        "Claude Sonnet 4.6 (medium)",
+        "Claude Sonnet 4.6 (no thinking)",
+        "Claude Sonnet 4.6 (unknown thinking)",
+        "claude-sonnet-4-6_16K",
+        "claude-sonnet-4-6_32K",
+        "claude-sonnet-4-6_high",
+        "claude-sonnet-4-6_max",
+        "claude-sonnet-4-6_medium",
+        "claude-sonnet-4-6_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-02-17"
+    },
+    {
+      "id": "claude-sonnet-5",
+      "vendor": "anthropic",
+      "family": "claude-sonnet",
+      "displayName": "Claude Sonnet 5",
+      "aliases": [
+        "Claude Sonnet 5 (max)",
+        "Claude Sonnet 5 (xhigh)",
+        "claude-sonnet-5_max",
+        "claude-sonnet-5_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-06-30"
+    },
+    {
+      "id": "cohere-command-a",
+      "vendor": "cohere",
+      "family": "cohere-command-a",
+      "displayName": "Cohere Command A",
+      "aliases": [
+        "c4ai-command-a-03-2025"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-03-13"
+    },
+    {
+      "id": "dbrx",
+      "vendor": "databricks",
+      "family": "dbrx",
+      "displayName": "DBRX",
+      "aliases": [
+        "dbrx-instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-03-27"
+    },
+    {
+      "id": "deepseek-llm-67b",
+      "vendor": "deepseek",
+      "family": "deepseek-llm-67b",
+      "displayName": "DeepSeek LLM 67B",
+      "aliases": [
+        "deepseek-llm-67b-chat"
+      ],
+      "openWeights": true,
+      "releasedAt": "2023-11-29"
+    },
+    {
+      "id": "deepseek-r1",
+      "vendor": "deepseek",
+      "family": "deepseek-r1",
+      "displayName": "DeepSeek-R1",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2025-01-20"
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "vendor": "deepseek",
+      "family": "deepseek-r1-distill-llama-70b",
+      "displayName": "DeepSeek-R1-Distill-Llama-70B",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2025-01-20"
+    },
+    {
+      "id": "deepseek-r1-distill-qwen-1-5b",
+      "vendor": "deepseek",
+      "family": "deepseek-r1-distill-qwen-5b",
+      "displayName": "DeepSeek-R1-Distill-Qwen-1.5B",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2025-01-20"
+    },
+    {
+      "id": "deepseek-r1-distill-qwen-14b",
+      "vendor": "deepseek",
+      "family": "deepseek-r1-distill-qwen-14b",
+      "displayName": "DeepSeek-R1-Distill-Qwen-14B",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2025-01-20"
+    },
+    {
+      "id": "deepseek-r1-distill-qwen-32b",
+      "vendor": "deepseek",
+      "family": "deepseek-r1-distill-qwen-32b",
+      "displayName": "DeepSeek-R1-Distill-Qwen-32B",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2025-01-20"
+    },
+    {
+      "id": "deepseek-r1-may-2025",
+      "vendor": "deepseek",
+      "family": "deepseek-r1-may",
+      "displayName": "DeepSeek-R1 (May 2025)",
+      "aliases": [
+        "DeepSeek-R1-0528"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-05-28"
+    },
+    {
+      "id": "deepseek-v3",
+      "vendor": "deepseek",
+      "family": "deepseek",
+      "displayName": "DeepSeek-V3",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2024-12-26"
+    },
+    {
+      "id": "deepseek-v3-2",
+      "vendor": "deepseek",
+      "family": "deepseek",
+      "displayName": "DeepSeek-V3.2",
+      "aliases": [
+        "DeepSeek-V3.2 (Thinking)",
+        "DeepSeek-V3.2 (Thinking; Fireworks)",
+        "DeepSeek-V3.2 (Thinking; Novita)",
+        "deepseek-chat",
+        "deepseek-reasoner",
+        "deepseek/deepseek-v3.2",
+        "fireworks/deepseek-v3p2"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-12-01"
+    },
+    {
+      "id": "deepseek-v3-2-exp",
+      "vendor": "deepseek",
+      "family": "deepseek-exp",
+      "displayName": "DeepSeek-V3.2-Exp",
+      "aliases": [
+        "DeepSeek-V3.2-Exp_thinking"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-09-29"
+    },
+    {
+      "id": "deepseek-v3-mar-2025",
+      "vendor": "deepseek",
+      "family": "deepseek-mar",
+      "displayName": "DeepSeek-V3 (Mar 2025)",
+      "aliases": [
+        "DeepSeek-V3-0324"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-03-24"
+    },
+    {
+      "id": "deepseek-v4-flash-0731",
+      "vendor": "deepseek",
+      "family": "deepseek-flash",
+      "displayName": "DeepSeek V4 Flash 0731",
+      "aliases": [
+        "DeepSeek V4 Flash 0731 (high)",
+        "DeepSeek V4 Flash 0731 (low)",
+        "DeepSeek V4 Flash 0731 (max)",
+        "DeepSeek V4 Flash 0731 (none)",
+        "deepseek-v4-flash-0731_high",
+        "deepseek-v4-flash-0731_low",
+        "deepseek-v4-flash-0731_max",
+        "deepseek-v4-flash-0731_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-07-31"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "vendor": "deepseek",
+      "family": "deepseek-pro",
+      "displayName": "DeepSeek-V4-Pro",
+      "aliases": [
+        "DeepSeek v4 Pro (high)",
+        "DeepSeek v4 Pro (max)",
+        "DeepSeek v4 Pro (unknown thinking)",
+        "deepseek-v4-pro_high",
+        "deepseek-v4-pro_max",
+        "deepseek-v4-pro_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-04-24"
+    },
+    {
+      "id": "deepseek-v4-pro-0813",
+      "vendor": "deepseek",
+      "family": "deepseek-pro",
+      "displayName": "DeepSeek V4 Pro 0813",
+      "aliases": [
+        "DeepSeek V4 Pro 0813 (high)",
+        "DeepSeek V4 Pro 0813 (low)",
+        "DeepSeek V4 Pro 0813 (max)",
+        "DeepSeek V4 Pro 0813 (none)",
+        "deepseek-v4-pro-0813_high",
+        "deepseek-v4-pro-0813_low",
+        "deepseek-v4-pro-0813_max",
+        "deepseek-v4-pro-0813_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-08-13"
+    },
+    {
+      "id": "ai-co-mathematician",
+      "vendor": "google",
+      "family": "ai-co-mathematician",
+      "displayName": "AI Co-Mathematician",
+      "aliases": [
+        "gdm-ai-co-mathematician"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-05-08"
+    },
+    {
+      "id": "gemini-1-0-pro",
+      "vendor": "google",
+      "family": "gemini-pro",
+      "displayName": "Gemini 1.0 Pro",
+      "aliases": [
+        "gemini-1.0-pro-001"
+      ],
+      "openWeights": false,
+      "releasedAt": "2023-12-13"
+    },
+    {
+      "id": "gemini-1-5-flash-8b",
+      "vendor": "google",
+      "family": "gemini-flash-8b",
+      "displayName": "Gemini 1.5 Flash 8B",
+      "aliases": [
+        "gemini-1.5-flash-8b-001"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-10-03"
+    },
+    {
+      "id": "gemini-1-5-flash-may-2024",
+      "vendor": "google",
+      "family": "gemini-flash-may",
+      "displayName": "Gemini 1.5 Flash (May 2024)",
+      "aliases": [
+        "gemini-1.5-flash-001"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-05-23"
+    },
+    {
+      "id": "gemini-1-5-flash-sep-2024",
+      "vendor": "google",
+      "family": "gemini-flash-sep",
+      "displayName": "Gemini 1.5 Flash (Sep 2024)",
+      "aliases": [
+        "gemini-1.5-flash-002"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-09-24"
+    },
+    {
+      "id": "gemini-1-5-pro-may-2024",
+      "vendor": "google",
+      "family": "gemini-pro-may",
+      "displayName": "Gemini 1.5 Pro (May 2024)",
+      "aliases": [
+        "gemini-1.5-pro-001"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-05-14"
+    },
+    {
+      "id": "gemini-1-5-pro-sept-2024",
+      "vendor": "google",
+      "family": "gemini-pro-sept",
+      "displayName": "Gemini 1.5 Pro (Sept 2024)",
+      "aliases": [
+        "gemini-1.5-pro-002"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-09-24"
+    },
+    {
+      "id": "gemini-2-0-flash-feb-2025",
+      "vendor": "google",
+      "family": "gemini-flash-feb",
+      "displayName": "Gemini 2.0 Flash (Feb 2025)",
+      "aliases": [
+        "gemini-2.0-flash-001"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-02-05"
+    },
+    {
+      "id": "gemini-2-0-flash-lite",
+      "vendor": "google",
+      "family": "gemini-flash-lite",
+      "displayName": "Gemini 2.0 Flash-Lite",
+      "aliases": [
+        "gemini-2.0-flash-lite-preview-02-05"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-02-05"
+    },
+    {
+      "id": "gemini-2-0-flash-thinking-jan-2025",
+      "vendor": "google",
+      "family": "gemini-flash-thinking-jan",
+      "displayName": "Gemini 2.0 Flash Thinking (Jan 2025)",
+      "aliases": [
+        "Gemini 2.0 Flash Thinking Exp",
+        "gemini-2.0-flash-thinking-exp-01-21"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-01-21"
+    },
+    {
+      "id": "gemini-2-0-pro",
+      "vendor": "google",
+      "family": "gemini-pro",
+      "displayName": "Gemini 2.0 Pro",
+      "aliases": [
+        "Gemini 2.0 Pro Exp (Feb 2025)",
+        "gemini-2.0-pro-exp-02-05"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-02-05"
+    },
+    {
+      "id": "gemini-2-5-deep-think",
+      "vendor": "google",
+      "family": "gemini-deep-think",
+      "displayName": "Gemini 2.5 Deep Think",
+      "aliases": [
+        "gemini-2.5-deep-think-2025-08-01-webapp"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-08-01"
+    },
+    {
+      "id": "gemini-2-5-flash-apr-2025",
+      "vendor": "google",
+      "family": "gemini-flash-apr",
+      "displayName": "Gemini 2.5 Flash (Apr 2025)",
+      "aliases": [
+        "Gemini 2.5 Flash Preview (Apr 2025)",
+        "gemini-2.5-flash-preview-04-17"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-04-17"
+    },
+    {
+      "id": "gemini-2-5-flash-jun-2025",
+      "vendor": "google",
+      "family": "gemini-flash-jun",
+      "displayName": "Gemini 2.5 Flash (Jun 2025)",
+      "aliases": [
+        "gemini-2.5-flash"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-06-17"
+    },
+    {
+      "id": "gemini-2-5-flash-may-2025",
+      "vendor": "google",
+      "family": "gemini-flash-may",
+      "displayName": "Gemini 2.5 Flash (May 2025)",
+      "aliases": [
+        "gemini-2.5-flash-preview-05-20",
+        "gemini-2.5-flash-preview-05-20_16K",
+        "gemini-2.5-flash-preview-05-20_1K",
+        "gemini-2.5-flash-preview-05-20_23K",
+        "gemini-2.5-flash-preview-05-20_8K"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-05-20"
+    },
+    {
+      "id": "gemini-2-5-flash-sep-2025",
+      "vendor": "google",
+      "family": "gemini-flash-sep",
+      "displayName": "Gemini 2.5 Flash (Sep 2025)",
+      "aliases": [
+        "gemini-2.5-flash-preview-09-2025"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-09-25"
+    },
+    {
+      "id": "gemini-2-5-pro-jun-2025",
+      "vendor": "google",
+      "family": "gemini-pro-jun",
+      "displayName": "Gemini 2.5 Pro (Jun 2025)",
+      "aliases": [
+        "Gemini 2.5 Pro Preview (Jun 2025)",
+        "gemini-2.5-pro",
+        "gemini-2.5-pro-preview-06-05",
+        "gemini-2.5-pro-preview-06-05_1K",
+        "gemini-2.5-pro-preview-06-05_32K",
+        "gemini-2.5-pro_16K",
+        "gemini-2.5-pro_32K",
+        "gemini-2.5-pro_8K"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-06-05"
+    },
+    {
+      "id": "gemini-2-5-pro-mar-2025",
+      "vendor": "google",
+      "family": "gemini-pro-mar",
+      "displayName": "Gemini 2.5 Pro (Mar 2025)",
+      "aliases": [
+        "Gemini 2.5 Pro Exp (Mar 2025)",
+        "Gemini 2.5 Pro Preview (Mar 2025)",
+        "gemini-2.5-pro-exp-03-25",
+        "gemini-2.5-pro-preview-03-25"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-03-25"
+    },
+    {
+      "id": "gemini-2-5-pro-may-2025",
+      "vendor": "google",
+      "family": "gemini-pro-may",
+      "displayName": "Gemini 2.5 Pro (May 2025)",
+      "aliases": [
+        "Gemini 2.5 Pro Preview (Jun 2025)",
+        "gemini-2.5-pro-preview-05-06"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-05-06"
+    },
+    {
+      "id": "gemini-3-1-flash-lite",
+      "vendor": "google",
+      "family": "gemini-flash-lite",
+      "displayName": "Gemini 3.1 Flash-Lite",
+      "aliases": [
+        "gemini-3.1-flash-lite_high",
+        "gemini-3.1-flash-lite_low",
+        "gemini-3.1-flash-lite_minimal"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-03-03"
+    },
+    {
+      "id": "gemini-3-1-pro",
+      "vendor": "google",
+      "family": "gemini-pro",
+      "displayName": "Gemini 3.1 Pro",
+      "aliases": [
+        "Gemini 3.1 Pro Preview",
+        "gemini-3.1-pro-preview",
+        "gemini-3.1-pro-preview-customtools",
+        "gemini-3.1-pro-preview_high"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-02-19"
+    },
+    {
+      "id": "gemini-3-5-flash",
+      "vendor": "google",
+      "family": "gemini-flash",
+      "displayName": "Gemini 3.5 Flash",
+      "aliases": [
+        "gemini-3.5-flash_high",
+        "gemini-3.5-flash_low",
+        "gemini-3.5-flash_minimal"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-05-19"
+    },
+    {
+      "id": "gemini-3-5-flash-lite",
+      "vendor": "google",
+      "family": "gemini-flash-lite",
+      "displayName": "Gemini 3.5 Flash-Lite",
+      "aliases": [
+        "Gemini 3.5 Flash-Lite (medium)",
+        "gemini-3.5-flash-lite_high",
+        "gemini-3.5-flash-lite_low",
+        "gemini-3.5-flash-lite_medium",
+        "gemini-3.5-flash-lite_minimal"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-07-21"
+    },
+    {
+      "id": "gemini-3-6-flash",
+      "vendor": "google",
+      "family": "gemini-flash",
+      "displayName": "Gemini 3.6 Flash",
+      "aliases": [
+        "Gemini 3.6 Flash (medium)",
+        "gemini-3.6-flash_high",
+        "gemini-3.6-flash_low",
+        "gemini-3.6-flash_medium",
+        "gemini-3.6-flash_minimal"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-07-21"
+    },
+    {
+      "id": "gemini-3-7-flash",
+      "vendor": "google",
+      "family": "gemini-flash",
+      "displayName": "Gemini 3.7 Flash",
+      "aliases": [
+        "Gemini 3.7 Flash (high)",
+        "Gemini 3.7 Flash (low)",
+        "Gemini 3.7 Flash (medium)",
+        "gemini-3.7-flash_high",
+        "gemini-3.7-flash_low",
+        "gemini-3.7-flash_medium"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-08-13"
+    },
+    {
+      "id": "gemini-3-8-flash",
+      "vendor": "google",
+      "family": "gemini-flash",
+      "displayName": "Gemini 3.8 Flash",
+      "aliases": [
+        "Gemini 3.8 Flash (high)",
+        "gemini-3.8-flash_high"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-09-02"
+    },
+    {
+      "id": "gemini-3-deep-think",
+      "vendor": "google",
+      "family": "gemini-deep-think",
+      "displayName": "Gemini 3 Deep Think",
+      "aliases": [
+        "gemini-3-deep-think-preview"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-02-12"
+    },
+    {
+      "id": "gemini-3-flash",
+      "vendor": "google",
+      "family": "gemini-flash",
+      "displayName": "Gemini 3 Flash",
+      "aliases": [
+        "Gemini 3 Flash Preview",
+        "gemini-3-flash-preview",
+        "gemini-3-flash-preview_high"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-12-17"
+    },
+    {
+      "id": "gemini-3-pro",
+      "vendor": "google",
+      "family": "gemini-pro",
+      "displayName": "Gemini 3 Pro",
+      "aliases": [
+        "Gemini 3 Pro Preview",
+        "gemini-3-pro-preview"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-11-18"
+    },
+    {
+      "id": "gemma-2-27b",
+      "vendor": "google",
+      "family": "gemma-27b",
+      "displayName": "Gemma 2 27B",
+      "aliases": [
+        "gemma-2-27b-it"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-06-24"
+    },
+    {
+      "id": "gemma-2-9b",
+      "vendor": "google",
+      "family": "gemma-9b",
+      "displayName": "Gemma 2 9B",
+      "aliases": [
+        "gemma-2-9b-it"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-06-24"
+    },
+    {
+      "id": "gemma-3-12b",
+      "vendor": "google",
+      "family": "gemma-12b",
+      "displayName": "Gemma 3 12B",
+      "aliases": [
+        "gemma-3-12b-it"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-03-12"
+    },
+    {
+      "id": "gemma-3-1b",
+      "vendor": "google",
+      "family": "gemma-1b",
+      "displayName": "Gemma 3 1B",
+      "aliases": [
+        "gemma-3-1b-it"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-03-12"
+    },
+    {
+      "id": "gemma-3-27b",
+      "vendor": "google",
+      "family": "gemma-27b",
+      "displayName": "Gemma 3 27B",
+      "aliases": [
+        "gemma-3-27b-it"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-03-12"
+    },
+    {
+      "id": "gemma-3-4b",
+      "vendor": "google",
+      "family": "gemma-4b",
+      "displayName": "Gemma 3 4B",
+      "aliases": [
+        "gemma-3-4b-it"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-03-12"
+    },
+    {
+      "id": "gemma-4-26b-a4b",
+      "vendor": "google",
+      "family": "gemma-26b-a4b",
+      "displayName": "Gemma 4 26B A4B",
+      "aliases": [
+        "gemma-4-26b-a4b-it",
+        "gemma-4-26b-a4b-it_minimal"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-04-02"
+    },
+    {
+      "id": "gemma-4-31b-it",
+      "vendor": "google",
+      "family": "gemma-31b-it",
+      "displayName": "Gemma 4 31B IT",
+      "aliases": [
+        "gemma-4-31b-it_minimal"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-04-02"
+    },
+    {
+      "id": "llama-2-70b",
+      "vendor": "meta",
+      "family": "llama-70b",
+      "displayName": "Llama 2-70B",
+      "aliases": [
+        "Llama-2-70b-chat-hf"
+      ],
+      "openWeights": true,
+      "releasedAt": "2023-07-18"
+    },
+    {
+      "id": "llama-3-1-405b",
+      "vendor": "meta",
+      "family": "llama-405b",
+      "displayName": "Llama 3.1-405B",
+      "aliases": [
+        "Llama-3.1-405B-Instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-07-23"
+    },
+    {
+      "id": "llama-3-1-70b",
+      "vendor": "meta",
+      "family": "llama-70b",
+      "displayName": "Llama 3.1-70B",
+      "aliases": [
+        "Llama-3.1-70B-Instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-07-23"
+    },
+    {
+      "id": "llama-3-1-8b",
+      "vendor": "meta",
+      "family": "llama-8b",
+      "displayName": "Llama 3.1-8B",
+      "aliases": [
+        "Llama-3.1-8B-Instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-07-23"
+    },
+    {
+      "id": "llama-3-2-1b",
+      "vendor": "meta",
+      "family": "llama-1b",
+      "displayName": "Llama 3.2 1B",
+      "aliases": [
+        "Llama-3.2-1B-Instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-09-24"
+    },
+    {
+      "id": "llama-3-2-90b",
+      "vendor": "meta",
+      "family": "llama-90b",
+      "displayName": "Llama 3.2 90B",
+      "aliases": [
+        "Llama-3.2-90B-Vision-Instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-09-24"
+    },
+    {
+      "id": "llama-3-3-70b",
+      "vendor": "meta",
+      "family": "llama-70b",
+      "displayName": "Llama 3.3 70B",
+      "aliases": [
+        "Llama-3.3-70B-Instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-12-06"
+    },
+    {
+      "id": "llama-3-70b",
+      "vendor": "meta",
+      "family": "llama-70b",
+      "displayName": "Llama 3-70B",
+      "aliases": [
+        "Meta-Llama-3-70B-Instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-04-18"
+    },
+    {
+      "id": "llama-3-8b",
+      "vendor": "meta",
+      "family": "llama-8b",
+      "displayName": "Llama 3-8B",
+      "aliases": [
+        "Meta-Llama-3-8B-Instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-04-18"
+    },
+    {
+      "id": "llama-4-maverick",
+      "vendor": "meta",
+      "family": "llama-maverick",
+      "displayName": "Llama 4 Maverick",
+      "aliases": [
+        "Llama 4 Maverick (FP8)",
+        "Llama-4-Maverick-17B-128E-Instruct",
+        "Llama-4-Maverick-17B-128E-Instruct-FP8"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-04-05"
+    },
+    {
+      "id": "llama-4-scout",
+      "vendor": "meta",
+      "family": "llama-scout",
+      "displayName": "Llama 4 Scout",
+      "aliases": [
+        "Llama-4-Scout-17B-16E-Instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-04-05"
+    },
+    {
+      "id": "muse-spark",
+      "vendor": "meta",
+      "family": "muse-spark",
+      "displayName": "Muse Spark",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2026-04-08"
+    },
+    {
+      "id": "phi-3-medium-14b",
+      "vendor": "microsoft",
+      "family": "phi-medium-14b",
+      "displayName": "phi-3-medium 14B",
+      "aliases": [
+        "Phi-3-medium-128k-instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-04-23"
+    },
+    {
+      "id": "phi-4",
+      "vendor": "microsoft",
+      "family": "phi",
+      "displayName": "Phi-4",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2024-12-12"
+    },
+    {
+      "id": "wizardlm-2-8x22b",
+      "vendor": "microsoft",
+      "family": "wizardlm-8x22b",
+      "displayName": "WizardLM-2 8x22B",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2024-04-15"
+    },
+    {
+      "id": "minimax-m2",
+      "vendor": "minimax",
+      "family": "minimax-m2",
+      "displayName": "MiniMax-M2",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2025-10-27"
+    },
+    {
+      "id": "minimax-m2-1",
+      "vendor": "minimax",
+      "family": "minimax-m2",
+      "displayName": "MiniMax-M2.1",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2025-12-23"
+    },
+    {
+      "id": "minimax-m2-5",
+      "vendor": "minimax",
+      "family": "minimax-m2",
+      "displayName": "MiniMax-M2.5",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2026-02-12"
+    },
+    {
+      "id": "minimax-m2-7",
+      "vendor": "minimax",
+      "family": "minimax-m2",
+      "displayName": "MiniMax-M2.7",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2026-03-18"
+    },
+    {
+      "id": "minimax-m3",
+      "vendor": "minimax",
+      "family": "minimax-m3",
+      "displayName": "MiniMax-M3",
+      "aliases": [
+        "MiniMax-M3_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-06-01"
+    },
+    {
+      "id": "codestral",
+      "vendor": "mistral",
+      "family": "codestral",
+      "displayName": "Codestral",
+      "aliases": [
+        "codestral-2501"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-01-13"
+    },
+    {
+      "id": "magistral-medium-1-1",
+      "vendor": "mistral",
+      "family": "magistral-medium",
+      "displayName": "Magistral Medium 1.1",
+      "aliases": [
+        "magistral-medium-2506"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-06-10"
+    },
+    {
+      "id": "magistral-small-1-0",
+      "vendor": "mistral",
+      "family": "magistral-small",
+      "displayName": "Magistral Small 1.0",
+      "aliases": [
+        "magistral-small-2506"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-06-10"
+    },
+    {
+      "id": "magistral-small-1-2",
+      "vendor": "mistral",
+      "family": "magistral-small",
+      "displayName": "Magistral Small 1.2",
+      "aliases": [
+        "magistral-small-2509"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-09-18"
+    },
+    {
+      "id": "ministral-3b",
+      "vendor": "mistral",
+      "family": "ministral-3b",
+      "displayName": "Ministral 3B",
+      "aliases": [
+        "ministral-3b-2410"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-10-16"
+    },
+    {
+      "id": "ministral-8b",
+      "vendor": "mistral",
+      "family": "ministral-8b",
+      "displayName": "Ministral 8B",
+      "aliases": [
+        "ministral-8b-2410"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-10-16"
+    },
+    {
+      "id": "mistral-7b-v0-3",
+      "vendor": "mistral",
+      "family": "mistral-7b",
+      "displayName": "Mistral 7B v0.3",
+      "aliases": [
+        "Mistral-7B-Instruct-v0.3",
+        "open-mistral-7b"
+      ],
+      "openWeights": true,
+      "releasedAt": "2023-09-27"
+    },
+    {
+      "id": "mistral-large",
+      "vendor": "mistral",
+      "family": "mistral-large",
+      "displayName": "Mistral Large",
+      "aliases": [
+        "mistral-large-2402"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-02-26"
+    },
+    {
+      "id": "mistral-large-2-jul-2024",
+      "vendor": "mistral",
+      "family": "mistral-large-jul",
+      "displayName": "Mistral Large 2 (Jul 2024)",
+      "aliases": [
+        "mistral-large-2407"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-07-24"
+    },
+    {
+      "id": "mistral-large-2-nov-2024",
+      "vendor": "mistral",
+      "family": "mistral-large-nov",
+      "displayName": "Mistral Large 2 (Nov 2024)",
+      "aliases": [
+        "mistral-large-2411"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-11-18"
+    },
+    {
+      "id": "mistral-medium-3",
+      "vendor": "mistral",
+      "family": "mistral-medium",
+      "displayName": "Mistral Medium 3",
+      "aliases": [
+        "mistral-medium-2505"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-05-07"
+    },
+    {
+      "id": "mistral-nemo",
+      "vendor": "mistral",
+      "family": "mistral-nemo",
+      "displayName": "Mistral NeMo",
+      "aliases": [
+        "open-mistral-nemo-2407"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-07-18"
+    },
+    {
+      "id": "mistral-small-3",
+      "vendor": "mistral",
+      "family": "mistral-small",
+      "displayName": "Mistral Small 3",
+      "aliases": [
+        "mistral-small-2501",
+        "mistral-small-3-2501"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-01-25"
+    },
+    {
+      "id": "mistral-small-3-1",
+      "vendor": "mistral",
+      "family": "mistral-small",
+      "displayName": "Mistral Small 3.1",
+      "aliases": [
+        "mistral-small-2503",
+        "mistral-small-3.1-2503"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-03-17"
+    },
+    {
+      "id": "mistral-small-3-2",
+      "vendor": "mistral",
+      "family": "mistral-small",
+      "displayName": "Mistral Small 3.2",
+      "aliases": [
+        "mistral-small-3.2-2506"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-06-20"
+    },
+    {
+      "id": "mixtral-8x22b",
+      "vendor": "mistral",
+      "family": "mixtral-8x22b",
+      "displayName": "Mixtral 8x22B",
+      "aliases": [
+        "open-mixtral-8x22b"
+      ],
+      "openWeights": true,
+      "releasedAt": "2024-04-17"
+    },
+    {
+      "id": "mixtral-8x7b",
+      "vendor": "mistral",
+      "family": "mixtral-8x7b",
+      "displayName": "Mixtral 8x7B",
+      "aliases": [
+        "Mixtral-8x7B-Instruct-v0.1",
+        "open-mixtral-8x7b"
+      ],
+      "openWeights": true,
+      "releasedAt": "2023-12-11"
+    },
+    {
+      "id": "kimi-k2-5",
+      "vendor": "moonshot",
+      "family": "kimi-k2",
+      "displayName": "Kimi K2.5",
+      "aliases": [
+        "Kimi K2.5 (Fireworks)",
+        "fireworks/kimi-k2p5"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-01-27"
+    },
+    {
+      "id": "kimi-k2-6",
+      "vendor": "moonshot",
+      "family": "kimi-k2",
+      "displayName": "Kimi K2.6",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2026-04-20"
+    },
+    {
+      "id": "kimi-k2-7-code",
+      "vendor": "moonshot",
+      "family": "kimi-k2-code",
+      "displayName": "Kimi K2.7 Code",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2026-06-12"
+    },
+    {
+      "id": "kimi-k2-jul-2025",
+      "vendor": "moonshot",
+      "family": "kimi-k2-jul",
+      "displayName": "Kimi K2 (Jul 2025)",
+      "aliases": [
+        "Kimi K2 Instruct",
+        "Kimi-K2-Instruct"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-07-12"
+    },
+    {
+      "id": "kimi-k2-sep-2025",
+      "vendor": "moonshot",
+      "family": "kimi-k2-sep",
+      "displayName": "Kimi K2 (Sep 2025)",
+      "aliases": [
+        "Kimi K2 0905 (Novita)",
+        "moonshotai/kimi-k2-0905"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-09-05"
+    },
+    {
+      "id": "kimi-k2-thinking",
+      "vendor": "moonshot",
+      "family": "kimi-k2-thinking",
+      "displayName": "Kimi K2 Thinking",
+      "aliases": [
+        "Kimi K2 Thinking (Together)",
+        "Kimi K2 Thinking Turbo",
+        "kimi-k2-thinking-turbo",
+        "moonshotai/Kimi-K2-Thinking"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-11-06"
+    },
+    {
+      "id": "kimi-k3",
+      "vendor": "moonshot",
+      "family": "kimi-k3",
+      "displayName": "Kimi K3",
+      "aliases": [
+        "Kimi K3 (high)",
+        "Kimi K3 (low)",
+        "Kimi K3 (max)",
+        "kimi-k3_high",
+        "kimi-k3_low",
+        "kimi-k3_max"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-07-16"
+    },
+    {
+      "id": "hermes-2-theta-llama-3-70b",
+      "vendor": "nous",
+      "family": "hermes-theta-llama-70b",
+      "displayName": "Hermes 2 Theta Llama-3 70B",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2024-06-20"
+    },
+    {
+      "id": "nemotron-3-ultra",
+      "vendor": "nvidia",
+      "family": "nemotron-ultra",
+      "displayName": "Nemotron 3 Ultra",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2026-06-04"
+    },
+    {
+      "id": "gpt-3-5-turbo-jan-2024",
+      "vendor": "openai",
+      "family": "gpt-turbo-jan",
+      "displayName": "GPT-3.5 Turbo (Jan 2024)",
+      "aliases": [
+        "gpt-3.5-turbo-0125"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-01-25"
+    },
+    {
+      "id": "gpt-3-5-turbo-nov-2023",
+      "vendor": "openai",
+      "family": "gpt-turbo-nov",
+      "displayName": "GPT-3.5 Turbo (Nov 2023)",
+      "aliases": [
+        "gpt-3.5-turbo-1106"
+      ],
+      "openWeights": false,
+      "releasedAt": "2023-11-06"
+    },
+    {
+      "id": "gpt-4-1",
+      "vendor": "openai",
+      "family": "gpt",
+      "displayName": "GPT-4.1",
+      "aliases": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-04-14"
+    },
+    {
+      "id": "gpt-4-1-mini",
+      "vendor": "openai",
+      "family": "gpt-mini",
+      "displayName": "GPT-4.1 mini",
+      "aliases": [
+        "gpt-4.1-mini-2025-04-14"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-04-14"
+    },
+    {
+      "id": "gpt-4-1-nano",
+      "vendor": "openai",
+      "family": "gpt-nano",
+      "displayName": "GPT-4.1 nano",
+      "aliases": [
+        "gpt-4.1-nano-2025-04-14"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-04-14"
+    },
+    {
+      "id": "gpt-4-5",
+      "vendor": "openai",
+      "family": "gpt",
+      "displayName": "GPT-4.5",
+      "aliases": [
+        "GPT-4.5 Preview (Feb 2025)",
+        "gpt-4.5-preview-2025-02-27"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-02-27"
+    },
+    {
+      "id": "gpt-4-jun-2023",
+      "vendor": "openai",
+      "family": "gpt-jun",
+      "displayName": "GPT-4 (Jun 2023)",
+      "aliases": [
+        "gpt-4-0613"
+      ],
+      "openWeights": false,
+      "releasedAt": "2023-06-13"
+    },
+    {
+      "id": "gpt-4-mar-2023",
+      "vendor": "openai",
+      "family": "gpt-mar",
+      "displayName": "GPT-4 (Mar 2023)",
+      "aliases": [
+        "gpt-4-0314"
+      ],
+      "openWeights": false,
+      "releasedAt": "2023-03-14"
+    },
+    {
+      "id": "gpt-4-turbo-apr-2024",
+      "vendor": "openai",
+      "family": "gpt-turbo-apr",
+      "displayName": "GPT-4 Turbo (Apr 2024)",
+      "aliases": [
+        "gpt-4-turbo-2024-04-09"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-04-09"
+    },
+    {
+      "id": "gpt-4-turbo-nov-2023",
+      "vendor": "openai",
+      "family": "gpt-turbo-nov",
+      "displayName": "GPT-4 Turbo (Nov 2023)",
+      "aliases": [
+        "GPT-4 Turbo Preview (January 2024)",
+        "GPT-4 Turbo Preview (Nov 2023)",
+        "gpt-4-0125-preview",
+        "gpt-4-1106-preview"
+      ],
+      "openWeights": false,
+      "releasedAt": "2023-11-06"
+    },
+    {
+      "id": "gpt-4o-aug-2024",
+      "vendor": "openai",
+      "family": "gpt-4o-aug",
+      "displayName": "GPT-4o (Aug 2024)",
+      "aliases": [
+        "gpt-4o-2024-08-06"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-08-06"
+    },
+    {
+      "id": "gpt-4o-jan-2025",
+      "vendor": "openai",
+      "family": "gpt-4o-jan",
+      "displayName": "GPT-4o (Jan 2025)",
+      "aliases": [
+        "chatgpt-4o-01-29-2025"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-01-29"
+    },
+    {
+      "id": "gpt-4o-mar-2025",
+      "vendor": "openai",
+      "family": "gpt-4o-mar",
+      "displayName": "GPT-4o (Mar 2025)",
+      "aliases": [
+        "chatgpt-4o-03-27-2025"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-03-27"
+    },
+    {
+      "id": "gpt-4o-may-2024",
+      "vendor": "openai",
+      "family": "gpt-4o-may",
+      "displayName": "GPT-4o (May 2024)",
+      "aliases": [
+        "gpt-4o-2024-05-13"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-05-13"
+    },
+    {
+      "id": "gpt-4o-mini",
+      "vendor": "openai",
+      "family": "gpt-4o-mini",
+      "displayName": "GPT-4o mini",
+      "aliases": [
+        "gpt-4o-mini-2024-07-18"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-07-18"
+    },
+    {
+      "id": "gpt-4o-nov-2024",
+      "vendor": "openai",
+      "family": "gpt-4o-nov",
+      "displayName": "GPT-4o (Nov 2024)",
+      "aliases": [
+        "gpt-4o-2024-11-20"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-11-20"
+    },
+    {
+      "id": "gpt-5",
+      "vendor": "openai",
+      "family": "gpt",
+      "displayName": "GPT-5",
+      "aliases": [
+        "GPT-5 (high)",
+        "GPT-5 (low)",
+        "GPT-5 (medium)",
+        "GPT-5 (minimal)",
+        "GPT-5 (unknown thinking)",
+        "gpt-5-2025-08-07",
+        "gpt-5-2025-08-07_high",
+        "gpt-5-2025-08-07_low",
+        "gpt-5-2025-08-07_medium",
+        "gpt-5-2025-08-07_minimal",
+        "gpt-5-2025-08-07_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-08-07"
+    },
+    {
+      "id": "gpt-5-1",
+      "vendor": "openai",
+      "family": "gpt",
+      "displayName": "GPT-5.1",
+      "aliases": [
+        "GPT-5.1 (high)",
+        "GPT-5.1 (low)",
+        "GPT-5.1 (medium)",
+        "GPT-5.1 (no thinking)",
+        "GPT-5.1 (unknown thinking)",
+        "gpt-5.1-2025-11-13",
+        "gpt-5.1-2025-11-13_high",
+        "gpt-5.1-2025-11-13_low",
+        "gpt-5.1-2025-11-13_medium",
+        "gpt-5.1-2025-11-13_none",
+        "gpt-5.1-2025-11-13_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-11-13"
+    },
+    {
+      "id": "gpt-5-1-codex",
+      "vendor": "openai",
+      "family": "gpt-codex",
+      "displayName": "GPT-5.1-Codex",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-11-12"
+    },
+    {
+      "id": "gpt-5-1-codex-max",
+      "vendor": "openai",
+      "family": "gpt-codex-max",
+      "displayName": "GPT-5.1-Codex-Max",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-11-19"
+    },
+    {
+      "id": "gpt-5-1-codex-mini",
+      "vendor": "openai",
+      "family": "gpt-codex-mini",
+      "displayName": "GPT-5.1-Codex-mini",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-11-12"
+    },
+    {
+      "id": "gpt-5-2",
+      "vendor": "openai",
+      "family": "gpt",
+      "displayName": "GPT-5.2",
+      "aliases": [
+        "GPT-5.2 (high)",
+        "GPT-5.2 (low)",
+        "GPT-5.2 (medium)",
+        "GPT-5.2 (none)",
+        "GPT-5.2 (unknown thinking)",
+        "GPT-5.2 (xhigh)",
+        "gpt-5.2-2025-12-11",
+        "gpt-5.2-2025-12-11_high",
+        "gpt-5.2-2025-12-11_low",
+        "gpt-5.2-2025-12-11_medium",
+        "gpt-5.2-2025-12-11_none",
+        "gpt-5.2-2025-12-11_unknown",
+        "gpt-5.2-2025-12-11_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-12-11"
+    },
+    {
+      "id": "gpt-5-2-codex",
+      "vendor": "openai",
+      "family": "gpt-codex",
+      "displayName": "GPT-5.2 Codex",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-12-18"
+    },
+    {
+      "id": "gpt-5-2-pro",
+      "vendor": "openai",
+      "family": "gpt-pro",
+      "displayName": "GPT-5.2 Pro",
+      "aliases": [
+        "GPT-5.2 Pro (web)",
+        "gpt-5.2-pro-2025-12-11",
+        "gpt-5.2-pro-2025-12-11-webapp",
+        "gpt-5.2-pro-2025-12-11_high",
+        "gpt-5.2-pro-2025-12-11_medium",
+        "gpt-5.2-pro-2025-12-11_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-12-11"
+    },
+    {
+      "id": "gpt-5-3-codex",
+      "vendor": "openai",
+      "family": "gpt-codex",
+      "displayName": "GPT-5.3 Codex",
+      "aliases": [
+        "GPT-5.3 Codex (high)",
+        "gpt-5.3-codex_high"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-02-05"
+    },
+    {
+      "id": "gpt-5-4",
+      "vendor": "openai",
+      "family": "gpt",
+      "displayName": "GPT-5.4",
+      "aliases": [
+        "GPT-5.4 (high)",
+        "GPT-5.4 (low)",
+        "GPT-5.4 (medium)",
+        "GPT-5.4 (none)",
+        "GPT-5.4 (unknown thinking)",
+        "GPT-5.4 (xhigh)",
+        "gpt-5.4-2026-03-05",
+        "gpt-5.4-2026-03-05_high",
+        "gpt-5.4-2026-03-05_low",
+        "gpt-5.4-2026-03-05_medium",
+        "gpt-5.4-2026-03-05_none",
+        "gpt-5.4-2026-03-05_unknown",
+        "gpt-5.4-2026-03-05_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-03-05"
+    },
+    {
+      "id": "gpt-5-4-mini",
+      "vendor": "openai",
+      "family": "gpt-mini",
+      "displayName": "GPT-5.4 Mini",
+      "aliases": [
+        "GPT-5.4 mini (high)",
+        "GPT-5.4 mini (low)",
+        "GPT-5.4 mini (medium)",
+        "GPT-5.4 mini (none)",
+        "GPT-5.4 mini (xhigh)",
+        "gpt-5.4-mini-2026-03-17",
+        "gpt-5.4-mini-2026-03-17_high",
+        "gpt-5.4-mini-2026-03-17_low",
+        "gpt-5.4-mini-2026-03-17_medium",
+        "gpt-5.4-mini-2026-03-17_none",
+        "gpt-5.4-mini-2026-03-17_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-03-17"
+    },
+    {
+      "id": "gpt-5-4-nano",
+      "vendor": "openai",
+      "family": "gpt-nano",
+      "displayName": "GPT-5.4 Nano",
+      "aliases": [
+        "GPT-5.4 nano (high)",
+        "GPT-5.4 nano (low)",
+        "GPT-5.4 nano (medium)",
+        "GPT-5.4 nano (no thinking)",
+        "GPT-5.4 nano (xhigh)",
+        "gpt-5.4-nano-2026-03-17",
+        "gpt-5.4-nano-2026-03-17_high",
+        "gpt-5.4-nano-2026-03-17_low",
+        "gpt-5.4-nano-2026-03-17_medium",
+        "gpt-5.4-nano-2026-03-17_none",
+        "gpt-5.4-nano-2026-03-17_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-03-17"
+    },
+    {
+      "id": "gpt-5-4-pro",
+      "vendor": "openai",
+      "family": "gpt-pro",
+      "displayName": "GPT-5.4 Pro",
+      "aliases": [
+        "GPT-5.4 Pro (web)",
+        "GPT-5.4 Pro (xhigh)",
+        "gpt-5.4-pro-2026-03-05",
+        "gpt-5.4-pro-2026-03-05-web-app",
+        "gpt-5.4-pro-2026-03-05_unknown",
+        "gpt-5.4-pro-2026-03-05_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-03-05"
+    },
+    {
+      "id": "gpt-5-5",
+      "vendor": "openai",
+      "family": "gpt",
+      "displayName": "GPT-5.5",
+      "aliases": [
+        "GPT-5.5 (high)",
+        "GPT-5.5 (low)",
+        "GPT-5.5 (medium)",
+        "GPT-5.5 (no thinking)",
+        "GPT-5.5 (unknown thinking)",
+        "GPT-5.5 (xhigh)",
+        "gpt-5.5-pre-release",
+        "gpt-5.5-pre-release_xhigh",
+        "gpt-5.5_high",
+        "gpt-5.5_low",
+        "gpt-5.5_medium",
+        "gpt-5.5_none",
+        "gpt-5.5_unknown",
+        "gpt-5.5_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-04-23"
+    },
+    {
+      "id": "gpt-5-5-instant",
+      "vendor": "openai",
+      "family": "gpt-instant",
+      "displayName": "GPT-5.5 Instant",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2026-05-05"
+    },
+    {
+      "id": "gpt-5-5-pro",
+      "vendor": "openai",
+      "family": "gpt-pro",
+      "displayName": "GPT-5.5 Pro",
+      "aliases": [
+        "GPT-5.5 Pro (high)",
+        "GPT-5.5 Pro (xhigh)",
+        "gpt-5.5-pro-pre-release",
+        "gpt-5.5-pro-pre-release_high",
+        "gpt-5.5-pro-pre-release_xhigh",
+        "gpt-5.5-pro_high",
+        "gpt-5.5-pro_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-04-23"
+    },
+    {
+      "id": "gpt-5-6-luna",
+      "vendor": "openai",
+      "family": "gpt-luna",
+      "displayName": "GPT-5.6 Luna",
+      "aliases": [
+        "GPT-5.6 Luna (high)",
+        "GPT-5.6 Luna (low)",
+        "GPT-5.6 Luna (max)",
+        "GPT-5.6 Luna (medium)",
+        "GPT-5.6 Luna (none)",
+        "GPT-5.6 Luna (xhigh)",
+        "gpt-5.6-luna_high",
+        "gpt-5.6-luna_low",
+        "gpt-5.6-luna_max",
+        "gpt-5.6-luna_medium",
+        "gpt-5.6-luna_none",
+        "gpt-5.6-luna_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-07-09"
+    },
+    {
+      "id": "gpt-5-6-sol",
+      "vendor": "openai",
+      "family": "gpt-sol",
+      "displayName": "GPT-5.6 Sol",
+      "aliases": [
+        "GPT-5.6 Sol (high)",
+        "GPT-5.6 Sol (low)",
+        "GPT-5.6 Sol (max)",
+        "GPT-5.6 Sol (medium)",
+        "GPT-5.6 Sol (none)",
+        "GPT-5.6 Sol (pro, max)",
+        "GPT-5.6 Sol (xhigh)",
+        "gpt-5.6-sol_high",
+        "gpt-5.6-sol_low",
+        "gpt-5.6-sol_max",
+        "gpt-5.6-sol_medium",
+        "gpt-5.6-sol_none",
+        "gpt-5.6-sol_promax",
+        "gpt-5.6-sol_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-07-09"
+    },
+    {
+      "id": "gpt-5-6-terra",
+      "vendor": "openai",
+      "family": "gpt-terra",
+      "displayName": "GPT-5.6 Terra",
+      "aliases": [
+        "GPT-5.6 Terra (high)",
+        "GPT-5.6 Terra (low)",
+        "GPT-5.6 Terra (max)",
+        "GPT-5.6 Terra (medium)",
+        "GPT-5.6 Terra (none)",
+        "GPT-5.6 Terra (xhigh)",
+        "gpt-5.6-terra_high",
+        "gpt-5.6-terra_low",
+        "gpt-5.6-terra_max",
+        "gpt-5.6-terra_medium",
+        "gpt-5.6-terra_none",
+        "gpt-5.6-terra_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-07-09"
+    },
+    {
+      "id": "gpt-5-codex",
+      "vendor": "openai",
+      "family": "gpt-codex",
+      "displayName": "GPT-5-Codex",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-09-15"
+    },
+    {
+      "id": "gpt-5-mini",
+      "vendor": "openai",
+      "family": "gpt-mini",
+      "displayName": "GPT-5 mini",
+      "aliases": [
+        "GPT-5 mini (high)",
+        "GPT-5 mini (low)",
+        "GPT-5 mini (medium)",
+        "GPT-5 mini (minimal)",
+        "GPT-5 mini (unknown thinking)",
+        "gpt-5-mini-2025-08-07",
+        "gpt-5-mini-2025-08-07_high",
+        "gpt-5-mini-2025-08-07_low",
+        "gpt-5-mini-2025-08-07_medium",
+        "gpt-5-mini-2025-08-07_minimal",
+        "gpt-5-mini-2025-08-07_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-08-07"
+    },
+    {
+      "id": "gpt-5-nano",
+      "vendor": "openai",
+      "family": "gpt-nano",
+      "displayName": "GPT-5 nano",
+      "aliases": [
+        "GPT-5 nano (high)",
+        "GPT-5 nano (low)",
+        "GPT-5 nano (medium)",
+        "GPT-5 nano (minimal)",
+        "GPT-5 nano (unknown thinking)",
+        "gpt-5-nano-2025-08-07",
+        "gpt-5-nano-2025-08-07_high",
+        "gpt-5-nano-2025-08-07_low",
+        "gpt-5-nano-2025-08-07_medium",
+        "gpt-5-nano-2025-08-07_minimal",
+        "gpt-5-nano-2025-08-07_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-08-07"
+    },
+    {
+      "id": "gpt-5-pro",
+      "vendor": "openai",
+      "family": "gpt-pro",
+      "displayName": "GPT-5 Pro",
+      "aliases": [
+        "gpt-5-pro-2025-10-06",
+        "gpt-5-pro-2025-10-06_high",
+        "gpt-5-pro-2025-10-06_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-10-07"
+    },
+    {
+      "id": "gpt-6-astra",
+      "vendor": "openai",
+      "family": "gpt-astra",
+      "displayName": "GPT-6 Astra",
+      "aliases": [
+        "GPT-6 Astra (high)",
+        "GPT-6 Astra (low)",
+        "GPT-6 Astra (max)",
+        "GPT-6 Astra (medium)",
+        "GPT-6 Astra (none)",
+        "GPT-6 Astra (xhigh)",
+        "gpt-6-astra_high",
+        "gpt-6-astra_low",
+        "gpt-6-astra_max",
+        "gpt-6-astra_medium",
+        "gpt-6-astra_none",
+        "gpt-6-astra_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-09-03"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "vendor": "openai",
+      "family": "gpt-oss-120b",
+      "displayName": "gpt-oss-120b",
+      "aliases": [
+        "gpt-oss-120b (unknown thinking)",
+        "gpt-oss-120b_high",
+        "gpt-oss-120b_unknown",
+        "openai/gpt-oss-120b",
+        "openai/gpt-oss-120b_high"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-08-05"
+    },
+    {
+      "id": "gpt-oss-20b",
+      "vendor": "openai",
+      "family": "gpt-oss-20b",
+      "displayName": "gpt-oss-20b",
+      "aliases": [
+        "gpt-oss-20b_high",
+        "gpt-oss-20b_low",
+        "gpt-oss-20b_medium",
+        "gpt-oss-20b_unknown"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-08-05"
+    },
+    {
+      "id": "o1",
+      "vendor": "openai",
+      "family": "o1",
+      "displayName": "o1",
+      "aliases": [
+        "o1 (high)",
+        "o1 (low)",
+        "o1 (medium)",
+        "o1-2024-12-17",
+        "o1-2024-12-17_high",
+        "o1-2024-12-17_low",
+        "o1-2024-12-17_medium"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-12-17"
+    },
+    {
+      "id": "o1-mini",
+      "vendor": "openai",
+      "family": "o1-mini",
+      "displayName": "o1-mini",
+      "aliases": [
+        "o1-mini (high)",
+        "o1-mini (medium)",
+        "o1-mini-2024-09-12",
+        "o1-mini-2024-09-12_high",
+        "o1-mini-2024-09-12_medium"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-09-12"
+    },
+    {
+      "id": "o1-preview",
+      "vendor": "openai",
+      "family": "o1-preview",
+      "displayName": "o1-preview",
+      "aliases": [
+        "o1-preview-2024-09-12"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-09-12"
+    },
+    {
+      "id": "o1-pro",
+      "vendor": "openai",
+      "family": "o1-pro",
+      "displayName": "o1-pro",
+      "aliases": [
+        "o1-pro-2025-03-19"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-03-19"
+    },
+    {
+      "id": "o3",
+      "vendor": "openai",
+      "family": "o3",
+      "displayName": "o3",
+      "aliases": [
+        "o3 (high)",
+        "o3 (low)",
+        "o3 (medium)",
+        "o3 (unknown thinking)",
+        "o3-2025-04-16",
+        "o3-2025-04-16_high",
+        "o3-2025-04-16_low",
+        "o3-2025-04-16_medium",
+        "o3-2025-04-16_unknown"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-04-16"
+    },
+    {
+      "id": "o3-mini",
+      "vendor": "openai",
+      "family": "o3-mini",
+      "displayName": "o3-mini",
+      "aliases": [
+        "o3-mini (high)",
+        "o3-mini (medium)",
+        "o3-mini-2025-01-31",
+        "o3-mini-2025-01-31_high",
+        "o3-mini-2025-01-31_low",
+        "o3-mini-2025-01-31_medium"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-01-31"
+    },
+    {
+      "id": "o3-pro",
+      "vendor": "openai",
+      "family": "o3-pro",
+      "displayName": "o3-pro",
+      "aliases": [
+        "o3-pro-2025-06-10",
+        "o3-pro-2025-06-10_high",
+        "o3-pro-2025-06-10_low",
+        "o3-pro-2025-06-10_medium"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-06-10"
+    },
+    {
+      "id": "o4-mini",
+      "vendor": "openai",
+      "family": "o4-mini",
+      "displayName": "o4-mini",
+      "aliases": [
+        "o4-mini (high)",
+        "o4-mini (low)",
+        "o4-mini (medium)",
+        "o4-mini-2025-04-16",
+        "o4-mini-2025-04-16_high",
+        "o4-mini-2025-04-16_low",
+        "o4-mini-2025-04-16_medium"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-04-16"
+    },
+    {
+      "id": "inkling",
+      "vendor": "thinkingmachines",
+      "family": "inkling",
+      "displayName": "Inkling",
+      "aliases": [
+        "Inkling (xhigh)",
+        "Inkling_xhigh"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-07-15"
+    },
+    {
+      "id": "inkling-small",
+      "vendor": "thinkingmachines",
+      "family": "inkling-small",
+      "displayName": "Inkling-Small",
+      "aliases": [
+        "Inkling Small (high)",
+        "Inkling Small (low)",
+        "Inkling Small (medium)",
+        "Inkling Small (minimal)",
+        "Inkling Small (none)",
+        "Inkling Small (xhigh)",
+        "inkling-small_high",
+        "inkling-small_low",
+        "inkling-small_medium",
+        "inkling-small_minimal",
+        "inkling-small_none",
+        "inkling-small_xhigh"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-07-15"
+    },
+    {
+      "id": "eurus-2-7b-prime",
+      "vendor": "tsinghua-university",
+      "family": "eurus-7b-prime",
+      "displayName": "Eurus-2-7B-PRIME",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2024-12-31"
+    },
+    {
+      "id": "codex-mini-2025-05-16",
+      "vendor": "unknown",
+      "family": "codex-mini",
+      "displayName": "codex-mini-2025-05-16",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-05-16"
+    },
+    {
+      "id": "computer-use-preview-2025-03-11",
+      "vendor": "unknown",
+      "family": "computer-use-preview",
+      "displayName": "computer-use-preview-2025-03-11",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-03-11"
+    },
+    {
+      "id": "deepseek-r1-0528-qwen3-8b",
+      "vendor": "unknown",
+      "family": "deepseek-r1-qwen3-8b",
+      "displayName": "deepseek-r1-0528-qwen3-8b",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-05-28"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "vendor": "unknown",
+      "family": "glm-flash",
+      "displayName": "glm-4.7-flash",
+      "aliases": [],
+      "openWeights": false
+    },
+    {
+      "id": "glm-4-7-flash-none",
+      "vendor": "unknown",
+      "family": "glm-flash-none",
+      "displayName": "glm-4.7-flash_none",
+      "aliases": [
+        "glm-4.7-flash"
+      ],
+      "openWeights": false
+    },
+    {
+      "id": "granite-4-0-1b",
+      "vendor": "unknown",
+      "family": "granite-1b",
+      "displayName": "granite-4.0-1b",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-10-28"
+    },
+    {
+      "id": "granite-4-0-350m",
+      "vendor": "unknown",
+      "family": "granite-350m",
+      "displayName": "granite-4.0-350m",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-10-28"
+    },
+    {
+      "id": "granite-4-0-micro",
+      "vendor": "unknown",
+      "family": "granite-micro",
+      "displayName": "granite-4.0-micro",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-10-02"
+    },
+    {
+      "id": "grok-code-fast-1",
+      "vendor": "unknown",
+      "family": "grok-code-fast",
+      "displayName": "grok-code-fast-1",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-08-28"
+    },
+    {
+      "id": "openhands-lm-32b-v0-1",
+      "vendor": "unknown",
+      "family": "openhands-lm-32b",
+      "displayName": "openhands-lm-32b-v0.1",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2024-03-26"
+    },
+    {
+      "id": "qwen3-4b-instruct-2507",
+      "vendor": "unknown",
+      "family": "qwen3-4b-instruct",
+      "displayName": "qwen3-4b-instruct-2507",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-08-06"
+    },
+    {
+      "id": "seed-oss-36b-instruct",
+      "vendor": "unknown",
+      "family": "seed-oss-36b-instruct",
+      "displayName": "seed-oss-36b-instruct",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-08-20"
+    },
+    {
+      "id": "tiny-recursion-model",
+      "vendor": "unknown",
+      "family": "tiny-recursion-model",
+      "displayName": "tiny-recursion-model",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-10-06"
+    },
+    {
+      "id": "grok-2-dec-2024",
+      "vendor": "xai",
+      "family": "grok-dec",
+      "displayName": "Grok-2 (Dec 2024)",
+      "aliases": [
+        "grok-2-1212"
+      ],
+      "openWeights": false,
+      "releasedAt": "2024-12-12"
+    },
+    {
+      "id": "grok-3",
+      "vendor": "xai",
+      "family": "grok",
+      "displayName": "Grok 3",
+      "aliases": [
+        "grok-3-beta"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-04-09"
+    },
+    {
+      "id": "grok-3-mini",
+      "vendor": "xai",
+      "family": "grok-mini",
+      "displayName": "Grok-3 mini",
+      "aliases": [
+        "grok-3-mini-beta",
+        "grok-3-mini-beta_high",
+        "grok-3-mini-beta_low",
+        "grok-3-mini_low"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-04-09"
+    },
+    {
+      "id": "grok-4",
+      "vendor": "xai",
+      "family": "grok",
+      "displayName": "Grok 4",
+      "aliases": [
+        "grok-4-0709",
+        "grok-4-0709_high"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-07-09"
+    },
+    {
+      "id": "grok-4-20",
+      "vendor": "xai",
+      "family": "grok",
+      "displayName": "Grok 4.20",
+      "aliases": [
+        "grok-4.20-0309-reasoning"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-02-17"
+    },
+    {
+      "id": "grok-4-3-beta",
+      "vendor": "xai",
+      "family": "grok-beta",
+      "displayName": "Grok 4.3 Beta",
+      "aliases": [
+        "grok-4.3",
+        "grok-4.3_high"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-04-17"
+    },
+    {
+      "id": "grok-4-5",
+      "vendor": "xai",
+      "family": "grok",
+      "displayName": "Grok 4.5",
+      "aliases": [
+        "Grok 4.5 (high)",
+        "Grok 4.5 (low)",
+        "Grok 4.5 (medium)",
+        "grok-4.5_high",
+        "grok-4.5_low",
+        "grok-4.5_medium"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-07-08"
+    },
+    {
+      "id": "grok-4-6",
+      "vendor": "xai",
+      "family": "grok",
+      "displayName": "Grok 4.6",
+      "aliases": [
+        "Grok 4.6 (high)",
+        "Grok 4.6 (low)",
+        "Grok 4.6 (medium)",
+        "Grok 4.6 (xhigh)",
+        "grok-4.6_high",
+        "grok-4.6_low",
+        "grok-4.6_medium",
+        "grok-4.6_xhigh"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-08-12"
+    },
+    {
+      "id": "grok-4-fast",
+      "vendor": "xai",
+      "family": "grok-fast",
+      "displayName": "Grok 4 Fast",
+      "aliases": [],
+      "openWeights": false,
+      "releasedAt": "2025-09-19"
+    },
+    {
+      "id": "grok-4-heavy",
+      "vendor": "xai",
+      "family": "grok-heavy",
+      "displayName": "Grok 4 Heavy",
+      "aliases": [
+        "Grok 4 Heavy (web app)",
+        "grok-4-heavy-web-app"
+      ],
+      "openWeights": false,
+      "releasedAt": "2025-07-10"
+    },
+    {
+      "id": "glm-4-5",
+      "vendor": "zhipu",
+      "family": "glm",
+      "displayName": "GLM-4.5",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2025-08-03"
+    },
+    {
+      "id": "glm-4-5-air",
+      "vendor": "zhipu",
+      "family": "glm-air",
+      "displayName": "GLM-4.5-Air",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2025-07-20"
+    },
+    {
+      "id": "glm-4-6",
+      "vendor": "zhipu",
+      "family": "glm",
+      "displayName": "GLM-4.6",
+      "aliases": [
+        "GLM-4.6 (Together)",
+        "zai-org/GLM-4.6"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-09-30"
+    },
+    {
+      "id": "glm-4-7",
+      "vendor": "zhipu",
+      "family": "glm",
+      "displayName": "GLM-4.7",
+      "aliases": [
+        "GLM-4.7 (Together)",
+        "zai-org/GLM-4.7"
+      ],
+      "openWeights": true,
+      "releasedAt": "2025-12-22"
+    },
+    {
+      "id": "glm-5",
+      "vendor": "zhipu",
+      "family": "glm",
+      "displayName": "GLM-5",
+      "aliases": [],
+      "openWeights": true,
+      "releasedAt": "2026-02-11"
+    },
+    {
+      "id": "glm-5-1",
+      "vendor": "zhipu",
+      "family": "glm",
+      "displayName": "GLM-5.1",
+      "aliases": [
+        "glm-5.1_none"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-04-07"
+    },
+    {
+      "id": "glm-5-2",
+      "vendor": "zhipu",
+      "family": "glm",
+      "displayName": "GLM-5.2",
+      "aliases": [
+        "glm-5.2_low",
+        "glm-5.2_max",
+        "glm-5.2_none",
+        "glm-5.2_unknown"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-06-16"
+    },
+    {
+      "id": "glm-5-3",
+      "vendor": "zhipu",
+      "family": "glm",
+      "displayName": "GLM-5.3",
+      "aliases": [
+        "GLM-5.3 (max)",
+        "glm-5.3_max"
+      ],
+      "openWeights": false,
+      "releasedAt": "2026-08-14"
+    },
+    {
+      "id": "glm-5-3-flash",
+      "vendor": "zhipu",
+      "family": "glm-flash",
+      "displayName": "GLM-5.3-Flash",
+      "aliases": [
+        "GLM-5.3-Flash (max)",
+        "glm-5.3-flash_max"
+      ],
+      "openWeights": true,
+      "releasedAt": "2026-08-20"
+    }
+  ]
+}

@@ -1,15 +1,19 @@
 // Shared shape for every feed on the site.
 //
-// Per-lane and per-topic feeds matter here specifically because the
-// lanes have wildly different volumes: someone who wants four deep
-// dives a month should not have to take forty Scout items with them.
+// Per-section and per-topic feeds matter here specifically because the
+// sections have wildly different volumes: someone who wants two
+// benchmark readings a month should not have to take six model releases
+// a week with them.
+//
+// The Radar is deliberately absent from every feed on this site
+// (decision A3 — internal only).
 import { CREDITS } from "./credit";
 import { postUrl, type Post } from "./posts";
-import { KINDS, FORMATS } from "./taxonomy";
+import { SECTION_INFO, FORMATS } from "./taxonomy";
 
 export function feedItem(post: Post) {
-  const kind = KINDS[post.data.kind];
-  const format = post.data.format ? FORMATS[post.data.format] : undefined;
+  const section = SECTION_INFO[post.data.kind];
+  const format = FORMATS[post.data.format];
   return {
     title: post.data.title,
     description: post.data.description,
@@ -17,10 +21,7 @@ export function feedItem(post: Post) {
     link: postUrl(post),
     // Enough context in the feed reader to tell a two-minute auto-draft
     // from a twenty-minute teardown without opening it.
-    categories: [
-      format ? `${kind.label} — ${format.label}` : kind.label,
-      ...post.data.topics,
-    ],
+    categories: [`${section.label} — ${format.label}`, ...post.data.topics],
     customData: `<author>${CREDITS[post.data.credit].byline}</author>`,
   };
 }

@@ -1,0 +1,113 @@
+{
+  "_comment": "Benchmark registry — a CLOSED vocabulary, exactly like the topics list in taxonomy.json, and read by both the Astro site (src/benchmarks.ts) and the Python pipeline (scripts/core/registry.py) so the two can never drift. A benchmark slug that is not in this file is DROPPED, never invented: an adapter that meets an unknown benchmark logs it and moves on. Scope is text/reasoning benchmarks only — no multimodal, no agentic-specific suites, no cost/latency measures (brief 14.1, default applied, not confirmed with the site owner). Adapter-specific source mapping (which Epoch AI CSV backs which slug, and so on) deliberately lives in the adapter, not here: this file is the vocabulary, not the plumbing.",
+  "benchmarks": [
+    {
+      "slug": "gpqa-diamond",
+      "name": "GPQA Diamond",
+      "description": "Graduate-level physics, chemistry and biology questions written to be Google-proof. The Diamond subset is the hardest, most expert-validated slice.",
+      "metric": "accuracy",
+      "unit": "percent",
+      "higherIsBetter": true,
+      "homepage": "https://github.com/idavidrein/gpqa"
+    },
+    {
+      "slug": "frontiermath",
+      "name": "FrontierMath",
+      "description": "Unpublished research-level mathematics problems, held private to limit contamination. Tiers 1-3 are hard; Tier 4 is research-frontier.",
+      "metric": "accuracy",
+      "unit": "percent",
+      "higherIsBetter": true,
+      "homepage": "https://epoch.ai/frontiermath"
+    },
+    {
+      "slug": "swe-bench-verified",
+      "name": "SWE-bench Verified",
+      "description": "Real GitHub issues from Python repositories, human-validated as solvable. Scores are meaningless without the scaffold that produced them.",
+      "metric": "resolved",
+      "unit": "percent",
+      "higherIsBetter": true,
+      "homepage": "https://www.swebench.com/"
+    },
+    {
+      "slug": "terminal-bench",
+      "name": "Terminal-Bench",
+      "description": "End-to-end tasks in a real terminal sandbox. Measures an agent plus its harness, not a model on its own.",
+      "metric": "accuracy",
+      "unit": "percent",
+      "higherIsBetter": true,
+      "homepage": "https://www.tbench.ai/"
+    },
+    {
+      "slug": "arc-agi-2",
+      "name": "ARC-AGI-2",
+      "description": "Grid puzzles designed so that each task needs a rule inferred from a handful of examples rather than recalled.",
+      "metric": "accuracy",
+      "unit": "percent",
+      "higherIsBetter": true,
+      "homepage": "https://arcprize.org/arc-agi/2/"
+    },
+    {
+      "slug": "livebench",
+      "name": "LiveBench",
+      "description": "Contamination-limited suite with monthly question refreshes and objective ground truth — no LLM judge. Scores from different question-set months are not comparable.",
+      "metric": "score",
+      "unit": "score",
+      "higherIsBetter": true,
+      "homepage": "https://livebench.ai/"
+    },
+    {
+      "slug": "aider-polyglot",
+      "name": "Aider Polyglot",
+      "description": "Exercism coding exercises across six languages, run through the Aider edit loop. The edit format is part of the result.",
+      "metric": "pass@1",
+      "unit": "percent",
+      "higherIsBetter": true,
+      "homepage": "https://aider.chat/docs/leaderboards/"
+    },
+    {
+      "slug": "hle",
+      "name": "Humanity's Last Exam",
+      "description": "Expert-written questions across a wide range of academic subjects, built to stay hard after the rest of the field saturates.",
+      "metric": "accuracy",
+      "unit": "percent",
+      "higherIsBetter": true,
+      "homepage": "https://lastexam.ai/"
+    },
+    {
+      "slug": "mmlu-pro",
+      "name": "MMLU-Pro",
+      "description": "A harder, ten-option rebuild of MMLU with the noisiest items removed. Not comparable to plain MMLU.",
+      "metric": "accuracy",
+      "unit": "percent",
+      "higherIsBetter": true,
+      "homepage": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro"
+    },
+    {
+      "slug": "lmarena-text-elo",
+      "name": "LMArena Text Elo",
+      "description": "Elo from blind human pairwise preference. A measure of which answer people prefer, not of capability — never mix it into an accuracy comparison.",
+      "metric": "elo",
+      "unit": "elo",
+      "higherIsBetter": true,
+      "homepage": "https://lmarena.ai/"
+    },
+    {
+      "slug": "livecodebench",
+      "name": "LiveCodeBench",
+      "description": "Competitive-programming problems collected continuously and filtered by release date, so a model can only be scored on problems published after its cutoff.",
+      "metric": "pass@1",
+      "unit": "percent",
+      "higherIsBetter": true,
+      "homepage": "https://livecodebench.github.io/"
+    },
+    {
+      "slug": "osworld",
+      "name": "OSWorld",
+      "description": "Open-ended computer-use tasks in a real desktop environment, scored by execution rather than by a judge.",
+      "metric": "accuracy",
+      "unit": "percent",
+      "higherIsBetter": true,
+      "homepage": "https://os-world.github.io/"
+    }
+  ]
+}

@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# pipeline download cache — regenerated on demand, never committed
+state/cache/

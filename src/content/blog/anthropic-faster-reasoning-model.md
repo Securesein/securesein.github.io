@@ -2,8 +2,9 @@
 title: "Anthropic ships a faster, cheaper reasoning model"
 description: "What the new release changes for everyday agent workloads."
 pubDate: 2026-08-29
-kind: "news"
-topics: ["models"]
+kind: "release"
+format: "news"
+topics: ["llms", "reasoning", "inference"]
 credit: "scout"
 model: "gpt-4o"
 source:

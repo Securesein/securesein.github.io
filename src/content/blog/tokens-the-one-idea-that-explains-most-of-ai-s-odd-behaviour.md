@@ -3,7 +3,8 @@ title: "Tokens: the one idea that explains most of AI's odd behaviour"
 description: "Why a model that can explain quantum tunnelling cannot count the letters in strawberry, why long conversations get slow and expensive, and why Dutch costs more than English. It all comes back to the very first thing that happens to your text."
 pubDate: 2026-09-04
 kind: "explainer"
-topics: ["models"]
+format: "explainer"
+topics: ["llms", "training"]
 order: 1
 credit: "directed"
 model: "Claude"

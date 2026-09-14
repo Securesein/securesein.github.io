@@ -2,8 +2,9 @@
 title: "Exploring NVIDIA's Personal AI Router: A New Era of Distributed AI Computing"
 description: "Understanding NVIDIA's open-source PAIR and its potential to transform local AI processing."
 pubDate: 2026-09-05
-kind: "news"
-topics: ["models", "selfhosted"]
+kind: "research"
+format: "news"
+topics: ["inference", "llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

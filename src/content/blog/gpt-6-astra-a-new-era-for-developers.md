@@ -2,8 +2,9 @@
 title: "GPT-6 Astra: A New Era for Developers"
 description: "Explore the capabilities of GPT-6 Astra, a revolutionary AI model that's reshaping how developers approach complex projects, from 3D modeling to intricate design tasks."
 pubDate: 2026-09-06
-kind: "news"
-topics: ["models", "agents"]
+kind: "release"
+format: "news"
+topics: ["llms", "agents"]
 credit: "scout"
 model: "gpt-4o"
 source:

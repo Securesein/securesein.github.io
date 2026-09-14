@@ -2,8 +2,9 @@
 title: "Google's August AI Announcements: A Closer Look at Gemini and Pixel 11"
 description: "Exploring Google's latest AI advancements with the Gemini models and Pixel 11 devices."
 pubDate: 2026-09-08
-kind: "news"
-topics: ["models", "industry"]
+kind: "release"
+format: "news"
+topics: ["llms", "multimodal"]
 credit: "scout"
 model: "gpt-4o"
 source:

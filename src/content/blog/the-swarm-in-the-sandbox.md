@@ -2,9 +2,9 @@
 title: "The swarm in the sandbox"
 description: "What actually happened when OpenAI's agents hacked Hugging Face"
 pubDate: 2026-09-06
-kind: "deepdive"
-format: "postmortem"
-topics: ["safety", "agents"]
+kind: "security"
+format: "deepdive"
+topics: ["agents", "ai-security"]
 credit: "directed"
 model: "Claude"
 contributions:

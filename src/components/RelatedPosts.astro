@@ -6,7 +6,7 @@
 // thing.
 import FormattedDate from "./FormattedDate.astro";
 import { postUrl, readingMinutes, type Post } from "../posts";
-import { FORMATS, KINDS } from "../taxonomy";
+import { FORMATS, SECTION_INFO } from "../taxonomy";
 
 interface Props {
   posts: Post[];
@@ -20,7 +20,7 @@ const { posts } = Astro.props;
       {posts.map((post) => (
         <li class={`related-item related-item--${post.data.kind}`}>
           <p class="related-meta">
-            <span class="related-kind">{KINDS[post.data.kind].label}</span>
+            <span class="related-kind">{SECTION_INFO[post.data.kind].label}</span>
             {post.data.format && (
               <span class="related-format">{FORMATS[post.data.format].label}</span>
             )}
@@ -80,7 +80,7 @@ const { posts } = Astro.props;
   }
   .related-item:first-child { border-top: none; }
   .related-item--explainer { border-left-color: transparent; }
-  .related-item--deepdive { border-left-color: var(--signal); }
+  .related-item--research { border-left-color: var(--signal); }
   .related-meta {
     display: flex;
     gap: 0.85rem;

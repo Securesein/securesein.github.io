@@ -2,8 +2,9 @@
 title: "Gemini 3.7 Flash: The New Frontier in AI Workhorse Models"
 description: "Unpacking the improvements and promises of Google's latest AI model for coding and agent workflows."
 pubDate: 2026-09-10
-kind: "news"
-topics: ["models", "enterprise"]
+kind: "release"
+format: "news"
+topics: ["llms", "reasoning"]
 credit: "scout"
 model: "gpt-4o"
 source:

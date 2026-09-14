@@ -14,7 +14,7 @@
 import FormattedDate from "./FormattedDate.astro";
 import TopicChips from "./TopicChips.astro";
 import { CREDITS } from "../credit";
-import { FORMATS, KINDS, type Topic } from "../taxonomy";
+import { FORMATS, SECTION_INFO, type Topic } from "../taxonomy";
 import { postUrl, readingMinutes, type Post } from "../posts";
 
 interface Props {
@@ -28,14 +28,15 @@ interface Props {
 }
 const { post, featured = false, step, compact = false } = Astro.props;
 const { data } = post;
-const kind = KINDS[data.kind];
-const format = data.format ? FORMATS[data.format] : undefined;
+const section = SECTION_INFO[data.kind];
+const format = FORMATS[data.format];
 const showHero = !!data.hero && !compact;
 ---
 <article
   class:list={[
     "card",
     `card--${data.kind}`,
+    `card--${data.format}-format`,
     { "card--featured": featured, "card--hero": showHero },
   ]}
 >
@@ -49,9 +50,9 @@ const showHero = !!data.hero && !compact;
     <p class="card-line-1">
       <span class="card-kind">
         {step !== undefined && <span class="card-step">{step}</span>}
-        {kind.label}
+        {section.label}
       </span>
-      {format && <span class="card-format">{format.label}</span>}
+      <span class="card-format">{format.label}</span>
       <span class="card-when">
         <FormattedDate date={data.pubDate} short />
         <span class="card-length">{readingMinutes(post)} min</span>
@@ -182,25 +183,32 @@ const showHero = !!data.hero && !compact;
     color: var(--text-muted);
   }
 
-  /* --- structural differentiation by kind --- */
-  .card--news {
+  /* --- structural differentiation by section ---
+     Five sections now, still exactly two markers and no new tokens:
+     a soft grey left rule for the fast sections, the accent rule (with
+     the light-mode brand edge over it) for the ones that take something
+     apart, and no rule at all for Fundamentals. Colour is not carrying
+     the distinction — the rule, the type size and the whitespace are. */
+  .card--release,
+  .card--security,
+  .card--benchmark {
     padding-left: calc(var(--card-pad) + 1.1rem);
     border-left: 2px solid var(--border-strong);
   }
-  .card--news .card-title { font-size: 1.15rem; }
-  .card--news .card-desc { font-size: 0.92rem; }
+  .card--release .card-title { font-size: 1.15rem; }
+  .card--release .card-desc { font-size: 0.92rem; }
 
   /* Fundamentals: no rule, more air. */
   .card--explainer { padding-block: 2.1rem; }
   .card--explainer .card-desc { font-size: 1.02rem; }
 
-  .card--deepdive {
+  .card--research {
     padding-left: calc(var(--card-pad) + 1.1rem);
     border-left: 2px solid var(--signal);
   }
   /* Light: a brand-gradient edge sits over the green rule; in dark
      --dd-edge is transparent, so the green border does the marking. */
-  .card--deepdive::before {
+  .card--research::before {
     content: "";
     position: absolute;
     inset: 0 auto 0 0;
@@ -209,7 +217,13 @@ const showHero = !!data.hero && !compact;
     /* Square — the card's overflow:hidden + radius does the rounding. */
     border-radius: 0;
   }
-  .card--deepdive .card-title { font-size: 1.5rem; }
+  .card--research .card-title { font-size: 1.5rem; }
+
+  /* A long-form piece gets the deep-dive weight whatever section it is
+     filed in — the format axis, not the section axis, decides how heavy
+     a card reads. */
+  .card--deepdive-format .card-title,
+  .card--paper-format .card-title { font-size: 1.5rem; }
 
   .card--hero { gap: 1.2rem; }
   .card-hero { display: block; position: relative; z-index: 1; }

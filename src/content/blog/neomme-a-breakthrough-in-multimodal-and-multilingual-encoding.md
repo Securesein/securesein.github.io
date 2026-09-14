@@ -2,8 +2,9 @@
 title: "NeoMME: A Breakthrough in Multimodal and Multilingual Encoding"
 description: "Exploring how NeoMME's efficient design reshapes visual document retrieval."
 pubDate: 2026-09-03
-kind: "news"
-topics: ["models"]
+kind: "release"
+format: "news"
+topics: ["multimodal", "llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

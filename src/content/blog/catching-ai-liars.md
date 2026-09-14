@@ -2,9 +2,9 @@
 title: "How Do You Catch a Machine in a Lie?"
 description: "Nineteen teams spent a month building AI lie detectors. The winning trick turned out to be less clever than it looked — and that's the interesting part."
 pubDate: 2026-09-12
-kind: "deepdive"
-format: "postmortem"
-topics: ["safety"]
+kind: "research"
+format: "deepdive"
+topics: ["ai-safety", "evaluation", "llms"]
 credit: "directed"
 contributions:
   chose: true

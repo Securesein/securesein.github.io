@@ -1,0 +1,268 @@
+{
+  "_comment": "Research, Security and Practice section sources for Securesein. Same conventions as feeds-releases.json: tier=primary may trigger a post, corroborating may only support one, community is context only. verified=true means the URL was fetched and returned parseable entries on 2026-09-14; everything else must be checked with verify_feeds.py before use. The 'section' field is the default section for items from this source — the classifier may override it, but a source whose items are constantly reclassified is mistiered and should be fixed here.",
+  "feeds": [
+    {
+      "naam": "arXiv cs.CR (cryptography and security)",
+      "url": "http://rss.arxiv.org/rss/cs.CR",
+      "type": "rss",
+      "tier": "primary",
+      "section": "security",
+      "verified": false,
+      "note": "The missing arXiv category — cs.CL and cs.LG are already in feeds.json but LLM attack papers land in cs.CR. High volume; the quality gate does the filtering."
+    },
+    {
+      "naam": "arXiv cs.AI",
+      "url": "http://rss.arxiv.org/rss/cs.AI",
+      "type": "rss",
+      "tier": "primary",
+      "section": "research",
+      "verified": false,
+      "note": "Very high volume. Consider enabling only after the quality gate has been calibrated on cs.CL/cs.LG."
+    },
+    {
+      "naam": "Transformer Circuits",
+      "url": "https://transformer-circuits.pub/",
+      "type": "html",
+      "tier": "primary",
+      "section": "research",
+      "verified": false,
+      "note": "Anthropic's interpretability publication. Closest match in the entire feed set to the strongest stated interest in the profile — treat a new item here as near-automatic Research material."
+    },
+    {
+      "naam": "Ahead of AI (Sebastian Raschka)",
+      "url": "https://magazine.sebastianraschka.com/feed",
+      "type": "rss",
+      "tier": "primary",
+      "section": "research",
+      "verified": false,
+      "note": "Mechanism-first explanations at exactly the depth the profile rewards. Also useful as a style reference for the Fundamentals section."
+    },
+    {
+      "naam": "Lil'Log (Lilian Weng)",
+      "url": "https://lilianweng.github.io/index.xml",
+      "type": "rss",
+      "tier": "primary",
+      "section": "research",
+      "verified": false,
+      "note": "Infrequent, consistently high quality. Low volume means it rarely competes for budget."
+    },
+    {
+      "naam": "Import AI (Jack Clark)",
+      "url": "https://importai.substack.com/feed",
+      "type": "rss",
+      "tier": "corroborating",
+      "section": "research",
+      "verified": false,
+      "note": "Weekly roundup. Useful for discovering papers, but a roundup is not a primary source — never publish a post whose only source is another roundup."
+    },
+    {
+      "naam": "BAIR Blog (Berkeley AI Research)",
+      "url": "https://bair.berkeley.edu/blog/feed.xml",
+      "type": "rss",
+      "tier": "primary",
+      "section": "research",
+      "verified": false,
+      "note": "",
+      "scopeNote": "verify_feeds 2026-09-14: FAIL (connection timeout, retried once by hand with the same result). Host-side, not a URL error — bair.berkeley.edu did not answer at all. Left IN SCOPE and untouched: the adapter is failure-isolated, so an unreachable host costs one empty list per run, and guessing at a new URL for a blog that is probably just down would be worse than waiting."
+    },
+    {
+      "naam": "Epoch AI — Gradient Updates",
+      "url": "https://epoch.ai/gradient-updates",
+      "type": "html",
+      "tier": "primary",
+      "section": "research",
+      "verified": false,
+      "note": "Analysis arm of the same organisation whose data drives the Benchmarks section. Good source for trend claims that can be checked against the benchmarks collection."
+    },
+    {
+      "naam": "Answer.AI",
+      "url": "https://www.answer.ai/index.xml",
+      "type": "rss",
+      "tier": "corroborating",
+      "section": "research",
+      "verified": false,
+      "note": "Practical applied research, often about making things run on modest hardware — matches the inference-efficiency interest."
+    },
+    {
+      "naam": "Embrace The Red (Johann Rehberger)",
+      "url": "https://embracethered.com/blog/index.xml",
+      "type": "rss",
+      "tier": "primary",
+      "section": "security",
+      "verified": false,
+      "note": "The single most consistently productive source on practical prompt injection and agent hijacking. If only one security feed survives verification, make it this one."
+    },
+    {
+      "naam": "OWASP Top 10 for LLM Applications",
+      "url": "https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/releases.atom",
+      "type": "atom",
+      "tier": "primary",
+      "section": "security",
+      "verified": true,
+      "note": "3 entries on test. Low frequency; a release here is a genuine editorial event and a good anchor for an explainer."
+    },
+    {
+      "naam": "garak (NVIDIA) — LLM vulnerability scanner",
+      "url": "https://github.com/NVIDIA/garak/releases.atom",
+      "type": "atom",
+      "tier": "corroborating",
+      "section": "security",
+      "verified": true,
+      "note": "10 entries on test. New probes indicate which attack classes are becoming mainstream. Tool releases themselves are rarely post-worthy; the probe taxonomy is."
+    },
+    {
+      "naam": "llm-guard (Protect AI)",
+      "url": "https://github.com/protectai/llm-guard/releases.atom",
+      "type": "atom",
+      "tier": "corroborating",
+      "section": "security",
+      "verified": true,
+      "note": "10 entries on test. Defensive tooling side of the same picture."
+    },
+    {
+      "naam": "Guardrails AI",
+      "url": "https://github.com/guardrails-ai/guardrails/releases.atom",
+      "type": "atom",
+      "tier": "community",
+      "section": "security",
+      "verified": true,
+      "note": "10 entries on test."
+    },
+    {
+      "naam": "MITRE ATLAS — navigator data",
+      "url": "https://github.com/mitre-atlas/atlas-navigator-data/releases.atom",
+      "type": "atom",
+      "tier": "primary",
+      "section": "security",
+      "verified": true,
+      "note": "10 entries on test. New tactics/techniques in the ATLAS matrix are the closest thing to an authoritative taxonomy update for AI attacks — directly usable in client-facing material."
+    },
+    {
+      "naam": "Inspect (UK AI Security Institute)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_ai/releases.atom",
+      "type": "atom",
+      "tier": "corroborating",
+      "section": "security",
+      "verified": true,
+      "note": "10 entries on test. Evaluation framework used for pre-deployment safety testing; changes here affect how safety evals are run and reported."
+    },
+    {
+      "naam": "mcp-scan (Invariant Labs)",
+      "url": "https://github.com/invariantlabs-ai/mcp-scan/releases.atom",
+      "type": "atom",
+      "tier": "corroborating",
+      "section": "security",
+      "verified": true,
+      "note": "10 entries on test. MCP server security — the supply-chain surface that matters most as agents reach enterprise environments."
+    },
+    {
+      "naam": "Model Context Protocol — servers",
+      "url": "https://github.com/modelcontextprotocol/servers/releases.atom",
+      "type": "atom",
+      "tier": "community",
+      "section": "security",
+      "verified": true,
+      "note": "10 entries on test. Context only — this is an ecosystem signal, not a security finding."
+    },
+    {
+      "naam": "Trail of Bits — Blog",
+      "url": "https://blog.trailofbits.com/feed/",
+      "type": "rss",
+      "tier": "primary",
+      "section": "security",
+      "verified": false,
+      "note": "Rigorous, occasional AI/ML security work. High signal when it appears."
+    },
+    {
+      "naam": "HiddenLayer — Research",
+      "url": "https://hiddenlayer.com/innovation-hub/",
+      "type": "html",
+      "tier": "corroborating",
+      "section": "security",
+      "verified": false,
+      "note": "Vendor research. Real findings, but read as marketing-adjacent — the quality gate's source_quality component should reflect that."
+    },
+    {
+      "naam": "NIST — AI news and publications",
+      "url": "https://www.nist.gov/news-events/news/rss.xml",
+      "type": "rss",
+      "tier": "corroborating",
+      "section": "security",
+      "verified": false,
+      "note": "Filter to AI items. Relevant where it changes what a practitioner must do (AI RMF, control mappings), not for announcements."
+    },
+    {
+      "naam": "ENISA — Publications",
+      "url": "https://www.enisa.europa.eu/publications/rss",
+      "type": "rss",
+      "tier": "corroborating",
+      "section": "security",
+      "verified": false,
+      "note": "EU angle. Relevant to BIO2/NLMAPGOV-adjacent work; low volume.",
+      "inScope": false,
+      "scopeNote": "DISABLED — HTTP 404 on the 2026-09-14 verify_feeds run. The URL in this entry is wrong or the feed was retired; nothing here guesses a replacement. Set inScope:true once a working URL is confirmed."
+    },
+    {
+      "naam": "GitHub Advisory Database — ML/AI packages",
+      "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+      "type": "html",
+      "tier": "corroborating",
+      "section": "security",
+      "verified": false,
+      "note": "Needs filtering to AI/ML packages (transformers, vllm, langchain, gradio, mlflow). Actual CVEs in the AI stack are underreported by the AI press and make good short practitioner posts."
+    },
+    {
+      "naam": "Hugging Face — Blog (security and safety tags)",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "type": "rss",
+      "tier": "corroborating",
+      "section": "research",
+      "verified": false,
+      "note": "Mixed content; classifier decides the section per item."
+    },
+    {
+      "naam": "Microsoft Tech Community — Intune",
+      "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=MicrosoftIntuneBlog",
+      "type": "rss",
+      "tier": "primary",
+      "section": "practice",
+      "verified": false,
+      "note": "PRACTICE SECTION ONLY — depends on assumption A2 in the main brief being confirmed. If Securesein is repositioned as a pure AI radar, delete this and the next three entries.",
+      "inScope": false,
+      "scopeNote": "OUT OF SCOPE under decision A2 (pure AI research radar). This feed exists to serve a Practice section that no longer exists, and `mobility` / `enterprise` are no longer topics. Kept rather than deleted so the decision is auditable and reversible: restoring it means setting inScope:true and re-adding a Practice section. No adapter is built for it."
+    },
+    {
+      "naam": "Android Enterprise — Release notes",
+      "url": "https://developers.google.com/android/work/rss",
+      "type": "rss",
+      "tier": "primary",
+      "section": "practice",
+      "verified": false,
+      "note": "PRACTICE SECTION ONLY. Verify the exact feed path.",
+      "inScope": false,
+      "scopeNote": "OUT OF SCOPE under decision A2 (Practice section removed), and the URL returns HTTP 404 as of the 2026-09-14 verify_feeds run — it is dead as well as out of scope, so no effort was spent finding a replacement."
+    },
+    {
+      "naam": "Apple — Platform Deployment / Business updates",
+      "url": "https://support.apple.com/en-us/HT201222",
+      "type": "html",
+      "tier": "corroborating",
+      "section": "practice",
+      "verified": false,
+      "note": "PRACTICE SECTION ONLY. Apple publishes no clean deployment RSS; needs a scraper or replacement with a better source.",
+      "inScope": false,
+      "scopeNote": "OUT OF SCOPE under decision A2 (Practice section removed). Would have needed a bespoke scraper; none was built."
+    },
+    {
+      "naam": "macOS Security Compliance Project (mSCP)",
+      "url": "https://github.com/usnistgov/macos_security/releases.atom",
+      "type": "atom",
+      "tier": "primary",
+      "section": "practice",
+      "verified": false,
+      "note": "PRACTICE SECTION ONLY. Directly relevant to the BIO2 baseline work; verify the repo path.",
+      "inScope": false,
+      "scopeNote": "OUT OF SCOPE under decision A2. Device-baseline compliance content has no section and no topic in the AI-research vocabulary. Kept for auditability; no adapter built."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+---
+// One section landing page, for every section that is a plain
+// reverse-chronological listing.
+//
+// Written once rather than five times so that the section vocabulary in
+// /taxonomy.json is the only place a label, a route or a standfirst
+// lives — a route file passes a slug and nothing else. Fundamentals is
+// the one section that does not use this, because it is a reading path
+// rather than a feed and needs `order`-based sorting plus step numerals.
+//
+// No new tokens, no new colours: this is the existing card model and the
+// existing dense news row, chosen per section by volume.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PostCard from "../components/PostCard.astro";
+import NewsRow from "../components/NewsRow.astro";
+import TopicFilter from "../components/TopicFilter.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import { groupByDay, postsOfKind } from "../posts";
+import { SECTION_INFO, TOPICS, type Section, type Topic } from "../taxonomy";
+
+interface Props {
+  section: Section;
+  /**
+   * Dense, date-grouped rows instead of cards. Correct for the
+   * high-volume sections where the reader is scanning rather than
+   * browsing — the same judgement the old News lane made.
+   */
+  dense?: boolean;
+  /** Extra content between the header and the listing (e.g. a table). */
+  standfirst?: string;
+}
+const { section, dense = false, standfirst } = Astro.props;
+
+const info = SECTION_INFO[section];
+const posts = await postsOfKind(section);
+const days = dense ? groupByDay(posts) : [];
+
+// Only topics actually present get a filter chip — a chip that filters
+// to nothing is noise.
+const present = new Set<Topic>();
+for (const post of posts) {
+  for (const topic of post.data.topics as Topic[]) present.add(topic);
+}
+const topics = (Object.keys(TOPICS) as Topic[]).filter((t) => present.has(t));
+---
+<BaseLayout title={info.label} description={info.description}>
+  <link
+    slot="head"
+    rel="alternate"
+    type="application/rss+xml"
+    title={`securesein — ${info.label}`}
+    href={`${info.href}/rss.xml`}
+  />
+
+  <div class="container container--wide">
+    <PageHeader
+      title={info.label}
+      standfirst={standfirst ?? `${info.question} ${info.blurb}`}
+    >
+      <slot name="header" />
+      {dense && topics.length > 1 && <TopicFilter topics={topics} />}
+    </PageHeader>
+
+    <slot />
+
+    {dense ? (
+      <div class="news-list" data-news-list>
+        {days.map(({ date, posts }) => (
+          <section class="news-day" data-news-day>
+            <h2 class="news-day-rule"><FormattedDate date={date} /></h2>
+            {posts.map((post) => <NewsRow post={post} showDate={false} />)}
+          </section>
+        ))}
+        <p class="news-empty" data-news-empty hidden>
+          Nothing on this page matches that topic. Try another, or clear the filter.
+        </p>
+      </div>
+    ) : (
+      <div class="section-cards">
+        {posts.map((post) => <PostCard post={post} />)}
+      </div>
+    )}
+
+    {posts.length === 0 && (
+      <p class="empty">
+        Nothing here yet. This section exists because it is where the site is
+        meant to grow, not because there is a backlog to show you.
+      </p>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .section-cards { display: grid; gap: 0; margin-top: 1.4rem; }
+  @media (min-width: 880px) {
+    .section-cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 2.6rem;
+    }
+  }
+
+  .news-list { margin-top: 1.4rem; }
+  .news-day { margin-bottom: 0.6rem; }
+  .news-day-rule {
+    position: sticky;
+    top: 64px;
+    z-index: 2;
+    padding: 0.55rem 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
+  }
+  .news-day :global(.news-row:first-of-type) { border-top: none; }
+  .news-empty { color: var(--text-muted); padding-block: 3rem; }
+
+  .empty { color: var(--text-muted); padding-block: 2rem; max-width: 46ch; }
+</style>

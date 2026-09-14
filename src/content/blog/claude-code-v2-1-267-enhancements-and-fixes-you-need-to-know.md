@@ -2,8 +2,9 @@
 title: "Claude Code v2.1.267: Enhancements and Fixes You Need to Know"
 description: "An in-depth look at the updates in Claude Code's latest release and what they mean for developers."
 pubDate: 2026-09-13
-kind: "news"
-topics: ["agents"]
+kind: "research"
+format: "news"
+topics: ["agents", "llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

@@ -2,8 +2,9 @@
 title: "Navigating the 0.155.0-alpha.3.8 Release: What's New in OpenAI Codex"
 description: "An in-depth look at the latest updates and what they mean for developers using the OpenAI Codex."
 pubDate: 2026-09-13
-kind: "news"
-topics: ["agents", "enterprise"]
+kind: "research"
+format: "news"
+topics: ["agents", "llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

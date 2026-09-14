@@ -2,8 +2,9 @@
 title: "GPT-6 Astra: Redefining Intelligence and Efficiency for Developers"
 description: "Exploring the leaps in capability and alignment with OpenAI's latest model, GPT-6 Astra, and how it stands against competitors like Anthropic's Fable."
 pubDate: 2026-09-05
-kind: "news"
-topics: ["models", "enterprise"]
+kind: "release"
+format: "news"
+topics: ["llms", "reasoning"]
 credit: "scout"
 model: "gpt-4o"
 source:
