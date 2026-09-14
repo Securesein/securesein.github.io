@@ -4868,5 +4868,110 @@
     "source": "NVIDIA Technical Blog",
     "message_id": 772,
     "cached_at": 1789408985.1373732
+  },
+  "e7f5e19476b9fa27": {
+    "title": "Fashion app Daydream uses Apple Intelligence to help you shop the outfits in your camera roll",
+    "link": "https://techcrunch.com/2026/09/14/fashion-discovery-app-daydream-uses-apple-intelligence-to-help-you-shop-the-outfits-saved-in-your-camera-roll/",
+    "source": "TechCrunch AI",
+    "message_id": 773,
+    "cached_at": 1789410798.339352
+  },
+  "07da6b2b8b4fa837": {
+    "title": "Sexually Explicit Deepfake Sites Target 100-Plus Politicians in Europe",
+    "link": "https://www.wired.com/story/sexually-explicit-deepfake-sites-target-100-plus-politicians-in-europe/",
+    "source": "Wired AI",
+    "message_id": 774,
+    "cached_at": 1789410801.5269673
+  },
+  "132494e1d4392dad": {
+    "title": "The AI industry has taken a doomer turn. What now?",
+    "link": "https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/",
+    "source": "MIT Technology Review AI",
+    "message_id": 775,
+    "cached_at": 1789410804.2490683
+  },
+  "9ba543006e444088": {
+    "title": "DU-NO: A Parameter-Efficient Double U-Shaped Neural Operator for Phase-Resolving Wave Modeling",
+    "link": "https://arxiv.org/abs/2609.12115",
+    "source": "arXiv cs.AI",
+    "message_id": 776,
+    "cached_at": 1789410807.0140252
+  },
+  "1db86b7c828dc4d8": {
+    "title": "Local Edits, Global Ripples: Replay-Informed Policy Adaptation for Workflow Synthesis",
+    "link": "https://arxiv.org/abs/2609.12127",
+    "source": "arXiv cs.CL",
+    "message_id": 777,
+    "cached_at": 1789410809.6786435
+  },
+  "0ca12d07b74354ae": {
+    "title": "Decoding Mixture Perception through Computational Modeling of Component Interactions",
+    "link": "https://arxiv.org/abs/2609.11958",
+    "source": "arXiv cs.LG",
+    "message_id": 778,
+    "cached_at": 1789410812.4603949
+  },
+  "7a2b2b4e0b4cd6d1": {
+    "title": "USPLIT-VQA: U-Shaped Split Learning for Visual Question Answering with Contribution-Aware Weighted Aggregation",
+    "link": "https://arxiv.org/abs/2609.12168",
+    "source": "arXiv cs.CV",
+    "message_id": 779,
+    "cached_at": 1789410815.3969946
+  },
+  "84f8b77ca12ac782": {
+    "title": "The generative AI customization spectrum: From prompt engineering to custom models on AWS",
+    "link": "https://aws.amazon.com/blogs/machine-learning/the-generative-ai-customization-spectrum-from-prompt-engineering-to-custom-models-on-aws/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 780,
+    "cached_at": 1789410817.8830502
+  },
+  "7e2bd1ec03482d87": {
+    "title": "Semiparametric Inference for Conditional Shapley Feature Importance",
+    "link": "https://arxiv.org/abs/2609.10313",
+    "source": "arXiv stat.ML",
+    "message_id": 781,
+    "cached_at": 1789410820.6965408
+  },
+  "c6d30021e0fd682a": {
+    "title": "PACEvolve: Enabling Progress-Aware Consistent Evolution",
+    "link": "https://arxiv.org/abs/2601.10657",
+    "source": "arXiv cs.NE",
+    "message_id": 782,
+    "cached_at": 1789410823.5417814
+  },
+  "d363abc11c9dbeff": {
+    "title": "Deriving the Pure Price of Anarchy for Networked Resource Allocation Games",
+    "link": "https://arxiv.org/abs/2609.12077",
+    "source": "arXiv cs.MA",
+    "message_id": 783,
+    "cached_at": 1789410826.159793
+  },
+  "bb8ba106f8a03fcb": {
+    "title": "v0.4.1",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.4.1",
+    "source": "llama.cpp Releases",
+    "message_id": 784,
+    "cached_at": 1789410829.4818077
+  },
+  "9c925548fe36da05": {
+    "title": "v0.34.1-rc0: MLX: version bump (#18235)",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.1-rc0",
+    "source": "Ollama Releases",
+    "message_id": 785,
+    "cached_at": 1789410832.2680483
+  },
+  "8951f6b6e18c090b": {
+    "title": "Release v5.14.0",
+    "link": "https://github.com/huggingface/transformers/releases/tag/v5.14.0",
+    "source": "Hugging Face Transformers Releases",
+    "message_id": 786,
+    "cached_at": 1789410835.8754354
+  },
+  "e45af491d1552566": {
+    "title": "Microsoft’s new AI ‘code of conduct’ tells models not to hack systems or trick humans",
+    "link": "https://techcrunch.com/2026/09/14/microsofts-new-ai-code-of-conduct-tells-models-not-to-hack-systems-or-trick-humans/",
+    "source": "TechCrunch AI",
+    "message_id": 787,
+    "cached_at": 1789410838.328051
   }
 }
