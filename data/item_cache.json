@@ -4658,5 +4658,110 @@
     "source": "Hugging Face Transformers Releases",
     "message_id": 740,
     "cached_at": 1789380147.5839534
+  },
+  "a5eec544bcf3e17e": {
+    "title": "OpenAI Cursor split 💔, self-improving AI 🧠, GPT-6 Astra 🚀",
+    "link": "https://tldr.tech/ai/2026-08-31",
+    "source": "TLDR AI",
+    "message_id": 741,
+    "cached_at": 1789394567.1399446
+  },
+  "1940156d39e0bcaf": {
+    "title": "A Vinyl Bar in Shibuya is a startup offering fun music apps without any AI prompting",
+    "link": "https://techcrunch.com/2026/09/14/a-vinyl-bar-in-shibuya-is-a-startup-offering-fun-music-apps-without-any-ai-prompting/",
+    "source": "TechCrunch AI",
+    "message_id": 742,
+    "cached_at": 1789394570.285067
+  },
+  "7c4a6054d52cdd13": {
+    "title": "AI Leaders Are Calling for a Slowdown. Trump’s Team Says It’s on Them",
+    "link": "https://www.wired.com/story/ai-leaders-are-calling-for-a-slowdown-trumps-team-says-its-on-them/",
+    "source": "Wired AI",
+    "message_id": 743,
+    "cached_at": 1789394572.9986818
+  },
+  "9e2c3fbaba042d6b": {
+    "title": "From Video to Data: How AI Is Transforming Multimedia Content Processing",
+    "link": "https://www.artificialintelligence-news.com/news/from-video-to-data-how-ai-is-transforming-multimedia-content-processing/",
+    "source": "AI News",
+    "message_id": 744,
+    "cached_at": 1789394575.9339275
+  },
+  "538b07ebed4e64fb": {
+    "title": "Cognition Releases SWE-2: A Kimi K3 Post-Trained Coding Model That Matches Fable 5.1 on FrontierCode at 64% Lower Cost",
+    "link": "https://www.marktechpost.com/2026/09/12/cognition-releases-swe-2-a-kimi-k3-post-trained-coding-model-that-matches-fable-5-1-on-frontiercode-at-64-lower-cost/",
+    "source": "MarkTechPost",
+    "message_id": 745,
+    "cached_at": 1789394579.0742152
+  },
+  "d264c3691dffe523": {
+    "title": "7 Python Best Practices Senior Developers Follow (That Beginners Often Miss)",
+    "link": "https://www.kdnuggets.com/7-python-best-practices-senior-developers-follow-that-beginners-often-miss",
+    "source": "KDnuggets",
+    "message_id": 746,
+    "cached_at": 1789394582.416282
+  },
+  "fcc17e533932ca73": {
+    "title": "Competence-Gated Pooling of Language Models and Priors for Event Forecasting",
+    "link": "https://arxiv.org/abs/2609.12101",
+    "source": "arXiv cs.AI",
+    "message_id": 747,
+    "cached_at": 1789394585.7964993
+  },
+  "fd1420f2b9e9097a": {
+    "title": "The Cost of Compression: A Rate-Distortion Limit on Factual Hallucination",
+    "link": "https://arxiv.org/abs/2609.12111",
+    "source": "arXiv cs.CL",
+    "message_id": 748,
+    "cached_at": 1789394588.4529235
+  },
+  "7780cb7a9a4c98e8": {
+    "title": "Efficient AI Model Deployment Using Quantization Analysis Tool",
+    "link": "https://arxiv.org/abs/2609.11954",
+    "source": "arXiv cs.LG",
+    "message_id": 749,
+    "cached_at": 1789394591.3988514
+  },
+  "d2614e94617b736c": {
+    "title": "HSI-Road Relabeled: Surface-Aware Road-Scene Segmentation",
+    "link": "https://arxiv.org/abs/2609.12151",
+    "source": "arXiv cs.CV",
+    "message_id": 750,
+    "cached_at": 1789394595.121303
+  },
+  "3f326b72d6be56b4": {
+    "title": "A Splitting Method for SDE Terminal-Law Estimation",
+    "link": "https://arxiv.org/abs/2609.12513",
+    "source": "arXiv stat.ML",
+    "message_id": 751,
+    "cached_at": 1789394597.6641815
+  },
+  "2a02ad1d75f4df3f": {
+    "title": "Dimension-Corrected Hitting Times for Heavy-Tailed Spectral Emergence in Neural Optimizer Dynamics",
+    "link": "https://arxiv.org/abs/2609.12994",
+    "source": "arXiv cs.NE",
+    "message_id": 752,
+    "cached_at": 1789394601.610723
+  },
+  "2f98f66fe382c9d2": {
+    "title": "Look Before You Leap: Pre-Action Verification for LLM Agents",
+    "link": "https://arxiv.org/abs/2609.11957",
+    "source": "arXiv cs.MA",
+    "message_id": 753,
+    "cached_at": 1789394604.246831
+  },
+  "6164254dcca8e290": {
+    "title": "0.155.0-alpha.4",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.4",
+    "source": "OpenAI Codex Releases",
+    "message_id": 754,
+    "cached_at": 1789394607.2626357
+  },
+  "1264228e9df99743": {
+    "title": "b10956",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10956",
+    "source": "llama.cpp Releases",
+    "message_id": 755,
+    "cached_at": 1789394610.7370403
   }
 }
