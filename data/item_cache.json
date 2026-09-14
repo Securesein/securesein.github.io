@@ -4343,5 +4343,110 @@
     "source": "Ollama Releases",
     "message_id": 695,
     "cached_at": 1789327369.612045
+  },
+  "072e35c55d296027": {
+    "title": "The Culture Funnel: You can’t align what isn’t in the data",
+    "link": "https://cohere.com/blog/the-culture-funnel-you-cant-align-what-isnt-in-the-data",
+    "source": "Cohere Blog",
+    "message_id": 696,
+    "cached_at": 1789365682.734639
+  },
+  "ac293d7ca39f3bdc": {
+    "title": "commit-rewriter 0.1",
+    "link": "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 697,
+    "cached_at": 1789365685.3362184
+  },
+  "8bab13d66ece22cb": {
+    "title": "What’s behind the AI industry’s latest warnings of doom?",
+    "link": "https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom/",
+    "source": "TechCrunch AI",
+    "message_id": 698,
+    "cached_at": 1789365688.493947
+  },
+  "e107a6a73dc10faa": {
+    "title": "Anthropic’s 3-Step ‘Pace the Frontier’ Plan Wins OpenAI, xAI and Microsoft Support: Is It Too Late to Slow AI Down?",
+    "link": "https://www.marktechpost.com/2026/09/13/anthropics-3-step-pace-the-frontier-plan-wins-openai-xai-and-microsoft-support-is-it-too-late-to-slow-ai-down/",
+    "source": "MarkTechPost",
+    "message_id": 699,
+    "cached_at": 1789365690.8660693
+  },
+  "4457099dbaaebee6": {
+    "title": "Trump and Mike Johnson think the AI industry is overreacting",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/994441/trump-mike-johnson-ai-industry-overreacting",
+    "source": "The Verge AI",
+    "message_id": 700,
+    "cached_at": 1789365694.0229223
+  },
+  "3a4ed005eba99874": {
+    "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+    "link": "https://arxiv.org/abs/2609.11977",
+    "source": "arXiv cs.AI",
+    "message_id": 701,
+    "cached_at": 1789365697.9806561
+  },
+  "906d818b43784240": {
+    "title": "R2VC: Modular Fact-Checking with Retrieval, Verification, and Confidence Calibration",
+    "link": "https://arxiv.org/abs/2609.11955",
+    "source": "arXiv cs.CL",
+    "message_id": 702,
+    "cached_at": 1789365701.5841558
+  },
+  "7d3c299f5093af03": {
+    "title": "Fundamental Dynamical Units for Physics-Informed Structural Inference from Perturbation Time-Series in Networked Systems",
+    "link": "https://arxiv.org/abs/2609.11934",
+    "source": "arXiv cs.LG",
+    "message_id": 703,
+    "cached_at": 1789365704.8234346
+  },
+  "20a9d0f50e7aeeb3": {
+    "title": "Feature Recovery for Object Understanding After Irreversible Fire Damage",
+    "link": "https://arxiv.org/abs/2609.12078",
+    "source": "arXiv cs.CV",
+    "message_id": 704,
+    "cached_at": 1789365707.0196774
+  },
+  "2898a53d04394efa": {
+    "title": "New method enables AI for safety-critical situations",
+    "link": "https://news.mit.edu/2026/new-method-enables-ai-safety-critical-situations-0914",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 705,
+    "cached_at": 1789365709.309338
+  },
+  "7fa34690846186f1": {
+    "title": "Learning Interaction Kernels from Collective Steady States",
+    "link": "https://arxiv.org/abs/2609.12004",
+    "source": "arXiv stat.ML",
+    "message_id": 706,
+    "cached_at": 1789365711.7063565
+  },
+  "e1a391213ac91d30": {
+    "title": "Signed Sensitivity of Expected Hitting Time to Mutation Rate in the (1+1) EA: Per-State Sign Theorems and Verifiable Certificates for Non-Lumpable Families",
+    "link": "https://arxiv.org/abs/2609.12510",
+    "source": "arXiv cs.NE",
+    "message_id": 707,
+    "cached_at": 1789365715.2070825
+  },
+  "b66611a8f38fd9f0": {
+    "title": "The Mechanics of a Swarm: A Reproducible External Reconstruction of an Unintended Agent-Coordination Episode on a Third-Party Wiki",
+    "link": "https://arxiv.org/abs/2609.12748",
+    "source": "arXiv cs.MA",
+    "message_id": 708,
+    "cached_at": 1789365718.9505365
+  },
+  "539d17c9b384e143": {
+    "title": "Release v0.61.0-nightly.20260914.g9c1b0a610",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260914.g9c1b0a610",
+    "source": "Gemini CLI Releases",
+    "message_id": 709,
+    "cached_at": 1789365722.377623
+  },
+  "409a74e4cabef2e8": {
+    "title": "b10951",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10951",
+    "source": "llama.cpp Releases",
+    "message_id": 710,
+    "cached_at": 1789365725.151123
   }
 }
