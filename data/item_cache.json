@@ -4553,5 +4553,110 @@
     "source": "MarkTechPost",
     "message_id": 725,
     "cached_at": 1789366027.9535358
+  },
+  "85052f9befba2c4e": {
+    "title": "Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL",
+    "link": "https://huggingface.co/blog/asyncgrpo-lora-hfjobs",
+    "source": "Hugging Face Blog",
+    "message_id": 726,
+    "cached_at": 1789380105.2193646
+  },
+  "8c7d9711a61ae576": {
+    "title": "‘I Like My Big Rat Wife’: Meet the People Using Chatbots to Write Custom Fiction",
+    "link": "https://www.wired.com/story/chatbot-generated-fiction-i-like-my-big-rat-wife/",
+    "source": "Wired AI",
+    "message_id": 727,
+    "cached_at": 1789380108.5136812
+  },
+  "5a166a28c7ebb72c": {
+    "title": "Why Most Enterprise Agent Pilots Never Reach Deployment",
+    "link": "https://www.artificialintelligence-news.com/news/why-most-enterprise-agent-pilots-never-reach-deployment/",
+    "source": "AI News",
+    "message_id": 728,
+    "cached_at": 1789380111.9913697
+  },
+  "6bc6530ebfa05908": {
+    "title": "NVIDIA Open-Sources OSMO: One YAML Orchestrates Physical AI Training, Simulation, and Robot Testing",
+    "link": "https://www.marktechpost.com/2026/09/14/nvidia-open-sources-osmo-one-yaml-orchestrates-physical-ai-training-simulation-and-robot-testing/",
+    "source": "MarkTechPost",
+    "message_id": 729,
+    "cached_at": 1789380114.937553
+  },
+  "ce0b1a8e18f07296": {
+    "title": "Reading the Whole Heart: Latent-Attention Masked Autoencoders for Multimodal Cardiac Representation Learning",
+    "link": "https://arxiv.org/abs/2609.12035",
+    "source": "arXiv cs.AI",
+    "message_id": 730,
+    "cached_at": 1789380118.592529
+  },
+  "c1632fe20168f829": {
+    "title": "Extracting Dataset Mentions in Forced Displacement and FCV Documents: A Weakly Supervised Framework with LLM-Based Label Refinement",
+    "link": "https://arxiv.org/abs/2609.12107",
+    "source": "arXiv cs.CL",
+    "message_id": 731,
+    "cached_at": 1789380121.064239
+  },
+  "7ba7b9bfb7984ce0": {
+    "title": "Fed-Equilibrium Framework for Topological Pareto Control in Robust and Fair Clinical Federated Learning",
+    "link": "https://arxiv.org/abs/2609.11937",
+    "source": "arXiv cs.LG",
+    "message_id": 732,
+    "cached_at": 1789380123.9966624
+  },
+  "7e362a882e3df4a2": {
+    "title": "Beyond Argmax: A Mechanistic Study of Semantic Retention in Frozen Foundation-Model Composition for Generalized Few-Shot 3D Segmentation",
+    "link": "https://arxiv.org/abs/2609.12099",
+    "source": "arXiv cs.CV",
+    "message_id": 733,
+    "cached_at": 1789380126.9140124
+  },
+  "9c3dd1a83a20c971": {
+    "title": "Inference for Newton Methods with Accelerated Sketch-and-Project via Random Scaling",
+    "link": "https://arxiv.org/abs/2609.12421",
+    "source": "arXiv stat.ML",
+    "message_id": 734,
+    "cached_at": 1789380129.8677495
+  },
+  "94600ae4ec9ba1f7": {
+    "title": "T-GADE: Thermodynamical Generative-AI-Driven Evolution of LLM Artifacts",
+    "link": "https://arxiv.org/abs/2609.12286",
+    "source": "arXiv cs.NE",
+    "message_id": 735,
+    "cached_at": 1789380132.535875
+  },
+  "bbae4a30e0237aa4": {
+    "title": "Orchestra: Corroboration-Based Regulatory Candidate Discovery via Composed Bioinformatics MCP Agents",
+    "link": "https://arxiv.org/abs/2609.05496",
+    "source": "arXiv cs.MA",
+    "message_id": 736,
+    "cached_at": 1789380135.2466679
+  },
+  "d2d573a6ad5bbe17": {
+    "title": "b10952",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10952",
+    "source": "llama.cpp Releases",
+    "message_id": 737,
+    "cached_at": 1789380138.2543306
+  },
+  "b2fa1e04cc66828c": {
+    "title": "v0.28.1rc0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.28.1rc0",
+    "source": "vLLM Releases",
+    "message_id": 738,
+    "cached_at": 1789380141.1531217
+  },
+  "844977d2e232b149": {
+    "title": "v0.34.0-rc0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc0",
+    "source": "Ollama Releases",
+    "message_id": 739,
+    "cached_at": 1789380144.227655
+  },
+  "65f875233cff974c": {
+    "title": "Patch release: v5.14.1",
+    "link": "https://github.com/huggingface/transformers/releases/tag/v5.14.1",
+    "source": "Hugging Face Transformers Releases",
+    "message_id": 740,
+    "cached_at": 1789380147.5839534
   }
 }
