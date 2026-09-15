@@ -3,23 +3,16 @@ name: Research channel
 # ############################################################
 # #  MANUAL TRIGGER ONLY. THERE IS DELIBERATELY NO `schedule`. #
 # #                                                            #
-# #  This channel is built, tested and DORMANT. It cannot run  #
-# #  unattended, because nothing fires it: no `schedule:` here #
-# #  and no cron-job.org job pointed at it. Running it takes a #
-# #  person clicking "Run workflow".                           #
-# #                                                            #
-# #  It also defaults to a DRY RUN. The `publish` input has to #
-# #  be set to true by hand, per run, for anything to be       #
-# #  written — and doing that is a deliberate decision the     #
-# #  site owner takes, not a default anyone can fall into.     #
-# #                                                            #
-# #  To actually activate the channel, three separate things   #
-# #  have to happen and none of them have:                     #
-# #    1. run it in dry-run for a week and re-check the        #
-# #       thresholds against the score distribution;           #
-# #    2. create a cron-job.org job hitting this workflow's    #
-# #       dispatch API every 4 hours (§13), with publish=true;      #
-# #    3. confirm OPENAI_API_KEY is set for the repo.          #
+# #  This channel classifies each new feed item with a LIVE, PER-ITEM #
+# #  model call — there is no bulk path. The first run against a      #
+# #  feed file this pipeline has never polled before can find         #
+# #  hundreds of "new" items at once, and at one API call per item     #
+# #  that first run can take a long time and real OpenAI spend        #
+# #  before it settles into its steady, fast, mostly-nothing-new      #
+# #  cadence. `limit` (below) exists specifically to bound that.      #
+# #                                                                    #
+# #  It defaults to a DRY RUN. The `publish` input has to be set to   #
+# #  true by hand, per run, for anything to be written.               #
 # ############################################################
 on:
   workflow_dispatch:
@@ -32,6 +25,10 @@ on:
         description: "Use the deterministic classifiers, no API calls at all"
         type: boolean
         default: false
+      limit:
+        description: "Cap on items examined this run (protects a first/backlog run from a very long, expensive sweep)"
+        type: number
+        default: 15
 
 permissions:
   contents: write
@@ -40,6 +37,11 @@ permissions:
 jobs:
   research:
     runs-on: ubuntu-latest
+    # Belt-and-suspenders alongside `limit`: a run that is still going
+    # after this long is not "processing a big backlog" any more, it is
+    # stuck, and an hourly-or-faster schedule must never be allowed to
+    # pile up runs on top of one that is hanging.
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -56,7 +58,8 @@ jobs:
         run: |
           python scripts/run.py --channel research \
             ${{ inputs.publish && '--publish' || '--dry-run' }} \
-            ${{ inputs.offline_llm && '--offline-llm' || '' }}
+            ${{ inputs.offline_llm && '--offline-llm' || '' }} \
+            --limit ${{ inputs.limit }}
 
       # G4. The content schema is the only verification gate that runs
       # AFTER a post is written, and it has to run before the commit: a
