@@ -5078,5 +5078,110 @@
     "source": "arXiv cs.MA",
     "message_id": 802,
     "cached_at": 1789452123.0142722
+  },
+  "f1ea99f442b165fa": {
+    "title": "What blog posts influenced your thinking the most?",
+    "link": "https://simonwillison.net/2026/Sep/14/influences/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 803,
+    "cached_at": 1789457898.5217412
+  },
+  "1e8fc93054f4fa23": {
+    "title": "Nvidia CEO Jensen Huang tells Trump ‘we’re not going to let [an AI slowdown] happen’",
+    "link": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
+    "source": "TechCrunch AI",
+    "message_id": 804,
+    "cached_at": 1789457901.3788295
+  },
+  "f4adf3cb8e161bd0": {
+    "title": "Apple releases iOS 27, macOS Golden Gate 27 with Siri AI and Liquid Glass refinements",
+    "link": "https://arstechnica.com/apple/2026/09/apple-releases-ios-27-macos-golden-gate-27-with-siri-ai-and-liquid-glass-refinements/",
+    "source": "Ars Technica AI",
+    "message_id": 805,
+    "cached_at": 1789457904.254224
+  },
+  "17da90a701612e55": {
+    "title": "The AI Talent Britain Fought to Hire May Be Recalculating Its Future",
+    "link": "https://www.artificialintelligence-news.com/news/the-ai-talent-britain-fought-to-hire-may-be-recalculating-its-future/",
+    "source": "AI News",
+    "message_id": 806,
+    "cached_at": 1789457907.301052
+  },
+  "38a5ca5fa25b25d5": {
+    "title": "Meta Introduces ZGateway: A Stateless Proxy Tier That Unifies ZippyDB Traffic and Handles Over 1 Billion Operations Per Second",
+    "link": "https://www.marktechpost.com/2026/09/14/meta-introduces-zgateway-a-stateless-proxy-tier-that-unifies-zippydb-traffic-and-handles-over-1-billion-operations-per-second/",
+    "source": "MarkTechPost",
+    "message_id": 807,
+    "cached_at": 1789457910.1722467
+  },
+  "5e6cebbd5e27fb9b": {
+    "title": "What execs and politicians are saying about slowing down AI development",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/995141/ai-executives-politicians-safety-regulation-anthropic-dario-amodei",
+    "source": "The Verge AI",
+    "message_id": 808,
+    "cached_at": 1789457912.7695389
+  },
+  "75d6955b7dff8f2c": {
+    "title": "Converge Then Diversify: Decoupling Convergence and Diversity in Multi-Objective Bayesian Optimisation",
+    "link": "https://arxiv.org/abs/2609.13396",
+    "source": "arXiv cs.AI",
+    "message_id": 809,
+    "cached_at": 1789457915.7436593
+  },
+  "7df5ac73b68e4b85": {
+    "title": "PhysMent: An Interactive Approach For LLM Reasoning In Physics Problems",
+    "link": "https://arxiv.org/abs/2609.13152",
+    "source": "arXiv cs.CL",
+    "message_id": 810,
+    "cached_at": 1789457919.1642365
+  },
+  "e2becb5d0576e0d4": {
+    "title": "A derivative-fidelity failure mode in physics-informed neural networks: strengthened benchmark evidence from function-value training",
+    "link": "https://arxiv.org/abs/2609.13171",
+    "source": "arXiv cs.LG",
+    "message_id": 811,
+    "cached_at": 1789457921.7392597
+  },
+  "4348a43545169aea": {
+    "title": "Part Grounding, Not Action Knowledge: Locating the Bottleneck in VLM Affordance Prediction",
+    "link": "https://arxiv.org/abs/2609.13225",
+    "source": "arXiv cs.CV",
+    "message_id": 812,
+    "cached_at": 1789457924.7881992
+  },
+  "6e41de026168eaae": {
+    "title": "Manage end-user OAuth consent for AI agents with Amazon Bedrock AgentCore",
+    "link": "https://aws.amazon.com/blogs/machine-learning/manage-end-user-oauth-consent-for-ai-agents-with-amazon-bedrock-agentcore/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 813,
+    "cached_at": 1789457927.7165208
+  },
+  "15c3ca77bc8e66d2": {
+    "title": "Beyond Point Forecasts: A Survey on Probabilistic Forecasting for Time Series and Spatiotemporal Data",
+    "link": "https://arxiv.org/abs/2609.13345",
+    "source": "arXiv stat.ML",
+    "message_id": 814,
+    "cached_at": 1789457930.302008
+  },
+  "69c5745a7f0d4164": {
+    "title": "Early-Stopping Thresholds for ES-HyperNEAT: A Data-Driven Approach from Fitness Dynamics",
+    "link": "https://arxiv.org/abs/2609.13533",
+    "source": "arXiv cs.NE",
+    "message_id": 815,
+    "cached_at": 1789457933.123129
+  },
+  "0c5ff7cb14d9f759": {
+    "title": "An Evolutionary Computation Framework for Multi-Agent Q-Learning with Mean-Field Environmental Feedback",
+    "link": "https://arxiv.org/abs/2609.13253",
+    "source": "arXiv cs.MA",
+    "message_id": 816,
+    "cached_at": 1789457935.8546386
+  },
+  "1606e07c2159d4dd": {
+    "title": "v2.1.272",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.272",
+    "source": "Claude Code Releases",
+    "message_id": 817,
+    "cached_at": 1789457938.8300345
   }
 }
