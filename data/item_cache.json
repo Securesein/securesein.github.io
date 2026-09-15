@@ -4973,5 +4973,110 @@
     "source": "TechCrunch AI",
     "message_id": 787,
     "cached_at": 1789410838.328051
+  },
+  "64f040316f79ac59": {
+    "title": "The contagion of fear",
+    "link": "https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 788,
+    "cached_at": 1789452082.0708768
+  },
+  "0d35c720232a556f": {
+    "title": "Jensen Huang took a call from Trump, and showed off something else, too",
+    "link": "https://techcrunch.com/2026/09/14/jensen-huang-took-a-call-from-trump-and-showed-off-something-else-too/",
+    "source": "TechCrunch AI",
+    "message_id": 789,
+    "cached_at": 1789452084.313655
+  },
+  "0a67bb4610e17cf8": {
+    "title": "AI bots \"Timmy,\" \"Ren,\" and \"Jackie\" are flooding social media with slop",
+    "link": "https://arstechnica.com/ai/2026/09/ai-agents-flood-the-internet-with-slop-infused-spam/",
+    "source": "Ars Technica AI",
+    "message_id": 790,
+    "cached_at": 1789452087.720574
+  },
+  "2d7ab5ebc86593c8": {
+    "title": "Is Big Tech’s AI slowdown a safety pact or a cartel?",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/995186/is-big-techs-ai-slowdown-a-safety-pact-or-a-cartel",
+    "source": "The Verge AI",
+    "message_id": 791,
+    "cached_at": 1789452090.542481
+  },
+  "60bbbc8f0a088e43": {
+    "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+    "link": "https://arxiv.org/abs/2609.13356",
+    "source": "arXiv cs.AI",
+    "message_id": 792,
+    "cached_at": 1789452094.621707
+  },
+  "86bd0c05b3cc4f07": {
+    "title": "Token Merging for Multilingual Speech Recognition: A Systematic Study Across Model Scale and Fine-Tuning",
+    "link": "https://arxiv.org/abs/2609.13151",
+    "source": "arXiv cs.CL",
+    "message_id": 793,
+    "cached_at": 1789452097.7346578
+  },
+  "a2e3cd6b8d9dbec0": {
+    "title": "BudgetBench: A Budget-Tiered Protocol and Pilot Harness for Memory Strategy Evaluation in Local Large Language Model Agents",
+    "link": "https://arxiv.org/abs/2609.13149",
+    "source": "arXiv cs.LG",
+    "message_id": 794,
+    "cached_at": 1789452100.558343
+  },
+  "8fc47f097bb7791c": {
+    "title": "Personalized and Explainable Blood Pressure Estimation from PPG via Hybrid CNN--Morphological Features",
+    "link": "https://arxiv.org/abs/2609.13190",
+    "source": "arXiv cs.CV",
+    "message_id": 795,
+    "cached_at": 1789452103.6915045
+  },
+  "af8151f0d7e9a3bc": {
+    "title": "Omni-Streaming Thinking",
+    "link": "https://arxiv.org/abs/2609.15128",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 796,
+    "cached_at": 1789452106.7859628
+  },
+  "6666660dfd652924": {
+    "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
+    "link": "https://blog.google/innovation-and-ai/technology/ai/dialogues-christina-koch/",
+    "source": "Google AI Blog",
+    "message_id": 797,
+    "cached_at": 1789452109.3923383
+  },
+  "aa17bb9114e289a2": {
+    "title": "Abnormal AI: Amazon Bedrock AgentCore for agentic email security at scale",
+    "link": "https://aws.amazon.com/blogs/machine-learning/abnormal-ai-amazon-bedrock-agentcore-for-agentic-email-security-at-scale/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 798,
+    "cached_at": 1789452111.9412613
+  },
+  "cd1b919322a43965": {
+    "title": "Announcing On-Demand State Repartitioning for Apache Spark™ Structured Streaming on Databricks",
+    "link": "https://www.databricks.com/blog/announcing-demand-state-repartitioning-apache-sparktm-structured-streaming-databricks",
+    "source": "Databricks Blog",
+    "message_id": 799,
+    "cached_at": 1789452114.5383208
+  },
+  "31c93041a5f2f1ac": {
+    "title": "Stochastic Gradient Descent over P2",
+    "link": "https://arxiv.org/abs/2609.13343",
+    "source": "arXiv stat.ML",
+    "message_id": 800,
+    "cached_at": 1789452117.1944695
+  },
+  "1904dc5525d48d98": {
+    "title": "nBMS, a Neuromorphic Battery Management System with a Silicon-Validated Spiking State-of-Charge Core for eVTOL Aircraft",
+    "link": "https://arxiv.org/abs/2609.13506",
+    "source": "arXiv cs.NE",
+    "message_id": 801,
+    "cached_at": 1789452120.3522663
+  },
+  "cb9ebaab842a1f3d": {
+    "title": "Machine learning-assisted calibration of Agent-based Models: surrogate-based optimization with Genetic Algorithm and Particle Swarm Optimization",
+    "link": "https://arxiv.org/abs/2609.13247",
+    "source": "arXiv cs.MA",
+    "message_id": 802,
+    "cached_at": 1789452123.0142722
   }
 }
