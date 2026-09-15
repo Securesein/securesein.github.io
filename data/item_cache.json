@@ -5183,5 +5183,110 @@
     "source": "Claude Code Releases",
     "message_id": 817,
     "cached_at": 1789457938.8300345
+  },
+  "79f1a86c86db64a4": {
+    "title": "Heart of the Matter: How a Major Children’s Hospital Uses Open Source NVIDIA AI for Cardiac Care",
+    "link": "https://blogs.nvidia.com/blog/childrens-hospital-open-source-ai-cardiac-care/",
+    "source": "NVIDIA Blog",
+    "message_id": 818,
+    "cached_at": 1789466637.9378204
+  },
+  "c3a2fa0e613b1bf5": {
+    "title": "OpenAI buys smartphone camera maker Glass Imaging for $300 million, report says",
+    "link": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
+    "source": "TechCrunch AI",
+    "message_id": 819,
+    "cached_at": 1789466640.294051
+  },
+  "57947d2c67ddf6c7": {
+    "title": "AI leaders want to hit the brakes after years of reckless speed",
+    "link": "https://arstechnica.com/ai/2026/09/ai-leaders-want-to-hit-the-brakes-after-years-of-reckless-speed/",
+    "source": "Ars Technica AI",
+    "message_id": 820,
+    "cached_at": 1789466643.6290832
+  },
+  "1bd759fe15d1d102": {
+    "title": "Agent-net Open Sources Webagent: A Go Harness That Turns Any Website into a Guarded AI Agent",
+    "link": "https://www.marktechpost.com/2026/09/14/agent-net-open-sources-webagent-a-go-harness-that-turns-any-website-into-a-guarded-ai-agent/",
+    "source": "MarkTechPost",
+    "message_id": 821,
+    "cached_at": 1789466646.572128
+  },
+  "67d243ef4230bd72": {
+    "title": "Jensen Huang puts Trump on speakerphone onstage to announce robots won’t take over the world",
+    "link": "https://www.theverge.com/tech/995079/president-donald-trump-calls-nvidia-ceo-jensen-huang-all-in-summit",
+    "source": "The Verge AI",
+    "message_id": 822,
+    "cached_at": 1789466649.4384327
+  },
+  "bbbb723ad104c343": {
+    "title": "Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement",
+    "link": "https://arxiv.org/abs/2609.13406",
+    "source": "arXiv cs.AI",
+    "message_id": 823,
+    "cached_at": 1789466653.0046415
+  },
+  "d3edd3c142300fde": {
+    "title": "Lexical Prompt Compression for Large Language Models: A Training-Free, Deterministic Pipeline with Empirical Pareto Analysis Across Eleven Task Categories",
+    "link": "https://arxiv.org/abs/2609.13154",
+    "source": "arXiv cs.CL",
+    "message_id": 824,
+    "cached_at": 1789466655.5199325
+  },
+  "0f87f6753b4dbd11": {
+    "title": "Land Art as a Big-Data Climate Sensor",
+    "link": "https://arxiv.org/abs/2609.13182",
+    "source": "arXiv cs.LG",
+    "message_id": 825,
+    "cached_at": 1789466658.821468
+  },
+  "19b6ed907a865138": {
+    "title": "Synthetic Leprosy Image Generation Using Mask-Conditioned Latent Diffusion and Transfer Learning from Large Chronic Wound Datasets",
+    "link": "https://arxiv.org/abs/2609.13226",
+    "source": "arXiv cs.CV",
+    "message_id": 826,
+    "cached_at": 1789466661.6528153
+  },
+  "3ed830534e78de16": {
+    "title": "Automate replenishment with MMF, Databricks Genie, and Amazon Quick",
+    "link": "https://aws.amazon.com/blogs/machine-learning/automate-replenishment-with-mmf-databricks-genie-and-amazon-quick/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 827,
+    "cached_at": 1789466664.3244135
+  },
+  "afe6c68f03475dfa": {
+    "title": "Managed Postgres: What Lakebase Actually Takes Off Your Plate",
+    "link": "https://www.databricks.com/blog/managed-postgres",
+    "source": "Databricks Blog",
+    "message_id": 828,
+    "cached_at": 1789466667.196391
+  },
+  "ae38850436c199ff": {
+    "title": "A pullback-corrected scalar auxiliary variable optimizer with momentum and adaptive mobility",
+    "link": "https://arxiv.org/abs/2609.13569",
+    "source": "arXiv stat.ML",
+    "message_id": 829,
+    "cached_at": 1789466670.239935
+  },
+  "77cdb1c41a2b1e6d": {
+    "title": "Surrogate-Assisted Genetic Programming with Phenotypic Characterisation in Dynamic Multi-Mode Project Scheduling",
+    "link": "https://arxiv.org/abs/2609.14418",
+    "source": "arXiv cs.NE",
+    "message_id": 830,
+    "cached_at": 1789466673.109506
+  },
+  "db9e46542ff9cb0b": {
+    "title": "From Process Loss to Assembly Bonus: Human-Grounded Diagnosis of Multi-Agent LLM Collaboration",
+    "link": "https://arxiv.org/abs/2609.13261",
+    "source": "arXiv cs.MA",
+    "message_id": 831,
+    "cached_at": 1789466675.62577
+  },
+  "a37e86bc95f712c3": {
+    "title": "v2.1.271",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.271",
+    "source": "Claude Code Releases",
+    "message_id": 832,
+    "cached_at": 1789466678.7670991
   }
 }
