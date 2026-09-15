@@ -8,6 +8,7 @@ The entrypoint for every automated channel.
     python scripts/run.py --channel benchmarks [--dry-run]
     python scripts/run.py --report             [--dry-run]
     python scripts/run.py --digest             [--dry-run]
+    python scripts/run.py --propose            [--dry-run]
 
 There is no `--channel practice`. Decision A2 removed the Practice
 section, and nothing in this pipeline knows the word.
@@ -86,6 +87,14 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="generate the daily Telegram digest instead of running a channel",
     )
+    parser.add_argument(
+        "--propose",
+        action="store_true",
+        help="generate proposed interest_profile.yaml changes from accumulated "
+             "feedback and PRINT them. There is deliberately no --apply: §11.3 "
+             "says Scout proposes and the owner approves, so a proposal is "
+             "something a human applies by hand or not at all.",
+    )
     publish = parser.add_mutually_exclusive_group()
     publish.add_argument(
         "--dry-run",
@@ -144,7 +153,7 @@ def resolve_dry_run(flag: bool | None) -> bool:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
-    if not args.channel and not args.report and not args.digest:
+    if not args.channel and not args.report and not args.digest and not args.propose:
         build_parser().print_help()
         return 2
 
@@ -165,6 +174,18 @@ def main(argv: list[str] | None = None) -> int:
         text = report.render(ledger)
         print(text)
         _maybe_send(report.send, text, args.send, dry_run, "report")
+        return 0
+
+    if args.propose:
+        from core import learning
+
+        proposal = learning.propose()
+        text = learning.render(proposal)
+        print(text)
+        learning.record(proposal, dry_run=dry_run)
+        _maybe_send(
+            lambda body: bool(_send_plain(body)), text, args.send, dry_run, "proposal"
+        )
         return 0
 
     if args.digest:
@@ -210,6 +231,12 @@ def main(argv: list[str] | None = None) -> int:
     if llm.mode == LIVE:
         print(f"  {llm.calls} model call(s) made.")
     return 0
+
+
+def _send_plain(text: str):
+    from telegram import api
+
+    return api.send(text)
 
 
 def _maybe_send(sender, text: str, send: bool, dry_run: bool, what: str) -> None:
