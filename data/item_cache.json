@@ -5393,5 +5393,110 @@
     "source": "Gemini CLI Releases",
     "message_id": 847,
     "cached_at": 1789480941.3644435
+  },
+  "393d886385759ce2": {
+    "title": "Claude for Small Business launches new workflows, integrations, and training programs",
+    "link": "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs",
+    "source": "Claude Blog",
+    "message_id": 848,
+    "cached_at": 1789495295.7866225
+  },
+  "a1d018f16fad79f9": {
+    "title": "Your Agent Aced the Task. Will It Do It Again?",
+    "link": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+    "source": "Hugging Face Blog",
+    "message_id": 849,
+    "cached_at": 1789495299.8545272
+  },
+  "9bb496e350686cb7": {
+    "title": "From Megawatts to Tokens: How NVIDIA Maximizes AI Factory Production",
+    "link": "https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/",
+    "source": "NVIDIA Blog",
+    "message_id": 850,
+    "cached_at": 1789495303.0493903
+  },
+  "10c4d07fdac5a1ed": {
+    "title": "AI agents now have a place to snitch",
+    "link": "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/",
+    "source": "TechCrunch AI",
+    "message_id": 851,
+    "cached_at": 1789495313.898942
+  },
+  "78421fa2cf76f38b": {
+    "title": "Meta&#8217;s new One subscriptions put a price on social media and AI",
+    "link": "https://www.theverge.com/tech/995453/meta-one-subscriptions-ai",
+    "source": "The Verge AI",
+    "message_id": 852,
+    "cached_at": 1789495318.4975054
+  },
+  "6309d829caa0cf06": {
+    "title": "Toward Self-Adaptive Physical AI: Can LLM Agents Manage Long-Horizon Physical Tasks?",
+    "link": "https://arxiv.org/abs/2609.13436",
+    "source": "arXiv cs.AI",
+    "message_id": 853,
+    "cached_at": 1789495321.2675922
+  },
+  "07db5d16e2502380": {
+    "title": "Clinical Reasoning Under a Partially Observed Objective in Cone Beam CT Report Generation",
+    "link": "https://arxiv.org/abs/2609.13238",
+    "source": "arXiv cs.CL",
+    "message_id": 854,
+    "cached_at": 1789495325.035592
+  },
+  "031d40eec829ff49": {
+    "title": "Early Prediction of Satellite Collision Probability Using a Hybrid TCN-Transformer Model for a CDM-Based Conjunction Analysis Framework",
+    "link": "https://arxiv.org/abs/2609.13191",
+    "source": "arXiv cs.LG",
+    "message_id": 855,
+    "cached_at": 1789495331.927444
+  },
+  "1a76d1d23563ff35": {
+    "title": "What Does the Encoder Actually Decide? A Controlled Comparison of Vision Backbones on Joint Tree Segmentation and Stereo Depth",
+    "link": "https://arxiv.org/abs/2609.13232",
+    "source": "arXiv cs.CV",
+    "message_id": 856,
+    "cached_at": 1789495335.2210937
+  },
+  "947e89eaa83a27ae": {
+    "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+    "link": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+    "source": "Google DeepMind Blog",
+    "message_id": 857,
+    "cached_at": 1789495342.4117413
+  },
+  "970c94673769027a": {
+    "title": "AI for Societal Impact",
+    "link": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+    "source": "Google AI Blog",
+    "message_id": 858,
+    "cached_at": 1789495354.862866
+  },
+  "318c5e33ffc35bd8": {
+    "title": "Optimizing cost and latency with Amazon Bedrock prompt caching",
+    "link": "https://aws.amazon.com/blogs/machine-learning/optimizing-cost-and-latency-with-amazon-bedrock-prompt-caching/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 859,
+    "cached_at": 1789495358.9748087
+  },
+  "8310477f7bec04b3": {
+    "title": "How energy teams turn theft detection into governed action with Genie and AI business processes",
+    "link": "https://www.databricks.com/blog/how-energy-teams-turn-theft-detection-governed-action-genie-and-ai-business-processes",
+    "source": "Databricks Blog",
+    "message_id": 860,
+    "cached_at": 1789495361.9953973
+  },
+  "77c6040294dbed25": {
+    "title": "Dense vs. MoE Models: Active Parameters, Throughput, and When to Choose Each",
+    "link": "https://developer.nvidia.com/blog/dense-vs-moe-models-active-parameters-throughput-and-when-to-choose-each/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 861,
+    "cached_at": 1789495369.1403737
+  },
+  "3a20ab35e96e5984": {
+    "title": "A theoretical separation between quantum computers & LLMs",
+    "link": "https://research.ibm.com/blog/quantum-circuits-vs-llms?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 862,
+    "cached_at": 1789495373.1501558
   }
 }
