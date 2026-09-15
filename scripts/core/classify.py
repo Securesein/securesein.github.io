@@ -28,6 +28,7 @@ published without review.
 from __future__ import annotations
 
 import re
+import sys
 
 from .registry import Registry
 
