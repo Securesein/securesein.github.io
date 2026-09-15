@@ -5288,5 +5288,110 @@
     "source": "Claude Code Releases",
     "message_id": 832,
     "cached_at": 1789466678.7670991
+  },
+  "c96a96af8385a622": {
+    "title": "Muse Code 👨‍💻, Runway Solaris ☀️, OpenClaw 2.0 🤖",
+    "link": "https://tldr.tech/ai/2026-09-01",
+    "source": "TLDR AI",
+    "message_id": 833,
+    "cached_at": 1789480898.9492812
+  },
+  "121e9bb12f9f8f9c": {
+    "title": "Early Anthropic hire, former METR COO have found a way to rein in rogue AI agents",
+    "link": "https://techcrunch.com/2026/09/15/early-anthropic-hire-former-metr-coo-have-found-a-way-to-rein-in-rogue-ai-agents/",
+    "source": "TechCrunch AI",
+    "message_id": 834,
+    "cached_at": 1789480902.7333405
+  },
+  "7cef40b48d7874a7": {
+    "title": "What’s at stake in AI’s trillion-dollar gamble",
+    "link": "https://www.technologyreview.com/2026/09/15/1144028/ai-infrastructure-boom-investment-bubble-risk/",
+    "source": "MIT Technology Review AI",
+    "message_id": 835,
+    "cached_at": 1789480905.7718024
+  },
+  "05ba1b44b92460b6": {
+    "title": "5 Free Microsoft GitHub Courses to Learn Data Science and Artificial Intelligence",
+    "link": "https://www.kdnuggets.com/5-free-microsoft-github-courses-to-learn-data-science-and-artificial-intelligence",
+    "source": "KDnuggets",
+    "message_id": 836,
+    "cached_at": 1789480908.4984624
+  },
+  "17a11a5c1c19fde2": {
+    "title": "This doorbell camera lets a human security guard watch your front door",
+    "link": "https://www.theverge.com/tech/995365/simplisafe-video-doorbell-series-2-virtual-guard-price-specs",
+    "source": "The Verge AI",
+    "message_id": 837,
+    "cached_at": 1789480911.101439
+  },
+  "052b52cf233e8ebe": {
+    "title": "Vibe Patenting: Evaluating LLM Judges for Professional Patent-Drafting Agents",
+    "link": "https://arxiv.org/abs/2609.13422",
+    "source": "arXiv cs.AI",
+    "message_id": 838,
+    "cached_at": 1789480914.5185447
+  },
+  "1b2e41a1a3d06edb": {
+    "title": "TestHallVQA: Exploring LVLMs' Document-Level Reasoning under Redundant Contexts from Scientific Exams",
+    "link": "https://arxiv.org/abs/2609.13158",
+    "source": "arXiv cs.CL",
+    "message_id": 839,
+    "cached_at": 1789480917.0358253
+  },
+  "9871624a5fb6ca89": {
+    "title": "LLMs or Naive Bayes? Old Gems or New Ways",
+    "link": "https://arxiv.org/abs/2609.13185",
+    "source": "arXiv cs.LG",
+    "message_id": 840,
+    "cached_at": 1789480920.2319646
+  },
+  "48cfbc2ebff26d49": {
+    "title": "Don't Just Look, Intervene: Perturbation Based Region Labeling for VQA Images",
+    "link": "https://arxiv.org/abs/2609.13228",
+    "source": "arXiv cs.CV",
+    "message_id": 841,
+    "cached_at": 1789480923.520604
+  },
+  "b21c5e1ffc812be8": {
+    "title": "New insights from Google’s AI & Economy ATLAS",
+    "link": "https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/",
+    "source": "Google AI Blog",
+    "message_id": 842,
+    "cached_at": 1789480926.7799811
+  },
+  "502d29c33ef02a62": {
+    "title": "Resolution-Independent Analysis of Encoder--Decoder Operator Learning via Limiting Kernels",
+    "link": "https://arxiv.org/abs/2609.13798",
+    "source": "arXiv stat.ML",
+    "message_id": 843,
+    "cached_at": 1789480929.878951
+  },
+  "d6f140a232c9a663": {
+    "title": "A Memristive Synapse for Online STDP Learning and Inference in SNNs",
+    "link": "https://arxiv.org/abs/2609.15339",
+    "source": "arXiv cs.NE",
+    "message_id": 844,
+    "cached_at": 1789480933.20599
+  },
+  "b6ba87ee62e1d7f5": {
+    "title": "Conceptualization and experimentation of asset market with price manipulation",
+    "link": "https://arxiv.org/abs/2609.13304",
+    "source": "arXiv cs.MA",
+    "message_id": 845,
+    "cached_at": 1789480935.4913232
+  },
+  "7434f5f83e81143e": {
+    "title": "0.155.0-alpha.6",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.6",
+    "source": "OpenAI Codex Releases",
+    "message_id": 846,
+    "cached_at": 1789480938.2651966
+  },
+  "a004652a788571ac": {
+    "title": "Release v0.61.0-nightly.20260915.g9c1b0a610",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260915.g9c1b0a610",
+    "source": "Gemini CLI Releases",
+    "message_id": 847,
+    "cached_at": 1789480941.3644435
   }
 }
