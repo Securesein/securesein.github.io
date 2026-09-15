@@ -4,7 +4,7 @@ description: "Analyzing the implications of Nvidia's $12.9 billion purchase of H
 pubDate: 2026-09-03
 kind: "research"
 format: "news"
-topics: ["llms"]
+topics: ["generative-ai", "llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

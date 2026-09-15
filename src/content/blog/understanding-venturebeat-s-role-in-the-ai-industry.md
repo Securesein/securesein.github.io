@@ -4,7 +4,7 @@ description: "A technical explainer on VentureBeat's impact and utility in enter
 pubDate: 2026-09-03
 kind: "research"
 format: "news"
-topics: ["llms"]
+topics: ["generative-ai"]
 credit: "scout"
 model: "gpt-4o"
 source:
