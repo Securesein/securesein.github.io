@@ -2,8 +2,9 @@
 title: "Understanding Adversarial Attacks on Large Language Models"
 description: "Exploring the vulnerabilities in AI models and the implications for enterprise security."
 pubDate: 2026-09-14
-kind: "news"
-topics: ["safety", "enterprise"]
+kind: "security"
+format: "news"
+topics: ["ai-security", "llms"]
 credit: "scout"
 model: "gpt-4o"
 source:

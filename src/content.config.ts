@@ -24,10 +24,18 @@ export const SCHEMA_CUTOVER = new Date("2026-09-12T00:00:00Z");
 // structured facts these fields exist to make checkable. Every post
 // from this date on must carry them.
 //
-// This is the date the branch was built, not the date the pipeline is
-// switched on. Moving it later would quietly widen the exemption, so
-// it does not move.
-export const AUTONOMY_CUTOVER = new Date("2026-09-14T00:00:00Z");
+// This is meant to be the date the pipeline is actually switched on —
+// i.e. the day this branch is merged to main — not the day it was
+// built. It was originally set to the build date (2026-09-14) as a
+// placeholder; merging landed a day later (2026-09-15), and one real
+// Scout post drafted by the pre-migration pipeline on the 14th got
+// caught on the wrong side of that placeholder, which would have
+// forced fabricating a `scout` score for a post the new pipeline never
+// touched. Corrected once, here, to the actual switch-on day. Do not
+// move it again after this: doing so on an ongoing basis is exactly
+// the "quietly widen the exemption" failure mode this cutover exists
+// to prevent.
+export const AUTONOMY_CUTOVER = new Date("2026-09-15T00:00:00Z");
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),

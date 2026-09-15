@@ -42,7 +42,7 @@ const PAGES_DIR = join(ROOT, "src", "pages");
 
 // Keep in step with src/content.config.ts.
 const SCHEMA_CUTOVER = new Date("2026-09-12T00:00:00Z");
-const AUTONOMY_CUTOVER = new Date("2026-09-14T00:00:00Z");
+const AUTONOMY_CUTOVER = new Date("2026-09-15T00:00:00Z");
 
 const taxonomy = JSON.parse(
   readFileSync(join(ROOT, "taxonomy.json"), "utf8")
