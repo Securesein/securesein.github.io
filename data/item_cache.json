@@ -5498,5 +5498,110 @@
     "source": "IBM Research",
     "message_id": 862,
     "cached_at": 1789495373.1501558
+  },
+  "a06cfb30dd015d4c": {
+    "title": "AI Infra Summit: NVIDIA Vera Rubin and DSX Platform Advancements Showcase Energy Efficiencies of Optimizing Tokens Per Watt for AI Factories",
+    "link": "https://blogs.nvidia.com/blog/ai-infra-summit-vera-rubin-dsx-energy-efficiencies-tokens-per-watt-ai-factories/",
+    "source": "NVIDIA Blog",
+    "message_id": 863,
+    "cached_at": 1789495665.4110305
+  },
+  "4815f8bcbf4db7c1": {
+    "title": "Meta expands subscription push with new AI-focused plans",
+    "link": "https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans/",
+    "source": "TechCrunch AI",
+    "message_id": 864,
+    "cached_at": 1789495667.940535
+  },
+  "717b44d51cf9bbc8": {
+    "title": "AI ‘Actor’ Tilly Norwood Told Me That ‘All Lives Matter’",
+    "link": "https://www.wired.com/story/ai-actor-tilly-norwood-told-me-that-all-lives-matter/",
+    "source": "Wired AI",
+    "message_id": 865,
+    "cached_at": 1789495672.276256
+  },
+  "fe3f4d6e20027a7c": {
+    "title": "Orchestration and Execution: How JONI Approaches the Agent Layer",
+    "link": "https://www.kdnuggets.com/2026/09/finpr/orchestration-and-execution-how-joni-approaches-the-agent-layer",
+    "source": "KDnuggets",
+    "message_id": 866,
+    "cached_at": 1789495676.5427063
+  },
+  "ab8049f30f85d8f2": {
+    "title": "LabAgent: Customize Any Research Hubs for Scientific Discoveries Using AI Agents",
+    "link": "https://arxiv.org/abs/2609.13437",
+    "source": "arXiv cs.AI",
+    "message_id": 867,
+    "cached_at": 1789495681.3814616
+  },
+  "6f0b008bea145edc": {
+    "title": "RFCLLM: Evaluating LLMs' Reasoning Ability of Network Protocol State Machines",
+    "link": "https://arxiv.org/abs/2609.13389",
+    "source": "arXiv cs.CL",
+    "message_id": 868,
+    "cached_at": 1789495685.9838512
+  },
+  "3a0dcc47e5ade370": {
+    "title": "Evaluating LLM-Generated Rules for Heart Disease Prediction",
+    "link": "https://arxiv.org/abs/2609.13192",
+    "source": "arXiv cs.LG",
+    "message_id": 869,
+    "cached_at": 1789495689.538049
+  },
+  "21b77ad469d9cbaf": {
+    "title": "EMCStereo: Attention-Enhanced Stereo Matching for Thin-Structure Depth Estimation with a Synthetic Tree-Branch Benchmark",
+    "link": "https://arxiv.org/abs/2609.13233",
+    "source": "arXiv cs.CV",
+    "message_id": 870,
+    "cached_at": 1789495693.2388198
+  },
+  "6fff55fdf7cb614f": {
+    "title": "Building AI to accelerate science and improve lives",
+    "link": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+    "source": "Google AI Blog",
+    "message_id": 871,
+    "cached_at": 1789495699.2615323
+  },
+  "77e46c8ae84dbf77": {
+    "title": "Build an AI-powered product tagging system with Amazon SageMaker serverless model customization",
+    "link": "https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-product-tagging-system-with-amazon-sagemaker-serverless-model-customization/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 872,
+    "cached_at": 1789495704.3943348
+  },
+  "4f7a0117738ae659": {
+    "title": "How Databricks’ marketers use data 3x more with Genie, an AI analytics assistant",
+    "link": "https://www.databricks.com/blog/databricks-marketers-use-data-3x-genie-ai-analytics-assistant",
+    "source": "Databricks Blog",
+    "message_id": 873,
+    "cached_at": 1789495709.0810084
+  },
+  "9f3b52b864391410": {
+    "title": "How NVIDIA Groq 3 LPX Deterministic Execution Drives Power-Efficient High-Interactivity Inference on NVIDIA Vera Rubin",
+    "link": "https://developer.nvidia.com/blog/how-nvidia-groq-3-lpx-deterministic-execution-drives-power-efficient-high-interactivity-inference-on-nvidia-vera-rubin/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 874,
+    "cached_at": 1789495712.9945657
+  },
+  "9e43e42fafb6648c": {
+    "title": "Just add noise: Debiasing tree-based variable importance in mixed data",
+    "link": "https://arxiv.org/abs/2609.14083",
+    "source": "arXiv stat.ML",
+    "message_id": 875,
+    "cached_at": 1789495717.8237524
+  },
+  "f56afa96e98426a0": {
+    "title": "Big Brains and Changing Environments: Cause or Consequence?",
+    "link": "https://arxiv.org/abs/2609.15569",
+    "source": "arXiv cs.NE",
+    "message_id": 876,
+    "cached_at": 1789495724.4303038
+  },
+  "edf0d8e3fe4807f2": {
+    "title": "Learning How Much to Collaborate: Difficulty-Aware Topology Selection for Multi-Agent Code Generation",
+    "link": "https://arxiv.org/abs/2609.13890",
+    "source": "arXiv cs.MA",
+    "message_id": 877,
+    "cached_at": 1789495729.175864
   }
 }
