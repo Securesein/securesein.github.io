@@ -319,5 +319,18 @@
     "status": "published",
     "slug": "claude-code-v2-1-267-enhancements-and-fixes-you-need-to-know",
     "published_at": 1789279329.762059
+  },
+  "3092873dd67884e1:756": {
+    "title": "Adversarial Attacks on LLMs",
+    "link": "https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/",
+    "source": "Lil'Log (Lilian Weng)",
+    "message_id": 654,
+    "cached_at": 1789308102.997735,
+    "instructions": "Post maken en goed uitleggen wat de security gevaren zijn",
+    "kind": "article",
+    "marked_at": 1789408847.7758503,
+    "status": "published",
+    "slug": "understanding-adversarial-attacks-on-large-language-models",
+    "published_at": 1789408901.4767725
   }
 }

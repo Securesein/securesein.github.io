@@ -4763,5 +4763,635 @@
     "source": "llama.cpp Releases",
     "message_id": 755,
     "cached_at": 1789394610.7370403
+  },
+  "7f82d995c515e5ba": {
+    "title": "How Fyxer built an AI executive assistant people trust",
+    "link": "https://openai.com/index/fyxer",
+    "source": "OpenAI News",
+    "message_id": 758,
+    "cached_at": 1789408940.9137943
+  },
+  "72f4aaebdca9e500": {
+    "title": "Quoting Laurie Voss",
+    "link": "https://simonwillison.net/2026/Sep/14/laurie-voss/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 759,
+    "cached_at": 1789408944.0091681
+  },
+  "3d5f8505016ddf51": {
+    "title": "Perplexity Portable Computer Is Now Available on Windows, Powered by NVIDIA RTX",
+    "link": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/",
+    "source": "NVIDIA Blog",
+    "message_id": 760,
+    "cached_at": 1789408946.7220008
+  },
+  "50ab092ed0069335": {
+    "title": "With iOS 27, I’m actually using Siri again",
+    "link": "https://techcrunch.com/2026/09/14/with-ios-27-im-actually-using-siri-again/",
+    "source": "TechCrunch AI",
+    "message_id": 761,
+    "cached_at": 1789408950.2591524
+  },
+  "08a51918179a91fa": {
+    "title": "New York Seizes a Dozen Celebrity Deepfake Websites",
+    "link": "https://www.wired.com/story/new-york-seizes-a-dozen-celebrity-deepfake-websites/",
+    "source": "Wired AI",
+    "message_id": 762,
+    "cached_at": 1789408954.458926
+  },
+  "1b5c5f1332bef636": {
+    "title": "AI agents blew the whistle on their cheating colleagues",
+    "link": "https://www.technologyreview.com/2026/09/14/1144037/ai-agents-blew-whistle-o-cheating-colleagues/",
+    "source": "MIT Technology Review AI",
+    "message_id": 763,
+    "cached_at": 1789408957.5689654
+  },
+  "27d1b5bc195b1d32": {
+    "title": "Why DeepSeek-V4.1-Flash Is Such an Exciting Open Model Release",
+    "link": "https://www.kdnuggets.com/why-deepseek-v4-1-flash-is-such-an-exciting-open-model-release",
+    "source": "KDnuggets",
+    "message_id": 764,
+    "cached_at": 1789408960.1003854
+  },
+  "644c1807a0e5e44c": {
+    "title": "Microsoft says ‘people matter more than AI’ following safety concerns",
+    "link": "https://www.theverge.com/news/994566/microsoft-humanist-ai-code-of-conduct",
+    "source": "The Verge AI",
+    "message_id": 765,
+    "cached_at": 1789408962.7240148
+  },
+  "fe371bef367f6786": {
+    "title": "Language Is an Insufficient Substrate for Quantitative Reasoning, and Consequential Domains Need Large Quantitative Models",
+    "link": "https://arxiv.org/abs/2609.12105",
+    "source": "arXiv cs.AI",
+    "message_id": 766,
+    "cached_at": 1789408965.4091556
+  },
+  "05eb8cc8df096333": {
+    "title": "Quantifying Consonant Contributions to Word Intelligibility via Acoustic Masking",
+    "link": "https://arxiv.org/abs/2609.12122",
+    "source": "arXiv cs.CL",
+    "message_id": 767,
+    "cached_at": 1789408969.0336282
+  },
+  "705bc13b7cce85ef": {
+    "title": "Performance, Efficiency and Collapse -- Advantages and Challenges in Offline Post-training of Code LLMs",
+    "link": "https://arxiv.org/abs/2609.11956",
+    "source": "arXiv cs.LG",
+    "message_id": 768,
+    "cached_at": 1789408971.517032
+  },
+  "9891061417f85621": {
+    "title": "Single-Query Person-Centric Bimanual Hand-Object Interaction Detection",
+    "link": "https://arxiv.org/abs/2609.12155",
+    "source": "arXiv cs.CV",
+    "message_id": 769,
+    "cached_at": 1789408974.32076
+  },
+  "ac6fab4ebd9f6bc8": {
+    "title": "DevFest is back",
+    "link": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+    "source": "Google AI Blog",
+    "message_id": 770,
+    "cached_at": 1789408979.8098907
+  },
+  "05038216e0be356f": {
+    "title": "How Ninth Wave built AI-powered open finance onboarding on Amazon Bedrock",
+    "link": "https://aws.amazon.com/blogs/machine-learning/how-ninth-wave-built-ai-powered-open-finance-onboarding-on-amazon-bedrock/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 771,
+    "cached_at": 1789408982.3130927
+  },
+  "7a123450627a2d3d": {
+    "title": "Accelerating Dropless MoE Training in JAX with NVIDIA Transformer Engine",
+    "link": "https://developer.nvidia.com/blog/accelerating-dropless-moe-training-in-jax-with-nvidia-transformer-engine/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 772,
+    "cached_at": 1789408985.1373732
+  },
+  "e7f5e19476b9fa27": {
+    "title": "Fashion app Daydream uses Apple Intelligence to help you shop the outfits in your camera roll",
+    "link": "https://techcrunch.com/2026/09/14/fashion-discovery-app-daydream-uses-apple-intelligence-to-help-you-shop-the-outfits-saved-in-your-camera-roll/",
+    "source": "TechCrunch AI",
+    "message_id": 773,
+    "cached_at": 1789410798.339352
+  },
+  "07da6b2b8b4fa837": {
+    "title": "Sexually Explicit Deepfake Sites Target 100-Plus Politicians in Europe",
+    "link": "https://www.wired.com/story/sexually-explicit-deepfake-sites-target-100-plus-politicians-in-europe/",
+    "source": "Wired AI",
+    "message_id": 774,
+    "cached_at": 1789410801.5269673
+  },
+  "132494e1d4392dad": {
+    "title": "The AI industry has taken a doomer turn. What now?",
+    "link": "https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/",
+    "source": "MIT Technology Review AI",
+    "message_id": 775,
+    "cached_at": 1789410804.2490683
+  },
+  "9ba543006e444088": {
+    "title": "DU-NO: A Parameter-Efficient Double U-Shaped Neural Operator for Phase-Resolving Wave Modeling",
+    "link": "https://arxiv.org/abs/2609.12115",
+    "source": "arXiv cs.AI",
+    "message_id": 776,
+    "cached_at": 1789410807.0140252
+  },
+  "1db86b7c828dc4d8": {
+    "title": "Local Edits, Global Ripples: Replay-Informed Policy Adaptation for Workflow Synthesis",
+    "link": "https://arxiv.org/abs/2609.12127",
+    "source": "arXiv cs.CL",
+    "message_id": 777,
+    "cached_at": 1789410809.6786435
+  },
+  "0ca12d07b74354ae": {
+    "title": "Decoding Mixture Perception through Computational Modeling of Component Interactions",
+    "link": "https://arxiv.org/abs/2609.11958",
+    "source": "arXiv cs.LG",
+    "message_id": 778,
+    "cached_at": 1789410812.4603949
+  },
+  "7a2b2b4e0b4cd6d1": {
+    "title": "USPLIT-VQA: U-Shaped Split Learning for Visual Question Answering with Contribution-Aware Weighted Aggregation",
+    "link": "https://arxiv.org/abs/2609.12168",
+    "source": "arXiv cs.CV",
+    "message_id": 779,
+    "cached_at": 1789410815.3969946
+  },
+  "84f8b77ca12ac782": {
+    "title": "The generative AI customization spectrum: From prompt engineering to custom models on AWS",
+    "link": "https://aws.amazon.com/blogs/machine-learning/the-generative-ai-customization-spectrum-from-prompt-engineering-to-custom-models-on-aws/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 780,
+    "cached_at": 1789410817.8830502
+  },
+  "7e2bd1ec03482d87": {
+    "title": "Semiparametric Inference for Conditional Shapley Feature Importance",
+    "link": "https://arxiv.org/abs/2609.10313",
+    "source": "arXiv stat.ML",
+    "message_id": 781,
+    "cached_at": 1789410820.6965408
+  },
+  "c6d30021e0fd682a": {
+    "title": "PACEvolve: Enabling Progress-Aware Consistent Evolution",
+    "link": "https://arxiv.org/abs/2601.10657",
+    "source": "arXiv cs.NE",
+    "message_id": 782,
+    "cached_at": 1789410823.5417814
+  },
+  "d363abc11c9dbeff": {
+    "title": "Deriving the Pure Price of Anarchy for Networked Resource Allocation Games",
+    "link": "https://arxiv.org/abs/2609.12077",
+    "source": "arXiv cs.MA",
+    "message_id": 783,
+    "cached_at": 1789410826.159793
+  },
+  "bb8ba106f8a03fcb": {
+    "title": "v0.4.1",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.4.1",
+    "source": "llama.cpp Releases",
+    "message_id": 784,
+    "cached_at": 1789410829.4818077
+  },
+  "9c925548fe36da05": {
+    "title": "v0.34.1-rc0: MLX: version bump (#18235)",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.1-rc0",
+    "source": "Ollama Releases",
+    "message_id": 785,
+    "cached_at": 1789410832.2680483
+  },
+  "8951f6b6e18c090b": {
+    "title": "Release v5.14.0",
+    "link": "https://github.com/huggingface/transformers/releases/tag/v5.14.0",
+    "source": "Hugging Face Transformers Releases",
+    "message_id": 786,
+    "cached_at": 1789410835.8754354
+  },
+  "e45af491d1552566": {
+    "title": "Microsoft’s new AI ‘code of conduct’ tells models not to hack systems or trick humans",
+    "link": "https://techcrunch.com/2026/09/14/microsofts-new-ai-code-of-conduct-tells-models-not-to-hack-systems-or-trick-humans/",
+    "source": "TechCrunch AI",
+    "message_id": 787,
+    "cached_at": 1789410838.328051
+  },
+  "64f040316f79ac59": {
+    "title": "The contagion of fear",
+    "link": "https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 788,
+    "cached_at": 1789452082.0708768
+  },
+  "0d35c720232a556f": {
+    "title": "Jensen Huang took a call from Trump, and showed off something else, too",
+    "link": "https://techcrunch.com/2026/09/14/jensen-huang-took-a-call-from-trump-and-showed-off-something-else-too/",
+    "source": "TechCrunch AI",
+    "message_id": 789,
+    "cached_at": 1789452084.313655
+  },
+  "0a67bb4610e17cf8": {
+    "title": "AI bots \"Timmy,\" \"Ren,\" and \"Jackie\" are flooding social media with slop",
+    "link": "https://arstechnica.com/ai/2026/09/ai-agents-flood-the-internet-with-slop-infused-spam/",
+    "source": "Ars Technica AI",
+    "message_id": 790,
+    "cached_at": 1789452087.720574
+  },
+  "2d7ab5ebc86593c8": {
+    "title": "Is Big Tech’s AI slowdown a safety pact or a cartel?",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/995186/is-big-techs-ai-slowdown-a-safety-pact-or-a-cartel",
+    "source": "The Verge AI",
+    "message_id": 791,
+    "cached_at": 1789452090.542481
+  },
+  "60bbbc8f0a088e43": {
+    "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+    "link": "https://arxiv.org/abs/2609.13356",
+    "source": "arXiv cs.AI",
+    "message_id": 792,
+    "cached_at": 1789452094.621707
+  },
+  "86bd0c05b3cc4f07": {
+    "title": "Token Merging for Multilingual Speech Recognition: A Systematic Study Across Model Scale and Fine-Tuning",
+    "link": "https://arxiv.org/abs/2609.13151",
+    "source": "arXiv cs.CL",
+    "message_id": 793,
+    "cached_at": 1789452097.7346578
+  },
+  "a2e3cd6b8d9dbec0": {
+    "title": "BudgetBench: A Budget-Tiered Protocol and Pilot Harness for Memory Strategy Evaluation in Local Large Language Model Agents",
+    "link": "https://arxiv.org/abs/2609.13149",
+    "source": "arXiv cs.LG",
+    "message_id": 794,
+    "cached_at": 1789452100.558343
+  },
+  "8fc47f097bb7791c": {
+    "title": "Personalized and Explainable Blood Pressure Estimation from PPG via Hybrid CNN--Morphological Features",
+    "link": "https://arxiv.org/abs/2609.13190",
+    "source": "arXiv cs.CV",
+    "message_id": 795,
+    "cached_at": 1789452103.6915045
+  },
+  "af8151f0d7e9a3bc": {
+    "title": "Omni-Streaming Thinking",
+    "link": "https://arxiv.org/abs/2609.15128",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 796,
+    "cached_at": 1789452106.7859628
+  },
+  "6666660dfd652924": {
+    "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
+    "link": "https://blog.google/innovation-and-ai/technology/ai/dialogues-christina-koch/",
+    "source": "Google AI Blog",
+    "message_id": 797,
+    "cached_at": 1789452109.3923383
+  },
+  "aa17bb9114e289a2": {
+    "title": "Abnormal AI: Amazon Bedrock AgentCore for agentic email security at scale",
+    "link": "https://aws.amazon.com/blogs/machine-learning/abnormal-ai-amazon-bedrock-agentcore-for-agentic-email-security-at-scale/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 798,
+    "cached_at": 1789452111.9412613
+  },
+  "cd1b919322a43965": {
+    "title": "Announcing On-Demand State Repartitioning for Apache Spark™ Structured Streaming on Databricks",
+    "link": "https://www.databricks.com/blog/announcing-demand-state-repartitioning-apache-sparktm-structured-streaming-databricks",
+    "source": "Databricks Blog",
+    "message_id": 799,
+    "cached_at": 1789452114.5383208
+  },
+  "31c93041a5f2f1ac": {
+    "title": "Stochastic Gradient Descent over P2",
+    "link": "https://arxiv.org/abs/2609.13343",
+    "source": "arXiv stat.ML",
+    "message_id": 800,
+    "cached_at": 1789452117.1944695
+  },
+  "1904dc5525d48d98": {
+    "title": "nBMS, a Neuromorphic Battery Management System with a Silicon-Validated Spiking State-of-Charge Core for eVTOL Aircraft",
+    "link": "https://arxiv.org/abs/2609.13506",
+    "source": "arXiv cs.NE",
+    "message_id": 801,
+    "cached_at": 1789452120.3522663
+  },
+  "cb9ebaab842a1f3d": {
+    "title": "Machine learning-assisted calibration of Agent-based Models: surrogate-based optimization with Genetic Algorithm and Particle Swarm Optimization",
+    "link": "https://arxiv.org/abs/2609.13247",
+    "source": "arXiv cs.MA",
+    "message_id": 802,
+    "cached_at": 1789452123.0142722
+  },
+  "f1ea99f442b165fa": {
+    "title": "What blog posts influenced your thinking the most?",
+    "link": "https://simonwillison.net/2026/Sep/14/influences/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 803,
+    "cached_at": 1789457898.5217412
+  },
+  "1e8fc93054f4fa23": {
+    "title": "Nvidia CEO Jensen Huang tells Trump ‘we’re not going to let [an AI slowdown] happen’",
+    "link": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
+    "source": "TechCrunch AI",
+    "message_id": 804,
+    "cached_at": 1789457901.3788295
+  },
+  "f4adf3cb8e161bd0": {
+    "title": "Apple releases iOS 27, macOS Golden Gate 27 with Siri AI and Liquid Glass refinements",
+    "link": "https://arstechnica.com/apple/2026/09/apple-releases-ios-27-macos-golden-gate-27-with-siri-ai-and-liquid-glass-refinements/",
+    "source": "Ars Technica AI",
+    "message_id": 805,
+    "cached_at": 1789457904.254224
+  },
+  "17da90a701612e55": {
+    "title": "The AI Talent Britain Fought to Hire May Be Recalculating Its Future",
+    "link": "https://www.artificialintelligence-news.com/news/the-ai-talent-britain-fought-to-hire-may-be-recalculating-its-future/",
+    "source": "AI News",
+    "message_id": 806,
+    "cached_at": 1789457907.301052
+  },
+  "38a5ca5fa25b25d5": {
+    "title": "Meta Introduces ZGateway: A Stateless Proxy Tier That Unifies ZippyDB Traffic and Handles Over 1 Billion Operations Per Second",
+    "link": "https://www.marktechpost.com/2026/09/14/meta-introduces-zgateway-a-stateless-proxy-tier-that-unifies-zippydb-traffic-and-handles-over-1-billion-operations-per-second/",
+    "source": "MarkTechPost",
+    "message_id": 807,
+    "cached_at": 1789457910.1722467
+  },
+  "5e6cebbd5e27fb9b": {
+    "title": "What execs and politicians are saying about slowing down AI development",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/995141/ai-executives-politicians-safety-regulation-anthropic-dario-amodei",
+    "source": "The Verge AI",
+    "message_id": 808,
+    "cached_at": 1789457912.7695389
+  },
+  "75d6955b7dff8f2c": {
+    "title": "Converge Then Diversify: Decoupling Convergence and Diversity in Multi-Objective Bayesian Optimisation",
+    "link": "https://arxiv.org/abs/2609.13396",
+    "source": "arXiv cs.AI",
+    "message_id": 809,
+    "cached_at": 1789457915.7436593
+  },
+  "7df5ac73b68e4b85": {
+    "title": "PhysMent: An Interactive Approach For LLM Reasoning In Physics Problems",
+    "link": "https://arxiv.org/abs/2609.13152",
+    "source": "arXiv cs.CL",
+    "message_id": 810,
+    "cached_at": 1789457919.1642365
+  },
+  "e2becb5d0576e0d4": {
+    "title": "A derivative-fidelity failure mode in physics-informed neural networks: strengthened benchmark evidence from function-value training",
+    "link": "https://arxiv.org/abs/2609.13171",
+    "source": "arXiv cs.LG",
+    "message_id": 811,
+    "cached_at": 1789457921.7392597
+  },
+  "4348a43545169aea": {
+    "title": "Part Grounding, Not Action Knowledge: Locating the Bottleneck in VLM Affordance Prediction",
+    "link": "https://arxiv.org/abs/2609.13225",
+    "source": "arXiv cs.CV",
+    "message_id": 812,
+    "cached_at": 1789457924.7881992
+  },
+  "6e41de026168eaae": {
+    "title": "Manage end-user OAuth consent for AI agents with Amazon Bedrock AgentCore",
+    "link": "https://aws.amazon.com/blogs/machine-learning/manage-end-user-oauth-consent-for-ai-agents-with-amazon-bedrock-agentcore/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 813,
+    "cached_at": 1789457927.7165208
+  },
+  "15c3ca77bc8e66d2": {
+    "title": "Beyond Point Forecasts: A Survey on Probabilistic Forecasting for Time Series and Spatiotemporal Data",
+    "link": "https://arxiv.org/abs/2609.13345",
+    "source": "arXiv stat.ML",
+    "message_id": 814,
+    "cached_at": 1789457930.302008
+  },
+  "69c5745a7f0d4164": {
+    "title": "Early-Stopping Thresholds for ES-HyperNEAT: A Data-Driven Approach from Fitness Dynamics",
+    "link": "https://arxiv.org/abs/2609.13533",
+    "source": "arXiv cs.NE",
+    "message_id": 815,
+    "cached_at": 1789457933.123129
+  },
+  "0c5ff7cb14d9f759": {
+    "title": "An Evolutionary Computation Framework for Multi-Agent Q-Learning with Mean-Field Environmental Feedback",
+    "link": "https://arxiv.org/abs/2609.13253",
+    "source": "arXiv cs.MA",
+    "message_id": 816,
+    "cached_at": 1789457935.8546386
+  },
+  "1606e07c2159d4dd": {
+    "title": "v2.1.272",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.272",
+    "source": "Claude Code Releases",
+    "message_id": 817,
+    "cached_at": 1789457938.8300345
+  },
+  "79f1a86c86db64a4": {
+    "title": "Heart of the Matter: How a Major Children’s Hospital Uses Open Source NVIDIA AI for Cardiac Care",
+    "link": "https://blogs.nvidia.com/blog/childrens-hospital-open-source-ai-cardiac-care/",
+    "source": "NVIDIA Blog",
+    "message_id": 818,
+    "cached_at": 1789466637.9378204
+  },
+  "c3a2fa0e613b1bf5": {
+    "title": "OpenAI buys smartphone camera maker Glass Imaging for $300 million, report says",
+    "link": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
+    "source": "TechCrunch AI",
+    "message_id": 819,
+    "cached_at": 1789466640.294051
+  },
+  "57947d2c67ddf6c7": {
+    "title": "AI leaders want to hit the brakes after years of reckless speed",
+    "link": "https://arstechnica.com/ai/2026/09/ai-leaders-want-to-hit-the-brakes-after-years-of-reckless-speed/",
+    "source": "Ars Technica AI",
+    "message_id": 820,
+    "cached_at": 1789466643.6290832
+  },
+  "1bd759fe15d1d102": {
+    "title": "Agent-net Open Sources Webagent: A Go Harness That Turns Any Website into a Guarded AI Agent",
+    "link": "https://www.marktechpost.com/2026/09/14/agent-net-open-sources-webagent-a-go-harness-that-turns-any-website-into-a-guarded-ai-agent/",
+    "source": "MarkTechPost",
+    "message_id": 821,
+    "cached_at": 1789466646.572128
+  },
+  "67d243ef4230bd72": {
+    "title": "Jensen Huang puts Trump on speakerphone onstage to announce robots won’t take over the world",
+    "link": "https://www.theverge.com/tech/995079/president-donald-trump-calls-nvidia-ceo-jensen-huang-all-in-summit",
+    "source": "The Verge AI",
+    "message_id": 822,
+    "cached_at": 1789466649.4384327
+  },
+  "bbbb723ad104c343": {
+    "title": "Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement",
+    "link": "https://arxiv.org/abs/2609.13406",
+    "source": "arXiv cs.AI",
+    "message_id": 823,
+    "cached_at": 1789466653.0046415
+  },
+  "d3edd3c142300fde": {
+    "title": "Lexical Prompt Compression for Large Language Models: A Training-Free, Deterministic Pipeline with Empirical Pareto Analysis Across Eleven Task Categories",
+    "link": "https://arxiv.org/abs/2609.13154",
+    "source": "arXiv cs.CL",
+    "message_id": 824,
+    "cached_at": 1789466655.5199325
+  },
+  "0f87f6753b4dbd11": {
+    "title": "Land Art as a Big-Data Climate Sensor",
+    "link": "https://arxiv.org/abs/2609.13182",
+    "source": "arXiv cs.LG",
+    "message_id": 825,
+    "cached_at": 1789466658.821468
+  },
+  "19b6ed907a865138": {
+    "title": "Synthetic Leprosy Image Generation Using Mask-Conditioned Latent Diffusion and Transfer Learning from Large Chronic Wound Datasets",
+    "link": "https://arxiv.org/abs/2609.13226",
+    "source": "arXiv cs.CV",
+    "message_id": 826,
+    "cached_at": 1789466661.6528153
+  },
+  "3ed830534e78de16": {
+    "title": "Automate replenishment with MMF, Databricks Genie, and Amazon Quick",
+    "link": "https://aws.amazon.com/blogs/machine-learning/automate-replenishment-with-mmf-databricks-genie-and-amazon-quick/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 827,
+    "cached_at": 1789466664.3244135
+  },
+  "afe6c68f03475dfa": {
+    "title": "Managed Postgres: What Lakebase Actually Takes Off Your Plate",
+    "link": "https://www.databricks.com/blog/managed-postgres",
+    "source": "Databricks Blog",
+    "message_id": 828,
+    "cached_at": 1789466667.196391
+  },
+  "ae38850436c199ff": {
+    "title": "A pullback-corrected scalar auxiliary variable optimizer with momentum and adaptive mobility",
+    "link": "https://arxiv.org/abs/2609.13569",
+    "source": "arXiv stat.ML",
+    "message_id": 829,
+    "cached_at": 1789466670.239935
+  },
+  "77cdb1c41a2b1e6d": {
+    "title": "Surrogate-Assisted Genetic Programming with Phenotypic Characterisation in Dynamic Multi-Mode Project Scheduling",
+    "link": "https://arxiv.org/abs/2609.14418",
+    "source": "arXiv cs.NE",
+    "message_id": 830,
+    "cached_at": 1789466673.109506
+  },
+  "db9e46542ff9cb0b": {
+    "title": "From Process Loss to Assembly Bonus: Human-Grounded Diagnosis of Multi-Agent LLM Collaboration",
+    "link": "https://arxiv.org/abs/2609.13261",
+    "source": "arXiv cs.MA",
+    "message_id": 831,
+    "cached_at": 1789466675.62577
+  },
+  "a37e86bc95f712c3": {
+    "title": "v2.1.271",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.271",
+    "source": "Claude Code Releases",
+    "message_id": 832,
+    "cached_at": 1789466678.7670991
+  },
+  "c96a96af8385a622": {
+    "title": "Muse Code 👨‍💻, Runway Solaris ☀️, OpenClaw 2.0 🤖",
+    "link": "https://tldr.tech/ai/2026-09-01",
+    "source": "TLDR AI",
+    "message_id": 833,
+    "cached_at": 1789480898.9492812
+  },
+  "121e9bb12f9f8f9c": {
+    "title": "Early Anthropic hire, former METR COO have found a way to rein in rogue AI agents",
+    "link": "https://techcrunch.com/2026/09/15/early-anthropic-hire-former-metr-coo-have-found-a-way-to-rein-in-rogue-ai-agents/",
+    "source": "TechCrunch AI",
+    "message_id": 834,
+    "cached_at": 1789480902.7333405
+  },
+  "7cef40b48d7874a7": {
+    "title": "What’s at stake in AI’s trillion-dollar gamble",
+    "link": "https://www.technologyreview.com/2026/09/15/1144028/ai-infrastructure-boom-investment-bubble-risk/",
+    "source": "MIT Technology Review AI",
+    "message_id": 835,
+    "cached_at": 1789480905.7718024
+  },
+  "05ba1b44b92460b6": {
+    "title": "5 Free Microsoft GitHub Courses to Learn Data Science and Artificial Intelligence",
+    "link": "https://www.kdnuggets.com/5-free-microsoft-github-courses-to-learn-data-science-and-artificial-intelligence",
+    "source": "KDnuggets",
+    "message_id": 836,
+    "cached_at": 1789480908.4984624
+  },
+  "17a11a5c1c19fde2": {
+    "title": "This doorbell camera lets a human security guard watch your front door",
+    "link": "https://www.theverge.com/tech/995365/simplisafe-video-doorbell-series-2-virtual-guard-price-specs",
+    "source": "The Verge AI",
+    "message_id": 837,
+    "cached_at": 1789480911.101439
+  },
+  "052b52cf233e8ebe": {
+    "title": "Vibe Patenting: Evaluating LLM Judges for Professional Patent-Drafting Agents",
+    "link": "https://arxiv.org/abs/2609.13422",
+    "source": "arXiv cs.AI",
+    "message_id": 838,
+    "cached_at": 1789480914.5185447
+  },
+  "1b2e41a1a3d06edb": {
+    "title": "TestHallVQA: Exploring LVLMs' Document-Level Reasoning under Redundant Contexts from Scientific Exams",
+    "link": "https://arxiv.org/abs/2609.13158",
+    "source": "arXiv cs.CL",
+    "message_id": 839,
+    "cached_at": 1789480917.0358253
+  },
+  "9871624a5fb6ca89": {
+    "title": "LLMs or Naive Bayes? Old Gems or New Ways",
+    "link": "https://arxiv.org/abs/2609.13185",
+    "source": "arXiv cs.LG",
+    "message_id": 840,
+    "cached_at": 1789480920.2319646
+  },
+  "48cfbc2ebff26d49": {
+    "title": "Don't Just Look, Intervene: Perturbation Based Region Labeling for VQA Images",
+    "link": "https://arxiv.org/abs/2609.13228",
+    "source": "arXiv cs.CV",
+    "message_id": 841,
+    "cached_at": 1789480923.520604
+  },
+  "b21c5e1ffc812be8": {
+    "title": "New insights from Google’s AI & Economy ATLAS",
+    "link": "https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/",
+    "source": "Google AI Blog",
+    "message_id": 842,
+    "cached_at": 1789480926.7799811
+  },
+  "502d29c33ef02a62": {
+    "title": "Resolution-Independent Analysis of Encoder--Decoder Operator Learning via Limiting Kernels",
+    "link": "https://arxiv.org/abs/2609.13798",
+    "source": "arXiv stat.ML",
+    "message_id": 843,
+    "cached_at": 1789480929.878951
+  },
+  "d6f140a232c9a663": {
+    "title": "A Memristive Synapse for Online STDP Learning and Inference in SNNs",
+    "link": "https://arxiv.org/abs/2609.15339",
+    "source": "arXiv cs.NE",
+    "message_id": 844,
+    "cached_at": 1789480933.20599
+  },
+  "b6ba87ee62e1d7f5": {
+    "title": "Conceptualization and experimentation of asset market with price manipulation",
+    "link": "https://arxiv.org/abs/2609.13304",
+    "source": "arXiv cs.MA",
+    "message_id": 845,
+    "cached_at": 1789480935.4913232
+  },
+  "7434f5f83e81143e": {
+    "title": "0.155.0-alpha.6",
+    "link": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.6",
+    "source": "OpenAI Codex Releases",
+    "message_id": 846,
+    "cached_at": 1789480938.2651966
+  },
+  "a004652a788571ac": {
+    "title": "Release v0.61.0-nightly.20260915.g9c1b0a610",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260915.g9c1b0a610",
+    "source": "Gemini CLI Releases",
+    "message_id": 847,
+    "cached_at": 1789480941.3644435
   }
 }
