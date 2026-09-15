@@ -1,0 +1,95 @@
+name: Telegram feedback receiver
+
+# ############################################################
+# #  MANUAL TRIGGER ONLY. THERE IS DELIBERATELY NO `schedule`. #
+# #                                                            #
+# #  This is the receiver for the buttons under a published    #
+# #  digest item (brief §11.2): 👍 👎 🚫 ⭐ 🗑. Without this     #
+# #  workflow running on a schedule, tapping a button does     #
+# #  nothing — nothing is polling Telegram for the tap.        #
+# #                                                            #
+# #  It defaults to a DRY RUN. Reading Telegram for pending    #
+# #  updates always happens for real (it's a read); applying   #
+# #  what they say — recording the reaction, moving the Radar, #
+# #  and for a 🗑 actually reverting a commit and redeploying — #
+# #  only happens with `publish: true`, and a dry run leaves   #
+# #  the update un-consumed so a later real run still sees it. #
+# #                                                            #
+# #  To actually activate this receiver:                       #
+# #    1. create a cron-job.org job hitting this workflow's     #
+# #       dispatch API every few minutes, with publish=true;    #
+# #    2. decide whether digest.yml should switch to sending    #
+# #       the interactive form (one message per item, with a    #
+# #       keyboard) — this receiver has nothing to answer to    #
+# #       otherwise, since the plain digest carries no buttons; #
+# #    3. in @BotFather, confirm privacy mode is off (or the    #
+# #       bot is only ever used in a private chat), so           #
+# #       callback_query updates actually reach getUpdates.      #
+# ############################################################
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Apply reactions for real (leave false for a dry run)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  feedback:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Poll Telegram and apply any reactions
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # Read by retract._redeploy(), which shells out to `gh` itself
+          # when a 🗑 actually reverts a commit — the same pattern every
+          # other channel uses to kick deploy.yml after it pushes.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          python scripts/run.py --feedback \
+            ${{ inputs.publish && '--publish' || '--dry-run' }}
+
+      - name: Commit state and Radar changes
+        id: commit
+        run: |
+          git add state/
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Feedback receiver run"
+            git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # A 🗑 already pushed its own revert commit and triggered its own
+      # redeploy from inside the Python step above (retract._redeploy),
+      # before this step even runs — so on a retract this step commits
+      # only the leftover state/Radar changes on top of that, and the
+      # dispatch below fires a second, harmless, slightly redundant
+      # deploy. Not worth special-casing away. This step is what matters
+      # for the ordinary (non-retract) case: a
+      # non-retract reaction still moved the Radar, and that file lives
+      # in src/content/radar/, which nothing serves publicly but which
+      # should still reach main promptly so the next digest reads it.
+      - name: Trigger site deploy
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --repo ${{ github.repository }}

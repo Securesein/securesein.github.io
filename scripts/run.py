@@ -8,6 +8,7 @@ The entrypoint for every automated channel.
     python scripts/run.py --channel benchmarks [--dry-run]
     python scripts/run.py --report             [--dry-run]
     python scripts/run.py --digest             [--dry-run]
+    python scripts/run.py --feedback           [--dry-run]
     python scripts/run.py --propose            [--dry-run]
 
 There is no `--channel practice`. Decision A2 removed the Practice
@@ -50,7 +51,8 @@ from core.constants import CHANNELS  # noqa: E402
 from core.ledger import Ledger, Queue  # noqa: E402
 from core.llm import LLM, LIVE, OFFLINE  # noqa: E402
 from core.radar import Radar  # noqa: E402
-from core.state import ensure_state_dir  # noqa: E402
+from core.constants import TELEGRAM_FEEDBACK_OFFSET_FILE  # noqa: E402
+from core.state import ensure_state_dir, read_json, write_json  # noqa: E402
 
 
 @dataclass
@@ -86,6 +88,18 @@ def build_parser() -> argparse.ArgumentParser:
         "--digest",
         action="store_true",
         help="generate the daily Telegram digest instead of running a channel",
+    )
+    parser.add_argument(
+        "--feedback",
+        action="store_true",
+        help="poll Telegram for button taps (§11.2) and apply them: record the "
+             "reaction, adjust the Radar/profile signal, and — for a 🗑 — "
+             "retract the post. Fetching updates always hits Telegram for "
+             "real (it is a read, not a send); in a dry run the local "
+             "offset is deliberately NOT advanced, so the same pending taps "
+             "are peeked at again next time instead of being consumed — "
+             "every actual EFFECT stays gated by --dry-run/--publish exactly "
+             "like every other channel.",
     )
     parser.add_argument(
         "--propose",
@@ -153,7 +167,7 @@ def resolve_dry_run(flag: bool | None) -> bool:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
-    if not args.channel and not args.report and not args.digest and not args.propose:
+    if not args.channel and not args.report and not args.digest and not args.feedback and not args.propose:
         build_parser().print_help()
         return 2
 
@@ -193,7 +207,46 @@ def main(argv: list[str] | None = None) -> int:
 
         text = digest.render(ledger, radar)
         print(text)
-        _maybe_send(digest.send, text, args.send, dry_run, "digest")
+        # The interactive form (one message per item, each with its own
+        # reaction keyboard) is what §11.1/§11.2 actually describe —
+        # digest.send() alone has nowhere to attach a button. send_interactive
+        # is what --publish --send calls; a dry run never reaches either.
+        if args.send:
+            if dry_run:
+                print("\n[dry-run] --send ignored: a dry run never sends a real "
+                      "digest. Re-run with --publish --send to send for real.")
+            else:
+                print("\nSending digest to Telegram (one message per item, "
+                      "with reaction buttons)...")
+                ok = digest.send_interactive(ledger, radar)
+                print("sent." if ok else "send FAILED — see above.")
+        return 0
+
+    if args.feedback:
+        from telegram import api, feedback
+
+        offset_state = read_json(TELEGRAM_FEEDBACK_OFFSET_FILE, {"offset": None})
+        updates = api.get_updates(offset_state.get("offset"))
+        print(f"  telegram: {len(updates)} update(s) fetched")
+
+        outcomes = feedback.handle_updates(updates, radar=radar, dry_run=dry_run)
+        for outcome in outcomes:
+            tag = "ok" if outcome.accepted else "skipped"
+            print(f"    [{tag}] {outcome.action} -> {outcome.item_id}: {outcome.detail}")
+        if updates and not outcomes:
+            print("    (no recognised callback_query among the fetched updates)")
+
+        # Reading is always real (see the --feedback help text above); only
+        # the offset commit and the Radar/state effects are dry-run-gated,
+        # matching every other channel's write discipline.
+        if updates and not dry_run:
+            next_offset = max(u.get("update_id", -1) for u in updates) + 1
+            write_json(TELEGRAM_FEEDBACK_OFFSET_FILE, {"offset": next_offset})
+        elif updates:
+            print(f"    [dry-run] would advance the offset past "
+                  f"{max(u.get('update_id', -1) for u in updates)}")
+
+        radar.save()
         return 0
 
     ctx = Context(

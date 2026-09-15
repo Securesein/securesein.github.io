@@ -60,6 +60,12 @@ REJECTED_FILE = STATE_DIR / "rejected.jsonl"
 FEEDBACK_FILE = STATE_DIR / "feedback.jsonl"
 UNRESOLVED_MODELS_FILE = STATE_DIR / "unresolved_models.jsonl"
 SEEN_RELEASES_FILE = STATE_DIR / "seen_releases.json"
+# Deliberately separate from data/telegram_offset.json, which belongs to
+# the legacy marked-item flow (text replies) and is read by
+# generate_blog_post.py. This one tracks callback_query button taps for
+# the §11.2 feedback loop — a different update stream, a different
+# cursor, so the two polling loops can never step on each other.
+TELEGRAM_FEEDBACK_OFFSET_FILE = STATE_DIR / "telegram_feedback_offset.json"
 
 
 

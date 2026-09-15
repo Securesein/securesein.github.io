@@ -399,6 +399,54 @@ def test_retracting_a_radar_item_that_was_never_published_just_dismisses_it():
     assert radar.find(item["id"])["status"] == "dismissed"
 
 
+def test_feedback_cli_reads_for_real_but_only_advances_offset_when_publishing():
+    """`run.py --feedback` is the actual receiver for the buttons the
+    digest sends — this locks in the CLI wiring itself (fetch, apply,
+    persist-the-offset), not just the library functions underneath it,
+    which the tests above already cover directly.
+
+    Fetching is always real (it's a read); persisting the cursor is not
+    — a dry run must leave a pending Telegram update un-consumed so a
+    later real run still sees it, exactly like every other channel's
+    write discipline.
+    """
+    import run as run_module
+    from core.constants import TELEGRAM_FEEDBACK_OFFSET_FILE
+    from core.state import read_json
+    from telegram import api as api_module
+
+    calls = []
+
+    def fake_get_updates(offset):
+        calls.append(offset)
+        return [{
+            "update_id": 555,
+            "callback_query": {"id": "cbq1", "data": "interesting:nonexistent-item"},
+        }]
+
+    original = api_module.get_updates
+    api_module.get_updates = fake_get_updates
+    try:
+        assert read_json(TELEGRAM_FEEDBACK_OFFSET_FILE, None) is None
+
+        rc = run_module.main(["--feedback", "--dry-run"])
+        assert rc == 0
+        assert calls == [None]
+        assert read_json(TELEGRAM_FEEDBACK_OFFSET_FILE, None) is None, (
+            "a dry run must not consume the pending update"
+        )
+
+        rc = run_module.main(["--feedback", "--publish"])
+        assert rc == 0
+        assert calls == [None, None]  # still no stored offset to pass in yet
+        assert read_json(TELEGRAM_FEEDBACK_OFFSET_FILE, None) == {"offset": 556}
+
+        rc = run_module.main(["--feedback", "--publish"])
+        assert calls[-1] == 556, "the next real run must resume past what it consumed"
+    finally:
+        api_module.get_updates = original
+
+
 def test_every_git_command_goes_through_the_dry_run_guard():
     """The safety property of this whole module: there is exactly one
     place that can execute a mutating git command, and it refuses in a

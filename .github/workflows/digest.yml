@@ -10,17 +10,16 @@ name: Daily Telegram digest
 # #  format was verified during the build — no real message    #
 # #  was ever sent.                                            #
 # #                                                            #
-# #  To activate (§13 wants this daily at 18:00 UTC, after the #
-# #  day's publishing), all of which would have to happen and  #
-# #  none of which have:                                       #
-# #    1. confirm TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID are  #
-# #       set as repository secrets;                           #
-# #    2. create a cron-job.org job hitting this workflow's    #
-# #       dispatch API daily at 18:00 UTC, with send=true;     #
-# #    3. decide whether the interactive form (one message per #
-# #       item, with reaction buttons) is wanted — it is built #
-# #       as telegram/digest.send_interactive and is not what  #
-# #       this workflow currently calls.                       #
+# #  It now always sends the INTERACTIVE form when send=true: one     #
+# #  message per published item, each with its own reaction keyboard  #
+# #  (telegram/digest.send_interactive) — the plain, keyboard-less     #
+# #  send() is unused. The buttons only do anything once               #
+# #  feedback.yml is also running; see that workflow's own header.     #
+# #                                                                    #
+# #  To activate (§13 wants this daily at 18:00 UTC, after the day's   #
+# #  publishing): confirm TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID are    #
+# #  set (they already are), then create a cron-job.org job hitting    #
+# #  this workflow's dispatch API daily at 18:00 UTC, with send=true.  #
 # ############################################################
 on:
   workflow_dispatch:
