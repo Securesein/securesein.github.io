@@ -5918,5 +5918,110 @@
     "source": "Ollama Releases",
     "message_id": 922,
     "cached_at": 1789557893.5131066
+  },
+  "d37d2fe4364bd7b3": {
+    "title": "The state of sovereign AI adoption in 2026",
+    "link": "https://cohere.com/blog/state-of-sovereign-ai-adoption-2026",
+    "source": "Cohere Blog",
+    "message_id": 923,
+    "cached_at": 1789567307.1007028
+  },
+  "ca39e86a13c63422": {
+    "title": "Fable 5.1 🧠, World Labs Atlas 🌍, Cognition $47B 💰",
+    "link": "https://tldr.tech/ai/2026-09-02",
+    "source": "TLDR AI",
+    "message_id": 924,
+    "cached_at": 1789567311.14976
+  },
+  "6ac27c68838b29ee": {
+    "title": "Reimagining advertising with AI",
+    "link": "https://openai.com/index/reimagining-advertising-with-ai",
+    "source": "OpenAI News",
+    "message_id": 925,
+    "cached_at": 1789567314.0114784
+  },
+  "4062d2e95d4b38b7": {
+    "title": "Emerald AI, Google and NVIDIA Launch Alliance to Advance Flexible AI Data Centers",
+    "link": "https://blogs.nvidia.com/blog/ai-energy-management-alliance/",
+    "source": "NVIDIA Blog",
+    "message_id": 926,
+    "cached_at": 1789567317.8351722
+  },
+  "b0d7b2c6f3c11bee": {
+    "title": "SK Hynix reportedly in talks with Intel to build memory chips in US",
+    "link": "https://techcrunch.com/2026/09/16/sk-hynix-reportedly-in-talks-with-intel-to-build-memory-chips-in-us/",
+    "source": "TechCrunch AI",
+    "message_id": 927,
+    "cached_at": 1789567320.9300232
+  },
+  "2bb89c283231bd2f": {
+    "title": "Building the materials foundation for AI",
+    "link": "https://www.technologyreview.com/2026/09/16/1144014/building-the-materials-foundation-for-ai/",
+    "source": "MIT Technology Review AI",
+    "message_id": 928,
+    "cached_at": 1789567324.1321652
+  },
+  "509bb1ddfd517c5c": {
+    "title": "Estimators in Scikit-LLM: A KDnuggets Cheat Sheet",
+    "link": "https://www.kdnuggets.com/estimators-in-scikit-llm-a-kdnuggets-cheat-sheet",
+    "source": "KDnuggets",
+    "message_id": 929,
+    "cached_at": 1789567329.2344449
+  },
+  "e603112759d92b5a": {
+    "title": "A brief history of AI executives calling for regulation",
+    "link": "https://www.theverge.com/policy/995534/a-brief-history-of-ai-executives-calling-for-regulation",
+    "source": "The Verge AI",
+    "message_id": 930,
+    "cached_at": 1789567331.9221828
+  },
+  "df7d4f535263cf95": {
+    "title": "OrchSLM: Probing the Dynamics of Small Language Model Orchestration",
+    "link": "https://arxiv.org/abs/2609.13470",
+    "source": "arXiv cs.AI",
+    "message_id": 931,
+    "cached_at": 1789567335.6364148
+  },
+  "db594e1fd6ea5e3a": {
+    "title": "Single Document Extractive Summarization using Domination in Hypergraph",
+    "link": "https://arxiv.org/abs/2609.15993",
+    "source": "arXiv cs.CL",
+    "message_id": 932,
+    "cached_at": 1789567338.1532998
+  },
+  "7ad76da41649e4ca": {
+    "title": "Driver Behavior Estimation at Signalized Intersections Using a Physics-Constrained Decision-Conditioned Autoregressive Transformer",
+    "link": "https://arxiv.org/abs/2609.16058",
+    "source": "arXiv cs.LG",
+    "message_id": 933,
+    "cached_at": 1789567340.8995268
+  },
+  "cbb86a2f368003b1": {
+    "title": "SceneBench: A Hierarchical Benchmark for Vision-Language Understanding of 3D Scenes",
+    "link": "https://arxiv.org/abs/2609.16233",
+    "source": "arXiv cs.CV",
+    "message_id": 934,
+    "cached_at": 1789567343.7432334
+  },
+  "139768d18333ab44": {
+    "title": "Shared Selective Persistent Memory for Agentic LLM Systems",
+    "link": "https://machinelearning.apple.com/research/shared-selective-persistent-memory",
+    "source": "Apple Machine Learning Research",
+    "message_id": 935,
+    "cached_at": 1789567346.6485348
+  },
+  "6a78fd97a62a53e7": {
+    "title": "Mini-batch Sampling Strategies for Long-Tailed Image Classification: An Empirical Study on CIFAR-100-LT",
+    "link": "https://arxiv.org/abs/2609.16365",
+    "source": "arXiv stat.ML",
+    "message_id": 936,
+    "cached_at": 1789567349.5847774
+  },
+  "89e5a7b2763c1f8f": {
+    "title": "LLMDE: A Large Language Model-Driven Differential Evolution Algorithm for Portfolio Optimization",
+    "link": "https://arxiv.org/abs/2609.16846",
+    "source": "arXiv cs.NE",
+    "message_id": 937,
+    "cached_at": 1789567352.2713842
   }
 }
