@@ -75,8 +75,34 @@ jobs:
             echo "pushed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Feedback receiver run"
-            git push
-            echo "pushed=true" >> "$GITHUB_OUTPUT"
+            # Several channels run on overlapping schedules and share files
+            # under state/ — a plain `git push` here was failing outright
+            # the instant another workflow's push landed first, discarding
+            # this run's real work with no retry. Fetch + rebase + retry:
+            # state/*.jsonl is append-only, so a same-file collision is an
+            # ordinary fast-forward case for rebase, not a real conflict.
+            pushed=false
+            for attempt in 1 2 3 4 5; do
+              if git push; then
+                pushed=true
+                break
+              fi
+              echo "Push rejected (attempt $attempt/5) — fetching and rebasing onto the latest main..."
+              git fetch origin main
+              if ! git rebase origin/main; then
+                echo "Rebase produced a real conflict — aborting rather than guessing."
+                git rebase --abort
+                break
+              fi
+              sleep $(( (RANDOM % 5) + 2 ))
+            done
+            if [ "$pushed" = "true" ]; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "Could not push after retries — this run's state is lost, but nothing corrupt reached main."
+              echo "pushed=false" >> "$GITHUB_OUTPUT"
+              exit 1
+            fi
           fi
 
       # A 🗑 already pushed its own revert commit and triggered its own

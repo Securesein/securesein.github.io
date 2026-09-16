@@ -3,23 +3,10 @@ name: Benchmarks channel
 # ############################################################
 # #  MANUAL TRIGGER ONLY. THERE IS DELIBERATELY NO `schedule`. #
 # #                                                            #
-# #  This channel is built, tested and DORMANT. It cannot run  #
-# #  unattended, because nothing fires it: no `schedule:` here #
-# #  and no cron-job.org job pointed at it. Running it takes a #
-# #  person clicking "Run workflow".                           #
-# #                                                            #
-# #  It also defaults to a DRY RUN. The `publish` input has to #
-# #  be set to true by hand, per run, for anything to be       #
-# #  written — and doing that is a deliberate decision the     #
-# #  site owner takes, not a default anyone can fall into.     #
-# #                                                            #
-# #  To actually activate the channel, three separate things   #
-# #  have to happen and none of them have:                     #
-# #    1. run it in dry-run for a week and re-check the        #
-# #       thresholds against the score distribution;           #
-# #    2. create a cron-job.org job hitting this workflow's    #
-# #       dispatch API daily at 06:00 UTC (§13), with publish=true;      #
-# #    3. confirm OPENAI_API_KEY is set for the repo.          #
+# #  This channel bulk-pulls from Epoch AI rather than classifying     #
+# #  items one at a time, so it isn't the expensive one — but it still #
+# #  defaults to a DRY RUN, and `publish` has to be set to true by     #
+# #  hand, per run, for anything to be written.                        #
 # ############################################################
 on:
   workflow_dispatch:
@@ -86,8 +73,35 @@ jobs:
             echo "pushed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Benchmarks channel run"
-            git push
-            echo "pushed=true" >> "$GITHUB_OUTPUT"
+            # Several channels run on overlapping schedules and share files
+            # under state/ (rejected.jsonl in particular) — a plain `git
+            # push` here was failing outright the instant another workflow's
+            # push landed first, discarding this run's real work with no
+            # retry. Fetch + rebase + retry: state/*.jsonl is append-only,
+            # so a same-file collision is an ordinary fast-forward case for
+            # rebase, not a real conflict.
+            pushed=false
+            for attempt in 1 2 3 4 5; do
+              if git push; then
+                pushed=true
+                break
+              fi
+              echo "Push rejected (attempt $attempt/5) — fetching and rebasing onto the latest main..."
+              git fetch origin main
+              if ! git rebase origin/main; then
+                echo "Rebase produced a real conflict — aborting rather than guessing."
+                git rebase --abort
+                break
+              fi
+              sleep $(( (RANDOM % 5) + 2 ))
+            done
+            if [ "$pushed" = "true" ]; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "Could not push after retries — this run's state is lost, but nothing corrupt reached main."
+              echo "pushed=false" >> "$GITHUB_OUTPUT"
+              exit 1
+            fi
           fi
 
       - name: Trigger site deploy
