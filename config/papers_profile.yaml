@@ -1,0 +1,97 @@
+# Reader's reading profile (build brief §9.5). Hand-edited only, like
+# interest_profile.yaml — no learning loop, no --propose. Reader is small
+# enough that tuning this by hand is faster than building machinery to
+# tune it automatically.
+#
+# This is a READING filter, not a PUBLISHING filter (§9.1): it should be
+# generous with narrow, technical, too-small-to-blog work, because that is
+# most of what is actually worth a personal 10-minute read. Do not import
+# Scout's interest_profile.yaml or make this stricter to "match" it — the
+# two profiles are allowed, and expected, to disagree.
+
+buckets:
+  llm:
+    weight: 1.0
+    min_per_digest: 2
+    keywords:
+      - large language model
+      - LLM
+      - pretraining
+      - post-training
+      - RLHF
+      - RLVR
+      - DPO
+      - instruction tuning
+      - long context
+      - context window
+      - inference
+      - serving
+      - KV cache
+      - agent
+      - agentic
+      - tool use
+      - evaluation
+      - benchmark
+      - interpretability
+      - mechanistic
+      - hallucination
+      - retrieval augmented
+      - RAG
+      - chain of thought
+      - reasoning model
+
+  neural_nets:
+    weight: 0.9
+    min_per_digest: 1
+    keywords:
+      - optimizer
+      - optimization
+      - scaling law
+      - deep learning theory
+      - generalization bound
+      - attention mechanism
+      - state space model
+      - Mamba
+      - transformer architecture
+      - representation learning
+      - self-supervised
+      - contrastive learning
+      - normalization
+      - initialization
+      - gradient descent
+      - loss landscape
+
+  rl:
+    weight: 1.0
+    min_per_digest: 1
+    keywords:
+      - reinforcement learning
+      - policy gradient
+      - policy optimization
+      - PPO
+      - exploration
+      - offline RL
+      - reward model
+      - reward shaping
+      - multi-agent
+      - world model
+      - model-based RL
+      - Q-learning
+      - actor-critic
+
+# Dropped before any LLM ever sees the abstract. Start aggressive; this is
+# the highest-leverage tuning knob in the whole system, per §9.4.
+exclude:
+  - stochastic differential equation
+  - SDE
+  - medical imaging
+  - financial
+  - remote sensing
+  - materials science
+  - protein folding
+  - drug discovery
+  - fine-tuned an open model on   # "we fine-tuned X on dataset Y" papers
+  - dataset release
+  - benchmark dataset for          # narrow-domain benchmark releases
+  - survey of                       # surveys/position papers -> weekly only, not daily
+  - position paper

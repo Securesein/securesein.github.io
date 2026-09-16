@@ -1,0 +1,79 @@
+name: Reader — papers digest (Phase 1 prototype)
+
+# ############################################################
+# #  MANUAL TRIGGER ONLY. THERE IS DELIBERATELY NO `schedule`. #
+# #                                                            #
+# #  This is Phase 1 of the Reader design (build brief §9) —   #
+# #  a disposable weekend prototype, explicitly NOT the same   #
+# #  system as Scout (releases/research/security/benchmarks).  #
+# #  It has no write path to content, the ledger, the budget    #
+# #  files, or interest_profile.yaml — it only reads arXiv's    #
+# #  own RSS and, if --publish is set, sends one Telegram       #
+# #  message. Nothing here can touch main other than through   #
+# #  a Telegram send.                                           #
+# #                                                            #
+# #  Isolation from the pipeline incidents in section 7 of the #
+# #  state doc: separate workflow, separate (default) concurrency #
+# #  scope (no shared group with securesein-pipeline-write —    #
+# #  Phase 1 writes nothing to state/ at all), and it reuses    #
+# #  only two modules from scripts/ (telegram/api.py,           #
+# #  core/llm.py) rather than importing Scout's feed/classify   #
+# #  machinery, so a Scout refactor cannot silently break this. #
+# #                                                            #
+# #  To actually activate:                                     #
+# #    1. create a NEW Telegram chat/channel, add the existing  #
+# #       bot to it (read-only recipient, no polling — option A #
+# #       from §9.6, chosen specifically to avoid a getUpdates  #
+# #       conflict with feedback.yml's poller on the same       #
+# #       token);                                               #
+# #    2. get that chat's numeric id and set it as the repo     #
+# #       secret TELEGRAM_PAPERS_CHAT_ID;                       #
+# #    3. create a cron-job.org job hitting this workflow's     #
+# #       dispatch API ~06:30 UTC, Mon-Fri (§9.7), with         #
+# #       send=true.                                            #
+# #  None of that has been done — this workflow currently only  #
+# #  renders and prints the digest.                              #
+# ############################################################
+on:
+  workflow_dispatch:
+    inputs:
+      send:
+        description: "Actually send it to Telegram (leave false to render only)"
+        type: boolean
+        default: false
+      offline_llm:
+        description: "Use the deterministic stand-in, no API calls at all"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  papers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch, triage and render (send only if requested)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          # Deliberately the papers-specific secret, not the main
+          # TELEGRAM_CHAT_ID Scout's digest/feedback use — this is what
+          # keeps Reader's output out of the channel the rest of the
+          # pipeline talks in. telegram/api.py doesn't know or care which
+          # chat this is; see scripts/papers/run.py's send() docstring.
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_PAPERS_CHAT_ID }}
+        run: |
+          python scripts/papers/run.py \
+            ${{ inputs.send && '--publish' || '--dry-run' }} \
+            ${{ inputs.offline_llm && '--offline-llm' || '' }}

@@ -1,0 +1,5 @@
+{
+  "_comment": "Reader's circuit breaker (build brief §9.8). Order of magnitude is small (a handful of batched triage calls on a cheap model), but section 7's incident is a direct demonstration that 'cheap per call' and 'cheap per month' are different claims when a loop is involved. Phase 1 has no persistent state (§9.11), so only the per-run cap is enforced for now; max_llm_calls_per_day is aspirational until the papers-state branch exists in Phase 2 to actually count across runs.",
+  "max_llm_calls_per_run": 12,
+  "max_llm_calls_per_day": 20
+}
