@@ -5708,5 +5708,110 @@
     "source": "AWS Machine Learning Blog",
     "message_id": 892,
     "cached_at": 1789538525.0311084
+  },
+  "be518582ea8b2eb5": {
+    "title": "‘Now We Can Know Everything and Do Anything,’ Jensen Huang Says at Dreamforce",
+    "link": "https://blogs.nvidia.com/blog/jensen-huang-dreamforce/",
+    "source": "NVIDIA Blog",
+    "message_id": 893,
+    "cached_at": 1789552878.7418475
+  },
+  "c0fed308d47bada4": {
+    "title": "The AI data center boom is colliding with cities scarred by big industry",
+    "link": "https://techcrunch.com/2026/09/15/the-ai-data-center-boom-is-colliding-with-cities-scarred-by-big-industry/",
+    "source": "TechCrunch AI",
+    "message_id": 894,
+    "cached_at": 1789552881.468684
+  },
+  "a119d198ec4c059e": {
+    "title": "China Isn’t Buying Silicon Valley’s Call for an AI Slowdown",
+    "link": "https://www.wired.com/story/china-isnt-buying-silicon-valley-call-for-ai-slowdown/",
+    "source": "Wired AI",
+    "message_id": 895,
+    "cached_at": 1789552884.9159625
+  },
+  "69d62595d9ec85d1": {
+    "title": "Root-Cause Attribution Is a Search Problem: Continual Search for Long-Horizon Agent Failures",
+    "link": "https://arxiv.org/abs/2609.13463",
+    "source": "arXiv cs.AI",
+    "message_id": 896,
+    "cached_at": 1789552887.513067
+  },
+  "e21d21f5e1de736f": {
+    "title": "The Functionalizer: Lossless Functional Decomposition for Subword Tokenization",
+    "link": "https://arxiv.org/abs/2609.15991",
+    "source": "arXiv cs.CL",
+    "message_id": 897,
+    "cached_at": 1789552890.7526553
+  },
+  "d60f6502c21882b4": {
+    "title": "Managing Action Preconditions in Neuro-Symbolic RL: Three Placement Strategies for Embodied Agents",
+    "link": "https://arxiv.org/abs/2609.16056",
+    "source": "arXiv cs.LG",
+    "message_id": 898,
+    "cached_at": 1789552893.3198488
+  },
+  "fe160ba0aaf30b87": {
+    "title": "DenseFace: Bias Mitigation in Face Recognition via Density-Aware Probabilistic Matching",
+    "link": "https://arxiv.org/abs/2609.16149",
+    "source": "arXiv cs.CV",
+    "message_id": 899,
+    "cached_at": 1789552896.2458973
+  },
+  "3d845f818a94227e": {
+    "title": "The Router Within: Eliciting Native Skill Routing from a Frozen LLM",
+    "link": "https://arxiv.org/abs/2609.15982",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 900,
+    "cached_at": 1789552898.8803554
+  },
+  "f95e55a325c1d57f": {
+    "title": "How NVIDIA NVLink 6 Delivers Multi-Layer Resiliency for AI Factories",
+    "link": "https://developer.nvidia.com/blog/how-nvidia-nvlink-6-delivers-multi-layer-resiliency-for-ai-factories/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 901,
+    "cached_at": 1789552901.3968675
+  },
+  "bfa7ef94c4d09c7c": {
+    "title": "From error mitigation to fault-tolerant quantum computing",
+    "link": "https://research.ibm.com/blog/qec-continuum?utm_medium=rss&utm_source=rss",
+    "source": "IBM Research",
+    "message_id": 902,
+    "cached_at": 1789552904.4860284
+  },
+  "0fd4d9111d18e287": {
+    "title": "Measure by measure, studying society accurately",
+    "link": "https://news.mit.edu/2026/studying-society-accurately-naoki-egami-0916",
+    "source": "MIT News - Artificial Intelligence",
+    "message_id": 903,
+    "cached_at": 1789552906.8129363
+  },
+  "069bbbbb6283e4a5": {
+    "title": "Copula Adapted Directed Acyclic Graph for Cluster Representation of Biomedical Data",
+    "link": "https://arxiv.org/abs/2609.16240",
+    "source": "arXiv stat.ML",
+    "message_id": 904,
+    "cached_at": 1789552909.4368982
+  },
+  "4b72246ff6798c00": {
+    "title": "Joint UAV Activation and Placement for Post-Disaster Wireless Restoration via a Hybrid Quantum-Inspired Evolutionary Framework",
+    "link": "https://arxiv.org/abs/2609.16019",
+    "source": "arXiv cs.NE",
+    "message_id": 905,
+    "cached_at": 1789552911.8710008
+  },
+  "f46110004089df0d": {
+    "title": "\"Looking for Something Weird to Happen\": How Humans Sustain AI Agent Novelty Amid Semantic Collapse",
+    "link": "https://arxiv.org/abs/2609.16051",
+    "source": "arXiv cs.MA",
+    "message_id": 906,
+    "cached_at": 1789552914.364714
+  },
+  "c1290ebb3de94f69": {
+    "title": "v2.1.273",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273",
+    "source": "Claude Code Releases",
+    "message_id": 907,
+    "cached_at": 1789552917.1046968
   }
 }
