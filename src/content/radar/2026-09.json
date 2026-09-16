@@ -8395,6 +8395,57 @@
       "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve deployment strategies in production environments.",
       "seenAt": "2026-09-16T18:05:13+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rc66ed5d68a420ac",
+      "url": "https://machinelearning.apple.com/research/denoising-aware-credit-assignment",
+      "title": "DACA-GRPO: Denoising-Aware Credit Assignment for Reinforcement Learning in Diffusion Language Models",
+      "source": "Apple Machine Learning Research",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "llms",
+        "generative-ai"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 66.2,
+      "whyRelevant": "This research explores reinforcement learning techniques in diffusion language models, which may enhance understanding of LLM behavior and improve inference efficiency.",
+      "seenAt": "2026-09-16T22:02:08+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra14a5d6b9521936",
+      "url": "https://aws.amazon.com/blogs/machine-learning/improving-hcls-ai-reasoning-with-open-source-agent-skills/",
+      "title": "Improving HCLS AI reasoning with open-source agent skills",
+      "source": "AWS Machine Learning Blog",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reasoning",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research explores open-source agent skills that enhance reasoning, relevant for understanding LLMs' internal mechanisms and improving inference efficiency in production.",
+      "seenAt": "2026-09-16T22:02:12+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r094a3a6ba9b159f",
+      "url": "https://aws.amazon.com/blogs/machine-learning/fault-tolerant-distributed-training-on-amazon-eks-using-nvrx/",
+      "title": "Fault tolerant distributed training on Amazon EKS using NVRx",
+      "source": "AWS Machine Learning Blog",
+      "section": "benchmark",
+      "topics": [
+        "training",
+        "deep-learning",
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This item discusses distributed training, which is relevant for understanding LLM efficiency and security in production environments.",
+      "seenAt": "2026-09-16T22:02:14+00:00",
+      "status": "radar"
     }
   ]
 }
