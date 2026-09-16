@@ -1336,6 +1336,155 @@
       "qualityScore": 70.5,
       "relevanceScore": 21.2,
       "whyRelevant": "No profile interest matched — held as a serendipity candidate on quality alone. Filed under research: llms."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T08:54:07+00:00",
+      "score": 70.0,
+      "url": "https://arxiv.org/abs/2609.16098",
+      "title": "Universal Defenses for Tool-Integrated LLM Agents Against Adversarial Attacks",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "llms",
+        "reasoning"
+      ],
+      "candidateId": "r0806e45ad8bbca6",
+      "qualityScore": 82.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: LLM and agent security, reasoning and inference efficiency, deploying and serving models in production. Filed under security: ai-security, llms, reasoning."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T08:54:07+00:00",
+      "score": 70.0,
+      "url": "https://arxiv.org/abs/2609.16211",
+      "title": "Feasibility of Homomorphic Inference for a Genomic Foundation Model",
+      "section": "security",
+      "topics": [
+        "llms",
+        "inference",
+        "ai-security"
+      ],
+      "candidateId": "r96f6a9613febb04",
+      "qualityScore": 82.5,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Matches strong interest: LLM and agent security, reasoning and inference efficiency, open-weight models and local inference, deploying and serving models in production. Filed under security: llms, inf"
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T08:54:07+00:00",
+      "score": 63.2,
+      "url": "https://arxiv.org/abs/2609.16231",
+      "title": "RuleAutoPilot: Synthesizing Deployable Suricata Rules from Network Traffic",
+      "section": "security",
+      "topics": [
+        "llms",
+        "reasoning",
+        "agents"
+      ],
+      "candidateId": "r66e954965aac417",
+      "qualityScore": 82.5,
+      "relevanceScore": 63.2,
+      "whyRelevant": "Matches strong interest: reasoning and inference efficiency, open-weight models and local inference. Filed under security: llms, reasoning, agents."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T08:54:07+00:00",
+      "score": 61.3,
+      "url": "https://arxiv.org/abs/2609.16253",
+      "title": "Exploiting and Securing Docker containers and Kubernetes pods from a MitM attack",
+      "section": "security",
+      "topics": [
+        "deep-learning",
+        "ai-security"
+      ],
+      "candidateId": "r353cd46835e266f",
+      "qualityScore": 90.5,
+      "relevanceScore": 61.3,
+      "whyRelevant": "Matches strong interest: LLM and agent security, ML foundations. Filed under security: deep-learning, ai-security."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T08:54:07+00:00",
+      "score": 61.3,
+      "url": "https://arxiv.org/abs/2609.15994",
+      "title": "Latent Undertow: How Ordinary Typos Break Probes",
+      "section": "security",
+      "topics": [
+        "llms",
+        "ai-security"
+      ],
+      "candidateId": "rdc6225ad93f9d61",
+      "qualityScore": 70.5,
+      "relevanceScore": 61.3,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, LLM and agent security. Filed under security: llms, ai-security."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T08:54:07+00:00",
+      "score": 58.1,
+      "url": "https://arxiv.org/abs/2609.16336",
+      "title": "Illusion of Depth: Revealing Hidden Stereo Vision Vulnerabilities in Depth Estimation",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "candidateId": "re6236b7359ec7ca",
+      "qualityScore": 82.5,
+      "relevanceScore": 58.1,
+      "whyRelevant": "Matches strong interest: how LLMs work internally, LLM and agent security, deploying and serving models in production. Filed under security: agents, ai-security."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T08:54:07+00:00",
+      "score": 56.5,
+      "url": "https://arxiv.org/abs/2609.17527",
+      "title": "Agentic Societies Need a Social Harness",
+      "section": "security",
+      "topics": [
+        "agents",
+        "evaluation",
+        "deep-learning"
+      ],
+      "candidateId": "r084e9226b7085f5",
+      "qualityScore": 90.5,
+      "relevanceScore": 56.5,
+      "whyRelevant": "Matches strong interest: ML foundations. Filed under security: agents, evaluation, deep-learning."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T08:54:07+00:00",
+      "score": 51.3,
+      "url": "https://arxiv.org/abs/2609.16051",
+      "title": "\"Looking for Something Weird to Happen\": How Humans Sustain AI Agent Novelty Amid Semantic Collapse",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "candidateId": "r12d77d79b1c3db5",
+      "qualityScore": 70.5,
+      "relevanceScore": 51.3,
+      "whyRelevant": "Matches strong interest: mechanistic interpretability, LLM and agent security. Filed under security: agents, ai-security."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T08:54:07+00:00",
+      "score": 46.5,
+      "url": "https://arxiv.org/abs/2609.17320",
+      "title": "Emergence World: Adversarial Stress-Testing of Long-Horizon Multi-Agent Systems",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security",
+        "ai-safety"
+      ],
+      "candidateId": "ref7e621f50e964a",
+      "qualityScore": 82.5,
+      "relevanceScore": 46.5,
+      "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: agents, ai-security, ai-safety."
     }
   ]
 }
