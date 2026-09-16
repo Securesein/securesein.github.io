@@ -1,8 +1,23 @@
 name: AI news pipeline
 
+# The legacy manual-curation path — NOT the autonomous pipeline (that's
+# releases.yml/research.yml/security.yml/benchmarks.yml). This workflow
+# no longer fetches or announces anything: the "Fetch RSS, summarize,
+# notify Telegram" step (scripts/fetch_and_notify.py) was removed on the
+# owner's explicit request once the autonomous channels made it
+# redundant — the constant stream of "new article, reply to write about
+# it" notifications was the whole complaint. What's left is purely
+# reactive: check for Telegram replies since last run, and publish
+# whatever got marked. A reply to an OLD already-sent article message
+# still works (its cache entry never expires); a fresh, unprompted
+# message to the bot still starts a custom from-scratch post either way
+# — neither of those needed the RSS-announce step to keep functioning.
+#
 # Targets four daily windows in Europe/Amsterdam time (see SLOTS in
 # scripts/check_schedule_gate.py: currently ~08:00, 12:00, 16:00,
-# 20:00 — all daytime, nothing runs overnight).
+# 20:00 — all daytime, nothing runs overnight). Left as-is even though
+# the fetch step is gone: still a reasonable cadence for noticing a
+# reply or a custom message promptly.
 #
 # GitHub Actions' `schedule` trigger is not reliable enough to hand-pick
 # exact UTC times for this: runs can be delayed by a long margin or
@@ -95,14 +110,6 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         continue-on-error: true
         run: npm run check:content
-
-      - name: Fetch RSS, summarize, notify Telegram
-        if: steps.gate.outputs.run == 'true'
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python scripts/fetch_and_notify.py
 
       - name: Commit and push state changes
         if: steps.gate.outputs.run == 'true'
