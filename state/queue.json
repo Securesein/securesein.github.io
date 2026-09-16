@@ -1485,6 +1485,100 @@
       "qualityScore": 82.5,
       "relevanceScore": 46.5,
       "whyRelevant": "Matches strong interest: LLM and agent security. Filed under security: agents, ai-security, ai-safety."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T10:03:02+00:00",
+      "score": 70.0,
+      "url": "https://arxiv.org/abs/2609.16163",
+      "title": "GPEvac: GNN-Based PPO for Adaptive Evacuation Routing During Shooting Events",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "deep-learning"
+      ],
+      "candidateId": "re1d8c979505bd04",
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item is relevant as it explores adaptive routing using GNNs, which can inform LLM security and agent behavior in critical scenarios."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T10:03:02+00:00",
+      "score": 49.4,
+      "url": "https://arxiv.org/abs/2609.16546",
+      "title": "GPUThor: Amplifying Rowhammer Attacks via Non-Uniform Patterns to Exploit ECC-Protected GPUs",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r3715ac237d5c9e7",
+      "qualityScore": 100.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This item explores security vulnerabilities in GPUs, relevant for understanding LLM deployment risks and enhancing inference efficiency against potential attacks."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T10:03:02+00:00",
+      "score": 46.5,
+      "url": "https://arxiv.org/abs/2609.16541",
+      "title": "A Cyber Range Evaluation of Autonomous Network Incident Response Agents",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security",
+        "reinforcement-learning"
+      ],
+      "candidateId": "rf95accb1656e3da",
+      "qualityScore": 80.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This item explores the security of autonomous agents, relevant for understanding LLM vulnerabilities and enhancing inference efficiency in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T10:03:02+00:00",
+      "score": 42.7,
+      "url": "https://arxiv.org/abs/2609.16423",
+      "title": "No Bit Left Behind: Using Brute-Force Lifting to Achieve Fully Static Binary Recompilation",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r4020f9746dd6f54",
+      "qualityScore": 100.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This item discusses binary recompilation techniques that could enhance security in deploying LLMs, relevant for understanding internal mechanisms and improving inference efficiency."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T10:03:02+00:00",
+      "score": 42.7,
+      "url": "https://arxiv.org/abs/2609.16433",
+      "title": "Evaluating the NIST Bugs Framework Against CWE as a Successor for Automated Vulnerability Classification",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r6bf2d921e4f4b83",
+      "qualityScore": 100.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This item discusses automated vulnerability classification, relevant for understanding security implications in LLMs and improving their robustness in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-16T10:03:02+00:00",
+      "score": 42.7,
+      "url": "https://arxiv.org/abs/2609.16462",
+      "title": "Not All Relations Are Equal: Relation-Balanced and Calibrated Graph Learning for Provenance-Based Intrusion Detection",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r619007dffe0fd8e",
+      "qualityScore": 100.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This paper explores graph learning techniques that could enhance security in LLMs by improving intrusion detection, relevant for understanding model vulnerabilities."
     }
   ]
 }
