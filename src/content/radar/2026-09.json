@@ -4601,6 +4601,1937 @@
       "whyRelevant": "Matches strong interest: ML foundations, open-weight models and local inference. Filed under research: multimodal, llms, deep-learning.",
       "seenAt": "2026-09-14T17:16:36+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rbe2edec65523af9",
+      "url": "https://arxiv.org/abs/2609.13353",
+      "title": "SkillAtlas: An Attack Trace Library for Agent Skills",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 44.6,
+      "whyRelevant": "SkillAtlas provides insights into agent vulnerabilities, relevant for understanding LLM security and improving inference efficiency in production environments.",
+      "seenAt": "2026-09-16T02:01:49+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r26ce505676eee6b",
+      "url": "https://arxiv.org/abs/2609.13407",
+      "title": "Principled Detection of Coordinated Manipulation from Aggregate Distortion and Account Reuse",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item discusses security vulnerabilities in AI systems, relevant for understanding risks in LLM deployment and ensuring robust model integrity.",
+      "seenAt": "2026-09-16T02:01:51+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3eb3e058ce45246",
+      "url": "https://arxiv.org/abs/2609.13478",
+      "title": "BadEngram: Backdoor Attack on Gated Memory Components in LLMs",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "llms"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This paper discusses vulnerabilities in LLM memory components, relevant for understanding security risks and improving interpretability and inference efficiency in model deployment.",
+      "seenAt": "2026-09-16T02:01:53+00:00",
+      "status": "promoted",
+      "promotedTo": "badengram-backdoor-attack-on-gated-memory-components-in-llms"
+    },
+    {
+      "id": "r69cdab0321a4eca",
+      "url": "https://arxiv.org/abs/2609.13499",
+      "title": "Canaries in the Bank: Auditing User-Level Privacy in Private Evolution",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses auditing user-level privacy, which is crucial for ensuring security in LLMs and understanding their internal mechanisms.",
+      "seenAt": "2026-09-16T02:01:55+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r552cccb16da250d",
+      "url": "https://arxiv.org/abs/2609.13601",
+      "title": "Mind the Gap: Detecting Description-Execution Mismatch Attacks in DAO Governance",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This item discusses security vulnerabilities in AI governance, relevant for understanding LLM security and potential risks in deploying models.",
+      "seenAt": "2026-09-16T02:01:57+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf0547f64fba1b63",
+      "url": "https://arxiv.org/abs/2609.13636",
+      "title": "EI-DDLGN: Efficient Encrypted Inference with Deep Differentiable Logic Gate Networks under TFHE",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "deep-learning",
+        "inference"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This paper explores efficient encrypted inference methods, relevant for understanding LLM security and enhancing reasoning efficiency in model deployment.",
+      "seenAt": "2026-09-16T02:01:59+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "reb1e4ec131d1cf6",
+      "url": "https://arxiv.org/abs/2609.13644",
+      "title": "Basis Rigidity of the AES S-box and Generic Rigidity of Inversion under Affine Transformations",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This item discusses cryptographic rigidity, which can inform security considerations for LLMs and their deployment in production environments.",
+      "seenAt": "2026-09-16T02:02:02+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rafecefccf5549c4",
+      "url": "https://arxiv.org/abs/2609.13719",
+      "title": "PatchRisk: Forecasting Future Vulnerability Exposure in Open-Source Dependency Networks",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item discusses forecasting vulnerabilities in open-source dependencies, relevant for understanding security risks in deploying LLMs and ensuring robust model performance.",
+      "seenAt": "2026-09-16T02:02:04+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r4fe32fd053ec6b6",
+      "url": "https://arxiv.org/abs/2609.13781",
+      "title": "PQLN: Post-Quantum Security for the Bitcoin Lightning Network's Off-Chain Surfaces",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item is relevant as it discusses security implications that could affect the deployment and integrity of LLMs in a post-quantum context.",
+      "seenAt": "2026-09-16T02:02:06+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r227728f1ec458ca",
+      "url": "https://arxiv.org/abs/2609.13873",
+      "title": "PriMobiBench: Characterizing Visual Privacy Leakage in VLM-Driven Mobile GUI Agents",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item discusses security implications of visual privacy in mobile agents, relevant for understanding vulnerabilities in LLMs and their deployment.",
+      "seenAt": "2026-09-16T02:02:08+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rca494bbf6a1b997",
+      "url": "https://arxiv.org/abs/2609.13889",
+      "title": "When Malicious Instructions Persist: Persistent Memory Poisoning Attack on Harness-Based Agents",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This article discusses a specific security vulnerability in agents, relevant for understanding LLM robustness and implications for deploying models securely.",
+      "seenAt": "2026-09-16T02:02:10+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re6ce238a88471c3",
+      "url": "https://arxiv.org/abs/2609.13930",
+      "title": "Enforcement of In-Kernel Stateful Security Policies via eBPF",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses security policies that could inform the development of safer LLMs and agents, relevant for understanding internal mechanisms and deployment.",
+      "seenAt": "2026-09-16T02:02:12+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r78d71a36f767a9f",
+      "url": "https://arxiv.org/abs/2609.14003",
+      "title": "Confuse the Model, Control the Flow: Understanding and Mitigating Privacy Leakage from LLM Agents with Information Flow Control",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item discusses privacy leakage in LLMs, relevant for understanding security risks and improving interpretability and inference efficiency in model deployment.",
+      "seenAt": "2026-09-16T02:02:14+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbfe1021ae5f5b0a",
+      "url": "https://arxiv.org/abs/2609.14043",
+      "title": "A High-Throughput FPGA Architecture for Real-Time TCP-SYN Scan Detection",
+      "source": "arXiv cs.CR (cryptography and security)",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item is relevant for understanding hardware acceleration in security applications, which can inform efficient model deployment and inference in LLMs.",
+      "seenAt": "2026-09-16T02:02:16+00:00",
+      "status": "promoted",
+      "promotedTo": "detecting-tcp-syn-scans-with-high-throughput-fpga-a-new-architecture"
+    },
+    {
+      "id": "r38fae5f8610574f",
+      "url": "https://arxiv.org/abs/2609.13356",
+      "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+      "source": "arXiv cs.AI",
+      "section": "release",
+      "topics": [
+        "llms",
+        "agents",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "ZGCM-1's open-weight model and efficient architecture provide insights into LLM internals, enhancing understanding of mechanistic interpretability and deployment in production.",
+      "seenAt": "2026-09-16T02:02:18+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r4f5159b6ceec6fa",
+      "url": "https://arxiv.org/abs/2609.13396",
+      "title": "Converge Then Diversify: Decoupling Convergence and Diversity in Multi-Objective Bayesian Optimisation",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 27.1,
+      "whyRelevant": "This research on optimizing multi-objective functions can inform strategies for improving LLM training efficiency and model diversity in production environments.",
+      "seenAt": "2026-09-16T02:02:20+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r93866fff22824e2",
+      "url": "https://arxiv.org/abs/2609.13406",
+      "title": "Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reinforcement-learning",
+        "ai-safety"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 39.0,
+      "whyRelevant": "This research provides a formal framework for iterative policy improvement, relevant for understanding LLM agent security and enhancing reasoning efficiency in model deployment.",
+      "seenAt": "2026-09-16T02:02:22+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2cb5af392fbc65a",
+      "url": "https://arxiv.org/abs/2609.13422",
+      "title": "Vibe Patenting: Evaluating LLM Judges for Professional Patent-Drafting Agents",
+      "source": "arXiv cs.AI",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores LLMs' reasoning capabilities in a specific application, relevant for understanding their interpretability and efficiency in professional contexts.",
+      "seenAt": "2026-09-16T02:02:24+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc39a9314520b0fa",
+      "url": "https://arxiv.org/abs/2609.13436",
+      "title": "Toward Self-Adaptive Physical AI: Can LLM Agents Manage Long-Horizon Physical Tasks?",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reinforcement-learning",
+        "llms"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 39.0,
+      "whyRelevant": "This research explores LLM agents' capabilities in managing complex tasks, relevant for understanding their internal mechanisms and improving reasoning efficiency in real-world applications.",
+      "seenAt": "2026-09-16T02:02:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rcd45510053afd97",
+      "url": "https://arxiv.org/abs/2609.13437",
+      "title": "LabAgent: Customize Any Research Hubs for Scientific Discoveries Using AI Agents",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "ai-safety",
+        "training"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This item discusses AI agents, which may provide insights into LLM behavior and security, but lacks direct relevance to mechanistic interpretability or model deployment.",
+      "seenAt": "2026-09-16T02:02:29+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r64c5811fe5835ec",
+      "url": "https://arxiv.org/abs/2609.13463",
+      "title": "Root-Cause Attribution Is a Search Problem: Continual Search for Long-Horizon Agent Failures",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "ai-safety",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 39.0,
+      "whyRelevant": "This research addresses agent failures, relevant for understanding LLM security and improving reasoning efficiency in model deployment.",
+      "seenAt": "2026-09-16T02:02:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6b7d0071dbaacc3",
+      "url": "https://arxiv.org/abs/2609.13466",
+      "title": "Governing at Machine Speed: An Adaptive Intelligence Architecture for Real-Time AI Policy Enforcement",
+      "source": "arXiv cs.AI",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "llms"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses adaptive architectures for AI policy enforcement, relevant for understanding security and operational efficiency in deploying LLMs.",
+      "seenAt": "2026-09-16T02:02:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3aea6a0da5ccebf",
+      "url": "https://arxiv.org/abs/2609.13470",
+      "title": "OrchSLM: Probing the Dynamics of Small Language Model Orchestration",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "reasoning"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research explores orchestration dynamics in small language models, relevant for understanding internal mechanisms and improving reasoning efficiency in LLMs.",
+      "seenAt": "2026-09-16T02:02:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r22c06ba1ce5524e",
+      "url": "https://arxiv.org/abs/2609.13475",
+      "title": "Grounded Adjudication of Variations across Extracted TimeLines (GAVEL): Comparing Clinical Timelines Against Their Case Reports",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "evaluation",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 42.0,
+      "whyRelevant": "This research explores evaluation methods that could enhance understanding of LLMs' reasoning and inference capabilities in clinical contexts.",
+      "seenAt": "2026-09-16T02:02:38+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "raea8cd1f63051fa",
+      "url": "https://arxiv.org/abs/2609.13491",
+      "title": "Token Efficient Task Execution via Application Behavior Modeling for Web Agents",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores application behavior modeling, which can enhance reasoning efficiency and security in deploying web agents and LLMs.",
+      "seenAt": "2026-09-16T02:02:40+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc093e4848e39773",
+      "url": "https://arxiv.org/abs/2609.13519",
+      "title": "Fraglingo: Molecular Design via Attachment-Aware Autoregressive Fragment Generation",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "training",
+        "llms"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 73.0,
+      "whyRelevant": "This research on autoregressive fragment generation may provide insights into generative processes that could inform LLM interpretability and efficiency in reasoning.",
+      "seenAt": "2026-09-16T02:02:42+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3047d5b0077bfd8",
+      "url": "https://arxiv.org/abs/2609.13535",
+      "title": "From Legal Text to AI-specific Risk Sources: A Systematic Analysis of the EU AI Act's High-Risk Requirements",
+      "source": "arXiv cs.AI",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This item provides insights into regulatory frameworks affecting AI security, relevant for understanding compliance in deploying LLMs and ensuring their safe operation.",
+      "seenAt": "2026-09-16T02:02:44+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc6c1c063b45853d",
+      "url": "https://arxiv.org/abs/2609.13543",
+      "title": "Asclepius: An Adaptive Harness for Long-Horizon Clinical Agents",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "llms",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research on adaptive harnesses for clinical agents may provide insights into LLM behavior and safety, relevant for understanding agent security and inference efficiency.",
+      "seenAt": "2026-09-16T02:02:46+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r71fc2221d1295bd",
+      "url": "https://blog.trailofbits.com/2026/09/15/1passwords-ai-patching-benchmark-is-misleading/",
+      "title": "1Password's AI patching benchmark is misleading",
+      "source": "Trail of Bits — Blog",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "The article critiques AI security practices, relevant for understanding vulnerabilities in LLMs and improving their deployment and inference efficiency.",
+      "seenAt": "2026-09-16T02:02:48+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8c0f42d923b1639",
+      "url": "https://arxiv.org/abs/2609.13151",
+      "title": "Token Merging for Multilingual Speech Recognition: A Systematic Study Across Model Scale and Fine-Tuning",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This study on token merging may provide insights into model efficiency and fine-tuning strategies relevant to LLM deployment and inference.",
+      "seenAt": "2026-09-16T02:04:12+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r171141325441b16",
+      "url": "https://arxiv.org/abs/2609.13152",
+      "title": "PhysMent: An Interactive Approach For LLM Reasoning In Physics Problems",
+      "source": "arXiv cs.CL",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "reasoning",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item provides insights into LLM reasoning mechanisms, which can enhance understanding of internal processes and improve inference efficiency in practical applications.",
+      "seenAt": "2026-09-16T02:04:14+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r7d92a05bff779fb",
+      "url": "https://arxiv.org/abs/2609.13158",
+      "title": "TestHallVQA: Exploring LVLMs' Document-Level Reasoning under Redundant Contexts from Scientific Exams",
+      "source": "arXiv cs.CL",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "reasoning",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This benchmark provides insights into document-level reasoning in LLMs, relevant for understanding their internal mechanisms and improving inference efficiency.",
+      "seenAt": "2026-09-16T02:04:16+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r69141b85753b0f4",
+      "url": "https://arxiv.org/abs/2609.13238",
+      "title": "Clinical Reasoning Under a Partially Observed Objective in Cone Beam CT Report Generation",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores reasoning in LLMs, relevant for understanding internal mechanisms and improving inference efficiency in medical report generation.",
+      "seenAt": "2026-09-16T02:04:18+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1f3ca7dc0b4ce6d",
+      "url": "https://arxiv.org/abs/2609.13389",
+      "title": "RFCLLM: Evaluating LLMs' Reasoning Ability of Network Protocol State Machines",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This research evaluates LLMs' reasoning capabilities, which is crucial for understanding their internal mechanisms and improving inference efficiency in production settings.",
+      "seenAt": "2026-09-16T02:04:20+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rdc4a165bd987c5d",
+      "url": "https://arxiv.org/abs/2609.13413",
+      "title": "CVSS-X: A Multilingual Speech-to-Speech Translation Corpus for 28 Languages",
+      "source": "arXiv cs.CL",
+      "section": "release",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "This item is less relevant as it focuses on speech translation rather than the internal mechanisms or security aspects of LLMs.",
+      "seenAt": "2026-09-16T02:04:23+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r880ebb8c7bcac3d",
+      "url": "https://arxiv.org/abs/2609.13445",
+      "title": "Causal Analysis and Mitigation of Spurious Onsets in Full-Duplex Speech LLMs",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "ai-safety",
+        "inference"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research addresses spurious onsets in LLMs, relevant for understanding internal mechanisms and improving inference efficiency and safety in production deployments.",
+      "seenAt": "2026-09-16T02:04:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r0c8bb89e0cc6083",
+      "url": "https://arxiv.org/abs/2609.13454",
+      "title": "Hindsight Bias in Clinical Temporal Reasoning: How Future Data Exposure Affects Large Language Model Judgment",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores how future data exposure impacts LLM judgment, relevant for understanding reasoning efficiency and interpretability in model behavior.",
+      "seenAt": "2026-09-16T02:04:27+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r0dca5dd8c9d171f",
+      "url": "https://arxiv.org/abs/2609.13481",
+      "title": "A Hybrid Hierarchical 1D-CNN-BiLSTM Framework for Extractive Summarization of Biomedical and Clinical Text",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research may provide insights into model architectures that could enhance understanding of LLMs' internal workings and improve inference efficiency.",
+      "seenAt": "2026-09-16T02:04:29+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r35042245a5c4542",
+      "url": "https://arxiv.org/abs/2609.13581",
+      "title": "Toward Complete Hospital Discharge Summarization with Abstract Meaning Representation",
+      "source": "arXiv cs.CL",
+      "section": "research",
+      "topics": [
+        "llms",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores LLMs' internal mechanisms for summarizing complex information, relevant for understanding reasoning efficiency and deployment in healthcare contexts.",
+      "seenAt": "2026-09-16T02:04:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r718aa795ca07cee",
+      "url": "https://arxiv.org/abs/2609.13582",
+      "title": "Same Patient, Different Order: Action-Level Reliability of Clinical LLM Agents Under Repeated Runs",
+      "source": "arXiv cs.CL",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 39.0,
+      "whyRelevant": "This study evaluates the reliability of clinical LLM agents, providing insights into their internal workings and performance consistency, relevant for security and inference efficiency.",
+      "seenAt": "2026-09-16T02:04:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6167497a9597792",
+      "url": "https://arxiv.org/abs/2609.13149",
+      "title": "BudgetBench: A Budget-Tiered Protocol and Pilot Harness for Memory Strategy Evaluation in Local Large Language Model Agents",
+      "source": "arXiv cs.LG",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "evaluation",
+        "agents"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item provides a framework for evaluating memory strategies in local LLM agents, relevant for understanding their internal workings and improving inference efficiency.",
+      "seenAt": "2026-09-16T02:04:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r355d84b98983256",
+      "url": "https://arxiv.org/abs/2609.13171",
+      "title": "A derivative-fidelity failure mode in physics-informed neural networks: strengthened benchmark evidence from function-value training",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research highlights a failure mode in neural networks that could inform the understanding of LLMs' internal mechanisms and their training processes.",
+      "seenAt": "2026-09-16T02:04:38+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2f66c5fa7061125",
+      "url": "https://arxiv.org/abs/2609.13182",
+      "title": "Land Art as a Big-Data Climate Sensor",
+      "source": "arXiv cs.LG",
+      "section": "benchmark",
+      "topics": [
+        "generative-ai",
+        "ai-safety",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "This item is weakly relevant as it discusses climate data through art, lacking direct connections to LLMs, mechanistic interpretability, or ML foundations.",
+      "seenAt": "2026-09-16T02:04:40+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r102b0d5bf3de705",
+      "url": "https://arxiv.org/abs/2609.13185",
+      "title": "LLMs or Naive Bayes? Old Gems or New Ways",
+      "source": "arXiv cs.LG",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 39.0,
+      "whyRelevant": "This item discusses evaluation methods that can inform the understanding of LLM performance compared to traditional models like Naive Bayes, relevant for mechanistic interpretability.",
+      "seenAt": "2026-09-16T02:04:42+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rebe11504f6992bd",
+      "url": "https://arxiv.org/abs/2609.13191",
+      "title": "Early Prediction of Satellite Collision Probability Using a Hybrid TCN-Transformer Model for a CDM-Based Conjunction Analysis Framework",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "ai-safety",
+        "llms",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores hybrid models that could inform LLM interpretability and reasoning efficiency, relevant for understanding agent security in complex systems.",
+      "seenAt": "2026-09-16T02:04:44+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1cb051040f96fc4",
+      "url": "https://arxiv.org/abs/2609.13192",
+      "title": "Evaluating LLM-Generated Rules for Heart Disease Prediction",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "llms",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 95.0,
+      "relevanceScore": 42.0,
+      "whyRelevant": "This research explores LLM-generated rules, which can inform mechanistic interpretability and reasoning efficiency in medical applications, relevant to model evaluation and deployment.",
+      "seenAt": "2026-09-16T02:04:47+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r0b9123502ecd592",
+      "url": "https://arxiv.org/abs/2609.13194",
+      "title": "Diagnosing Faults in Reinforcement Learning Simulators and World Models with Canonical Polynomial Invariants",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 30.1,
+      "whyRelevant": "This research provides insights into evaluating and diagnosing faults in RL simulators, which can inform the development of more robust LLMs and their deployment.",
+      "seenAt": "2026-09-16T02:04:49+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r64d2019a8962aa9",
+      "url": "https://arxiv.org/abs/2609.13197",
+      "title": "Algorithmic Information Dynamics of Learning: A Certified, Differentiable Complexity Controller for Grokking",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "training",
+        "deep-learning",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research explores complexity control in learning algorithms, which can enhance understanding of LLM behavior and improve reasoning efficiency in model deployment.",
+      "seenAt": "2026-09-16T02:04:51+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rfe0ff974816e48f",
+      "url": "https://arxiv.org/abs/2609.13198",
+      "title": "SPICE: Simple Polysemantic Feature Interpretation via Clustering-based Explanation",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "interpretability",
+        "deep-learning"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 62.3,
+      "whyRelevant": "This research on feature interpretation through clustering can enhance understanding of LLMs' internal mechanisms and improve interpretability in model deployment.",
+      "seenAt": "2026-09-16T02:04:53+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r67be00d1b2aeb41",
+      "url": "https://arxiv.org/abs/2609.13199",
+      "title": "Discovering and Preserving Category Correlation Knowledge via Adaptive Reciprocal Knowledge Distillation",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "training",
+        "deep-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 58.1,
+      "whyRelevant": "This research explores knowledge distillation techniques that could enhance LLM interpretability and efficiency, relevant for understanding model internals and improving inference.",
+      "seenAt": "2026-09-16T02:04:56+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rcbb5dfd09ff2ec1",
+      "url": "https://arxiv.org/abs/2609.13201",
+      "title": "Criticality in Dissimilar Decomposition and Undersampling of Random Datasets with Anomalies",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "llms",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores dataset decomposition and undersampling, which can inform LLM training strategies and improve model robustness against anomalies.",
+      "seenAt": "2026-09-16T02:04:58+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5c69071d89b3761",
+      "url": "https://arxiv.org/abs/2609.13202",
+      "title": "Do Tabular Foundation Models Still Need Feature Engineering?",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "training",
+        "evaluation",
+        "deep-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores the necessity of feature engineering in tabular models, relevant for understanding LLMs' internal workings and improving inference efficiency.",
+      "seenAt": "2026-09-16T02:05:00+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2fe3bea0907a758",
+      "url": "https://arxiv.org/abs/2609.13203",
+      "title": "Scalable partial information decomposition for symptom networks via supervised embeddings",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This research offers insights into reasoning and evaluation methods that could enhance interpretability and efficiency in LLMs and their deployment.",
+      "seenAt": "2026-09-16T02:05:02+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r68caaf4a9ad23dd",
+      "url": "https://arxiv.org/abs/2609.13204",
+      "title": "GradRepair-ODE: Certified Gradient Repair for Neural ODE Training",
+      "source": "arXiv cs.LG",
+      "section": "research",
+      "topics": [
+        "training",
+        "deep-learning",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research on gradient repair techniques may enhance the stability and interpretability of LLM training, relevant for understanding internal mechanisms and improving model safety.",
+      "seenAt": "2026-09-16T02:05:04+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9107df9e8895478",
+      "url": "https://arxiv.org/abs/2609.13190",
+      "title": "Personalized and Explainable Blood Pressure Estimation from PPG via Hybrid CNN--Morphological Features",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "interpretability",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 54.2,
+      "whyRelevant": "This research on explainable deep learning methods may provide insights into interpretability and model efficiency relevant to LLMs and their deployment.",
+      "seenAt": "2026-09-16T02:05:06+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r05153bb96e6468a",
+      "url": "https://arxiv.org/abs/2609.13225",
+      "title": "Part Grounding, Not Action Knowledge: Locating the Bottleneck in VLM Affordance Prediction",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "agents"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research addresses the limitations in visual language models' reasoning capabilities, relevant for understanding LLMs' internal mechanisms and improving inference efficiency.",
+      "seenAt": "2026-09-16T02:05:09+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf87533494aad39c",
+      "url": "https://arxiv.org/abs/2609.13226",
+      "title": "Synthetic Leprosy Image Generation Using Mask-Conditioned Latent Diffusion and Transfer Learning from Large Chronic Wound Datasets",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 59.5,
+      "whyRelevant": "This research on synthetic image generation may provide insights into model training techniques relevant for understanding LLMs and their interpretability.",
+      "seenAt": "2026-09-16T02:05:12+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf9bcac37b49c306",
+      "url": "https://arxiv.org/abs/2609.13228",
+      "title": "Don't Just Look, Intervene: Perturbation Based Region Labeling for VQA Images",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores perturbation techniques that could enhance understanding of LLM reasoning and inference, relevant for improving model interpretability and security.",
+      "seenAt": "2026-09-16T02:05:14+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r726924da9e1d2bd",
+      "url": "https://arxiv.org/abs/2609.13232",
+      "title": "What Does the Encoder Actually Decide? A Controlled Comparison of Vision Backbones on Joint Tree Segmentation and Stereo Depth",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "evaluation",
+        "multimodal"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research provides insights into the decision-making processes of vision models, which can inform understanding of LLMs' internal mechanisms and improve inference efficiency.",
+      "seenAt": "2026-09-16T02:05:16+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6ff66a29859b3b7",
+      "url": "https://arxiv.org/abs/2609.13233",
+      "title": "EMCStereo: Attention-Enhanced Stereo Matching for Thin-Structure Depth Estimation with a Synthetic Tree-Branch Benchmark",
+      "source": "arXiv cs.CV",
+      "section": "benchmark",
+      "topics": [
+        "deep-learning",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 68.1,
+      "whyRelevant": "This benchmark provides insights into depth estimation techniques, which can inform the development of more interpretable and efficient models in LLM applications.",
+      "seenAt": "2026-09-16T02:05:18+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb200120f65d6512",
+      "url": "https://arxiv.org/abs/2609.13237",
+      "title": "Occlusal Geometry in Closed Form for Orthodontic Report Generation",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 32.0,
+      "whyRelevant": "This research may provide insights into multimodal training and evaluation techniques that could enhance reasoning and inference efficiency in LLMs.",
+      "seenAt": "2026-09-16T02:05:20+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb584f329d7e18cb",
+      "url": "https://arxiv.org/abs/2609.13239",
+      "title": "Abstract-LoRA: Unlocking Single-Image Style Transfer through Targeted U-Net Block Training",
+      "source": "arXiv cs.CV",
+      "section": "release",
+      "topics": [
+        "generative-ai",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "This item is relevant as it explores targeted training techniques that could enhance understanding of model internals and efficiency in generative tasks.",
+      "seenAt": "2026-09-16T02:05:22+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9f7372e2e37904f",
+      "url": "https://arxiv.org/abs/2609.13240",
+      "title": "ArtSociety: Multi-Agent Multimodal Collaboration for Art Emotion Understanding",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "agents",
+        "multimodal",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores multi-agent collaboration and reasoning, which can inform the development of LLMs and their interpretability in understanding complex emotional contexts.",
+      "seenAt": "2026-09-16T02:05:24+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r89da16a7a295b74",
+      "url": "https://arxiv.org/abs/2609.13245",
+      "title": "SJD-SV: Speculative Jacobi Decoding with Semantics Verification for Autoregressive Image Generation",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 63.0,
+      "whyRelevant": "This research explores a decoding method that could enhance reasoning efficiency in generative models, relevant for understanding LLMs' internal mechanisms.",
+      "seenAt": "2026-09-16T02:05:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r952910bce22debe",
+      "url": "https://arxiv.org/abs/2609.13246",
+      "title": "Pixel-wise Planarity for High-Precision Monocular Plane Segmentation",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 30.1,
+      "whyRelevant": "This research on plane segmentation may provide insights into spatial reasoning and inference efficiency relevant for improving LLMs' interpretability and deployment.",
+      "seenAt": "2026-09-16T02:05:29+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r03032bcd10c565b",
+      "url": "https://arxiv.org/abs/2609.13250",
+      "title": "Evaluation of MLLM-Agnostic Plug-and-Play Keyframe Selection Methods for Long Video Understanding",
+      "source": "arXiv cs.CV",
+      "section": "benchmark",
+      "topics": [
+        "multimodal",
+        "llms",
+        "evaluation"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item provides insights into evaluation methods that could enhance understanding of LLM performance in multimodal contexts, relevant for interpretability and efficiency.",
+      "seenAt": "2026-09-16T02:05:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbd8a1a7b8fdc92d",
+      "url": "https://arxiv.org/abs/2609.13251",
+      "title": "Preserving Subject-Clarity in Image Outpainting with Multiscale Wavelet Supervision",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "multimodal",
+        "deep-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "This research focuses on enhancing image generation techniques, which may indirectly inform understanding of LLMs' multimodal capabilities and their interpretability.",
+      "seenAt": "2026-09-16T02:05:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ref6bd261191399b",
+      "url": "https://arxiv.org/abs/2609.13254",
+      "title": "(How) Do MLLMs Report Bistable Images Like Humans?",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "llms",
+        "multimodal",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores how multimodal large language models interpret bistable images, shedding light on their reasoning processes and interpretability.",
+      "seenAt": "2026-09-16T02:05:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r26b478dd45198c1",
+      "url": "https://arxiv.org/abs/2609.13255",
+      "title": "A Comprehensive Review of Multimodal Facial State Analysis: Tasks, Methods, and Resources",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "reasoning",
+        "interpretability"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 61.0,
+      "whyRelevant": "This review provides insights into multimodal reasoning and interpretability, which can inform the development of more secure and efficient LLMs.",
+      "seenAt": "2026-09-16T02:05:37+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3d845f818a94227",
+      "url": "https://arxiv.org/abs/2609.15982",
+      "title": "The Router Within: Eliciting Native Skill Routing from a Frozen LLM",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research explores skill routing in LLMs, relevant for understanding internal mechanisms and improving inference efficiency in production deployments.",
+      "seenAt": "2026-09-16T02:05:39+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8ed7a0f4faed007",
+      "url": "https://arxiv.org/abs/2609.17523",
+      "title": "ScienceBuddy: Recursive-in-Recursive Self-Improvement for Interactive Scientific Agents",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reinforcement-learning",
+        "training"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 32.0,
+      "whyRelevant": "The research on recursive self-improvement in agents may provide insights into LLM reasoning efficiency and mechanisms for enhancing model performance in production.",
+      "seenAt": "2026-09-16T02:05:42+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra0ecdfee72fef23",
+      "url": "https://aws.amazon.com/blogs/machine-learning/optimizing-cost-and-latency-with-amazon-bedrock-prompt-caching/",
+      "title": "Optimizing cost and latency with Amazon Bedrock prompt caching",
+      "source": "AWS Machine Learning Blog",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "inference",
+        "ai-security"
+      ],
+      "qualityScore": 95.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses optimizing inference efficiency and cost, which is crucial for deploying LLMs securely and effectively in production environments.",
+      "seenAt": "2026-09-16T02:05:53+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r42c742abce32e0f",
+      "url": "https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-product-tagging-system-with-amazon-sagemaker-serverless-model-customization/",
+      "title": "Build an AI-powered product tagging system with Amazon SageMaker serverless model customization",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "reinforcement-learning",
+        "training",
+        "ai-security"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This item is relevant for understanding practical applications of AI in production, particularly in model customization and security aspects.",
+      "seenAt": "2026-09-16T02:05:55+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2330810bf1e207b",
+      "url": "https://aws.amazon.com/blogs/machine-learning/announcing-instance-preference-lists-for-amazon-sagemaker-ai-training-jobs/",
+      "title": "Announcing instance preference lists for Amazon SageMaker AI training jobs",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "training"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This release enhances training efficiency and model performance, which is crucial for understanding LLM behavior and optimizing deployment in production environments.",
+      "seenAt": "2026-09-16T02:05:58+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8ae9ac7b35af0e9",
+      "url": "https://aws.amazon.com/blogs/machine-learning/abnormal-ai-amazon-bedrock-agentcore-for-agentic-email-security-at-scale/",
+      "title": "Abnormal AI: Amazon Bedrock AgentCore for agentic email security at scale",
+      "source": "AWS Machine Learning Blog",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 44.6,
+      "whyRelevant": "This item discusses AI agents in email security, relevant for understanding LLM deployment and security in production environments.",
+      "seenAt": "2026-09-16T02:06:00+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra4d7ee588fdab9a",
+      "url": "https://aws.amazon.com/blogs/machine-learning/manage-end-user-oauth-consent-for-ai-agents-with-amazon-bedrock-agentcore/",
+      "title": "Manage end-user OAuth consent for AI agents with Amazon Bedrock AgentCore",
+      "source": "AWS Machine Learning Blog",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 44.6,
+      "whyRelevant": "This item discusses managing OAuth consent for AI agents, relevant for understanding security implications in deploying LLMs and ensuring safe user interactions.",
+      "seenAt": "2026-09-16T02:06:02+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc1d1c7209ae50d5",
+      "url": "https://arxiv.org/abs/2609.13343",
+      "title": "Stochastic Gradient Descent over P2",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This research on Stochastic Gradient Descent over P2 provides insights into optimization techniques that can enhance the efficiency of training LLMs.",
+      "seenAt": "2026-09-16T02:06:17+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb9e123ee45a4f8b",
+      "url": "https://arxiv.org/abs/2609.13345",
+      "title": "Beyond Point Forecasts: A Survey on Probabilistic Forecasting for Time Series and Spatiotemporal Data",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "training",
+        "evaluation",
+        "deep-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This survey provides insights into probabilistic forecasting methods that can enhance reasoning and inference efficiency in LLMs and their applications.",
+      "seenAt": "2026-09-16T02:06:19+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb0246feb341f35c",
+      "url": "https://arxiv.org/abs/2609.13569",
+      "title": "A pullback-corrected scalar auxiliary variable optimizer with momentum and adaptive mobility",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research on an optimizer may enhance training efficiency and stability in LLMs, impacting their interpretability and performance in production settings.",
+      "seenAt": "2026-09-16T02:06:21+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf1e013a5d433d37",
+      "url": "https://arxiv.org/abs/2609.13798",
+      "title": "Resolution-Independent Analysis of Encoder--Decoder Operator Learning via Limiting Kernels",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training",
+        "llms"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores the learning dynamics of encoder-decoder models, which can enhance understanding of LLM mechanisms and improve inference efficiency.",
+      "seenAt": "2026-09-16T02:06:23+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rac6555a5bce50ed",
+      "url": "https://arxiv.org/abs/2609.14083",
+      "title": "Just add noise: Debiasing tree-based variable importance in mixed data",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "interpretability",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 47.5,
+      "whyRelevant": "This research on debiasing variable importance can inform interpretability methods relevant to understanding LLMs and improving their reasoning efficiency.",
+      "seenAt": "2026-09-16T02:06:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r450bb798bdcc2da",
+      "url": "https://arxiv.org/abs/2609.14127",
+      "title": "Exact Finite Attention Responses From RoPE Derivatives",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research explores attention mechanisms in LLMs, which is crucial for understanding their internal workings and improving reasoning efficiency.",
+      "seenAt": "2026-09-16T02:06:28+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r70a5ed18d2abb09",
+      "url": "https://arxiv.org/abs/2609.14531",
+      "title": "Multi-source conformal prediction: leveraging heterogeneity via localization",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "interpretability",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 54.2,
+      "whyRelevant": "This research on multi-source conformal prediction offers insights into interpretability and evaluation methods that can enhance understanding of LLMs' internal workings.",
+      "seenAt": "2026-09-16T02:06:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "red3a58c629996a0",
+      "url": "https://arxiv.org/abs/2609.14569",
+      "title": "Evaluation of optimisation and Bayesian inference methods for reaction rates in atmospheric chemical mechanisms",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This research provides insights into optimization methods that could enhance the efficiency of training and evaluating LLMs in atmospheric chemistry applications.",
+      "seenAt": "2026-09-16T02:06:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rdfa25441119af30",
+      "url": "https://arxiv.org/abs/2609.14675",
+      "title": "PU classification under Non-SCAR: clustering-assisted logistic model with oversampling enhancement",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 44.6,
+      "whyRelevant": "This research on PU classification may provide insights into model training techniques that could enhance reasoning and inference efficiency in LLMs.",
+      "seenAt": "2026-09-16T02:06:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1e382f4695b03d1",
+      "url": "https://arxiv.org/abs/2609.14802",
+      "title": "From matrix inversion to constraints: provably tighter confidence regions for importance weights in label shift",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "training",
+        "evaluation",
+        "multimodal"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 32.0,
+      "whyRelevant": "This research on confidence regions for importance weights may enhance understanding of model robustness and inference efficiency under label shift, relevant for LLM deployment.",
+      "seenAt": "2026-09-16T02:06:37+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8927da4c12ac009",
+      "url": "https://arxiv.org/abs/2609.14815",
+      "title": "A Functional SVD Framework for Regularized Multivariate Functional PCA with Dual Penalization",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "interpretability",
+        "training",
+        "deep-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 64.2,
+      "whyRelevant": "This research on functional PCA may provide insights into model interpretability and efficiency, relevant for understanding LLMs and their deployment.",
+      "seenAt": "2026-09-16T02:06:40+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd488fe31d50f3e4",
+      "url": "https://arxiv.org/abs/2609.14902",
+      "title": "Shapley Value Estimation for Multi-Site Data with Blockwise-Missing Features",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "interpretability",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 54.2,
+      "whyRelevant": "This research on Shapley value estimation enhances interpretability in ML by addressing feature importance in multi-site data, relevant for understanding LLMs' internal workings.",
+      "seenAt": "2026-09-16T02:06:42+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb5230d100b9d728",
+      "url": "https://arxiv.org/abs/2609.14922",
+      "title": "Steady-State Convergence of Stochastic Approximation",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research on stochastic approximation may provide insights into training dynamics relevant for improving LLM reasoning and inference efficiency.",
+      "seenAt": "2026-09-16T02:06:44+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r512c1e520b7933c",
+      "url": "https://arxiv.org/abs/2609.15254",
+      "title": "Conformal Individual Treatment Effect Estimation under Networked Interference",
+      "source": "arXiv stat.ML",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research explores causal inference methods that could enhance reasoning efficiency in LLMs, relevant for understanding their internal mechanisms and deployment.",
+      "seenAt": "2026-09-16T02:06:47+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r88763d00c62d6de",
+      "url": "https://arxiv.org/abs/2609.13506",
+      "title": "nBMS, a Neuromorphic Battery Management System with a Silicon-Validated Spiking State-of-Charge Core for eVTOL Aircraft",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training",
+        "inference"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item is not directly relevant to LLMs or their internal mechanisms, focusing instead on neuromorphic systems for battery management in aircraft.",
+      "seenAt": "2026-09-16T02:06:49+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r0d987af3eb86963",
+      "url": "https://arxiv.org/abs/2609.13533",
+      "title": "Early-Stopping Thresholds for ES-HyperNEAT: A Data-Driven Approach from Fitness Dynamics",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "training",
+        "reinforcement-learning",
+        "deep-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research on early-stopping thresholds can inform training efficiency and model performance, relevant for deploying and serving LLMs effectively.",
+      "seenAt": "2026-09-16T02:06:51+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rac2146e008a7bb5",
+      "url": "https://arxiv.org/abs/2609.14418",
+      "title": "Surrogate-Assisted Genetic Programming with Phenotypic Characterisation in Dynamic Multi-Mode Project Scheduling",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores optimization techniques that could inform efficient reasoning and inference in LLMs, though its direct relevance to LLMs is limited.",
+      "seenAt": "2026-09-16T02:06:53+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r31599645af448f7",
+      "url": "https://arxiv.org/abs/2609.15339",
+      "title": "A Memristive Synapse for Online STDP Learning and Inference in SNNs",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research on memristive synapses may provide insights into efficient learning and inference mechanisms relevant to understanding LLMs and their deployment.",
+      "seenAt": "2026-09-16T02:06:56+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5e7952cd86e72ef",
+      "url": "https://arxiv.org/abs/2609.15569",
+      "title": "Big Brains and Changing Environments: Cause or Consequence?",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "agents",
+        "ai-safety",
+        "reasoning"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research explores the relationship between agent behavior and environmental changes, relevant for understanding LLM adaptability and security in dynamic contexts.",
+      "seenAt": "2026-09-16T02:06:58+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd3f38becd54b7fa",
+      "url": "https://arxiv.org/abs/2609.15692",
+      "title": "Complete Suffix Prediction for Recommendation via Latent Retrieval over Process Graphs",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This research explores latent retrieval methods that could enhance reasoning efficiency in LLMs, relevant for understanding their internal mechanisms and improving model deployment.",
+      "seenAt": "2026-09-16T02:07:00+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r53e078d0311b9ac",
+      "url": "https://arxiv.org/abs/2609.15772",
+      "title": "Event-Native Symbolic-Temporal Spike Encoding Framework for Heterogeneous Cyber Streams",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "ai-security",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This research may provide insights into encoding techniques that could enhance reasoning efficiency and security in LLMs and agent-based systems.",
+      "seenAt": "2026-09-16T02:07:03+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc49a3923581051c",
+      "url": "https://arxiv.org/abs/2609.13147",
+      "title": "Refracted Light Interaction in Turbulent Bubbling Water (RLITBW): A Macroscopic Fluid-Optic Entropy Source",
+      "source": "arXiv cs.NE",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This item is not directly relevant to LLMs or their internal mechanisms, focusing instead on fluid-optic interactions and entropy, which are unrelated to ML foundations.",
+      "seenAt": "2026-09-16T02:07:05+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8481fc7f6966a6e",
+      "url": "https://arxiv.org/abs/2609.13315",
+      "title": "Feasibility and Memory Mechanisms of Chern-Simons Context Reservoir Computation",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "reasoning",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research explores memory mechanisms that could enhance reasoning efficiency in LLMs, relevant for understanding their internal workings and deployment.",
+      "seenAt": "2026-09-16T02:07:07+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r659c12bdb38d8bb",
+      "url": "https://arxiv.org/abs/2609.14594",
+      "title": "When is global evolutionary search useful for variational quantum algorithms? A landscape-first study",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This item is less relevant as it focuses on quantum algorithms and evolutionary search rather than LLMs, mechanistic interpretability, or model deployment.",
+      "seenAt": "2026-09-16T02:07:10+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra0f880e57ced4ce",
+      "url": "https://arxiv.org/abs/2609.15065",
+      "title": "Sensory Precision Inference for Multimodal Arbitration under Uncertainty",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "agents",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores multimodal reasoning under uncertainty, which can inform the development of more interpretable and efficient LLMs and agents.",
+      "seenAt": "2026-09-16T02:07:13+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb30c794fcdc1c40",
+      "url": "https://arxiv.org/abs/2609.15077",
+      "title": "Ensemble-Conditioned Molecular Design",
+      "source": "arXiv cs.NE",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 35.0,
+      "whyRelevant": "This research on ensemble-conditioned molecular design may provide insights into generative models and their interpretability, relevant for understanding LLMs and their applications.",
+      "seenAt": "2026-09-16T02:07:15+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8187bdd68ed77c1",
+      "url": "https://arxiv.org/abs/2609.13253",
+      "title": "An Evolutionary Computation Framework for Multi-Agent Q-Learning with Mean-Field Environmental Feedback",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "agents",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research explores multi-agent reinforcement learning, which can inform mechanisms for LLMs and agent security in complex environments.",
+      "seenAt": "2026-09-16T02:07:17+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re6f3d5c4c3e1189",
+      "url": "https://arxiv.org/abs/2609.13261",
+      "title": "From Process Loss to Assembly Bonus: Human-Grounded Diagnosis of Multi-Agent LLM Collaboration",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores how multi-agent LLMs collaborate, providing insights into their internal mechanisms and implications for reasoning efficiency and security.",
+      "seenAt": "2026-09-16T02:07:19+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5cb2d7893fae184",
+      "url": "https://arxiv.org/abs/2609.13304",
+      "title": "Conceptualization and experimentation of asset market with price manipulation",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents",
+        "ai-security",
+        "reasoning"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research explores agent behavior and reasoning in manipulated markets, which can inform security and interpretability in LLMs and their deployment.",
+      "seenAt": "2026-09-16T02:07:21+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r77d3c2d1f381dfa",
+      "url": "https://arxiv.org/abs/2609.13890",
+      "title": "Learning How Much to Collaborate: Difficulty-Aware Topology Selection for Multi-Agent Code Generation",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reasoning",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores multi-agent collaboration, which can inform LLM reasoning efficiency and agent security in code generation tasks.",
+      "seenAt": "2026-09-16T02:07:23+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra7c433f27747d4d",
+      "url": "https://arxiv.org/abs/2609.14767",
+      "title": "Loop-Back Authority in LLM Agent Teams: A Paired Experiment on Flat and Hierarchical Coordination",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores coordination in LLM agent teams, relevant for understanding internal mechanisms and improving reasoning efficiency in model deployment.",
+      "seenAt": "2026-09-16T02:07:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r883825ada52983e",
+      "url": "https://arxiv.org/abs/2609.13334",
+      "title": "The Agentic Company OS: Substrate Inversion for Sustained Enterprise Agent Deployment",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents",
+        "llms",
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research discusses deploying agents in enterprises, relevant for understanding LLM security and operational efficiency in production environments.",
+      "seenAt": "2026-09-16T02:07:27+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf426b3e1c66566b",
+      "url": "https://arxiv.org/abs/2609.13561",
+      "title": "A Hybrid Agentic AI Framework for Intelligent Supply Chain Analytics",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "agents",
+        "ai-safety",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "The framework's focus on agentic AI and evaluation methods may provide insights into LLM security and reasoning efficiency in supply chain contexts.",
+      "seenAt": "2026-09-16T02:07:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra8ccd029f2c0089",
+      "url": "https://arxiv.org/abs/2609.13577",
+      "title": "Comparative Framework Analysis for Enterprise Generative AI Applications: Chatbot, Automation, and Oracle-to-PostgreSQL Migration",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "agents",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 49.5,
+      "whyRelevant": "This item provides insights into the deployment and operational challenges of generative AI applications, relevant for understanding LLM security and efficiency in production.",
+      "seenAt": "2026-09-16T02:07:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8dff944158cfc52",
+      "url": "https://arxiv.org/abs/2609.13637",
+      "title": "Identity Is More Than Recall: A Benchmark for Persistent Identity in Deployed AI Agents",
+      "source": "arXiv cs.MA",
+      "section": "benchmark",
+      "topics": [
+        "agents",
+        "ai-security",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This benchmark evaluates persistent identity in AI agents, relevant for understanding LLM behavior, security, and deployment challenges in production environments.",
+      "seenAt": "2026-09-16T02:07:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6e1a87dd3dd9ef3",
+      "url": "https://arxiv.org/abs/2609.13986",
+      "title": "A Low-Latency Interactive System for Real-Time Video Understanding Based on VLMs",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research on low-latency video understanding with VLMs may provide insights into efficient inference and deployment strategies for LLMs in real-time applications.",
+      "seenAt": "2026-09-16T02:07:38+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc5c26da2484c929",
+      "url": "https://arxiv.org/abs/2609.14072",
+      "title": "Multi-Modal Tumor Survival Prediction via Graph-Guided Mixture of Experts",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "multimodal"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores multimodal approaches that could inform LLM interpretability and reasoning, but its direct relevance to LLM security and deployment is limited.",
+      "seenAt": "2026-09-16T02:07:40+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r244bca5acd9d543",
+      "url": "https://arxiv.org/abs/2609.14227",
+      "title": "Enhancing Human Mobility Prediction with Spatially Aware LLM-based Multi-Agent Systems",
+      "source": "arXiv cs.MA",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores LLM-based multi-agent systems, relevant for understanding internal reasoning processes and enhancing inference efficiency in mobility prediction.",
+      "seenAt": "2026-09-16T02:07:42+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9a4805afc25f3cc",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10981",
+      "title": "b10981",
+      "source": "llama.cpp Releases",
+      "section": "security",
+      "topics": [
+        "llms",
+        "inference",
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses security measures for LLMs, which is crucial for understanding their internal workings and ensuring safe deployment in production.",
+      "seenAt": "2026-09-16T02:07:59+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r14336f7ca56961d",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.34.1",
+      "title": "v0.34.1",
+      "source": "Ollama Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "ai-security"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 68.1,
+      "whyRelevant": "This release may include updates relevant to LLM security and deployment, impacting interpretability and inference efficiency in production environments.",
+      "seenAt": "2026-09-16T02:08:04+00:00",
+      "status": "radar"
     }
   ]
 }
