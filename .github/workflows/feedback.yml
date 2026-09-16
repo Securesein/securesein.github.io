@@ -82,7 +82,14 @@ jobs:
       - name: Commit state and Radar changes
         id: commit
         run: |
-          git add state/
+          # A feedback action can mutate an existing Radar item's status
+          # (dismissed, promoted) via radar.set_status/set_feedback — that
+          # lives under src/content/radar/, not state/. Committing state/
+          # alone silently dropped those changes: they'd sit in the
+          # runner's working copy and vanish when the job ends, so a 🗑
+          # or a ⭐ would appear to work (the outcome prints correctly)
+          # without ever actually landing in git.
+          git add state/ src/content/radar/
           if git diff --cached --quiet; then
             echo "Nothing to commit."
             echo "pushed=false" >> "$GITHUB_OUTPUT"
