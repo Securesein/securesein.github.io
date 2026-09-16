@@ -5813,5 +5813,110 @@
     "source": "Claude Code Releases",
     "message_id": 907,
     "cached_at": 1789552917.1046968
+  },
+  "8332ba7ffe9cad61": {
+    "title": "Amazon launches Alexa+ in India with Hindi support",
+    "link": "https://techcrunch.com/2026/09/16/amazon-launches-alexa-in-india-with-hindi-support/",
+    "source": "TechCrunch AI",
+    "message_id": 908,
+    "cached_at": 1789557855.4484444
+  },
+  "2733b2f33d3d9ef7": {
+    "title": "Governing at Machine Speed: An Adaptive Intelligence Architecture for Real-Time AI Policy Enforcement",
+    "link": "https://arxiv.org/abs/2609.13466",
+    "source": "arXiv cs.AI",
+    "message_id": 909,
+    "cached_at": 1789557858.2664266
+  },
+  "ec16863abfc501fb": {
+    "title": "Optimal Model Activation Policies for Inference Networks of Large Language Models",
+    "link": "https://arxiv.org/abs/2609.15992",
+    "source": "arXiv cs.CL",
+    "message_id": 910,
+    "cached_at": 1789557860.5918174
+  },
+  "796e539e95c709e4": {
+    "title": "OmniHarness: Harnessing Generalizable Visual Generation via Symbolic Policy Learning",
+    "link": "https://arxiv.org/abs/2609.16057",
+    "source": "arXiv cs.LG",
+    "message_id": 911,
+    "cached_at": 1789557863.6271012
+  },
+  "8e44700e7ead73b5": {
+    "title": "Hyperbolic Contrastive Learning with Entailment for Spatial Transcriptomics",
+    "link": "https://arxiv.org/abs/2609.16207",
+    "source": "arXiv cs.CV",
+    "message_id": 912,
+    "cached_at": 1789557866.71001
+  },
+  "8ed7a0f4faed007f": {
+    "title": "ScienceBuddy: Recursive-in-Recursive Self-Improvement for Interactive Scientific Agents",
+    "link": "https://arxiv.org/abs/2609.17523",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 913,
+    "cached_at": 1789557869.2367866
+  },
+  "c6cbeb9f9f96e88e": {
+    "title": "Scaling Federated Learning Across Docker, Kubernetes, and Slurm with NVIDIA FLARE",
+    "link": "https://developer.nvidia.com/blog/scaling-federated-learning-across-docker-kubernetes-and-slurm-with-nvidia-flare/",
+    "source": "NVIDIA Technical Blog",
+    "message_id": 914,
+    "cached_at": 1789557871.5665524
+  },
+  "d9a4c9ed77106084": {
+    "title": "Compute-Optimal Pretrain--Fine-tune in Ridge Gradient Descent",
+    "link": "https://arxiv.org/abs/2609.16262",
+    "source": "arXiv stat.ML",
+    "message_id": 915,
+    "cached_at": 1789557874.3613188
+  },
+  "e556504f3ed890a7": {
+    "title": "Scaled Hippocampus-inspired Neural Networks on Neuromorphic Memristive Hardware",
+    "link": "https://arxiv.org/abs/2609.16429",
+    "source": "arXiv cs.NE",
+    "message_id": 916,
+    "cached_at": 1789557877.3126693
+  },
+  "7de1aea2fa7430e1": {
+    "title": "Cheap Talk Stabilizes Strategic Interaction in LLM Agents",
+    "link": "https://arxiv.org/abs/2609.16270",
+    "source": "arXiv cs.MA",
+    "message_id": 917,
+    "cached_at": 1789557880.3399618
+  },
+  "165b58cf195d8a4f": {
+    "title": "rusty-v8-v152.2.0",
+    "link": "https://github.com/openai/codex/releases/tag/rusty-v8-v152.2.0",
+    "source": "OpenAI Codex Releases",
+    "message_id": 918,
+    "cached_at": 1789557882.7562504
+  },
+  "7f48ec8743d3e481": {
+    "title": "Release v0.62.0-nightly.20260916.g6a466a7e2",
+    "link": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.62.0-nightly.20260916.g6a466a7e2",
+    "source": "Gemini CLI Releases",
+    "message_id": 919,
+    "cached_at": 1789557885.5525186
+  },
+  "9263dbbcfaa7421e": {
+    "title": "b10997",
+    "link": "https://github.com/ggml-org/llama.cpp/releases/tag/b10997",
+    "source": "llama.cpp Releases",
+    "message_id": 920,
+    "cached_at": 1789557888.3854392
+  },
+  "6781ccc1bd5e2720": {
+    "title": "proto-v0.2.0: vllm-proto 0.2.0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.2.0",
+    "source": "vLLM Releases",
+    "message_id": 921,
+    "cached_at": 1789557890.966474
+  },
+  "49a3a23fd29dc6b5": {
+    "title": "v0.34.2",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.2-rc0",
+    "source": "Ollama Releases",
+    "message_id": 922,
+    "cached_at": 1789557893.5131066
   }
 }
