@@ -5603,5 +5603,110 @@
     "source": "arXiv cs.MA",
     "message_id": 877,
     "cached_at": 1789495729.175864
+  },
+  "219c439494be37ce": {
+    "title": "Gemini Live audio",
+    "link": "https://simonwillison.net/2026/Sep/15/gemini-live/",
+    "source": "Simon Willison's Weblog",
+    "message_id": 878,
+    "cached_at": 1789538486.076325
+  },
+  "3cc063d7f364d49d": {
+    "title": "University of Manchester Uses NVIDIA Earth-2 to Forecast Air Pollution Across the UK",
+    "link": "https://blogs.nvidia.com/blog/uk-air-pollution-research-earth-2/",
+    "source": "NVIDIA Blog",
+    "message_id": 879,
+    "cached_at": 1789538488.8789647
+  },
+  "daedf8102e84e400": {
+    "title": "We don’t need AI regulation — leave safety to us, Nvidia’s Jensen Huang says",
+    "link": "https://techcrunch.com/2026/09/15/we-dont-need-ai-regulation-leave-safety-to-us-nvidias-jensen-huang-says/",
+    "source": "TechCrunch AI",
+    "message_id": 880,
+    "cached_at": 1789538491.9004047
+  },
+  "e4a1cc240ef3cefd": {
+    "title": "Pony.ai unveils autonomous electric truck for logistics fleets",
+    "link": "https://www.artificialintelligence-news.com/news/pony-ai-autonomous-electric-truck-for-logistics-fleets/",
+    "source": "AI News",
+    "message_id": 881,
+    "cached_at": 1789538494.5538182
+  },
+  "ba720371a661e035": {
+    "title": "Nums AI Releases Causilo: A Tabular Foundation Model That Tops TabArena Among Single Models",
+    "link": "https://www.marktechpost.com/2026/09/15/nums-ai-releases-causilo-a-tabular-foundation-model-that-tops-tabarena-among-single-models/",
+    "source": "MarkTechPost",
+    "message_id": 882,
+    "cached_at": 1789538498.0811968
+  },
+  "997f64b194d71737": {
+    "title": "How I’m Using Google Opal for Even More AI Automations",
+    "link": "https://www.kdnuggets.com/how-im-using-google-opal-for-even-more-ai-automations",
+    "source": "KDnuggets",
+    "message_id": 883,
+    "cached_at": 1789538500.7435384
+  },
+  "b04acfe2b7328f72": {
+    "title": "AI and data centers are incredibly unpopular in every poll",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/995917/data-center-nyt-midterm-poll-september",
+    "source": "The Verge AI",
+    "message_id": 884,
+    "cached_at": 1789538503.653224
+  },
+  "7fe423dcd038c819": {
+    "title": "TimeThink: Eliciting Compositional Reasoning in Timeseries Large Language Models",
+    "link": "https://arxiv.org/abs/2609.13457",
+    "source": "arXiv cs.AI",
+    "message_id": 885,
+    "cached_at": 1789538506.372756
+  },
+  "eecd93b06f4ae9d8": {
+    "title": "Few-Shot Degradation Is Not What It Seems: Behavioral Evidence, Representation Analysis, and a Random-Text Control Across 12 Models, 2 Tasks, and 2 Architectures",
+    "link": "https://arxiv.org/abs/2609.15990",
+    "source": "arXiv cs.CL",
+    "message_id": 886,
+    "cached_at": 1789538509.0161443
+  },
+  "b78aff165c11dfdb": {
+    "title": "Causal neural set filtering for online multi-target tracking",
+    "link": "https://arxiv.org/abs/2609.16054",
+    "source": "arXiv cs.LG",
+    "message_id": 887,
+    "cached_at": 1789538511.827919
+  },
+  "f875a5069f5931a8": {
+    "title": "MechReason: Benchmarking Multi-Image Multi-Hop Reasoning in Mechanical Engineering",
+    "link": "https://arxiv.org/abs/2609.16012",
+    "source": "arXiv cs.CV",
+    "message_id": 888,
+    "cached_at": 1789538514.3651547
+  },
+  "32a375aa5968d9b2": {
+    "title": "Continual Learning Mechanisms Compose for Long-Horizon Memorization",
+    "link": "https://arxiv.org/abs/2609.06986",
+    "source": "Hugging Face Daily Papers",
+    "message_id": 889,
+    "cached_at": 1789538517.4346938
+  },
+  "f174ca4a3cbc866f": {
+    "title": "Bypassing inference bottlenecks: Accelerating complex AI search with Retrieve-for-Train",
+    "link": "https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/",
+    "source": "Google Research Blog",
+    "message_id": 890,
+    "cached_at": 1789538520.2433376
+  },
+  "50f1fa34d3c31e12": {
+    "title": "AI for everyone in every language",
+    "link": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+    "source": "Google AI Blog",
+    "message_id": 891,
+    "cached_at": 1789538522.5554209
+  },
+  "9f5cdbd17d949bef": {
+    "title": "Announcing instance preference lists for Amazon SageMaker AI training jobs",
+    "link": "https://aws.amazon.com/blogs/machine-learning/announcing-instance-preference-lists-for-amazon-sagemaker-ai-training-jobs/",
+    "source": "AWS Machine Learning Blog",
+    "message_id": 892,
+    "cached_at": 1789538525.0311084
   }
 }
