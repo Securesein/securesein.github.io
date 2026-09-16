@@ -30,6 +30,19 @@ on:
         type: number
         default: 15
 
+# All five channel-ish workflows share mutable files under state/
+# (ledger.json, queue.json, rejected.jsonl) and the radar collection —
+# not just append-only logs, but JSON structures two runs can both
+# create or reshape at once. The push-retry in the commit step handles
+# an append-only collision by rebasing; it CANNOT handle two runs both
+# creating state/ledger.json for the first time in the same few
+# seconds, which is a real structural conflict, not a fast-forward.
+# Queueing here is the actual fix — cancel-in-progress: false means a
+# second run waits its turn rather than losing its work or racing.
+concurrency:
+  group: securesein-pipeline-write
+  cancel-in-progress: false
+
 permissions:
   contents: write
   actions: write
