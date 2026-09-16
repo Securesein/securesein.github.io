@@ -1,0 +1,15 @@
+# state/*.jsonl are append-only logs — every channel writes to the same
+# handful of files (rejected.jsonl, feedback.jsonl, unresolved_models.jsonl),
+# and by default git cannot tell "two sides both appended a new line" from
+# "two sides both edited the same line": its 3-way merge sees both diffs as
+# touching the region right after the last common line and conflicts,
+# even though the actual intent on both sides is just "add a line at the
+# end" (reproduced and confirmed locally — a plain rebase/merge conflicts on
+# this exact case). `merge=union` is git's built-in driver for this: for a
+# genuinely append-only file it keeps both sides' new lines instead of
+# conflicting. It is a second, more targeted layer under the
+# concurrency: group already serializing the five channel workflows — that
+# stops simultaneous writes from happening at all; this stops the narrow
+# race window around a job's own checkout timing from still conflicting on
+# a file where a conflict was never actually warranted.
+state/*.jsonl merge=union
