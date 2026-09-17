@@ -522,6 +522,8 @@
     "hf:tencent/WeMM-Embedding-2B",
     "hf:tencent/WeMM-Embedding-4B",
     "hf:tencent/WeMM-Embedding-9B",
+    "hf:tencent/WeVisDoc-2B",
+    "hf:tencent/WeVisDoc-4B",
     "hf:zai-org/AutoGLM-Phone-9B",
     "hf:zai-org/AutoGLM-Phone-9B-Multilingual",
     "hf:zai-org/GLM-4.6V",
