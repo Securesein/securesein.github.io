@@ -10044,6 +10044,21 @@
       "whyRelevant": "This research explores adaptive runtime and inference strategies for agents, relevant for understanding LLM efficiency and deployment in production environments.",
       "seenAt": "2026-09-17T06:20:22+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r4c73f75314797bf",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11013",
+      "title": "b11013",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve security and efficiency in deployment.",
+      "seenAt": "2026-09-17T10:16:51+00:00",
+      "status": "radar"
     }
   ]
 }
