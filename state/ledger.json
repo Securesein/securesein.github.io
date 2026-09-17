@@ -15,6 +15,22 @@
       "publishedAt": "2026-09-17T06:22:29+00:00",
       "qualityScore": 100.0,
       "relevanceScore": 61.3
+    },
+    {
+      "slug": "challenging-ai-claims-a-new-protocol-for-transparent-and-falsifiable-records",
+      "section": "research",
+      "channel": "research",
+      "publishedAt": "2026-09-17T14:16:23+00:00",
+      "qualityScore": 100.0,
+      "relevanceScore": 65.2
+    },
+    {
+      "slug": "unmasking-the-automaton-how-additive-input-pathways-skew-state-tracking-in-linear-rnns",
+      "section": "research",
+      "channel": "research",
+      "publishedAt": "2026-09-17T14:20:50+00:00",
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2
     }
   ]
 }
