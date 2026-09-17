@@ -31,6 +31,14 @@
       "publishedAt": "2026-09-17T14:20:50+00:00",
       "qualityScore": 100.0,
       "relevanceScore": 63.2
+    },
+    {
+      "slug": "fortifying-industrial-safety-ai-with-synthetic-data-on-amazon-sagemaker",
+      "section": "security",
+      "channel": "security",
+      "publishedAt": "2026-09-17T18:18:47+00:00",
+      "qualityScore": 80.0,
+      "relevanceScore": 11.2
     }
   ]
 }

@@ -10061,6 +10061,87 @@
       "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve security and efficiency in deployment.",
       "seenAt": "2026-09-17T10:16:51+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r50ae7c32754eac7",
+      "url": "https://machinelearning.apple.com/research/reversal-bench-rl-cliff",
+      "title": "REVERSAL-BENCH: A Reversibility Axis and Reset Oracle for Measuring the Reset-Free RL Cliff",
+      "source": "Apple Machine Learning Research",
+      "section": "benchmark",
+      "topics": [
+        "reinforcement-learning",
+        "evaluation"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 40.1,
+      "whyRelevant": "This item provides insights into evaluation metrics that could inform the development of more interpretable and efficient reinforcement learning models.",
+      "seenAt": "2026-09-17T18:17:02+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra6a39cb7eefe8f1",
+      "url": "https://aws.amazon.com/blogs/machine-learning/selecting-a-vector-store-for-amazon-bedrock-knowledge-bases/",
+      "title": "Selecting a vector store for Amazon Bedrock Knowledge Bases",
+      "source": "AWS Machine Learning Blog",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "evaluation",
+        "generative-ai"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 67.2,
+      "whyRelevant": "This item discusses evaluating vector stores, which is crucial for optimizing LLM performance and inference efficiency in production environments.",
+      "seenAt": "2026-09-17T18:17:06+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r52856cb84e76c8f",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-mrh-trowe-enabled-secure-self-service-ai-agents-in-financial-services/",
+      "title": "How MRH Trowe enabled secure self-service AI agents in financial services",
+      "source": "AWS Machine Learning Blog",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 44.6,
+      "whyRelevant": "This article discusses security measures for AI agents, relevant for understanding LLM security and deployment in sensitive environments like financial services.",
+      "seenAt": "2026-09-17T18:17:12+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb328c9a2ac1d20f",
+      "url": "https://aws.amazon.com/blogs/machine-learning/implementing-defense-in-depth-authorization-for-mcp-tools-on-amazon-quick/",
+      "title": "Implementing defense-in-depth authorization for MCP tools on Amazon Quick",
+      "source": "AWS Machine Learning Blog",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 44.6,
+      "whyRelevant": "This item discusses security measures relevant to deploying and serving models, particularly in protecting LLMs and agents from unauthorized access.",
+      "seenAt": "2026-09-17T18:17:14+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r012857c2159ffdb",
+      "url": "https://aws.amazon.com/blogs/machine-learning/enhancing-industrial-safety-ai-with-synthetic-data-on-amazon-sagemaker-ai/",
+      "title": "Enhancing industrial safety AI with synthetic data on Amazon SageMaker AI",
+      "source": "AWS Machine Learning Blog",
+      "section": "security",
+      "topics": [
+        "ai-safety"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "The use of synthetic data for AI safety can inform LLM security practices and improve reasoning efficiency in production environments.",
+      "seenAt": "2026-09-17T18:17:17+00:00",
+      "status": "promoted",
+      "promotedTo": "fortifying-industrial-safety-ai-with-synthetic-data-on-amazon-sagemaker"
     }
   ]
 }
