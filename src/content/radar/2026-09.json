@@ -10188,6 +10188,22 @@
       "whyRelevant": "This release addresses memory management during inference, which is crucial for optimizing reasoning efficiency and ensuring security in LLM deployments.",
       "seenAt": "2026-09-17T22:02:50+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r2d2129e34a83132",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.34.2",
+      "title": "v0.34.2",
+      "source": "Ollama Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 68.1,
+      "whyRelevant": "This release may include updates relevant to LLM inference efficiency and security, impacting how models are deployed and interpreted in production.",
+      "seenAt": "2026-09-17T22:16:56+00:00",
+      "status": "radar"
     }
   ]
 }
