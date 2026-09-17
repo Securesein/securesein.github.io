@@ -1,3 +1,20 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "slug": "bridge-over-troubled-layers-multi-agent-detection-of-logic-vulnerabilities-in-blockchain-iot",
+      "section": "security",
+      "channel": "security",
+      "publishedAt": "2026-09-17T06:21:15+00:00",
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0
+    },
+    {
+      "slug": "reflections-on-trusting-trust-revisited-the-threat-of-poisoned-benchmarks-in-self-modifying-ai-coding-agents",
+      "section": "security",
+      "channel": "security",
+      "publishedAt": "2026-09-17T06:22:29+00:00",
+      "qualityScore": 100.0,
+      "relevanceScore": 61.3
+    }
+  ]
 }

@@ -1744,6 +1744,132 @@
       "qualityScore": 100.0,
       "relevanceScore": 39.0,
       "whyRelevant": "This research explores LLMs for real-time code generation in robotic swarms, relevant for understanding LLMs' internal mechanisms and their application in agent security."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-17T06:22:29+00:00",
+      "score": 56.5,
+      "url": "https://arxiv.org/abs/2609.17648",
+      "title": "Trust propagation and structural containment in Multi-agent LLM pipelines",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "llms"
+      ],
+      "candidateId": "r8e49b2c8675e287",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item discusses security in multi-agent LLM systems, relevant for understanding internal mechanisms and ensuring safe deployment in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-17T06:22:29+00:00",
+      "score": 56.2,
+      "url": "https://arxiv.org/abs/2609.18158",
+      "title": "Bridging the Opacity: Evidence-Backed Cross-Chain Transaction Correspondence Reconstruction Across Heterogeneous Blockchains",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r1f2b23a28f1adb3",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "This item discusses security in cross-chain transactions, which may indirectly inform LLM security and inference efficiency in decentralized systems."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-17T06:22:29+00:00",
+      "score": 54.6,
+      "url": "https://arxiv.org/abs/2609.18820",
+      "title": "Compositional Policy Violations: When Step-Level Compliance Fails In Agentic AI Workflows",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "candidateId": "r793d1363ef56995",
+      "qualityScore": 100.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This item discusses compliance failures in AI workflows, relevant for understanding security risks and reasoning inefficiencies in deploying agent-based LLMs."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-17T06:22:29+00:00",
+      "score": 53.2,
+      "url": "https://arxiv.org/abs/2609.18120",
+      "title": "PentestChain: A Cost-Aware, MCP-Orchestrated Framework for Automated Penetration Testing with Free-Tier LLMs",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "evaluation"
+      ],
+      "candidateId": "r7e2131649393039",
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This framework offers insights into securing LLMs and agents, relevant for understanding vulnerabilities and improving inference efficiency in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-17T06:22:29+00:00",
+      "score": 52.7,
+      "url": "https://arxiv.org/abs/2609.18122",
+      "title": "\"Your Robot Was Trained on a Lie\": Collision Mesh Poisoning Attacks on Robotic Manipulation",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r78777f77a554bcb",
+      "qualityScore": 100.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This article discusses security vulnerabilities in AI systems, relevant for understanding risks in LLM deployment and ensuring robust model performance in production."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-17T06:22:29+00:00",
+      "score": 52.7,
+      "url": "https://arxiv.org/abs/2609.18275",
+      "title": "Witness Encryption via Prime-Order Generic Groups",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "rcc1a16e43eda48d",
+      "qualityScore": 100.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses encryption methods that could enhance security in LLMs, relevant for understanding vulnerabilities and improving model deployment."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-17T06:22:29+00:00",
+      "score": 44.6,
+      "url": "https://arxiv.org/abs/2609.18411",
+      "title": "The Verifiable Action Card: Trustworthy Human-in-the-Loop Control for Secure Autonomous Agents",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "candidateId": "rb8b4ed272ed8e82",
+      "qualityScore": 100.0,
+      "relevanceScore": 44.6,
+      "whyRelevant": "This item discusses human-in-the-loop control for autonomous agents, relevant for understanding security and interpretability in LLMs and their deployment."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-17T06:22:29+00:00",
+      "score": 42.7,
+      "url": "https://arxiv.org/abs/2609.17635",
+      "title": "Physics-Constrained Digital Twins for Sensor Integrity in Urban Pedestrian Flow: Detecting Stealthy False Data Injection with Conformal Guarantees",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r6021753d5a9640b",
+      "qualityScore": 100.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This item discusses security measures relevant to ensuring data integrity in AI systems, which is crucial for deploying reliable LLMs in production."
     }
   ]
 }
