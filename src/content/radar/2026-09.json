@@ -8360,8 +8360,8 @@
         "evaluation"
       ],
       "qualityScore": 65.0,
-      "relevanceScore": 56.5,
-      "whyRelevant": "This item discusses optimizing prompts for agent systems, which can enhance reasoning efficiency and improve LLM performance in production environments.",
+      "relevanceScore": 53.2,
+      "whyRelevant": "This item discusses optimizing prompts for agent systems, which relates to improving reasoning efficiency and security in LLM deployments.",
       "seenAt": "2026-09-16T18:04:22+00:00",
       "status": "radar"
     },
@@ -8374,9 +8374,9 @@
       "topics": [
         "ai-security"
       ],
-      "qualityScore": 80.0,
+      "qualityScore": 65.0,
       "relevanceScore": 42.7,
-      "whyRelevant": "This item discusses security measures relevant to deploying LLMs, particularly in handling sensitive data, which intersects with agent security and operational efficiency.",
+      "whyRelevant": "This item discusses security measures relevant to deploying LLMs, particularly in handling sensitive data, which is crucial for safe model inference and production.",
       "seenAt": "2026-09-16T18:04:24+00:00",
       "status": "radar"
     },
@@ -8408,7 +8408,7 @@
         "generative-ai"
       ],
       "qualityScore": 70.0,
-      "relevanceScore": 66.2,
+      "relevanceScore": 67.2,
       "whyRelevant": "This research explores reinforcement learning techniques in diffusion language models, which may enhance understanding of LLM behavior and improve inference efficiency.",
       "seenAt": "2026-09-16T22:02:08+00:00",
       "status": "radar"
@@ -8426,7 +8426,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 46.5,
-      "whyRelevant": "This research explores open-source agent skills that enhance reasoning, relevant for understanding LLMs' internal mechanisms and improving inference efficiency in production.",
+      "whyRelevant": "This research explores open-source agent skills that enhance reasoning, relevant for understanding LLM internals and improving inference efficiency in production.",
       "seenAt": "2026-09-16T22:02:12+00:00",
       "status": "radar"
     },
@@ -8443,8 +8443,88 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This item discusses distributed training, which is relevant for understanding LLM efficiency and security in production environments.",
+      "whyRelevant": "This item discusses distributed training techniques relevant for improving efficiency and security in deploying large language models in production environments.",
       "seenAt": "2026-09-16T22:02:14+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r7d96a9dae841d31",
+      "url": "https://simonwillison.net/2026/Sep/16/datasette/",
+      "title": "datasette 1.0a40",
+      "source": "Simon Willison's Weblog",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 75.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "Datasette 1.0a40's focus on security can inform best practices for deploying open-weight models and ensuring safe local inference in production environments.",
+      "seenAt": "2026-09-17T02:02:19+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r4b357b5b36e881f",
+      "url": "https://simonwillison.net/2026/Sep/16/datasette-2/",
+      "title": "datasette 0.65.5",
+      "source": "Simon Willison's Weblog",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "Datasette 0.65.5 offers security features relevant for deploying and serving open-weight models, ensuring safe local inference and data management.",
+      "seenAt": "2026-09-17T02:02:21+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r900c06917b29dc1",
+      "url": "https://arxiv.org/abs/2609.18011",
+      "title": "Gaze as Evidence for Common Grounding: A Cross-Corpus Analysis of MapTask and MUNDEX",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "interpretability",
+        "agents"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 65.2,
+      "whyRelevant": "This research explores reasoning and interpretability in agent interactions, which can inform the development of more secure and efficient LLMs.",
+      "seenAt": "2026-09-17T02:02:53+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r37d97ccaa65b15e",
+      "url": "https://arxiv.org/abs/2609.18805",
+      "title": "ProgramDistill: From Interactive Web Apps to Verifiable Reference-Guided SWE Tasks",
+      "source": "Hugging Face Daily Papers",
+      "section": "benchmark",
+      "topics": [
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 44.6,
+      "whyRelevant": "This item discusses evaluation benchmarks for agents, which can inform understanding of LLM performance and security in production environments.",
+      "seenAt": "2026-09-17T02:02:55+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5f9e60a4c699965",
+      "url": "https://machinelearning.apple.com/research/glyph-column-description-tagging",
+      "title": "Glyph: A Multi-Strategy Agentic System for Column Description and Sensitivity-Ontology Tagging of Enterprise Data Catalogs",
+      "source": "Apple Machine Learning Research",
+      "section": "release",
+      "topics": [
+        "agents",
+        "llms",
+        "training"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 25.0,
+      "whyRelevant": "This item discusses an agentic system that may provide insights into LLM behavior and deployment strategies, relevant for understanding model interpretability and security.",
+      "seenAt": "2026-09-17T02:02:57+00:00",
       "status": "radar"
     }
   ]
