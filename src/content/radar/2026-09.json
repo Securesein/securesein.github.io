@@ -10074,7 +10074,7 @@
       ],
       "qualityScore": 80.0,
       "relevanceScore": 40.1,
-      "whyRelevant": "This item provides insights into evaluation metrics that could inform the development of more interpretable and efficient reinforcement learning models.",
+      "whyRelevant": "This benchmark provides insights into reinforcement learning dynamics, which can inform the interpretability and efficiency of LLMs in decision-making processes.",
       "seenAt": "2026-09-17T18:17:02+00:00",
       "status": "radar"
     },
@@ -10089,9 +10089,9 @@
         "evaluation",
         "generative-ai"
       ],
-      "qualityScore": 65.0,
-      "relevanceScore": 67.2,
-      "whyRelevant": "This item discusses evaluating vector stores, which is crucial for optimizing LLM performance and inference efficiency in production environments.",
+      "qualityScore": 80.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item provides insights on evaluating vector stores, which is crucial for optimizing LLM performance and inference efficiency in production environments.",
       "seenAt": "2026-09-17T18:17:06+00:00",
       "status": "radar"
     },
@@ -10107,7 +10107,7 @@
       ],
       "qualityScore": 65.0,
       "relevanceScore": 44.6,
-      "whyRelevant": "This article discusses security measures for AI agents, relevant for understanding LLM security and deployment in sensitive environments like financial services.",
+      "whyRelevant": "This article discusses security measures for AI agents, relevant for understanding LLM vulnerabilities and enhancing secure deployment in financial services.",
       "seenAt": "2026-09-17T18:17:12+00:00",
       "status": "radar"
     },
@@ -10142,6 +10142,52 @@
       "seenAt": "2026-09-17T18:17:17+00:00",
       "status": "promoted",
       "promotedTo": "fortifying-industrial-safety-ai-with-synthetic-data-on-amazon-sagemaker"
+    },
+    {
+      "id": "rf2ee7e4ba4c5e7d",
+      "url": "https://simonwillison.net/2026/Sep/17/compaction-summaries/",
+      "title": "Self-generated prompt injections in compaction summaries",
+      "source": "Simon Willison's Weblog",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This item discusses security vulnerabilities in LLMs, relevant for understanding internal mechanisms and improving inference efficiency in production environments.",
+      "seenAt": "2026-09-17T22:01:57+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3e9fb9d6f4c1e6b",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.34.2-rc3",
+      "title": "v0.34.2",
+      "source": "Ollama Releases",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This release may include updates relevant to LLM architecture and security, impacting mechanistic interpretability and inference efficiency in production environments.",
+      "seenAt": "2026-09-17T22:02:48+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r858d43f03dadcef",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.34.2-rc2",
+      "title": "v0.34.2-rc2: mlxrunner: Release freed KV buffers during speculative decode",
+      "source": "Ollama Releases",
+      "section": "security",
+      "topics": [
+        "inference",
+        "ai-security"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 58.1,
+      "whyRelevant": "This release addresses memory management during inference, which is crucial for optimizing reasoning efficiency and ensuring security in LLM deployments.",
+      "seenAt": "2026-09-17T22:02:50+00:00",
+      "status": "radar"
     }
   ]
 }
