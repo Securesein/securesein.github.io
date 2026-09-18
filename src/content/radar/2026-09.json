@@ -9327,7 +9327,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 60.0,
-      "whyRelevant": "This research on per-query read depth in sparse decoding can enhance understanding of LLM efficiency and inference mechanisms, relevant for model deployment and security.",
+      "whyRelevant": "This research addresses inference efficiency in LLMs by optimizing sparse decoding, relevant for understanding internal mechanisms and improving model deployment.",
       "seenAt": "2026-09-17T06:18:49+00:00",
       "status": "radar"
     },
@@ -10268,7 +10268,7 @@
       ],
       "qualityScore": 80.0,
       "relevanceScore": 63.2,
-      "whyRelevant": "This research explores gradient-based planning in reinforcement learning, which can enhance understanding of LLMs' internal decision-making and improve inference efficiency.",
+      "whyRelevant": "This research explores gradient-based planning in world models, relevant for understanding LLMs' internal mechanisms and enhancing reasoning efficiency in agent-based systems.",
       "seenAt": "2026-09-18T02:01:41+00:00",
       "status": "radar"
     },
@@ -10284,8 +10284,8 @@
         "deep-learning"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 56.5,
-      "whyRelevant": "Understanding word2vec's learning mechanisms can enhance insights into LLMs' internal representations and improve reasoning efficiency in model deployment.",
+      "relevanceScore": 66.2,
+      "whyRelevant": "This article provides insights into the internal mechanisms of word2vec, which can enhance understanding of LLM interpretability and foundational ML concepts.",
       "seenAt": "2026-09-18T02:01:47+00:00",
       "status": "radar"
     },
@@ -10302,7 +10302,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 39.0,
-      "whyRelevant": "This study may provide insights into agent design that could inform security and efficiency in deploying LLMs, though its relevance to LLM internals is limited.",
+      "whyRelevant": "This study may provide insights into agent design and evaluation, relevant for understanding LLM behavior and improving security and efficiency in deployment.",
       "seenAt": "2026-09-18T02:01:58+00:00",
       "status": "radar"
     },
@@ -10317,8 +10317,246 @@
       ],
       "qualityScore": 70.0,
       "relevanceScore": 42.7,
-      "whyRelevant": "This release may include updates relevant to AI security, impacting LLM deployment and inference efficiency, but lacks specific details on mechanistic interpretability or internal workings.",
+      "whyRelevant": "This release may include updates relevant to AI security, impacting how LLMs are deployed and ensuring their interpretability and inference efficiency.",
       "seenAt": "2026-09-18T02:02:02+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbf5703089f50f5c",
+      "url": "https://arxiv.org/abs/2609.17545",
+      "title": "Selective Prediction and Uncertainty-Aware Referral for Pap Smear Classification",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "evaluation",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This research on uncertainty-aware models may inform LLM safety and inference efficiency, but its direct relevance to LLMs and mechanistic interpretability is limited.",
+      "seenAt": "2026-09-18T02:16:53+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb079f387b4ce38e",
+      "url": "https://arxiv.org/abs/2609.17565",
+      "title": "A Heisenberg Lift Descriptor for Order Sensitive Online Handwriting Recognition",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "interpretability",
+        "deep-learning",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "This research on handwriting recognition may offer insights into interpretability and evaluation methods relevant to understanding LLMs and their internal mechanisms.",
+      "seenAt": "2026-09-18T02:16:55+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc3fb88f0a9bb6b4",
+      "url": "https://arxiv.org/abs/2609.17566",
+      "title": "Adaptive Interpolatory Curve Subdivision with Learned Local Angles",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "generative-ai",
+        "evaluation"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research may provide insights into generative models' internal mechanisms, potentially enhancing understanding of LLMs' reasoning and inference efficiency.",
+      "seenAt": "2026-09-18T02:16:57+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8b86a26c3532a66",
+      "url": "https://arxiv.org/abs/2609.17613",
+      "title": "DualCount: Structurally Consistent Density and Point Modeling for Zero-Shot Object Counting",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "deep-learning",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research on object counting may provide insights into multimodal model evaluation, relevant for understanding LLMs' internal mechanisms and improving inference efficiency.",
+      "seenAt": "2026-09-18T02:16:59+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9e3c60f90b50a44",
+      "url": "https://arxiv.org/abs/2609.17740",
+      "title": "Geometry-Driven Shadow Harmonisation for Composited Faces: A Multiplicative, Albedo-Preserving Relighting Pipeline",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "deep-learning",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research on relighting techniques may offer insights into generative model behavior, relevant for understanding LLMs' internal mechanisms and improving inference efficiency.",
+      "seenAt": "2026-09-18T02:17:02+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9395da380a86d79",
+      "url": "https://arxiv.org/abs/2609.17749",
+      "title": "How to make effective use of domain experts for image classification?",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This item is less relevant as it focuses on image classification rather than LLMs, mechanistic interpretability, or model deployment.",
+      "seenAt": "2026-09-18T02:17:04+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r4cfca0e4f941dc3",
+      "url": "https://arxiv.org/abs/2609.17753",
+      "title": "Beyond Performance Metrics: Uncertainty Mapping of Label Ambiguity in Fazekas Score Prediction",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "evaluation",
+        "training",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 32.0,
+      "whyRelevant": "This research on uncertainty mapping may provide insights into model evaluation and safety, relevant for understanding LLM performance and interpretability.",
+      "seenAt": "2026-09-18T02:17:06+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6b6d9fa18c26c5d",
+      "url": "https://arxiv.org/abs/2609.17790",
+      "title": "Not All Patches Are Equally Forgettable: Spatially Localized Domain Unlearning in Vision-Language Models",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 32.0,
+      "whyRelevant": "This research on domain unlearning in vision-language models may provide insights into model behavior and efficiency, relevant for understanding LLMs and their interpretability.",
+      "seenAt": "2026-09-18T02:17:08+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r16968e460382554",
+      "url": "https://arxiv.org/abs/2609.17800",
+      "title": "AgenTeeth: A Model-Agnostic Framework for Suppressing Hallucination in Frozen Vision-Language Models on Dental X-Rays via Tool Evidence Injection",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 39.0,
+      "whyRelevant": "This research explores hallucination suppression in vision-language models, relevant for understanding LLM behavior and improving inference efficiency in practical applications.",
+      "seenAt": "2026-09-18T02:17:10+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3c0c58ae75b55c3",
+      "url": "https://arxiv.org/abs/2609.17810",
+      "title": "Wind on Trees: Testing Physical Grounding in Dynamic 4D Gaussian Splatting",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "ai-safety",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores grounding in dynamic environments, which can inform LLM interpretability and security by examining how models interact with physical contexts.",
+      "seenAt": "2026-09-18T02:17:13+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb04742c85b5f175",
+      "url": "https://arxiv.org/abs/2609.17814",
+      "title": "GazeDiT: Gaze-Accurate Diffusion Image Generation for Eye Tracking via Spatial Conditioning",
+      "source": "arXiv cs.CV",
+      "section": "release",
+      "topics": [
+        "generative-ai",
+        "llms",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 39.0,
+      "whyRelevant": "This item is relevant for understanding spatial conditioning in generative models, which can inform mechanisms of interpretability and efficiency in LLMs.",
+      "seenAt": "2026-09-18T02:17:15+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r28e988e242be69c",
+      "url": "https://arxiv.org/abs/2609.17820",
+      "title": "CALIPER: Metric-Grounded Model-Free Recognition of Visually Similar Industrial Parts",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "deep-learning",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research on metric-grounded recognition may inform LLMs' visual reasoning capabilities and enhance interpretability in multimodal applications.",
+      "seenAt": "2026-09-18T02:17:18+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2644a83e44da383",
+      "url": "https://arxiv.org/abs/2609.17843",
+      "title": "RoboVAD: A Large Cross-Domain Evaluation Benchmark for Anomaly Detection in Robotic Arm Manipulation Videos",
+      "source": "arXiv cs.CV",
+      "section": "benchmark",
+      "topics": [
+        "ai-security",
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 90.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This benchmark aids in evaluating anomaly detection in robotic systems, relevant for understanding LLMs' operational contexts and enhancing security in agent deployment.",
+      "seenAt": "2026-09-18T02:17:20+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb7fdabb65bb975c",
+      "url": "https://arxiv.org/abs/2609.17868",
+      "title": "Lumen: Parameter-Efficient Alignment of Pretrained Vision and Language Encoders for Zero-Shot Computational Pathology",
+      "source": "arXiv cs.CV",
+      "section": "release",
+      "topics": [
+        "multimodal",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item explores parameter-efficient methods for aligning vision and language models, relevant for understanding LLMs' internal mechanisms and improving inference efficiency.",
+      "seenAt": "2026-09-18T02:17:22+00:00",
       "status": "radar"
     }
   ]
