@@ -12335,6 +12335,36 @@
       "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve deployment strategies in production environments.",
       "seenAt": "2026-09-18T10:02:57+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r827736ff96e4a03",
+      "url": "https://blog.trailofbits.com/2026/09/18/auditing-in-the-age-of-good-enough-ai/",
+      "title": "Auditing in the age of (good enough) AI",
+      "source": "Trail of Bits — Blog",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "The article discusses AI security measures that can inform the deployment and serving of open-weight models in production, relevant to LLM safety.",
+      "seenAt": "2026-09-18T14:02:18+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r72a147bca7dea9c",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-inference-gateway/",
+      "title": "Introducing Amazon SageMaker HyperPod Inference Gateway",
+      "source": "AWS Machine Learning Blog",
+      "section": "benchmark",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "The Amazon SageMaker HyperPod Inference Gateway enhances model deployment efficiency, which is crucial for optimizing LLM performance and security in production environments.",
+      "seenAt": "2026-09-18T14:02:36+00:00",
+      "status": "radar"
     }
   ]
 }
