@@ -12398,6 +12398,38 @@
       "whyRelevant": "This item provides practical guidance on deploying open-weight models, which is relevant for understanding LLMs' internal workings and ensuring security in production.",
       "seenAt": "2026-09-18T18:17:06+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r56c9254caa70976",
+      "url": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-inference-2026-year-to-date-launches-in-review/",
+      "title": "Amazon SageMaker Inference: 2026 year-to-date launches in review",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "inference"
+      ],
+      "qualityScore": 75.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "This review provides insights into Amazon SageMaker's inference capabilities, relevant for understanding deployment and serving of models in production.",
+      "seenAt": "2026-09-18T22:16:19+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rcf8547c2473962f",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11044",
+      "title": "b11044",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "deep-learning",
+        "inference"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses advancements in LLM inference, relevant for understanding internal mechanisms and improving efficiency in deploying models securely.",
+      "seenAt": "2026-09-18T22:16:22+00:00",
+      "status": "radar"
     }
   ]
 }
