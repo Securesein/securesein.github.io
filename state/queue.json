@@ -3997,6 +3997,292 @@
       "qualityScore": 100.0,
       "relevanceScore": 25.2,
       "whyRelevant": "This research on reinforcement learning may provide insights into stability and efficiency in training models, relevant for understanding LLMs and their deployment."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 70.0,
+      "url": "https://arxiv.org/abs/2609.19241",
+      "title": "Robust Conformal Intrusion Detection via Traffic-Aware Calibration and Attack-Orbit Invariance",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "llms",
+        "evaluation"
+      ],
+      "candidateId": "rdb25db8e8389987",
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses security measures relevant to LLMs, focusing on intrusion detection, which is crucial for ensuring safe deployment and operation in production."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 63.2,
+      "url": "https://arxiv.org/abs/2609.19226",
+      "title": "PAPC: Platform Mediation for Privacy-Propagation Externalities in AI-Mediated Workflows",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "llms"
+      ],
+      "candidateId": "rfaeca8215ddb540",
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item discusses security implications in AI workflows, relevant for understanding LLM vulnerabilities and enhancing mechanistic interpretability in model deployment."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 63.2,
+      "url": "https://arxiv.org/abs/2609.19722",
+      "title": "ALIBI: Adversarial Legitimacy Injection in Binary Input against LLM Malware Analyzers",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "llms",
+        "reasoning"
+      ],
+      "candidateId": "rf3c9ca4766aed42",
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item discusses security measures against LLM malware, relevant for understanding vulnerabilities and enhancing the robustness of LLMs in production."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 63.2,
+      "url": "https://arxiv.org/abs/2609.19391",
+      "title": "MAGS: Multi-agent Auto-formalization Guarantees Safety for Agentic Outputs",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security",
+        "generative-ai"
+      ],
+      "candidateId": "rb2432d7a7b4ab2f",
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item discusses safety in multi-agent systems, relevant for understanding LLM security and ensuring reliable agent outputs in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 61.3,
+      "url": "https://arxiv.org/abs/2609.19587",
+      "title": "Red-Teaming Auto Mode: Improving Blocking Classifiers Against Malign Coding Agents",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents"
+      ],
+      "candidateId": "r69217f5285b638e",
+      "qualityScore": 100.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This item discusses enhancing classifiers to secure against malicious agents, relevant for understanding LLM vulnerabilities and improving model safety in production."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 59.4,
+      "url": "https://arxiv.org/abs/2609.19353",
+      "title": "Scaling Zero Knowledge UNSAT Verification via Normalized Chaining",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r3055adb32e2d38d",
+      "qualityScore": 100.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item discusses verification methods that could enhance security in LLMs, relevant for understanding internal mechanisms and improving inference efficiency."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 59.4,
+      "url": "https://arxiv.org/abs/2609.19844",
+      "title": "Trust, but Validate the Instrument: Auditing AI-Generated RTL Verification Plans on Authored Security-Regression Proxies",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r6336d5911067ad8",
+      "qualityScore": 100.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item discusses auditing AI-generated plans, which is relevant for understanding LLM security and ensuring reliable inference in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 59.4,
+      "url": "https://arxiv.org/abs/2609.19893",
+      "title": "Hopper: Bounded-Memory Collaborative Debiasing for Byzantine-Tolerant Peer Sampling",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "rc9e7e11befa5139",
+      "qualityScore": 100.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item discusses collaborative debiasing methods relevant for ensuring security and reliability in distributed LLM systems, which is crucial for safe model deployment."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 56.5,
+      "url": "https://arxiv.org/abs/2609.19425",
+      "title": "Closed-World Resolution Against Tool Hallucination in LLM Agents",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "llms"
+      ],
+      "candidateId": "r5cd303785644686",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item discusses methods to enhance LLM agent reliability, directly addressing security concerns and inference accuracy in mechanistic interpretability and deployment contexts."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 56.2,
+      "url": "https://arxiv.org/abs/2609.19456",
+      "title": "Beyond Private Training: The New Landscape of AI Privacy",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r2acfcb3c4bc7756",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "This item discusses AI privacy, which is crucial for understanding security implications in deploying and serving open-weight models and ensuring their interpretability."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 56.2,
+      "url": "https://arxiv.org/abs/2609.19720",
+      "title": "Reachability, Not Observation: Containing Systems Whose Wiring Changes",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "rbc9c9241d2913fa",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "This item discusses security measures for dynamic systems, relevant for understanding LLM vulnerabilities and ensuring safe deployment in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 54.6,
+      "url": "https://arxiv.org/abs/2609.19705",
+      "title": "SoK: Trading Agents or Market Crashers? Dissecting Robustness and Security Failures in Academic Financial LLM Trading Schemes",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "candidateId": "r699bf7486853131",
+      "qualityScore": 100.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This item examines security failures in financial LLM trading agents, relevant for understanding robustness and interpretability in LLMs and their deployment."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 52.7,
+      "url": "https://arxiv.org/abs/2609.19325",
+      "title": "AUDITPLAN: Commit, Then Answer for Auditable Safety Alignment",
+      "section": "security",
+      "topics": [
+        "ai-safety"
+      ],
+      "candidateId": "r85ba3a7b3b9391c",
+      "qualityScore": 100.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses safety alignment in AI, relevant for understanding LLM security and ensuring reliable deployment in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 49.4,
+      "url": "https://arxiv.org/abs/2609.19900",
+      "title": "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "rbd0e6d08d44a42d",
+      "qualityScore": 100.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "The Delphi Scanner's API sequence modeling offers insights into interpretability and security, relevant for understanding LLM vulnerabilities and enhancing inference efficiency."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 46.5,
+      "url": "https://arxiv.org/abs/2609.19201",
+      "title": "EvoSherlock: Towards Agentic Lifelong Evolution for Unseen Long-Tailed Security-Critical Events in Videos",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security",
+        "multimodal"
+      ],
+      "candidateId": "r096d6feb97da0e9",
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This item explores agentic evolution in AI, which may inform security strategies and reasoning efficiency in LLMs for unseen critical events."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 44.6,
+      "url": "https://arxiv.org/abs/2609.19892",
+      "title": "ClashBench: Conflicts Leading Agents to Seize and Harm",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "candidateId": "r55b976252557c33",
+      "qualityScore": 100.0,
+      "relevanceScore": 44.6,
+      "whyRelevant": "This item discusses conflicts in agent behavior, relevant for understanding security vulnerabilities and improving reasoning efficiency in LLMs."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 44.6,
+      "url": "https://arxiv.org/abs/2609.20211",
+      "title": "Silence Is Endorsement: Verification-Status Laundering in LLM Agent Pipelines",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents"
+      ],
+      "candidateId": "r76272b4ac0accbc",
+      "qualityScore": 100.0,
+      "relevanceScore": 44.6,
+      "whyRelevant": "This item discusses security vulnerabilities in LLM agent pipelines, relevant for understanding internal mechanisms and improving inference efficiency in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-18T06:20:38+00:00",
+      "score": 31.2,
+      "url": "https://arxiv.org/abs/2609.19791",
+      "title": "Sybil-TraceGuard: Traceability-enhanced Sybil Guardian for Connected and Autonomous Vehicles Using Dynamic Semi-supervised GNN",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r0f2f7ce1209709b",
+      "qualityScore": 100.0,
+      "relevanceScore": 31.2,
+      "whyRelevant": "This item discusses security in autonomous systems, relevant for understanding LLM vulnerabilities and enhancing model robustness in production environments."
     }
   ]
 }
