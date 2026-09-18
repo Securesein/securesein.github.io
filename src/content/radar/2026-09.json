@@ -12347,7 +12347,7 @@
       ],
       "qualityScore": 85.0,
       "relevanceScore": 49.4,
-      "whyRelevant": "The article discusses AI security measures that can inform the deployment and serving of open-weight models in production, relevant to LLM safety.",
+      "whyRelevant": "The article discusses AI security measures that can impact the deployment and inference efficiency of LLMs, relevant for ensuring safe model operations.",
       "seenAt": "2026-09-18T14:02:18+00:00",
       "status": "radar"
     },
@@ -12360,10 +12360,26 @@
       "topics": [
         "inference"
       ],
-      "qualityScore": 80.0,
+      "qualityScore": 100.0,
       "relevanceScore": 56.2,
-      "whyRelevant": "The Amazon SageMaker HyperPod Inference Gateway enhances model deployment efficiency, which is crucial for optimizing LLM performance and security in production environments.",
+      "whyRelevant": "The Amazon SageMaker HyperPod Inference Gateway enhances inference efficiency and deployment, relevant for optimizing LLM performance and security in production environments.",
       "seenAt": "2026-09-18T14:02:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc243f50d8dd64f5",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11039",
+      "title": "b11039",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "training"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This item discusses training methods for LLMs, which are crucial for understanding their internal mechanisms and improving inference efficiency in production.",
+      "seenAt": "2026-09-18T14:16:33+00:00",
       "status": "radar"
     }
   ]
