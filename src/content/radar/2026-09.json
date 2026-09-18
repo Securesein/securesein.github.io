@@ -3856,7 +3856,8 @@
       "relevanceScore": 78.1,
       "whyRelevant": "Matches strong interest: reasoning and inference efficiency, ML foundations, open-weight models and local inference, deploying and serving models in production. Filed under research: generative-ai, in",
       "seenAt": "2026-09-14T17:16:35+00:00",
-      "status": "radar"
+      "status": "radar",
+      "feedback": "not_useful"
     },
     {
       "id": "r570f9cd46dc0369",
