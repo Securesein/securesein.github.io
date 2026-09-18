@@ -12318,6 +12318,22 @@
       "whyRelevant": "This research explores communication protocols that could enhance the efficiency and security of LLMs in multi-agent systems, relevant for deployment and inference.",
       "seenAt": "2026-09-18T06:06:28+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r865528de35f9709",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11029",
+      "title": "b11029",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "deep-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve deployment strategies in production environments.",
+      "seenAt": "2026-09-18T10:02:57+00:00",
+      "status": "radar"
     }
   ]
 }
