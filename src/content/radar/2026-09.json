@@ -12381,6 +12381,23 @@
       "whyRelevant": "This item discusses training methods for LLMs, which are crucial for understanding their internal mechanisms and improving inference efficiency in production.",
       "seenAt": "2026-09-18T14:16:33+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rda2cb17df8cb821",
+      "url": "https://aws.amazon.com/blogs/machine-learning/deploy-hugging-face-models-on-amazon-sagemaker-ai-with-coding-agents/",
+      "title": "Deploy Hugging Face models on Amazon SageMaker AI with coding agents",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "agents",
+        "llms",
+        "generative-ai"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item provides practical guidance on deploying open-weight models, which is relevant for understanding LLMs' internal workings and ensuring security in production.",
+      "seenAt": "2026-09-18T18:17:06+00:00",
+      "status": "radar"
     }
   ]
 }
