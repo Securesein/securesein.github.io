@@ -2673,9 +2673,9 @@
         "multimodal",
         "generative-ai"
       ],
-      "qualityScore": 82.5,
-      "relevanceScore": 63.2,
-      "whyRelevant": "Matches strong interest: how LLMs work internally, deploying and serving models in production. Filed under research: ai-safety, multimodal, generative-ai.",
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research explores evaluation methods in multimodal generative AI, which may indirectly inform understanding of LLM interpretability and reasoning efficiency.",
       "seenAt": "2026-09-14T17:16:31+00:00",
       "status": "radar"
     },
@@ -9345,7 +9345,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This research explores skill evolution in agents, which may inform LLM security and efficiency in reasoning and inference without traditional training methods.",
+      "whyRelevant": "This research explores skill evolution in agents, which may inform LLM interpretability and efficiency in reasoning and inference.",
       "seenAt": "2026-09-17T06:18:51+00:00",
       "status": "radar"
     },
@@ -12429,6 +12429,240 @@
       "relevanceScore": 70.0,
       "whyRelevant": "This item discusses advancements in LLM inference, relevant for understanding internal mechanisms and improving efficiency in deploying models securely.",
       "seenAt": "2026-09-18T22:16:22+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rcbe4ed58cd5ec6a",
+      "url": "https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/",
+      "title": "Gemini Hacked Three Companies in First Known Breakout by Google’s AI",
+      "source": "Simon Willison's Weblog",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "generative-ai",
+        "llms"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This article discusses security vulnerabilities in AI systems, relevant for understanding risks in LLM deployment and the implications for mechanistic interpretability.",
+      "seenAt": "2026-09-19T02:16:05+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "reb336d006564a21",
+      "url": "https://arxiv.org/abs/2609.05661",
+      "title": "Srijika: OpenType-Layout-Reusing Font Restyling for Nine Indic Scripts",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item is not directly relevant to LLMs or their internal mechanisms, focusing instead on font restyling for Indic scripts.",
+      "seenAt": "2026-09-19T02:16:16+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r03af48981944171",
+      "url": "https://arxiv.org/abs/2609.17496",
+      "title": "Verifiable Social Reasoning for LLM Assistants",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "agents"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores how LLMs can perform social reasoning, which is crucial for understanding their internal mechanisms and improving inference efficiency in agent security.",
+      "seenAt": "2026-09-19T02:16:21+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r84ba13ebc567ed4",
+      "url": "https://arxiv.org/abs/2609.16900",
+      "title": "RiskChainBench: A Benchmark for Obfuscated Platform Message Restoration and Evidence-Grounded Web Investigation",
+      "source": "Hugging Face Daily Papers",
+      "section": "benchmark",
+      "topics": [
+        "ai-security",
+        "multimodal",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This benchmark aids in evaluating security measures for LLMs, relevant for understanding internal mechanisms and improving inference efficiency in production environments.",
+      "seenAt": "2026-09-19T02:16:23+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r7c1a2c45bad698f",
+      "url": "https://arxiv.org/abs/2609.18605",
+      "title": "PACT: Can Enterprise AI Assistants Be Trusted Under Pressure?",
+      "source": "Hugging Face Daily Papers",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "ai-safety",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 39.0,
+      "whyRelevant": "This item discusses evaluation benchmarks for AI assistants, relevant for understanding LLM reliability and security under pressure, impacting deployment and interpretability.",
+      "seenAt": "2026-09-19T02:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r827c400bbf1b8a5",
+      "url": "https://arxiv.org/abs/2609.19499",
+      "title": "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research highlights how candidate-generation strategies impact LLM performance, relevant for understanding internal mechanisms and optimizing inference efficiency in production.",
+      "seenAt": "2026-09-19T02:16:28+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r66ab1789a20f91e",
+      "url": "https://arxiv.org/abs/2609.18323",
+      "title": "Can MiniMax-H3 Reason About the Physical World? An Evaluation of Omni-Modal Generative Model",
+      "source": "Hugging Face Daily Papers",
+      "section": "benchmark",
+      "topics": [
+        "multimodal",
+        "reasoning",
+        "evaluation"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This evaluation of a multimodal generative model provides insights into reasoning capabilities, relevant for understanding LLM interpretability and inference efficiency.",
+      "seenAt": "2026-09-19T02:16:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r913b633ce021184",
+      "url": "https://arxiv.org/abs/2609.19879",
+      "title": "VākQA: A Benchmark and Evaluation Study for Telugu Spoken Factoid Question Answering",
+      "source": "Hugging Face Daily Papers",
+      "section": "benchmark",
+      "topics": [
+        "evaluation",
+        "llms",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 42.0,
+      "whyRelevant": "This benchmark provides insights into LLM performance on Telugu language tasks, relevant for evaluating reasoning and inference efficiency in multilingual models.",
+      "seenAt": "2026-09-19T02:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r202b3aaaa02f072",
+      "url": "https://arxiv.org/abs/2609.19745",
+      "title": "Region-Level Policy Optimization for Fine-grained MLLM Perception",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reinforcement-learning",
+        "multimodal"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores reinforcement learning in multimodal LLMs, which may enhance understanding of internal mechanisms and improve inference efficiency in practical applications.",
+      "seenAt": "2026-09-19T02:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r01c4fffc74d2cc3",
+      "url": "https://arxiv.org/abs/2609.20715",
+      "title": "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 51.3,
+      "whyRelevant": "This research explores how observation supervision influences agent exploration, relevant for understanding LLM behavior and improving inference efficiency in reinforcement learning.",
+      "seenAt": "2026-09-19T02:16:37+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf7896cedff0269b",
+      "url": "https://arxiv.org/abs/2609.20612",
+      "title": "What Does Privileged Information Add to On-Policy Self-Distillation?",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores how privileged information enhances reasoning efficiency in LLMs, relevant for understanding internal mechanisms and improving model performance.",
+      "seenAt": "2026-09-19T02:16:42+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbda4f6b04bb8abc",
+      "url": "https://arxiv.org/abs/2609.19671",
+      "title": "When2Think: Learning Difficulty-Aware Length Control for Efficient Hybrid Reasoning Models",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "reasoning",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 68.1,
+      "whyRelevant": "This research explores efficient reasoning models, which may inform mechanistic interpretability and inference efficiency in LLMs, relevant for deployment and security.",
+      "seenAt": "2026-09-19T02:16:44+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r69916d9d7c468d8",
+      "url": "https://arxiv.org/abs/2609.20817",
+      "title": "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "reasoning",
+        "agents"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research on 3D articulation modeling may provide insights into reasoning and inference efficiency relevant to LLMs and agent security.",
+      "seenAt": "2026-09-19T02:16:46+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r040c34a99e1cc67",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.62.0-nightly.20260919.gcfbcaa8df",
+      "title": "Release v0.62.0-nightly.20260919.gcfbcaa8df",
+      "source": "Gemini CLI Releases",
+      "section": "release",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This release may include updates relevant to AI security, impacting LLM deployment and inference efficiency, but lacks specific details on mechanistic interpretability or internal workings.",
+      "seenAt": "2026-09-19T02:16:51+00:00",
       "status": "radar"
     }
   ]
