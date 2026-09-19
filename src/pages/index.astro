@@ -31,7 +31,6 @@ const latestReleases = releases.slice(0, 6);
 const startHere = explainers.slice(0, 4);
 const thread = threads.find(({ posts }) => posts.length > 1);
 const latestPost = allPublished[0];
-const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
 ---
 <BaseLayout>
   <link
@@ -45,202 +44,186 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
     href="https://fonts.gstatic.com"
     crossorigin
   />
-  <!-- Homepage-only typefaces (build brief: hero masthead handoff, v3 —
-       "violette variant"). Archivo loads sitewide (see BaseLayout,
+  <!-- Homepage-only typefaces (build brief: hero masthead handoff, v4 —
+       "met rubriekskleuren"). Archivo loads sitewide (see BaseLayout,
        the nav wordmark uses it too); Instrument Sans and JetBrains
-       Mono (the label line is back in v3) are only used here. -->
+       Mono (the label line is back, per-category this time) are only
+       used here. -->
   <link
     slot="head"
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
   />
 
-  <!-- v3: the violet tint now covers the whole homepage, not just the
-       hero (handoff doc §3/§7: "no seam between hero and the rest of
-       the page"), so this wrapper spans everything below the header —
-       see the style block for how its palette is scoped so it never
-       reaches the nav, footer or any other page. -->
-  <div class="mh-page">
-    <section class="masthead">
-      <div class="container container--wide masthead-inner">
-        <p class="masthead__eyebrow">
-          <span class="masthead__rule" aria-hidden="true"></span>
-          <span class="masthead__eyebrow-long">{sectionsEyebrow}</span>
-          <span class="masthead__eyebrow-short">Research · Benchmarks · Security</span>
-          <span class="masthead__rule" aria-hidden="true"></span>
-        </p>
-
-        <h1 class="masthead__title">{SITE.title}</h1>
-
-        <p class="masthead__tagline">{SITE.subTagline}</p>
-
-        <div class="masthead__actions">
-          {latestPost && (
-            <a class="btn btn--primary" href={postUrl(latestPost)}>
-              Latest: {latestPost.data.title}
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <line x1="4" y1="12" x2="19" y2="12" />
-                <polyline points="13,6 19,12 13,18" />
-              </svg>
-            </a>
-          )}
-          <a class="btn btn--ghost" href="/about/">About this blog</a>
-        </div>
-
-        <nav class="sections" aria-label="Browse by section">
-          {SECTIONS.map((section, i) => (
-            <a
-              class:list={["section-card", { "section-card--lead": i === 0 }]}
-              href={section.href}
-            >
-              <span class="section-card__name">{section.label}</span>
-              <span class="section-card__desc">{section.description}</span>
-            </a>
+  <section class="masthead">
+    <div class="container container--wide masthead-inner">
+      <p class="masthead__eyebrow">
+        <span class="masthead__rule" aria-hidden="true"></span>
+        <span class="masthead__cats">
+          {SECTIONS.map((section) => (
+            <span class="cat" data-cat={section.kind}>{section.label}</span>
           ))}
-        </nav>
-      </div>
-    </section>
+        </span>
+        <span class="masthead__rule" aria-hidden="true"></span>
+      </p>
 
-    <div class="container container--wide">
-      <div class="split">
-        <section class="split-main" aria-labelledby="featured-heading">
-          <h2 class="lane-heading" id="featured-heading">
-            <a href="/research/">Taken apart</a>
-          </h2>
-          {featured ? (
-            <PostCard post={featured} featured />
-          ) : (
-            <p class="empty">Nothing here yet.</p>
-          )}
-          {moreDives.map((post) => <PostCard post={post} compact />)}
-        </section>
+      <h1 class="masthead__title">{SITE.title}</h1>
 
-        <section class="split-side" aria-labelledby="scout-heading">
-          <h2 class="lane-heading" id="scout-heading">
-            <a href="/model-updates/">Model updates</a>
-          </h2>
-          <div class="side-rows">
-            {latestReleases.map((post) => <NewsRow post={post} terse />)}
-          </div>
-          <p class="side-more"><a href="/model-updates/">All model updates</a></p>
-        </section>
-      </div>
+      <p class="masthead__tagline">{SITE.subTagline}</p>
 
-      {startHere.length > 0 && (
-        <section class="start" aria-labelledby="start-heading">
-          <h2 class="lane-heading" id="start-heading">
-            <a href="/fundamentals/">Start here</a>
-          </h2>
-          <div class="start-grid">
-            {startHere.map((post, i) => <PostCard post={post} step={i + 1} compact />)}
-          </div>
-        </section>
-      )}
-
-      {thread && (
-        <section class="reading" aria-labelledby="reading-heading">
-          <h2 class="lane-heading" id="reading-heading">Reading now</h2>
-          <a href={`/threads/${thread.thread.id}/`} class="reading-link">
-            <span class="reading-title">{thread.thread.data.title}</span>
-            <span class="reading-count">{thread.posts.length} parts</span>
+      <div class="masthead__actions">
+        {latestPost && (
+          <a class="btn btn--primary" href={postUrl(latestPost)}>
+            Latest: {latestPost.data.title}
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <line x1="4" y1="12" x2="19" y2="12" />
+              <polyline points="13,6 19,12 13,18" />
+            </svg>
           </a>
-          <p class="reading-blurb">{thread.thread.data.blurb}</p>
-        </section>
-      )}
+        )}
+        <a class="btn btn--ghost" href="/about/">About this blog</a>
+      </div>
+
+      <!-- data-cat mirrors each post's `kind` frontmatter value exactly
+           (see src/taxonomy.ts) rather than the handoff doc's own
+           presentation-style names (model/benchmarks/fundamentals),
+           so a post-kicker reuse later (doc §6) needs no mapping
+           table — the whole reason that section gives for the rule
+           in the first place. -->
+      <nav class="sections" aria-label="Browse by section">
+        {SECTIONS.map((section) => (
+          <a class="section-card" data-cat={section.kind} href={section.href}>
+            <span class="section-card__name">{section.label}</span>
+            <span class="section-card__desc">{section.description}</span>
+          </a>
+        ))}
+      </nav>
     </div>
+  </section>
+
+  <div class="container container--wide">
+    <div class="split">
+      <section class="split-main" aria-labelledby="featured-heading">
+        <h2 class="lane-heading" id="featured-heading">
+          <a href="/research/">Taken apart</a>
+        </h2>
+        {featured ? (
+          <PostCard post={featured} featured />
+        ) : (
+          <p class="empty">Nothing here yet.</p>
+        )}
+        {moreDives.map((post) => <PostCard post={post} compact />)}
+      </section>
+
+      <section class="split-side" aria-labelledby="scout-heading">
+        <h2 class="lane-heading" id="scout-heading">
+          <a href="/model-updates/">Model updates</a>
+        </h2>
+        <div class="side-rows">
+          {latestReleases.map((post) => <NewsRow post={post} terse />)}
+        </div>
+        <p class="side-more"><a href="/model-updates/">All model updates</a></p>
+      </section>
+    </div>
+
+    {startHere.length > 0 && (
+      <section class="start" aria-labelledby="start-heading">
+        <h2 class="lane-heading" id="start-heading">
+          <a href="/fundamentals/">Start here</a>
+        </h2>
+        <div class="start-grid">
+          {startHere.map((post, i) => <PostCard post={post} step={i + 1} compact />)}
+        </div>
+      </section>
+    )}
+
+    {thread && (
+      <section class="reading" aria-labelledby="reading-heading">
+        <h2 class="lane-heading" id="reading-heading">Reading now</h2>
+        <a href={`/threads/${thread.thread.id}/`} class="reading-link">
+          <span class="reading-title">{thread.thread.data.title}</span>
+          <span class="reading-count">{thread.posts.length} parts</span>
+        </a>
+        <p class="reading-blurb">{thread.thread.data.blurb}</p>
+      </section>
+    )}
   </div>
 </BaseLayout>
 
 <style>
-  /* ---------- page-wide violet tint (hero masthead handoff, v3) ----
-     v1/v2 scoped every new colour to .masthead alone, on purpose, so
-     nothing could leak past the hero. v3 explicitly asks for the
-     opposite within this one page: a tint with NO seam between the
-     hero and "Taken apart"/"Model updates" below it (doc §3, §7).
-
-     Re-declaring the real semantic tokens (--bg, --text, --text-muted,
-     --border, --border-strong) here, not just the base ones
-     (--paper/--ink/--rule/--muted) they're derived from, is
-     deliberate: a custom property's `var()` reference is resolved
-     once, at whichever rule actually declares it — a descendant
-     doesn't get to "re-run" that resolution against its own closer
-     override of the base token. Only :root declares --bg: var(--paper),
-     so overriding --paper alone here would do nothing; every semantic
-     name a component in this subtree actually reads has to be
-     re-declared at this same scope for the override to take effect.
-
-     `--signal`/`--link` (the sitewide green) and `--surface`/`--raised`-
-     derived card backgrounds are deliberately left alone — the doc's
-     own colour concept (§2) reserves the new mint --accent for the
-     primary button only, "one place on the page", and ordinary links
-     and elevated card surfaces were never asked to retint. This is
-     also why the wrapper is a plain <div> around the page's own
-     content rather than something reachable from Header/Footer, which
-     render outside it — the nav, the footer and every other page on
-     the site stay on the untouched sitewide palette. */
-  .mh-page {
-    --paper: #fbfafe;
-    --ink: #15111f;
-    --rule: #eae6f5;
-    --muted: #625a7c;
-    --surface: #f3f1fa;
-    --bg: var(--paper);
-    --text: var(--ink);
-    --text-muted: var(--muted);
-    --border: var(--rule);
-    --border-strong: color-mix(in srgb, var(--rule) 70%, var(--muted));
-
-    /* Roles this page introduces beyond the sitewide vocabulary. */
-    --ink-soft: #4e4766;
-    --label: #6e6191;
-    --display: #5b34d6;
-    --accent: #0b7a55;
+  /* ---------- masthead (hero masthead handoff, v4 — "met
+     rubriekskleuren"). Back to a neutral background (v3's page-wide
+     violet tint is gone — see git history if that's wanted again),
+     scoped to .masthead exactly like v1/v2, plus a category-colour
+     system: each section gets its own hue, applied via a `data-cat`
+     attribute that mirrors the post `kind` slug directly (see the
+     template) so a future post-kicker reuse (doc §6, explicitly
+     deferred there) needs no separate mapping table. --ink-strong is
+     in the doc's own token list but never consumed by any of its
+     actual rules (the wordmark uses --display instead) — left out
+     here rather than kept as a dead token. */
+  .masthead {
+    --hairline: #e6e6ea;
+    --border: #dcdce2;
+    --ink: #101014;
+    --ink-soft: #4f4860;
+    --ink-muted: #5e5e6a;
+    --label-sep: #a8a8b2;
+    --display: #08080b;
+    --accent: #6d3ff3;
     --accent-ink: #ffffff;
-    --rule-strong: #d8d2ea;
 
-    background: var(--bg);
-    color: var(--text);
+    --c-release: #6d3ff3; --c-release-ink: #6d3ff3;
+    --c-research: #0b7a55; --c-research-ink: #0b7a55;
+    --c-benchmark: #1a62c4; --c-benchmark-ink: #1a62c4;
+    --c-security: #9a5b00; --c-security-ink: #9a5b00;
+    --c-explainer: #c2185b; --c-explainer-ink: #c2185b;
   }
   @media (prefers-color-scheme: dark) {
-    :global(:root:not([data-theme="light"])) .mh-page {
-      --paper: #0b0912;
-      --ink: #efecf8;
-      --rule: #241e38;
-      --muted: #948bb0;
-      --surface: #131020;
-      --bg: var(--paper);
-      --text: var(--ink);
-      --text-muted: var(--muted);
-      --border: var(--rule);
-      --border-strong: color-mix(in srgb, var(--rule) 70%, var(--muted));
+    :global(:root:not([data-theme="light"])) .masthead {
+      --hairline: #1c1c21;
+      --border: #26262b;
+      --ink: #f2f2f4;
+      --ink-soft: #b6aedc;
+      --ink-muted: #8e8e98;
+      --label-sep: #4a4a54;
+      --display: #ffffff;
+      --accent: #a98bff;
+      --accent-ink: #0a0a0c;
 
-      --ink-soft: #aca2c8;
-      --label: #8e7dbe;
-      --display: #c9b6ff;
-      --accent: #6fe0a8;
-      --accent-ink: #0b0912;
-      --rule-strong: #332b4c;
+      --c-release: #a98bff; --c-release-ink: #c9b6ff;
+      --c-research: #6fe0a8; --c-research-ink: #96ebc2;
+      --c-benchmark: #6fb4ff; --c-benchmark-ink: #9ccbff;
+      --c-security: #f5b851; --c-security-ink: #f8cd86;
+      --c-explainer: #ff8fb4; --c-explainer-ink: #ffafca;
     }
   }
-  :global(:root[data-theme="dark"]) .mh-page {
-    --paper: #0b0912;
-    --ink: #efecf8;
-    --rule: #241e38;
-    --muted: #948bb0;
-    --surface: #131020;
-    --bg: var(--paper);
-    --text: var(--ink);
-    --text-muted: var(--muted);
-    --border: var(--rule);
-    --border-strong: color-mix(in srgb, var(--rule) 70%, var(--muted));
+  :global(:root[data-theme="dark"]) .masthead {
+    --hairline: #1c1c21;
+    --border: #26262b;
+    --ink: #f2f2f4;
+    --ink-soft: #b6aedc;
+    --ink-muted: #8e8e98;
+    --label-sep: #4a4a54;
+    --display: #ffffff;
+    --accent: #a98bff;
+    --accent-ink: #0a0a0c;
 
-    --ink-soft: #aca2c8;
-    --label: #8e7dbe;
-    --display: #c9b6ff;
-    --accent: #6fe0a8;
-    --accent-ink: #0b0912;
-    --rule-strong: #332b4c;
+    --c-release: #a98bff; --c-release-ink: #c9b6ff;
+    --c-research: #6fe0a8; --c-research-ink: #96ebc2;
+    --c-benchmark: #6fb4ff; --c-benchmark-ink: #9ccbff;
+    --c-security: #f5b851; --c-security-ink: #f8cd86;
+    --c-explainer: #ff8fb4; --c-explainer-ink: #ffafca;
   }
+
+  /* One place linking each real `kind` slug to its colour pair —
+     .section-card and .masthead__cats .cat both just read --cat /
+     --cat-ink, whichever element they land on. */
+  .masthead [data-cat="release"]   { --cat: var(--c-release);   --cat-ink: var(--c-release-ink); }
+  .masthead [data-cat="research"]  { --cat: var(--c-research);  --cat-ink: var(--c-research-ink); }
+  .masthead [data-cat="benchmark"] { --cat: var(--c-benchmark); --cat-ink: var(--c-benchmark-ink); }
+  .masthead [data-cat="security"]  { --cat: var(--c-security);  --cat-ink: var(--c-security-ink); }
+  .masthead [data-cat="explainer"] { --cat: var(--c-explainer); --cat-ink: var(--c-explainer-ink); }
 
   .masthead-inner {
     padding-block: 4.75rem 2.75rem;
@@ -256,15 +239,26 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
     display: flex;
     align-items: center;
     gap: 1.375rem;
+  }
+  .masthead__rule { flex: 1 1 auto; height: 1px; background: var(--hairline); }
+
+  .masthead__cats {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
     font-family: "JetBrains Mono", var(--font-mono);
     font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--label);
+    white-space: nowrap;
   }
-  .masthead__rule { flex: 1 1 auto; height: 1px; background: var(--border); }
-  .masthead__eyebrow-short { display: none; }
+  .masthead__cats .cat { color: var(--cat-ink); }
+  .masthead__cats .cat + .cat::before {
+    content: "·";
+    margin-right: 0.625rem;
+    color: var(--label-sep);
+  }
 
   .masthead__title {
     margin: 1.875rem 0 0;
@@ -319,8 +313,8 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
   }
   .btn--primary { background: var(--accent); color: var(--accent-ink); }
   .btn--primary:hover { filter: brightness(1.08); }
-  .btn--ghost { border: 1px solid var(--rule-strong); color: var(--ink-soft); font-weight: 500; }
-  .btn--ghost:hover { border-color: var(--display); color: var(--ink); }
+  .btn--ghost { border: 1px solid var(--border); color: var(--ink); font-weight: 500; }
+  .btn--ghost:hover { border-color: var(--accent); }
 
   /* ---------- sections (replaces the old left-rule .lanes list) --- */
   .sections {
@@ -336,42 +330,44 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
     flex-direction: column;
     gap: 0.5rem;
     padding-top: 1.125rem;
-    border-top: 2px solid var(--rule-strong);
-    color: inherit;
+    border-top: 2px solid var(--cat);
     text-decoration: none;
-    transition: border-color 120ms ease;
   }
-  .section-card--lead { border-top-color: var(--display); }
-  .section-card:hover { border-top-color: var(--display); }
-  .section-card__name { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
-  .section-card__desc { font-size: 0.875rem; line-height: 1.45; color: var(--text-muted); }
+  .section-card__name { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; color: var(--cat-ink); }
+  .section-card__desc { font-size: 0.875rem; line-height: 1.45; color: var(--ink-muted); }
+  .section-card:hover .section-card__desc { color: var(--ink); }
 
   @media (max-width: 1100px) {
     .sections { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 1.5rem; }
   }
 
+  @media (max-width: 860px) {
+    /* Five colour-coded labels don't fit side by side any more; the
+       hairline alone (its two halves now adjacent, no gap between
+       them) is enough of an eyebrow, and the sections just below
+       already carry the same colours anyway (doc's own reasoning). */
+    .masthead__cats { display: none; }
+    .masthead__eyebrow { gap: 0; }
+  }
+
   @media (max-width: 760px) {
     .masthead-inner { padding-block: 3rem 2rem; }
-    .masthead__eyebrow { gap: 0.75rem; font-size: 0.625rem; letter-spacing: 0.16em; }
-    .masthead__eyebrow-long { display: none; }
-    .masthead__eyebrow-short { display: inline; }
     .masthead__title { margin-top: 1.5rem; }
     .masthead__tagline { max-width: 26ch; }
     .masthead__actions { margin-top: 1.75rem; width: 100%; flex-direction: column; gap: 0.75rem; }
     .btn { width: 100%; min-height: 50px; }
     .sections { margin-top: 2.5rem; display: block; }
-    .section-card { gap: 0.2rem; padding: 0.8rem 0; border-top-width: 1px; }
-    .section-card--lead { border-top-width: 2px; }
+    .section-card { gap: 0.2rem; padding: 0.8rem 0; border-top-width: 2px; }
     .section-card__desc { font-size: 0.8rem; }
   }
 
   .masthead a:focus-visible {
-    outline: 2px solid var(--display);
+    outline: 2px solid var(--accent);
     outline-offset: 3px;
     border-radius: 4px;
   }
   @media (prefers-reduced-motion: reduce) {
-    .btn, .section-card { transition: none; }
+    .btn, .section-card__desc { transition: none; }
   }
 
   .lane-heading {
