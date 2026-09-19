@@ -12724,8 +12724,8 @@
         "ai-security"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 59.4,
-      "whyRelevant": "This item discusses AI security measures relevant to deploying and serving open-weight models, which is crucial for ensuring safe and efficient LLM operations.",
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses LLM security measures, relevant for understanding internal workings and ensuring safe deployment of open-weight models in production.",
       "seenAt": "2026-09-19T10:04:01+00:00",
       "status": "radar"
     }
