@@ -3,9 +3,9 @@ import { SECTION_INFO, SECTION_ORDER } from "./taxonomy";
 export const SITE = {
   title: "securesein",
   description:
-    "Applied AI, taken apart — what shipped, what we learned, what the numbers say, and what can go wrong. Drafted automatically, published without review, with the reason on every post.",
-  tagline: "Applied AI, taken apart.",
-  subTagline: "Curated by a human, drafted in part by an AI.",
+    "Machine learning, kept up with and taken apart — what shipped, what we learned, what the numbers say, and what can go wrong. Drafted automatically, published without review, with the reason on every post.",
+  tagline: "securesein",
+  subTagline: "Keeping up with machine learning, one mechanism at a time.",
   author: "Sebastiaan",
   authorRole: "IT consultant",
   github: "",
