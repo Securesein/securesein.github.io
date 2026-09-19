@@ -2675,7 +2675,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This research explores evaluation methods in multimodal generative AI, which may indirectly inform understanding of LLM interpretability and reasoning efficiency.",
+      "whyRelevant": "This research explores evaluation methods in multimodal generative AI, which may indirectly inform understanding of LLM interpretability and inference efficiency.",
       "seenAt": "2026-09-14T17:16:31+00:00",
       "status": "radar"
     },
@@ -9345,7 +9345,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This research explores skill evolution in agents, which may inform LLM interpretability and efficiency in reasoning and inference.",
+      "whyRelevant": "This research explores skill evolution in agents, which may inform LLM security and efficiency in reasoning and inference through training-free methods.",
       "seenAt": "2026-09-17T06:18:51+00:00",
       "status": "radar"
     },
@@ -12394,8 +12394,8 @@
         "generative-ai"
       ],
       "qualityScore": 65.0,
-      "relevanceScore": 56.5,
-      "whyRelevant": "This item provides practical guidance on deploying open-weight models, which is relevant for understanding LLMs' internal workings and ensuring security in production.",
+      "relevanceScore": 54.6,
+      "whyRelevant": "This item provides practical guidance on deploying open-weight LLMs, relevant for understanding internal workings and ensuring security in production environments.",
       "seenAt": "2026-09-18T18:17:06+00:00",
       "status": "radar"
     },
@@ -12409,8 +12409,8 @@
         "inference"
       ],
       "qualityScore": 75.0,
-      "relevanceScore": 56.2,
-      "whyRelevant": "This review provides insights into Amazon SageMaker's inference capabilities, relevant for understanding deployment and serving of models in production.",
+      "relevanceScore": 60.0,
+      "whyRelevant": "The review provides insights into Amazon SageMaker's inference capabilities, relevant for understanding deployment and serving of models in production.",
       "seenAt": "2026-09-18T22:16:19+00:00",
       "status": "radar"
     },
@@ -12426,8 +12426,8 @@
         "inference"
       ],
       "qualityScore": 70.0,
-      "relevanceScore": 70.0,
-      "whyRelevant": "This item discusses advancements in LLM inference, relevant for understanding internal mechanisms and improving efficiency in deploying models securely.",
+      "relevanceScore": 61.3,
+      "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve deployment strategies in production environments.",
       "seenAt": "2026-09-18T22:16:22+00:00",
       "status": "radar"
     },
@@ -12444,7 +12444,7 @@
       ],
       "qualityScore": 65.0,
       "relevanceScore": 56.5,
-      "whyRelevant": "This article discusses security vulnerabilities in AI systems, relevant for understanding risks in LLM deployment and the implications for mechanistic interpretability.",
+      "whyRelevant": "This article highlights security vulnerabilities in AI systems, relevant for understanding risks in deploying LLMs and ensuring their safe operation in production.",
       "seenAt": "2026-09-19T02:16:05+00:00",
       "status": "radar"
     },
@@ -12461,7 +12461,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 63.2,
-      "whyRelevant": "This item is not directly relevant to LLMs or their internal mechanisms, focusing instead on font restyling for Indic scripts.",
+      "whyRelevant": "This research on font restyling may not directly relate to LLMs or their internal mechanisms, making the connection weak for your interests.",
       "seenAt": "2026-09-19T02:16:16+00:00",
       "status": "radar"
     },
@@ -12512,7 +12512,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 39.0,
-      "whyRelevant": "This item discusses evaluation benchmarks for AI assistants, relevant for understanding LLM reliability and security under pressure, impacting deployment and interpretability.",
+      "whyRelevant": "This item discusses AI safety and evaluation benchmarks, which are crucial for understanding LLM reliability and security in high-pressure scenarios.",
       "seenAt": "2026-09-19T02:16:26+00:00",
       "status": "radar"
     },
@@ -12563,7 +12563,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 42.0,
-      "whyRelevant": "This benchmark provides insights into LLM performance on Telugu language tasks, relevant for evaluating reasoning and inference efficiency in multilingual models.",
+      "whyRelevant": "This benchmark provides insights into LLM performance on Telugu, relevant for evaluating reasoning efficiency and interpretability in multilingual contexts.",
       "seenAt": "2026-09-19T02:16:32+00:00",
       "status": "radar"
     },
@@ -12596,7 +12596,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 51.3,
-      "whyRelevant": "This research explores how observation supervision influences agent exploration, relevant for understanding LLM behavior and improving inference efficiency in reinforcement learning.",
+      "whyRelevant": "This research explores how observation supervision influences agent exploration, relevant for understanding LLM behavior and improving reasoning efficiency in reinforcement learning.",
       "seenAt": "2026-09-19T02:16:37+00:00",
       "status": "radar"
     },
@@ -12646,7 +12646,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 70.0,
-      "whyRelevant": "This research on 3D articulation modeling may provide insights into reasoning and inference efficiency relevant to LLMs and agent security.",
+      "whyRelevant": "This research on 3D articulation modeling may provide insights into reasoning and inference efficiency relevant to LLMs, but its connection to LLM security is weak.",
       "seenAt": "2026-09-19T02:16:46+00:00",
       "status": "radar"
     },
@@ -12663,6 +12663,70 @@
       "relevanceScore": 42.7,
       "whyRelevant": "This release may include updates relevant to AI security, impacting LLM deployment and inference efficiency, but lacks specific details on mechanistic interpretability or internal workings.",
       "seenAt": "2026-09-19T02:16:51+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rec00b4db1e4d25b",
+      "url": "https://machinelearning.apple.com/research/dynamically-scaled-activation-steering",
+      "title": "Dynamically Scaled Activation Steering",
+      "source": "Apple Machine Learning Research",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "ai-safety",
+        "interpretability"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 50.5,
+      "whyRelevant": "This research on activation steering may enhance interpretability and efficiency in LLMs, relevant for understanding internal mechanisms and improving model security.",
+      "seenAt": "2026-09-19T10:03:38+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r69d535f8a58d1e5",
+      "url": "https://aws.amazon.com/blogs/machine-learning/migrating-multi-model-ai-agents-to-amazon-bedrock-agentcore-runtime/",
+      "title": "Migrating multi-model AI agents to Amazon Bedrock AgentCore runtime",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "agents",
+        "llms",
+        "multimodal"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item discusses deploying AI agents on a specific runtime, relevant for understanding operational aspects of LLMs and their integration in production environments.",
+      "seenAt": "2026-09-19T10:03:44+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r20387cabbe66604",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11048",
+      "title": "b11048",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve security and efficiency in deployment.",
+      "seenAt": "2026-09-19T10:03:59+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r607ee7f655bb48f",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11047",
+      "title": "b11047",
+      "source": "llama.cpp Releases",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item discusses AI security measures relevant to deploying and serving open-weight models, which is crucial for ensuring safe and efficient LLM operations.",
+      "seenAt": "2026-09-19T10:04:01+00:00",
       "status": "radar"
     }
   ]
