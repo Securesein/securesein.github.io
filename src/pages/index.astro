@@ -31,7 +31,6 @@ const latestReleases = releases.slice(0, 6);
 const startHere = explainers.slice(0, 4);
 const thread = threads.find(({ posts }) => posts.length > 1);
 const latestPost = allPublished[0];
-const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
 ---
 <BaseLayout>
   <link
@@ -45,56 +44,36 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
     href="https://fonts.gstatic.com"
     crossorigin
   />
-  <!-- Masthead-only typefaces (build brief: hero masthead handoff).
-       Loaded here rather than in BaseLayout because nothing outside
-       this one homepage section uses them — Inter and Source Serif
-       still carry the rest of the site. -->
+  <!-- Masthead-only typeface (build brief: hero masthead handoff, v2 —
+       Archivo replaced Bricolage Grotesque, and Instrument Sans plus
+       the Archivo wordmark weight are the only things this page still
+       needs from Google Fonts beyond the sitewide Inter/Source Serif
+       link in BaseLayout. Archivo also loads sitewide now — see
+       BaseLayout — because the nav wordmark uses it too. -->
   <link
     slot="head"
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap"
   />
 
   <section class="masthead">
     <div class="container container--wide masthead-inner">
-      <p class="masthead__eyebrow">
-        <span class="masthead__rule" aria-hidden="true"></span>
-        <span class="masthead__eyebrow-long">{sectionsEyebrow}</span>
-        <span class="masthead__eyebrow-short">Research · Benchmarks · Security</span>
-        <span class="masthead__rule" aria-hidden="true"></span>
-      </p>
-
       <h1 class="masthead__title">{SITE.title}</h1>
 
-      <p class="masthead__tagline">
-        <svg class="masthead__flourish" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M12 1.2 L14.3 9.7 L22.8 12 L14.3 14.3 L12 22.8 L9.7 14.3 L1.2 12 L9.7 9.7 Z" />
-        </svg>
-        <span>{SITE.subTagline}</span>
-        <svg class="masthead__flourish" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M12 1.2 L14.3 9.7 L22.8 12 L14.3 14.3 L12 22.8 L9.7 14.3 L1.2 12 L9.7 9.7 Z" />
-        </svg>
-      </p>
+      <p class="masthead__tagline">{SITE.subTagline}</p>
 
       <div class="masthead__actions">
         {latestPost && (
           <a class="btn btn--primary" href={postUrl(latestPost)}>
             Latest: {latestPost.data.title}
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <line x1="4" y1="12" x2="19" y2="12" />
-              <polyline points="13,6 19,12 13,18" />
-            </svg>
           </a>
         )}
-        <a class="btn btn--ghost" href="/about/">About this blog</a>
+        <a class="btn btn--text" href="/about/">About this blog</a>
       </div>
 
       <nav class="sections" aria-label="Browse by section">
-        {SECTIONS.map((section, i) => (
-          <a
-            class:list={["section-card", { "section-card--lead": i === 0 }]}
-            href={section.href}
-          >
+        {SECTIONS.map((section) => (
+          <a class="section-card" href={section.href}>
             <span class="section-card__name">{section.label}</span>
             <span class="section-card__desc">{section.description}</span>
           </a>
@@ -153,7 +132,7 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
 </BaseLayout>
 
 <style>
-  /* ---------- masthead (build brief: hero masthead handoff) ----------
+  /* ---------- masthead (build brief: hero masthead handoff, v2) ----
      Its own small palette, scoped to .masthead and named --mh-* so
      these values can never leak into or collide with the sitewide
      tokens in global.css — "everything below the hero stays as it
@@ -164,9 +143,13 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
      pattern already used there and in ThemeToggle.astro. The one
      departure from the handoff doc: no separate --mh-bg — the
      masthead sits directly on the page's existing --bg rather than
-     introducing a second background color next to it. */
+     introducing a second background color next to it.
+
+     v2 dropped the eyebrow line, the sparkle flourishes and the
+     accent-on-first-card treatment — see the handoff doc's own diff
+     note — so --mh-hairline (only ever used by the eyebrow rule) is
+     gone too rather than left as a dead token. */
   .masthead {
-    --mh-hairline: #e6e6ea;
     --mh-border: #dcdce2;
     --mh-ink-strong: #08080b;
     --mh-ink: #101014;
@@ -178,29 +161,27 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
   }
   @media (prefers-color-scheme: dark) {
     :global(:root:not([data-theme="light"])) .masthead {
-      --mh-hairline: #1c1c21;
       --mh-border: #26262b;
       --mh-ink-strong: #ffffff;
       --mh-ink: #f2f2f4;
-      --mh-ink-soft: #b4b4be;
+      --mh-ink-soft: #a6a6b0;
       --mh-ink-muted: #8e8e98;
       --mh-accent: #a98bff;
       --mh-accent-ink: #0a0a0c;
     }
   }
   :global(:root[data-theme="dark"]) .masthead {
-    --mh-hairline: #1c1c21;
     --mh-border: #26262b;
     --mh-ink-strong: #ffffff;
     --mh-ink: #f2f2f4;
-    --mh-ink-soft: #b4b4be;
+    --mh-ink-soft: #a6a6b0;
     --mh-ink-muted: #8e8e98;
     --mh-accent: #a98bff;
     --mh-accent-ink: #0a0a0c;
   }
 
   .masthead-inner {
-    padding-block: 4.5rem 3rem;
+    padding-block: 4.5rem 2.75rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -208,121 +189,88 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
     font-family: "Instrument Sans", var(--font-sans);
   }
 
-  .masthead__eyebrow {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    font-family: "JetBrains Mono", var(--font-mono);
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: var(--mh-ink-muted);
-  }
-  .masthead__rule { flex: 1 1 auto; height: 1px; background: var(--mh-hairline); }
-  .masthead__eyebrow-short { display: none; }
-
   .masthead__title {
-    margin: 2.1rem 0 0;
-    font-family: "Bricolage Grotesque", var(--font-sans);
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-size: clamp(3.875rem, 12.9vw, 11.625rem);
-    line-height: 0.86;
-    letter-spacing: -0.06em;
+    margin: 0;
+    font-family: "Archivo", var(--font-sans);
+    font-weight: 700;
+    font-size: clamp(3rem, 6.2vw, 5.125rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
     color: var(--mh-ink-strong);
   }
 
   .masthead__tagline {
-    margin: 1.6rem 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.1rem;
-    max-width: 28ch;
-    font-size: clamp(1.1875rem, 1.9vw, 1.625rem);
-    line-height: 1.35;
-    letter-spacing: -0.01em;
+    margin: 1.125rem 0 0;
+    max-width: 34ch;
+    font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+    line-height: 1.5;
     color: var(--mh-ink-soft);
   }
-  .masthead__flourish { flex: 0 0 auto; width: 16px; height: 16px; fill: var(--mh-accent); }
 
   .masthead__actions {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    align-items: center;
+    gap: 1.375rem;
   }
 
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    min-height: 50px;
-    padding: 0 1.5rem;
-    border-radius: 25px;
-    font-size: 0.94rem;
+    min-height: 44px;
+    font-size: 0.875rem;
     font-weight: 600;
-    letter-spacing: -0.01em;
     text-decoration: none;
-    transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+    transition: background-color 120ms ease, color 120ms ease;
   }
   .btn:hover { text-decoration: none; }
-  .btn svg {
-    width: 16px;
-    height: 16px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2.2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  .btn--primary {
+    padding: 0 1.25rem;
+    border-radius: 22px;
+    background: var(--mh-accent);
+    color: var(--mh-accent-ink);
   }
-  .btn--primary { background: var(--mh-accent); color: var(--mh-accent-ink); }
   .btn--primary:hover { filter: brightness(1.08); }
-  .btn--ghost { border: 1px solid var(--mh-border); color: var(--mh-ink-soft); font-weight: 500; }
-  .btn--ghost:hover { border-color: var(--mh-accent); color: var(--mh-ink); }
+  .btn--text { font-weight: 500; color: var(--mh-ink-muted); }
+  .btn--text:hover { color: var(--mh-ink); }
 
   /* ---------- sections (replaces the old left-rule .lanes list) --- */
   .sections {
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 3.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 1.75rem;
     text-align: left;
   }
   .section-card {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
-    padding-top: 1.25rem;
-    border-top: 2px solid var(--mh-border);
+    gap: 0.5rem;
+    padding-top: 1.125rem;
+    border-top: 1px solid var(--mh-border);
     color: inherit;
     text-decoration: none;
     transition: border-color 120ms ease;
   }
   .section-card:hover { border-top-color: var(--mh-accent); text-decoration: none; }
-  .section-card--lead { border-top-color: var(--mh-accent); }
-  .section-card__name { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; color: var(--mh-ink); }
-  .section-card__desc { font-size: 0.86rem; line-height: 1.45; color: var(--mh-ink-muted); }
+  .section-card__name { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; color: var(--mh-ink); }
+  .section-card__desc { font-size: 0.875rem; line-height: 1.45; color: var(--mh-ink-muted); }
+
+  @media (max-width: 1100px) {
+    .sections { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 1.5rem; }
+  }
 
   @media (max-width: 760px) {
-    .masthead-inner { padding-block: 2.75rem 2rem; }
-    .masthead__eyebrow { gap: 0.75rem; font-size: 0.625rem; letter-spacing: 0.2em; }
-    .masthead__eyebrow-long { display: none; }
-    .masthead__eyebrow-short { display: inline; }
-    .masthead__title { margin-top: 1.6rem; letter-spacing: -0.055em; }
-    .masthead__tagline { flex-direction: column; gap: 0.9rem; margin-top: 1.25rem; max-width: 24ch; }
-    .masthead__flourish:last-child { display: none; }
-    .masthead__actions { margin-top: 1.9rem; width: 100%; flex-direction: column; gap: 0.75rem; }
-    .btn { width: 100%; min-height: 52px; }
-    .sections { margin-top: 2.75rem; display: block; }
-    .section-card { gap: 0.2rem; padding: 0.8rem 0; border-top-width: 1px; }
-    .section-card--lead { border-top-width: 2px; }
-    .section-card__name { font-size: 1rem; }
+    .masthead-inner { padding-block: 3rem 2rem; }
+    .masthead__tagline { max-width: 26ch; }
+    .masthead__actions { margin-top: 1.75rem; width: 100%; flex-direction: column; gap: 0.875rem; }
+    .btn--primary { width: 100%; min-height: 50px; }
+    .sections { margin-top: 2.5rem; display: block; }
+    .section-card { gap: 0.2rem; padding: 0.8rem 0; }
     .section-card__desc { font-size: 0.8rem; }
   }
 

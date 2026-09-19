@@ -65,6 +65,9 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
     font-weight: 700;
     letter-spacing: -0.02em;
   }
+  /* Hero masthead handoff, v2: the wordmark now matches the homepage
+     title's display face everywhere it appears, not just there. */
+  .brand-name { font-family: "Archivo", var(--font-sans); }
   .brand:hover { text-decoration: none; }
   /* The brand star — the one place the violet→cyan identity gradient
      lives in the chrome. Small and quiet, but it signs the page. */
