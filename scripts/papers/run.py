@@ -52,7 +52,7 @@ BUDGET_PATH = REPO_ROOT / "config" / "papers_budget.json"
 
 TRIAGE_BATCH_SIZE = 20
 KEYWORD_SURVIVOR_CAP = 85  # §9.4's 335 -> 85 step
-DAILY_CAP = 6
+DAILY_CAP = 12  # doubled from the Phase 1 default of 6 per owner request
 
 DROP_ANNOUNCE_TYPES = {"replace", "replace-cross"}
 
@@ -142,6 +142,16 @@ def keyword_score(item: dict, profile: dict) -> tuple[float, str | None]:
         if score > best_score:
             best_score = score
             best_bucket = bucket
+
+    # Downweight, don't drop: a domain-application paper ("LLM for
+    # radiology reports") still matches a real bucket keyword and is
+    # occasionally worth reading, it just shouldn't crowd out general
+    # method papers the way it was. Unlike `exclude`, this never zeroes
+    # the score or the bucket.
+    penalize = profile.get("penalize", {})
+    if best_bucket and any(kw.lower() in text for kw in penalize.get("keywords", [])):
+        best_score *= penalize.get("factor", 1.0)
+
     return best_score, best_bucket
 
 
@@ -163,7 +173,11 @@ code or reproducibility mentioned, results that would change how the reader thin
 about the bucket topic.
 Penalize: pure theory with no learning system in view, narrow domain application \
 papers, "we fine-tuned X on Y" with no methodological novelty, surveys (score low \
-regardless of quality -- surveys go in a separate weekly digest, not here).
+regardless of quality -- surveys go in a separate weekly digest, not here). \
+Clinical/medical/healthcare applications of general ML/LLM techniques are \
+over-represented in the raw feed relative to how novel they usually are -- score \
+these lower unless the methodological contribution itself (not just the domain) \
+is genuinely novel.
 Return strict JSON: {"papers": [{"id": "...", "bucket": "llm|neural_nets|rl", \
 "score": <0-100>, "one_line": "<one sentence, what it actually claims>"}]}
 one_line must be a genuine claim from the abstract, not a restated title."""

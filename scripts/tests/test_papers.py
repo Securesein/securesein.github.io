@@ -58,6 +58,22 @@ def test_keyword_score_picks_the_highest_scoring_bucket():
     assert score > 0
 
 
+def test_penalize_downweights_but_never_zeroes_a_medical_flavored_hit():
+    profile = {
+        "buckets": {"llm": {"weight": 1.0, "keywords": ["large language model"]}},
+        "exclude": [],
+        "penalize": {"factor": 0.35, "keywords": ["clinical"]},
+    }
+    plain = _item(title="A large language model for reasoning", abstract="...")
+    clinical = _item(title="A large language model for clinical diagnosis", abstract="...")
+
+    plain_score, plain_bucket = papers.keyword_score(plain, profile)
+    clinical_score, clinical_bucket = papers.keyword_score(clinical, profile)
+
+    assert clinical_bucket == "llm"  # still surfaces, unlike `exclude`
+    assert 0 < clinical_score < plain_score
+
+
 def test_an_excluded_phrase_zeroes_the_score_regardless_of_keyword_hits():
     profile = {
         "buckets": {"llm": {"weight": 1.0, "keywords": ["large language model"]}},

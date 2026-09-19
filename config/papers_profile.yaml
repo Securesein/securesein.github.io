@@ -79,6 +79,26 @@ buckets:
       - Q-learning
       - actor-critic
 
+# Downweighted, not dropped (owner request: medical/clinical papers were
+# showing up too often, but should still surface occasionally when they're
+# genuinely strong -- unlike `exclude`, this only multiplies the keyword
+# score down, it never zeroes it or drops the bucket match). The triage
+# prompt (papers/run.py's TRIAGE_SYSTEM) carries the same steer for the
+# LLM-scored stage, since that's what actually decides the final ranking.
+penalize:
+  factor: 0.35
+  keywords:
+    - clinical
+    - medical
+    - healthcare
+    - biomedical
+    - radiology
+    - diagnosis
+    - electronic health record
+    - genomic
+    - oncology
+    - patient outcome
+
 # Dropped before any LLM ever sees the abstract. Start aggressive; this is
 # the highest-leverage tuning knob in the whole system, per §9.4.
 exclude:
