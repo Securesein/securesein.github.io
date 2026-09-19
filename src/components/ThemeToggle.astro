@@ -21,9 +21,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: var(--radius-sm);
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
     border: 1px solid var(--border-strong);
     background: transparent;
     color: var(--text-muted);
@@ -48,16 +48,26 @@
 
 <script>
   const toggle = document.getElementById("theme-toggle");
+
+  // "current" with no explicit choice yet is whatever the OS says.
+  const currentTheme = () =>
+    document.documentElement.getAttribute("data-theme") ??
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+  // The label names the action the button performs, not the current
+  // state — so it reads "Switch to light theme" while dark is active.
+  const syncLabel = () => {
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    toggle?.setAttribute("aria-label", `Switch to ${next} theme`);
+  };
+  syncLabel();
+
   toggle?.addEventListener("click", () => {
-    // With no explicit choice yet, "current" is whatever the OS says.
-    const stamped = document.documentElement.getAttribute("data-theme");
-    const current =
-      stamped ??
-      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    const next = current === "dark" ? "light" : "dark";
+    const next = currentTheme() === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
     try {
       localStorage.setItem("theme", next);
     } catch (e) {}
+    syncLabel();
   });
 </script>
