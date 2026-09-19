@@ -14,7 +14,7 @@ import PageHeader from "../../components/PageHeader.astro";
 import NewsRow from "../../components/NewsRow.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
 import { postsOfKind } from "../../posts";
-import { SECTION_INFO } from "../../taxonomy";
+import { SECTION_INFO, SECTION_ORDER } from "../../taxonomy";
 import {
   attributions,
   benchmarkGroups,
@@ -32,6 +32,14 @@ const [groups, posts, credits] = await Promise.all([
 ]);
 
 const total = groups.reduce((n, g) => n + g.total, 0);
+
+const ordinal = String(SECTION_ORDER.indexOf("benchmark") + 1).padStart(2, "0");
+const latestMeasurement = groups[0]?.rows[0]?.data.measuredAt ?? posts[0]?.data.pubDate;
+const updated = latestMeasurement?.toLocaleDateString("en-GB", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
 ---
 <BaseLayout
   title={SECTION_INFO.benchmark.label}
@@ -50,6 +58,10 @@ const total = groups.reduce((n, g) => n + g.total, 0);
       title={SECTION_INFO.benchmark.label}
       standfirst={`${SECTION_INFO.benchmark.question} A dozen benchmarks, tracked as data rather than written up as scorecards. Every row says who measured it and under what conditions, because a score without a harness and a shot count is a number, not a finding.`}
       note="Vendor-reported numbers are kept in the table alongside independent ones and labelled as vendor claims. The contrast is the point; hiding the claims would remove it."
+      eyebrow={{
+        label: `Section ${ordinal} — ${SECTION_INFO.benchmark.label}`,
+        ...(updated && { meta: `Updated ${updated}` }),
+      }}
     />
 
     {groups.length === 0 ? (

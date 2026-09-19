@@ -17,7 +17,7 @@ import NewsRow from "../components/NewsRow.astro";
 import TopicFilter from "../components/TopicFilter.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import { groupByDay, postsOfKind } from "../posts";
-import { SECTION_INFO, TOPICS, type Section, type Topic } from "../taxonomy";
+import { SECTION_INFO, SECTION_ORDER, TOPICS, type Section, type Topic } from "../taxonomy";
 
 interface Props {
   section: Section;
@@ -43,6 +43,16 @@ for (const post of posts) {
   for (const topic of post.data.topics as Topic[]) present.add(topic);
 }
 const topics = (Object.keys(TOPICS) as Topic[]).filter((t) => present.has(t));
+
+// "Section 01 — Model updates" (design handoff §4.2/§6): the ordinal
+// is this section's position in the site's own nav order, not a
+// hardcoded number that would drift the moment a section is added.
+const ordinal = String(SECTION_ORDER.indexOf(section) + 1).padStart(2, "0");
+const updated = posts[0]?.data.pubDate.toLocaleDateString("en-GB", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
 ---
 <BaseLayout title={info.label} description={info.description}>
   <link
@@ -57,6 +67,10 @@ const topics = (Object.keys(TOPICS) as Topic[]).filter((t) => present.has(t));
     <PageHeader
       title={info.label}
       standfirst={standfirst ?? `${info.question} ${info.blurb}`}
+      eyebrow={{
+        label: `Section ${ordinal} — ${info.label}`,
+        ...(updated && { meta: `Updated ${updated}` }),
+      }}
     >
       <slot name="header" />
       {dense && topics.length > 1 && <TopicFilter topics={topics} />}

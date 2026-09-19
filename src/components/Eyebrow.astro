@@ -1,0 +1,66 @@
+---
+// The one header device every page opens with (design handoff §4.1):
+// a mono label in amber, a hairline filling the rest of the width, and
+// (on every page except the centred homepage variant) a muted date on
+// the right. One component, two variants, rather than three near-copies
+// of the same CSS scattered across index.astro/PageHeader/the post
+// template — see the handoff's own checklist on that point.
+interface Props {
+  label: string;
+  /** Swapped in under 760px instead of `label` — `center` variant only. */
+  shortLabel?: string;
+  /** Right-aligned date/context — `left` variant only; the centred
+   * homepage masthead has no meta slot. */
+  meta?: string;
+  /** `left` (default): label, rule, meta. `center`: rule, label, rule. */
+  center?: boolean;
+}
+const { label, shortLabel, meta, center = false } = Astro.props;
+---
+{center ? (
+  <p class="eyebrow eyebrow--center">
+    <span class="eyebrow__rule" aria-hidden="true"></span>
+    <span class="eyebrow__label eyebrow__label--long">{label}</span>
+    {shortLabel && <span class="eyebrow__label eyebrow__label--short">{shortLabel}</span>}
+    <span class="eyebrow__rule" aria-hidden="true"></span>
+  </p>
+) : (
+  <p class="eyebrow">
+    <span class="eyebrow__label">{label}</span>
+    <span class="eyebrow__rule" aria-hidden="true"></span>
+    {meta && <span class="eyebrow__meta">{meta}</span>}
+  </p>
+)}
+
+<style>
+  .eyebrow {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.375rem;
+    font-family: "JetBrains Mono", var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  /* Content is written in normal spelling (see the callers) so the
+     text stays readable to screen readers and search engines — the
+     capitals are purely a visual transform. */
+  .eyebrow__label { color: var(--amber-text); }
+  .eyebrow__rule { flex: 1 1 auto; height: 1px; background: var(--rule); }
+  .eyebrow__meta { color: var(--text-muted); white-space: nowrap; }
+
+  .eyebrow--center .eyebrow__label--short { display: none; }
+
+  @media (max-width: 760px) {
+    .eyebrow { gap: 0.75rem; font-size: 0.625rem; letter-spacing: 0.16em; }
+    .eyebrow--center .eyebrow__label--long { display: none; }
+    .eyebrow--center .eyebrow__label--short { display: inline; white-space: nowrap; }
+    /* The right half of a left-anchored eyebrow drops rather than
+       wrapping under the label — every item below already repeats
+       its own date. */
+    .eyebrow:not(.eyebrow--center) .eyebrow__meta { display: none; }
+  }
+</style>

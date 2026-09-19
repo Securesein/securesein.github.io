@@ -48,9 +48,10 @@ const { topics } = Astro.props;
   }
   .filter-chip:hover { color: var(--text); border-color: var(--text-muted); }
   .filter-chip[aria-pressed="true"] {
-    background: var(--text);
-    border-color: var(--text);
-    color: var(--bg);
+    background: var(--amber);
+    border-color: var(--amber);
+    color: var(--amber-ink);
+    font-weight: 600;
   }
 </style>
 
@@ -61,7 +62,11 @@ const { topics } = Astro.props;
     const empty = list.querySelector<HTMLElement>("[data-news-empty]");
     const chips = [...filter.querySelectorAll<HTMLButtonElement>(".filter-chip")];
 
-    const apply = (topic: string) => {
+    // A filtered view is a real view of the page, not local UI state —
+    // it should survive a reload and be shareable, so the topic lives
+    // in the URL (design handoff §6). replaceState, not pushState:
+    // clicking through chips shouldn't fill the back-button history.
+    const apply = (topic: string, { sync = true } = {}) => {
       for (const chip of chips) {
         chip.setAttribute("aria-pressed", String(chip.dataset.topic === topic));
       }
@@ -79,10 +84,22 @@ const { topics } = Astro.props;
         shown += inDay;
       }
       if (empty) empty.hidden = shown > 0;
+
+      if (sync) {
+        const url = new URL(location.href);
+        if (topic) url.searchParams.set("topic", topic);
+        else url.searchParams.delete("topic");
+        history.replaceState(history.state, "", url);
+      }
     };
 
     for (const chip of chips) {
       chip.addEventListener("click", () => apply(chip.dataset.topic ?? ""));
+    }
+
+    const fromUrl = new URL(location.href).searchParams.get("topic");
+    if (fromUrl && chips.some((c) => c.dataset.topic === fromUrl)) {
+      apply(fromUrl, { sync: false });
     }
   }
 </script>

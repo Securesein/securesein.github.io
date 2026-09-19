@@ -6,8 +6,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import PostCard from "../../components/PostCard.astro";
 import { postsOfKind } from "../../posts";
+import { SECTION_ORDER } from "../../taxonomy";
 
 const posts = await postsOfKind("explainer");
+const ordinal = String(SECTION_ORDER.indexOf("explainer") + 1).padStart(2, "0");
 ---
 <BaseLayout
   title="Fundamentals"
@@ -25,6 +27,7 @@ const posts = await postsOfKind("explainer");
     <PageHeader
       title="Fundamentals"
       standfirst="One idea at a time, explained properly. Nothing here is tied to a particular week's news, and all of it should still be true next year. Read them in order if you're starting from scratch."
+      eyebrow={{ label: `Section ${ordinal} — Fundamentals` }}
     />
 
     <ol class="path">

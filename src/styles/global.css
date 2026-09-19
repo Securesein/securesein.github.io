@@ -60,6 +60,25 @@
   --brand-from: #8b5cf6;
   --brand-to: #22d3ee;
 
+  /* The eyebrow/page-head system (design handoff, §3-4): its own two
+     accents, additive to the palette above rather than replacing any
+     of it — --signal stays the sitewide functional link colour, and
+     --brand above stays the gradient identity mark on post-kind
+     pills. --amber is the "action" accent (active filter chips,
+     primary buttons) paired with --amber-ink as its own button text;
+     --amber-text is a separately-darkened value for amber used AS
+     text (eyebrow labels) — #E09A2B reads fine as a button fill but
+     is only ~2:1 against a light page as text, so the doc calibrates
+     the two independently rather than reusing one for both jobs.
+     --violet is the "identity" accent for focus rings and secondary-
+     button borders, named apart from --brand above so it never
+     collides with that gradient's own meaning. */
+  --amber: #e09a2b;
+  --amber-ink: #1a1206;
+  --amber-text: #8a5a00;
+  --violet: #6d3ff3;
+  --violet-ink: #6d3ff3;
+
   /* Card model. Light lifts each item onto a soft raised card with a
      hairline ring and a gentle shadow; dark keeps the flat, rule-
      separated instrument panel. Every component reads these, so the two
@@ -105,6 +124,12 @@
     --row-divider: none;
     --news-pad: 1.05rem 1.35rem;
     --dd-edge: transparent;
+
+    --amber: #f5b851;
+    --amber-ink: #0b0a0a;
+    --amber-text: #e0a64e;
+    --violet: #a98bff;
+    --violet-ink: #c9b6ff;
   }
 }
 
@@ -117,6 +142,12 @@
   --signal: #5fbf9f;
   --surface: #171b1f;
   --raised: #161a1e;
+
+  --amber: #f5b851;
+  --amber-ink: #0b0a0a;
+  --amber-text: #e0a64e;
+  --violet: #a98bff;
+  --violet-ink: #c9b6ff;
 
   /* Subtle cards, same model as light — see the media-query block above. */
   --card-bg: var(--raised);

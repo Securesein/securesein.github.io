@@ -10,6 +10,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PostCard from "../components/PostCard.astro";
 import NewsRow from "../components/NewsRow.astro";
+import Eyebrow from "../components/Eyebrow.astro";
 import { SITE, SECTIONS } from "../consts";
 import { allPosts, postUrl, postsOfFormat, postsOfKind, threadsWithPosts } from "../posts";
 
@@ -45,14 +46,14 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
     href="https://fonts.gstatic.com"
     crossorigin
   />
-  <!-- Homepage-only typefaces (build brief: hero masthead handoff, v5 —
-       "amber variant"). Archivo loads sitewide (see BaseLayout, the
-       nav wordmark uses it too); Instrument Sans and JetBrains Mono
-       are only used here. -->
+  <!-- Homepage-only typeface: Instrument Sans (the masthead's tagline
+       and buttons). Archivo and JetBrains Mono now load sitewide (see
+       BaseLayout) since the nav wordmark and the Eyebrow component
+       (design handoff) both use them on every page. -->
   <link
     slot="head"
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap"
   />
 
   <!-- v5: like v3, the tint spans the whole homepage (doc §3/§7: no
@@ -61,12 +62,11 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
   <div class="mh-page">
     <section class="masthead">
       <div class="container container--wide masthead-inner">
-        <p class="masthead__eyebrow">
-          <span class="masthead__rule" aria-hidden="true"></span>
-          <span class="masthead__eyebrow-long">{sectionsEyebrow}</span>
-          <span class="masthead__eyebrow-short">Research · Benchmarks · Security</span>
-          <span class="masthead__rule" aria-hidden="true"></span>
-        </p>
+        <Eyebrow
+          center
+          label={sectionsEyebrow}
+          shortLabel="Research · Benchmarks · Security"
+        />
 
         <h1 class="masthead__title">{SITE.title}</h1>
 
@@ -182,7 +182,6 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
     --border-strong: color-mix(in srgb, var(--rule) 70%, var(--muted));
 
     --ink-soft: #4b463f;
-    --label: #8a5a00;
     --display: #0c0a08;
     --accent: #e09a2b;
     --accent-ink: #1a1206;
@@ -207,7 +206,6 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
       --border-strong: color-mix(in srgb, var(--rule) 70%, var(--muted));
 
       --ink-soft: #b7b0a8;
-      --label: #e0a64e;
       --display: #ffffff;
       --accent: #f5b851;
       --accent-ink: #0b0a0a;
@@ -229,7 +227,6 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
     --border-strong: color-mix(in srgb, var(--rule) 70%, var(--muted));
 
     --ink-soft: #b7b0a8;
-    --label: #e0a64e;
     --display: #ffffff;
     --accent: #f5b851;
     --accent-ink: #0b0a0a;
@@ -246,21 +243,6 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
     text-align: center;
     font-family: "Instrument Sans", var(--font-sans);
   }
-
-  .masthead__eyebrow {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 1.375rem;
-    font-family: "JetBrains Mono", var(--font-mono);
-    font-size: 0.6875rem;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--label);
-  }
-  .masthead__rule { flex: 1 1 auto; height: 1px; background: var(--border); }
-  .masthead__eyebrow-short { display: none; }
 
   .masthead__title {
     margin: 1.875rem 0 0;
@@ -348,9 +330,6 @@ const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
 
   @media (max-width: 760px) {
     .masthead-inner { padding-block: 3rem 2rem; }
-    .masthead__eyebrow { gap: 0.75rem; font-size: 0.625rem; letter-spacing: 0.16em; }
-    .masthead__eyebrow-long { display: none; }
-    .masthead__eyebrow-short { display: inline; }
     .masthead__title { margin-top: 1.5rem; }
     .masthead__tagline { max-width: 26ch; }
     .masthead__actions { margin-top: 1.75rem; width: 100%; flex-direction: column; gap: 0.75rem; }

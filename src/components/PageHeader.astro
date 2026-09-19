@@ -1,19 +1,26 @@
 ---
 // Shared H1 + standfirst for the section and shelf landing pages, so
-// every index opens the same way. No all-caps tracked-out eyebrow
-// above the heading — that's a template tell, and the section is
-// already named in the nav.
+// every index opens the same way. The eyebrow (design handoff §4.1/
+// §4.2) is optional: pages that pass one get the mono label + hairline
+// + date device that now opens the section pages; the rest (About,
+// Colophon, Search) keep a plain heading rather than inventing a label
+// and a date that would mean nothing there.
+import Eyebrow from "./Eyebrow.astro";
+
 interface Props {
   title: string;
   /** One or two sentences of human framing, in the author's voice. */
   standfirst?: string;
   /** Small, calm, never a banner — e.g. the standing Scout note. */
   note?: string;
+  /** Mono label (left) + optional date (right) above the title. */
+  eyebrow?: { label: string; meta?: string };
 }
-const { title, standfirst, note } = Astro.props;
+const { title, standfirst, note, eyebrow } = Astro.props;
 ---
 <header class="page-header">
-  <h1>{title}</h1>
+  {eyebrow && <Eyebrow label={eyebrow.label} meta={eyebrow.meta} />}
+  <h1 class:list={{ "page-header__title--display": !!eyebrow }}>{title}</h1>
   {standfirst && <p class="page-standfirst">{standfirst}</p>}
   <slot />
   {note && <p class="page-note">{note}</p>}
@@ -24,6 +31,17 @@ const { title, standfirst, note } = Astro.props;
   .page-header h1 {
     font-size: clamp(1.9rem, 5vw, 2.6rem);
     letter-spacing: -0.025em;
+  }
+  /* Only pages that opted into the eyebrow also get the bigger Archivo
+     title (hierarchy step 2 of 104/68/56/27, design handoff §1) — a
+     plain page-header title elsewhere stays as it already was. */
+  .page-header__title--display {
+    margin-top: 1.75rem;
+    font-family: "Archivo", var(--font-sans);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5.2vw, 4.25rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
   }
   .page-standfirst {
     margin-top: 0.9rem;
