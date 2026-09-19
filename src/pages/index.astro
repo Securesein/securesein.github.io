@@ -98,10 +98,21 @@ const thread = threads.find(({ posts }) => posts.length > 1);
 
 <style>
   .intro { border-bottom: 1px solid var(--rule); padding-block: 4.5rem 2.6rem; }
+  /* The one other place the brand gradient (see --brand in global.css)
+     is allowed to appear beyond the logo star: the site signing its own
+     name at the top of its own homepage. A plain solid color read as an
+     afterthought for text this size; a fallback color sits underneath
+     for the rare browser without background-clip: text support. */
   .intro-title {
-    font-size: clamp(2rem, 5.5vw, 3.1rem);
-    letter-spacing: -0.035em;
+    font-size: clamp(2.6rem, 8vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.045em;
     max-width: 18ch;
+    color: var(--brand-from);
+    background: var(--brand);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .intro-sub {
     margin-top: 0.9rem;
