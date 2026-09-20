@@ -12728,6 +12728,23 @@
       "whyRelevant": "This item discusses LLM security measures, relevant for understanding internal workings and ensuring safe deployment of open-weight models in production.",
       "seenAt": "2026-09-19T10:04:01+00:00",
       "status": "radar"
+    },
+    {
+      "id": "ref42a31013c9283",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11059",
+      "title": "b11059",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "deep-learning",
+        "ai-security",
+        "llms"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses AI security measures relevant to deploying LLMs, which is crucial for ensuring safe and efficient model inference in production.",
+      "seenAt": "2026-09-20T06:16:22+00:00",
+      "status": "radar"
     }
   ]
 }
