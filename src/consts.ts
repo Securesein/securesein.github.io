@@ -8,7 +8,7 @@ export const SITE = {
   subTagline: "Keeping up with machine learning, one mechanism at a time.",
   author: "Sebastiaan",
   authorRole: "IT consultant",
-  github: "",
+  github: "https://github.com/Securesein/securesein.github.io",
 };
 
 /**
