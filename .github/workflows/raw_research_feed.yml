@@ -1,0 +1,74 @@
+name: Reader — raw research feed (rating prototype)
+
+# ############################################################
+# #  MANUAL TRIGGER ONLY. THERE IS DELIBERATELY NO `schedule`. #
+# #                                                            #
+# #  A second, separate stream from the normal Reader digest   #
+# #  (papers.yml): a broader, unfiltered sample of the same    #
+# #  arXiv feed, sent with five number buttons per item so the #
+# #  owner can rate things the keyword/LLM funnel would never  #
+# #  have shown at all — see scripts/papers/raw_feed.py's own  #
+# #  docstring. No LLM call, no OPENAI_API_KEY needed: rating  #
+# #  is cheap enough not to need one, and sampling past the    #
+# #  keyword filter rather than through it is the whole point. #
+# #                                                            #
+# #  Ratings are recorded by scripts/papers/rate.py, which is  #
+# #  polled for by the EXISTING feedback.yml receiver (same    #
+# #  bot token, same getUpdates call, a second module picking  #
+# #  out the callback shape it owns) — this workflow never      #
+# #  polls anything itself, it only sends.                      #
+# #                                                            #
+# #  To actually activate:                                     #
+# #    1. create a new Telegram chat, add the existing bot,     #
+# #       and set its id as the repo secret                     #
+# #       TELEGRAM_RAW_RESEARCH_CHAT_ID (a THIRD chat, distinct #
+# #       from both the main digest chat and the Reader digest  #
+# #       chat — this is a different signal from either);       #
+# #    2. confirm feedback.yml is already scheduled (it already #
+# #       has to be, for the main digest's own reaction buttons #
+# #       to work) — nothing further is needed there, it picks  #
+# #       up rating taps automatically;                          #
+# #    3. create a cron-job.org job hitting this workflow's      #
+# #       dispatch API, with send=true, whatever cadence feels   #
+# #       sustainable to actually rate (this is a "when I have   #
+# #       time" stream, not a daily obligation — daily or a few  #
+# #       times a week is plenty).                               #
+# #  None of that has been done — this workflow currently only   #
+# #  renders and prints the batch.                                #
+# ############################################################
+on:
+  workflow_dispatch:
+    inputs:
+      send:
+        description: "Actually send it to Telegram (leave false to render only)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  raw-feed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch and render (send only if requested)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          # Deliberately the raw-feed-specific secret — a third chat,
+          # not the main digest's TELEGRAM_CHAT_ID and not the Reader
+          # digest's TELEGRAM_PAPERS_CHAT_ID. telegram/api.py doesn't
+          # know or care which chat this is.
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_RAW_RESEARCH_CHAT_ID }}
+        run: |
+          python scripts/papers/raw_feed.py \
+            ${{ inputs.send && '--publish' || '--dry-run' }}

@@ -224,6 +224,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.feedback:
         from telegram import api, feedback
+        from papers import rate as raw_feed_rate
 
         offset_state = read_json(TELEGRAM_FEEDBACK_OFFSET_FILE, {"offset": None})
         updates = api.get_updates(offset_state.get("offset"))
@@ -233,7 +234,16 @@ def main(argv: list[str] | None = None) -> int:
         for outcome in outcomes:
             tag = "ok" if outcome.accepted else "skipped"
             print(f"    [{tag}] {outcome.action} -> {outcome.item_id}: {outcome.detail}")
-        if updates and not outcomes:
+
+        # Same poll, a second module: raw_feed.py's rating buttons carry
+        # callback_data feedback.py's own parse_callback doesn't recognise
+        # (see papers/rate.py's docstring for why the two don't share one
+        # code path), so every update is offered to both rather than
+        # running a second, independent getUpdates poller for them.
+        rating_outcomes = raw_feed_rate.handle_updates(updates, dry_run=dry_run)
+        for outcome in rating_outcomes:
+            print(f"    [ok] rating {outcome['rating']}/5 -> {outcome['id']}")
+        if updates and not outcomes and not rating_outcomes:
             print("    (no recognised callback_query among the fetched updates)")
 
         # Reading is always real (see the --feedback help text above); only
