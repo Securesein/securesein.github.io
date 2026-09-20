@@ -12745,6 +12745,21 @@
       "whyRelevant": "This item discusses AI security measures relevant to deploying LLMs, which is crucial for ensuring safe and efficient model inference in production.",
       "seenAt": "2026-09-20T06:16:22+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rffe8adb2329697f",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11064",
+      "title": "b11064",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve security and efficiency in deployment.",
+      "seenAt": "2026-09-20T18:16:11+00:00",
+      "status": "radar"
     }
   ]
 }
