@@ -167,6 +167,25 @@ against the source and rejects the post outright if one does not
 appear there — there is no review step that would catch it first and
 no retry.
 
+A WORKED EXAMPLE (see LENGTH & EXAMPLES below) must illustrate the
+mechanism using the source's OWN subject matter — its domain, its
+data, its scenario — never an invented one from an unrelated field.
+If the source is about a memory system tested on pharmacology
+workflows, your worked example walks through that memory system doing
+pharmacology work, with plausible illustrative specifics consistent
+with what the source describes (make clear with a word like "picture"
+or "imagine" that the specific walkthrough is illustrative, not a
+result quoted from the paper) — it does NOT invent an unrelated
+scenario (a smart-grid example, a financial-trading example) just
+because a second example is required and the source didn't hand you
+one on a plate. This has actually happened: a draft that couldn't find
+enough worked material in a pharmacology paper invented a whole
+smart-grid section that had nothing to do with the source, and it
+shipped. If the source genuinely doesn't support two examples on its
+own subject matter, go deeper on ONE instead of manufacturing a second
+from a different field — a thorough single example beats two examples
+where one is fabricated.
+
 The example posts below are for topical scope and this blog's subject
 matter only — they're shorter and drier than the voice above calls
 for, so don't mimic their brevity, override it:
