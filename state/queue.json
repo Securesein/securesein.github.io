@@ -5213,6 +5213,37 @@
       "qualityScore": 100.0,
       "relevanceScore": 25.0,
       "whyRelevant": "This research explores automating business intelligence with LLMs, relevant for understanding model deployment and inference efficiency in practical applications."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-21T18:17:11+00:00",
+      "score": 59.4,
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11077",
+      "title": "b11077",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r27a031d2d3c13db",
+      "qualityScore": 80.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item discusses AI security measures relevant to deploying and serving open-weight models, which is crucial for ensuring safe and efficient LLM operations."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-21T18:17:11+00:00",
+      "score": 54.6,
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-benchling-secured-multi-tenant-ai-agents-with-amazon-bedrock-agentcore/",
+      "title": "How Benchling secured multi-tenant AI agents with Amazon Bedrock AgentCore",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "candidateId": "rbfa8a2eb87150a2",
+      "qualityScore": 80.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This article discusses securing AI agents, which is relevant for understanding LLM security and deployment in multi-tenant environments."
     }
   ]
 }

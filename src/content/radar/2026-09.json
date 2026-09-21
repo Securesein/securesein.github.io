@@ -14443,7 +14443,7 @@
       ],
       "qualityScore": 80.0,
       "relevanceScore": 42.7,
-      "whyRelevant": "This article provides insights into anomaly detection in cloud environments, relevant for understanding security measures in deploying and serving ML models.",
+      "whyRelevant": "This article provides insights into anomaly detection in cloud environments, relevant for understanding security measures in deploying and serving LLMs.",
       "seenAt": "2026-09-21T18:02:41+00:00",
       "status": "radar"
     },
@@ -14457,7 +14457,7 @@
         "agents",
         "ai-security"
       ],
-      "qualityScore": 65.0,
+      "qualityScore": 80.0,
       "relevanceScore": 54.6,
       "whyRelevant": "This article discusses securing AI agents, which is relevant for understanding LLM security and deployment in multi-tenant environments.",
       "seenAt": "2026-09-21T18:02:44+00:00",
@@ -14478,6 +14478,36 @@
       "relevanceScore": 56.5,
       "whyRelevant": "This item discusses AI applications in medical claims, which may provide insights into LLM deployment and efficiency in real-world scenarios.",
       "seenAt": "2026-09-21T18:02:46+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc7e59bdb83bb6ef",
+      "url": "https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/",
+      "title": "Open-Sourcing Rebalancer: A Generic, High-Performance Library for Solving Assignment Problems",
+      "source": "Engineering at Meta",
+      "section": "release",
+      "topics": [
+        "agents"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This item is relevant as it provides a high-performance library that can enhance the efficiency of algorithms used in LLMs and agent-based systems.",
+      "seenAt": "2026-09-21T18:16:57+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r27a031d2d3c13db",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11077",
+      "title": "b11077",
+      "source": "llama.cpp Releases",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item discusses AI security measures relevant to deploying and serving open-weight models, which is crucial for ensuring safe and efficient LLM operations.",
+      "seenAt": "2026-09-21T18:17:05+00:00",
       "status": "radar"
     }
   ]
