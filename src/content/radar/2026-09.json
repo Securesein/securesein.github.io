@@ -14399,6 +14399,38 @@
       "seenAt": "2026-09-21T06:20:46+00:00",
       "status": "promoted",
       "promotedTo": "breaking-through-context-limits-a-hierarchical-memory-architecture-in-multi-agent-modeling"
+    },
+    {
+      "id": "r8dbdc85494e05ef",
+      "url": "https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/",
+      "title": "Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable",
+      "source": "Engineering at Meta",
+      "section": "release",
+      "topics": [
+        "generative-ai"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "This item is not directly relevant to mechanistic interpretability or LLMs, focusing instead on infrastructure for data transmission.",
+      "seenAt": "2026-09-21T14:17:21+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd3082f6b9d813d2",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11070",
+      "title": "b11070",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "deep-learning",
+        "ai-security"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses LLM security, which is crucial for understanding internal mechanisms and ensuring safe deployment in production environments.",
+      "seenAt": "2026-09-21T14:17:28+00:00",
+      "status": "radar"
     }
   ]
 }
