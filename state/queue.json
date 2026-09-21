@@ -5244,6 +5244,42 @@
       "qualityScore": 80.0,
       "relevanceScore": 54.6,
       "whyRelevant": "This article discusses securing AI agents, which is relevant for understanding LLM security and deployment in multi-tenant environments."
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-09-21T21:01:37+00:00",
+      "score": 7.0,
+      "title": "nvidia/RT-DETR-Hand-Detector-v1",
+      "url": "https://huggingface.co/nvidia/RT-DETR-Hand-Detector-v1",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "NVIDIA/RT-DETR-Hand-Detector/v1/new_model",
+      "eventType": "new_model",
+      "vendor": "NVIDIA",
+      "family": "RT-DETR-Hand-Detector",
+      "version": "v1",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2",
+        "non_tier1 -2"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into object detection mechanisms, which can inform understanding of LLMs' internal workings and enhance reasoning efficiency in ML applications.",
+      "candidateId": "r2cfc9382d525587",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }

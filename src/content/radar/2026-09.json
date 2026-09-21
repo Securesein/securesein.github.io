@@ -14509,6 +14509,21 @@
       "whyRelevant": "This item discusses AI security measures relevant to deploying and serving open-weight models, which is crucial for ensuring safe and efficient LLM operations.",
       "seenAt": "2026-09-21T18:17:05+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r2cfc9382d525587",
+      "url": "https://huggingface.co/nvidia/RT-DETR-Hand-Detector-v1",
+      "title": "nvidia/RT-DETR-Hand-Detector-v1",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into object detection mechanisms, which can inform understanding of LLMs' internal workings and enhance reasoning efficiency in ML applications.",
+      "seenAt": "2026-09-21T21:01:37+00:00",
+      "status": "radar"
     }
   ]
 }
