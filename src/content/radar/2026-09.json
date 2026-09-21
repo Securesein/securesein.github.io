@@ -12791,7 +12791,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 32.0,
-      "whyRelevant": "This research on 3D diffusion policies may provide insights into agent behavior and decision-making processes relevant to LLMs and their interpretability.",
+      "whyRelevant": "This research explores reinforcement learning in agents, which may provide insights into LLM reasoning and inference efficiency, though its direct relevance is limited.",
       "seenAt": "2026-09-21T02:01:43+00:00",
       "status": "radar"
     }
