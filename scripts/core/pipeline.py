@@ -566,9 +566,20 @@ def publish_ranked(
     identical line per item. Everything from the refusal onwards is
     queued — it was good enough, there was just no room — and stays
     eligible until queue_ttl_days expires it back to the Radar.
+
+    IT ALSO STOPS after max_draft_attempts() candidates have actually
+    been drafted, published or not — added after an incident where a
+    96% quality-gate pass rate met a 74% verification-rejection rate on
+    the same run: per_run_cap only counts successful publishes, so a
+    candidate that failed G1/G3 cost a full draft call and the loop just
+    moved on to the next one, with nothing bounding how many it could
+    try before finding enough that passed. See budgets.json's own
+    comment on this constant.
     """
     published = 0
+    attempts = 0
     exhausted = False
+    max_attempts = ctx.ledger.max_draft_attempts()
 
     for candidate in outcome.ranked:
         row = {
@@ -593,14 +604,23 @@ def publish_ranked(
             exhausted = True
             continue
 
+        if attempts >= max_attempts:
+            print(f"    draft-attempt cap reached ({max_attempts}) — "
+                  f"queuing the rest rather than continuing to draft")
+            ctx.queue.put(channel, row, candidate.score)
+            exhausted = True
+            continue
+
         print(f"  Writing: {candidate.item.title[:70]} "
               f"(q={row['qualityScore']} r={row['relevanceScore']})")
+        attempts += 1
         slug = publish(ctx, candidate, channel=channel, section_rules=section_rules)
         if slug:
             published += 1
             ctx.queue.drop(row)
 
     if exhausted:
-        print(f"  Budget reached after {published} post(s); "
-              f"{len([c for c in outcome.ranked]) - published} candidate(s) queued.")
+        print(f"  Stopped after {attempts} draft attempt(s), {published} post(s) "
+              f"published; {len([c for c in outcome.ranked]) - published} "
+              f"candidate(s) queued.")
     return published

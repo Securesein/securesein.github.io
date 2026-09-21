@@ -92,6 +92,14 @@ class Ledger:
     def per_run_cap(self) -> int:
         return int(self.config["per_run_cap"])
 
+    def max_draft_attempts(self) -> int:
+        """Bounds cost per run independently of per_run_cap: that cap
+        stops the loop once N posts have PUBLISHED, but a candidate that
+        fails verification (G1/G3) still cost a full draft call and
+        previously didn't count against anything — see budgets.json's
+        own comment on the incident this fixes."""
+        return int(self.config.get("max_draft_attempts_per_run", 8))
+
     def per_day_cap(self) -> int:
         return int(self.config["per_day_cap"])
 

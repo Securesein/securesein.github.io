@@ -15,5 +15,8 @@
   "per_run_cap": 2,
   "queue_ttl_days": 7,
 
+  "_comment_draft_attempts": "INCIDENT FIX, 2026-09-21: publish_ranked() (core/pipeline.py) only stopped once `per_run_cap` posts had actually PUBLISHED — a candidate that failed verification (G1/G3) cost a full draft call and then the loop just moved to the next ranked candidate, with nothing counting the attempt itself. A research.yml run with a 96% quality-gate pass rate and a 74% G3 rejection rate burned 35 draft calls (438 model calls total) chasing 2 successful publishes. max_draft_attempts_per_run bounds the cost of a single run regardless of how many candidates it has to try — set well above what a normal run needs (per_run_cap, usually satisfied in 2-3 tries) so it only bites during an anomalous run like this one.",
+  "max_draft_attempts_per_run": 8,
+
   "_comment_rollover": "Unused budget does NOT roll over. A quiet week is a quiet week, and a correct outcome rather than a failure to hit target (section 16). Nothing in ledger.py carries a remainder forward; this line exists so nobody adds it later thinking it was an oversight."
 }
