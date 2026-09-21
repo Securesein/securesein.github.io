@@ -14426,10 +14426,58 @@
         "deep-learning",
         "ai-security"
       ],
-      "qualityScore": 80.0,
+      "qualityScore": 70.0,
       "relevanceScore": 70.0,
-      "whyRelevant": "This item discusses LLM security, which is crucial for understanding internal mechanisms and ensuring safe deployment in production environments.",
+      "whyRelevant": "This item discusses LLM security and deployment, which are crucial for understanding internal mechanisms and ensuring safe, efficient model inference in production.",
       "seenAt": "2026-09-21T14:17:28+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc2e46806d0d494d",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-bmw-group-detects-cost-anomalies-across-14000-cloud-accounts/",
+      "title": "How BMW Group detects cost anomalies across 14,000 cloud accounts",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This article provides insights into anomaly detection in cloud environments, relevant for understanding security measures in deploying and serving ML models.",
+      "seenAt": "2026-09-21T18:02:41+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbfa8a2eb87150a2",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-benchling-secured-multi-tenant-ai-agents-with-amazon-bedrock-agentcore/",
+      "title": "How Benchling secured multi-tenant AI agents with Amazon Bedrock AgentCore",
+      "source": "AWS Machine Learning Blog",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This article discusses securing AI agents, which is relevant for understanding LLM security and deployment in multi-tenant environments.",
+      "seenAt": "2026-09-21T18:02:44+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8b70683bc002818",
+      "url": "https://aws.amazon.com/blogs/machine-learning/reducing-medical-claims-review-time-with-ai-on-aws-the-exl-medical-idp-solution/",
+      "title": "Reducing medical claims review time with AI on AWS: The EXL Medical IDP solution",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "llms",
+        "ai-security",
+        "generative-ai"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item discusses AI applications in medical claims, which may provide insights into LLM deployment and efficiency in real-world scenarios.",
+      "seenAt": "2026-09-21T18:02:46+00:00",
       "status": "radar"
     }
   ]
