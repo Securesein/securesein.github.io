@@ -39,6 +39,14 @@
       "publishedAt": "2026-09-17T18:18:47+00:00",
       "qualityScore": 80.0,
       "relevanceScore": 11.2
+    },
+    {
+      "slug": "loopjacking-a-new-security-risk-in-human-in-the-loop-systems",
+      "section": "security",
+      "channel": "security",
+      "publishedAt": "2026-09-21T06:22:41+00:00",
+      "qualityScore": 100.0,
+      "relevanceScore": 61.3
     }
   ]
 }

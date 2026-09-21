@@ -4283,6 +4283,129 @@
       "qualityScore": 100.0,
       "relevanceScore": 31.2,
       "whyRelevant": "This item discusses security in autonomous systems, relevant for understanding LLM vulnerabilities and enhancing model robustness in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-21T06:22:41+00:00",
+      "score": 61.3,
+      "url": "https://arxiv.org/abs/2609.21081",
+      "title": "Loopjacking: Hijacking Human-in-the-Loop Approval",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents"
+      ],
+      "candidateId": "rb7fe296f0f7f25a",
+      "qualityScore": 100.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This item discusses security vulnerabilities in human-in-the-loop systems, relevant for understanding risks in LLM deployment and agent interactions."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-21T06:22:41+00:00",
+      "score": 59.4,
+      "url": "https://arxiv.org/abs/2609.20909",
+      "title": "TPM-Attest: Hardware-Rooted Integrity Attestation as a Kernel-Level Anti-Cheat Alternative for Linux",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r41a4b056cb0fdb0",
+      "qualityScore": 100.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item is relevant as it discusses security measures that could impact the integrity of LLMs and their deployment in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-21T06:22:41+00:00",
+      "score": 56.2,
+      "url": "https://arxiv.org/abs/2609.21303",
+      "title": "Identifying Security Platform Product Abuse with Machine Learning",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r94071b3334a6b0d",
+      "qualityScore": 90.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "This item discusses using machine learning for security, which may provide insights into LLM vulnerabilities and enhance understanding of model behavior in production."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-21T06:22:41+00:00",
+      "score": 54.6,
+      "url": "https://arxiv.org/abs/2609.20982",
+      "title": "ASGARD: Action-Space Guard for UAV Resilience via Reinforcement Learning",
+      "section": "security",
+      "topics": [
+        "reinforcement-learning",
+        "ai-security"
+      ],
+      "candidateId": "r5b0bccec7d36cfe",
+      "qualityScore": 80.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This item explores reinforcement learning for UAV security, which may provide insights into agent security and robustness in LLM applications."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-21T06:22:41+00:00",
+      "score": 52.7,
+      "url": "https://arxiv.org/abs/2609.21273",
+      "title": "Transcript-Bound Combiners for Downgrade-Resilient Hybrid Post-Quantum Key Establishment: Definition, Proof, and Embedded-Device Cost",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r2ca33dc25fce74b",
+      "qualityScore": 100.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses security mechanisms relevant to LLMs and agents, particularly in the context of post-quantum key establishment and embedded-device cost."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-21T06:22:41+00:00",
+      "score": 51.3,
+      "url": "https://arxiv.org/abs/2609.20884",
+      "title": "The Right Tool for the Job: On the Selection of Mitigations for GenAI Privacy Threats",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "generative-ai"
+      ],
+      "candidateId": "r54a9ebfe346a847",
+      "qualityScore": 80.0,
+      "relevanceScore": 51.3,
+      "whyRelevant": "This item discusses privacy threats in generative AI, relevant for understanding security measures and implications for deploying LLMs in production."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-21T06:22:41+00:00",
+      "score": 49.4,
+      "url": "https://arxiv.org/abs/2609.21020",
+      "title": "(Don't) Trust, but (Don't) Verify: Developers' Attention to Security in AI-Generated Code",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "rf3c8ef12a487a30",
+      "qualityScore": 80.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This article discusses security concerns in AI-generated code, relevant for understanding vulnerabilities in LLMs and ensuring safe deployment in production."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-21T06:22:41+00:00",
+      "score": 42.7,
+      "url": "https://arxiv.org/abs/2609.21222",
+      "title": "Combining Exploratory Analysis and Automated Analysis for Anomaly Detection in Real-Time Data Streams",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "rf4dcfd316744982",
+      "qualityScore": 80.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This item discusses anomaly detection in real-time data streams, relevant for understanding LLM security and improving inference efficiency in production environments."
     }
   ]
 }
