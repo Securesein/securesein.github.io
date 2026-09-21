@@ -1,0 +1,60 @@
+---
+// Without this, a dead link lands on GitHub Pages' own 404 — a page
+// with no nav, no branding and no way back into the site. The posts
+// that generate dead links are the retracted ones (a 🗑 reaction
+// reverts the commit), so this is the page a reader actually hits when
+// they follow a link to something that has since been pulled.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import { SECTIONS } from "../consts";
+---
+<BaseLayout
+  title="Page not found"
+  description="That page doesn't exist — it may have been retracted, or the link may be wrong."
+  noindex
+>
+  <div class="container container--wide">
+    <PageHeader
+      title="Page not found"
+      standfirst="That link doesn't lead anywhere. Either the address is wrong, or the post it pointed at was retracted — a post that turns out to be wrong at its foundation gets pulled rather than quietly rewritten."
+    />
+
+    <nav class="ways-out" aria-label="Where to go instead">
+      {SECTIONS.map((section) => (
+        <a class="way-out" href={section.href}>
+          <span class="way-out__name">{section.label}</span>
+          <span class="way-out__desc">{section.description}</span>
+        </a>
+      ))}
+    </nav>
+
+    <p class="ways-more">
+      Or try <a href="/topics/">the topic shelves</a>, <a href="/search/">search</a>,
+      or <a href="/">start from the front page</a>.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .ways-out {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  }
+  .way-out {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--border-strong);
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 120ms ease;
+  }
+  .way-out:hover { border-top-color: var(--amber); text-decoration: none; }
+  .way-out__name { font-weight: 600; letter-spacing: -0.01em; color: var(--text); }
+  .way-out__desc { font-size: 0.875rem; line-height: 1.45; color: var(--text-muted); }
+  .ways-more { margin-top: 2.5rem; color: var(--text-muted); }
+  @media (prefers-reduced-motion: reduce) { .way-out { transition: none; } }
+</style>

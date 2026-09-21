@@ -4,10 +4,21 @@ export const SITE = {
   title: "securesein",
   description:
     "Machine learning, kept up with and taken apart — what shipped, what we learned, what the numbers say, and what can go wrong. Drafted automatically, published without review, with the reason on every post.",
+  // The homepage <title> specifically. Every other page gets
+  // "<page> — securesein" from its own title, but the homepage had no
+  // title of its own and fell back to the bare brand name — the single
+  // most valuable title tag on the site, carrying not one word about
+  // what the site is. Nobody searches "securesein" except people who
+  // already know it. Kept under ~60 characters so it isn't truncated
+  // in results.
+  homeTitle: "securesein — AI research, model updates and benchmarks",
   tagline: "securesein",
   subTagline: "Keeping up with machine learning, one mechanism at a time.",
   author: "Sebastiaan",
-  authorRole: "IT consultant",
+  // Rendered into every post's JSON-LD as the author's jobTitle, which
+  // is why it has to match what the About page says rather than being
+  // a leftover from an earlier framing of the site.
+  authorRole: "Machine learning writer",
   github: "https://github.com/Securesein/securesein.github.io",
 };
 

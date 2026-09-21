@@ -55,20 +55,43 @@ const threads = await threadPositions(post);
 // the model is credited as a contributor. Claiming a human author on
 // an unreviewed auto-draft would be the one place where honesty and
 // SEO happen to want the same thing, and we'd be getting it wrong.
-const publisher = { "@type": "Organization", name: SITE.title, url: Astro.site?.href };
-const author =
-  data.credit === "scout"
-    ? { "@type": "SoftwareApplication", name: "Scout", applicationCategory: "Automated publishing pipeline" }
-    : { "@type": "Person", name: SITE.author, jobTitle: SITE.authorRole };
-const jsonLd = {
-  "@context": "https://schema.org",
+// The @id values match the ones the homepage declares (src/pages/
+// index.astro), so a crawler reads one Person and one Blog across the
+// whole site rather than re-deriving a separate author entity from
+// every post it happens to find first. The Person is also defined in
+// full here rather than only referenced: a post page has to be
+// parseable on its own, and an @id pointing at a node that is only
+// declared on the homepage reads as an author with no name to anything
+// that looks at this page in isolation.
+const siteUrl = Astro.site?.href ?? "https://securesein.com/";
+const person = {
+  "@type": "Person",
+  "@id": `${siteUrl}#author`,
+  name: SITE.author,
+  jobTitle: SITE.authorRole,
+  url: `${siteUrl}about/`,
+  ...(SITE.github && { sameAs: [SITE.github] }),
+};
+const scoutAgent = {
+  "@type": "SoftwareApplication",
+  "@id": `${siteUrl}#scout`,
+  name: "Scout",
+  applicationCategory: "Automated publishing pipeline",
+  author: { "@id": `${siteUrl}#author` },
+};
+const isScout = data.credit === "scout";
+const article = {
   "@type": "Article",
+  "@id": new URL(postUrl(post), Astro.site).href + "#article",
   headline: data.title,
   description: data.description,
   datePublished: data.pubDate.toISOString(),
   ...(data.updatedDate && { dateModified: data.updatedDate.toISOString() }),
-  author,
-  publisher,
+  author: { "@id": isScout ? `${siteUrl}#scout` : `${siteUrl}#author` },
+  publisher: { "@id": `${siteUrl}#author` },
+  isPartOf: { "@id": `${siteUrl}#blog` },
+  articleSection: section.label,
+  inLanguage: "en-GB",
   ...(data.model && {
     contributor: { "@type": "SoftwareApplication", name: data.model },
   }),
@@ -77,12 +100,28 @@ const jsonLd = {
   mainEntityOfPage: new URL(postUrl(post), Astro.site).href,
   keywords: data.topics.join(", "),
 };
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    article,
+    person,
+    ...(isScout ? [scoutAgent] : []),
+    {
+      "@type": "Blog",
+      "@id": `${siteUrl}#blog`,
+      url: siteUrl,
+      name: SITE.title,
+      publisher: { "@id": `${siteUrl}#author` },
+    },
+  ],
+};
 ---
 <BaseLayout
   title={data.title}
   description={data.description}
   reading={longForm}
   image={data.hero}
+  imageAlt={data.heroAlt}
   ogType="article"
 >
   <script
@@ -91,6 +130,13 @@ const jsonLd = {
     type="application/ld+json"
     set:html={JSON.stringify(jsonLd)}
   />
+  <meta slot="head" property="article:published_time" content={data.pubDate.toISOString()} />
+  {data.updatedDate && (
+    <meta slot="head" property="article:modified_time" content={data.updatedDate.toISOString()} />
+  )}
+  {data.topics.map((topic: string) => (
+    <meta slot="head" property="article:tag" content={topic} />
+  ))}
 
   <article class="container post" data-pagefind-body data-pagefind-meta={`section:${section.label}`}>
     <nav class="crumbs" aria-label="Breadcrumb">

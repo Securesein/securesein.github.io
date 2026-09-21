@@ -11,23 +11,35 @@ interface Props {
   reading?: boolean;
   /** Absolute or site-relative share image; falls back to the default. */
   image?: string;
+  /** Alt text for `image`, so a shared card is described, not just seen. */
+  imageAlt?: string;
   /** "article" on post pages, so the OG type is honest. */
   ogType?: "website" | "article";
+  /** Keep a page out of search results — for pages that exist for a
+   * person mid-visit rather than for someone arriving from a search
+   * (the search page itself, the 404). */
+  noindex?: boolean;
 }
 const {
   title,
   description,
   reading = false,
   image,
+  imageAlt,
   ogType = "website",
+  noindex = false,
 } = Astro.props;
-const pageTitle = title ? `${title} — ${SITE.title}` : SITE.title;
+// The homepage passes no title, and falling back to the bare brand
+// name wasted the most valuable title tag on the site — see
+// SITE.homeTitle's own comment.
+const pageTitle = title ? `${title} — ${SITE.title}` : SITE.homeTitle;
 const pageDesc = description ?? SITE.description;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 // Per-post OG images are the post's own hero where it has one, and a
 // single site card otherwise. Rendering a bespoke card per post would
 // mean a whole image pipeline for a handful of posts a week.
 const ogImage = new URL(image ?? "/og-default.png", Astro.site);
+const ogImageAlt = imageAlt ?? `${SITE.title} — ${SITE.subTagline}`;
 ---
 <!doctype html>
 <html lang="en">
@@ -38,6 +50,7 @@ const ogImage = new URL(image ?? "/og-default.png", Astro.site);
     <title>{pageTitle}</title>
     <meta name="description" content={pageDesc} />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
     <meta property="og:site_name" content={SITE.title} />
     <meta property="og:type" content={ogType} />
@@ -45,7 +58,10 @@ const ogImage = new URL(image ?? "/og-default.png", Astro.site);
     <meta property="og:description" content={pageDesc} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta property="og:locale" content="en_GB" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <link
       rel="alternate"

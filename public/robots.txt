@@ -1,0 +1,12 @@
+# securesein — everything here is meant to be read and indexed.
+#
+# The one job this file actually does is the last line: it advertises
+# the sitemap. Without it the sitemap is only discoverable by submitting
+# it to each search console by hand, which for a site that publishes
+# several posts a day is the difference between same-day and same-week
+# discovery.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://securesein.com/sitemap-index.xml

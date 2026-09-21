@@ -33,8 +33,56 @@ const startHere = explainers.slice(0, 4);
 const thread = threads.find(({ posts }) => posts.length > 1);
 const latestPost = allPublished[0];
 const sectionsEyebrow = SECTIONS.map((s) => s.label).join(" · ");
+
+// Site-level structured data. Post pages already declare themselves as
+// Articles; this is the piece that was missing — what the SITE is, and
+// who is behind it, so the two aren't inferred separately from every
+// individual post. Deliberately no SearchAction: the search page runs
+// Pagefind client-side and does not read a ?q= parameter, so claiming a
+// query template Google could hand a term to would be a promise the
+// site doesn't keep.
+const siteUrl = Astro.site?.href ?? "https://securesein.com/";
+const author = {
+  "@type": "Person",
+  "@id": `${siteUrl}#author`,
+  name: SITE.author,
+  jobTitle: SITE.authorRole,
+  url: `${siteUrl}about/`,
+  ...(SITE.github && { sameAs: [SITE.github] }),
+};
+const siteJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}#website`,
+      url: siteUrl,
+      name: SITE.title,
+      description: SITE.description,
+      inLanguage: "en-GB",
+      publisher: { "@id": `${siteUrl}#author` },
+    },
+    {
+      "@type": "Blog",
+      "@id": `${siteUrl}#blog`,
+      url: siteUrl,
+      name: SITE.title,
+      description: SITE.description,
+      inLanguage: "en-GB",
+      author: { "@id": `${siteUrl}#author` },
+      publisher: { "@id": `${siteUrl}#author` },
+    },
+    author,
+  ],
+};
 ---
 <BaseLayout>
+  <script
+    is:inline
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(siteJsonLd)}
+  />
   <link
     slot="head"
     rel="preconnect"
