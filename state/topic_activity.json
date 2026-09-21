@@ -1,11 +1,11 @@
 {
   "topics": {
     "interpretability": "2026-09-05",
-    "ai-security": "2026-09-17",
+    "ai-security": "2026-09-21",
     "llms": "2026-09-14",
     "reasoning": "2026-09-13",
     "inference": "2026-09-09",
-    "agents": "2026-09-19",
+    "agents": "2026-09-21",
     "ai-safety": "2026-09-19",
     "evaluation": "2026-09-12",
     "reinforcement-learning": "2026-09-12",

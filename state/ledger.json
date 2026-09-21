@@ -47,6 +47,22 @@
       "publishedAt": "2026-09-21T06:22:41+00:00",
       "qualityScore": 100.0,
       "relevanceScore": 61.3
+    },
+    {
+      "slug": "when-ai-reviews-train-ai-reviewers-scientific-judgment-collapse-and-mitigation",
+      "section": "research",
+      "channel": "research",
+      "publishedAt": "2026-09-21T10:18:30+00:00",
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2
+    },
+    {
+      "slug": "breaking-through-context-limits-a-hierarchical-memory-architecture-in-multi-agent-modeling",
+      "section": "research",
+      "channel": "research",
+      "publishedAt": "2026-09-21T10:22:58+00:00",
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2
     }
   ]
 }
