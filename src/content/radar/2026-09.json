@@ -14506,7 +14506,7 @@
       ],
       "qualityScore": 80.0,
       "relevanceScore": 59.4,
-      "whyRelevant": "This item discusses AI security measures relevant to deploying and serving open-weight models, which is crucial for ensuring safe and efficient LLM operations.",
+      "whyRelevant": "This item discusses AI security measures relevant to ensuring safe deployment and operation of LLMs, which is crucial for production environments.",
       "seenAt": "2026-09-21T18:17:05+00:00",
       "status": "radar"
     },
@@ -14523,6 +14523,23 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This model provides insights into object detection mechanisms, which can inform understanding of LLMs' internal workings and enhance reasoning efficiency in ML applications.",
       "seenAt": "2026-09-21T21:01:37+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r80e68252491f34b",
+      "url": "https://aws.amazon.com/blogs/machine-learning/xais-grok-4-6-is-now-available-in-amazon-bedrock/",
+      "title": "xAI’s Grok 4.6 is now available in Amazon Bedrock",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "agents",
+        "reasoning",
+        "llms"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "Grok 4.6's integration with Amazon Bedrock may enhance understanding of LLM deployment and security in production environments.",
+      "seenAt": "2026-09-21T22:01:51+00:00",
       "status": "radar"
     }
   ]
