@@ -63,6 +63,14 @@
       "publishedAt": "2026-09-21T10:22:58+00:00",
       "qualityScore": 100.0,
       "relevanceScore": 63.2
+    },
+    {
+      "slug": "decoupling-content-understanding-and-policy-learning-in-multimodal-moderation",
+      "section": "research",
+      "channel": "research",
+      "publishedAt": "2026-09-22T06:08:39+00:00",
+      "qualityScore": 100.0,
+      "relevanceScore": 70.2
     }
   ]
 }
