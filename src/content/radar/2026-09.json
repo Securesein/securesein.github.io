@@ -13484,8 +13484,8 @@
         "training"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 25.0,
-      "whyRelevant": "This research explores automating business intelligence with LLMs, relevant for understanding model deployment and inference efficiency in practical applications.",
+      "relevanceScore": 39.0,
+      "whyRelevant": "This research explores automating business intelligence with LLMs and agents, relevant for understanding LLM functionality and improving inference efficiency in production.",
       "seenAt": "2026-09-21T06:18:38+00:00",
       "status": "radar"
     },
@@ -14554,7 +14554,7 @@
       ],
       "qualityScore": 80.0,
       "relevanceScore": 23.1,
-      "whyRelevant": "The introduction of System One highlights new architectures in LLMs that may influence mechanistic interpretability and efficiency in reasoning and inference.",
+      "whyRelevant": "The introduction of System One highlights a novel approach to LLM architecture, relevant for exploring mechanistic interpretability and enhancing reasoning efficiency.",
       "seenAt": "2026-09-22T02:01:37+00:00",
       "status": "radar"
     },
@@ -14571,7 +14571,7 @@
       ],
       "qualityScore": 85.0,
       "relevanceScore": 73.0,
-      "whyRelevant": "Cloudflare Python Workers can enhance the deployment and serving of LLMs in production, improving inference efficiency and security for machine learning applications.",
+      "whyRelevant": "Cloudflare Python Workers can enhance the deployment and serving of LLMs in production, improving inference efficiency and security for local models.",
       "seenAt": "2026-09-22T02:01:40+00:00",
       "status": "radar"
     },
@@ -14588,7 +14588,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 73.0,
-      "whyRelevant": "This item discusses advancements in LLM inference, which can enhance understanding of internal mechanisms and improve deployment efficiency in production environments.",
+      "whyRelevant": "This item discusses advancements in LLM inference, relevant for understanding internal mechanisms and improving efficiency in deploying models securely.",
       "seenAt": "2026-09-22T02:01:51+00:00",
       "status": "radar"
     },
@@ -14605,6 +14605,226 @@
       "relevanceScore": 52.7,
       "whyRelevant": "This item provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
       "seenAt": "2026-09-22T02:01:57+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1c0362467a780d8",
+      "url": "https://arxiv.org/abs/2609.05571",
+      "title": "Grounded Skill Synthesis from Code at Scale for Agentic Intelligence",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "ai-security",
+        "generative-ai"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research explores how code synthesis can enhance agentic intelligence, relevant for understanding LLM reasoning and improving security in model deployment.",
+      "seenAt": "2026-09-22T02:17:01+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb0e8bf5859bbcb5",
+      "url": "https://arxiv.org/abs/2609.09206",
+      "title": "MLLMs Hallucinate when Information Distribution Drifts in Synergy Heads",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "multimodal",
+        "interpretability"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.2,
+      "whyRelevant": "This research explores how information distribution affects LLM behavior, relevant for understanding internal mechanisms and improving model reliability in production.",
+      "seenAt": "2026-09-22T02:17:04+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2573fcdbf127c6a",
+      "url": "https://arxiv.org/abs/2609.12623",
+      "title": "SteerDuplex: Steerable Duplex Speech Dialogue Models",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research on steerable dialogue models may provide insights into LLM behavior and control mechanisms, relevant for understanding internal workings and security.",
+      "seenAt": "2026-09-22T02:17:07+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r095e13397de10a3",
+      "url": "https://arxiv.org/abs/2609.19169",
+      "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+      "source": "Hugging Face Daily Papers",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "evaluation",
+        "agents"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item provides benchmarks for LLM serving, relevant for understanding performance trade-offs in deployment and efficiency in reasoning and inference.",
+      "seenAt": "2026-09-22T02:17:10+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc5725a3a33fdef7",
+      "url": "https://arxiv.org/abs/2609.16251",
+      "title": "CADWorld: Computer-Use Benchmark for Long-Horizon Computer-Aided Design",
+      "source": "Hugging Face Daily Papers",
+      "section": "benchmark",
+      "topics": [
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This benchmark provides insights into evaluating agent performance in CAD tasks, relevant for understanding LLM reasoning and inference in design contexts.",
+      "seenAt": "2026-09-22T02:17:13+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3ec66b889d3a84f",
+      "url": "https://arxiv.org/abs/2609.15126",
+      "title": "MoME: Mixture-of-Memory Embeddings for Context-Aware Sparse Lookup",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "interpretability",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.2,
+      "whyRelevant": "This research on mixture-of-memory embeddings may enhance interpretability and efficiency in LLMs, relevant for understanding internal mechanisms and improving model deployment.",
+      "seenAt": "2026-09-22T02:17:15+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra66f08113259761",
+      "url": "https://arxiv.org/abs/2609.15779",
+      "title": "EvoOntology: A Self-Evolving Ontology Layer for Data Agents",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "llms",
+        "training"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 25.0,
+      "whyRelevant": "EvoOntology's focus on data agents may provide insights into LLM interpretability and reasoning efficiency, relevant for understanding model behavior and deployment.",
+      "seenAt": "2026-09-22T02:17:18+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3b5c524d29c3fe0",
+      "url": "https://arxiv.org/abs/2609.19315",
+      "title": "GAVEL: Graph World Models for Verified and Efficient Long-Horizon LLM Task Planning",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores efficient task planning in LLMs, relevant for understanding internal mechanisms and enhancing reasoning capabilities in production environments.",
+      "seenAt": "2026-09-22T02:17:20+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rfe1156e7c341e98",
+      "url": "https://arxiv.org/abs/2609.18766",
+      "title": "FRAUDSkill: Structured Frozen-Weight Skill Optimization for Audio Anti-Fraud Detection",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "ai-security",
+        "multimodal",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This research on structured skill optimization may provide insights into model efficiency and security relevant to deploying LLMs in production environments.",
+      "seenAt": "2026-09-22T02:17:22+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re6597a13dd26d8c",
+      "url": "https://arxiv.org/abs/2609.21094",
+      "title": "Geometry of Values: Task Vector Composition for Ethical Preference Alignment in Language Models",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "ai-safety",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores task vector composition, which may enhance understanding of LLM alignment and ethical considerations in model deployment and inference.",
+      "seenAt": "2026-09-22T02:17:28+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9cb8945542d372c",
+      "url": "https://arxiv.org/abs/2609.21038",
+      "title": "Retention-Constrained Post-Training Quantization of Cellpose-SAM for Stem Cell Microscopy",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This research on quantization techniques may inform efficient model deployment and inference, relevant for optimizing LLMs in production settings.",
+      "seenAt": "2026-09-22T02:17:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6381c1e78da0d69",
+      "url": "https://arxiv.org/abs/2609.20633",
+      "title": "Refinement Is Inherently Editable: Training-Free Prompt-to-Prompt Image Editing with Generative Refinement Network",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This research on training-free prompt-to-prompt editing may offer insights into generative model behavior, relevant for understanding LLMs' internal mechanisms and efficiency.",
+      "seenAt": "2026-09-22T02:17:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc0673348d504e93",
+      "url": "https://arxiv.org/abs/2609.18620",
+      "title": "DeformSmith: Physics Harness-Guided Hierarchical Generation of Deformable Assets for Robot Manipulation",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "generative-ai",
+        "ai-safety"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 35.0,
+      "whyRelevant": "This research explores generative techniques for robot manipulation, which may inform LLMs' reasoning and inference efficiency in physical environments.",
+      "seenAt": "2026-09-22T02:17:35+00:00",
       "status": "radar"
     }
   ]
