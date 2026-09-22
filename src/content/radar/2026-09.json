@@ -14838,7 +14838,7 @@
         "generative-ai"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 51.3,
+      "relevanceScore": 53.2,
       "whyRelevant": "This item is relevant for understanding privacy-preserving techniques in AI, which can inform security measures for LLMs and their deployment in sensitive applications.",
       "seenAt": "2026-09-22T06:01:47+00:00",
       "status": "radar"
@@ -14856,7 +14856,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 63.2,
-      "whyRelevant": "This article addresses security vulnerabilities in LLMs, relevant for understanding internal mechanisms and improving inference efficiency against prompt injection attacks.",
+      "whyRelevant": "This item addresses security vulnerabilities in LLMs, relevant for understanding internal mechanisms and improving inference efficiency against prompt injection attacks.",
       "seenAt": "2026-09-22T06:01:51+00:00",
       "status": "radar"
     },
@@ -14905,7 +14905,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 56.5,
-      "whyRelevant": "This item discusses security frameworks for AI agents, relevant for understanding LLM vulnerabilities and enhancing their deployment and inference efficiency.",
+      "whyRelevant": "This item discusses security frameworks for AI agents, relevant for understanding LLM vulnerabilities and enhancing their interpretability and deployment safety.",
       "seenAt": "2026-09-22T06:01:58+00:00",
       "status": "radar"
     },
@@ -14952,7 +14952,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 66.2,
-      "whyRelevant": "This item discusses optimization algorithms that could enhance the security and efficiency of LLMs and agents, relevant for deploying models securely.",
+      "whyRelevant": "This item discusses optimization algorithms that could enhance the security and efficiency of LLMs and agents, relevant for deploying secure models.",
       "seenAt": "2026-09-22T06:02:06+00:00",
       "status": "radar"
     },
@@ -15060,7 +15060,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 49.4,
-      "whyRelevant": "This item discusses security vulnerabilities in web applications, which is crucial for understanding LLM deployment and protecting against credential exposure in production.",
+      "whyRelevant": "This item discusses security vulnerabilities in production applications, relevant for understanding risks in deploying LLMs and ensuring their safe operation.",
       "seenAt": "2026-09-22T06:02:24+00:00",
       "status": "radar"
     },
@@ -15077,7 +15077,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 56.5,
-      "whyRelevant": "This study explores psychological effects in LLM agents, relevant for understanding their internal mechanisms and improving safety and reasoning in AI systems.",
+      "whyRelevant": "This study explores psychological effects in LLM agents, which may inform understanding of their internal mechanisms and improve reasoning and inference efficiency.",
       "seenAt": "2026-09-22T06:02:27+00:00",
       "status": "radar"
     },
@@ -15145,7 +15145,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 70.2,
-      "whyRelevant": "This item provides insights into LLM behavior, which can enhance understanding of mechanistic interpretability and improve evaluation methods for model security and efficiency.",
+      "whyRelevant": "This item provides insights into coding behaviors of LLMs, which can enhance understanding of their internal mechanisms and improve interpretability and evaluation methods.",
       "seenAt": "2026-09-22T06:02:38+00:00",
       "status": "radar"
     },
@@ -15179,7 +15179,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This item is not directly relevant to mechanistic interpretability or LLMs, focusing instead on culinary data structures and insights.",
+      "whyRelevant": "This item is not directly relevant to your interests in LLMs, mechanistic interpretability, or model deployment, focusing instead on culinary data structures.",
       "seenAt": "2026-09-22T06:02:42+00:00",
       "status": "radar"
     },
@@ -15196,7 +15196,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 73.0,
-      "whyRelevant": "This research explores memory allocation in LLMs, which is relevant for understanding internal mechanisms and improving inference efficiency in production settings.",
+      "whyRelevant": "This research on adaptive memory token allocation can enhance inference efficiency and model performance in retrieval-augmented generation, relevant for LLM deployment and security.",
       "seenAt": "2026-09-22T06:02:44+00:00",
       "status": "radar"
     },
@@ -15213,7 +15213,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 70.0,
-      "whyRelevant": "This research explores vulnerabilities in long-context LLMs, relevant for understanding internal mechanisms and enhancing security and efficiency in model deployment.",
+      "whyRelevant": "This research explores context poisoning, which is crucial for understanding LLM vulnerabilities and improving reasoning efficiency in production deployments.",
       "seenAt": "2026-09-22T06:02:49+00:00",
       "status": "radar"
     },
@@ -15230,7 +15230,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 70.0,
-      "whyRelevant": "This research explores agentic AI's reasoning capabilities, relevant for understanding LLM internals and enhancing inference efficiency in production environments.",
+      "whyRelevant": "This research explores agentic AI's reasoning capabilities, relevant for understanding LLMs' internal workings and enhancing inference efficiency in production environments.",
       "seenAt": "2026-09-22T06:02:51+00:00",
       "status": "radar"
     },
@@ -15281,7 +15281,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 56.5,
-      "whyRelevant": "This research explores how stylometric signal reduction affects LLMs, relevant for understanding internal mechanisms and implications for security and inference efficiency.",
+      "whyRelevant": "This research explores how stylometric signal reduction affects LLMs, relevant for understanding internal mechanisms and security implications in user-specific text generation.",
       "seenAt": "2026-09-22T06:02:58+00:00",
       "status": "radar"
     },
@@ -15332,7 +15332,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 73.0,
-      "whyRelevant": "This item discusses a quantization method that could enhance inference efficiency and model deployment, relevant for optimizing LLM performance in production.",
+      "whyRelevant": "This item discusses a quantization method that could enhance inference efficiency and model deployment, relevant to LLMs and their operational security.",
       "seenAt": "2026-09-22T06:03:04+00:00",
       "status": "radar"
     },
@@ -15347,7 +15347,7 @@
         "training",
         "evaluation"
       ],
-      "qualityScore": 80.0,
+      "qualityScore": 85.0,
       "relevanceScore": 32.0,
       "whyRelevant": "This research on a generalized multimodal foundation model may provide insights into LLM architecture and training methods relevant for mechanistic interpretability and efficiency.",
       "seenAt": "2026-09-22T06:03:07+00:00",
@@ -15382,8 +15382,8 @@
         "evaluation"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 56.5,
-      "whyRelevant": "This research explores training dynamics in reinforcement learning, which can inform mechanistic interpretability and efficiency in LLMs and their deployment.",
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores training dynamics that could inform mechanistic interpretability and efficiency in LLMs, relevant for understanding model behavior and deployment.",
       "seenAt": "2026-09-22T06:03:11+00:00",
       "status": "radar"
     },
@@ -15484,7 +15484,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 63.2,
-      "whyRelevant": "This item discusses hardware constraints in deep learning, which is relevant for understanding model deployment and performance in production environments.",
+      "whyRelevant": "This item discusses hardware constraints in deep learning, which is relevant for understanding LLM deployment and performance in production environments.",
       "seenAt": "2026-09-22T06:03:27+00:00",
       "status": "radar"
     },
@@ -15518,7 +15518,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 42.0,
-      "whyRelevant": "This research on solar radiation downscaling may not directly relate to LLMs or their interpretability, but it highlights generative modeling techniques relevant to ML foundations.",
+      "whyRelevant": "This research on solar radiation downscaling may not directly relate to LLMs or their internal mechanisms, making the connection weak.",
       "seenAt": "2026-09-22T06:03:31+00:00",
       "status": "radar"
     },
@@ -15535,7 +15535,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 63.2,
-      "whyRelevant": "This research on Helix-FNO offers insights into operator learning that could enhance understanding of LLMs' internal mechanisms and improve inference efficiency.",
+      "whyRelevant": "This research explores operator learning in deep learning, which may enhance understanding of LLMs' internal mechanisms and improve inference efficiency.",
       "seenAt": "2026-09-22T06:03:34+00:00",
       "status": "radar"
     },
@@ -15552,7 +15552,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This research on hierarchical Bayesian optimization may provide insights into multi-agent systems that could inform LLM deployment and inference efficiency.",
+      "whyRelevant": "This research explores optimization techniques relevant to multi-agent systems, which can inform LLM deployment strategies and enhance reasoning efficiency in complex environments.",
       "seenAt": "2026-09-22T06:03:36+00:00",
       "status": "radar"
     },
@@ -15569,7 +15569,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 70.0,
-      "whyRelevant": "This research explores efficient data detection methods in LLMs, relevant for understanding internal mechanisms and improving inference efficiency in model deployment.",
+      "whyRelevant": "This research explores efficient data detection methods in LLMs, relevant for understanding internal mechanisms and enhancing security and inference efficiency.",
       "seenAt": "2026-09-22T06:03:39+00:00",
       "status": "radar"
     },
@@ -15603,7 +15603,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 60.2,
-      "whyRelevant": "This research explores interpretability in multimodal learning, which can inform mechanistic insights and security considerations for LLMs and their deployment.",
+      "whyRelevant": "This research explores interpretability in multimodal learning, which can inform mechanistic insights and security considerations for LLMs in medical applications.",
       "seenAt": "2026-09-22T06:03:44+00:00",
       "status": "radar"
     },
@@ -15619,8 +15619,8 @@
         "llms"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 63.2,
-      "whyRelevant": "This item discusses evaluation benchmarks for generative AI, which can inform understanding of LLM performance and reasoning efficiency in artistic contexts.",
+      "relevanceScore": 61.3,
+      "whyRelevant": "This item provides insights into evaluating generative models, which can inform understanding of LLMs' internal mechanisms and their reasoning capabilities.",
       "seenAt": "2026-09-22T06:03:48+00:00",
       "status": "radar"
     },
@@ -15654,7 +15654,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 70.0,
-      "whyRelevant": "This research explores generative models, which can inform understanding of LLMs' internal mechanisms and enhance reasoning efficiency in AI applications.",
+      "whyRelevant": "This research explores generative models, which may inform understanding of LLMs' internal mechanisms and enhance reasoning efficiency in AI applications.",
       "seenAt": "2026-09-22T06:03:54+00:00",
       "status": "radar"
     },
@@ -15670,7 +15670,7 @@
         "deep-learning"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 46.5,
+      "relevanceScore": 32.0,
       "whyRelevant": "This research may provide insights into model training and execution that could inform the development of more efficient LLMs and their deployment.",
       "seenAt": "2026-09-22T06:03:57+00:00",
       "status": "radar"
@@ -15688,7 +15688,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 60.0,
-      "whyRelevant": "This item discusses deepfake detection, relevant for understanding security implications and reasoning in LLMs and generative AI systems.",
+      "whyRelevant": "This item discusses deepfake detection, relevant for understanding security implications and reasoning in LLMs, though it may not directly address mechanistic interpretability.",
       "seenAt": "2026-09-22T06:04:00+00:00",
       "status": "radar"
     },
@@ -15738,7 +15738,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 60.0,
-      "whyRelevant": "This research explores quantization techniques that could inform efficient model deployment and enhance robustness in LLMs, relevant for production and security considerations.",
+      "whyRelevant": "This research explores quantization techniques that could impact the efficiency and robustness of model deployment, relevant for optimizing LLM inference in production.",
       "seenAt": "2026-09-22T06:04:19+00:00",
       "status": "radar"
     },
@@ -15755,7 +15755,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 63.2,
-      "whyRelevant": "This item discusses evaluation methods for AI models, which can inform security and efficiency in deploying LLMs and multimodal systems.",
+      "whyRelevant": "This item discusses evaluation methods for AI models, which can inform security and efficiency in deploying LLMs and multimodal systems in production.",
       "seenAt": "2026-09-22T06:04:26+00:00",
       "status": "radar"
     },
@@ -15837,8 +15837,8 @@
         "reinforcement-learning"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 52.7,
-      "whyRelevant": "This research on statistical inference in reinforcement learning kernels may provide insights into model behavior and efficiency relevant to LLM interpretability and deployment.",
+      "relevanceScore": 54.6,
+      "whyRelevant": "This research explores statistical inference in reinforcement learning, which can inform understanding of LLM behavior and improve evaluation methods for model performance.",
       "seenAt": "2026-09-22T06:05:43+00:00",
       "status": "radar"
     },
@@ -15855,7 +15855,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 60.0,
-      "whyRelevant": "This research explores optimization techniques relevant for secure and efficient local inference in machine learning models, aligning with interests in LLM security and efficiency.",
+      "whyRelevant": "This research explores optimization techniques that could enhance the security and efficiency of local inference in machine learning models.",
       "seenAt": "2026-09-22T06:05:45+00:00",
       "status": "radar"
     },
@@ -15872,7 +15872,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 60.0,
-      "whyRelevant": "This research on Bayesian federated learning may inform secure model training and inference strategies relevant to LLMs and their deployment.",
+      "whyRelevant": "This research on Bayesian federated learning may inform secure model training and inference efficiency in high-dimensional settings relevant to LLMs.",
       "seenAt": "2026-09-22T06:05:48+00:00",
       "status": "radar"
     },
@@ -15888,7 +15888,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 54.6,
-      "whyRelevant": "This research explores Wasserstein distance in model evaluation, which can enhance understanding of LLM behavior and improve interpretability and security in deployment.",
+      "whyRelevant": "This research explores Wasserstein distance in model evaluation, which can enhance understanding of LLM behavior and improve interpretability and security in model deployment.",
       "seenAt": "2026-09-22T06:05:50+00:00",
       "status": "radar"
     },
@@ -15972,7 +15972,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 54.6,
-      "whyRelevant": "This research on temporal encoding may provide insights into model interpretability and efficiency in reasoning for time-series data, relevant for LLM applications.",
+      "whyRelevant": "This research on temporal encoding may inform LLMs' reasoning efficiency and enhance interpretability in time-series data applications.",
       "seenAt": "2026-09-22T06:06:04+00:00",
       "status": "radar"
     },
@@ -15989,7 +15989,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This research provides insights into probabilistic modeling, which can enhance understanding of LLMs' internal mechanisms and improve reasoning efficiency.",
+      "whyRelevant": "This research provides insights into probabilistic modeling, which can enhance understanding of LLMs' internal mechanisms and improve inference efficiency.",
       "seenAt": "2026-09-22T06:06:07+00:00",
       "status": "radar"
     },
@@ -16005,7 +16005,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 51.3,
-      "whyRelevant": "This research on density-ratio rescoring can enhance model evaluation techniques, which is crucial for understanding LLM performance and improving inference efficiency.",
+      "whyRelevant": "This research on density-ratio rescoring can enhance model evaluation methods, potentially improving reasoning efficiency and interpretability in imbalanced classification tasks.",
       "seenAt": "2026-09-22T06:06:11+00:00",
       "status": "radar"
     },
@@ -16054,7 +16054,7 @@
       ],
       "qualityScore": 85.0,
       "relevanceScore": 56.5,
-      "whyRelevant": "This research explores using neural networks as interpretable models, which can enhance understanding of LLMs and improve inference efficiency in production settings.",
+      "whyRelevant": "This research explores using neural networks as interpretable models, which can enhance understanding of LLMs and improve their deployment in production settings.",
       "seenAt": "2026-09-22T06:06:19+00:00",
       "status": "radar"
     },
@@ -16071,7 +16071,7 @@
       ],
       "qualityScore": 70.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This item explores neuromorphic circuits, which can enhance understanding of LLMs' internal mechanisms and improve efficiency in reasoning and inference.",
+      "whyRelevant": "This item explores neuromorphic circuits, which can enhance understanding of LLMs' internal workings and improve inference efficiency in production environments.",
       "seenAt": "2026-09-22T06:06:22+00:00",
       "status": "radar"
     },
@@ -16088,7 +16088,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 46.5,
-      "whyRelevant": "This research explores reinforcement learning techniques that could inform the development of more efficient algorithms for reasoning and inference in LLMs.",
+      "whyRelevant": "This research explores reinforcement learning techniques that could inform local inference strategies and improve reasoning efficiency in LLMs.",
       "seenAt": "2026-09-22T06:06:24+00:00",
       "status": "radar"
     },
@@ -16105,7 +16105,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 46.5,
-      "whyRelevant": "This research on dynamic curriculum learning may provide insights into optimizing training strategies for LLMs and agents, relevant for efficiency and deployment.",
+      "whyRelevant": "This research on dynamic curriculum learning may provide insights into optimizing training processes, relevant for improving LLM efficiency and safety in production.",
       "seenAt": "2026-09-22T06:06:27+00:00",
       "status": "radar"
     },
@@ -16139,7 +16139,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 56.5,
-      "whyRelevant": "This research on LPINNs may provide insights into model interpretability and efficiency in training physics-informed neural networks, relevant for understanding LLMs.",
+      "whyRelevant": "This research on LPINNs may provide insights into model interpretability and efficiency in reasoning, relevant for understanding LLMs and their deployment.",
       "seenAt": "2026-09-22T06:06:33+00:00",
       "status": "radar"
     },
@@ -16153,8 +16153,8 @@
         "reinforcement-learning"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 59.4,
-      "whyRelevant": "This item discusses optimization techniques relevant to improving the efficiency of algorithms, which can inform LLM training and deployment strategies.",
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses optimization techniques relevant to improving the efficiency and robustness of algorithms in reinforcement learning, which can inform LLM deployment strategies.",
       "seenAt": "2026-09-22T06:06:35+00:00",
       "status": "radar"
     },
@@ -16169,7 +16169,7 @@
         "training",
         "generative-ai"
       ],
-      "qualityScore": 80.0,
+      "qualityScore": 100.0,
       "relevanceScore": 56.5,
       "whyRelevant": "This research on fine-tuning LLMs for protein annotation may provide insights into model efficiency and interpretability relevant to mechanistic understanding and deployment.",
       "seenAt": "2026-09-22T06:06:38+00:00",
@@ -16205,7 +16205,7 @@
       ],
       "qualityScore": 80.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This research explores self-supervised learning methods that could enhance mechanistic interpretability and reasoning efficiency in LLMs, relevant for model deployment and security.",
+      "whyRelevant": "This research explores self-supervised learning methods that could enhance understanding of LLMs' internal mechanisms and improve reasoning efficiency in model deployment.",
       "seenAt": "2026-09-22T06:06:44+00:00",
       "status": "radar"
     },
@@ -16256,7 +16256,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 46.5,
-      "whyRelevant": "This research explores agent-driven governance in LLM societies, relevant for understanding internal reasoning, security implications, and efficiency in deploying models.",
+      "whyRelevant": "This research explores agent-driven governance in LLM societies, relevant for understanding internal reasoning, security, and efficiency in deploying models.",
       "seenAt": "2026-09-22T06:06:52+00:00",
       "status": "radar"
     },
@@ -16273,7 +16273,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This research explores communication's role in agent reasoning, relevant for understanding LLM interactions and enhancing inference efficiency in AI safety.",
+      "whyRelevant": "This research explores collective intelligence in agents, which can inform understanding of LLM reasoning and improve inference efficiency in model deployment.",
       "seenAt": "2026-09-22T06:06:54+00:00",
       "status": "radar"
     },
@@ -16290,7 +16290,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 56.5,
-      "whyRelevant": "This research on multi-agent frameworks may provide insights into agent interactions and reasoning, relevant for understanding LLMs in health analysis contexts.",
+      "whyRelevant": "This research on multi-agent frameworks may provide insights into LLM interactions and reasoning, relevant for understanding agent security and inference efficiency.",
       "seenAt": "2026-09-22T06:06:57+00:00",
       "status": "radar"
     },
@@ -16307,7 +16307,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 63.2,
-      "whyRelevant": "This research explores decision-making in multi-agent systems, relevant for understanding LLM agent behavior and improving reasoning efficiency in complex environments.",
+      "whyRelevant": "This research provides insights into decision-making frameworks that could enhance reasoning efficiency and security in multi-agent systems, relevant for LLM applications.",
       "seenAt": "2026-09-22T06:06:59+00:00",
       "status": "radar"
     },
@@ -16341,7 +16341,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 60.0,
-      "whyRelevant": "This research explores reinforcement learning in agents, which may inform mechanisms for improving LLM reasoning and inference efficiency in production settings.",
+      "whyRelevant": "This research explores reinforcement learning in agents, which may inform understanding of LLM behavior and enhance reasoning efficiency in model deployment.",
       "seenAt": "2026-09-22T06:07:09+00:00",
       "status": "radar"
     },
@@ -16375,7 +16375,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 63.2,
-      "whyRelevant": "This framework may provide insights into agent-based systems and knowledge retrieval, relevant for understanding LLMs' internal mechanisms and improving inference efficiency.",
+      "whyRelevant": "This framework's focus on efficient knowledge retrieval and multi-agent collaboration may provide insights into LLM reasoning and inference efficiency.",
       "seenAt": "2026-09-22T06:07:15+00:00",
       "status": "radar"
     },
@@ -16392,7 +16392,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 56.5,
-      "whyRelevant": "This research explores machine learning applications in agentic AI, relevant for understanding LLMs' internal mechanisms and enhancing inference efficiency in production settings.",
+      "whyRelevant": "This research explores machine learning applications in agentic AI, relevant for understanding LLMs' internal mechanisms and enhancing reasoning efficiency in production settings.",
       "seenAt": "2026-09-22T06:07:18+00:00",
       "status": "radar"
     },
@@ -16426,7 +16426,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 32.0,
-      "whyRelevant": "This research on verifiable agent gyms may provide insights into reinforcement learning frameworks that could enhance understanding of LLMs and their interpretability.",
+      "whyRelevant": "This research on verifiable agent gyms may provide insights into agent behavior and evaluation, relevant for understanding LLMs and their deployment.",
       "seenAt": "2026-09-22T06:07:23+00:00",
       "status": "radar"
     },
@@ -16460,7 +16460,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 46.5,
-      "whyRelevant": "This research on optimal control in multi-agent systems may provide insights into the dynamics and interpretability of LLMs operating in complex environments.",
+      "whyRelevant": "This research explores optimal control in multi-agent systems, which can inform LLM agent security and reasoning efficiency in complex environments.",
       "seenAt": "2026-09-22T06:07:30+00:00",
       "status": "radar"
     }

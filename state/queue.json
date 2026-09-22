@@ -6509,6 +6509,280 @@
       "qualityScore": 85.0,
       "relevanceScore": 25.0,
       "whyRelevant": "EvoOntology's focus on data agents may provide insights into LLM interpretability and reasoning efficiency, relevant for understanding model behavior and deployment."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 70.0,
+      "url": "https://arxiv.org/abs/2609.22818",
+      "title": "The Price of Safety: Benign-Case Utility and Token Overhead of Memory-Poisoning Defenses in LLM Agents",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "llms",
+        "agents"
+      ],
+      "candidateId": "r170bf14389b47ac",
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses memory-poisoning defenses in LLM agents, relevant for understanding security implications and efficiency in deploying models."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 66.2,
+      "url": "https://arxiv.org/abs/2609.22792",
+      "title": "SelfOp: An Optimization Algorithm for Self-Improving Security Agents",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "rb73709b7f30ca4f",
+      "qualityScore": 100.0,
+      "relevanceScore": 66.2,
+      "whyRelevant": "This item discusses optimization algorithms that could enhance the security and efficiency of LLMs and agents, relevant for deploying secure models."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 66.2,
+      "url": "https://arxiv.org/abs/2609.22981",
+      "title": "Dual-Locking Learned AI Models: A PIN-Based Sparse QIM Watermarking and Adaptive Index Permutation Approach",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "re37f4c318a58304",
+      "qualityScore": 100.0,
+      "relevanceScore": 66.2,
+      "whyRelevant": "This item discusses a security approach for AI models, relevant for understanding vulnerabilities and enhancing the robustness of LLMs in production."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 63.2,
+      "url": "https://arxiv.org/abs/2609.22510",
+      "title": "Defusing Explosive Prompts: Understanding and Preventing Trigger-Based Prompt Injections in LLM Agents",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "llms",
+        "agents"
+      ],
+      "candidateId": "r74e544c0ba242c0",
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item addresses security vulnerabilities in LLMs, relevant for understanding internal mechanisms and improving inference efficiency against prompt injection attacks."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 63.2,
+      "url": "https://arxiv.org/abs/2609.22573",
+      "title": "Zero-Trust Authorization and Discovery for Enterprise MCP",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "llms"
+      ],
+      "candidateId": "r232bcf25669efcf",
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item discusses security measures relevant to deploying LLMs in production, particularly in ensuring safe interactions between agents and systems."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 63.2,
+      "url": "https://arxiv.org/abs/2605.01699",
+      "title": "Probe-Geometry Alignment: Erasing the Cross-Sequence Memorization Signature Below Chance",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "llms",
+        "agents"
+      ],
+      "candidateId": "re97918b98900523",
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item discusses probe-geometry alignment, which can enhance understanding of LLM internal mechanisms and improve security against cross-sequence memorization vulnerabilities."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 61.3,
+      "url": "https://arxiv.org/abs/2609.22711",
+      "title": "UBA-ORL: Unlearning-Activated Backdoor Attacks on Offline Reinforcement Learning",
+      "section": "security",
+      "topics": [
+        "reinforcement-learning",
+        "ai-security"
+      ],
+      "candidateId": "r56f1a84f379bced",
+      "qualityScore": 100.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This paper explores security vulnerabilities in reinforcement learning, relevant for understanding LLM safety and potential backdoor risks in model deployment."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 61.3,
+      "url": "https://arxiv.org/abs/2609.22724",
+      "title": "MATE: Policy-Aware Security Auditing for Mobile Agents via Synthesis-Driven Trajectory Learning",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents"
+      ],
+      "candidateId": "re65b6babdf3509e",
+      "qualityScore": 100.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This item discusses security auditing for mobile agents, relevant for understanding LLM agent security and ensuring safe deployment in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 60.0,
+      "url": "https://arxiv.org/abs/2609.22284",
+      "title": "Complementary rPPG-Derived and Lip-Region Frequency Cues for Talking-Face Deepfake Detection",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "generative-ai",
+        "deep-learning"
+      ],
+      "candidateId": "r15cc1d165578fc2",
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This item discusses deepfake detection, relevant for understanding security implications and reasoning in LLMs, though it may not directly address mechanistic interpretability."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 59.4,
+      "url": "https://arxiv.org/abs/2609.22525",
+      "title": "Tick-Tock on the Open Fronthaul: Securing Synchronization in O-RAN",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r8ce555300383bb4",
+      "qualityScore": 100.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item discusses security in O-RAN, which may provide insights into securing LLMs and agents in distributed systems."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 56.5,
+      "url": "https://arxiv.org/abs/2609.22664",
+      "title": "From Capability to Assurance in Autonomous Penetration-Testing Harnesses: A Framework and Reference Implementation",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "evaluation"
+      ],
+      "candidateId": "r204e213af6dd4ef",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item discusses security frameworks for AI agents, relevant for understanding LLM vulnerabilities and enhancing their interpretability and deployment safety."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 54.6,
+      "url": "https://arxiv.org/abs/2609.22949",
+      "title": "Beyond Single-Model Injection: A Threat Model and Defense Architecture for Prompt Injection in Multi-Agent Systems",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents"
+      ],
+      "candidateId": "r9cb0eb43261827b",
+      "qualityScore": 100.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This item discusses security threats in multi-agent systems, relevant for understanding vulnerabilities in LLMs and improving their interpretability and inference efficiency."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 53.2,
+      "url": "https://arxiv.org/abs/2609.22401",
+      "title": "Differentially Private and Fairness-Audited Score Diffusion for Irregular Longitudinal Health Records",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "generative-ai",
+        "training"
+      ],
+      "candidateId": "r86c369b8b6381d5",
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This item is relevant for understanding privacy-preserving techniques in AI, which can inform security measures for LLMs and their deployment in sensitive applications."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 53.2,
+      "url": "https://arxiv.org/abs/2609.22108",
+      "title": "Correcting Learning-based Perception for Safety",
+      "section": "security",
+      "topics": [
+        "ai-safety",
+        "agents",
+        "deep-learning"
+      ],
+      "candidateId": "r4e8d88e7703e972",
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This item discusses safety in learning-based perception, relevant for understanding LLM security and ensuring reliable inference in deployed models."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 52.7,
+      "url": "https://arxiv.org/abs/2609.22900",
+      "title": "SMS-delivered network-initiated SUPL on Pixel 8: a privacy assessment",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r75a66edb8b8b8cc",
+      "qualityScore": 100.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses privacy implications of network-initiated services, relevant for understanding security risks in LLM deployment and agent interactions."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 49.4,
+      "url": "https://arxiv.org/abs/2609.23042",
+      "title": "Secrets That Survive Everything: Runtime Credential Exposure in Production Web Applications",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "rbe827098cef486f",
+      "qualityScore": 100.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This item discusses security vulnerabilities in production applications, relevant for understanding risks in deploying LLMs and ensuring their safe operation."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-22T06:20:57+00:00",
+      "score": 42.7,
+      "url": "https://arxiv.org/abs/2609.22961",
+      "title": "When Agentic Trust Crosses Organizational Boundaries: Structural Externalization and a Reference Model for Trust Evidence",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r67843ec05f8284c",
+      "qualityScore": 100.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This item discusses trust in AI systems, relevant for understanding security implications in LLMs and their deployment across organizational boundaries."
     }
   ]
 }
