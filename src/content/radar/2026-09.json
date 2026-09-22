@@ -14541,6 +14541,71 @@
       "whyRelevant": "Grok 4.6's availability in Amazon Bedrock may enhance local inference and deployment strategies for LLMs, relevant to security and efficiency in production.",
       "seenAt": "2026-09-21T22:01:51+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r26a5d48a8eeba16",
+      "url": "https://simonwillison.net/2026/Sep/21/jev/",
+      "title": "Jev introduces a new shape of LLM - System One, aka Decision Models",
+      "source": "Simon Willison's Weblog",
+      "section": "release",
+      "topics": [
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 23.1,
+      "whyRelevant": "The introduction of System One highlights new architectures in LLMs that may influence mechanistic interpretability and efficiency in reasoning and inference.",
+      "seenAt": "2026-09-22T02:01:37+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9f512c4a57599fa",
+      "url": "https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/",
+      "title": "Cloudflare Python Workers are now generally available",
+      "source": "Simon Willison's Weblog",
+      "section": "release",
+      "topics": [
+        "agents",
+        "deep-learning",
+        "inference"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 73.0,
+      "whyRelevant": "Cloudflare Python Workers can enhance the deployment and serving of LLMs in production, improving inference efficiency and security for machine learning applications.",
+      "seenAt": "2026-09-22T02:01:40+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra3d1f1139349122",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11095",
+      "title": "b11095",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "deep-learning",
+        "inference"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 73.0,
+      "whyRelevant": "This item discusses advancements in LLM inference, which can enhance understanding of internal mechanisms and improve deployment efficiency in production environments.",
+      "seenAt": "2026-09-22T02:01:51+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6700d1e9aad7be9",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11090",
+      "title": "b11090",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "seenAt": "2026-09-22T02:01:57+00:00",
+      "status": "radar"
     }
   ]
 }
