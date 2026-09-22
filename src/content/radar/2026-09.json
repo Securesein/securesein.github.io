@@ -16571,7 +16571,7 @@
         "agents",
         "generative-ai"
       ],
-      "qualityScore": 85.0,
+      "qualityScore": 80.0,
       "relevanceScore": 44.6,
       "whyRelevant": "This release may include updates relevant to deploying and serving generative AI models, impacting efficiency and security in production environments.",
       "seenAt": "2026-09-22T22:03:08+00:00",
@@ -16603,7 +16603,7 @@
         "multimodal",
         "ai-security"
       ],
-      "qualityScore": 75.0,
+      "qualityScore": 80.0,
       "relevanceScore": 63.2,
       "whyRelevant": "This release may include updates relevant to LLM security and efficiency, impacting how models are deployed and interpreted in production environments.",
       "seenAt": "2026-09-22T22:03:27+00:00",
