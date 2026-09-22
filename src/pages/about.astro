@@ -249,6 +249,27 @@ import { SITE, SECTIONS } from "../consts";
   @media print {
     .about-hero::before, .about-hero::after { display: none; }
   }
+  /* Same narrow-viewport treatment the homepage hero gets
+     (mobiel-homepage-fixes #3): the desktop-tuned warp crosses its own
+     contour lines at phone width, so swap in the gentler
+     #seinWarpSm filter, space the rings out and flatten the ellipse. */
+  @media (max-width: 700px) {
+    .about-hero { padding-block: 3.5rem 3rem; }
+    .about-hero::before {
+      inset: -45%;
+      background: repeating-radial-gradient(
+        ellipse 78% 44% at 50% 38%,
+        transparent 0 34px,
+        var(--topo) 34px 35px
+      );
+      filter: url(#seinWarpSm);
+    }
+    .about-hero::after {
+      background:
+        radial-gradient(ellipse 80% 30% at 30% -4%, var(--glow-a), transparent 72%),
+        radial-gradient(ellipse 70% 26% at 82% 62%, var(--glow-b), transparent 72%);
+    }
+  }
   .about-hero h1 {
     margin-top: 1.75rem;
     max-width: 20ch;

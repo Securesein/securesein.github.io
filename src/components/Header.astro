@@ -35,29 +35,6 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
         </a>
       ))}
     </nav>
-    <!-- Below 900px the seven flat links don't fit (mobiel-homepage-
-         fixes #1): .nav hides and this <details> panel takes over.
-         No JS needed — the site has no client router, so a full page
-         navigation from a link inside always closes the panel for
-         free. -->
-    <details class="nav-menu">
-      <summary class="nav-menu__toggle" aria-label="Menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M3 6h18M3 12h18M3 18h18" />
-        </svg>
-      </summary>
-      <nav class="nav-menu__sheet" aria-label="Main navigation">
-        {links.map((link) => (
-          <a
-            href={link.href}
-            class:list={["nav-menu__link", { "nav-menu__link--on": isActive(link.href) }]}
-            aria-current={isActive(link.href) ? "page" : undefined}
-          >
-            {link.label}
-          </a>
-        ))}
-      </nav>
-    </details>
     <div class="header-actions">
       <a href="/search/" class="icon-link" aria-label="Search">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -66,6 +43,32 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
         </svg>
       </a>
       <ThemeToggle />
+      <!-- Below 900px the seven flat links don't fit (mobiel-homepage-
+           fixes #1): .nav hides and this <details> panel takes over.
+           It sits inside .header-actions so the three icon buttons read
+           as one group on the right, rather than stranding the menu
+           button next to the brand mark with a gap between them.
+           No JS needed — the site has no client router, so a full page
+           navigation from a link inside always closes the panel for
+           free. -->
+      <details class="nav-menu">
+        <summary class="nav-menu__toggle" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M3.5 7h17M3.5 12h17M3.5 17h17" />
+          </svg>
+        </summary>
+        <nav class="nav-menu__sheet" aria-label="Main navigation">
+          {links.map((link) => (
+            <a
+              href={link.href}
+              class:list={["nav-menu__link", { "nav-menu__link--on": isActive(link.href) }]}
+              aria-current={isActive(link.href) ? "page" : undefined}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </details>
     </div>
   </div>
 </header>
@@ -132,14 +135,20 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
   .icon-link:hover { color: var(--text); border-color: var(--text-muted); text-decoration: none; }
   .icon-link svg { width: 18px; height: 18px; }
 
-  @media (max-width: 560px) { .brand-name { display: none; } }
+  /* The wordmark only drops on the narrowest phones. Above that it
+     stays: the brand mark alone on the left leaves the bar visibly
+     lopsided against three icon buttons on the right. */
+  @media (max-width: 359px) { .brand-name { display: none; } }
 
-  /* Nav collapse (mobiel-homepage-fixes #1). Logo, search and the
-     theme toggle stay put; the seven flat links move into a fixed
-     sheet under the header. */
+  /* Nav collapse (mobiel-homepage-fixes #1). The brand keeps the left;
+     search, theme and the menu button form one group on the right, and
+     the seven flat links move into a fixed sheet under the header. */
   @media (max-width: 900px) {
     .nav { display: none; }
-    .nav-menu { display: block; margin-right: auto; }
+    /* .nav carried the margin-right:auto that pushed the actions over;
+       with it hidden, the actions have to claim that space instead. */
+    .header-actions { margin-left: auto; }
+    .nav-menu { display: block; }
     .nav-menu__toggle {
       list-style: none;
       cursor: pointer;
@@ -152,7 +161,7 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
       place-items: center;
     }
     .nav-menu__toggle::-webkit-details-marker { display: none; }
-    .nav-menu__toggle svg { width: 20px; height: 20px; }
+    .nav-menu__toggle svg { width: 18px; height: 18px; }
     .nav-menu[open] .nav-menu__toggle { color: var(--text); border-color: var(--text-muted); }
 
     .nav-menu__sheet {
