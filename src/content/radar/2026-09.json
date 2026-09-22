@@ -16463,6 +16463,103 @@
       "whyRelevant": "This research explores optimal control in multi-agent systems, which can inform LLM agent security and reasoning efficiency in complex environments.",
       "seenAt": "2026-09-22T06:07:30+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r9664d50930bee6a",
+      "url": "https://simonwillison.net/2026/Sep/22/llm-typesafe/",
+      "title": "llm-typesafe 0.1a0",
+      "source": "Simon Willison's Weblog",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 35.2,
+      "whyRelevant": "This release may provide insights into type safety in LLMs, which could enhance understanding of their internal workings and improve deployment practices.",
+      "seenAt": "2026-09-22T18:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r460c010fe8d233d",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-reactiv-automates-mobile-commerce-80-faster-with-amazon-bedrock-agentcore/",
+      "title": "How Reactiv automates mobile commerce 80% faster with Amazon Bedrock AgentCore",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "agents",
+        "llms",
+        "generative-ai"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 39.0,
+      "whyRelevant": "This item discusses automation in mobile commerce using agents, which may provide insights into LLM deployment and efficiency in real-world applications.",
+      "seenAt": "2026-09-22T18:16:49+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r66b71cdbe19cfab",
+      "url": "https://aws.amazon.com/blogs/machine-learning/right-size-generative-ai-endpoints-with-concurrency-sweeps-on-amazon-sagemaker-ai/",
+      "title": "Right-size generative AI endpoints with concurrency sweeps on Amazon SageMaker AI",
+      "source": "AWS Machine Learning Blog",
+      "section": "benchmark",
+      "topics": [
+        "generative-ai",
+        "evaluation",
+        "inference"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 63.0,
+      "whyRelevant": "This item discusses optimizing AI endpoints, which is relevant for deploying models efficiently and ensuring secure, interpretable inference in production environments.",
+      "seenAt": "2026-09-22T18:16:52+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8c7843e0e492bc3",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-trane-gets-building-insights-60x-faster-with-amazon-bedrock-agentcore/",
+      "title": "How Trane gets building insights 60x faster with Amazon Bedrock AgentCore",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "agents",
+        "llms",
+        "generative-ai"
+      ],
+      "qualityScore": 95.0,
+      "relevanceScore": 39.0,
+      "whyRelevant": "This article discusses the use of LLMs in building insights, which may provide insights into agent efficiency and deployment in production environments.",
+      "seenAt": "2026-09-22T18:16:54+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r0b7222ea43c92b1",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-tata-elxsi-detects-industrial-safety-risks-in-seconds-on-aws/",
+      "title": "How Tata Elxsi detects industrial safety risks in seconds on AWS",
+      "source": "AWS Machine Learning Blog",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This article discusses AI security in industrial applications, which may provide insights into LLM security and risk detection relevant to model deployment.",
+      "seenAt": "2026-09-22T18:16:57+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r23966244d47d35b",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
+      "title": "v2.1.280",
+      "source": "Claude Code Releases",
+      "section": "release",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 44.6,
+      "whyRelevant": "This release may include updates relevant to agent security and deployment practices, which are crucial for understanding LLMs' internal workings and ensuring safe production use.",
+      "seenAt": "2026-09-22T18:17:07+00:00",
+      "status": "radar"
     }
   ]
 }
