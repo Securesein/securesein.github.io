@@ -100,6 +100,19 @@ const ogImageAlt = imageAlt ?? `${SITE.title} — ${SITE.subTagline}`;
     </script>
   </head>
   <body class:list={{ reading }}>
+    <!-- Shared "topography" hero background (hero-topografie handoff):
+         one feTurbulence/feDisplacementMap filter, referenced by both
+         the homepage and About's hero via `filter: url(#seinWarp)`.
+         Lives once in the layout specifically so two pages never end
+         up with two elements sharing the id — SVG filter ids are
+         globally scoped to the document, and a duplicate would make
+         which one actually applies unpredictable. -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <filter id="seinWarp">
+        <feTurbulence type="fractalNoise" baseFrequency="0.0035" numOctaves="4" seed="11" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="150" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
     <a href="#main" class="skip-link">Skip to content</a>
     <Header />
     <main id="main" tabindex="-1"><slot /></main>

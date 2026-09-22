@@ -95,6 +95,22 @@
   --row-divider: none;
   --news-pad: 1.05rem 1.35rem;
   --dd-edge: var(--brand);   /* deep-dive cards get a brand-gradient edge in light */
+
+  /* Topography hero background (hero-topografie-en-about handoff):
+     used by About's hero (the homepage's own hero lives inside
+     .mh-page and re-declares its own copies below, same as --node/
+     --edge did, since a var() reference resolves against the element
+     it's declared on — see that block's comment). Derived via
+     color-mix() from tokens already re-declared per theme, rather
+     than a second hardcoded hex pair to keep in sync. Light is kept
+     weaker than the source brief's own numbers suggest at a glance:
+     dark lines on a light paper read heavier than light lines on a
+     dark one, so light mode gets fewer percentage points even where
+     the reference gave it more. */
+  --topo: color-mix(in srgb, var(--ink) 8%, transparent);
+  --glow-a: color-mix(in srgb, var(--brand-from) 15%, transparent);
+  --glow-b: color-mix(in srgb, var(--amber) 12%, transparent);
+  --track: color-mix(in srgb, var(--ink) 9%, transparent);
 }
 
 /* Dark: same roles, re-measured. The accent lifts because a deep green
@@ -130,6 +146,11 @@
     --amber-text: #e0a64e;
     --violet: #a98bff;
     --violet-ink: #c9b6ff;
+
+    --topo: color-mix(in srgb, var(--ink) 8.5%, transparent);
+    --glow-a: color-mix(in srgb, var(--brand-from) 20%, transparent);
+    --glow-b: color-mix(in srgb, var(--amber) 12%, transparent);
+    --track: color-mix(in srgb, var(--ink) 9%, transparent);
   }
 }
 
@@ -148,6 +169,11 @@
   --amber-text: #e0a64e;
   --violet: #a98bff;
   --violet-ink: #c9b6ff;
+
+  --topo: color-mix(in srgb, var(--ink) 8.5%, transparent);
+  --glow-a: color-mix(in srgb, var(--brand-from) 20%, transparent);
+  --glow-b: color-mix(in srgb, var(--amber) 12%, transparent);
+  --track: color-mix(in srgb, var(--ink) 9%, transparent);
 
   /* Subtle cards, same model as light — see the media-query block above. */
   --card-bg: var(--raised);

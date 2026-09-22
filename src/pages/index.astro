@@ -109,10 +109,6 @@ const siteJsonLd = {
        footer or any other page — see the style block. -->
   <div class="mh-page">
     <section class="masthead">
-      <div class="hero-nodes" aria-hidden="true">
-        <canvas></canvas>
-      </div>
-
       <div class="container container--wide masthead-inner">
         <Eyebrow
           center
@@ -241,18 +237,16 @@ const siteJsonLd = {
     --brand-ink: #6d3ff3;
     --card-border: #ded8d1;
 
-    /* Constellation background (hero-constellatie handoff): mixed from
-       --brand/--ink rather than given their own hardcoded per-theme
-       hex pair, so they never need a separate dark-mode block of their
-       own — --brand and --ink already flip correctly per theme on this
-       same element, and a color-mix() referencing them resolves against
-       THIS element's own cascade, so it inherits that correctness for
-       free. (This is safe specifically because .mh-page redeclares
-       --brand/--ink for itself in the dark blocks below, rather than
-       only at a distant ancestor — see that block's own comment on why
-       --bg/--text needed the same treatment for a different reason.) */
-    --node: color-mix(in srgb, var(--brand) 60%, transparent);
-    --edge: color-mix(in srgb, var(--ink) 22%, transparent);
+    /* Topography hero background (hero-topografie-en-about handoff):
+       mixed from --brand/--accent/--ink rather than given their own
+       hardcoded per-theme hex pair, for the same reason --node/--edge
+       (the constellation background this replaces) were — .mh-page
+       redeclares --brand/--accent/--ink for itself in all three blocks
+       below, so a color-mix() referencing them resolves against THIS
+       element's own cascade and inherits that correctness for free. */
+    --topo: color-mix(in srgb, var(--ink) 9%, transparent);
+    --glow-a: color-mix(in srgb, var(--brand) 15%, transparent);
+    --glow-b: color-mix(in srgb, var(--accent) 12%, transparent);
 
     background: var(--bg);
     color: var(--text);
@@ -277,6 +271,10 @@ const siteJsonLd = {
       --brand: #a98bff;
       --brand-ink: #c9b6ff;
       --card-border: #2b2724;
+
+      --topo: color-mix(in srgb, var(--ink) 8%, transparent);
+      --glow-a: color-mix(in srgb, var(--brand) 20%, transparent);
+      --glow-b: color-mix(in srgb, var(--accent) 12%, transparent);
     }
   }
   :global(:root[data-theme="dark"]) .mh-page {
@@ -298,33 +296,53 @@ const siteJsonLd = {
     --brand: #a98bff;
     --brand-ink: #c9b6ff;
     --card-border: #2b2724;
+
+    --topo: color-mix(in srgb, var(--ink) 8%, transparent);
+    --glow-a: color-mix(in srgb, var(--brand) 20%, transparent);
+    --glow-b: color-mix(in srgb, var(--accent) 12%, transparent);
   }
 
-  /* The canvas is a sibling of .masthead-inner, positioned/clipped by
-     .masthead itself — isolate keeps its z-index:-1 from punching
-     through to whatever sits behind the whole .mh-page wrapper, and
-     overflow:hidden keeps it from ever exceeding the hero's own
-     height even mid-resize. */
+  /* Topography hero background (hero-topografie-en-about handoff):
+     a repeating-radial-gradient ring pattern, warped by the shared
+     #seinWarp filter declared once in BaseLayout, plus two radial
+     glows. Static — no JS, no animation. isolation:isolate keeps the
+     pseudo-elements' z-index:-1 scoped to this section rather than
+     punching through to .mh-page; overflow:hidden clips the -30%
+     overmatting feDisplacementMap needs (it pulls edges inward, so
+     without the overmat the warp visibly tapers off at the sides). */
   .masthead { position: relative; isolation: isolate; overflow: hidden; }
 
-  .hero-nodes {
+  .masthead::before {
+    content: "";
+    position: absolute;
+    inset: -30%;
+    z-index: -1;
+    background: repeating-radial-gradient(
+      ellipse 58% 50% at 50% 42%,
+      transparent 0 24px,
+      var(--topo) 24px 25px
+    );
+    filter: url(#seinWarp);
+    -webkit-mask-image: radial-gradient(ellipse 74% 66% at 50% 38%, #000 18%, transparent 78%);
+            mask-image: radial-gradient(ellipse 74% 66% at 50% 38%, #000 18%, transparent 78%);
+  }
+
+  .masthead::after {
+    content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
-    pointer-events: none;
+    background:
+      radial-gradient(ellipse 52% 44% at 50% -6%, var(--glow-a), transparent 72%),
+      radial-gradient(ellipse 42% 34% at 80% 46%, var(--glow-b), transparent 72%);
   }
-  .hero-nodes canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-    /* Fades the pattern toward the edges so it never competes with the
-       title/buttons/section-cards sitting on top of it. */
-    -webkit-mask-image: radial-gradient(ellipse 80% 65% at 50% 38%, #000 25%, transparent 80%);
-            mask-image: radial-gradient(ellipse 80% 65% at 50% 38%, #000 25%, transparent 80%);
+
+  @media print {
+    .masthead::before, .masthead::after { display: none; }
   }
 
   .masthead-inner {
-    padding-block: 4.75rem 2.75rem;
+    padding-block: 6.5rem 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -391,7 +409,7 @@ const siteJsonLd = {
   /* ---------- sections (replaces the old left-rule .lanes list) --- */
   .sections {
     width: 100%;
-    margin-top: 3.5rem;
+    margin-top: 6rem;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 1.75rem;
@@ -493,151 +511,3 @@ const siteJsonLd = {
   }
   .empty { color: var(--text-muted); padding-block: 2rem; }
 </style>
-
-<script>
-  // Decorative canvas background for the hero (hero-constellatie
-  // handoff) — drifting points, linked while close together. Pure
-  // canvas 2D, no dependency. Colours come from --node/--edge, read
-  // fresh every frame, so a theme switch needs no JS hook of its own.
-  //
-  // Paused (not just left running off-screen) whenever the hero isn't
-  // visible or the tab isn't active, and never starts at all under
-  // prefers-reduced-motion — it still draws exactly one static frame
-  // so the background isn't simply blank.
-  function initConstellation(root: HTMLElement) {
-    const canvas = root.querySelector("canvas");
-    const ctx = canvas?.getContext("2d");
-    if (!canvas || !ctx) return;
-
-    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
-
-    const LINK = 140; // max distance (css px) at which two points link
-    const SPEED = 0.16; // px per frame
-    const DENSITY = 15000; // 1 point per this many px²; higher = sparser
-    const MAX_POINTS = 80;
-
-    interface Point { x: number; y: number; vx: number; vy: number; r: number }
-    let points: Point[] = [];
-    let w = 0;
-    let h = 0;
-    let raf = 0;
-    let visible = true;
-
-    function layout() {
-      const dpr = Math.min(devicePixelRatio || 1, 2);
-      const rect = canvas!.getBoundingClientRect();
-      w = rect.width;
-      h = rect.height;
-      if (!w || !h) return;
-
-      canvas!.width = Math.round(w * dpr);
-      canvas!.height = Math.round(h * dpr);
-      ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-      const count = Math.round(Math.min(MAX_POINTS, (w * h) / DENSITY));
-      points = Array.from({ length: count }, () => ({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - 0.5) * SPEED,
-        vy: (Math.random() - 0.5) * SPEED,
-        r: Math.random() * 1.5 + 0.7,
-      }));
-    }
-
-    function draw() {
-      // --node/--edge are declared on .mh-page (color-mix()'d from
-      // --brand/--ink there), not on :root — custom properties only
-      // inherit downward, so reading them off document.documentElement
-      // (an ANCESTOR of .mh-page) found nothing and canvas silently
-      // fell back to its own default (opaque black), which is why this
-      // was next to invisible in dark mode specifically: black on
-      // near-black. Reading off `canvas` itself, which sits INSIDE
-      // .mh-page, picks up the real cascaded value.
-      const styles = getComputedStyle(canvas!);
-      const node = styles.getPropertyValue("--node").trim();
-      const edge = styles.getPropertyValue("--edge").trim();
-
-      ctx!.clearRect(0, 0, w, h);
-
-      if (!reduced.matches) {
-        for (const p of points) {
-          p.x += p.vx;
-          p.y += p.vy;
-          if (p.x < 0 || p.x > w) p.vx *= -1;
-          if (p.y < 0 || p.y > h) p.vy *= -1;
-        }
-      }
-
-      ctx!.strokeStyle = edge;
-      ctx!.lineWidth = 1;
-      for (let i = 0; i < points.length; i++) {
-        for (let j = i + 1; j < points.length; j++) {
-          const a = points[i];
-          const b = points[j];
-          const d = Math.hypot(a.x - b.x, a.y - b.y);
-          if (d > LINK) continue;
-          ctx!.globalAlpha = (1 - d / LINK) * 0.5; // farther apart = fainter
-          ctx!.beginPath();
-          ctx!.moveTo(a.x, a.y);
-          ctx!.lineTo(b.x, b.y);
-          ctx!.stroke();
-        }
-      }
-
-      ctx!.globalAlpha = 1;
-      ctx!.fillStyle = node;
-      for (const p of points) {
-        ctx!.beginPath();
-        ctx!.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx!.fill();
-      }
-    }
-
-    function loop() {
-      draw();
-      raf = requestAnimationFrame(loop);
-    }
-
-    function start() {
-      if (raf || reduced.matches) return;
-      raf = requestAnimationFrame(loop);
-    }
-
-    function stop() {
-      if (raf) cancelAnimationFrame(raf);
-      raf = 0;
-    }
-
-    // Pause once the hero scrolls out of view.
-    const io = new IntersectionObserver(([entry]) => {
-      visible = entry.isIntersecting;
-      visible ? start() : stop();
-    });
-    io.observe(root);
-
-    // Pause once the tab goes to the background.
-    document.addEventListener("visibilitychange", () => {
-      document.hidden || !visible ? stop() : start();
-    });
-
-    const ro = new ResizeObserver(() => {
-      layout();
-      draw(); // always one frame, even under reduced motion
-    });
-    ro.observe(root);
-
-    reduced.addEventListener("change", () => {
-      stop();
-      draw();
-      if (!reduced.matches && visible) start();
-    });
-
-    layout();
-    draw();
-    start();
-  }
-
-  document
-    .querySelectorAll<HTMLElement>(".hero-nodes")
-    .forEach(initConstellation);
-</script>

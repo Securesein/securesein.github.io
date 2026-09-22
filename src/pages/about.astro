@@ -1,15 +1,18 @@
 ---
-// Rewritten, and corrected. The previous version said the Fundamentals
-// explainers were ones "I put together myself" that "carry my own
-// name", in explicit contrast to Scout. That was not true — a model
-// drafts those too — and it was the one claim on this site a reader
-// could reasonably feel misled by. The full authorship story now lives
-// at /colophon; this page states the shape of it and links there.
+// Rewritten to the same structural language as the homepage
+// (hero-topografie-en-about handoff): a topography hero, then a
+// two-column reading layout with a sticky colophon/links rail.
 //
-// It also absorbs the old "Welcome to securesein" post, which was a
-// site announcement wearing a blog post's clothes.
+// Several pieces the source brief itself flags as unwritten are left
+// as visible TODOs below rather than invented — the disclosure-scale
+// percentages and their descriptions, the launch year, and any
+// "Elsewhere" link beyond the repo. One sentence the brief supplied
+// outright ("Nothing here is published without me reading it end to
+// end...") is left out entirely: it contradicts what this page and
+// the colophon already say about News items, which nobody reads
+// before they publish.
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PageHeader from "../components/PageHeader.astro";
+import Eyebrow from "../components/Eyebrow.astro";
 import { SITE, SECTIONS } from "../consts";
 ---
 <BaseLayout
@@ -17,118 +20,397 @@ import { SITE, SECTIONS } from "../consts";
   description="Who writes this, what the three sections are, and exactly how much of it a model drafted."
   reading={true}
 >
+  <section class="about-hero">
+    <div class="container">
+      <Eyebrow label="About" />
+      <h1>Why this site exists</h1>
+      <p class="lede">
+        A technology enthusiast since I was young, now deep in machine
+        learning — this site is mostly how I keep up with it myself.
+      </p>
+    </div>
+  </section>
+
   <div class="container">
-    <PageHeader
-      title="About"
-      standfirst="A technology enthusiast since I was young, now deep in machine learning — this site is mostly how I keep up with it myself."
-    />
+    <div class="cols">
+      <div class="prose">
+        <section class="block">
+          <p class="first">
+            I'm {SITE.author}. I've been into technology for as long as I can
+            remember, and these days that curiosity is pointed squarely at
+            machine learning. This site exists mainly for myself: a way to
+            actually keep up with a field that moves faster than any one
+            person can track by skimming headlines, and to work through the
+            mechanism behind something rather than just the announcement of
+            it. If it turns out to be useful to anyone else along the way,
+            that's a bonus, not the reason it exists.
+          </p>
+        </section>
 
-    <div class="prose">
-      <p>
-        I'm {SITE.author}. I've been into technology for as long as I can
-        remember, and these days that curiosity is pointed squarely at
-        machine learning. This site exists mainly for myself: a way to
-        actually keep up with a field that moves faster than any one person
-        can track by skimming headlines, and to work through the mechanism
-        behind something rather than just the announcement of it. If it turns
-        out to be useful to anyone else along the way, that's a bonus, not
-        the reason it exists.
-      </p>
+        <section class="block">
+          <h2>How much of this is written by a model</h2>
+          <p>
+            Nearly all of the sentences. That is true of the news items, and
+            it is also true of the long explainers and the deep dives —
+            which an earlier version of this page implied were hand-written,
+            and they are not.
+          </p>
+          <p>
+            What differs between them is how much of my judgement went in.
+            On the news items: none, in the sense that nobody reads them
+            before they publish. On everything else: I choose the subject,
+            set the angle, supply the source material, check the claims
+            that carry weight, and rewrite what comes back wrong. Every
+            post says which of those things actually happened to it, in a
+            box directly under the title, generated from a record rather
+            than written by hand.
+          </p>
 
-      <h2>How much of this is written by a model</h2>
-      <p>
-        Nearly all of the sentences. That is true of the news items, and it is
-        also true of the long explainers and the deep dives — which the old
-        version of this page implied were hand-written, and they are not.
-      </p>
-      <p>
-        What differs between them is how much of my judgement went in. On the
-        news items: none, in the sense that nobody reads them before they
-        publish. On everything else: I choose the subject, set the angle, supply
-        the source material, check the claims that carry weight, and rewrite
-        what comes back wrong. Every post says which of those things actually
-        happened to it, in a box directly under the title, generated from a
-        record rather than written by hand.
-      </p>
-      <p>
-        The long version — which models, what I verify, what I don't, and what
-        can still go wrong — is on the <a href="/colophon/">colophon</a>.
-      </p>
+          <div class="scale">
+            <div class="head">
+              <span>My judgement per post type</span>
+              <span>model drafts → I direct</span>
+            </div>
 
-      <h2>How Scout works</h2>
-      <p>
-        Scout is the pipeline behind the News section. It is not a person and
-        it is not a persona; it is a few hundred lines of Python on a schedule.
-      </p>
-      <ol>
-        <li>It reads a list of RSS feeds every few hours.</li>
-        <li>
-          It summarises what is new and messages the summaries to me on
-          Telegram.
-        </li>
-        <li>
-          I flag the ones worth writing up — sometimes with a one-line steer
-          about the angle, sometimes not.
-        </li>
-        <li>
-          A cloud model drafts a full post from the source article, usually
-          within the hour.
-        </li>
-        <li>
-          It publishes. Automatically. <strong>Nobody reads it first — not
-          me.</strong> Every one links back to the article it came from.
-        </li>
-      </ol>
-      <p>
-        What is <em>not</em> reviewed: the facts, the framing, the numbers, the
-        conclusion. My only editorial act is choosing which item gets written
-        up at all. If a News post here matters to you, open its source and check
-        it.
-      </p>
-
-      <h2>The five sections</h2>
-      <dl class="lanes">
-        {SECTIONS.map((section) => (
-          <div class="lane">
-            <dt><a href={section.href}>{section.label}</a></dt>
-            <dd>{section.description}</dd>
+            <div class="row" data-fill="0">
+              <div class="top"><b>News items</b><em>automatic</em></div>
+              <div class="track"><i class="fill"></i></div>
+              <p>
+                Scout drafts and publishes these on its own; nobody reads
+                one before it goes out. See "How it's made" below.
+              </p>
+            </div>
+            <!--
+              TODO(sebastiaan): the two rows below are structural
+              placeholders, not calibrated numbers — I didn't have a real
+              source to derive "how directed an explainer is" vs "how
+              directed a deep dive is" as distinct percentages (the
+              colophon describes the same five-step process for both).
+              Replace data-fill and the <p> under each with real figures
+              and descriptions, or collapse the two rows into one
+              "everything else" row if they're not meaningfully different.
+            -->
+            <div class="row" data-fill="58">
+              <div class="top"><b>Explainers</b><em>directed</em></div>
+              <div class="track"><i class="fill"></i></div>
+              <p>TODO: real description of what's checked/rewritten here.</p>
+            </div>
+            <div class="row" data-fill="88">
+              <div class="top"><b>Deep dives</b><em>directed</em></div>
+              <div class="track"><i class="fill"></i></div>
+              <p>TODO: real description of what's checked/rewritten here.</p>
+            </div>
           </div>
-        ))}
-      </dl>
-      <p>
-        Cutting across all five are the <a href="/topics/">topics</a> — thirteen
-        subjects, so a two-minute news item and a twenty-minute teardown on the
-        same thing end up on the same shelf. A few of those shelves are nearly
-        empty on purpose: they are where this blog is meant to grow.
-      </p>
 
-      <h2>Open source</h2>
-      <p>
-        Both the site and the pipeline behind it — Scout, the scoring, the
-        budget limits, all of it — are open source under MIT. Read exactly
-        what a post goes through before it publishes, or fork it and point
-        it at your own interests: <a href={SITE.github}>the code is on
-        GitHub</a>.
-      </p>
+          <p>
+            The long version — which models, what I verify, what I don't,
+            and what can still go wrong — is on the
+            <a href="/colophon/">colophon</a>.
+          </p>
+        </section>
 
-      <h2>Corrections</h2>
-      <p>
-        If something here is wrong, I would rather know. How corrections are
-        handled is on the <a href="/colophon/">colophon</a>.
-      </p>
+        <section class="block">
+          <h2>What you'll find here</h2>
+          <div class="topics">
+            {SECTIONS.map((section) => (
+              <a href={section.href}>
+                <b>{section.label}</b>
+                <span>{section.description}</span>
+              </a>
+            ))}
+          </div>
+          <p>
+            Cutting across all five are the <a href="/topics/">topics</a> —
+            thirteen subjects, so a two-minute news item and a
+            twenty-minute teardown on the same thing end up on the same
+            shelf. A few of those shelves are nearly empty on purpose:
+            they are where this blog is meant to grow.
+          </p>
+        </section>
+
+        <section class="block">
+          <h2>How it's made</h2>
+          <p>
+            Scout is the pipeline behind the News section. It is not a
+            person and it is not a persona; it is a few hundred lines of
+            Python on a schedule.
+          </p>
+          <ol>
+            <li>It reads a list of RSS feeds every few hours.</li>
+            <li>
+              It summarises what is new and messages the summaries to me
+              on Telegram.
+            </li>
+            <li>
+              I flag the ones worth writing up — sometimes with a
+              one-line steer about the angle, sometimes not.
+            </li>
+            <li>
+              A cloud model drafts a full post from the source article,
+              usually within the hour.
+            </li>
+            <li>
+              It publishes. Automatically. <strong>Nobody reads it first —
+              not me.</strong> Every one links back to the article it came
+              from.
+            </li>
+          </ol>
+          <p>
+            What is <em>not</em> reviewed: the facts, the framing, the
+            numbers, the conclusion. My only editorial act is choosing
+            which item gets written up at all. If a News post here matters
+            to you, open its source and check it.
+          </p>
+          <p>
+            Both the site and the pipeline behind it — Scout, the scoring,
+            the budget limits, all of it — are open source under MIT.
+            Read exactly what a post goes through before it publishes, or
+            fork it and point it at your own interests:
+            <a href={SITE.github}>the code is on GitHub</a>.
+          </p>
+        </section>
+
+        <section class="block">
+          <h2>Corrections</h2>
+          <p>
+            If something here is wrong, I would rather know. How
+            corrections are handled is on the
+            <a href="/colophon/">colophon</a>.
+          </p>
+          <!-- TODO(sebastiaan): a real closing line above the RSS link,
+               and a real contact route if there is one beyond opening a
+               correction via the colophon. -->
+          <p class="closing">
+            <a href="/rss.xml">Subscribe by RSS</a> to everything, or
+            <a href="/colophon/">read the colophon</a> for how to flag a
+            correction.
+          </p>
+        </section>
+      </div>
+
+      <aside class="rail">
+        <div class="rail-block">
+          <h2>Colophon</h2>
+          <dl>
+            <div><dt>Since</dt><dd><!-- TODO: launch year, not just "current year" -->{new Date().getFullYear()}</dd></div>
+            <div><dt>Built with</dt><dd>Astro</dd></div>
+            <div><dt>Hosted on</dt><dd>GitHub Pages</dd></div>
+          </dl>
+        </div>
+        <div class="rail-block">
+          <h2>Elsewhere</h2>
+          <ul>
+            <li><a href={SITE.github}>GitHub</a></li>
+            <!-- TODO(sebastiaan): any other links — Twitter/X, LinkedIn,
+                 Mastodon, email — go here. Nothing invented. -->
+          </ul>
+        </div>
+      </aside>
     </div>
   </div>
 </BaseLayout>
 
 <style>
-  .prose { margin-top: 1rem; padding-bottom: 2rem; }
-  .lanes { display: grid; gap: 0; }
-  .lane {
-    display: grid;
-    gap: 0.15rem;
-    padding: 0.7rem 0 0.7rem 0.9rem;
-    border-left: 2px solid var(--rule);
+  /* ---------- hero: topography background, left-aligned variant.
+     Shares --topo/--glow-a/--glow-b/tokens and the #seinWarp filter
+     with the homepage (see global.css and BaseLayout.astro); only the
+     padding, glow positions and bottom border differ, per the handoff's
+     per-page table. */
+  .about-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding-block: 6rem 4.5rem;
+    border-bottom: 1px solid var(--rule);
   }
-  .lane dt { font-weight: 700; }
-  .lane dd { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+  .about-hero::before {
+    content: "";
+    position: absolute;
+    inset: -30%;
+    z-index: -1;
+    background: repeating-radial-gradient(
+      ellipse 58% 50% at 50% 42%,
+      transparent 0 24px,
+      var(--topo) 24px 25px
+    );
+    filter: url(#seinWarp);
+    -webkit-mask-image: radial-gradient(ellipse 74% 66% at 50% 38%, #000 18%, transparent 78%);
+            mask-image: radial-gradient(ellipse 74% 66% at 50% 38%, #000 18%, transparent 78%);
+  }
+  .about-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(ellipse 52% 44% at 30% 0%, var(--glow-a), transparent 72%),
+      radial-gradient(ellipse 42% 34% at 82% 60%, var(--glow-b), transparent 72%);
+  }
+  @media print {
+    .about-hero::before, .about-hero::after { display: none; }
+  }
+  .about-hero h1 {
+    margin-top: 1.75rem;
+    max-width: 20ch;
+    font-family: "Archivo", var(--font-sans);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5.2vw, 4.25rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+  }
+  .about-hero .lede {
+    margin-top: 1.1rem;
+    max-width: 46ch;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+
+  /* ---------- two-column layout: reading column + sticky rail ----- */
+  .cols {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 4.5rem;
+    padding: 4.5rem 0 2.5rem;
+  }
+  @media (max-width: 980px) {
+    .cols { grid-template-columns: 1fr; gap: 3rem; }
+  }
+
+  .prose { max-width: 66ch; }
+  .prose p {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    line-height: 1.72;
+    margin: 0 0 1.35em;
+    color: var(--text);
+  }
+  .prose h2 { font-size: 1.4rem; margin-bottom: 0.9rem; }
+  .prose ol, .prose ul { font-family: var(--font-serif); font-size: 1.1rem; line-height: 1.65; padding-left: 1.3em; margin: 0 0 1.35em; }
+  .prose li { margin-bottom: 0.5em; }
+  .prose a { color: var(--link); }
+
+  .block {
+    padding-top: 3.5rem;
+    margin-top: 3.5rem;
+    border-top: 1px solid var(--rule);
+  }
+  .block:first-of-type { padding-top: 0; margin-top: 0; border-top: 0; }
+
+  /* Drop cap on the intro paragraph only. */
+  .prose p.first::first-letter {
+    float: left;
+    font-size: 4.1em;
+    line-height: 0.84;
+    padding: 0.06em 0.1em 0 0;
+    font-weight: 500;
+    color: var(--amber-text);
+  }
+
+  .closing { font-family: var(--font-sans); font-size: 0.95rem; }
+
+  /* ---------- disclosure scale ------------------------------------ */
+  .scale {
+    margin: 2rem 0 2.3rem;
+    padding: 1.6rem 1.6rem 0.75rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+  }
+  .scale .head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 1.4rem;
+  }
+  .row { margin-bottom: 1.5rem; }
+  .row .top { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.55rem; }
+  .row b { font-family: var(--font-sans); font-size: 0.97rem; font-weight: 600; }
+  .row em { margin-left: auto; font-style: normal; font-family: var(--font-sans); font-size: 0.78rem; color: var(--text-muted); }
+  .row p { font-family: var(--font-serif); font-size: 0.97rem; line-height: 1.6; color: var(--text-muted); margin: 0.7rem 0 0; }
+
+  .track { height: 5px; border-radius: 99px; background: var(--track); overflow: hidden; }
+  .fill {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--violet), var(--amber));
+    transition: width 1.1s cubic-bezier(.2,.7,.2,1);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fill { transition: none; }
+  }
+
+  /* ---------- topics list (rows, not cards — those already live on
+     the homepage) -------------------------------------------------- */
+  .topics { display: grid; margin: 1.4rem 0; }
+  .topics a {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 1.25rem;
+    align-items: baseline;
+    padding: 1.1rem 0;
+    border-top: 1px solid var(--rule);
+    text-decoration: none;
+    color: inherit;
+  }
+  .topics a:last-child { border-bottom: 1px solid var(--rule); }
+  .topics a:hover b { color: var(--amber-text); }
+  .topics b { font-weight: 700; }
+  .topics span { color: var(--text-muted); font-size: 0.95rem; }
+  @media (max-width: 620px) {
+    .topics a { grid-template-columns: 1fr; gap: 0.25rem; }
+  }
+
+  /* ---------- rail -------------------------------------------------- */
+  .rail {
+    position: sticky;
+    top: 6rem;
+    align-self: start;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+  }
+  .rail-block + .rail-block { margin-top: 2.2rem; }
+  .rail h2 {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+  }
+  .rail dl { display: grid; gap: 0.5rem; }
+  .rail dl > div { display: flex; justify-content: space-between; gap: 1rem; }
+  .rail dt { color: var(--text-muted); }
+  .rail dd { text-align: right; }
+  .rail ul { list-style: none; padding: 0; display: grid; gap: 0.5rem; }
+  .rail a { color: var(--text); }
+  .rail a:hover { color: var(--link); }
+  @media (max-width: 980px) {
+    .rail { position: static; margin-top: 0; }
+  }
 </style>
+
+<script>
+  // Bars fill once, the first time each row scrolls into view — the
+  // only motion on the page (hero-topografie-en-about handoff).
+  // Reduced motion is handled purely in CSS (the transition above is
+  // dropped), so this script doesn't need to branch on it: setting
+  // width still runs, it just jumps instead of animating.
+  const io = new IntersectionObserver((entries, obs) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      const fill = entry.target.querySelector<HTMLElement>(".fill");
+      const pct = (entry.target as HTMLElement).dataset.fill;
+      if (fill && pct) fill.style.width = `${pct}%`;
+      obs.unobserve(entry.target);
+    }
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll(".scale .row").forEach((row) => io.observe(row));
+</script>
