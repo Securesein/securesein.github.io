@@ -545,7 +545,15 @@ const siteJsonLd = {
     }
 
     function draw() {
-      const styles = getComputedStyle(document.documentElement);
+      // --node/--edge are declared on .mh-page (color-mix()'d from
+      // --brand/--ink there), not on :root — custom properties only
+      // inherit downward, so reading them off document.documentElement
+      // (an ANCESTOR of .mh-page) found nothing and canvas silently
+      // fell back to its own default (opaque black), which is why this
+      // was next to invisible in dark mode specifically: black on
+      // near-black. Reading off `canvas` itself, which sits INSIDE
+      // .mh-page, picks up the real cascaded value.
+      const styles = getComputedStyle(canvas!);
       const node = styles.getPropertyValue("--node").trim();
       const edge = styles.getPropertyValue("--edge").trim();
 
