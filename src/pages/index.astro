@@ -110,11 +110,7 @@ const siteJsonLd = {
   <div class="mh-page">
     <section class="masthead">
       <div class="container container--wide masthead-inner">
-        <Eyebrow
-          center
-          label={sectionsEyebrow}
-          shortLabel="Research · Benchmarks · Security"
-        />
+        <Eyebrow center label={sectionsEyebrow} />
 
         <h1 class="masthead__title">{SITE.title}</h1>
 
@@ -122,9 +118,11 @@ const siteJsonLd = {
 
         <div class="masthead__actions">
           {latestPost && (
-            <a class="btn btn--primary" href={postUrl(latestPost)}>
-              Latest: {latestPost.data.title}
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <a class="btn btn--primary btn--latest" href={postUrl(latestPost)}>
+              <span class="btn__label">Latest</span>
+              <span class="btn__prefix">Latest: </span>
+              <span class="btn__title">{latestPost.data.title}</span>
+              <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <line x1="4" y1="12" x2="19" y2="12" />
                 <polyline points="13,6 19,12 13,18" />
               </svg>
@@ -406,6 +404,11 @@ const siteJsonLd = {
   .btn--brand { border: 1px solid var(--brand); color: var(--brand-ink); font-weight: 500; }
   .btn--brand:hover { background: color-mix(in srgb, var(--brand) 12%, transparent); }
 
+  /* Split into label/prefix/title so the mobile layout (below) can
+     turn "Latest: <title>" into a two-line block with the arrow
+     folded into the text flow, without duplicating the link markup. */
+  .btn__label { display: none; }
+
   /* ---------- sections (replaces the old left-rule .lanes list) --- */
   .sections {
     width: 100%;
@@ -434,16 +437,77 @@ const siteJsonLd = {
     .sections { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 1.5rem; }
   }
 
-  @media (max-width: 760px) {
-    .masthead-inner { padding-block: 3rem 2rem; }
+  /* mobiel-homepage-fixes #3/#4/#5 — desktop (>700px) is untouched;
+     everything below only takes effect under this breakpoint. */
+  @media (max-width: 700px) {
+    .masthead-inner { padding-block: 3.5rem 4rem; }
     .masthead__title { margin-top: 1.5rem; }
-    .masthead__tagline { max-width: 26ch; }
-    .masthead__actions { margin-top: 1.75rem; width: 100%; flex-direction: column; gap: 0.75rem; }
+    .masthead__tagline { max-width: 26ch; margin: 1.25rem 0 1.875rem; font-size: 1.125rem; }
+
+    /* #3: the contour warp tuned for a desktop-width hero flings
+       lines far enough at ~390px to cross each other — swap in the
+       gentler #seinWarpSm filter, widen/flatten the ring ellipse and
+       space the rings out so fewer of them fit across the narrower
+       width, and give the mask more overmatting room since it eats
+       into the edges more aggressively at this scale. */
+    .masthead::before {
+      inset: -45%;
+      background: repeating-radial-gradient(
+        ellipse 78% 44% at 50% 38%,
+        transparent 0 34px,
+        var(--topo) 34px 35px
+      );
+      filter: url(#seinWarpSm);
+    }
+    .masthead::after {
+      background:
+        radial-gradient(ellipse 80% 30% at 50% -4%, var(--glow-a), transparent 72%),
+        radial-gradient(ellipse 70% 26% at 70% 52%, var(--glow-b), transparent 72%);
+    }
+
+    /* #4: actions stack, and the "Latest" pill becomes a two-line
+       block (small label over the title) instead of one long line
+       with an arrow floating off to the side. */
+    .masthead__actions { margin-top: 0; width: 100%; flex-direction: column; gap: 0.625rem; }
     .btn { width: 100%; min-height: 50px; }
-    .sections { margin-top: 2.5rem; display: block; }
-    .section-card { gap: 0.2rem; padding: 0.8rem 0; border-top-width: 1px; }
+
+    .btn--latest {
+      display: grid;
+      justify-items: start;
+      gap: 0.25rem;
+      padding: 0.9375rem 1.25rem;
+      border-radius: 18px;
+      text-align: left;
+      min-height: 0;
+    }
+    .btn--latest .btn__label {
+      display: block;
+      font-size: 0.6875rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.72;
+    }
+    .btn--latest .btn__prefix { display: none; }
+    .btn--latest .btn__title {
+      font-size: 0.97rem;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+    .btn--latest .btn__title::after { content: " \2192"; white-space: nowrap; }
+    .btn--latest .btn__arrow { display: none; }
+
+    /* #5: a compact row list instead of five desktop-spaced blocks. */
+    .sections { margin-top: 3rem; display: block; }
+    .section-card {
+      display: grid;
+      gap: 0.25rem;
+      padding: 0.8125rem 0;
+      border-top-width: 1px;
+      min-height: 44px;
+    }
     .section-card--lead { border-top-width: 2px; }
-    .section-card__desc { font-size: 0.8rem; }
+    .section-card__name { font-size: 0.97rem; }
+    .section-card__desc { font-size: 0.84rem; }
   }
 
   .masthead a:focus-visible {

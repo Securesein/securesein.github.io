@@ -112,6 +112,18 @@ const ogImageAlt = imageAlt ?? `${SITE.title} — ${SITE.subTagline}`;
         <feTurbulence type="fractalNoise" baseFrequency="0.0035" numOctaves="4" seed="11" result="n" />
         <feDisplacementMap in="SourceGraphic" in2="n" scale="150" xChannelSelector="R" yChannelSelector="G" />
       </filter>
+      <!-- Narrow-viewport variant (mobiel-homepage-fixes #3): the
+           feDisplacementMap scale in #seinWarp was tuned against a
+           desktop-width hero, so on a ~390px phone the same warp
+           flings the contour lines far enough to cross each other. A
+           media query can't reach into an SVG filter's own
+           attributes, so this is a second, gentler filter rather than
+           an override of the first — swapped in purely via `filter:
+           url(#seinWarpSm)` in each hero's own mobile breakpoint. -->
+      <filter id="seinWarpSm">
+        <feTurbulence type="fractalNoise" baseFrequency="0.0045" numOctaves="3" seed="11" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="60" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
     </svg>
     <a href="#main" class="skip-link">Skip to content</a>
     <Header />

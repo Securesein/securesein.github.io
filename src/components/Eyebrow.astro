@@ -56,11 +56,28 @@ const { label, shortLabel, meta, center = false } = Astro.props;
 
   @media (max-width: 760px) {
     .eyebrow { gap: 0.75rem; font-size: 0.625rem; letter-spacing: 0.16em; }
-    .eyebrow--center .eyebrow__label--long { display: none; }
-    .eyebrow--center .eyebrow__label--short { display: inline; white-space: nowrap; }
     /* The right half of a left-anchored eyebrow drops rather than
        wrapping under the label — every item below already repeats
        its own date. */
     .eyebrow:not(.eyebrow--center) .eyebrow__meta { display: none; }
+  }
+
+  /* mobiel-homepage-fixes #2: the centred variant used to swap in a
+     short label that silently dropped two of the five categories
+     (there was no room to show all five on one line). Below 700px it
+     now wraps onto two lines instead of truncating, and the rules
+     either side drop out since they have no room left to read as a
+     separator. */
+  @media (max-width: 700px) {
+    .eyebrow--center { display: block; text-align: center; margin-bottom: 2rem; }
+    .eyebrow--center .eyebrow__rule { display: none; }
+    .eyebrow--center .eyebrow__label--long {
+      display: inline;
+      white-space: normal;
+      font-size: 0.656rem;
+      letter-spacing: 0.16em;
+      line-height: 1.9;
+    }
+    .eyebrow--center .eyebrow__label--short { display: none; }
   }
 </style>

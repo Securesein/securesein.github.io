@@ -206,7 +206,10 @@ body {
   font-size: 1rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
+  min-height: 100dvh;
+  /* Keeps the last row of content clear of the iOS home-indicator /
+     address-bar strip on notched phones (mobiel-homepage-fixes). */
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 h1, h2, h3, h4 {
