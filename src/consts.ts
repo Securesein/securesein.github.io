@@ -42,6 +42,20 @@ export const SECTIONS = SECTION_ORDER.map((kind) => ({
   description: SECTION_INFO[kind].question,
 }));
 
+/**
+ * Which background the homepage hero draws. Both live in index.astro's
+ * stylesheet behind a `[data-hero-bg]` attribute, so switching between
+ * them — or back — is this one value and nothing else.
+ *
+ *   "topo" — the static warped contour lines (the previous default).
+ *   "dots" — a dot matrix with one slow sheen sweeping across it.
+ *
+ * Only one of the two is ever rendered; the other's rules simply don't
+ * match. Keep it at one moving element per page (dotmatrix handoff C1):
+ * if "dots" is active, the sweep is the homepage's whole motion budget.
+ */
+export const HERO_BACKGROUND: "topo" | "dots" = "dots";
+
 export const NAV_LINKS = [
   { label: "Topics", href: "/topics" },
   { label: "About", href: "/about" },

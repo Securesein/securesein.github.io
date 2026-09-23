@@ -11,7 +11,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PostCard from "../components/PostCard.astro";
 import NewsRow from "../components/NewsRow.astro";
 import Eyebrow from "../components/Eyebrow.astro";
-import { SITE, SECTIONS } from "../consts";
+import { SITE, SECTIONS, HERO_BACKGROUND } from "../consts";
 import { allPosts, postUrl, postsOfFormat, postsOfKind, threadsWithPosts } from "../posts";
 
 const [allPublished, releases, explainers, dives, papers, threads] = await Promise.all([
@@ -108,7 +108,7 @@ const siteJsonLd = {
        seam below the hero), scoped so it never reaches the nav,
        footer or any other page — see the style block. -->
   <div class="mh-page">
-    <section class="masthead">
+    <section class="masthead" data-hero-bg={HERO_BACKGROUND}>
       <div class="container container--wide masthead-inner">
         <Eyebrow center label={sectionsEyebrow} />
 
@@ -246,6 +246,10 @@ const siteJsonLd = {
     --glow-a: color-mix(in srgb, var(--brand) 15%, transparent);
     --glow-b: color-mix(in srgb, var(--accent) 12%, transparent);
 
+    /* Dot-matrix variant (dotmatrix handoff A2), mixed the same way. */
+    --dot: color-mix(in srgb, var(--ink) 16%, transparent);
+    --sheen: color-mix(in srgb, var(--brand) 10%, transparent);
+
     background: var(--bg);
     color: var(--text);
   }
@@ -273,6 +277,9 @@ const siteJsonLd = {
       --topo: color-mix(in srgb, var(--ink) 8%, transparent);
       --glow-a: color-mix(in srgb, var(--brand) 20%, transparent);
       --glow-b: color-mix(in srgb, var(--accent) 12%, transparent);
+
+      --dot: color-mix(in srgb, var(--ink) 14%, transparent);
+      --sheen: color-mix(in srgb, var(--brand) 12%, transparent);
     }
   }
   :global(:root[data-theme="dark"]) .mh-page {
@@ -298,19 +305,25 @@ const siteJsonLd = {
     --topo: color-mix(in srgb, var(--ink) 8%, transparent);
     --glow-a: color-mix(in srgb, var(--brand) 20%, transparent);
     --glow-b: color-mix(in srgb, var(--accent) 12%, transparent);
+
+    --dot: color-mix(in srgb, var(--ink) 14%, transparent);
+    --sheen: color-mix(in srgb, var(--brand) 12%, transparent);
   }
 
-  /* Topography hero background (hero-topografie-en-about handoff):
-     a repeating-radial-gradient ring pattern, warped by the shared
-     #seinWarp filter declared once in BaseLayout, plus two radial
-     glows. Static — no JS, no animation. isolation:isolate keeps the
+  /* Two hero backgrounds live here; which one renders is decided by
+     HERO_BACKGROUND in consts.ts, stamped onto the section as
+     data-hero-bg. Only the matching rules apply, so switching between
+     them (or back) needs no other change. isolation:isolate keeps the
      pseudo-elements' z-index:-1 scoped to this section rather than
-     punching through to .mh-page; overflow:hidden clips the -30%
-     overmatting feDisplacementMap needs (it pulls edges inward, so
-     without the overmat the warp visibly tapers off at the sides). */
+     punching through to .mh-page; overflow:hidden clips whatever
+     overmat either background asks for. */
   .masthead { position: relative; isolation: isolate; overflow: hidden; }
 
-  .masthead::before {
+  /* --- "topo": warped contour lines, static (hero-topografie
+     handoff). The -30% overmat is what feDisplacementMap needs — it
+     pulls edges inward, so without it the warp visibly tapers off at
+     the sides. */
+  .masthead[data-hero-bg="topo"]::before {
     content: "";
     position: absolute;
     inset: -30%;
@@ -325,7 +338,7 @@ const siteJsonLd = {
             mask-image: radial-gradient(ellipse 74% 66% at 50% 38%, #000 18%, transparent 78%);
   }
 
-  .masthead::after {
+  .masthead[data-hero-bg="topo"]::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -333,6 +346,42 @@ const siteJsonLd = {
     background:
       radial-gradient(ellipse 52% 44% at 50% -6%, var(--glow-a), transparent 72%),
       radial-gradient(ellipse 42% 34% at 80% 46%, var(--glow-b), transparent 72%);
+  }
+
+  /* --- "dots": a regular dot matrix with one slow sheen crossing it
+     (dotmatrix handoff A3). The sweep is a transform on its own layer
+     so it runs on the compositor — deliberately no filter or
+     box-shadow on it, which would throw that away and repaint the
+     hero every frame. */
+  .masthead[data-hero-bg="dots"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+    background-size: 24px 24px;
+    -webkit-mask-image: radial-gradient(ellipse 72% 62% at 50% 34%, #000 8%, transparent 74%);
+            mask-image: radial-gradient(ellipse 72% 62% at 50% 34%, #000 8%, transparent 74%);
+  }
+
+  .masthead[data-hero-bg="dots"]::after {
+    content: "";
+    position: absolute;
+    inset: -30%;
+    z-index: -1;
+    background: linear-gradient(112deg, transparent 42%, var(--sheen) 50%, transparent 58%);
+    animation: heroSweep 16s linear infinite;
+  }
+
+  @keyframes heroSweep {
+    from { transform: translateX(-30%); }
+    to   { transform: translateX(30%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    /* Still drawn, just not moving — the dots are the background, not
+       the animation (dotmatrix handoff C2). */
+    .masthead[data-hero-bg="dots"]::after { animation: none; }
   }
 
   @media print {
@@ -450,7 +499,7 @@ const siteJsonLd = {
        space the rings out so fewer of them fit across the narrower
        width, and give the mask more overmatting room since it eats
        into the edges more aggressively at this scale. */
-    .masthead::before {
+    .masthead[data-hero-bg="topo"]::before {
       inset: -45%;
       background: repeating-radial-gradient(
         ellipse 78% 44% at 50% 38%,
@@ -459,11 +508,20 @@ const siteJsonLd = {
       );
       filter: url(#seinWarpSm);
     }
-    .masthead::after {
+    .masthead[data-hero-bg="topo"]::after {
       background:
         radial-gradient(ellipse 80% 30% at 50% -4%, var(--glow-a), transparent 72%),
         radial-gradient(ellipse 70% 26% at 70% 52%, var(--glow-b), transparent 72%);
     }
+
+    /* Tighter grid, and a slower sweep: the same speed across less
+       width reads as hurried (dotmatrix handoff A4). */
+    .masthead[data-hero-bg="dots"]::before {
+      background-size: 20px 20px;
+      -webkit-mask-image: radial-gradient(ellipse 88% 50% at 50% 32%, #000 6%, transparent 72%);
+              mask-image: radial-gradient(ellipse 88% 50% at 50% 32%, #000 6%, transparent 72%);
+    }
+    .masthead[data-hero-bg="dots"]::after { animation-duration: 22s; }
 
     /* #4: actions stack, and the "Latest" pill becomes a two-line
        block (small label over the title) instead of one long line

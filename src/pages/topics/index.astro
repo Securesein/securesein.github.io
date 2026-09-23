@@ -20,20 +20,30 @@ const topics = Object.keys(TOPICS) as Topic[];
 ---
 <BaseLayout
   title="Topics"
-  description="Seven subjects this blog covers, each pulling together news, fundamentals and deep dives on the same shelf."
+  description={`${topics.length} subjects this blog covers, each pulling together news, fundamentals and deep dives on the same shelf.`}
 >
   <div class="container container--wide">
     <PageHeader
       title="Topics"
-      standfirst="Seven shelves, deliberately few. Each one pulls together everything on that subject — the two-minute news item and the twenty-minute teardown sit side by side."
+      standfirst="A closed vocabulary, deliberately small. Each shelf pulls together everything on that subject — the two-minute news item and the twenty-minute teardown sit side by side."
     />
+
+    <!-- The map above the list, not instead of it: two topics are
+         joined when a post carries both, and the node is as big as the
+         shelf is full. Starts `hidden` and is only revealed once its
+         data has actually loaded, so a failed fetch leaves no empty
+         box — and it never renders below 900px, where thirteen
+         labelled nodes are unreadable and the list does the work. -->
+    <div class="topic-graph" data-graph="/topics/graph.json" hidden>
+      <canvas aria-hidden="true"></canvas>
+    </div>
 
     <ul class="topic-grid">
       {topics.map((topic) => {
         const count = counts[topic] ?? 0;
         const recent = latest.get(topic);
         return (
-          <li class="topic-card">
+          <li class="topic-card" data-topic={topic}>
             <h2 class="topic-card-title">
               <a href={`/topics/${topic}/`}>{TOPICS[topic].label}</a>
             </h2>
@@ -61,6 +71,16 @@ const topics = Object.keys(TOPICS) as Topic[];
 </BaseLayout>
 
 <style>
+  .topic-graph {
+    position: relative;
+    height: 460px;
+    margin: 0.5rem 0 3.5rem;
+  }
+  .topic-graph canvas { display: block; width: 100%; height: 100%; }
+  /* Thirteen nodes with labels don't survive 390px, and the list below
+     is already the real navigation. */
+  @media (max-width: 900px) { .topic-graph { display: none !important; } }
+
   .topic-grid {
     list-style: none;
     padding: 0;
@@ -99,3 +119,230 @@ const topics = Object.keys(TOPICS) as Topic[];
   .topic-card-recent { font-size: 0.88rem; }
   .topic-card-recent a { color: var(--text-muted); }
 </style>
+
+<script>
+  // Draws /topics/graph.json — the co-occurrence map solved at build
+  // time. The browser only places and animates; it never simulates.
+  // The drift is deterministic trigonometry off each node's fixed
+  // phase, not physics, so there is no state to settle and a resize
+  // can't throw the layout away.
+  interface GraphNode {
+    slug: string;
+    label: string;
+    count: number;
+    url: string;
+    x: number;
+    y: number;
+  }
+  type Placed = GraphNode & { ax: number; ay: number; r: number; ph: number };
+  interface Graph { nodes: GraphNode[]; edges: [string, string, number][] }
+
+  async function initTopicGraph(root: HTMLElement) {
+    const src = root.dataset.graph;
+    if (!src) return;
+
+    let data: Graph;
+    try {
+      const response = await fetch(src);
+      if (!response.ok) return; // the list below is the real navigation
+      data = await response.json();
+    } catch {
+      return;
+    }
+    if (!data?.nodes?.length) return;
+
+    const canvas = root.querySelector("canvas");
+    const ctx = canvas?.getContext("2d");
+    if (!canvas || !ctx) return;
+
+    // Only now, with data in hand, does the box appear — a failed
+    // fetch leaves no empty gap above the list.
+    root.hidden = false;
+
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+    const nodes: Placed[] = data.nodes.map((node, i) => ({
+      ...node,
+      ax: 0,
+      ay: 0,
+      r: 0,
+      ph: i * 1.7, // fixed phase offset per node, never random
+    }));
+    const edges = data.edges ?? [];
+
+    let w = 0;
+    let h = 0;
+    let raf = 0;
+    let hot: string | null = null;
+    let onScreen = true;
+
+    function layout() {
+      const dpr = Math.min(devicePixelRatio || 1, 2);
+      const rect = canvas!.getBoundingClientRect();
+      w = rect.width;
+      h = rect.height;
+      if (!w || !h) return;
+
+      canvas!.width = Math.round(w * dpr);
+      canvas!.height = Math.round(h * dpr);
+      ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      const padX = 90; // room for the labels, which are centred on the node
+      const padY = 40;
+      for (const node of nodes) {
+        node.ax = padX + node.x * (w - 2 * padX);
+        node.ay = padY + node.y * (h - 2 * padY);
+        node.r = 3.5 + Math.sqrt(node.count) * 1.8;
+      }
+    }
+
+    function at(node: Placed, t: number): [number, number] {
+      if (reduced.matches) return [node.ax, node.ay];
+      const a = t / 9000 + node.ph;
+      return [node.ax + Math.sin(a) * 6, node.ay + Math.cos(a * 0.8) * 6];
+    }
+
+    function draw(t: number) {
+      // Read off the canvas, not documentElement: custom properties
+      // only inherit downward, so anything scoped to a wrapper would
+      // be invisible from the root and canvas would silently fall back
+      // to opaque black. Reading from the element being painted is
+      // correct wherever the tokens happen to be declared.
+      const styles = getComputedStyle(canvas!);
+      const edgeColor = styles.getPropertyValue("--edge").trim();
+      const nodeColor = styles.getPropertyValue("--node").trim();
+      const labelColor = styles.getPropertyValue("--text").trim();
+      const hotColor = styles.getPropertyValue("--amber").trim();
+
+      ctx!.clearRect(0, 0, w, h);
+
+      const pos = new Map(nodes.map((node) => [node.slug, at(node, t)]));
+      const near = hot
+        ? new Set(
+            edges
+              .filter(([a, b]) => a === hot || b === hot)
+              .flatMap(([a, b]) => [a, b])
+          )
+        : null;
+
+      ctx!.strokeStyle = edgeColor;
+      for (const [a, b, weight] of edges) {
+        const from = pos.get(a);
+        const to = pos.get(b);
+        if (!from || !to) continue;
+        const lit = !near || (near.has(a) && near.has(b));
+        ctx!.globalAlpha = Math.min(0.5, 0.12 + weight * 0.06) * (lit ? 1 : 0.18);
+        ctx!.lineWidth = lit && hot ? 1.5 : 1;
+        ctx!.beginPath();
+        ctx!.moveTo(from[0], from[1]);
+        ctx!.lineTo(to[0], to[1]);
+        ctx!.stroke();
+      }
+
+      for (const node of nodes) {
+        const [x, y] = pos.get(node.slug)!;
+        const lit = !near || near.has(node.slug);
+        ctx!.globalAlpha = lit ? 1 : 0.25;
+        ctx!.fillStyle = node.slug === hot ? hotColor : nodeColor;
+        ctx!.beginPath();
+        ctx!.arc(x, y, node.r, 0, Math.PI * 2);
+        ctx!.fill();
+
+        // Thirteen labels all at full strength is a word cloud; the
+        // thinly-populated shelves stay dimmed until pointed at.
+        ctx!.fillStyle = labelColor;
+        ctx!.globalAlpha = lit ? (node.count > 4 || hot ? 0.9 : 0.5) : 0.2;
+        ctx!.font = '500 12px Inter, system-ui, sans-serif';
+        ctx!.textAlign = "center";
+        ctx!.fillText(node.label, x, y - node.r - 7);
+      }
+      ctx!.globalAlpha = 1;
+    }
+
+    function loop(t: number) {
+      draw(t);
+      raf = requestAnimationFrame(loop);
+    }
+    function start() {
+      if (!raf && !reduced.matches && onScreen) raf = requestAnimationFrame(loop);
+    }
+    function stop() {
+      if (raf) cancelAnimationFrame(raf);
+      raf = 0;
+    }
+    /** Under reduced motion nothing repaints on its own, so a hover
+     *  change has to ask for its own frame. */
+    function repaintIfStill() {
+      if (reduced.matches) draw(performance.now());
+    }
+
+    function hit(event: PointerEvent | MouseEvent): Placed | null {
+      const rect = canvas!.getBoundingClientRect();
+      const mx = event.clientX - rect.left;
+      const my = event.clientY - rect.top;
+      const t = performance.now();
+      for (const node of nodes) {
+        const [x, y] = at(node, t);
+        if (Math.hypot(mx - x, my - y) < node.r + 12) return node;
+      }
+      return null;
+    }
+
+    canvas.addEventListener("pointermove", (event) => {
+      const node = hit(event);
+      canvas.style.cursor = node ? "pointer" : "default";
+      const next = node?.slug ?? null;
+      if (next !== hot) {
+        hot = next;
+        repaintIfStill();
+      }
+    });
+    canvas.addEventListener("pointerleave", () => {
+      hot = null;
+      repaintIfStill();
+    });
+    canvas.addEventListener("click", (event) => {
+      const node = hit(event);
+      if (node) location.href = node.url;
+    });
+
+    // The accessible route into the same information: keyboard focus
+    // on a card lights its node, and the card's own link still works.
+    document.querySelectorAll<HTMLElement>("[data-topic]").forEach((card) => {
+      const slug = card.dataset.topic ?? null;
+      const on = () => { hot = slug; repaintIfStill(); };
+      const off = () => { hot = null; repaintIfStill(); };
+      card.addEventListener("pointerenter", on);
+      card.addEventListener("pointerleave", off);
+      card.addEventListener("focusin", on);
+      card.addEventListener("focusout", off);
+    });
+
+    new IntersectionObserver(([entry]) => {
+      onScreen = entry.isIntersecting;
+      onScreen ? start() : stop();
+    }).observe(root);
+
+    document.addEventListener("visibilitychange", () => {
+      document.hidden ? stop() : start();
+    });
+
+    new ResizeObserver(() => {
+      layout();
+      draw(performance.now());
+    }).observe(root);
+
+    reduced.addEventListener("change", () => {
+      stop();
+      draw(performance.now());
+      start();
+    });
+
+    layout();
+    draw(performance.now());
+    start();
+  }
+
+  document
+    .querySelectorAll<HTMLElement>(".topic-graph")
+    .forEach(initTopicGraph);
+</script>

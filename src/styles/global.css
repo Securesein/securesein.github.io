@@ -111,6 +111,15 @@
   --glow-a: color-mix(in srgb, var(--brand-from) 15%, transparent);
   --glow-b: color-mix(in srgb, var(--amber) 12%, transparent);
   --track: color-mix(in srgb, var(--ink) 9%, transparent);
+
+  /* Topic graph (dotmatrix handoff C4). Deliberately literal rgba()
+     rather than the color-mix() the tokens above use: these two are
+     read by JavaScript and handed straight to a canvas fillStyle, and
+     the computed value of a custom property only has its var()s
+     substituted — a color-mix() would arrive at the canvas unresolved
+     and be silently ignored, leaving the default opaque black. */
+  --node: rgba(91, 78, 240, 0.6);
+  --edge: rgba(11, 11, 13, 0.3);
 }
 
 /* Dark: same roles, re-measured. The accent lifts because a deep green
@@ -151,6 +160,9 @@
     --glow-a: color-mix(in srgb, var(--brand-from) 20%, transparent);
     --glow-b: color-mix(in srgb, var(--amber) 12%, transparent);
     --track: color-mix(in srgb, var(--ink) 9%, transparent);
+
+    --node: rgba(160, 145, 255, 0.75);
+    --edge: rgba(255, 255, 255, 0.34);
   }
 }
 
@@ -174,6 +186,9 @@
   --glow-a: color-mix(in srgb, var(--brand-from) 20%, transparent);
   --glow-b: color-mix(in srgb, var(--amber) 12%, transparent);
   --track: color-mix(in srgb, var(--ink) 9%, transparent);
+
+  --node: rgba(160, 145, 255, 0.75);
+  --edge: rgba(255, 255, 255, 0.34);
 
   /* Subtle cards, same model as light — see the media-query block above. */
   --card-bg: var(--raised);
