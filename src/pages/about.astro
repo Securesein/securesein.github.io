@@ -21,6 +21,8 @@ import { SITE, SECTIONS } from "../consts";
   reading={true}
 >
   <section class="about-hero">
+    <div class="hero-nodes" aria-hidden="true"><canvas></canvas></div>
+
     <div class="container">
       <Eyebrow label="About" />
       <h1>Why this site exists</h1>
@@ -211,11 +213,12 @@ import { SITE, SECTIONS } from "../consts";
 </BaseLayout>
 
 <style>
-  /* ---------- hero: topography background, left-aligned variant.
-     Shares --topo/--glow-a/--glow-b/tokens and the #seinWarp filter
-     with the homepage (see global.css and BaseLayout.astro); only the
-     padding, glow positions and bottom border differ, per the handoff's
-     per-page table. */
+  /* ---------- hero: drifting constellation, left-aligned variant.
+     Replaces the topography that used to sit here (about-constellatie
+     handoff). Note this is the DECORATIVE constellation — random
+     points, no meaning. The one on /topics/ draws real data and is a
+     separate component on purpose: the two have different jobs and
+     sharing the drawing code would force both to compromise. */
   .about-hero {
     position: relative;
     isolation: isolate;
@@ -223,51 +226,35 @@ import { SITE, SECTIONS } from "../consts";
     padding-block: 6rem 4.5rem;
     border-bottom: 1px solid var(--rule);
   }
-  .about-hero::before {
-    content: "";
-    position: absolute;
-    inset: -30%;
-    z-index: -1;
-    background: repeating-radial-gradient(
-      ellipse 58% 50% at 50% 42%,
-      transparent 0 24px,
-      var(--topo) 24px 25px
-    );
-    filter: url(#seinWarp);
-    -webkit-mask-image: radial-gradient(ellipse 74% 66% at 50% 38%, #000 18%, transparent 78%);
-            mask-image: radial-gradient(ellipse 74% 66% at 50% 38%, #000 18%, transparent 78%);
-  }
-  .about-hero::after {
-    content: "";
+  .hero-nodes {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background:
-      radial-gradient(ellipse 52% 44% at 30% 0%, var(--glow-a), transparent 72%),
-      radial-gradient(ellipse 42% 34% at 82% 60%, var(--glow-b), transparent 72%);
+    /* Without this the layer would swallow taps meant for the links
+       underneath — a classic regression, so it is also asserted in the
+       checks rather than just written down here. */
+    pointer-events: none;
+  }
+  .hero-nodes canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* About is left-aligned, so the pattern's weight sits left of
+       centre and the title keeps a clear field. */
+    -webkit-mask-image: radial-gradient(ellipse 78% 72% at 38% 44%, #000 22%, transparent 80%);
+            mask-image: radial-gradient(ellipse 78% 72% at 38% 44%, #000 22%, transparent 80%);
   }
   @media print {
-    .about-hero::before, .about-hero::after { display: none; }
+    .hero-nodes { display: none; }
   }
-  /* Same narrow-viewport treatment the homepage hero gets
-     (mobiel-homepage-fixes #3): the desktop-tuned warp crosses its own
-     contour lines at phone width, so swap in the gentler
-     #seinWarpSm filter, space the rings out and flatten the ellipse. */
   @media (max-width: 700px) {
     .about-hero { padding-block: 3.5rem 3rem; }
-    .about-hero::before {
-      inset: -45%;
-      background: repeating-radial-gradient(
-        ellipse 78% 44% at 50% 38%,
-        transparent 0 34px,
-        var(--topo) 34px 35px
-      );
-      filter: url(#seinWarpSm);
-    }
-    .about-hero::after {
-      background:
-        radial-gradient(ellipse 80% 30% at 30% -4%, var(--glow-a), transparent 72%),
-        radial-gradient(ellipse 70% 26% at 82% 62%, var(--glow-b), transparent 72%);
+    /* Wider, flatter, and the solid core starts at 14% instead of 22%:
+       on a short hero a round mask otherwise crops most of the pattern
+       away and leaves a smudge in the middle. */
+    .hero-nodes canvas {
+      -webkit-mask-image: radial-gradient(ellipse 96% 64% at 50% 40%, #000 14%, transparent 76%);
+              mask-image: radial-gradient(ellipse 96% 64% at 50% 40%, #000 14%, transparent 76%);
     }
   }
   .about-hero h1 {
@@ -416,6 +403,211 @@ import { SITE, SECTIONS } from "../consts";
     .rail { position: static; margin-top: 0; }
   }
 </style>
+
+<script>
+  // Decorative hero constellation (about-constellatie handoff).
+  //
+  // Everything about density is derived from the canvas area rather
+  // than from breakpoints, because the previous version's failure was
+  // exactly that: a fixed 140px link distance is 12% of a desktop
+  // hero's width but 36% of a phone's, so on a phone nearly every
+  // point could reach every other and the pattern closed up into a
+  // mesh. Two rules fix it — a link distance proportional to the
+  // canvas, and a hard cap of three lines per point that holds however
+  // narrow the screen gets.
+  function initHeroConstellation(root: HTMLElement) {
+    const canvas = root.querySelector("canvas");
+    const ctx = canvas?.getContext("2d");
+    if (!canvas || !ctx) return;
+
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+    const MAX_EDGES = 3;
+    const FRAME = 1000 / 30; // 30fps — indistinguishable at this drift speed
+
+    interface Point { x: number; y: number; vx: number; vy: number; r: number }
+    let points: Point[] = [];
+    let w = 0;
+    let h = 0;
+    let prevW = 0;
+    let prevH = 0;
+    let link = 0;
+    let speed = 0.15;
+    let raf = 0;
+    let onScreen = true;
+    let last = 0;
+
+    function measure(): boolean {
+      // Capped at 2: on a dpr-3 phone the canvas would carry half as
+      // many pixels again for no visible gain on 1px lines.
+      const dpr = Math.min(devicePixelRatio || 1, 2);
+      const rect = canvas!.getBoundingClientRect();
+      w = rect.width;
+      h = rect.height;
+      if (!w || !h) return false;
+
+      canvas!.width = Math.round(w * dpr);
+      canvas!.height = Math.round(h * dpr);
+      ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      const area = w * h;
+      link = Math.min(165, Math.max(88, Math.sqrt(area) * 0.22));
+      speed = w < 640 ? 0.09 : 0.15;
+      return true;
+    }
+
+    function seed() {
+      const area = w * h;
+      const count = Math.round(Math.min(70, Math.max(10, area / 9000)));
+      const rMin = w < 640 ? 1.1 : 0.8; // smaller than this and they vanish on a dense screen
+      points = Array.from({ length: count }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * speed,
+        vy: (Math.random() - 0.5) * speed,
+        r: Math.random() * 1.4 + rMin,
+      }));
+    }
+
+    function rescale() {
+      if (!prevW || !prevH) return;
+      const sx = w / prevW;
+      const sy = h / prevH;
+      for (const p of points) {
+        p.x *= sx;
+        p.y *= sy;
+      }
+    }
+
+    function resize() {
+      if (!measure()) return;
+      // The single most important line here: iOS Safari collapses and
+      // expands its address bar while scrolling, which changes the
+      // hero's height and fires the ResizeObserver. Reseeding on every
+      // one of those would visibly reshuffle the pattern mid-scroll,
+      // so only a real width change (>15%) reseeds — a rotation, say.
+      // Anything smaller just scales the existing points.
+      const bigChange = !points.length || Math.abs(w - prevW) > prevW * 0.15;
+      bigChange ? seed() : rescale();
+      prevW = w;
+      prevH = h;
+    }
+
+    function draw(dt: number) {
+      // Read from the canvas, not documentElement: custom properties
+      // only inherit downward, so a token scoped to any wrapper would
+      // read empty at the root and canvas would silently fall back to
+      // opaque black.
+      const styles = getComputedStyle(canvas!);
+      const nodeColor = styles.getPropertyValue("--node").trim();
+      const edgeColor = styles.getPropertyValue("--edge").trim();
+
+      if (!reduced.matches) {
+        const step = dt / 16.67; // time-based, so a dropped frame doesn't slow the drift
+        for (const p of points) {
+          p.x += p.vx * step;
+          p.y += p.vy * step;
+          if (p.x < 0 || p.x > w) p.vx *= -1;
+          if (p.y < 0 || p.y > h) p.vy *= -1;
+        }
+      }
+
+      ctx!.clearRect(0, 0, w, h);
+      ctx!.strokeStyle = edgeColor;
+      ctx!.lineWidth = 1;
+
+      // The cap counts lines TOUCHING a point, not lines it started.
+      // Capping only what each point originates (which is the simpler
+      // reading) lets a point be picked by its neighbours on top of
+      // its own three, and measured over random layouts the worst node
+      // then reaches six to nine lines — the clogging this rule exists
+      // to prevent. Checking both ends before drawing makes three a
+      // real ceiling, at the cost of a few edges overall.
+      const drawn = new Set<string>();
+      const degree = new Array(points.length).fill(0);
+      for (let i = 0; i < points.length; i++) {
+        const a = points[i];
+        const near: [number, number][] = [];
+        for (let j = 0; j < points.length; j++) {
+          if (i === j) continue;
+          const d = Math.hypot(a.x - points[j].x, a.y - points[j].y);
+          if (d < link) near.push([d, j]);
+        }
+        near.sort((m, n) => m[0] - n[0]); // nearest neighbours win the slots
+        for (const [d, j] of near) {
+          if (degree[i] >= MAX_EDGES) break;
+          if (degree[j] >= MAX_EDGES) continue;
+          const key = i < j ? `${i}:${j}` : `${j}:${i}`;
+          if (drawn.has(key)) continue; // already counted at both ends
+          drawn.add(key);
+          degree[i]++;
+          degree[j]++;
+          ctx!.globalAlpha = (1 - d / link) * 0.5; // farther apart = fainter
+          ctx!.beginPath();
+          ctx!.moveTo(a.x, a.y);
+          ctx!.lineTo(points[j].x, points[j].y);
+          ctx!.stroke();
+        }
+      }
+
+      ctx!.globalAlpha = 1;
+      ctx!.fillStyle = nodeColor;
+      for (const p of points) {
+        ctx!.beginPath();
+        ctx!.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx!.fill();
+      }
+    }
+
+    function loop(t: number) {
+      raf = requestAnimationFrame(loop);
+      const dt = t - last;
+      if (dt < FRAME) return;
+      last = t;
+      draw(Math.min(dt, 50)); // no jump after a pause
+    }
+
+    function start() {
+      if (raf || reduced.matches || !onScreen) return;
+      last = performance.now();
+      raf = requestAnimationFrame(loop);
+    }
+    function stop() {
+      if (raf) cancelAnimationFrame(raf);
+      raf = 0;
+    }
+
+    // The page's other motion is the disclosure bars, far below the
+    // fold. These two never share the screen, and this is what keeps
+    // it that way: off-screen, the loop is not running at all.
+    new IntersectionObserver(([entry]) => {
+      onScreen = entry.isIntersecting;
+      onScreen ? start() : stop();
+    }).observe(root);
+
+    document.addEventListener("visibilitychange", () => {
+      document.hidden ? stop() : start();
+    });
+
+    new ResizeObserver(() => {
+      resize();
+      draw(0);
+    }).observe(root);
+
+    reduced.addEventListener("change", () => {
+      stop();
+      draw(0);
+      start();
+    });
+
+    resize();
+    draw(0);
+    start();
+  }
+
+  document
+    .querySelectorAll<HTMLElement>(".hero-nodes")
+    .forEach(initHeroConstellation);
+</script>
 
 <script>
   // Bars fill once, the first time each row scrolls into view — the
