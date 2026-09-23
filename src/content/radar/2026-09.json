@@ -18660,6 +18660,72 @@
       "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve security and efficiency in deployment.",
       "seenAt": "2026-09-23T18:18:12+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r011448662a8c8b1",
+      "url": "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
+      "title": "Gemini 3.8 TTS Playground",
+      "source": "Simon Willison's Weblog",
+      "section": "release",
+      "topics": [
+        "generative-ai",
+        "llms",
+        "ai-security"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "The Gemini 3.8 TTS Playground offers insights into LLM behavior and security, relevant for understanding model internals and deployment challenges.",
+      "seenAt": "2026-09-23T22:02:45+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3bf3a05e5f7925d",
+      "url": "https://aws.amazon.com/blogs/machine-learning/agentic-conversational-video-intelligence-built-on-aws/",
+      "title": "Agentic conversational video intelligence built on AWS",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "agents",
+        "multimodal",
+        "ai-security"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item discusses agentic AI, which may touch on LLM security and deployment, but lacks depth in mechanistic interpretability and inference efficiency.",
+      "seenAt": "2026-09-23T22:03:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6eff16a1336643f",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.281",
+      "title": "v2.1.281",
+      "source": "Claude Code Releases",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This item discusses security measures relevant to deploying and serving LLMs, which is crucial for ensuring safe and efficient model inference in production.",
+      "seenAt": "2026-09-23T22:03:43+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd3bef0a6f505ce0",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.5.0",
+      "title": "v0.5.0",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "generative-ai",
+        "ai-security"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This release may include updates relevant to LLM security and efficiency, impacting how models are deployed and interpreted in production environments.",
+      "seenAt": "2026-09-23T22:03:51+00:00",
+      "status": "radar"
     }
   ]
 }
