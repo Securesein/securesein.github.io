@@ -18629,6 +18629,37 @@
       "whyRelevant": "The research on scaling organizational intelligence with agents may provide insights into LLM coordination and efficiency, relevant for understanding LLM internals and deployment.",
       "seenAt": "2026-09-23T06:21:08+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r54653476df73b92",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11140",
+      "title": "b11140",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "deep-learning"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve deployment strategies in production environments.",
+      "seenAt": "2026-09-23T18:18:04+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8ba83e523e38bff",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11136",
+      "title": "b11136",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve security and efficiency in deployment.",
+      "seenAt": "2026-09-23T18:18:12+00:00",
+      "status": "radar"
     }
   ]
 }
