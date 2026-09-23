@@ -18690,8 +18690,8 @@
         "ai-security"
       ],
       "qualityScore": 65.0,
-      "relevanceScore": 56.5,
-      "whyRelevant": "This item discusses agentic AI, which may touch on LLM security and deployment, but lacks depth in mechanistic interpretability and inference efficiency.",
+      "relevanceScore": 37.1,
+      "whyRelevant": "This item may provide insights into deploying multimodal agents on AWS, but it lacks direct relevance to LLM interpretability or security.",
       "seenAt": "2026-09-23T22:03:25+00:00",
       "status": "radar"
     },
@@ -18721,9 +18721,9 @@
         "generative-ai",
         "ai-security"
       ],
-      "qualityScore": 80.0,
+      "qualityScore": 85.0,
       "relevanceScore": 70.0,
-      "whyRelevant": "This release may include updates relevant to LLM security and efficiency, impacting how models are deployed and interpreted in production environments.",
+      "whyRelevant": "This release may provide insights into LLM security and multimodal capabilities, relevant for understanding internal mechanisms and deployment challenges.",
       "seenAt": "2026-09-23T22:03:51+00:00",
       "status": "radar"
     }

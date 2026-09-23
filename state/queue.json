@@ -6537,6 +6537,21 @@
       "qualityScore": 100.0,
       "relevanceScore": 27.1,
       "whyRelevant": "This research on prediction intervals can enhance understanding of uncertainty in LLM outputs, relevant for improving reasoning efficiency and model evaluation."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-23T22:17:09+00:00",
+      "score": 49.4,
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.281",
+      "title": "v2.1.281",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r6eff16a1336643f",
+      "qualityScore": 100.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This item discusses security measures relevant to deploying and serving LLMs, which is crucial for ensuring safe and efficient model inference in production."
     }
   ]
 }
