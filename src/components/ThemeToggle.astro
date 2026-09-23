@@ -62,12 +62,22 @@
   };
   syncLabel();
 
+  // Kept in step with the page colour, or the mobile browser keeps
+  // painting its own bar in the theme the reader just left.
+  const syncThemeColour = (next: string) => {
+    const colour = next === "dark" ? "#0f1215" : "#ffffff";
+    document
+      .querySelectorAll('meta[name="theme-color"]')
+      .forEach((tag) => tag.setAttribute("content", colour));
+  };
+
   toggle?.addEventListener("click", () => {
     const next = currentTheme() === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
     try {
       localStorage.setItem("theme", next);
     } catch (e) {}
+    syncThemeColour(next);
     syncLabel();
   });
 </script>

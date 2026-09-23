@@ -30,12 +30,36 @@
      colour has its only definition inside a media query. */
   color-scheme: light;
   --ink: #14181d;      /* near-black, slightly cool */
-  --paper: #f2f4f7;    /* soft cool ground, so white cards lift off it */
+  /* White, since the light-mode panel treatment swapped figure and
+     ground: the page is the white, and the head of a page is the
+     tinted surface sitting on it. Cards used to lift off a cool grey
+     ground; on white they are carried by their ring and shadow
+     instead (--card-shadow), which is why that token keeps a 1px ring
+     rather than relying on fill alone. */
+  --paper: #ffffff;
   --rule: #d8dce0;     /* hairlines and dividers */
   --muted: #5c6670;    /* secondary text, dates, meta */
   --signal: #1f5c4a;   /* the single accent — deep green, used sparingly */
   --surface: #f1f3f4;  /* subtle fills: provenance box, chips */
   --raised: #ffffff;   /* cards that need to sit above the page */
+
+  /* The panel (light-mode-paneel handoff). Warm, not neutral grey:
+     neutral grey next to white reads as "disabled", warm grey reads
+     as paper. The step away from white is only about 4% — more turns
+     the head of the page into a banner.
+     --sweep-blend is the other half of the idea. In dark mode the
+     hero sweep is light crossing a dark field; on white nothing can
+     light up, so the same layer just hazes it lilac. Multiplying
+     instead makes the sweep thicken the ink it passes over. */
+  --hero-surface: linear-gradient(180deg, #f5f3ef 0%, #f2f0ea 100%);
+  --hero-edge: rgba(11, 11, 13, 0.1);
+  --sweep-blend: multiply;
+  /* The bar reads as part of the page, not as a third surface: one
+     hairline under it doubles as the panel's top edge. Opaque, so it
+     doesn't pick up the panel's tint through its own blur while the
+     hero scrolls past underneath. */
+  --header-bg: #ffffff;
+  --footer-bg: var(--hero-surface);
 
   /* Names the components speak. Kept as a thin layer over the palette
      above so a future repaint is one block, not a find-and-replace. */
@@ -163,6 +187,16 @@
 
     --node: rgba(160, 145, 255, 0.75);
     --edge: rgba(255, 255, 255, 0.34);
+
+    /* Dark keeps exactly what it had: no panel, no edge, and a sweep
+       that adds light rather than thickening ink. The panel treatment
+       is a light-mode answer to a light-mode problem — see the
+       handoff's own note on leaving dark alone for now. */
+    --hero-surface: none;
+    --hero-edge: transparent;
+    --sweep-blend: normal;
+    --header-bg: color-mix(in srgb, var(--bg) 86%, transparent);
+    --footer-bg: var(--bg-elevated);
   }
 }
 
@@ -189,6 +223,12 @@
 
   --node: rgba(160, 145, 255, 0.75);
   --edge: rgba(255, 255, 255, 0.34);
+
+  --hero-surface: none;
+  --hero-edge: transparent;
+  --sweep-blend: normal;
+  --header-bg: color-mix(in srgb, var(--bg) 86%, transparent);
+  --footer-bg: var(--bg-elevated);
 
   /* Subtle cards, same model as light — see the media-query block above. */
   --card-bg: var(--raised);

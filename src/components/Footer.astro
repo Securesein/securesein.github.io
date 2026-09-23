@@ -72,7 +72,11 @@ const feeds = [
   .site-footer {
     margin-top: 5rem;
     border-top: 1px solid var(--border);
-    background: var(--bg-elevated);
+    /* In light mode this is the same tinted surface as a page's hero
+       panel, so the page reads as white held between two warm bands
+       (light-mode-paneel §4). Dark resolves it back to the elevated
+       card fill the footer has always used. */
+    background: var(--footer-bg);
     padding-block: 3.2rem 2.8rem;
   }
   .footer-top {

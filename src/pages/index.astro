@@ -216,7 +216,11 @@ const siteJsonLd = {
      --border-strong PostCard/NewsRow already read, so it gets its own
      token instead of overloading that one with a different meaning. */
   .mh-page {
-    --paper: #fffdfb;
+    /* Was #fffdfb, a hair of warmth across the whole homepage. The
+       panel now carries that warmth in the hero alone, so the body of
+       the page matches every other page's white exactly rather than
+       being almost-but-not-quite it. */
+    --paper: #ffffff;
     --ink: #16130f;
     --rule: #ede8e2;
     --muted: #5e584f;
@@ -246,9 +250,14 @@ const siteJsonLd = {
     --glow-a: color-mix(in srgb, var(--brand) 15%, transparent);
     --glow-b: color-mix(in srgb, var(--accent) 12%, transparent);
 
-    /* Dot-matrix variant (dotmatrix handoff A2), mixed the same way. */
-    --dot: color-mix(in srgb, var(--ink) 16%, transparent);
-    --sheen: color-mix(in srgb, var(--brand) 10%, transparent);
+    /* Dot-matrix variant (dotmatrix handoff A2). Literal in light,
+       unlike the tokens above, because the light and dark sweeps are
+       not the same colour doing the same job: dark adds violet light
+       to a dark field, light multiplies a warm brown into the panel
+       so the sweep thickens ink instead of hazing it. There is no one
+       hue to derive both from. */
+    --dot: rgba(38, 29, 14, 0.15);
+    --sheen: rgba(160, 118, 58, 0.2);
 
     background: var(--bg);
     color: var(--text);
@@ -317,7 +326,23 @@ const siteJsonLd = {
      pseudo-elements' z-index:-1 scoped to this section rather than
      punching through to .mh-page; overflow:hidden clips whatever
      overmat either background asks for. */
-  .masthead { position: relative; isolation: isolate; overflow: hidden; }
+  /* The panel (light-mode-paneel handoff §3). Both values resolve to
+     nothing in dark mode, so this one rule serves both. isolation is
+     now load-bearing rather than tidy: without it the multiply sweep
+     below would multiply against everything behind the hero instead
+     of against the panel alone. */
+  .masthead {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--hero-surface);
+    /* An inset shadow rather than a border-bottom: --hero-edge is
+       transparent in dark, but a transparent border still occupies
+       its 1px, which pushed everything below the hero down by a pixel
+       and made dark mode not quite identical any more. A shadow draws
+       the panel's edge without taking up any layout. */
+    box-shadow: inset 0 -1px 0 var(--hero-edge);
+  }
 
   /* --- "topo": warped contour lines, static (hero-topografie
      handoff). The -30% overmat is what feDisplacementMap needs — it
@@ -370,6 +395,9 @@ const siteJsonLd = {
     inset: -30%;
     z-index: -1;
     background: linear-gradient(112deg, transparent 42%, var(--sheen) 50%, transparent 58%);
+    /* multiply in light, normal in dark. The transparent stops leave
+       the panel untouched either way, so no extra mask is needed. */
+    mix-blend-mode: var(--sweep-blend);
     animation: heroSweep 16s linear infinite;
   }
 
@@ -385,6 +413,7 @@ const siteJsonLd = {
   }
 
   @media print {
+    .masthead { background: none; box-shadow: none; }
     .masthead::before, .masthead::after { display: none; }
   }
 

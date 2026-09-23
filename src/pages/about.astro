@@ -224,6 +224,12 @@ import { SITE, SECTIONS } from "../consts";
     isolation: isolate;
     overflow: hidden;
     padding-block: 6rem 4.5rem;
+    /* Same panel as the homepage hero (light-mode-paneel §3), and
+       inert in dark where --hero-surface is none. The divider stays
+       on --rule rather than --hero-edge: this hero has always had a
+       visible one in dark, and --hero-edge is transparent there,
+       which would have quietly removed it. */
+    background: var(--hero-surface);
     border-bottom: 1px solid var(--rule);
   }
   .hero-nodes {
@@ -245,6 +251,7 @@ import { SITE, SECTIONS } from "../consts";
             mask-image: radial-gradient(ellipse 78% 72% at 38% 44%, #000 22%, transparent 80%);
   }
   @media print {
+    .about-hero { background: none; border-bottom: 0; }
     .hero-nodes { display: none; }
   }
   @media (max-width: 700px) {

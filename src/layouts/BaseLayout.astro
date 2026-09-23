@@ -50,6 +50,13 @@ const ogImageAlt = imageAlt ?? `${SITE.title} — ${SITE.subTagline}`;
     <title>{pageTitle}</title>
     <meta name="description" content={pageDesc} />
     <link rel="canonical" href={canonical} />
+    <!-- The colour the mobile browser paints its own chrome with. It
+         is the PAGE colour, not the hero panel's: what sits directly
+         under the browser bar is the nav, which matches the page.
+         Two media-scoped tags so this is right before any script
+         runs; an explicit theme choice rewrites both (see below). -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f1215" media="(prefers-color-scheme: dark)" />
     {noindex && <meta name="robots" content="noindex, follow" />}
 
     <meta property="og:site_name" content={SITE.title} />
@@ -89,11 +96,21 @@ const ogImageAlt = imageAlt ?? `${SITE.title} — ${SITE.subTagline}`;
       // Only stamps data-theme when the reader has made an explicit
       // choice. Left alone, the CSS follows prefers-color-scheme on its
       // own, so the page is correct before any script runs.
+      //
+      // Runs before first paint, which is what keeps a reader who
+      // chose light from seeing a dark flash (and the reverse). The
+      // theme-color tags are media-scoped for the no-choice case, so
+      // an explicit choice has to overwrite both — whichever one the
+      // browser then matches gives the same, correct answer.
       (function () {
         try {
           const saved = localStorage.getItem("theme");
           if (saved === "dark" || saved === "light") {
             document.documentElement.setAttribute("data-theme", saved);
+            const colour = saved === "dark" ? "#0f1215" : "#ffffff";
+            document
+              .querySelectorAll('meta[name="theme-color"]')
+              .forEach(function (tag) { tag.setAttribute("content", colour); });
           }
         } catch (e) {}
       })();
