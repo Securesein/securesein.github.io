@@ -696,7 +696,7 @@
     {
       "channel": "research",
       "queuedAt": "2026-09-16T08:39:56+00:00",
-      "score": 59.4,
+      "score": 61.3,
       "url": "https://arxiv.org/abs/2609.15991",
       "title": "The Functionalizer: Lossless Functional Decomposition for Subword Tokenization",
       "section": "research",
@@ -6798,6 +6798,124 @@
       "qualityScore": 80.0,
       "relevanceScore": 49.4,
       "whyRelevant": "This article discusses AI security in industrial applications, which may provide insights into LLM security and risk detection relevant to model deployment."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-23T02:03:34+00:00",
+      "score": 60.0,
+      "url": "https://arxiv.org/abs/2609.23169",
+      "title": "UltraTex: Unleashing 2K Multi-View Diffusion for 3D Texturing",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "deep-learning",
+        "training"
+      ],
+      "candidateId": "rbe88bae479f2055",
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This research on 3D texturing may not directly address LLM internals or security, but it explores generative techniques relevant to ML foundations."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-23T02:03:34+00:00",
+      "score": 56.5,
+      "url": "https://arxiv.org/abs/2609.20869",
+      "title": "TAPe+ML: A Compact Structured Representation for Multi-Task Computer Vision",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "deep-learning",
+        "evaluation"
+      ],
+      "candidateId": "r00ea922361b3e0a",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item is less relevant as it focuses on computer vision rather than LLMs, mechanistic interpretability, or model deployment in production."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-23T02:03:34+00:00",
+      "score": 56.5,
+      "url": "https://arxiv.org/abs/2609.22966",
+      "title": "Transferring the Intelligence of VLMs to Robotic Control",
+      "section": "research",
+      "topics": [
+        "agents",
+        "llms",
+        "reasoning"
+      ],
+      "candidateId": "ree7b92456095d24",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores how visual language models can enhance robotic control, relevant for understanding LLM reasoning and inference in practical applications."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-23T02:03:34+00:00",
+      "score": 55.6,
+      "url": "https://arxiv.org/abs/2609.22870",
+      "title": "Towards Full Pipeline FP8 Reinforcement Learning for LLMs",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "llms"
+      ],
+      "candidateId": "r35ccd77dc244939",
+      "qualityScore": 100.0,
+      "relevanceScore": 55.6,
+      "whyRelevant": "This research explores reinforcement learning techniques for LLMs, which can enhance understanding of their internal mechanisms and improve inference efficiency in production."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-23T02:03:34+00:00",
+      "score": 53.2,
+      "url": "https://arxiv.org/abs/2609.13231",
+      "title": "ShieldVLA: Feasibility-Aware Safety Alignment for Vision-Language-Action Models",
+      "section": "research",
+      "topics": [
+        "ai-safety",
+        "multimodal",
+        "agents"
+      ],
+      "candidateId": "r58065c2d476fc16",
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research explores safety alignment in multimodal models, relevant for understanding LLM behavior and enhancing security in deployment and inference."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-23T02:03:34+00:00",
+      "score": 53.2,
+      "url": "https://arxiv.org/abs/2609.06052",
+      "title": "SkillSpec: Intent-Masked Specification Reasoning for Agent Skill Correctness",
+      "section": "research",
+      "topics": [
+        "agents",
+        "ai-safety",
+        "reasoning"
+      ],
+      "candidateId": "r5273a9cad8149f1",
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research explores reasoning mechanisms in agents, which can inform the development of more interpretable and secure LLMs in production environments."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-23T02:03:34+00:00",
+      "score": 29.0,
+      "url": "https://arxiv.org/abs/2609.10706",
+      "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
+      "section": "research",
+      "topics": [
+        "agents",
+        "training",
+        "evaluation"
+      ],
+      "candidateId": "r5b9c77c7e1fc8d5",
+      "qualityScore": 100.0,
+      "relevanceScore": 29.0,
+      "whyRelevant": "This research explores scalable pretraining methods that could enhance understanding of LLMs' internal mechanisms and improve efficiency in reasoning and inference."
     }
   ]
 }

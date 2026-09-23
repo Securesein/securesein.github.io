@@ -6704,9 +6704,9 @@
       "topics": [
         "llms"
       ],
-      "qualityScore": 90.5,
-      "relevanceScore": 59.4,
-      "whyRelevant": "Matches strong interest: how LLMs work internally, deploying and serving models in production. Filed under research: llms.",
+      "qualityScore": 100.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This research on functional decomposition in subword tokenization may enhance understanding of LLM internals and improve efficiency in model training and deployment.",
       "seenAt": "2026-09-16T08:39:55+00:00",
       "status": "radar"
     },
@@ -13719,7 +13719,7 @@
         "multimodal"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 38.2,
+      "relevanceScore": 56.5,
       "whyRelevant": "This item is less relevant as it focuses on computer vision rather than LLMs, mechanistic interpretability, or model deployment in production.",
       "seenAt": "2026-09-21T06:19:10+00:00",
       "status": "radar"
@@ -16607,6 +16607,225 @@
       "relevanceScore": 63.2,
       "whyRelevant": "This release may include updates relevant to LLM security and efficiency, impacting how models are deployed and interpreted in production environments.",
       "seenAt": "2026-09-22T22:03:27+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r4113f4918ca62fd",
+      "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
+      "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
+      "source": "Simon Willison's Weblog",
+      "section": "release",
+      "topics": [
+        "llms",
+        "generative-ai"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 37.1,
+      "whyRelevant": "The release of Claude Opus 5.5 and GPT-6 models may provide insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deployment.",
+      "seenAt": "2026-09-23T02:01:45+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb5bea8bee2299fb",
+      "url": "https://simonwillison.net/2026/Sep/22/llm/",
+      "title": "llm 0.36",
+      "source": "Simon Willison's Weblog",
+      "section": "release",
+      "topics": [
+        "llms",
+        "reasoning"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This release may provide insights into LLM reasoning mechanisms, relevant for understanding internal workings and improving inference efficiency in production environments.",
+      "seenAt": "2026-09-23T02:01:48+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rca90db894089983",
+      "url": "https://arxiv.org/abs/2609.22220",
+      "title": "Measuring the Checker: Mutation Analysis for GPU-Kernel Benchmark Oracles",
+      "source": "Hugging Face Daily Papers",
+      "section": "benchmark",
+      "topics": [
+        "evaluation",
+        "ai-security",
+        "deep-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item discusses evaluation methods relevant to assessing the performance and security of GPU kernels, which can inform LLM deployment and inference efficiency.",
+      "seenAt": "2026-09-23T02:01:55+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r58065c2d476fc16",
+      "url": "https://arxiv.org/abs/2609.13231",
+      "title": "ShieldVLA: Feasibility-Aware Safety Alignment for Vision-Language-Action Models",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "ai-safety",
+        "multimodal",
+        "agents"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research explores safety alignment in multimodal models, relevant for understanding LLM behavior and enhancing security in deployment and inference.",
+      "seenAt": "2026-09-23T02:01:58+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5273a9cad8149f1",
+      "url": "https://arxiv.org/abs/2609.06052",
+      "title": "SkillSpec: Intent-Masked Specification Reasoning for Agent Skill Correctness",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "ai-safety",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research explores reasoning mechanisms in agents, which can inform the development of more interpretable and secure LLMs in production environments.",
+      "seenAt": "2026-09-23T02:02:01+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rcbc1818a7dfa561",
+      "url": "https://arxiv.org/abs/2609.11063",
+      "title": "The information geometry of large language models is shared, learned, and controllable",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "training",
+        "interpretability"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 71.2,
+      "whyRelevant": "This research explores the underlying structure of LLMs, which can enhance understanding of their interpretability, security, and efficiency in reasoning and inference.",
+      "seenAt": "2026-09-23T02:02:03+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r147ec298ec300d1",
+      "url": "https://arxiv.org/abs/2609.13814",
+      "title": "Realtime-Venus: A full-duplex interaction system with asynchronous delegation",
+      "source": "Hugging Face Daily Papers",
+      "section": "release",
+      "topics": [
+        "multimodal",
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 42.0,
+      "whyRelevant": "This item explores a system for real-time interaction with LLMs, relevant for understanding agent behavior and improving inference efficiency in production settings.",
+      "seenAt": "2026-09-23T02:02:05+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r3cca4502cbb7d6b",
+      "url": "https://arxiv.org/abs/2609.21996",
+      "title": "A Lie Detector Test for Language Models: Reading Knowledge a Model Won't Reveal",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores LLMs' internal reasoning limitations, relevant for understanding their interpretability, security, and efficiency in inference and deployment.",
+      "seenAt": "2026-09-23T02:02:12+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5b9c77c7e1fc8d5",
+      "url": "https://arxiv.org/abs/2609.10706",
+      "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 29.0,
+      "whyRelevant": "This research explores scalable pretraining methods that could enhance understanding of LLMs' internal mechanisms and improve efficiency in reasoning and inference.",
+      "seenAt": "2026-09-23T02:02:17+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rbe88bae479f2055",
+      "url": "https://arxiv.org/abs/2609.23169",
+      "title": "UltraTex: Unleashing 2K Multi-View Diffusion for 3D Texturing",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This research on 3D texturing may not directly address LLM internals or security, but it explores generative techniques relevant to ML foundations.",
+      "seenAt": "2026-09-23T02:02:19+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r35ccd77dc244939",
+      "url": "https://arxiv.org/abs/2609.22870",
+      "title": "Towards Full Pipeline FP8 Reinforcement Learning for LLMs",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "llms"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 55.6,
+      "whyRelevant": "This research explores reinforcement learning techniques for LLMs, which can enhance understanding of their internal mechanisms and improve inference efficiency in production.",
+      "seenAt": "2026-09-23T02:02:22+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rca349133b5d98a7",
+      "url": "https://arxiv.org/abs/2609.23088",
+      "title": "OmniEdu: Open Foundation Models for Learning and Teaching",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "OmniEdu provides open foundation models that can enhance understanding of LLM mechanisms and improve reasoning efficiency in educational contexts.",
+      "seenAt": "2026-09-23T02:02:24+00:00",
+      "status": "promoted",
+      "promotedTo": "omniedu-revolutionizing-education-with-open-foundation-models"
+    },
+    {
+      "id": "ree7b92456095d24",
+      "url": "https://arxiv.org/abs/2609.22966",
+      "title": "Transferring the Intelligence of VLMs to Robotic Control",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "llms",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores how visual language models can enhance robotic control, relevant for understanding LLM reasoning and inference in practical applications.",
+      "seenAt": "2026-09-23T02:02:27+00:00",
       "status": "radar"
     }
   ]
