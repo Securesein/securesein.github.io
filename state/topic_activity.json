@@ -2,16 +2,16 @@
   "topics": {
     "interpretability": "2026-09-05",
     "ai-security": "2026-09-21",
-    "llms": "2026-09-21",
+    "llms": "2026-09-23",
     "reasoning": "2026-09-13",
     "inference": "2026-09-09",
-    "agents": "2026-09-21",
+    "agents": "2026-09-23",
     "ai-safety": "2026-09-21",
     "evaluation": "2026-09-21",
     "reinforcement-learning": "2026-09-12",
     "deep-learning": "2026-09-22",
     "multimodal": "2026-09-22",
-    "training": "2026-09-19",
+    "training": "2026-09-23",
     "generative-ai": "2026-09-17"
   }
 }

@@ -6706,7 +6706,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 61.3,
-      "whyRelevant": "This research on functional decomposition in subword tokenization may enhance understanding of LLM internals and improve efficiency in model training and deployment.",
+      "whyRelevant": "This research on functional decomposition in tokenization may enhance understanding of LLM internals and improve efficiency in model training and inference.",
       "seenAt": "2026-09-16T08:39:55+00:00",
       "status": "radar"
     },
@@ -11914,7 +11914,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This research addresses AI evaluation methods, which can inform the security and interpretability of LLMs and their deployment in production environments.",
+      "whyRelevant": "This research addresses AI evaluation methods, which can inform the security and efficiency of LLMs and their deployment in production environments.",
       "seenAt": "2026-09-18T06:05:25+00:00",
       "status": "radar"
     },
@@ -15738,7 +15738,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 60.0,
-      "whyRelevant": "This research explores quantization techniques that could impact the efficiency and robustness of model deployment, relevant for optimizing LLM inference in production.",
+      "whyRelevant": "This research explores quantization techniques that could inform efficient model deployment and enhance robustness in LLMs, relevant for production and security considerations.",
       "seenAt": "2026-09-22T06:04:19+00:00",
       "status": "radar"
     },
@@ -16004,8 +16004,8 @@
         "evaluation"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 51.3,
-      "whyRelevant": "This research on density-ratio rescoring can enhance model evaluation methods, potentially improving reasoning efficiency and interpretability in imbalanced classification tasks.",
+      "relevanceScore": 60.0,
+      "whyRelevant": "This research on density-ratio rescoring may enhance understanding of model evaluation and improve classification efficiency, relevant for deploying LLMs in production.",
       "seenAt": "2026-09-22T06:06:11+00:00",
       "status": "radar"
     },
@@ -16654,7 +16654,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 63.2,
-      "whyRelevant": "This item discusses evaluation methods relevant to assessing the performance and security of GPU kernels, which can inform LLM deployment and inference efficiency.",
+      "whyRelevant": "This item discusses evaluation methods relevant for assessing GPU performance, which can inform the efficiency and security of LLM deployments.",
       "seenAt": "2026-09-23T02:01:55+00:00",
       "status": "radar"
     },
@@ -16688,7 +16688,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This research explores reasoning mechanisms in agents, which can inform the development of more interpretable and secure LLMs in production environments.",
+      "whyRelevant": "This research on intent-masked reasoning directly addresses agent skill correctness, relevant for understanding LLM behavior and enhancing security in model deployment.",
       "seenAt": "2026-09-23T02:02:01+00:00",
       "status": "radar"
     },
@@ -16705,7 +16705,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 71.2,
-      "whyRelevant": "This research explores the underlying structure of LLMs, which can enhance understanding of their interpretability, security, and efficiency in reasoning and inference.",
+      "whyRelevant": "This research explores the underlying geometry of LLMs, which can enhance mechanistic interpretability and inform security and efficiency in model deployment.",
       "seenAt": "2026-09-23T02:02:03+00:00",
       "status": "radar"
     },
@@ -16722,7 +16722,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 42.0,
-      "whyRelevant": "This item explores a system for real-time interaction with LLMs, relevant for understanding agent behavior and improving inference efficiency in production settings.",
+      "whyRelevant": "This item explores a system for real-time interaction with LLMs, relevant for understanding agent behavior and improving inference efficiency in production.",
       "seenAt": "2026-09-23T02:02:05+00:00",
       "status": "radar"
     },
@@ -16738,8 +16738,8 @@
         "ai-safety"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 63.2,
-      "whyRelevant": "This research explores LLMs' internal reasoning limitations, relevant for understanding their interpretability, security, and efficiency in inference and deployment.",
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research explores internal model reasoning, enhancing understanding of LLM interpretability and security, relevant for deploying and serving models effectively.",
       "seenAt": "2026-09-23T02:02:12+00:00",
       "status": "radar"
     },
@@ -16756,7 +16756,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 29.0,
-      "whyRelevant": "This research explores scalable pretraining methods that could enhance understanding of LLMs' internal mechanisms and improve efficiency in reasoning and inference.",
+      "whyRelevant": "This research explores scalable pretraining methods that could enhance LLMs' reasoning and inference efficiency, relevant for deploying models in production.",
       "seenAt": "2026-09-23T02:02:17+00:00",
       "status": "radar"
     },
@@ -16789,7 +16789,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 55.6,
-      "whyRelevant": "This research explores reinforcement learning techniques for LLMs, which can enhance understanding of their internal mechanisms and improve inference efficiency in production.",
+      "whyRelevant": "This research explores reinforcement learning techniques that could enhance LLM efficiency and security, relevant for understanding internal mechanisms and deployment challenges.",
       "seenAt": "2026-09-23T02:02:22+00:00",
       "status": "radar"
     },
@@ -16824,8 +16824,244 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 56.5,
-      "whyRelevant": "This research explores how visual language models can enhance robotic control, relevant for understanding LLM reasoning and inference in practical applications.",
+      "whyRelevant": "This research explores how visual language models can enhance robotic control, relevant for understanding LLMs' reasoning and inference in practical applications.",
       "seenAt": "2026-09-23T02:02:27+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r358a9874393c4d6",
+      "url": "https://arxiv.org/abs/2609.22161",
+      "title": "Didactic knowledge or Clinical Cases? How Data Types Shape Medical Large Language Models",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "training",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores how different data types influence LLM training and reasoning, relevant for understanding model behavior and improving interpretability in medical contexts.",
+      "seenAt": "2026-09-23T02:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r388050199468b6a",
+      "url": "https://arxiv.org/abs/2609.22277",
+      "title": "An Affordable AI-Integrated Smart Cane for Multimodal Mobility Assistance of Visually Impaired Users",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "ai-safety",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item is less relevant as it focuses on assistive technology for visually impaired users rather than the technical aspects of LLMs and their deployment.",
+      "seenAt": "2026-09-23T02:16:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r4acc1970e37bfb6",
+      "url": "https://arxiv.org/abs/2609.22353",
+      "title": "PAANI : On Device Visual Evidence Fusion and Explainable Guidance for River Robot Simulation",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "ai-safety",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 38.2,
+      "whyRelevant": "This research explores explainable guidance for agents, which may inform LLM interpretability and security in real-world applications.",
+      "seenAt": "2026-09-23T02:16:38+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd548bbd55b9963d",
+      "url": "https://arxiv.org/abs/2609.22408",
+      "title": "Social Influence and the Allocation of Scientific Attention in AI Populations",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "agents",
+        "ai-safety",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research explores how social dynamics affect AI attention allocation, which can inform mechanisms for improving LLM interpretability and security.",
+      "seenAt": "2026-09-23T02:16:40+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf7ddca496ae842d",
+      "url": "https://arxiv.org/abs/2609.22410",
+      "title": "Learning 3D biophysical cell properties from 2D images and cell-population statistics",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research may provide insights into model training and evaluation techniques relevant for improving mechanistic interpretability and inference efficiency in LLMs.",
+      "seenAt": "2026-09-23T02:16:42+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re15c8bf24d7bb09",
+      "url": "https://arxiv.org/abs/2609.22475",
+      "title": "Goal-driven Variant Categorization",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This research explores categorization methods that could enhance reasoning efficiency in LLMs, relevant for understanding their internal mechanisms and improving model deployment.",
+      "seenAt": "2026-09-23T02:16:45+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra4f13dbdd5239dc",
+      "url": "https://arxiv.org/abs/2609.22478",
+      "title": "Replication Without Persistence in Hosted LLMs: Measurement Sensitivity in Action-Time Belief Evaluation",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "evaluation",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores evaluation methods for LLMs, relevant for understanding internal mechanisms and improving reasoning efficiency in deployed models.",
+      "seenAt": "2026-09-23T02:16:48+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r83c42583ad4a3a7",
+      "url": "https://arxiv.org/abs/2609.22497",
+      "title": "The Wisdom of Artificial Deliberative Crowds",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "reasoning",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores collective reasoning in AI, which can inform mechanisms for improving LLM interpretability and security in production environments.",
+      "seenAt": "2026-09-23T02:16:50+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1a6edba65b8e6e3",
+      "url": "https://arxiv.org/abs/2609.22512",
+      "title": "Agreement Overstates Evidence: Error Dependence in LLM Judge Consensus",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This research highlights error dependence in LLM evaluations, which is crucial for understanding model reliability and improving interpretability and inference efficiency.",
+      "seenAt": "2026-09-23T02:16:53+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r7cfed8d23c5b22f",
+      "url": "https://arxiv.org/abs/2609.22529",
+      "title": "IntLawNER: A Named Entity Recognition Dataset and Benchmark in International Law",
+      "source": "arXiv cs.AI",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "evaluation",
+        "generative-ai"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This dataset aids in evaluating LLMs' performance in legal contexts, relevant for understanding their reasoning and inference capabilities in specialized domains.",
+      "seenAt": "2026-09-23T02:16:55+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb469c62d6d1b53c",
+      "url": "https://arxiv.org/abs/2609.22537",
+      "title": "EvidenT: Building Trustworthy Enterprise Assistants through Evidence Groundedness and Traceability",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores evidence groundedness in LLMs, which is crucial for understanding their internal reasoning and enhancing security and interpretability in production environments.",
+      "seenAt": "2026-09-23T02:16:58+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r110bc2db6acb67e",
+      "url": "https://arxiv.org/abs/2609.22599",
+      "title": "MAWILE: Multi-Axis Workbench for Inspecting LLM Evaluators",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "evaluation",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 39.0,
+      "whyRelevant": "This research on MAWILE provides insights into evaluating LLMs, which is crucial for understanding their internal mechanisms and ensuring their security in production.",
+      "seenAt": "2026-09-23T02:17:00+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1ec90329c048d9d",
+      "url": "https://arxiv.org/abs/2609.22619",
+      "title": "GaitVista: Reliability-Aware AI Measurement toward Accessible Longitudinal Gait Assessment",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "training",
+        "evaluation",
+        "ai-safety"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research focuses on AI measurement and evaluation, which can inform the reliability and safety of models used in gait assessment, relevant for LLM deployment.",
+      "seenAt": "2026-09-23T02:17:02+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1822d5132cc0610",
+      "url": "https://arxiv.org/abs/2609.22620",
+      "title": "Splitting Documents at Lower Cost: Multi-Split Boundary Decisions for LLM-Based Page Stream Segmentation",
+      "source": "arXiv cs.AI",
+      "section": "research",
+      "topics": [
+        "llms",
+        "inference",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 74.0,
+      "whyRelevant": "This research explores efficient document segmentation methods for LLMs, relevant for understanding internal processing and improving inference efficiency in production environments.",
+      "seenAt": "2026-09-23T02:17:05+00:00",
       "status": "radar"
     }
   ]
