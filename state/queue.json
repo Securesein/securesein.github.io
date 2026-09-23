@@ -1,21 +1,6 @@
 {
   "items": [
     {
-      "channel": "security",
-      "queuedAt": "2026-09-16T14:02:23+00:00",
-      "score": 49.4,
-      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11000",
-      "title": "b11000",
-      "section": "security",
-      "topics": [
-        "ai-security"
-      ],
-      "candidateId": "rcae4ae2ebac1846",
-      "qualityScore": 100.0,
-      "relevanceScore": 49.4,
-      "whyRelevant": "This item discusses AI security measures relevant to deploying and serving open-weight models, which is crucial for ensuring safe and efficient LLM operations."
-    },
-    {
       "channel": "research",
       "queuedAt": "2026-09-16T18:14:48+00:00",
       "score": 54.2,
