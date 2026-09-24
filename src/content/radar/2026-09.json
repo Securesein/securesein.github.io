@@ -17295,7 +17295,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 56.2,
-      "whyRelevant": "This item discusses security measures relevant to LLMs and agents, particularly in the context of defending against IoT fingerprinting, which may inform model robustness.",
+      "whyRelevant": "This item discusses security measures relevant to LLMs and agents, particularly in the context of causal defenses against IoT fingerprinting.",
       "seenAt": "2026-09-23T06:17:11+00:00",
       "status": "radar"
     },
@@ -17377,7 +17377,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 56.2,
-      "whyRelevant": "This item explores universal embeddings, which may enhance understanding of LLMs' internal mechanisms and improve reasoning efficiency in multimodal contexts.",
+      "whyRelevant": "This item explores universal embeddings, which can enhance understanding of LLMs' internal mechanisms and improve reasoning efficiency in multimodal contexts.",
       "seenAt": "2026-09-23T06:17:27+00:00",
       "status": "radar"
     },
@@ -17766,8 +17766,8 @@
         "evaluation"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 75.0,
-      "whyRelevant": "This research explores memory transfer in hybrid language models, relevant for understanding internal mechanisms and improving inference efficiency in LLMs.",
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research explores memory transfer in hybrid language models, relevant for understanding LLM internals and improving inference efficiency in production deployments.",
       "seenAt": "2026-09-23T06:19:04+00:00",
       "status": "radar"
     },
@@ -17901,9 +17901,9 @@
         "training",
         "evaluation"
       ],
-      "qualityScore": 80.0,
-      "relevanceScore": 60.0,
-      "whyRelevant": "This research on Dual-GNN for coarsening can enhance reasoning efficiency in LLMs, relevant for understanding their internal mechanisms and improving inference.",
+      "qualityScore": 100.0,
+      "relevanceScore": 71.0,
+      "whyRelevant": "This research on Dual-GNN may provide insights into reasoning efficiency and model training, relevant for understanding LLMs and their interpretability.",
       "seenAt": "2026-09-23T06:19:24+00:00",
       "status": "radar"
     },
@@ -18739,8 +18739,8 @@
         "interpretability"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 65.5,
-      "whyRelevant": "This research explores modality bias in LLMs, providing insights into their interpretability and internal workings, relevant for understanding model behavior and security.",
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research explores modality bias in LLMs, which is relevant for understanding internal workings and improving reasoning efficiency in multimodal contexts.",
       "seenAt": "2026-09-24T02:02:51+00:00",
       "status": "radar"
     },
@@ -18757,7 +18757,7 @@
       ],
       "qualityScore": 80.0,
       "relevanceScore": 72.0,
-      "whyRelevant": "This research on Bellman Policy Optimization provides insights into reinforcement learning techniques that can enhance reasoning and inference efficiency in LLMs.",
+      "whyRelevant": "This research on Bellman Policy Optimization explores reinforcement learning techniques that can enhance reasoning and inference efficiency in LLMs.",
       "seenAt": "2026-09-24T02:02:57+00:00",
       "status": "radar"
     },
@@ -18791,7 +18791,7 @@
       ],
       "qualityScore": 85.0,
       "relevanceScore": 56.5,
-      "whyRelevant": "This research on image restoration may not directly address LLMs or their internal mechanisms, making its relevance to your interests quite weak.",
+      "whyRelevant": "This research on image restoration may not directly address LLMs or their interpretability, but it explores foundational deep learning techniques relevant to model training.",
       "seenAt": "2026-09-24T02:03:06+00:00",
       "status": "radar"
     },
@@ -18824,7 +18824,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 13.1,
-      "whyRelevant": "This research explores LLM agent interactions, relevant for understanding emergent behaviors and security implications in long-horizon reasoning and inference.",
+      "whyRelevant": "This research explores LLM agent interactions, relevant for understanding security risks and reasoning efficiency in deploying and serving models.",
       "seenAt": "2026-09-24T02:03:11+00:00",
       "status": "radar"
     },
@@ -18875,7 +18875,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 70.0,
-      "whyRelevant": "This research explores a mixture-of-experts approach that could enhance reasoning efficiency and model interpretability in multilingual text recognition tasks.",
+      "whyRelevant": "This research explores a novel approach to multilingual text recognition, which may inform mechanisms for improving LLMs' interpretability and inference efficiency.",
       "seenAt": "2026-09-24T02:03:24+00:00",
       "status": "radar"
     },
@@ -18892,7 +18892,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This research on geometry-native latent spaces may inform LLMs' spatial reasoning and inference efficiency, relevant for understanding model internals and deployment.",
+      "whyRelevant": "This research on geometry-native latent spaces may inform LLMs' spatial reasoning and inference efficiency, relevant for model interpretability and deployment.",
       "seenAt": "2026-09-24T02:03:27+00:00",
       "status": "radar"
     },
@@ -18909,7 +18909,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 58.5,
-      "whyRelevant": "This research on instance-aware rubric rewards may provide insights into evaluation methods that could enhance reasoning and inference efficiency in LLMs.",
+      "whyRelevant": "This research on instance-aware rubric rewards may provide insights into evaluation methods relevant for improving LLM reasoning and inference efficiency.",
       "seenAt": "2026-09-24T02:03:30+00:00",
       "status": "radar"
     },
@@ -18938,10 +18938,211 @@
       "topics": [
         "llms"
       ],
-      "qualityScore": 80.0,
+      "qualityScore": 70.0,
       "relevanceScore": 52.7,
       "whyRelevant": "This release may include updates relevant to LLM architecture and security, impacting mechanistic interpretability and inference efficiency in production environments.",
       "seenAt": "2026-09-24T02:03:51+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r753ebfeb30f3fc7",
+      "url": "https://arxiv.org/abs/2609.25017",
+      "title": "Deepfakes and Synthetic Media: Generation, Detection, and Governance",
+      "source": "arXiv cs.CV",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "generative-ai"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 51.3,
+      "whyRelevant": "This item discusses security implications of generative AI, relevant for understanding risks in deploying LLMs and ensuring their safe operation.",
+      "seenAt": "2026-09-24T02:16:47+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "red43c44a1a68482",
+      "url": "https://arxiv.org/abs/2609.25067",
+      "title": "SPARC: SuperPixel-Aware Region Contrastive Learning for Self-Supervised Dense Prediction",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research on self-supervised learning techniques may provide insights into efficient training methods relevant for improving LLM interpretability and inference.",
+      "seenAt": "2026-09-24T02:16:49+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re829ebbb80d92a9",
+      "url": "https://arxiv.org/abs/2609.25108",
+      "title": "You've Seen Enough: Quality-Constrained Image Coding for Machines",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "deep-learning",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research on quality-constrained image coding may provide insights into generative model efficiency and evaluation, relevant for understanding LLMs' internal workings.",
+      "seenAt": "2026-09-24T02:16:51+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf8ff9828fded726",
+      "url": "https://arxiv.org/abs/2609.25319",
+      "title": "Uncertainty-Aware 3D Residual Wavelet Diffusion for Ultra Low-Field MRI Super-Resolution",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research may provide insights into generative models and their training, which could inform understanding of LLMs and their interpretability.",
+      "seenAt": "2026-09-24T02:17:01+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2cc31a536420360",
+      "url": "https://arxiv.org/abs/2609.25331",
+      "title": "MirrorDistill: Illumination-Aware Latent Distillation for Efficient Low-Light Restoration",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "evaluation",
+        "generative-ai"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research on latent distillation may inform efficient model training and deployment strategies relevant to LLMs, but its direct connection to LLMs is weak.",
+      "seenAt": "2026-09-24T02:17:03+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re2737e2081f16f4",
+      "url": "https://arxiv.org/abs/2609.25386",
+      "title": "Sex Estimation from Footwear Outsole Impressions Using CNN Transfer Learning and Interpretable Image Statistics",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "interpretability",
+        "deep-learning",
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 69.0,
+      "whyRelevant": "This research on interpretable image statistics and CNNs may provide insights into model interpretability and security, relevant for understanding LLMs and their deployment.",
+      "seenAt": "2026-09-24T02:17:06+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r745042eed77b073",
+      "url": "https://arxiv.org/abs/2609.25429",
+      "title": "Directional Total Variation-Regularized Implicit Neural Representations (DTV-INR) for Continuous Super-Resolution in Degraded Imaging Domains",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research on implicit neural representations may inform model efficiency and deployment strategies in LLMs, particularly in degraded imaging contexts.",
+      "seenAt": "2026-09-24T02:17:08+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rda56e3f7622bf76",
+      "url": "https://arxiv.org/abs/2609.25453",
+      "title": "Combinatorial Network-Based Manifold Topological Deep Learning for Image Analysis",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research may provide insights into deep learning architectures that could enhance understanding of LLMs' internal mechanisms and improve reasoning efficiency.",
+      "seenAt": "2026-09-24T02:17:10+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r924f44d4d0e42a3",
+      "url": "https://arxiv.org/abs/2609.25454",
+      "title": "MIND the Gap: A Geographic Implicit Neural Representation with Adjustable Spatial Scale",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "evaluation",
+        "generative-ai"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This research explores implicit neural representations, which can inform mechanistic interpretability and efficiency in reasoning for LLMs and their deployment.",
+      "seenAt": "2026-09-24T02:17:13+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r754fa5eb21a95b3",
+      "url": "https://arxiv.org/abs/2609.25490",
+      "title": "SAM-V: Geometry-Aware Segment Anything for Multi-View Instance Segmentation",
+      "source": "arXiv cs.CV",
+      "section": "release",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 34.4,
+      "whyRelevant": "This item is relevant for exploring geometric approaches in segmentation, which can enhance understanding of LLMs' internal workings and improve inference efficiency.",
+      "seenAt": "2026-09-24T02:17:15+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r561ac852f9daf5f",
+      "url": "https://arxiv.org/abs/2609.25492",
+      "title": "RGSQ: Riemannian Geometry-Sensitive Quantization for Large Vision-Language Models",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research on quantization techniques may enhance understanding of LLM efficiency and deployment, particularly in multimodal contexts.",
+      "seenAt": "2026-09-24T02:17:18+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r907f8fb53eab291",
+      "url": "https://arxiv.org/abs/2609.25500",
+      "title": "mbariml: a curation pipeline for turning deep-sea imagery and video into object-detection training data",
+      "source": "arXiv cs.CV",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This item is relevant as it discusses a pipeline for generating training data, which is foundational for improving LLMs' interpretability and inference efficiency.",
+      "seenAt": "2026-09-24T02:17:20+00:00",
       "status": "radar"
     }
   ]

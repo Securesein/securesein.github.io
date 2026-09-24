@@ -6641,7 +6641,7 @@
     {
       "channel": "research",
       "queuedAt": "2026-09-24T02:03:51+00:00",
-      "score": 58.5,
+      "score": 65.2,
       "url": "https://arxiv.org/abs/2609.25270",
       "title": "RULER: Instance-aware Rubric Rewards for SVG Generation",
       "section": "research",
@@ -6755,6 +6755,22 @@
       "qualityScore": 100.0,
       "relevanceScore": 13.1,
       "whyRelevant": "This research explores LLM agent interactions, relevant for understanding emergent behaviors and security implications in long-horizon reasoning and inference."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T02:18:17+00:00",
+      "score": 51.3,
+      "url": "https://arxiv.org/abs/2609.25017",
+      "title": "Deepfakes and Synthetic Media: Generation, Detection, and Governance",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "generative-ai"
+      ],
+      "candidateId": "r753ebfeb30f3fc7",
+      "qualityScore": 100.0,
+      "relevanceScore": 51.3,
+      "whyRelevant": "This item discusses security implications of generative AI, relevant for understanding risks in deploying LLMs and ensuring their safe operation."
     }
   ]
 }
