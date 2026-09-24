@@ -20616,9 +20616,9 @@
       "topics": [
         "multimodal"
       ],
-      "qualityScore": 65.0,
+      "qualityScore": 75.0,
       "relevanceScore": 25.2,
-      "whyRelevant": "This item is relevant for exploring efficient deployment of LLMs in production, particularly in transcription tasks, which can enhance understanding of model behavior.",
+      "whyRelevant": "This item is relevant for exploring efficient deployment of LLMs in production, particularly in transcription tasks, which can inform mechanistic interpretability and inference efficiency.",
       "seenAt": "2026-09-24T18:02:26+00:00",
       "status": "radar"
     }
