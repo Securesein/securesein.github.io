@@ -20606,6 +20606,21 @@
       "whyRelevant": "This item discusses deep learning inference techniques relevant for understanding LLMs' internal workings and enhancing security in model deployment.",
       "seenAt": "2026-09-24T14:06:26+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rbf991ee95d0532f",
+      "url": "https://aws.amazon.com/blogs/machine-learning/speaker-labeled-transcription-with-whisperx-on-sagemaker-ai/",
+      "title": "Speaker-labeled transcription with WhisperX on SageMaker AI",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "This item is relevant for exploring efficient deployment of LLMs in production, particularly in transcription tasks, which can enhance understanding of model behavior.",
+      "seenAt": "2026-09-24T18:02:26+00:00",
+      "status": "radar"
     }
   ]
 }
