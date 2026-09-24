@@ -20603,7 +20603,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 75.0,
-      "whyRelevant": "This item discusses deep learning inference techniques relevant for understanding LLMs' internal workings and enhancing security and efficiency in model deployment.",
+      "whyRelevant": "This item discusses deep learning inference techniques relevant for understanding LLMs' internal workings and enhancing security in model deployment.",
       "seenAt": "2026-09-24T14:06:26+00:00",
       "status": "radar"
     }
