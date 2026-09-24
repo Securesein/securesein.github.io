@@ -20665,9 +20665,9 @@
         "inference",
         "llms"
       ],
-      "qualityScore": 65.0,
+      "qualityScore": 70.0,
       "relevanceScore": 75.0,
-      "whyRelevant": "This item discusses deep learning inference techniques relevant for understanding LLMs' internal workings and improving reasoning efficiency in production environments.",
+      "whyRelevant": "This item discusses advancements in LLM inference, which are crucial for understanding internal mechanisms and improving reasoning efficiency in production environments.",
       "seenAt": "2026-09-24T22:02:00+00:00",
       "status": "radar"
     }
