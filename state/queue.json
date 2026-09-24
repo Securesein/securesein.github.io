@@ -6771,6 +6771,241 @@
       "qualityScore": 100.0,
       "relevanceScore": 51.3,
       "whyRelevant": "This item discusses security implications of generative AI, relevant for understanding risks in deploying LLMs and ensuring their safe operation."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 70.0,
+      "url": "https://arxiv.org/abs/2609.27091",
+      "title": "Solidity Meets LLMs: A Transformer-Based Approach to Smart Contract Vulnerability Detection",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "llms",
+        "deep-learning"
+      ],
+      "candidateId": "r280d455ee7b08bc",
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item explores using LLMs for security in smart contracts, relevant for understanding model applications in security and inference efficiency."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 66.2,
+      "url": "https://arxiv.org/abs/2609.27100",
+      "title": "Cryptographic Security Is Not Enough: Privacy Gaps in the Renegade Decentralized Dark Pool",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r318c888346d2336",
+      "qualityScore": 100.0,
+      "relevanceScore": 66.2,
+      "whyRelevant": "This item highlights security vulnerabilities in decentralized systems, relevant for understanding LLM security and the implications for model deployment and inference."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 65.0,
+      "url": "https://arxiv.org/abs/2609.27202",
+      "title": "Reliable Federated TinyML Deployment for IoT Security",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "training",
+        "inference"
+      ],
+      "candidateId": "r55e037cfb23cbca",
+      "qualityScore": 100.0,
+      "relevanceScore": 65.0,
+      "whyRelevant": "This item discusses federated learning, which can enhance LLM security and efficiency in local inference for IoT applications."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 61.3,
+      "url": "https://arxiv.org/abs/2609.27155",
+      "title": "The Like Trap: Multi-Stage Poisoning against Agents in Similarity-based Recommendation Systems",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "candidateId": "rdc3e287c67006af",
+      "qualityScore": 100.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This item discusses security vulnerabilities in recommendation systems, relevant for understanding LLM agent safety and potential poisoning attacks in AI applications."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 60.0,
+      "url": "https://arxiv.org/abs/2609.27115",
+      "title": "Damnatio Memoriae: Adversarially and Selectively Forgetting Identities in the Embedding Space of Face Recognition Models",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "deep-learning",
+        "training"
+      ],
+      "candidateId": "r303897dc6960e8b",
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This item explores adversarial techniques in model training, relevant for understanding security vulnerabilities and interpretability in LLMs and embedding spaces."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 59.4,
+      "url": "https://arxiv.org/abs/2609.27124",
+      "title": "When Clients Are Orchestrated: Strategic Gradient Manipulation to Defeat Federated Learning Servers with Efficient Defense",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "rcac8f9142a70c8e",
+      "qualityScore": 100.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This item discusses security vulnerabilities in federated learning, relevant for understanding LLM security and improving inference efficiency in distributed systems."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 56.2,
+      "url": "https://arxiv.org/abs/2609.26990",
+      "title": "Topological Signatures of Cyber-Attack Classes in Natural Visibility Graph Representations of Network Traffic",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r264f771fec794d3",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "This item explores network traffic analysis, which can inform security measures for LLMs and agents, relevant to your interests in ML security."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 56.2,
+      "url": "https://arxiv.org/abs/2609.27258",
+      "title": "Anti-Localization Uplink Communications in Satellite-Terrestrial Systems",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r9b44df493e53228",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.2,
+      "whyRelevant": "This item is relevant for understanding security challenges in satellite-terrestrial systems, which can inform LLM deployment and agent security considerations."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 54.6,
+      "url": "https://arxiv.org/abs/2609.27624",
+      "title": "Agent Name Collision Attacks in Multi-Agent Systems",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents"
+      ],
+      "candidateId": "r1e6cb4f807c0bc1",
+      "qualityScore": 100.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "This item discusses security vulnerabilities in multi-agent systems, relevant for understanding LLM agent security and potential implications for model deployment."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 52.7,
+      "url": "https://arxiv.org/abs/2609.27022",
+      "title": "Adversarial Attacks and Identity Leakage in De-Identification Systems: An Empirical Study",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r8845d78a0800d9e",
+      "qualityScore": 100.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This study provides insights into vulnerabilities in de-identification systems, relevant for understanding security risks in LLMs and their deployment."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 51.3,
+      "url": "https://arxiv.org/abs/2609.26900",
+      "title": "Ajar: Measuring Open Privilege in Agent Defenses",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "candidateId": "rdf042b8b12df25b",
+      "qualityScore": 100.0,
+      "relevanceScore": 51.3,
+      "whyRelevant": "This item discusses security measures for agents, relevant for understanding vulnerabilities in LLMs and improving their interpretability and inference efficiency."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 51.3,
+      "url": "https://arxiv.org/abs/2609.27011",
+      "title": "HYDRO: Towards Non-Reversible Face De-Identification Using a High-Fidelity Hybrid Diffusion and Target-Oriented Approach",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "generative-ai"
+      ],
+      "candidateId": "r61a48c5acfb8b60",
+      "qualityScore": 100.0,
+      "relevanceScore": 51.3,
+      "whyRelevant": "This item is relevant as it explores security implications of generative AI, which intersects with LLM safety and interpretability in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 49.4,
+      "url": "https://arxiv.org/abs/2609.27052",
+      "title": "Improving Service Availability in KubeEdge-Based Architectures Using Lightweight Intrusion Detection",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "rfcd0ba78873e52b",
+      "qualityScore": 100.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This item discusses security measures in distributed systems, relevant for understanding LLM deployment safety and enhancing model integrity in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 49.4,
+      "url": "https://arxiv.org/abs/2609.27090",
+      "title": "Divide and Doubt: Diverse Distributed Poisoning for Retrieval-Augmented Generation",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r2fc4f506757b94d",
+      "qualityScore": 80.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This item discusses security vulnerabilities in retrieval-augmented generation, relevant for understanding LLM robustness and implications for deploying models securely."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-24T06:20:19+00:00",
+      "score": 49.4,
+      "url": "https://arxiv.org/abs/2609.27300",
+      "title": "SoK: You Find What You Seek: Rethinking Oracles, Guidance, and Input Generation in Hardware Fuzzing",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r502ca8097acff78",
+      "qualityScore": 100.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This item discusses security in AI systems, which is relevant for understanding vulnerabilities in LLMs and improving their robustness in production."
     }
   ]
 }
