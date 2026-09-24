@@ -6552,6 +6552,209 @@
       "qualityScore": 100.0,
       "relevanceScore": 49.4,
       "whyRelevant": "This item discusses security measures relevant to deploying and serving LLMs, which is crucial for ensuring safe and efficient model inference in production."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-24T02:03:51+00:00",
+      "score": 75.0,
+      "url": "https://arxiv.org/abs/2609.25053",
+      "title": "LatentPort: Beyond KV Cache - Cross-Model Transfer of Recurrent Memory in Hybrid Language Models: A 4B-to-9B Hybrid-State Handoff Without Target Prefix Replay",
+      "section": "research",
+      "topics": [
+        "llms",
+        "training",
+        "inference"
+      ],
+      "candidateId": "r03e6a6b3c7447b3",
+      "qualityScore": 100.0,
+      "relevanceScore": 75.0,
+      "whyRelevant": "This research explores memory transfer in hybrid language models, relevant for understanding internal mechanisms and improving inference efficiency in LLMs."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-24T02:03:51+00:00",
+      "score": 72.0,
+      "url": "https://arxiv.org/abs/2609.15987",
+      "title": "Bellman Policy Optimization",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "llms",
+        "reasoning"
+      ],
+      "candidateId": "rde10b2e715a6c3a",
+      "qualityScore": 80.0,
+      "relevanceScore": 72.0,
+      "whyRelevant": "This research on Bellman Policy Optimization provides insights into reinforcement learning techniques that can enhance reasoning and inference efficiency in LLMs."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-24T02:03:51+00:00",
+      "score": 70.0,
+      "url": "https://arxiv.org/abs/2609.24657",
+      "title": "Circuit Hypernetworks for Quantum-Augmented Diffusion Language Models",
+      "section": "research",
+      "topics": [
+        "llms",
+        "deep-learning",
+        "generative-ai"
+      ],
+      "candidateId": "rb2d6c17d11cbc6a",
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research explores advanced architectures that could enhance understanding of LLM internals and improve inference efficiency in production settings."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-24T02:03:51+00:00",
+      "score": 70.0,
+      "url": "https://arxiv.org/abs/2609.24058",
+      "title": "All-in-One Multilingual Scene Text Recognition with Script-aware Mixture-of-Experts",
+      "section": "research",
+      "topics": [
+        "llms",
+        "deep-learning",
+        "training"
+      ],
+      "candidateId": "r93942bf0d3095e6",
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research explores a mixture-of-experts approach that could enhance reasoning efficiency and model interpretability in multilingual text recognition tasks."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-24T02:03:51+00:00",
+      "score": 65.5,
+      "url": "https://arxiv.org/abs/2609.06011",
+      "title": "Tri-PvP: Exposing Modality Bias in Omni-Modal Large Language Models through Perceptual-Propositional Evidence Conflicts",
+      "section": "research",
+      "topics": [
+        "llms",
+        "multimodal",
+        "interpretability"
+      ],
+      "candidateId": "r58332a0320820b1",
+      "qualityScore": 100.0,
+      "relevanceScore": 65.5,
+      "whyRelevant": "This research explores modality bias in LLMs, providing insights into their interpretability and internal workings, relevant for understanding model behavior and security."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-24T02:03:51+00:00",
+      "score": 58.5,
+      "url": "https://arxiv.org/abs/2609.25270",
+      "title": "RULER: Instance-aware Rubric Rewards for SVG Generation",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "generative-ai",
+        "evaluation"
+      ],
+      "candidateId": "r760f02367c07aff",
+      "qualityScore": 100.0,
+      "relevanceScore": 58.5,
+      "whyRelevant": "This research on instance-aware rubric rewards may provide insights into evaluation methods that could enhance reasoning and inference efficiency in LLMs."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-24T02:03:51+00:00",
+      "score": 56.5,
+      "url": "https://arxiv.org/abs/2609.25267",
+      "title": "ImIR: Image-Instruction Tuning for All-in-One Image Restoration",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "deep-learning",
+        "training"
+      ],
+      "candidateId": "r9b6b06e92f00f32",
+      "qualityScore": 85.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research on image restoration may not directly address LLMs or their internal mechanisms, making its relevance to your interests quite weak."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-24T02:03:51+00:00",
+      "score": 56.5,
+      "url": "https://arxiv.org/abs/2609.25186",
+      "title": "From Pattern Recognizers to Personalized Companions: A Survey of Large Language Models in Mental Health",
+      "section": "research",
+      "topics": [
+        "llms",
+        "agents",
+        "ai-safety"
+      ],
+      "candidateId": "ra7e8c9695c8eb31",
+      "qualityScore": 80.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This survey provides insights into LLM applications in mental health, relevant for understanding model behavior and safety in sensitive contexts."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-24T02:03:51+00:00",
+      "score": 53.2,
+      "url": "https://arxiv.org/abs/2609.24981",
+      "title": "GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "multimodal",
+        "training"
+      ],
+      "candidateId": "r0b5b0e76c37f9ad",
+      "qualityScore": 100.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research on geometry-native latent spaces may inform LLMs' spatial reasoning and inference efficiency, relevant for understanding model internals and deployment."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-24T02:03:51+00:00",
+      "score": 47.5,
+      "url": "https://arxiv.org/abs/2609.25247",
+      "title": "Geometric and Semantic Coupling for Interaction Understanding in 3D Scenes",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "agents",
+        "reasoning"
+      ],
+      "candidateId": "rc8c530eaf7f7ad4",
+      "qualityScore": 100.0,
+      "relevanceScore": 47.5,
+      "whyRelevant": "This research explores interaction understanding in 3D scenes, which may inform reasoning and inference efficiency in LLMs and agent security."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-24T02:03:51+00:00",
+      "score": 23.5,
+      "url": "https://arxiv.org/abs/2609.22319",
+      "title": "Embedding Physics Priors in Robot Learning: A Survey",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "agents",
+        "training"
+      ],
+      "candidateId": "ra997429152b40f0",
+      "qualityScore": 80.0,
+      "relevanceScore": 23.5,
+      "whyRelevant": "This survey provides insights into integrating physics-based reasoning in reinforcement learning, relevant for understanding LLMs' internal mechanisms and enhancing inference efficiency."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-24T02:03:51+00:00",
+      "score": 13.1,
+      "url": "https://arxiv.org/abs/2609.24967",
+      "title": "Emergent Collusion in Long-Horizon LLM Agent Interaction",
+      "section": "research",
+      "topics": [
+        "agents",
+        "ai-safety"
+      ],
+      "candidateId": "r27558c835469076",
+      "qualityScore": 100.0,
+      "relevanceScore": 13.1,
+      "whyRelevant": "This research explores LLM agent interactions, relevant for understanding emergent behaviors and security implications in long-horizon reasoning and inference."
     }
   ]
 }
