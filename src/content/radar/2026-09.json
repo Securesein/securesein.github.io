@@ -20574,6 +20574,21 @@
       "whyRelevant": "This release may include updates relevant to LLM performance and security, impacting mechanistic interpretability and inference efficiency in production environments.",
       "seenAt": "2026-09-24T06:20:19+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r9a02b79235da7b6",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11154",
+      "title": "b11154",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve security and efficiency in deployment.",
+      "seenAt": "2026-09-24T10:16:25+00:00",
+      "status": "radar"
     }
   ]
 }
