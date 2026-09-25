@@ -23079,6 +23079,38 @@
       "whyRelevant": "This item discusses advancements in LLM inference, which are crucial for understanding internal mechanisms and improving efficiency in model deployment and security.",
       "seenAt": "2026-09-25T06:06:27+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r3c908d4f959ad71",
+      "url": "https://blog.trailofbits.com/2026/09/25/dont-let-tees-break-your-mpc/",
+      "title": "Don't let TEEs break your MPC",
+      "source": "Trail of Bits — Blog",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This item discusses security implications of trusted execution environments (TEEs) on multi-party computation (MPC), relevant for understanding LLM security and deployment challenges.",
+      "seenAt": "2026-09-25T14:02:39+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb62d5832bc89fb6",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11178",
+      "title": "b11178",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "deep-learning",
+        "llms",
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses AI security in LLMs, relevant for understanding internal mechanisms and ensuring safe deployment in production environments.",
+      "seenAt": "2026-09-25T14:02:54+00:00",
+      "status": "radar"
     }
   ]
 }
