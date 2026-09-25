@@ -23111,6 +23111,120 @@
       "whyRelevant": "This item discusses AI security in LLMs, relevant for understanding internal mechanisms and ensuring safe deployment in production environments.",
       "seenAt": "2026-09-25T14:02:54+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rec5792120f9af82",
+      "url": "https://www.amazon.science/blog/a-kernel-centric-path-to-real-time-video-generation-on-trainium",
+      "title": "A kernel-centric path to real-time video generation on Trainium",
+      "source": "Amazon Science",
+      "section": "release",
+      "topics": [
+        "generative-ai",
+        "deep-learning",
+        "inference"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This item discusses real-time video generation, which may provide insights into inference efficiency and deployment challenges relevant to LLMs.",
+      "seenAt": "2026-09-25T18:16:29+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra87b101918a78ed",
+      "url": "https://aws.amazon.com/blogs/machine-learning/scaling-moe-reinforcement-learning-on-amazon-eks-with-efa-and-deepep-with-40-more-throughput/",
+      "title": "Scaling MoE reinforcement learning on Amazon EKS with EFA and DeepEP with 40% more throughput",
+      "source": "AWS Machine Learning Blog",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "llms"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 57.6,
+      "whyRelevant": "This research on scaling MoE reinforcement learning may provide insights into optimizing LLM performance and efficiency in production environments.",
+      "seenAt": "2026-09-25T18:16:32+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc6142acfdf6a0f7",
+      "url": "https://aws.amazon.com/blogs/machine-learning/accelerate-multimodal-rl-training-with-skyrl-on-amazon-sagemaker-hyperpod/",
+      "title": "Accelerate multimodal RL training with SkyRL on Amazon SageMaker HyperPod",
+      "source": "AWS Machine Learning Blog",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "multimodal",
+        "llms"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 45.0,
+      "whyRelevant": "This item discusses reinforcement learning techniques that could enhance understanding of LLMs' internal mechanisms and improve inference efficiency in production environments.",
+      "seenAt": "2026-09-25T18:16:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r784f183592b3d6f",
+      "url": "https://aws.amazon.com/blogs/machine-learning/narrateai-production-ready-llm-quality-assurance-on-amazon-bedrock/",
+      "title": "NarrateAI: production-ready LLM quality assurance on Amazon Bedrock",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "llms",
+        "evaluation",
+        "ai-security"
+      ],
+      "qualityScore": 95.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item discusses quality assurance for LLMs in production, relevant for understanding deployment challenges and security in mechanistic interpretability and inference efficiency.",
+      "seenAt": "2026-09-25T18:16:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r95bb1e4353e60ad",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-datacor-built-self-service-rental-analytics-with-amazon-quick-sight/",
+      "title": "How Datacor built self-service rental analytics with Amazon Quick Sight",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "generative-ai",
+        "ai-security",
+        "multimodal"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This item is not directly relevant to mechanistic interpretability or LLMs, focusing instead on analytics and visualization tools rather than ML foundations or model deployment.",
+      "seenAt": "2026-09-25T18:16:40+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc619830bcd21454",
+      "url": "https://aws.amazon.com/blogs/machine-learning/multi-region-training-with-amazon-sagemaker-hyperpod-and-qumulo/",
+      "title": "Multi-Region training with Amazon SageMaker HyperPod and Qumulo",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "training"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item is relevant for understanding efficient model training across regions, which can impact deployment and inference strategies in production environments.",
+      "seenAt": "2026-09-25T18:16:42+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r575b50d766e4188",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11184",
+      "title": "b11184",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve security and efficiency in deployment.",
+      "seenAt": "2026-09-25T18:16:49+00:00",
+      "status": "radar"
     }
   ]
 }
