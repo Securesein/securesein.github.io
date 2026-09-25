@@ -79,6 +79,14 @@
       "publishedAt": "2026-09-23T02:03:34+00:00",
       "qualityScore": 100.0,
       "relevanceScore": 63.2
+    },
+    {
+      "slug": "smilesgnn-fusing-smiles-and-graphs-for-better-toxicity-prediction",
+      "section": "research",
+      "channel": "research",
+      "publishedAt": "2026-09-25T06:09:23+00:00",
+      "qualityScore": 100.0,
+      "relevanceScore": 73.2
     }
   ]
 }
