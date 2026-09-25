@@ -23091,7 +23091,7 @@
       ],
       "qualityScore": 80.0,
       "relevanceScore": 42.7,
-      "whyRelevant": "This item discusses security implications of trusted execution environments (TEEs) on multi-party computation (MPC), relevant for understanding LLM security and deployment challenges.",
+      "whyRelevant": "This item discusses the security implications of trusted execution environments (TEEs) on multi-party computation (MPC), relevant for understanding LLM security and deployment.",
       "seenAt": "2026-09-25T14:02:39+00:00",
       "status": "radar"
     },
