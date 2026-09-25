@@ -23225,6 +23225,55 @@
       "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve security and efficiency in deployment.",
       "seenAt": "2026-09-25T18:16:49+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r35ab415a8fa4d23",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
+      "title": "v2.1.283",
+      "source": "Claude Code Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "agents",
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This release may include updates on LLM security and efficiency, relevant for understanding internal mechanisms and improving deployment practices.",
+      "seenAt": "2026-09-25T22:16:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6c80504427e11d8",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11190",
+      "title": "b11190",
+      "source": "llama.cpp Releases",
+      "section": "benchmark",
+      "topics": [
+        "generative-ai",
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This benchmark provides insights into LLM performance, aiding understanding of internal mechanisms and efficiency in reasoning and inference for model deployment.",
+      "seenAt": "2026-09-25T22:16:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9b8827632059ac8",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11188",
+      "title": "b11188",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve security and efficiency in deployment.",
+      "seenAt": "2026-09-25T22:16:37+00:00",
+      "status": "radar"
     }
   ]
 }
