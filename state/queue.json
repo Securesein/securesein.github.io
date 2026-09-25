@@ -8270,6 +8270,168 @@
       "qualityScore": 100.0,
       "relevanceScore": 28.2,
       "whyRelevant": "This research explores tokenization strategies in multimodal models, which can inform mechanistic interpretability and efficiency in reasoning for LLMs and agents."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-25T06:25:28+00:00",
+      "score": 56.5,
+      "url": "https://arxiv.org/abs/2609.28585",
+      "title": "Persistent Billable State: Denial-of-Wallet Attacks and Defenses in Tool-Calling LLM Agents",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "llms"
+      ],
+      "candidateId": "r867c856d16328ae",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item discusses security vulnerabilities in LLM agents, relevant for understanding internal mechanisms and enhancing model robustness against specific attack vectors."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-25T06:25:28+00:00",
+      "score": 56.5,
+      "url": "https://arxiv.org/abs/2609.28843",
+      "title": "Blockchain-Enabled Artificial Intelligence and AI Agents for Secure Data Sharing and Cybersecurity Applications",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "llms"
+      ],
+      "candidateId": "r91dd4cadf300ca8",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item discusses AI security, relevant for understanding LLM vulnerabilities and enhancing secure deployment practices in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-25T06:25:28+00:00",
+      "score": 56.5,
+      "url": "https://arxiv.org/abs/2609.28614",
+      "title": "Reward Hacking Challenges Oversight of Autonomous Research Agents",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "llms"
+      ],
+      "candidateId": "r3e1c96441442a7d",
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This item discusses security challenges in autonomous agents, relevant for understanding LLM vulnerabilities and improving interpretability and inference efficiency in production."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-25T06:25:28+00:00",
+      "score": 52.7,
+      "url": "https://arxiv.org/abs/2609.28599",
+      "title": "BRFID: Toward Byzantine-Robust Federated Intrusion Detection",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r570a9edb97e35b3",
+      "qualityScore": 100.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item discusses security mechanisms relevant to deploying LLMs in production, particularly in the context of federated learning and intrusion detection."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-25T06:25:28+00:00",
+      "score": 52.7,
+      "url": "https://arxiv.org/abs/2609.28659",
+      "title": "\"What I See is What I Hear\": Deepfake Detection Across Diverse Hearing Abilities",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r001b6ec795827a0",
+      "qualityScore": 100.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item is relevant as it addresses security concerns in AI, particularly in detecting deepfakes, which relates to LLM integrity and deployment challenges."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-25T06:25:28+00:00",
+      "score": 49.4,
+      "url": "https://arxiv.org/abs/2609.28537",
+      "title": "Privacy Leakage Through AI-mediated Analysis of Smartphone Data",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r45d8babfd7f244b",
+      "qualityScore": 100.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This item discusses security vulnerabilities in AI systems, relevant for understanding risks in deploying LLMs and ensuring safe inference in production."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-25T06:25:28+00:00",
+      "score": 49.4,
+      "url": "https://arxiv.org/abs/2609.28586",
+      "title": "Agent Approval Laundering: Transitive Effects Beyond the Approved Invocation",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "candidateId": "r82ff19d31c8edc6",
+      "qualityScore": 100.0,
+      "relevanceScore": 49.4,
+      "whyRelevant": "This item discusses security implications in LLMs, relevant for understanding internal mechanisms and ensuring safe deployment in production environments."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-25T06:25:28+00:00",
+      "score": 46.5,
+      "url": "https://arxiv.org/abs/2609.28564",
+      "title": "Don't Read the Log: Execution Traces Contaminate Verifiers in Video-Generation Agents",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "multimodal"
+      ],
+      "candidateId": "rae3a11a2b811ace",
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This item discusses security vulnerabilities in agents, relevant for understanding LLM safety and the implications of execution traces on model integrity."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-25T06:25:28+00:00",
+      "score": 46.5,
+      "url": "https://arxiv.org/abs/2609.29572",
+      "title": "DynaTrust-VVC: Directional Physics-Informed Trust-Based Detection and Mitigation for Cyber-Resilient Multi-Agent Volt--VAR Control",
+      "section": "security",
+      "topics": [
+        "ai-security",
+        "agents",
+        "evaluation"
+      ],
+      "candidateId": "r2fd67e388ff6f35",
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This item discusses trust-based detection in multi-agent systems, relevant for understanding security mechanisms in LLMs and their deployment in production."
+    },
+    {
+      "channel": "security",
+      "queuedAt": "2026-09-25T06:25:28+00:00",
+      "score": 46.5,
+      "url": "https://arxiv.org/abs/2609.29921",
+      "title": "Who Holds the Pen? Let Specifications, Not Agents, Sign Off",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security",
+        "generative-ai"
+      ],
+      "candidateId": "rcbaffe366fb3eb9",
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This article discusses the importance of specifications in AI security, relevant for understanding LLMs' internal workings and ensuring safe deployment."
     }
   ]
 }
