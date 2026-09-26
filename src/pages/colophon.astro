@@ -24,7 +24,7 @@ import { SITE } from "../consts";
       </p>
       <ul>
         <li>
-          <strong>gpt-4o</strong> drafts the News items. It is the pipeline's
+          <strong>gpt-4o</strong> drafts the short automatic pieces. It is the pipeline's
           writer: it reads the source article and produces the whole post in
           one pass. I picked a stronger model than the one that writes the
           Telegram summaries because this is the part that actually gets
@@ -86,9 +86,9 @@ import { SITE } from "../consts";
 
       <h2>What is not reviewed at all</h2>
       <p>
-        Every News item. Scout reads the source, drafts the post, and publishes
+        Every short automatic piece. Scout reads the source, drafts the post, and publishes
         it without me seeing it first. That is deliberate — the value of that
-        lane is that it is fast — but it means a News post can be wrong in ways
+        lane is that it is fast — but it means such a post can be wrong in ways
         nobody has looked for. They always link the source. Read the source.
       </p>
 
@@ -100,7 +100,7 @@ import { SITE } from "../consts";
         <li>
           <strong>Confident wrong detail.</strong> A model will state a version
           number, a price or a benchmark figure with complete assurance and get
-          it wrong. I catch these when I check; on News items nobody checks.
+          it wrong. I catch these when I check; on the automatic pieces nobody checks.
         </li>
         <li>
           <strong>Plausible framing that the source does not support.</strong>
@@ -108,7 +108,7 @@ import { SITE } from "../consts";
           will reach for a tidy conclusion the article never actually drew.
         </li>
         <li>
-          <strong>Stale by publication.</strong> News items are written from one
+          <strong>Stale by publication.</strong> Automatic pieces are written from one
           article at one moment. A retraction or a correction upstream does not
           propagate here on its own.
         </li>

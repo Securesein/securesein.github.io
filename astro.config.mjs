@@ -83,9 +83,19 @@ export default defineConfig({
   // get one, and in a static build Astro emits each as a small
   // meta-refresh page.
   redirects: {
-    // /blog was the News listing before the three lanes existed.
-    "/blog": "/news/",
+    // /blog was the News listing before the three lanes existed, and
+    // pointed at /news/ until that listing was retired — it now goes
+    // where /news/ goes rather than at a page that stopped existing.
+    "/blog": "/research/",
     // The "Welcome to securesein" post; its content now lives on About.
     "/blog/welcome": "/about/",
+    // The News listing is retired (content-architecture change). The
+    // posts are untouched and still live at their own URLs; what went
+    // away is the page that listed them by format. Research is where
+    // that content belongs now, so the page and its feed send readers
+    // there rather than 404ing — a feed especially, since subscribers
+    // never find out one broke.
+    "/news": "/research/",
+    "/news/rss.xml": "/research/rss.xml",
   },
 });

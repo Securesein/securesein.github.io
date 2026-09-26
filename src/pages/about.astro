@@ -9,7 +9,7 @@
 // "Elsewhere" link beyond the repo. One sentence the brief supplied
 // outright ("Nothing here is published without me reading it end to
 // end...") is left out entirely: it contradicts what this page and
-// the colophon already say about News items, which nobody reads
+// the colophon already say about the automatic pieces, which nobody reads
 // before they publish.
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Eyebrow from "../components/Eyebrow.astro";
@@ -59,15 +59,16 @@ import { SITE, SECTIONS } from "../consts";
         <section class="block">
           <h2>How much of this is written by a model</h2>
           <p>
-            Nearly all of the sentences. That is true of the news items, and
-            it is also true of the long explainers and the deep dives —
+            Nearly all of the sentences. That is true of the short automatic
+            pieces, and it is also true of the long explainers and the deep
+            dives —
             which an earlier version of this page implied were hand-written,
             and they are not.
           </p>
           <p>
             What differs between them is how much of my judgement went in.
-            On the news items: none, in the sense that nobody reads them
-            before they publish. On everything else: I choose the subject,
+            On the automatic pieces: none, in the sense that nobody reads
+            them before they publish. On everything else: I choose the subject,
             set the angle, supply the source material, check the claims
             that carry weight, and rewrite what comes back wrong. Every
             post says which of those things actually happened to it, in a
@@ -82,11 +83,12 @@ import { SITE, SECTIONS } from "../consts";
             </div>
 
             <div class="row" data-fill="0">
-              <div class="top"><b>News items</b><em>automatic</em></div>
+              <div class="top"><b>Short automatic pieces</b><em>automatic</em></div>
               <div class="track"><i class="fill"></i></div>
               <p>
                 Scout drafts and publishes these on its own; nobody reads
-                one before it goes out. See "How it's made" below.
+                one before it goes out. Most of them land in Research and
+                Security. See "How it's made" below.
               </p>
             </div>
             <!--
@@ -130,7 +132,7 @@ import { SITE, SECTIONS } from "../consts";
           </div>
           <p>
             Cutting across all five are the <a href="/topics/">topics</a> —
-            thirteen subjects, so a two-minute news item and a
+            thirteen subjects, so a two-minute item and a
             twenty-minute teardown on the same thing end up on the same
             shelf. A few of those shelves are nearly empty on purpose:
             they are where this blog is meant to grow.
@@ -140,7 +142,8 @@ import { SITE, SECTIONS } from "../consts";
         <section class="block">
           <h2>How it's made</h2>
           <p>
-            Scout is the pipeline behind the News section. It is not a
+            Scout is the pipeline behind the short, automatic pieces —
+            most of what lands in Research and Security. It is not a
             person and it is not a persona; it is a few hundred lines of
             Python on a schedule.
           </p>
@@ -167,8 +170,8 @@ import { SITE, SECTIONS } from "../consts";
           <p>
             What is <em>not</em> reviewed: the facts, the framing, the
             numbers, the conclusion. My only editorial act is choosing
-            which item gets written up at all. If a News post here matters
-            to you, open its source and check it.
+            which item gets written up at all. If one of these automatic
+            posts matters to you, open its source and check it.
           </p>
           <p>
             Both the site and the pipeline behind it — Scout, the scoring,
