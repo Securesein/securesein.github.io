@@ -6904,6 +6904,40 @@
       "qualityScore": 100.0,
       "relevanceScore": 46.5,
       "whyRelevant": "This article discusses the importance of specifications in AI security, relevant for understanding LLMs' internal workings and ensuring safe deployment."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-26T06:06:32+00:00",
+      "score": 50.5,
+      "url": "https://arxiv.org/abs/2609.29816",
+      "title": "AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "reinforcement-learning",
+        "generative-ai"
+      ],
+      "candidateId": "rc87c547131f276d",
+      "qualityScore": 100.0,
+      "relevanceScore": 50.5,
+      "whyRelevant": "This research explores reinforcement learning in multimodal contexts, which may inform mechanisms for improving LLM reasoning and inference efficiency."
+    },
+    {
+      "channel": "research",
+      "queuedAt": "2026-09-26T06:06:32+00:00",
+      "score": 32.0,
+      "url": "https://arxiv.org/abs/2609.23407",
+      "title": "OmniEcho: Spatial Audio Understanding for Embodied Agents",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "agents",
+        "evaluation"
+      ],
+      "candidateId": "r1e8005d12d4b0bd",
+      "qualityScore": 100.0,
+      "relevanceScore": 32.0,
+      "whyRelevant": "This research on spatial audio understanding may provide insights into multimodal reasoning for LLMs and enhance agent security through improved environmental awareness."
     }
   ]
 }
