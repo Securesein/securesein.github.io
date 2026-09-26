@@ -23423,7 +23423,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 70.0,
-      "whyRelevant": "This item discusses AI security in LLMs, relevant for understanding internal mechanisms and ensuring safe deployment in production environments.",
+      "whyRelevant": "This item discusses AI security measures relevant to deploying LLMs, which is crucial for understanding their internal workings and ensuring safe production use.",
       "seenAt": "2026-09-26T10:02:29+00:00",
       "status": "radar"
     }
