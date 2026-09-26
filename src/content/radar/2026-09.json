@@ -23409,6 +23409,23 @@
       "whyRelevant": "This research explores agent reasoning in task and motion planning, relevant for understanding LLMs' internal mechanisms and enhancing their security and efficiency.",
       "seenAt": "2026-09-26T02:16:31+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r13c2627837755aa",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11195",
+      "title": "b11195",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "deep-learning",
+        "ai-security",
+        "llms"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses AI security in LLMs, relevant for understanding internal mechanisms and ensuring safe deployment in production environments.",
+      "seenAt": "2026-09-26T10:02:29+00:00",
+      "status": "radar"
     }
   ]
 }
