@@ -53,8 +53,11 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
            free. -->
       <details class="nav-menu">
         <summary class="nav-menu__toggle" aria-label="Menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <svg class="nav-menu__icon nav-menu__icon--bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
             <path d="M3.5 7h17M3.5 12h17M3.5 17h17" />
+          </svg>
+          <svg class="nav-menu__icon nav-menu__icon--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
           </svg>
         </summary>
         <nav class="nav-menu__sheet" aria-label="Main navigation">
@@ -161,8 +164,45 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
       place-items: center;
     }
     .nav-menu__toggle::-webkit-details-marker { display: none; }
-    .nav-menu__toggle svg { width: 18px; height: 18px; }
+    .nav-menu__icon { width: 18px; height: 18px; }
+    /* The button says which way it goes: bars to open, a cross to
+       close, rather than one icon quietly changing meaning. */
+    .nav-menu__icon--close { display: none; }
+    .nav-menu[open] .nav-menu__icon--bars { display: none; }
+    .nav-menu[open] .nav-menu__icon--close { display: block; }
     .nav-menu[open] .nav-menu__toggle { color: var(--text); border-color: var(--text-muted); }
+
+    /* Everything below the panel is dimmed, so the menu reads as a
+       layer over the page instead of a strip pasted on top of it with
+       the article still bright underneath. Painted by the sheet's own
+       ::before at z-index -1: the sheet has a z-index and so forms a
+       stacking context, which keeps the backdrop above the page but
+       still behind the panel itself. */
+    .nav-menu[open]::before {
+      content: "";
+      position: fixed;
+      /* NOT inset:0. .site-header carries a backdrop-filter, which
+         makes it the containing block for fixed-position descendants,
+         so "the whole screen" here means "the header" — an inset of 0
+         dimmed the bar itself and left the article below it bright,
+         the exact opposite of the point. Offsets are therefore
+         relative to the header box: start at its bottom edge and run a
+         viewport height past it. (The sheet's own inset: 64px 0 auto 0
+         works for the same reason.) */
+      top: 64px;
+      left: 0;
+      right: 0;
+      height: 100dvh;
+      /* Sits on <details>, not on the sheet. As a child of the sheet
+         it would paint over the sheet's own background — a negative
+         z-index child still renders above its stacking context's
+         background, just below the text — which tinted the panel grey.
+         One below the sheet's 49 instead: over the page, under the
+         menu. */
+      z-index: 48;
+      background: color-mix(in srgb, var(--ink) 45%, transparent);
+      backdrop-filter: blur(2px);
+    }
 
     .nav-menu__sheet {
       position: fixed;

@@ -23,7 +23,7 @@ import { SITE, SECTIONS } from "../consts";
   <section class="about-hero">
     <div class="hero-nodes" aria-hidden="true"><canvas></canvas></div>
 
-    <div class="container">
+    <div class="container container--wide">
       <Eyebrow label="About" />
       <h1>Why this site exists</h1>
       <p class="lede">
@@ -33,9 +33,14 @@ import { SITE, SECTIONS } from "../consts";
     </div>
   </section>
 
-  <div class="container">
+  <div class="container container--wide">
     <div class="cols">
-      <div class="prose">
+      <!-- The intro is its own grid item so the rail can sit between it
+           and the rest of the page once the two columns collapse: at
+           tablet width the rail used to fall past every section and land
+           against the footer, where it read as part of the footer rather
+           than as metadata about this page. -->
+      <div class="prose prose--intro">
         <section class="block">
           <p class="first">
             I'm {SITE.author}. I've been into technology for as long as I can
@@ -48,7 +53,9 @@ import { SITE, SECTIONS } from "../consts";
             that's a bonus, not the reason it exists.
           </p>
         </section>
+      </div>
 
+      <div class="prose prose--rest">
         <section class="block">
           <h2>How much of this is written by a model</h2>
           <p>
@@ -245,10 +252,18 @@ import { SITE, SECTIONS } from "../consts";
     display: block;
     width: 100%;
     height: 100%;
-    /* About is left-aligned, so the pattern's weight sits left of
-       centre and the title keeps a clear field. */
-    -webkit-mask-image: radial-gradient(ellipse 78% 72% at 38% 44%, #000 22%, transparent 80%);
-            mask-image: radial-gradient(ellipse 78% 72% at 38% 44%, #000 22%, transparent 80%);
+    /* A hole where the text is, not a spotlight on it. The previous
+       mask put its SOLID core at 38% 44% — which is exactly where the
+       headline sits — so the densest part of the pattern landed on
+       "Why this site exists": a node on the "y", lines through "hi"
+       and "exists". The comment claimed the title kept a clear field;
+       the gradient did the opposite.
+       Inverted here: transparent through the middle, opaque only in a
+       ring beyond it, then fading again at the far edge. Since About
+       is left-aligned, that ring reads mostly as pattern to the right
+       of the text, which is the empty half of the hero anyway. */
+    -webkit-mask-image: radial-gradient(ellipse 86% 78% at 32% 50%, transparent 0 46%, #000 78%, transparent 100%);
+            mask-image: radial-gradient(ellipse 86% 78% at 32% 50%, transparent 0 46%, #000 78%, transparent 100%);
   }
   @media print {
     .about-hero { background: none; border-bottom: 0; }
@@ -256,12 +271,13 @@ import { SITE, SECTIONS } from "../consts";
   }
   @media (max-width: 700px) {
     .about-hero { padding-block: 3.5rem 3rem; }
-    /* Wider, flatter, and the solid core starts at 14% instead of 22%:
-       on a short hero a round mask otherwise crops most of the pattern
-       away and leaves a smudge in the middle. */
+    /* Same inversion, adapted: the text fills nearly the whole hero at
+       this width, so the clear middle has to be wider and the ring
+       thinner — it ends up reading as pattern along the top and bottom
+       edges rather than beside the text. */
     .hero-nodes canvas {
-      -webkit-mask-image: radial-gradient(ellipse 96% 64% at 50% 40%, #000 14%, transparent 76%);
-              mask-image: radial-gradient(ellipse 96% 64% at 50% 40%, #000 14%, transparent 76%);
+      -webkit-mask-image: radial-gradient(ellipse 118% 92% at 50% 46%, transparent 0 40%, #000 74%, transparent 100%);
+              mask-image: radial-gradient(ellipse 118% 92% at 50% 46%, transparent 0 40%, #000 74%, transparent 100%);
     }
   }
   .about-hero h1 {
@@ -283,14 +299,30 @@ import { SITE, SECTIONS } from "../consts";
   }
 
   /* ---------- two-column layout: reading column + sticky rail ----- */
+  /* Named areas rather than source order, because the two layouts want
+     the rail in different places: beside the text on desktop, but
+     between the intro and the rest of the page once things stack.
+     Row gap is 0 on purpose — .block already carries the vertical
+     rhythm between sections, and a row gap here would open a second,
+     competing gap between the intro and what follows it. */
   .cols {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 260px;
-    gap: 4.5rem;
+    grid-template-areas:
+      "intro rail"
+      "rest  rail";
+    gap: 0 4.5rem;
     padding: 4.5rem 0 2.5rem;
   }
+  .prose--intro { grid-area: intro; }
+  .prose--rest { grid-area: rest; }
+  .rail { grid-area: rail; }
+
   @media (max-width: 980px) {
-    .cols { grid-template-columns: 1fr; gap: 3rem; }
+    .cols {
+      grid-template-columns: 1fr;
+      grid-template-areas: "intro" "rail" "rest";
+    }
   }
 
   .prose { max-width: 66ch; }
@@ -311,7 +343,11 @@ import { SITE, SECTIONS } from "../consts";
     margin-top: 3.5rem;
     border-top: 1px solid var(--rule);
   }
-  .block:first-of-type { padding-top: 0; margin-top: 0; border-top: 0; }
+  /* Scoped to the intro rather than :first-of-type. Now that the prose
+     is split across two grid items, the first block of .prose--rest is
+     also a :first-of-type and would have lost the rule separating it
+     from the intro. */
+  .prose--intro .block { padding-top: 0; margin-top: 0; border-top: 0; }
 
   /* Drop cap on the intro paragraph only. */
   .prose p.first::first-letter {
@@ -383,10 +419,20 @@ import { SITE, SECTIONS } from "../consts";
   }
 
   /* ---------- rail -------------------------------------------------- */
+  /* A card, not loose text that happens to stay put. Once the body
+     scrolls past the first screen the rail has nothing beside it to
+     line up with, so it needs to read as a deliberately placed object
+     of its own. The offset is tied to the header's own 64px height
+     rather than a round number, so it parks just clear of it instead
+     of jumping on the first scroll. */
   .rail {
     position: sticky;
-    top: 6rem;
+    top: calc(64px + 1.5rem);
     align-self: start;
+    padding: 1.35rem 1.4rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
     font-family: var(--font-sans);
     font-size: 0.875rem;
   }
@@ -407,7 +453,10 @@ import { SITE, SECTIONS } from "../consts";
   .rail a { color: var(--text); }
   .rail a:hover { color: var(--link); }
   @media (max-width: 980px) {
-    .rail { position: static; margin-top: 0; }
+    /* Stacked, so nothing to stick to — and the row gap is 0, so the
+       card carries its own spacing away from the intro above and the
+       first section below. */
+    .rail { position: static; margin: 3rem 0; }
   }
 </style>
 
