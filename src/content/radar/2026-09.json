@@ -23125,7 +23125,7 @@
       ],
       "qualityScore": 70.0,
       "relevanceScore": 60.0,
-      "whyRelevant": "This item discusses real-time video generation, which may provide insights into inference efficiency and deployment challenges relevant to LLMs.",
+      "whyRelevant": "This item discusses real-time video generation techniques, which may provide insights into inference efficiency and deployment challenges relevant to LLMs.",
       "seenAt": "2026-09-25T18:16:29+00:00",
       "status": "radar"
     },
@@ -23140,7 +23140,7 @@
         "llms"
       ],
       "qualityScore": 65.0,
-      "relevanceScore": 57.6,
+      "relevanceScore": 58.6,
       "whyRelevant": "This research on scaling MoE reinforcement learning may provide insights into optimizing LLM performance and efficiency in production environments.",
       "seenAt": "2026-09-25T18:16:32+00:00",
       "status": "radar"
@@ -23157,8 +23157,8 @@
         "llms"
       ],
       "qualityScore": 70.0,
-      "relevanceScore": 45.0,
-      "whyRelevant": "This item discusses reinforcement learning techniques that could enhance understanding of LLMs' internal mechanisms and improve inference efficiency in production environments.",
+      "relevanceScore": 36.0,
+      "whyRelevant": "This item is relevant for understanding efficient training methods in reinforcement learning, which can inform model deployment and performance in production environments.",
       "seenAt": "2026-09-25T18:16:34+00:00",
       "status": "radar"
     },
@@ -23207,7 +23207,7 @@
       ],
       "qualityScore": 65.0,
       "relevanceScore": 21.2,
-      "whyRelevant": "This item is relevant for understanding efficient model training across regions, which can impact deployment and inference strategies in production environments.",
+      "whyRelevant": "This item discusses training infrastructure, which is relevant for deploying and serving open-weight models efficiently in production environments.",
       "seenAt": "2026-09-25T18:16:42+00:00",
       "status": "radar"
     },
@@ -23239,7 +23239,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 56.5,
-      "whyRelevant": "This release may include updates on LLM security and efficiency, relevant for understanding internal mechanisms and improving deployment practices.",
+      "whyRelevant": "This release may include updates relevant to LLM security and deployment, impacting interpretability and inference efficiency in production environments.",
       "seenAt": "2026-09-25T22:16:26+00:00",
       "status": "radar"
     },
@@ -23269,7 +23269,7 @@
       "topics": [
         "llms"
       ],
-      "qualityScore": 100.0,
+      "qualityScore": 80.0,
       "relevanceScore": 52.7,
       "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve security and efficiency in deployment.",
       "seenAt": "2026-09-25T22:16:37+00:00",
