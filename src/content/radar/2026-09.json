@@ -23426,6 +23426,22 @@
       "whyRelevant": "This item discusses AI security measures relevant to deploying LLMs, which is crucial for understanding their internal workings and ensuring safe production use.",
       "seenAt": "2026-09-26T10:02:29+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rf2fa756f3a1d128",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11203",
+      "title": "b11203",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "deep-learning"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve deployment strategies in production environments.",
+      "seenAt": "2026-09-26T22:01:42+00:00",
+      "status": "radar"
     }
   ]
 }
