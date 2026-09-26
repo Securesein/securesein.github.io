@@ -51,6 +51,7 @@ from core.constants import CHANNELS  # noqa: E402
 from core.ledger import Ledger, Queue  # noqa: E402
 from core.llm import LLM, LIVE, OFFLINE  # noqa: E402
 from core.radar import Radar  # noqa: E402
+from core.spend import BudgetExceeded  # noqa: E402
 from core.constants import TELEGRAM_FEEDBACK_OFFSET_FILE  # noqa: E402
 from core.state import ensure_state_dir, read_json, write_json  # noqa: E402
 
@@ -173,7 +174,13 @@ def main(argv: list[str] | None = None) -> int:
 
     ensure_state_dir()
     dry_run = resolve_dry_run(args.dry_run)
-    llm = LLM(OFFLINE if args.offline_llm else None)
+    try:
+        # Constructing LLM runs the spend preflight: a window that is
+        # already exhausted costs zero calls rather than one.
+        llm = LLM(OFFLINE if args.offline_llm else None)
+    except BudgetExceeded as exc:
+        print(f"\n  SPEND CEILING — run refused before it started: {exc}", file=sys.stderr)
+        return 3
     ledger = Ledger(dry_run=dry_run)
     radar = Radar(dry_run=dry_run)
 
@@ -271,22 +278,43 @@ def main(argv: list[str] | None = None) -> int:
         marked_only=args.marked_only,
     )
 
-    if args.channel == "releases":
-        from channels import releases
+    aborted = False
+    try:
+        if args.channel == "releases":
+            from channels import releases
 
-        releases.run(ctx)
-    elif args.channel == "research":
-        from channels import research
+            releases.run(ctx)
+        elif args.channel == "research":
+            from channels import research
 
-        research.run(ctx)
-    elif args.channel == "security":
-        from channels import security
+            research.run(ctx)
+        elif args.channel == "security":
+            from channels import security
 
-        security.run(ctx)
-    elif args.channel == "benchmarks":
-        from channels import benchmarks
+            security.run(ctx)
+        elif args.channel == "benchmarks":
+            from channels import benchmarks
 
-        benchmarks.run(ctx)
+            benchmarks.run(ctx)
+    except BudgetExceeded as exc:
+        # Deliberately not "save what we have": the ceiling is a
+        # circuit breaker, and a run that trips it is an incident to
+        # look at rather than half a run's output to keep. The spend is
+        # still recorded below — it was spent either way, and the next
+        # run has to see it.
+        aborted = True
+        print(f"\n  SPEND CEILING — run aborted: {exc}", file=sys.stderr)
+    finally:
+        if llm.guard is not None:
+            from core import spend as spend_module
+
+            spend_module.record_run(
+                llm.guard, channel=args.channel or "-", aborted=aborted
+            )
+            print(f"  spend: {llm.guard.summary()}")
+
+    if aborted:
+        return 3
 
     ctx.queue.save()
     ctx.radar.save()

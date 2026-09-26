@@ -18,5 +18,23 @@
   "_comment_draft_attempts": "INCIDENT FIX, 2026-09-21: publish_ranked() (core/pipeline.py) only stopped once `per_run_cap` posts had actually PUBLISHED — a candidate that failed verification (G1/G3) cost a full draft call and then the loop just moved to the next ranked candidate, with nothing counting the attempt itself. A research.yml run with a 96% quality-gate pass rate and a 74% G3 rejection rate burned 35 draft calls (438 model calls total) chasing 2 successful publishes. max_draft_attempts_per_run bounds the cost of a single run regardless of how many candidates it has to try — set well above what a normal run needs (per_run_cap, usually satisfied in 2-3 tries) so it only bites during an anomalous run like this one.",
   "max_draft_attempts_per_run": 8,
 
+  "_comment_spend": "THE MONEY CEILING, added 2026-09-26. Everything above counts POSTS; this counts calls and dollars, which is what actually gets billed. It exists because the caps above leave the expensive part of a run unbounded: classify and the quality gate run for EVERY surviving candidate, and why_relevant for every gate-passer, all before max_draft_attempts_per_run has anything to bite on. Of the 438 calls in the 21 September incident, roughly 340 were in that stage. feeds.fetch() takes 30 items PER SOURCE, so it scales with the number of feeds configured — and on the first run after new sources are added, deduplication removes none of them. Enforced inside core/llm.py, the one place a paid call can happen, so no channel or feed adapter added later can route around it. Crossing a ceiling raises BudgetExceeded and the run dies before committing anything: an incident to look at, not output to keep. max_model_calls_per_run is the price-independent backstop — it still holds when the prices below go stale, which they will.",
+  "spend": {
+    "max_model_calls_per_run": 150,
+    "max_spend_per_run_usd": 1.50,
+    "max_spend_per_day_usd": 4.00,
+    "max_spend_7d_usd": 15.00,
+
+    "_comment_prices": "USD per 1M tokens. ESTIMATES — confirm against current OpenAI pricing and correct them here; nothing else needs touching. A model missing from this table is charged at the most expensive rate in it, because an unpriced model is most likely a new one and guessing cheap is how a price table turns into a hole.",
+    "prices": {
+      "gpt-4o": { "input_per_1m": 2.50, "output_per_1m": 10.00 },
+      "gpt-4o-mini": { "input_per_1m": 0.15, "output_per_1m": 0.60 }
+    },
+    "fallback_price": { "input_per_1m": 10.00, "output_per_1m": 30.00 },
+
+    "_comment_unknown_usage": "Charged when a response reports no token usage. Pessimistic on purpose: charging zero would make a provider that stopped reporting usage look free, which is the one way this breaker could silently stop working.",
+    "unknown_usage_tokens": { "prompt": 4000, "completion": 1500 }
+  },
+
   "_comment_rollover": "Unused budget does NOT roll over. A quiet week is a quiet week, and a correct outcome rather than a failure to hit target (section 16). Nothing in ledger.py carries a remainder forward; this line exists so nobody adds it later thinking it was an oversight."
 }

@@ -37,6 +37,8 @@ import os
 import sys
 from typing import Any, Callable
 
+from .spend import BudgetExceeded
+
 # Same names and same defaults as the pre-refactor pipeline.
 BLOG_MODEL = os.environ.get("OPENAI_BLOG_MODEL", "gpt-4o")
 SUMMARY_MODEL = os.environ.get("OPENAI_SUMMARY_MODEL", "gpt-4o-mini")
@@ -50,16 +52,31 @@ OFFLINE = "offline"
 
 
 class LLM:
-    def __init__(self, mode: str | None = None):
+    def __init__(self, mode: str | None = None, guard=None):
         if mode is None:
             mode = LIVE if os.environ.get("OPENAI_API_KEY") else OFFLINE
         self.mode = mode
         self._client = None
         self.calls = 0
+        # The spend circuit breaker (core/spend.py). It lives here
+        # rather than in the pipeline on purpose: this class is the one
+        # place a paid call can happen, so a ceiling enforced here
+        # cannot be bypassed by a channel or a feed adapter added
+        # later. An offline run spends nothing and needs no guard.
+        if guard is None and self.mode == LIVE:
+            from . import spend
+
+            guard = spend.new_guard()
+            spend.preflight(guard)
+        self.guard = guard
 
     @property
     def offline(self) -> bool:
         return self.mode == OFFLINE
+
+    @property
+    def spend_usd(self) -> float:
+        return self.guard.run_usd if self.guard else 0.0
 
     def _openai(self):
         if self._client is None:
@@ -98,6 +115,12 @@ class LLM:
         if system:
             messages.append({"role": "system", "content": system})
         messages.append({"role": "user", "content": task})
+        # Outside the try: a ceiling has to interrupt the run, and the
+        # except below deliberately turns failures into None, which
+        # every caller reads as "skip this item and carry on" — the one
+        # behaviour that must not happen when the budget is spent.
+        if self.guard is not None:
+            self.guard.check_before_call(model, label)
         try:
             self.calls += 1
             response = self._openai().chat.completions.create(
@@ -106,7 +129,11 @@ class LLM:
                 response_format={"type": "json_object"},
                 temperature=temperature,
             )
+            if self.guard is not None:
+                self.guard.record(model, getattr(response, "usage", None))
             return json.loads(response.choices[0].message.content or "{}")
+        except BudgetExceeded:
+            raise
         except Exception as exc:  # noqa: BLE001 — one bad call, not a dead run
             print(f"    LLM call failed ({label or model}): {exc}", file=sys.stderr)
             return None
@@ -123,6 +150,8 @@ class LLM:
     ) -> str | None:
         if self.offline:
             return offline() if offline else None
+        if self.guard is not None:
+            self.guard.check_before_call(model, label)
         try:
             self.calls += 1
             response = self._openai().chat.completions.create(
@@ -131,7 +160,11 @@ class LLM:
                 temperature=temperature,
                 **({"max_tokens": max_tokens} if max_tokens else {}),
             )
+            if self.guard is not None:
+                self.guard.record(model, getattr(response, "usage", None))
             return (response.choices[0].message.content or "").strip()
+        except BudgetExceeded:
+            raise
         except Exception as exc:  # noqa: BLE001
             print(f"    LLM call failed ({label or model}): {exc}", file=sys.stderr)
             return None
