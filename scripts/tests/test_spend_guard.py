@@ -30,6 +30,7 @@ def make_guard(**over):
         max_run_usd=1.00,
         max_day_usd=4.00,
         max_7d_usd=15.00,
+        max_30d_usd=50.00,
         prices={
             "cheap": {"input_per_1m": 0.15, "output_per_1m": 0.60},
             "dear": {"input_per_1m": 2.50, "output_per_1m": 10.00},
@@ -193,3 +194,38 @@ def test_offline_runs_need_no_guard_and_spend_nothing():
     assert llm.guard is None
     assert llm.spend_usd == 0.0
     assert llm.json("x", model="cheap", offline=lambda: {"ok": True}) == {"ok": True}
+
+
+def test_the_month_is_the_actual_promise():
+    """Day and week ceilings bound a spike; neither bounds a month. At
+    ~23.5 runs/day a week under its cap four times over is still a
+    month over budget, so the 30-day window is the one that holds the
+    number the owner actually asked for."""
+    guard = make_guard(max_30d_usd=10.00, prior_30d_usd=9.99)
+    try:
+        guard.check_before_call("dear")
+    except BudgetExceeded as exc:
+        assert "30-day spend ceiling" in str(exc)
+    else:
+        raise AssertionError("a spent month should refuse the next call")
+
+
+def test_an_exhausted_month_refuses_the_run_outright():
+    guard = make_guard(max_30d_usd=10.00, prior_30d_usd=10.00)
+    try:
+        spend.preflight(guard)
+    except BudgetExceeded as exc:
+        assert "30-day" in str(exc) and "Not starting" in str(exc)
+    else:
+        raise AssertionError("an exhausted month should not start a run")
+
+
+def test_configured_ceilings_actually_add_up_to_the_monthly_promise():
+    """A day cap that multiplies out past the month cap is not wrong,
+    but it must not be the binding one — otherwise the month is bounded
+    by arithmetic nobody checked."""
+    cfg = spend.load_config()
+    assert cfg["max_spend_30d_usd"] <= 10.0, "the monthly promise moved"
+    assert cfg["max_spend_per_run_usd"] < cfg["max_spend_per_day_usd"]
+    assert cfg["max_spend_per_day_usd"] < cfg["max_spend_7d_usd"]
+    assert cfg["max_spend_7d_usd"] < cfg["max_spend_30d_usd"]

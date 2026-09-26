@@ -20,10 +20,12 @@
 
   "_comment_spend": "THE MONEY CEILING, added 2026-09-26. Everything above counts POSTS; this counts calls and dollars, which is what actually gets billed. It exists because the caps above leave the expensive part of a run unbounded: classify and the quality gate run for EVERY surviving candidate, and why_relevant for every gate-passer, all before max_draft_attempts_per_run has anything to bite on. Of the 438 calls in the 21 September incident, roughly 340 were in that stage. feeds.fetch() takes 30 items PER SOURCE, so it scales with the number of feeds configured — and on the first run after new sources are added, deduplication removes none of them. Enforced inside core/llm.py, the one place a paid call can happen, so no channel or feed adapter added later can route around it. Crossing a ceiling raises BudgetExceeded and the run dies before committing anything: an incident to look at, not output to keep. max_model_calls_per_run is the price-independent backstop — it still holds when the prices below go stale, which they will.",
   "spend": {
+    "_comment_ceilings": "Set against MEASURED volume, 2026-09-26, not guessed. state/rejected.jsonl over 13 active days shows ~23.5 runs/day (releases 15, research 3.6, security 4.9), and a median run processes 2 items on releases and 15-17 on research/security. Working that through the call structure — classify + gate per candidate, why_relevant per gate-passer, and a gpt-4o draft cycle per publish — lands near $0.31/day, about $9.40/month, which is why $10/month is achievable at today's volume but is not roomy. max_spend_30d_usd IS the monthly promise; the shorter windows exist to catch a spike long before it gets there, and are set with enough headroom that normal variance does not trip them. The earlier values ($1.50/$4/$15) would have allowed roughly $120/month — they were spike protection, never a monthly budget.",
     "max_model_calls_per_run": 150,
-    "max_spend_per_run_usd": 1.50,
-    "max_spend_per_day_usd": 4.00,
-    "max_spend_7d_usd": 15.00,
+    "max_spend_per_run_usd": 0.15,
+    "max_spend_per_day_usd": 0.75,
+    "max_spend_7d_usd": 3.00,
+    "max_spend_30d_usd": 10.00,
 
     "_comment_prices": "USD per 1M tokens. ESTIMATES — confirm against current OpenAI pricing and correct them here; nothing else needs touching. A model missing from this table is charged at the most expensive rate in it, because an unpriced model is most likely a new one and guessing cheap is how a price table turns into a hole.",
     "prices": {

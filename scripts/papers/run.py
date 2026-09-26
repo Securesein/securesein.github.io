@@ -41,6 +41,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from core.llm import LLM, OFFLINE  # noqa: E402
+from core.spend import BudgetExceeded  # noqa: E402
 from telegram import api  # noqa: E402
 
 FEED_URL = "https://rss.arxiv.org/rss/cs.LG+cs.CL+cs.AI+cs.NE+stat.ML"
@@ -295,8 +296,29 @@ def main(argv: list[str] | None = None) -> int:
     survivors = keyword_prefilter(items, profile)
     print(f"  {len(survivors)} survive the keyword prefilter (cap {KEYWORD_SURVIVOR_CAP})")
 
-    llm = LLM(OFFLINE if args.offline_llm else None)
-    scored = triage(llm, survivors, max_calls=budget["max_llm_calls_per_run"])
+    # The ceilings apply here automatically (LLM builds its own guard),
+    # but this entrypoint has to record what it spent or the day, week
+    # and month windows would never see it — every later run would then
+    # be measuring against a total that silently excludes this one.
+    from core import spend as spend_module
+
+    try:
+        llm = LLM(OFFLINE if args.offline_llm else None)
+    except BudgetExceeded as exc:
+        print(f"\n  SPEND CEILING — run refused before it started: {exc}", file=sys.stderr)
+        return 3
+
+    try:
+        scored = triage(llm, survivors, max_calls=budget["max_llm_calls_per_run"])
+    except BudgetExceeded as exc:
+        print(f"\n  SPEND CEILING — run aborted: {exc}", file=sys.stderr)
+        spend_module.record_run(llm.guard, channel="papers", aborted=True)
+        return 3
+    finally:
+        if llm.guard is not None and llm.guard.calls:
+            print(f"  spend: {llm.guard.summary()}")
+
+    spend_module.record_run(llm.guard, channel="papers")
     print(f"  {len(scored)} scored by triage ({llm.calls} model call(s))")
 
     picks = rank_and_cap(scored)

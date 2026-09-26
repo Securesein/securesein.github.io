@@ -69,11 +69,13 @@ class SpendGuard:
     max_run_usd: float
     max_day_usd: float
     max_7d_usd: float
+    max_30d_usd: float
     prices: dict[str, dict[str, float]]
     fallback_price: dict[str, float]
     unknown_usage_tokens: dict[str, int]
     prior_day_usd: float = 0.0
     prior_7d_usd: float = 0.0
+    prior_30d_usd: float = 0.0
 
     calls: int = 0
     run_usd: float = 0.0
@@ -150,6 +152,13 @@ class SpendGuard:
                 f"${week:.2f} this week + ~${reserve:.2f} reserved "
                 f"(max ${self.max_7d_usd:.2f}){where}."
             )
+        month = self.prior_30d_usd + self.run_usd
+        if month + reserve >= self.max_30d_usd:
+            raise BudgetExceeded(
+                f"30-day spend ceiling would be crossed by the next call: "
+                f"${month:.2f} over the rolling month + ~${reserve:.2f} reserved "
+                f"(max ${self.max_30d_usd:.2f}){where}."
+            )
 
     def record(self, model: str, usage: object | None) -> float:
         """Charge one completed call. `usage` is the SDK's usage object;
@@ -191,6 +200,8 @@ class SpendGuard:
         parts.append(f"~${day:.2f} today of ${self.max_day_usd:.2f}")
         week = self.prior_7d_usd + self.run_usd
         parts.append(f"~${week:.2f} this week of ${self.max_7d_usd:.2f}")
+        month = self.prior_30d_usd + self.run_usd
+        parts.append(f"~${month:.2f} this month of ${self.max_30d_usd:.2f}")
         return "; ".join(parts)
 
 
@@ -244,12 +255,14 @@ def new_guard(*, now: datetime | None = None) -> SpendGuard:
         max_calls_per_run=int(cfg.get("max_model_calls_per_run", 150)),
         max_run_usd=float(cfg.get("max_spend_per_run_usd", 1.50)),
         max_day_usd=float(cfg.get("max_spend_per_day_usd", 4.00)),
-        max_7d_usd=float(cfg.get("max_spend_7d_usd", 15.00)),
+        max_7d_usd=float(cfg.get("max_spend_7d_usd", 3.00)),
+        max_30d_usd=float(cfg.get("max_spend_30d_usd", 10.00)),
         prices=cfg.get("prices", {}),
         fallback_price=cfg.get("fallback_price", {"input_per_1m": 10.0, "output_per_1m": 30.0}),
         unknown_usage_tokens=cfg.get("unknown_usage_tokens", {"prompt": 4000, "completion": 1500}),
         prior_day_usd=_window_total(entries, days=1, now=now),
         prior_7d_usd=_window_total(entries, days=7, now=now),
+        prior_30d_usd=_window_total(entries, days=30, now=now),
     )
 
 
@@ -265,6 +278,11 @@ def preflight(guard: SpendGuard) -> None:
         raise BudgetExceeded(
             f"7-day spend ceiling already reached before this run: "
             f"${guard.prior_7d_usd:.2f} of ${guard.max_7d_usd:.2f}. Not starting."
+        )
+    if guard.prior_30d_usd >= guard.max_30d_usd:
+        raise BudgetExceeded(
+            f"30-day spend ceiling already reached before this run: "
+            f"${guard.prior_30d_usd:.2f} of ${guard.max_30d_usd:.2f}. Not starting."
         )
 
 
