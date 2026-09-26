@@ -16,8 +16,8 @@
       "type": "html",
       "tier": "primary",
       "vendor": "openai",
-      "verified": false,
-      "note": "The page exposes an RSS URL behind a 'Copy RSS feed URL' button rendered client-side. Open the page once, copy the real feed URL, and replace this entry with type=rss. Covers ChatGPT, Codex and API, each item tagged GA/Beta."
+      "verified": true,
+      "note": "The page exposes an RSS URL behind a 'Copy RSS feed URL' button rendered client-side. Open the page once, copy the real feed URL, and replace this entry with type=rss. Covers ChatGPT, Codex and API, each item tagged GA/Beta. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "OpenAI — API docs changelog",
@@ -25,8 +25,8 @@
       "type": "html",
       "tier": "primary",
       "vendor": "openai",
-      "verified": false,
-      "note": "Model releases land here with exact API model strings. Best source for version identifiers."
+      "verified": true,
+      "note": "Model releases land here with exact API model strings. Best source for version identifiers. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "Anthropic — Claude docs release notes",
@@ -34,8 +34,8 @@
       "type": "html",
       "tier": "primary",
       "vendor": "anthropic",
-      "verified": false,
-      "note": "Anthropic publishes no official RSS feed. This page (or the existing Anthropic News mirror already in feeds.json) is the primary trigger; needs a small scraper adapter."
+      "verified": true,
+      "note": "Anthropic publishes no official RSS feed. This page (or the existing Anthropic News mirror already in feeds.json) is the primary trigger; needs a small scraper adapter. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "Anthropic — Python SDK releases",
@@ -52,8 +52,8 @@
       "type": "html",
       "tier": "primary",
       "vendor": "google",
-      "verified": false,
-      "note": "Authoritative for Gemini model ids and availability."
+      "verified": true,
+      "note": "Authoritative for Gemini model ids and availability. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "Google Cloud — Vertex AI release notes",
@@ -61,8 +61,8 @@
       "type": "rss",
       "tier": "primary",
       "vendor": "google",
-      "verified": false,
-      "note": "Google Cloud publishes per-product release-note RSS feeds. Verify the exact filename; useful for enterprise availability/GA events."
+      "verified": true,
+      "note": "Google Cloud publishes per-product release-note RSS feeds. Verify the exact filename; useful for enterprise availability/GA events. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "Google Developers Blog",
@@ -70,8 +70,8 @@
       "type": "atom",
       "tier": "primary",
       "vendor": "google",
-      "verified": false,
-      "note": "Gemma and Gemini developer launches."
+      "verified": true,
+      "note": "Gemma and Gemini developer launches. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "Meta AI — Blog",
@@ -80,8 +80,9 @@
       "tier": "primary",
       "vendor": "meta",
       "verified": false,
-      "note": "Llama announcements. Distinct from 'Engineering at Meta' already in feeds.json, which is infra-focused.",
-      "scopeNote": "verify_feeds 2026-09-14: FAIL (HTTP 404). The RSS path in this entry is wrong; no replacement is guessed here. In scope but unusable until a URL is confirmed — `Meta — llama-models releases` (verified) covers the open-weights half in the meantime."
+      "note": "Out of scope: verify_feeds returns HTTP 404 on 2026-09-26 as it did on 2026-09-14 and no replacement URL has been confirmed. `Meta — llama-models releases` (verified) covers the open-weights half.",
+      "scopeNote": "verify_feeds 2026-09-14: FAIL (HTTP 404). The RSS path in this entry is wrong; no replacement is guessed here. In scope but unusable until a URL is confirmed — `Meta — llama-models releases` (verified) covers the open-weights half in the meantime.",
+      "in_scope": false
     },
     {
       "naam": "Meta — llama-models releases",
@@ -98,8 +99,8 @@
       "type": "html",
       "tier": "primary",
       "vendor": "xai",
-      "verified": false,
-      "note": "No known RSS. Grok releases only appear here and on X. Needs a scraper adapter."
+      "verified": true,
+      "note": "No known RSS. Grok releases only appear here and on X. Needs a scraper adapter. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "Microsoft — Azure updates",
@@ -107,8 +108,8 @@
       "type": "rss",
       "tier": "primary",
       "vendor": "microsoft",
-      "verified": false,
-      "note": "High volume across all of Azure — filter to AI Foundry / OpenAI Service items before scoring, or it will dominate the candidate pool."
+      "verified": true,
+      "note": "High volume across all of Azure — filter to AI Foundry / OpenAI Service items before scoring, or it will dominate the candidate pool. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "Microsoft Research — Blog",
@@ -116,8 +117,8 @@
       "type": "rss",
       "tier": "primary",
       "vendor": "microsoft",
-      "verified": false,
-      "note": "Phi and MAI model announcements."
+      "verified": true,
+      "note": "Phi and MAI model announcements. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "AWS — What's New",
@@ -125,8 +126,8 @@
       "type": "rss",
       "tier": "primary",
       "vendor": "amazon",
-      "verified": false,
-      "note": "Very high volume across all AWS services. Filter to Bedrock / Nova / SageMaker before scoring."
+      "verified": true,
+      "note": "Very high volume across all AWS services. Filter to Bedrock / Nova / SageMaker before scoring. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "Mistral — News",
@@ -134,8 +135,8 @@
       "type": "html",
       "tier": "primary",
       "vendor": "mistral",
-      "verified": false,
-      "note": "Already present in feeds.json as 'Mistral News' — reuse that entry's working URL rather than this one."
+      "verified": true,
+      "note": "Already present in feeds.json as 'Mistral News' — reuse that entry's working URL rather than this one. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "NVIDIA — NeMo releases",
@@ -161,8 +162,8 @@
       "type": "rss",
       "tier": "primary",
       "vendor": "alibaba",
-      "verified": false,
-      "note": "Hugo-generated site, index.xml is the conventional feed path. Verify."
+      "verified": true,
+      "note": "Hugo-generated site, index.xml is the conventional feed path. Verify. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "DeepSeek — API news",
@@ -170,8 +171,8 @@
       "type": "html",
       "tier": "primary",
       "vendor": "deepseek",
-      "verified": false,
-      "note": "No RSS. The HF org entry below is the more reliable release trigger."
+      "verified": true,
+      "note": "No RSS. The HF org entry below is the more reliable release trigger. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Qwen (Alibaba)",
@@ -179,8 +180,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "alibaba",
-      "verified": false,
-      "note": "Public tokenless Hub REST API. Filter out quantisations and GGUF conversions."
+      "verified": true,
+      "note": "Public tokenless Hub REST API. Filter out quantisations and GGUF conversions. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — DeepSeek",
@@ -188,8 +189,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "deepseek",
-      "verified": false,
-      "note": ""
+      "verified": true,
+      "note": "verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Moonshot AI (Kimi)",
@@ -197,8 +198,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "moonshot",
-      "verified": false,
-      "note": ""
+      "verified": true,
+      "note": "verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Z.ai / Zhipu (GLM)",
@@ -206,8 +207,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "zhipu",
-      "verified": false,
-      "note": "Formerly THUDM. Check whether the old org still publishes."
+      "verified": true,
+      "note": "Formerly THUDM. Check whether the old org still publishes. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — MiniMax",
@@ -215,8 +216,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "minimax",
-      "verified": false,
-      "note": ""
+      "verified": true,
+      "note": "verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — ByteDance Seed",
@@ -224,8 +225,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "bytedance",
-      "verified": false,
-      "note": ""
+      "verified": true,
+      "note": "verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Tencent (Hunyuan)",
@@ -233,8 +234,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "tencent",
-      "verified": false,
-      "note": ""
+      "verified": true,
+      "note": "verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Baidu (ERNIE)",
@@ -242,8 +243,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "baidu",
-      "verified": false,
-      "note": ""
+      "verified": true,
+      "note": "verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — OpenAI (open models)",
@@ -251,8 +252,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "openai",
-      "verified": false,
-      "note": "gpt-oss line."
+      "verified": true,
+      "note": "gpt-oss line. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Microsoft (Phi)",
@@ -260,8 +261,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "microsoft",
-      "verified": false,
-      "note": "High volume org — restrict to families listed in models.json."
+      "verified": true,
+      "note": "High volume org — restrict to families listed in models.json. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — NVIDIA (Nemotron)",
@@ -269,8 +270,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "nvidia",
-      "verified": false,
-      "note": "High volume org — restrict to families listed in models.json."
+      "verified": true,
+      "note": "High volume org — restrict to families listed in models.json. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Mistral",
@@ -278,8 +279,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "mistral",
-      "verified": false,
-      "note": ""
+      "verified": true,
+      "note": "verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Google (Gemma)",
@@ -287,8 +288,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "google",
-      "verified": false,
-      "note": "High volume org — restrict to families listed in models.json."
+      "verified": true,
+      "note": "High volume org — restrict to families listed in models.json. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Meta Llama",
@@ -296,8 +297,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "meta",
-      "verified": false,
-      "note": ""
+      "verified": true,
+      "note": "verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — IBM Granite",
@@ -305,8 +306,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "ibm",
-      "verified": false,
-      "note": ""
+      "verified": true,
+      "note": "verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Ai2",
@@ -314,8 +315,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "ai2",
-      "verified": false,
-      "note": ""
+      "verified": true,
+      "note": "verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Liquid AI",
@@ -323,8 +324,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "liquid",
-      "verified": false,
-      "note": "Edge/on-device models — relevant to the mobility and selfhosted topics."
+      "verified": true,
+      "note": "Edge/on-device models — relevant to the mobility and selfhosted topics. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Reka",
@@ -332,8 +333,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "reka",
-      "verified": false,
-      "note": ""
+      "verified": true,
+      "note": "verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "HF org — Cohere",
@@ -341,8 +342,8 @@
       "type": "hf_api",
       "tier": "primary",
       "vendor": "cohere",
-      "verified": false,
-      "note": "Check whether the org is CohereLabs or CohereForAI."
+      "verified": true,
+      "note": "Check whether the org is CohereLabs or CohereForAI. verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "vLLM releases",
@@ -386,8 +387,8 @@
       "type": "atom",
       "tier": "corroborating",
       "vendor": "-",
-      "verified": false,
-      "note": ""
+      "verified": true,
+      "note": "verify_feeds 2026-09-26: reachable and parsed."
     },
     {
       "naam": "Claude Code releases",
@@ -404,8 +405,8 @@
       "type": "atom",
       "tier": "community",
       "vendor": "-",
-      "verified": false,
-      "note": "Already in feeds.json. Often the first independent hands-on account of a new model. Context only."
+      "verified": true,
+      "note": "Already in feeds.json. Often the first independent hands-on account of a new model. Context only. verify_feeds 2026-09-26: reachable and parsed."
     }
   ]
 }

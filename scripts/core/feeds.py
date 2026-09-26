@@ -14,8 +14,12 @@ description of where release news lives some time ago:
   hf_api       the Hugging Face Hub REST API, public and tokenless,
                sorted by createdAt — the only first-party, timestamped
                release signal several open-weights labs have
-  html         no adapter here; these need a bespoke scraper and are
-               skipped with a log line rather than silently ignored
+  html         vendor changelog and announcement pages that publish
+               no feed at all. Added 2026-09-26: these used to be
+               skipped, which meant Anthropic and xAI had no working
+               primary trigger of any kind — Claude Opus 5.5 was
+               announced on docs.claude.com and the pipeline could not
+               read the page it was announced on.
 
 `tier` is enforced in *code*, not in a prompt (brief §6.2): only a
 `primary` source can trigger a post, a `corroborating` source can add
@@ -185,7 +189,9 @@ def fetch(source: Source, limit: int = 30) -> list[Item]:
             return _fetch_hf(source, limit)
         if source.type == "json":
             return _fetch_json(source, limit)
-        if source.type in ("html", "api", "git", "python_client"):
+        if source.type == "html":
+            return _fetch_html(source, limit)
+        if source.type in ("api", "git", "python_client"):
             print(
                 f"    {source.name}: type '{source.type}' needs a bespoke adapter "
                 f"— skipped, not failed.",
@@ -219,6 +225,128 @@ def _fetch_feed(source: Source, limit: int) -> list[Item]:
                 published=_iso(entry.get("published", "") or entry.get("updated", "")),
             )
         )
+    return items
+
+
+_DATE_HEADING = re.compile(
+    r"^((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*)\s+(\d{1,2}),\s*(\d{4})"
+)
+_MONTHS = {m: i for i, m in enumerate(
+    ["jan", "feb", "mar", "apr", "may", "jun",
+     "jul", "aug", "sep", "oct", "nov", "dec"], start=1)}
+
+
+def _heading_date(text: str) -> str:
+    """ISO date out of a 'September 22, 2026' heading, or ''."""
+    match = _DATE_HEADING.match(text.strip())
+    if not match:
+        return ""
+    month = _MONTHS.get(match.group(1)[:3].lower())
+    if not month:
+        return ""
+    try:
+        return datetime(int(match.group(3)), month, int(match.group(2)),
+                        tzinfo=timezone.utc).isoformat()
+    except ValueError:
+        return ""
+
+
+def _fetch_html(source: Source, limit: int) -> list[Item]:
+    """Vendor changelog and announcement pages that publish no feed.
+
+    Two shapes, because the pages come in two:
+
+    - A CHANGELOG keyed by date ("September 22, 2026"), where one date
+      holds several unrelated changes — a billing note, a compliance
+      change and a model launch all sit under the same heading. Each
+      bullet becomes its own item rather than one item per date, so a
+      launch is classified on its own words instead of being averaged
+      in with whatever else shipped that day.
+    - An INDEX keyed by post title ("Introducing Grok 4.7"), the
+      ordinary blog listing, where the heading is the item.
+
+    Deliberately conservative about dates. There is no feed to trust
+    here, so an entry with no date on the page gets no date rather than
+    today's: the release channel's age filter is what stops a back
+    catalogue being read as this morning, and defaulting to now is
+    precisely the value that would defeat it.
+    """
+    from bs4 import BeautifulSoup
+
+    response = _get(source.url)
+    if response.status_code != 200:
+        print(f"    {source.name}: HTTP {response.status_code}", file=sys.stderr)
+        return []
+
+    soup = BeautifulSoup(response.text, "html.parser")
+    for tag in soup(["script", "style", "nav", "header", "footer", "form"]):
+        tag.decompose()
+
+    base = "/".join(source.url.split("/")[:3])
+    items: list[Item] = []
+    seen_text: set[str] = set()
+
+    headings = soup.find_all(re.compile("^h[1-4]$"))
+    # Decide the shape once, for the whole page, rather than per
+    # heading. A changelog also carries page furniture — "Cookie
+    # settings", "On this page" — and treating those as index-shaped
+    # entries turns cookie banners into release candidates.
+    is_changelog = any(
+        _heading_date(re.sub(r"[-]", "", h.get_text(" ", strip=True)).strip())
+        for h in headings
+    )
+
+    for heading in headings:
+        # these doc sites append an anchor-link glyph from the private
+        # use area to every heading
+        label = re.sub(r"[-]", "", heading.get_text(" ", strip=True)).strip()
+        if not label:
+            continue
+
+        published = _heading_date(label)
+
+        if published:
+            for node in heading.find_all_next():
+                if node.name and re.match("^h[1-4]$", node.name):
+                    break
+                if node.name not in ("li", "p"):
+                    continue
+                text = node.get_text(" ", strip=True)
+                if len(text) < 30 or text in seen_text:
+                    continue
+                seen_text.add(text)
+                anchor = heading.get("id") or ""
+                items.append(Item(
+                    id=short_id(f"{source.url}#{text[:160]}"),
+                    title=text[:180],
+                    url=f"{source.url}#{anchor}" if anchor else source.url,
+                    source=source,
+                    summary=text[:2000],
+                    published=published,
+                ))
+                if len(items) >= limit:
+                    return items
+        elif not is_changelog:
+            if len(label) < 12 or label in seen_text:
+                continue
+            link = (heading.find("a", href=True)
+                    or heading.find_parent("a", href=True)
+                    or heading.find_next("a", href=True))
+            href = link["href"] if link is not None else ""
+            if href.startswith("/"):
+                href = base + href
+            seen_text.add(label)
+            items.append(Item(
+                id=short_id(f"{source.url}#{label}"),
+                title=label[:180],
+                url=href or source.url,
+                source=source,
+                summary=label[:2000],
+                published="",
+            ))
+            if len(items) >= limit:
+                return items
+
     return items
 
 

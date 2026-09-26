@@ -27,9 +27,14 @@ TIMEOUT = 20
 
 # Types that are fetched and parsed as feeds; others are checked for
 # reachability only, since they need a bespoke adapter anyway.
+#
+# html is no longer probe-only: core/feeds.py grew an adapter for it on
+# 2026-09-26, so the report should say whether the page actually yields
+# items rather than just that it answers.
 FEED_TYPES = {"rss", "atom"}
 JSON_TYPES = {"json", "hf_api"}
-PROBE_ONLY = {"html", "git", "api", "python_client"}
+PROBE_ONLY = {"git", "api", "python_client"}
+ADAPTED = {"html"}
 
 
 def check(entry):
@@ -61,6 +66,23 @@ def check(entry):
             data = r.json()
             n = len(data) if isinstance(data, list) else 1
             return name, kind, "OK", f"json ok, {n} records"
+
+        if kind in ADAPTED:
+            # Run the real adapter, so the report answers the question
+            # that matters — does this page yield items? — instead of
+            # only whether it answers an HTTP request.
+            import sys as _sys, pathlib as _pl
+            _sys.path.insert(0, str(_pl.Path(__file__).resolve().parent))
+            from core.feeds import Source, _fetch_html
+
+            items = _fetch_html(
+                Source(name=name, url=url, type="html", tier="primary", vendor="-"),
+                limit=30,
+            )
+            if not items:
+                return name, kind, "FAIL", "adapter parsed no items from the page"
+            dated = sum(1 for i in items if i.published)
+            return name, kind, "OK", f"{len(items)} items via html adapter, {dated} dated"
 
         if kind in PROBE_ONLY:
             r = requests.get(

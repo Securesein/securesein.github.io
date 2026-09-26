@@ -204,11 +204,12 @@ def _seen() -> tuple[set[str], bool]:
     way (see `is_first_run` in fetch_and_notify.py); this is the same
     protection."""
     if not SEEN_RELEASES_FILE.exists():
-        return set(), True
-    return set(read_json(SEEN_RELEASES_FILE, {"ids": []})["ids"]), False
+        return set(), True, set()
+    state = read_json(SEEN_RELEASES_FILE, {"ids": [], "sources": []})
+    return set(state["ids"]), False, set(state.get("sources", []))
 
 
-def _remember(ids: set[str], dry_run: bool) -> None:
+def _remember(ids: set[str], dry_run: bool, sources: set[str] | None = None) -> None:
     """Written in a dry run too, deliberately.
 
     This file is a *cursor*, not a publication record — the same
@@ -221,7 +222,10 @@ def _remember(ids: set[str], dry_run: bool) -> None:
     """
     # Bounded: the oldest ids can never come back as new, because the
     # recency window would drop them anyway.
-    write_json(SEEN_RELEASES_FILE, {"ids": sorted(ids)[-20000:]})
+    write_json(SEEN_RELEASES_FILE, {
+        "ids": sorted(ids)[-20000:],
+        "sources": sorted(sources or []),
+    })
     if dry_run:
         print(f"    [dry-run] {len(ids)} item id(s) recorded as seen "
               f"(a cursor, not a publication).")
@@ -282,15 +286,30 @@ def gather(ctx, config: dict, sources=None) -> list[Item]:
         return load_fixture(path)
 
     sources = sources if sources is not None else load_sources(FEEDS_RELEASES_FILE)
-    seen, first_run = _seen()
+    seen, first_run, known_sources = _seen()
     max_age = int(config.get("max_item_age_days", 14))
 
     items: list[Item] = []
     everything: set[str] = set(seen)
+    sources_now: set[str] = set(known_sources)
     for source in sources:
+        # A source running for the FIRST time gets the same baseline
+        # the channel itself gets on its first run: everything it shows
+        # is recorded as seen and nothing is published from it.
+        #
+        # Without this, adding a feed is a spike. Every item on it is
+        # unseen, so dedup removes none of them, and the age filter
+        # cannot help where a page carries no dates — _older_than
+        # treats a missing timestamp as "not evidence of age" and lets
+        # it through, which is right for a real feed and exactly wrong
+        # for an entire back catalogue arriving at once. x.ai/news
+        # lists thirty undated posts.
+        new_source = source.name not in known_sources
+        sources_now.add(source.name)
+
         for item in fetch(source, limit=ctx.limit or 30):
             everything.add(item.id)
-            if item.id in seen:
+            if new_source or item.id in seen:
                 continue
             if not _passes_volume_filter(item, config):
                 continue
@@ -304,10 +323,15 @@ def gather(ctx, config: dict, sources=None) -> list[Item]:
     if first_run:
         print(f"  First run: recording a baseline of {len(everything)} item(s) "
               f"and publishing nothing. Future runs only see what is new.")
-        _remember(everything, ctx.dry_run)
+        _remember(everything, ctx.dry_run, sources_now)
         return []
 
-    _remember(everything, ctx.dry_run)
+    baselined = sources_now - known_sources
+    if baselined:
+        print(f"  {len(baselined)} new source(s) baselined, publishing nothing from "
+              f"them this run: {', '.join(sorted(baselined))}")
+
+    _remember(everything, ctx.dry_run, sources_now)
     return items
 
 
