@@ -21592,8 +21592,8 @@
         "llms"
       ],
       "qualityScore": 100.0,
-      "relevanceScore": 65.2,
-      "whyRelevant": "This research explores training techniques that could enhance reasoning and inference efficiency in LLMs, relevant for understanding their internal mechanisms.",
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research explores training methods that could enhance reasoning in LLMs, relevant for understanding their internal mechanisms and improving inference efficiency.",
       "seenAt": "2026-09-25T06:02:26+00:00",
       "status": "radar"
     },
@@ -22136,8 +22136,8 @@
         "training"
       ],
       "qualityScore": 80.0,
-      "relevanceScore": 65.2,
-      "whyRelevant": "This research explores how LLMs can uncover mathematical concepts, which may enhance understanding of their reasoning capabilities and internal mechanisms.",
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research explores how LLMs can uncover mathematical concepts, which may inform their reasoning capabilities and enhance interpretability in mechanistic understanding.",
       "seenAt": "2026-09-25T06:04:04+00:00",
       "status": "radar"
     },
@@ -23273,6 +23273,141 @@
       "relevanceScore": 52.7,
       "whyRelevant": "This item discusses advancements in LLMs that may enhance understanding of their internal mechanisms and improve security and efficiency in deployment.",
       "seenAt": "2026-09-25T22:16:37+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r01f7307cc32e08e",
+      "url": "https://arxiv.org/abs/2609.29647",
+      "title": "AgentKernel: The Trust-Native Agentic Operating System",
+      "source": "Hugging Face Daily Papers",
+      "section": "security",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 51.3,
+      "whyRelevant": "This item discusses security in AI agents, relevant for understanding vulnerabilities and trust in LLMs and their deployment in production environments.",
+      "seenAt": "2026-09-26T02:16:09+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r4f4d73f250bfa15",
+      "url": "https://arxiv.org/abs/2609.23087",
+      "title": "Neural Spectral Capacity: Measuring and Designing Architectures from Network Specification Alone",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This research provides insights into neural architecture design, which can enhance understanding of LLMs' internal mechanisms and improve model efficiency in production.",
+      "seenAt": "2026-09-26T02:16:11+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1e8005d12d4b0bd",
+      "url": "https://arxiv.org/abs/2609.23407",
+      "title": "OmniEcho: Spatial Audio Understanding for Embodied Agents",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "multimodal",
+        "agents",
+        "reasoning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 46.5,
+      "whyRelevant": "This research on spatial audio understanding may provide insights into multimodal reasoning for LLMs, relevant for enhancing agent security and inference efficiency.",
+      "seenAt": "2026-09-26T02:16:13+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc46d52807fbdd36",
+      "url": "https://arxiv.org/abs/2609.28923",
+      "title": "ViRDM: Taming Representation Distribution Matching for Few-Step Causal Video Generation",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "evaluation",
+        "deep-learning"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "This research on causal video generation may provide insights into representation learning and inference efficiency relevant to LLMs and their deployment.",
+      "seenAt": "2026-09-26T02:16:23+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r934293d267d82cf",
+      "url": "https://arxiv.org/abs/2609.29429",
+      "title": "Just Ask Jev: Reinforcement Learning for Calibrated Decisions as a Zero-Shot Detector of AI Alignment Failures",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "ai-safety",
+        "reinforcement-learning",
+        "llms"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 60.5,
+      "whyRelevant": "This research explores reinforcement learning techniques that could enhance LLM alignment and decision-making, relevant for understanding internal mechanisms and improving model safety.",
+      "seenAt": "2026-09-26T02:16:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc87c547131f276d",
+      "url": "https://arxiv.org/abs/2609.29816",
+      "title": "AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "generative-ai",
+        "reinforcement-learning",
+        "multimodal"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 50.5,
+      "whyRelevant": "This research explores reinforcement learning in multimodal contexts, which may inform mechanisms for improving LLM reasoning and inference efficiency.",
+      "seenAt": "2026-09-26T02:16:27+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra7fa72d763d6f21",
+      "url": "https://arxiv.org/abs/2609.29837",
+      "title": "PUBG Ally: A Conversational Embodied Agent as an AI Teammate",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "llms",
+        "training"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This research on conversational agents may provide insights into LLM behavior and deployment strategies, relevant for understanding agent security and inference efficiency.",
+      "seenAt": "2026-09-26T02:16:29+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rea6c86cac89301b",
+      "url": "https://arxiv.org/abs/2609.30233",
+      "title": "Coding Agents for Generalized Task and Motion Planning Problems",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reasoning",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This research explores agent design for task and motion planning, relevant for understanding LLM reasoning and improving inference efficiency in practical applications.",
+      "seenAt": "2026-09-26T02:16:31+00:00",
       "status": "radar"
     }
   ]
