@@ -23491,6 +23491,22 @@
       "whyRelevant": "This item discusses advancements in deep learning that could enhance understanding of LLM mechanisms and improve model deployment and inference efficiency.",
       "seenAt": "2026-09-27T14:16:41+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r1de35c88416ecaa",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11223",
+      "title": "b11223",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "multimodal"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This item discusses advancements in LLMs that may impact their internal mechanisms and deployment strategies, relevant to your interests in model efficiency and security.",
+      "seenAt": "2026-09-27T22:16:35+00:00",
+      "status": "radar"
     }
   ]
 }
