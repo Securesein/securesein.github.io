@@ -152,13 +152,34 @@ const blog = defineCollection({
         .optional(),
     })
     // Existing rules, unchanged ------------------------------------
+    //
+    // A Scout post publishes without anyone reading it first, so it has
+    // to carry something a reader can check it against. Usually that is
+    // the article it was written from.
+    //
+    // A benchmark roundup has no single such article: it is written
+    // from the measurement collection, often dozens of rows at once,
+    // and `benchmarkRefs` is where that provenance lives. Those refs
+    // are not the weaker claim — every id is checked against the
+    // benchmarks collection in check_content_warnings.mjs and a
+    // dangling one fails the build — so they satisfy the same
+    // requirement by another route.
+    //
+    // Not a theoretical gap: render() always writes credit "scout",
+    // and the benchmarks channel passes refs and no source. Every run
+    // from 2026-09-22 on therefore wrote its post, failed the build on
+    // this rule, and threw the whole run away — six days of a channel
+    // doing nothing while its workflow went red unnoticed.
     .refine(
       (d) =>
         d.credit !== "scout" ||
         d.source !== undefined ||
+        d.benchmarkRefs.length > 0 ||
         d.pubDate < SCHEMA_CUTOVER,
       {
-        message: "Scout posts must carry their source",
+        message:
+          "Scout posts must carry their provenance: a source, or the " +
+          "benchmarkRefs they were written from",
         path: ["source"],
       }
     )
