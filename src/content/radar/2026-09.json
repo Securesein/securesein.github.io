@@ -23459,6 +23459,23 @@
       "whyRelevant": "This benchmark provides data for evaluating RGB-D models, which can inform mechanistic interpretability and efficiency in reasoning for LLMs.",
       "seenAt": "2026-09-27T02:16:34+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r5b5b912f3b2c841",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11207",
+      "title": "b11207",
+      "source": "llama.cpp Releases",
+      "section": "release",
+      "topics": [
+        "llms",
+        "deep-learning",
+        "inference"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This item discusses LLM inference techniques, which are crucial for understanding internal workings and improving reasoning efficiency in model deployment.",
+      "seenAt": "2026-09-27T10:16:33+00:00",
+      "status": "radar"
     }
   ]
 }
