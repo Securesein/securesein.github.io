@@ -80,6 +80,12 @@ CHANNEL = "releases"
 # The section this channel publishes into. Budgets are keyed by SECTION,
 # not by channel — see core/ledger.py.
 SECTION = "release"
+
+# How often one queued candidate may be attempted before it is dropped
+# instead of retried. Three is well above what a transient failure
+# needs (a flaky fetch, one malformed response) and far below the ~168
+# attempts a seven-day TTL allowed at hourly runs.
+MAX_PUBLISH_ATTEMPTS = 3
 CONFIG_FILE = CONFIG_DIR / "releases.json"
 
 # How recently a corroborating source has to have said the same thing
@@ -545,9 +551,22 @@ def run(ctx) -> int:
             # also put on the Radar, so the digest can show what was
             # held back rather than only what was published.
             break
+        # The backstop under the specific drops inside publish_one: no
+        # matter WHY a candidate keeps failing, it stops being retried.
+        # Without this the only thing that ever removed a failing row
+        # was the seven-day TTL, at one expensive draft call per run
+        # until then.
+        attempts = queue.record_attempt(row)
         if publish_one(ctx, row, entities):
             queue.drop(row)
             published += 1
+        elif attempts >= MAX_PUBLISH_ATTEMPTS:
+            queue.drop(row)
+            reject(CHANNEL, "publish_attempts_exhausted", title=row["title"],
+                   url=row["url"], score=row.get("score"),
+                   detail=f"failed to publish {attempts} times; dropped rather "
+                          f"than retried every run until the TTL",
+                   dry_run=ctx.dry_run)
 
     entities.save()
     return published
@@ -610,9 +629,16 @@ def _draft(ctx, row: dict, source_text: str, topics: dict) -> dict | None:
     if not isinstance(data, dict):
         return None
     if data.get("insufficient"):
+        # A verdict about the source text, not a transient failure: the
+        # same page next hour yields the same answer. Left in the queue
+        # it is redrafted on the expensive model every run until the
+        # TTL expires it a week later, which is exactly what happened
+        # 184 times to one Hugging Face repo.
+        ctx.queue.drop(row)
         reject(CHANNEL, "no_product_angle", title=row["title"], url=row["url"],
                detail="the model could not fill what-changed and where-to-run "
-                      "from the source",
+                      "from the source; dropped rather than retried, since the "
+                      "source will not have changed by the next run",
                dry_run=ctx.dry_run)
         return None
     if not data.get("title") or not data.get("body"):

@@ -286,6 +286,27 @@ class Queue:
             i for i in self.items if (i.get("url") or i.get("title")) != key
         ]
 
+    def record_attempt(self, candidate: dict) -> int:
+        """Count one publish attempt against a queued row, and return
+        the running total.
+
+        A row leaves the queue only when it PUBLISHES, so a candidate
+        that fails to draft stays at the top and is drafted again next
+        run — against the same source text, so to the same conclusion,
+        every hour until the TTL expires it a week later. One Hugging
+        Face repo went through that 184 times on the expensive model
+        and was most of the channel's entire spend. Whatever the
+        failure is, attempting it more than a few times is paying to
+        learn something already known.
+        """
+        key = candidate.get("url") or candidate.get("title")
+        for row in self.items:
+            if (row.get("url") or row.get("title")) == key:
+                row["attempts"] = int(row.get("attempts", 0)) + 1
+                candidate["attempts"] = row["attempts"]
+                return row["attempts"]
+        return int(candidate.get("attempts", 0)) + 1
+
     def save(self) -> None:
         # The queue is written even in a dry run: it is the observable
         # output Phase 3 is graded on, and it contains no publication.
