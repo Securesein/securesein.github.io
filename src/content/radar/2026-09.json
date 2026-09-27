@@ -23456,7 +23456,7 @@
       ],
       "qualityScore": 100.0,
       "relevanceScore": 53.2,
-      "whyRelevant": "This benchmark provides a dataset for evaluating RGB-D semantic segmentation, which can inform mechanistic interpretability and efficiency in LLMs and multimodal models.",
+      "whyRelevant": "This benchmark provides data for evaluating RGB-D models, which can inform mechanistic interpretability and efficiency in reasoning for LLMs.",
       "seenAt": "2026-09-27T02:16:34+00:00",
       "status": "radar"
     }
