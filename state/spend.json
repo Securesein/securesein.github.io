@@ -713,6 +713,22 @@
           "estimated_calls": 0
         }
       }
+    },
+    {
+      "at": "2026-09-27T22:02:46+00:00",
+      "channel": "research",
+      "calls": 35,
+      "usd": 0.005508,
+      "aborted": false,
+      "by_model": {
+        "gpt-4o-mini": {
+          "calls": 35,
+          "usd": 0.005508,
+          "prompt_tokens": 32683,
+          "completion_tokens": 1010,
+          "estimated_calls": 0
+        }
+      }
     }
   ]
 }
