@@ -23507,6 +23507,89 @@
       "whyRelevant": "This item discusses advancements in LLMs that may impact their internal mechanisms and deployment strategies, relevant to your interests in model efficiency and security.",
       "seenAt": "2026-09-27T22:16:35+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r97ea6a16fa7d826",
+      "url": "https://simonwillison.net/2026/Sep/27/bluesky-bot-check/",
+      "title": "Bluesky reply bot checker",
+      "source": "Simon Willison's Weblog",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item addresses security concerns in AI systems, relevant for understanding vulnerabilities in LLMs and ensuring safe deployment in production environments.",
+      "seenAt": "2026-09-28T02:16:41+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re7707016a95f11c",
+      "url": "https://arxiv.org/abs/2609.28660",
+      "title": "Morphometric Imitation: From Morphology and Contact Aware Hand Retargeting to Sim-to-Real Visuomotor Policy",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "reinforcement-learning",
+        "generative-ai"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 59.2,
+      "whyRelevant": "This research explores agent behavior and policy learning, which can inform mechanistic interpretability and efficiency in LLMs and their deployment.",
+      "seenAt": "2026-09-28T02:16:46+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb9656e9402d0261",
+      "url": "https://arxiv.org/abs/2609.31394",
+      "title": "InternW0-Δ: A World Action Model Bridging Predictive Dynamics and Actions with 20K+ Hours of Open Data",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "agents",
+        "deep-learning",
+        "training"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This research on action models may provide insights into LLM behavior and efficiency in reasoning, relevant for understanding internal mechanisms and deployment.",
+      "seenAt": "2026-09-28T02:16:48+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8e6e8179cbe1708",
+      "url": "https://arxiv.org/abs/2609.31473",
+      "title": "Game Arena: Strategic LLM Evaluation in Competitive Environments",
+      "source": "Hugging Face Daily Papers",
+      "section": "benchmark",
+      "topics": [
+        "llms",
+        "evaluation",
+        "agents"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 39.0,
+      "whyRelevant": "This item discusses LLM evaluation in competitive settings, which can inform understanding of model performance and security in real-world applications.",
+      "seenAt": "2026-09-28T02:16:50+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "raf90de4f1e2b350",
+      "url": "https://arxiv.org/abs/2609.31620",
+      "title": "FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders",
+      "source": "Hugging Face Daily Papers",
+      "section": "research",
+      "topics": [
+        "deep-learning",
+        "generative-ai",
+        "training"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 71.0,
+      "whyRelevant": "This research addresses training efficiency in representation autoencoders, relevant for understanding LLM internals and improving model performance in production.",
+      "seenAt": "2026-09-28T02:16:52+00:00",
+      "status": "radar"
     }
   ]
 }

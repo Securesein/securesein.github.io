@@ -793,6 +793,29 @@
           "estimated_calls": 0
         }
       }
+    },
+    {
+      "at": "2026-09-28T02:17:15+00:00",
+      "channel": "security",
+      "calls": 31,
+      "usd": 0.048678,
+      "aborted": false,
+      "by_model": {
+        "gpt-4o-mini": {
+          "calls": 29,
+          "usd": 0.003665,
+          "prompt_tokens": 20571,
+          "completion_tokens": 966,
+          "estimated_calls": 0
+        },
+        "gpt-4o": {
+          "calls": 2,
+          "usd": 0.045012,
+          "prompt_tokens": 9257,
+          "completion_tokens": 2187,
+          "estimated_calls": 0
+        }
+      }
     }
   ]
 }
