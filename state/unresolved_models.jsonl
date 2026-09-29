@@ -5,3 +5,8 @@
 {"at": "2026-09-21T04:00:54+00:00", "name": "muse-spark-1.3_xhigh", "source": "epoch", "benchmark": "frontiermath", "organization": "Meta AI", "seenAt": "2026-09-16"}
 {"at": "2026-09-28T04:01:08+00:00", "name": "muse-spark-1.3_max", "source": "epoch", "benchmark": "frontiermath", "organization": "Meta AI", "seenAt": "2026-09-18"}
 {"at": "2026-09-28T04:01:08+00:00", "name": "muse-spark-1.3_xhigh", "source": "epoch", "benchmark": "frontiermath", "organization": "Meta AI", "seenAt": "2026-09-16"}
+{"at": "2026-09-29T04:00:58+00:00", "name": "muse-spark-1.3_max", "source": "epoch", "benchmark": "frontiermath", "organization": "Meta AI", "seenAt": "2026-09-18"}
+{"at": "2026-09-29T04:00:58+00:00", "name": "muse-spark-1.3_xhigh", "source": "epoch", "benchmark": "frontiermath", "organization": "Meta AI", "seenAt": "2026-09-16"}
+{"at": "2026-09-29T04:00:58+00:00", "name": "claude-opus-5-5_max", "source": "epoch", "benchmark": "arc-agi-2", "organization": "Anthropic", "seenAt": "2026-09-22"}
+{"at": "2026-09-29T04:00:58+00:00", "name": "gpt-6-sol_max", "source": "epoch", "benchmark": "arc-agi-2", "organization": "OpenAI", "seenAt": "2026-09-22"}
+{"at": "2026-09-29T04:00:58+00:00", "name": "gpt-6-luna_max", "source": "epoch", "benchmark": "arc-agi-2", "organization": "OpenAI", "seenAt": "2026-09-22"}
