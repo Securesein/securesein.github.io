@@ -803,6 +803,7 @@
     "hf:zai-org/WebVIA-Agent",
     "https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/",
     "https://developers.googleblog.com/a-unified-api-for-ai-model-routing/",
+    "https://developers.googleblog.com/accelerating-spatio-temporal-attention-for-video-diffusion-on-tpus/",
     "https://developers.googleblog.com/agent-and-model-evaluations-in-gemini-enterprise-agent-platform-are-now-ga/",
     "https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/",
     "https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more/",
@@ -1028,6 +1029,7 @@
     "tag:github.com,2008:Repository/155220641/v5.16.0",
     "tag:github.com,2008:Repository/155220641/v5.16.1",
     "tag:github.com,2008:Repository/155220641/v5.17.0",
+    "tag:github.com,2008:Repository/155220641/v5.18.0",
     "tag:github.com,2008:Repository/200722670/v2.5.2",
     "tag:github.com,2008:Repository/200722670/v2.5.3",
     "tag:github.com,2008:Repository/200722670/v2.6.0",
@@ -1331,6 +1333,7 @@
     "tag:github.com,2008:Repository/612354784/b11280",
     "tag:github.com,2008:Repository/612354784/b11282",
     "tag:github.com,2008:Repository/612354784/b11284",
+    "tag:github.com,2008:Repository/612354784/b11292",
     "tag:github.com,2008:Repository/612354784/v0.5.0",
     "tag:github.com,2008:Repository/658928958/v0.33.3",
     "tag:github.com,2008:Repository/658928958/v0.33.3-rc2",
@@ -1435,7 +1438,8 @@
     "tag:google.com,2016:vertex-ai-release-notes#September_10_2025",
     "tag:google.com,2016:vertex-ai-release-notes#September_15_2025",
     "tag:google.com,2016:vertex-ai-release-notes#September_22_2025",
-    "tag:google.com,2016:vertex-ai-release-notes#September_30_2025"
+    "tag:google.com,2016:vertex-ai-release-notes#September_30_2025",
+    "transition-to-using-standard-tests-for-singlestep-availability-testing-in-azure-monitor-application-insights-by-30-september"
   ],
   "sources": [
     "AWS — What's New",
