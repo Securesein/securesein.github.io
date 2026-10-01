@@ -77,21 +77,45 @@ jobs:
       # G4. The content schema is the only verification gate that runs
       # AFTER a post is written, and it has to run before the commit: a
       # bad post produces a red workflow and nothing on main.
+      #
+      # !cancelled() from here through the commit step, deliberately:
+      # a SPEND CEILING abort (core/spend.py's BudgetExceeded) exits the
+      # run step non-zero on purpose, as an incident to look at — but it
+      # does so AFTER core/pipeline.py's run_flow() has already marked
+      # every fetched item 'seen' in memory (it has to, or the next run
+      # re-scores and re-pays for the identical backlog — see
+      # pipeline.py's _seen()/_remember() docstrings). Skipping the
+      # commit on that non-zero exit, as a bare `if: success()` step
+      # does by default, threw that progress away every time: three
+      # days straight of this channel re-fetching the same ~300-item
+      # backlog, hitting the same 150-call ceiling, and aborting again,
+      # for a few cents each time with zero forward progress. No post
+      # is ever at risk here — only `publish()` writes to
+      # src/content/blog/, and that is never reached before a
+      # mid-run_flow() abort, so committing is exactly as safe as the
+      # "observable, nothing consequential" state a dry run already
+      # writes (pipeline.py's own module docstring). !cancelled()
+      # specifically (not always()) so a genuine timeout-minutes kill
+      # — where a write could be caught mid-flight — still skips this.
       - uses: actions/setup-node@v4
+        if: ${{ !cancelled() }}
         with:
           node-version: 22
           cache: npm
 
       - name: Validate against the schema (gate G4)
+        if: ${{ !cancelled() }}
         run: |
           npm ci
           npm run build
 
       - name: Reference integrity (gate G5 in CI)
+        if: ${{ !cancelled() }}
         run: npm run check:content
 
       - name: Commit state, Radar and any new posts
         id: commit
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -136,8 +160,10 @@ jobs:
 
       - name: Trigger site deploy
         # A GITHUB_TOKEN push does not cascade into other workflows, so
-        # deploy.yml has to be kicked off explicitly.
-        if: steps.commit.outputs.pushed == 'true'
+        # deploy.yml has to be kicked off explicitly. !cancelled() for
+        # the same reason as above — an unqualified `if:` implies
+        # success(), which a SPEND CEILING abort already isn't.
+        if: ${{ !cancelled() && steps.commit.outputs.pushed == 'true' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run deploy.yml --repo ${{ github.repository }}
