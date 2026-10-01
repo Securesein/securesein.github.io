@@ -1,0 +1,101 @@
+{
+  "month": "2026-10",
+  "items": [
+    {
+      "id": "r28b251faa5b0082",
+      "url": "https://machinelearning.apple.com/research/rltl-dr-self-improvement",
+      "title": "RLTL;DR: Self-Improvement by Internalizing Self-Generated Feedback",
+      "source": "Apple Machine Learning Research",
+      "section": "research",
+      "topics": [
+        "reinforcement-learning",
+        "agents"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 46.1,
+      "whyRelevant": "This research explores reinforcement learning techniques that could enhance LLMs' internal feedback mechanisms, relevant for improving reasoning and inference efficiency.",
+      "seenAt": "2026-10-01T18:16:48+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r606e6d73f684529",
+      "url": "https://aws.amazon.com/blogs/machine-learning/build-agent-memory-with-nvidia-nemo-agent-toolkit-and-amazon-s3-vectors/",
+      "title": "Build agent memory with NVIDIA NeMo Agent Toolkit and Amazon S3 Vectors",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "agents"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This toolkit aids in developing agents with memory, relevant for understanding LLM internals and enhancing reasoning efficiency in production environments.",
+      "seenAt": "2026-10-01T18:16:51+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r0ff719d6f30314f",
+      "url": "https://aws.amazon.com/blogs/machine-learning/uplifting-conversion-across-the-acquisition-funnel-with-personalization-using-contextual-bandits-on-aws/",
+      "title": "Uplifting conversion across the acquisition funnel with personalization using contextual bandits on AWS",
+      "source": "AWS Machine Learning Blog",
+      "section": "benchmark",
+      "topics": [
+        "generative-ai",
+        "ai-security",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 65.5,
+      "whyRelevant": "This item discusses reinforcement learning techniques, which can enhance understanding of LLM behavior and improve model deployment strategies.",
+      "seenAt": "2026-10-01T18:16:53+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rebdd8ce460f7157",
+      "url": "https://aws.amazon.com/blogs/machine-learning/implementing-multi-environment-access-for-claude-platform-on-aws/",
+      "title": "Implementing Multi-Environment Access for Claude Platform on AWS",
+      "source": "AWS Machine Learning Blog",
+      "section": "security",
+      "topics": [
+        "ai-security"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This item discusses security measures for deploying AI models, relevant for understanding LLM safety and operational integrity in production environments.",
+      "seenAt": "2026-10-01T18:16:57+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra0c183c052df5c6",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-uniopen-customized-amazon-nova-to-their-retail-moderation-policies-for-production-deployment/",
+      "title": "How uniopen customized Amazon Nova to their retail moderation policies for production deployment",
+      "source": "AWS Machine Learning Blog",
+      "section": "release",
+      "topics": [
+        "ai-security",
+        "training",
+        "evaluation"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 53.2,
+      "whyRelevant": "This article discusses practical deployment strategies for AI models, relevant for understanding security and efficiency in LLM applications.",
+      "seenAt": "2026-10-01T18:17:01+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd320458473217ac",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+      "title": "v2.1.287",
+      "source": "Claude Code Releases",
+      "section": "release",
+      "topics": [
+        "agents",
+        "ai-security"
+      ],
+      "qualityScore": 100.0,
+      "relevanceScore": 44.6,
+      "whyRelevant": "This release may include updates relevant to agent security and deployment practices, which are crucial for understanding LLMs' internal workings and ensuring safe production use.",
+      "seenAt": "2026-10-01T18:17:09+00:00",
+      "status": "radar"
+    }
+  ]
+}
