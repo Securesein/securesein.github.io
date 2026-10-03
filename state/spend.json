@@ -1959,6 +1959,22 @@
           "estimated_calls": 0
         }
       }
+    },
+    {
+      "at": "2026-10-03T07:35:53+00:00",
+      "channel": "benchmarks",
+      "calls": 1,
+      "usd": 0.00456,
+      "aborted": false,
+      "by_model": {
+        "gpt-4o": {
+          "calls": 1,
+          "usd": 0.00456,
+          "prompt_tokens": 568,
+          "completion_tokens": 314,
+          "estimated_calls": 0
+        }
+      }
     }
   ]
 }
