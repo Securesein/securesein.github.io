@@ -141,6 +141,21 @@
       "whyRelevant": "This model may provide insights into the dynamics of LLM behavior, relevant for understanding internal mechanisms and improving inference efficiency in production.",
       "seenAt": "2026-10-03T07:55:08+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rc8fc6e27bee9dce",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-350M-Diffusion-Exp",
+      "title": "LiquidAI/LFM2.5-350M-Diffusion-Exp",
+      "source": "HF org — Liquid AI",
+      "section": "release",
+      "topics": [
+        "generative-ai"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 31.2,
+      "whyRelevant": "This release may provide insights into generative AI models, but its relevance to mechanistic interpretability and LLM internals is limited.",
+      "seenAt": "2026-10-03T22:01:20+00:00",
+      "status": "radar"
     }
   ]
 }
