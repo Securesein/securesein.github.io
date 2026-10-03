@@ -44,9 +44,29 @@ from core.llm import LLM, OFFLINE  # noqa: E402
 from core.spend import BudgetExceeded  # noqa: E402
 from telegram import api  # noqa: E402
 
-FEED_URL = "https://rss.arxiv.org/rss/cs.LG+cs.CL+cs.AI+cs.NE+stat.ML"
+# arXiv's own API, not rss.arxiv.org.
+#
+# The RSS endpoint this used to read returns HTTP 200 and a valid,
+# well-formed RSS envelope containing ZERO items, and has done for
+# weeks — while arxiv.org/list/cs.AI/recent shows 1265 entries over the
+# same period. It does not fail, it just has nothing in it, which is the
+# worst way for a source to break: fetch_feed() below treats a failed
+# fetch as a quiet empty digest by design, so an empty feed and a broken
+# one are indistinguishable from the outside. Reader reported
+# "fetched 0 raw entries" and looked like a quiet day.
+#
+# The API returns Atom, which feedparser handles identically, and the
+# fields line up: <id> carries the arxiv.org/abs/ URL that ID_RE wants,
+# and <summary> is the bare abstract (the RSS feed prefixed it with
+# "Abstract:", which ABSTRACT_RE stripped — its fallback already handled
+# the unprefixed case).
+FEED_URL = (
+    "https://export.arxiv.org/api/query?search_query="
+    "cat:cs.LG+OR+cat:cs.CL+OR+cat:cs.AI+OR+cat:cs.NE+OR+cat:stat.ML"
+    "&sortBy=submittedDate&sortOrder=descending&max_results=300"
+)
 USER_AGENT = "SecureseinReader/0.1 (+https://securesein.github.io/)"
-FEED_TIMEOUT = 25
+FEED_TIMEOUT = 40
 
 PROFILE_PATH = REPO_ROOT / "config" / "papers_profile.yaml"
 BUDGET_PATH = REPO_ROOT / "config" / "papers_budget.json"
@@ -59,6 +79,10 @@ DROP_ANNOUNCE_TYPES = {"replace", "replace-cross"}
 
 ANNOUNCE_RE = re.compile(r"Announce Type:\s*([\w-]+)", re.IGNORECASE)
 ID_RE = re.compile(r"arxiv\.org/abs/(\d{4}\.\d{4,5})")
+# The API carries no "Announce Type", but it does version its ids —
+# /abs/2610.02207v1 is a first appearance and v2+ is a revision, which
+# is the distinction DROP_ANNOUNCE_TYPES was there to make.
+VERSION_RE = re.compile(r"/abs/\d{4}\.\d{4,5}v(\d+)")
 ABSTRACT_RE = re.compile(r"Abstract:\s*(.*)", re.IGNORECASE | re.DOTALL)
 
 
@@ -81,16 +105,27 @@ def fetch_feed(url: str = FEED_URL) -> list[dict]:
     for entry in parsed.entries:
         raw = entry.get("summary", "") or entry.get("description", "")
         announce = ANNOUNCE_RE.search(raw)
-        idm = ID_RE.search(entry.get("link", ""))
+        link = entry.get("link", "")
+        idm = ID_RE.search(link)
         abstract_m = ABSTRACT_RE.search(raw)
         if not idm:
             continue
+        if announce:
+            announce_type = announce.group(1).lower()
+        else:
+            version = VERSION_RE.search(link)
+            announce_type = "replace" if version and int(version.group(1)) > 1 else "new"
         items.append({
             "id": idm.group(1),
-            "title": (entry.get("title") or "").strip(),
-            "abstract": (abstract_m.group(1).strip() if abstract_m else raw.strip()),
-            "link": entry.get("link", ""),
-            "announce_type": (announce.group(1).lower() if announce else "unknown"),
+            # The API wraps long titles and abstracts across lines; the
+            # RSS feed did not, and everything downstream treats these as
+            # single-line strings.
+            "title": " ".join((entry.get("title") or "").split()),
+            "abstract": " ".join(
+                (abstract_m.group(1) if abstract_m else raw).split()
+            ),
+            "link": link,
+            "announce_type": announce_type,
         })
     return items
 
@@ -312,13 +347,19 @@ def main(argv: list[str] | None = None) -> int:
         scored = triage(llm, survivors, max_calls=budget["max_llm_calls_per_run"])
     except BudgetExceeded as exc:
         print(f"\n  SPEND CEILING — run aborted: {exc}", file=sys.stderr)
-        spend_module.record_run(llm.guard, channel="papers", aborted=True)
+        if llm.guard is not None:
+            spend_module.record_run(llm.guard, channel="papers", aborted=True)
         return 3
     finally:
         if llm.guard is not None and llm.guard.calls:
             print(f"  spend: {llm.guard.summary()}")
 
-    spend_module.record_run(llm.guard, channel="papers")
+    # --offline-llm builds no guard, and record_run() dereferences it.
+    # The `finally` above already allowed for that; these two call sites
+    # did not, so every offline run crashed after the funnel had already
+    # done its work. Same check as scripts/run.py.
+    if llm.guard is not None:
+        spend_module.record_run(llm.guard, channel="papers")
     print(f"  {len(scored)} scored by triage ({llm.calls} model call(s))")
 
     picks = rank_and_cap(scored)
