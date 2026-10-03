@@ -82,7 +82,7 @@
       "verified": false,
       "note": "Out of scope: verify_feeds returns HTTP 404 on 2026-09-26 as it did on 2026-09-14 and no replacement URL has been confirmed. `Meta — llama-models releases` (verified) covers the open-weights half.",
       "scopeNote": "verify_feeds 2026-09-14: FAIL (HTTP 404). The RSS path in this entry is wrong; no replacement is guessed here. In scope but unusable until a URL is confirmed — `Meta — llama-models releases` (verified) covers the open-weights half in the meantime.",
-      "in_scope": false
+      "inScope": false
     },
     {
       "naam": "Meta — llama-models releases",

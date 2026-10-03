@@ -1,7 +1,7 @@
 {
   "_comment": "Scoring rubric for the Releases channel. These are STARTING DEFAULTS and are expected to be wrong: the brief says so explicitly (§12.2). The way to fix the channel's volume is to change a number in this file, never to reword a prompt — a prompt change is unmeasurable and a threshold change is not. Run the channel in --dry-run for a week, read the score distribution out of state/queue.json and state/rejected.jsonl, and raise `threshold` until the output is the eight-a-week the budget targets.",
 
-  "_comment_tier1": "Tier-1 vendors (brief §14.4). DEFAULT APPLIED, NOT CONFIRMED WITH THE SITE OWNER. The decision taken here: track EVERY vendor present in models.json and feeds-releases.json, but make it harder for a non-tier-1 vendor to clear the bar. Of the two mechanisms the brief offers — an extra negative weight, or a different effective threshold — this uses the negative weight `non_tier1`, because it keeps one threshold to reason about and puts the whole tier-1 policy in two adjacent lines you can see at once. Net effect: a tier-1 release scores +1 (tier1_vendor) and a non-tier-1 release scores -2 (non_tier1), a 3-point spread on a threshold of 6. THIS IS THE SINGLE MOST LIKELY NUMBER IN THIS FILE TO BE WRONG — if the channel goes quiet on the Chinese open-weights labs, this is why, and softening it to -1 is the first thing to try.",
+  "_comment_tier1": "Tier-1 vendors (brief §14.4). A tier-1 release scores +1 (tier1_vendor). The file used to say this was the number most likely to be wrong, and it was: `non_tier1` (-2) applied to EVERYTHING that was not tier-1, including every lab this tracker deliberately follows. Combined with a vendor field that never normalised (fixed in core/classify.py), it charged -2 on OpenAI's and Anthropic's own announcements and the channel published nothing for a month. The penalty now means what it says — an UNKNOWN lab — and the labs we chose to track sit at 0 in `watched_vendors` below.",
   "tier1_vendors": [
     "openai",
     "anthropic",
@@ -10,6 +10,29 @@
     "microsoft",
     "mistral",
     "nvidia"
+  ],
+
+  "_comment_watched": "Labs this tracker follows on purpose: neither credited like a tier-1 vendor nor penalised like an unknown one. The test for membership is simple — if a lab has a source in feeds-releases.json, we decided it mattered, so it belongs here. Without this, an open-weights release from one of them needed open_weights (+2) AND a benchmark claim just to reach the bar: 'Kimi K3 by Moonshot AI is now generally available on Amazon Bedrock' scored 4 of 6 and was dropped.",
+  "watched_vendors": [
+    "ai2",
+    "alibaba",
+    "amazon",
+    "baidu",
+    "bytedance",
+    "cohere",
+    "databricks",
+    "deepseek",
+    "ibm",
+    "liquid",
+    "minimax",
+    "moonshot",
+    "nous",
+    "reka",
+    "tencent",
+    "thinkingmachines",
+    "xai",
+    "zhipu",
+    "01ai"
   ],
 
   "weights": {

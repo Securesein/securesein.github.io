@@ -16,6 +16,7 @@ model call anywhere in this file.
 from __future__ import annotations
 
 import sys
+from dataclasses import replace
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -137,9 +138,15 @@ def test_tier1_and_non_tier1_differ_by_the_documented_spread():
     assert spread == 3, spread
     assert "openai" in config["tier1_vendors"]
     assert "deepseek" not in config["tier1_vendors"]
+    # ...but a lab we deliberately track is not a stranger either.
+    assert "deepseek" in config["watched_vendors"]
 
 
-def test_same_release_scores_lower_for_a_non_tier1_vendor():
+def test_a_vendor_scores_by_which_of_the_three_tiers_it_is_in():
+    """tier-1 is credited, a watched lab is neither credited nor
+    penalised, and only an unknown lab pays non_tier1. The blanket
+    penalty on everything outside tier-1 is what kept every open-weights
+    release below the bar."""
     config = releases.load_config()
     items = load_fixture(FIXTURE)
     base = next(i for i in items if i.source.name == "OpenAI — News")
@@ -158,7 +165,12 @@ def test_same_release_scores_lower_for_a_non_tier1_vendor():
         )
         return releases.score_candidate(candidate, config, in_cooldown=False).score
 
-    assert score_for("openai") - score_for("deepseek") == 3
+    tier1, watched, unknown = (
+        score_for("openai"), score_for("deepseek"), score_for("a-lab-nobody-tracks")
+    )
+    assert tier1 - watched == 1, (tier1, watched)
+    assert watched - unknown == 2, (watched, unknown)
+    assert tier1 - unknown == 3, "the documented spread, now against an unknown lab"
 
 
 def _score(item, event: str, config, vendor: str = "openai") -> float:
@@ -255,3 +267,93 @@ def test_offline_classifier_drops_what_it_cannot_place():
     # It may classify it as something, but the tier check above is what
     # keeps it out; what matters here is that it is never a new_model.
     assert facts["eventType"] != "new_model"
+
+
+def test_the_classifier_vendor_is_normalised_onto_a_registry_id():
+    """The root cause of this channel never publishing.
+
+    The prompt asks for a vendor and the model answers in prose —
+    "OpenAI", "Google DeepMind" — while tier1_vendors and
+    watched_vendors hold lowercase ids. Nothing normalised between
+    them, so `vendor in tier1` was false for every live-classified
+    item and non_tier1 (-2) was charged on OpenAI's and Anthropic's own
+    announcements: "Introducing GPT-6 Sol and Luna" scored 5 of 6.
+    """
+    from types import SimpleNamespace
+    from core.classify import vendor_id
+
+    registry = load_registry()
+
+    def seen_as(raw: str, declared: str = "-") -> str:
+        item = SimpleNamespace(source=SimpleNamespace(vendor=declared))
+        return vendor_id(raw, item, registry)
+
+    assert seen_as("OpenAI") == "openai"
+    assert seen_as("Anthropic") == "anthropic"
+    assert seen_as("Google DeepMind") == "google"
+    assert seen_as("Moonshot AI") == "moonshot"
+    assert seen_as("Z.ai") == "zhipu"
+    assert seen_as("Qwen") == "alibaba"
+    # The feed entry already declares its vendor, so an unattributed
+    # item is still placed rather than dropped to "".
+    assert seen_as("", declared="google") == "google"
+    # An unknown lab stays unknown; it is not forced onto a near match.
+    assert seen_as("A Lab Nobody Tracks") == ""
+
+
+def test_a_tier1_launch_clears_the_threshold_once_the_vendor_resolves():
+    """The four releases this channel missed, replayed. Each was
+    rejected below_threshold with non_tier1 (-2) in its reasons."""
+    config = releases.load_config()
+    items = load_fixture(FIXTURE)
+    base = next(i for i in items if i.source.name == "OpenAI — News")
+    threshold = config["threshold"]
+
+    def score(vendor: str, event: str, open_weights: bool = False) -> float:
+        candidate = releases.Candidate(
+            item=base,
+            facts={"eventType": event, "vendor": vendor, "family": "f",
+                   "version": "5.5", "openWeights": open_weights,
+                   "modality": ["text"]},
+        )
+        return releases.score_candidate(candidate, config, in_cooldown=False).score
+
+    # "Introducing GPT-6 Sol and Luna" — scored 5.
+    assert score("openai", "new_model") >= threshold
+    # "Grok 4.7" — xAI is watched, not tier-1.
+    assert score("xai", "new_model") >= threshold
+    # "Kimi K3 ... generally available on Amazon Bedrock" — scored 4.
+    assert score("moonshot", "availability", open_weights=True) >= threshold
+
+
+def test_a_corroborating_source_is_never_sent_to_the_classifier():
+    """It cannot trigger a post and attach_corroboration() reads only
+    its title, summary, source and date — so classifying it buys an
+    answer nothing reads. ggml-org/llama.cpp alone spent 265 model
+    calls being told it was not_a_release."""
+    items = load_fixture(FIXTURE)
+    base = next(i for i in items if i.source.name == "OpenAI — News")
+    noisy = replace(
+        base,
+        title="b6291",
+        url="https://github.com/ggml-org/llama.cpp/releases/tag/b6291",
+        source=replace(base.source, name="llama.cpp releases", tier="corroborating"),
+    )
+
+    calls = []
+
+    class _CountingLLM:
+        offline = False
+
+        def json(self, *args, **kwargs):
+            calls.append(kwargs.get("label"))
+            return {"eventType": "none"}
+
+    ctx = _ctx()
+    ctx.llm = _CountingLLM()
+    candidates, corroborating = releases.build_candidates(
+        ctx, [noisy], releases.load_config()
+    )
+    assert not calls, f"a corroborating item cost {len(calls)} model call(s)"
+    assert not candidates
+    assert len(corroborating) == 1, "it must still be available as corroboration"

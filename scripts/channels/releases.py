@@ -176,12 +176,16 @@ def score_candidate(candidate: Candidate, config: dict, in_cooldown: bool) -> Ca
     add("open_weights", bool(facts.get("openWeights")))
 
     vendor = facts.get("vendor", "")
+    watched = set(config.get("watched_vendors", []))
     if vendor in tier1:
         add("tier1_vendor")
+    elif vendor and vendor in watched:
+        # A lab we follow on purpose. Not a frontier vendor, but not a
+        # stranger either, so it is neither credited nor penalised —
+        # see config/releases.json's own comment on why the old blanket
+        # -2 silenced every open-weights lab in the tracker.
+        pass
     else:
-        # Brief §14.4, default applied and flagged in config/releases.json:
-        # every vendor is tracked, but a non-tier-1 vendor carries an
-        # explicit extra hurdle rather than a separate threshold.
         add("non_tier1")
 
     text = f"{candidate.item.title}\n{candidate.item.summary}"
@@ -360,6 +364,20 @@ def build_candidates(ctx, items: list[Item], config: dict) -> tuple[list[Candida
     corroborating: list[Item] = []
 
     for item in items:
+        # A non-primary source can corroborate, never trigger. Enforced
+        # here, in code, and not asked of a prompt.
+        #
+        # Checked BEFORE the classifier, not after: attach_corroboration()
+        # reads only an item's title, summary, source and date and never
+        # its facts, so classifying one buys an answer nothing reads.
+        # It was not free — ggml-org/llama.cpp alone, a corroborating
+        # source that cuts roughly ten builds a day and can never trigger
+        # anything, spent 265 model calls being told it was not_a_release,
+        # which is 64% of every such rejection this channel has logged.
+        if not item.source.may_trigger:
+            corroborating.append(item)
+            continue
+
         facts = classify_module.classify(
             ctx.llm, item, registry, llm_module.CLASSIFY_MODEL
         )
@@ -367,12 +385,6 @@ def build_candidates(ctx, items: list[Item], config: dict) -> tuple[list[Candida
         if event == classify_module.NONE:
             reject(CHANNEL, "not_a_release", title=item.title, url=item.url,
                    detail=facts.get("classifier"), dry_run=ctx.dry_run)
-            continue
-
-        # A non-primary source can corroborate, never trigger. Enforced
-        # here, in code, and not asked of a prompt.
-        if not item.source.may_trigger:
-            corroborating.append(item)
             continue
 
         if not facts.get("vendor") or not facts.get("family"):

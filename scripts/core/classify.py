@@ -325,6 +325,67 @@ Return ONLY JSON:
   "modality": ["text"], "modelHint": "the model's name as written"}}"""
 
 
+# Display names labs actually use, onto the ids models.json uses. Only
+# the forms that do not already survive normalisation need an entry.
+VENDOR_ALIASES = {
+    "googledeepmind": "google",
+    "deepmind": "google",
+    "googleai": "google",
+    "googlecloud": "google",
+    "metaai": "meta",
+    "metaplatforms": "meta",
+    "mistralai": "mistral",
+    "moonshotai": "moonshot",
+    "zai": "zhipu",
+    "zaiorg": "zhipu",
+    "zhipuai": "zhipu",
+    "thudm": "zhipu",
+    "qwen": "alibaba",
+    "alibabacloud": "alibaba",
+    "aws": "amazon",
+    "amazonwebservices": "amazon",
+    "alleninstitute": "ai2",
+    "allenai": "ai2",
+    "liquidai": "liquid",
+    "rekaai": "reka",
+    "bytedanceseed": "bytedance",
+    "xaicorp": "xai",
+}
+
+
+def vendor_id(raw: str, item, registry: Registry) -> str:
+    """Map whatever the classifier called the vendor onto a canonical id.
+
+    The prompt asks for a vendor and the model answers in prose —
+    "OpenAI", "Anthropic", "Google DeepMind" — while every consumer of
+    this field compares against the lowercase ids in models.json and
+    config/releases.json. Nothing normalised between the two, so
+    `vendor in tier1_vendors` was false for every live-classified item
+    and score_candidate charged non_tier1 (-2) instead of crediting
+    tier1_vendor (+1) — on OpenAI's and Anthropic's own announcements.
+
+    A three-point swing on every release, against a threshold of 6, and
+    it is why this channel has never published: "Introducing GPT-6 Sol
+    and Luna" scored 5 (primary +3, event_new_model +4, non_tier1 -2)
+    and was dropped; "We've launched Claude Sonnet 5.5" scored 3.
+
+    The feed entry already declares which vendor it belongs to, so that
+    is the fallback rather than an empty string — a Vertex AI note the
+    model fails to attribute is still Google's.
+    """
+    normalised = re.sub(r"[^a-z0-9]+", "", (raw or "").lower())
+    if normalised:
+        known = {m.vendor for m in registry.models.values() if m.vendor}
+        for vendor in known:
+            if re.sub(r"[^a-z0-9]+", "", vendor) == normalised:
+                return vendor
+        alias = VENDOR_ALIASES.get(normalised)
+        if alias:
+            return alias
+    declared = getattr(item.source, "vendor", "") or ""
+    return declared if declared not in ("", "-") else ""
+
+
 def classify(llm, item, registry: Registry, model_name: str) -> dict:
     """Live path with the deterministic classifier as its offline
     stand-in. The enum is enforced here rather than trusted to the
@@ -352,6 +413,9 @@ def classify(llm, item, registry: Registry, model_name: str) -> dict:
     result.setdefault("classifier", "model")
     for key in ("vendor", "family", "version", "modelHint"):
         result[key] = str(result.get(key) or "")
+    # Same contract as eventType and modality above: enforced in code
+    # after the call, never trusted to the prompt.
+    result["vendor"] = vendor_id(result["vendor"], item, registry)
     return result
 
 
