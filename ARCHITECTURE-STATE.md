@@ -7,6 +7,10 @@ where the two disagree, this records what is running.
 The purpose of this file is to be the input to a redesign. It therefore
 spends more words on what does not work than on what does.
 
+Sections 1–10 are the current state and its faults. **Section 11 is
+where the owner wants to take it**, and is the part to design against;
+section 12 turns that into open questions.
+
 ---
 
 ## 1. What the thing is
@@ -51,8 +55,8 @@ benchmark 2.
 | Research | `research.yml` | disabled | *(cron job to be deleted)* | retired |
 | Security | `security.yml` | disabled | *(cron job to be deleted)* | retired |
 | AI news pipeline | `nieuwsbrief.yml` | disabled | *(cron job to be deleted)* | retired |
-| Reader — papers | `papers.yml` | disabled | *(cron job to be deleted)* | retired prototype |
-| Reader — raw feed | `raw_research_feed.yml` | disabled | *(cron job to be deleted)* | retired prototype |
+| Reader — papers | `papers.yml` | disabled | *(cron job paused)* | **to return** — see §11 |
+| Reader — raw feed | `raw_research_feed.yml` | disabled | *(cron job paused)* | **to return** — see §11 |
 | Daily digest | `digest.yml` | active | daily 18:00 | Telegram only, no AI cost |
 | Feedback receiver | `feedback.yml` | active | every 5 min | Telegram only, no AI cost |
 | Weekly report | `weekly-report.yml` | active | every 4h | Telegram only, no AI cost |
@@ -444,25 +448,158 @@ redesign, not the ceiling.
 
 ---
 
-## 11. Questions a redesign should answer
+## 11. Where the owner wants to take this
 
-1. **What is a channel, actually?** Benchmarks (data first, prose
-   occasionally, $0 most days) and Model Updates (prose first, one LLM
-   call per candidate) share almost nothing but a folder. Is the shared
-   pipeline earning its place?
-2. **Where does the schedule live**, and how does the system notice when
-   it has gone quiet? Today, silence and health look identical.
-3. **Should detection and narration be separated** — a cheap structured
+Stated 2026-10-03, after the retirement decision. Four things, and they
+point in a consistent direction:
+
+1. **Bring the research-paper channels back.**
+2. **The best papers should arrive in his Telegram**, as they used to.
+3. **The most interesting papers get a post he commissions himself** —
+   written outside this pipeline, in a chat app — and uploads.
+4. **Deep dives on fundamental topics, also commissioned by hand.**
+
+### 11.1 This is not a new shape. It is the shape that already works.
+
+The site already distinguishes who caused a post to exist, in the
+`credit` field, and the split across the 54 posts is:
+
+| `credit` | Meaning | Posts |
+|---|---|---|
+| `scout` | the pipeline chose and wrote it | 41 |
+| `directed` | a human chose it; a model wrote it to order | 13 |
+
+And the `directed` 13 are already exactly the two things being asked
+for:
+
+| kind / format | What it is | Count |
+|---|---|---|
+| `research` / `paper` | a paper write-up, commissioned | 6 |
+| `explainer` / `deepdive` | a fundamentals deep dive | 3 |
+| `security` / `deepdive` | a deep dive in Security | 2 |
+| `research` / `deepdive` | a deep dive in Research | 1 |
+| `explainer` / `explainer` | a fundamentals piece | 1 |
+
+So wishes 3 and 4 are not features to build. They are an **existing,
+proven path** — a quarter of the site — that is currently informal and
+should be made first-class.
+
+The axes it rides on already exist in `taxonomy.json`:
+
+- **sections** (`release`, `research`, `benchmark`, `security`,
+  `explainer`) — why would someone read this
+- **formats** (`news`, `paper`, `benchmark`, `explainer`, `deepdive`) —
+  what shape is the piece
+- `/deep-dives` is already a **format view, not a section**: a deep dive
+  can sit in Research, Security or Fundamentals. `/threads` is already
+  human-curated by design — "nothing auto-generates these".
+
+### 11.2 The evidence says the commissioned path is the reliable one
+
+Worth stating plainly, because it should drive the redesign:
+
+- **`directed` posts: 13 commissioned, 13 published.** Nothing in this
+  document describes a `directed` post failing, because the human did
+  the choosing and an external model did the writing with the source in
+  front of it.
+- **`scout` posts are where every failure in §9 lives**: 404
+  `not_a_release`, 115 `no_product_angle`, 40 `below_threshold`, 586
+  `queue_expired`, G1/G3 rejections, and a channel that has published
+  nothing since 17 September.
+
+The part of this pipeline that demonstrably works is **detection,
+scoring and ranking**. The part that demonstrably does not is
+**automated drafting**. The owner's instinct — let the machine surface
+candidates, let a human decide, have the writing done to order — is the
+same conclusion the failure data reaches independently.
+
+### 11.3 What already exists for wishes 1 and 2
+
+Both Reader prototypes are written, tested and merely disabled:
+
+| Workflow | Script | What it does |
+|---|---|---|
+| `papers.yml` | `scripts/papers/run.py` | the daily digest: keyword prefilter → LLM triage → top 6–12 → Telegram. Answers *"is this worth my ten minutes"* |
+| `raw_research_feed.yml` | `scripts/papers/raw_feed.py` + `rate.py` | a wider, deliberately **unfiltered** sample, each item with 1–5 rating buttons, **no LLM call at all** |
+
+They are deliberately isolated from the publishing pipeline: Phase 1 has
+"no write path to content, the ledger, the budget files or
+interest_profile.yaml". The design reason is stated in the code and is
+worth preserving: *Reader answers "is this worth my ten minutes", Scout
+answers "is this worth publishing to the world", and importing Scout's
+machinery risks importing Scout's bar along with it.*
+
+The rating loop is the interesting asset. `raw_feed.py` samples **past**
+the filter rather than through it, because "a filter can only be judged
+against the things it rejected too"; ratings accumulate in
+`state/raw_feed_ratings.jsonl`; `rating_report.py` summarises them for a
+human to hand-tune `config/papers_profile.yaml`. Nothing auto-tunes.
+
+Their own config is separate: `config/papers_profile.yaml`,
+`config/papers_budget.json`.
+
+**Known limitation:** Phase 1 has **no persistent dedup** — it re-reads
+the last 24h every run and accepts the occasional repeat, explicitly
+"rather than building a state branch before knowing the profile is any
+good". That was the right call for a prototype and is the first thing to
+revisit if Reader becomes permanent. Note the contrast with §9.4: Reader
+has *no* memory, Scout's memory is *irreversible*. Neither is right.
+
+### 11.4 The gap between "surfaced in Telegram" and "post on the site"
+
+This is the one genuinely missing piece. Today:
+
+- Reader sends papers to Telegram and **cannot write anything**;
+- a commissioned post is produced in a chat app and uploaded by hand,
+  with its frontmatter written by hand:
+
+```yaml
+kind: "explainer"
+format: "deepdive"
+credit: "directed"
+model: "Claude"
+contributions:
+  chose: true
+hero: "/images/<slug>/hero.png"
+```
+
+Nothing connects the two ends. There is no "I liked this one, start a
+post from it" path, no record that a given Telegram item became a given
+post, and no way to see which surfaced papers were acted on. The
+`feedback.yml` receiver already polls Telegram every five minutes and
+already handles callback buttons for Radar reactions and `raw_feed`
+ratings — so the transport exists; the intent does not.
+
+---
+
+## 12. Questions a redesign should answer
+
+1. **Should the pipeline stop writing and start recommending?** The
+   `directed` path has a 13/13 record; the `scout` path is every failure
+   in §9. If the answer is yes, most of §9 stops being a problem to fix
+   and becomes code to delete.
+2. **What is a channel, actually?** Benchmarks (data first, prose
+   occasionally, $0 most days), Model Updates (prose first, one LLM call
+   per candidate) and Reader (Telegram only, never writes) share almost
+   nothing but a folder. Is the shared pipeline earning its place?
+3. **How does a Telegram item become a commissioned post?** §11.4. What
+   gets recorded, who writes the frontmatter, and how does the system
+   know the paper was acted on?
+4. **Where does the schedule live**, and how does the system notice when
+   it has gone quiet? Today, silence and health look identical — and
+   cron-job.org switched a job off for two days without anything saying
+   so.
+5. **Should detection and narration be separated** — a cheap structured
    detector, and a describer that only runs on something worth
-   describing, from a source chosen because it has prose?
-4. **Is per-item LLM classification affordable at any useful feed
+   describing, from a source chosen because it has prose? §9.2.
+6. **Is per-item LLM classification affordable at any useful feed
    volume**, or should classification be deterministic with the model
    reserved for writing?
-5. **What replaces the seen-cursor** so that a bug fixed today can be
-   replayed against last month?
-6. **Does the `/benchmarks` table want more vendor claims** — the only
+7. **What is the right memory model?** Scout's cursor is irreversible
+   (§9.4), Reader has none (§11.3). Both extremes bite.
+8. **Does the `/benchmarks` table want more vendor claims** — the only
    trigger that has ever produced an interesting post came from the
    vendor-vs-independent contrast, and only 30 of 1355 records are
    vendor claims.
-7. **Three benchmarks have no adapter.** Drop them from the tracked
+9. **Three benchmarks have no adapter.** Drop them from the tracked
    list, or build them?
