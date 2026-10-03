@@ -176,14 +176,25 @@ def evaluate(ctx, store: Store, config: dict | None = None) -> list[dict]:
             # names both numbers and G5 rejects a roundup citing a
             # figure that is not one of the referenced measurements.
             refs = [claim_id, nearest[0], lowest[0], highest[0]]
+            # The SIZE of the gap is deliberately not stated. This
+            # detail is pasted verbatim into the roundup prompt as a
+            # finding, the prompt tells the model to reuse those numbers
+            # exactly, and G5 then rejects any figure in the draft that
+            # is not the value of a cited measurement. A derived number
+            # traces to nothing, so writing "a 14.7 point gap" here
+            # produces a draft that is always thrown away — which is
+            # exactly what happened on this channel's first run with
+            # vendor data. Only measured values go in; the comparison is
+            # stated in words.
             fired.append(
                 _fired(
                     "vendor_vs_thirdparty_gap",
                     weights,
                     f"{model_id} on {benchmark.name}: "
                     f"{claim_record['evaluator']} claims {claim_record['value']}, "
-                    f"{nearest[1]['evaluator']} measured {measured} — the claim is "
-                    f"{gap:.1f} points outside the independently measured range",
+                    f"{nearest[1]['evaluator']} measured {measured} — the claim sits "
+                    f"{'above' if claim_value > high else 'below'} everything "
+                    f"independently measured",
                     list(dict.fromkeys(refs)),
                 )
             )

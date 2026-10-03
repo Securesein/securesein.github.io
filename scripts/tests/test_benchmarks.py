@@ -361,3 +361,30 @@ def test_a_gap_cites_every_measurement_its_wording_names():
     assert len(gaps) == 1
     cited = {existing[ref]["value"] for ref in gaps[0]["refs"] if ref in existing}
     assert {40.0, 55.0} <= cited, f"both edges must be cited, got {cited}"
+
+
+def test_a_gaps_wording_would_itself_survive_g5():
+    """The detail is pasted into the roundup prompt verbatim and the
+    prompt tells the model to reuse its numbers exactly, so any figure
+    here that is not a cited measurement guarantees a draft G5 throws
+    away. Stating the size of the gap did exactly that: the channel's
+    first run with vendor data drafted a roundup, failed G5 on "14.7",
+    and published nothing."""
+    from core.verify import g5_reference_integrity
+
+    for existing in (
+        _keyed(_independent(60.54, "none")),
+        _keyed(_independent(40.0, "none"), _independent(55.0, "max")),
+    ):
+        pending = _keyed(_claim(95.0))
+        gaps = _gaps(existing, pending)
+        assert len(gaps) == 1
+        known = {**existing, **pending}
+        values = {ref: known[ref]["value"] for ref in gaps[0]["refs"] if ref in known}
+        result = g5_reference_integrity(
+            gaps[0]["detail"], gaps[0]["refs"], set(known), values
+        )
+        assert result.passed, (
+            f"the finding itself cannot pass G5: {result.offending} "
+            f"in {gaps[0]['detail']!r}"
+        )
