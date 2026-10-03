@@ -1,0 +1,18 @@
+{
+  "model": "glm-4-7-flash",
+  "vendor": "unknown",
+  "benchmark": "gpqa-diamond",
+  "metric": "accuracy",
+  "value": 75.2,
+  "unit": "percent",
+  "measuredBy": "vendor",
+  "evaluator": "Vendor model card (zai-org)",
+  "conditions": {
+    "notes": "Self-reported in the model card; conditions not stated"
+  },
+  "measuredAt": "2026-10-03",
+  "sourceUrl": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+  "publisher": "Hugging Face Community Evals",
+  "license": "Each row is a score the model's own organisation published in its Hugging Face model card; attribution is the per-row sourceUrl.",
+  "attribution": "zai-org, via Hugging Face Community Evals"
+}

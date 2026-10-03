@@ -1,0 +1,18 @@
+{
+  "model": "kimi-k3",
+  "vendor": "moonshot",
+  "benchmark": "gpqa-diamond",
+  "metric": "accuracy",
+  "value": 93.5,
+  "unit": "percent",
+  "measuredBy": "vendor",
+  "evaluator": "Vendor model card (moonshotai)",
+  "conditions": {
+    "notes": "Self-reported in the model card; conditions not stated"
+  },
+  "measuredAt": "2026-07-16",
+  "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K3",
+  "publisher": "Hugging Face Community Evals",
+  "license": "Each row is a score the model's own organisation published in its Hugging Face model card; attribution is the per-row sourceUrl.",
+  "attribution": "moonshotai, via Hugging Face Community Evals"
+}

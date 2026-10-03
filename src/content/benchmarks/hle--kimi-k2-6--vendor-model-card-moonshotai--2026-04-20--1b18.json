@@ -1,0 +1,18 @@
+{
+  "model": "kimi-k2-6",
+  "vendor": "moonshot",
+  "benchmark": "hle",
+  "metric": "accuracy",
+  "value": 54.0,
+  "unit": "percent",
+  "measuredBy": "vendor",
+  "evaluator": "Vendor model card (moonshotai)",
+  "conditions": {
+    "notes": "Self-reported in the model card: With tools"
+  },
+  "measuredAt": "2026-04-20",
+  "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K2.6",
+  "publisher": "Hugging Face Community Evals",
+  "license": "Each row is a score the model's own organisation published in its Hugging Face model card; attribution is the per-row sourceUrl.",
+  "attribution": "moonshotai, via Hugging Face Community Evals"
+}

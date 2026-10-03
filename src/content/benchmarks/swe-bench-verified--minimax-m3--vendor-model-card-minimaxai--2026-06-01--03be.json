@@ -1,0 +1,18 @@
+{
+  "model": "minimax-m3",
+  "vendor": "minimax",
+  "benchmark": "swe-bench-verified",
+  "metric": "resolved",
+  "value": 80.5,
+  "unit": "percent",
+  "measuredBy": "vendor",
+  "evaluator": "Vendor model card (MiniMaxAI)",
+  "conditions": {
+    "notes": "Self-reported in the model card: Evaluated on internal infrastructure using Claude Code as the scaffolding. Each test was run 4 times and the average was taken."
+  },
+  "measuredAt": "2026-06-01",
+  "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+  "publisher": "Hugging Face Community Evals",
+  "license": "Each row is a score the model's own organisation published in its Hugging Face model card; attribution is the per-row sourceUrl.",
+  "attribution": "MiniMaxAI, via Hugging Face Community Evals"
+}

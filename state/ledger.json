@@ -111,6 +111,14 @@
       "publishedAt": "2026-09-28T04:01:14+00:00",
       "qualityScore": 100.0,
       "relevanceScore": 100.0
+    },
+    {
+      "slug": "discrepancies-in-llm-performance-claims-a-closer-look-at-gpqa-diamond",
+      "section": "benchmark",
+      "channel": "benchmarks",
+      "publishedAt": "2026-10-03T07:40:12+00:00",
+      "qualityScore": 100.0,
+      "relevanceScore": 100.0
     }
   ]
 }

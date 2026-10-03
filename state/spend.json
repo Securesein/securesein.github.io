@@ -1991,6 +1991,22 @@
           "estimated_calls": 0
         }
       }
+    },
+    {
+      "at": "2026-10-03T07:40:12+00:00",
+      "channel": "benchmarks",
+      "calls": 1,
+      "usd": 0.003705,
+      "aborted": false,
+      "by_model": {
+        "gpt-4o": {
+          "calls": 1,
+          "usd": 0.003705,
+          "prompt_tokens": 562,
+          "completion_tokens": 230,
+          "estimated_calls": 0
+        }
+      }
     }
   ]
 }

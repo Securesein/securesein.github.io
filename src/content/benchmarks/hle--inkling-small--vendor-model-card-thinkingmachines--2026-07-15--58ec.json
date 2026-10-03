@@ -1,0 +1,18 @@
+{
+  "model": "inkling-small",
+  "vendor": "thinkingmachines",
+  "benchmark": "hle",
+  "metric": "accuracy",
+  "value": 31.6,
+  "unit": "percent",
+  "measuredBy": "vendor",
+  "evaluator": "Vendor model card (thinkingmachines)",
+  "conditions": {
+    "notes": "Self-reported in the model card: text only"
+  },
+  "measuredAt": "2026-07-15",
+  "sourceUrl": "https://huggingface.co/thinkingmachines/Inkling-Small",
+  "publisher": "Hugging Face Community Evals",
+  "license": "Each row is a score the model's own organisation published in its Hugging Face model card; attribution is the per-row sourceUrl.",
+  "attribution": "thinkingmachines, via Hugging Face Community Evals"
+}
