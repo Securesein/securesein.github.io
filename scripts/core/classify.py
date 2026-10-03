@@ -147,15 +147,29 @@ def _version_from(text: str) -> str:
 
 
 def is_major(version: str) -> bool:
-    """"5.0" and "6" are major; "5.1" and "2026-09-03" are not. A major
-    bump is worth three points and a minor one is worth one, so this
-    distinction is doing real work."""
-    if not version or "-" in version:
+    """Whether a version identifies a different model, rather than a
+    rebuild of the same one.
+
+    This used to read "5.1 is a point release, so it is minor", which is
+    true of software and false of the thing being tracked. Labs ship
+    6.1, 5.5 and 4.7 as new models, with new weights, new prices and
+    their own launch posts, and scoring them +1 as housekeeping is why
+    "GPT-6.1 Sol in Codex, ChatGPT Work, and the API" reached 5.0
+    against a threshold of 6 and was dropped.
+
+    What genuinely is a rebuild is a SNAPSHOT: the same model retrained
+    or repackaged and stamped with a date — gpt-4o-2024-08-13,
+    Ministral-3-8B-Instruct-2512. Those are the minor bumps now, and
+    nothing else is.
+    """
+    if not version:
         return False
-    parts = version.split(".")
-    if len(parts) == 1:
-        return True
-    return all(p == "0" for p in parts[1:])
+    if "-" in version:
+        return False  # a dated snapshot: 2026-09-03
+    head = version.split(".")[0]
+    if head.isdigit() and len(head) >= 4:
+        return False  # a bare snapshot stamp: 2512, 0813
+    return True
 
 
 # How close a registry entry's own release date has to be to an item's

@@ -242,11 +242,21 @@ def test_cooldown_penalty_sinks_a_candidate():
 
 
 def test_major_and_minor_version_bumps_are_told_apart():
+    """A point release is a new model, not housekeeping. The minor bump
+    is reserved for a snapshot — the same model rebuilt and stamped with
+    a date — which is the only case where nothing about the model
+    changed."""
     assert classify_module.is_major("5.0")
     assert classify_module.is_major("6")
-    assert not classify_module.is_major("5.1")
-    assert not classify_module.is_major("3.7")
+    # Labs ship these as new models with their own launch posts.
+    # "GPT-6.1 Sol" scored 5.0 of 6 while 6.1 counted as a point release.
+    assert classify_module.is_major("6.1")
+    assert classify_module.is_major("5.5")
+    assert classify_module.is_major("4.7")
+    # Snapshots, which really are the same model rebuilt.
     assert not classify_module.is_major("2026-09-03")
+    assert not classify_module.is_major("2512")
+    assert not classify_module.is_major("")
 
 
 def test_benchmark_claim_needs_a_name_and_a_number():
