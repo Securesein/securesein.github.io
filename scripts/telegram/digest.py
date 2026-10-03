@@ -197,9 +197,8 @@ def messages(ledger: Ledger, radar: Radar, *, hours: int = 24) -> list[tuple]:
 
 
 def send(text: str) -> bool:
-    """One plain message, no keyboard. Used by run.py --digest --send,
-    which is itself refused in a dry run and passed by nothing in this
-    repository."""
+    """One plain message, no keyboard. This is what run.py --digest
+    --send calls, and therefore what digest.yml sends."""
     result = api.send(text)
     return bool(result and result.get("ok"))
 
@@ -207,9 +206,11 @@ def send(text: str) -> bool:
 def send_interactive(ledger: Ledger, radar: Radar) -> bool:
     """The full digest, one message per item, with keyboards.
 
-    NOT CALLED BY ANYTHING IN THIS REPOSITORY. It exists so that turning
-    the digest on is wiring rather than writing, and so the format above
-    is the format that would actually be sent.
+    NO LONGER CALLED. The keyboards did not work in practice and the
+    digest now goes out as one plain message — see the note at run.py's
+    --digest branch. Kept because the failure was never diagnosed, only
+    routed around: if Telegram callbacks are ever made to work here,
+    this is the shape to come back to.
     """
     ok = True
     for text, keyboard in messages(ledger, radar):

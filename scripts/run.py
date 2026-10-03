@@ -214,18 +214,26 @@ def main(argv: list[str] | None = None) -> int:
 
         text = digest.render(ledger, radar)
         print(text)
-        # The interactive form (one message per item, each with its own
-        # reaction keyboard) is what §11.1/§11.2 actually describe —
-        # digest.send() alone has nowhere to attach a button. send_interactive
-        # is what --publish --send calls; a dry run never reaches either.
+        # ONE PLAIN MESSAGE, NO KEYBOARD.
+        #
+        # This used to call send_interactive(), which sends one message
+        # per item with a reaction keyboard on each, per §11.1/§11.2.
+        # The keyboards do not work — the owner reported it, and it is
+        # the second time buttons have failed here: the original ⭐
+        # mechanism on the news pipeline was removed for the same reason
+        # and replaced with plain replies, which did work.
+        #
+        # A button that does nothing is worse than no button: it invites
+        # a press, swallows it, and leaves feedback.yml polling Telegram
+        # every five minutes — 288 runs a day — for presses that never
+        # arrive. The digest's value is the reading, not the reacting.
         if args.send:
             if dry_run:
                 print("\n[dry-run] --send ignored: a dry run never sends a real "
                       "digest. Re-run with --publish --send to send for real.")
             else:
-                print("\nSending digest to Telegram (one message per item, "
-                      "with reaction buttons)...")
-                ok = digest.send_interactive(ledger, radar)
+                print("\nSending digest to Telegram (one plain message)...")
+                ok = digest.send(text)
                 print("sent." if ok else "send FAILED — see above.")
         return 0
 
