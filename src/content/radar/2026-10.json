@@ -96,6 +96,51 @@
       "whyRelevant": "This release may include updates relevant to agent security and deployment practices, which are crucial for understanding LLMs' internal workings and ensuring safe production use.",
       "seenAt": "2026-10-01T18:17:09+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rb1990b3dbcef40a",
+      "url": "https://huggingface.co/nvidia/PixelUMM",
+      "title": "nvidia/PixelUMM",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item provides insights into model architecture and performance, relevant for understanding LLMs' internal workings and optimizing deployment in production.",
+      "seenAt": "2026-10-03T07:55:04+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rdda3f1f9d5b3d32",
+      "url": "https://huggingface.co/nvidia/PixelDiT2-ImageNet",
+      "title": "nvidia/PixelDiT2-ImageNet",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's open-weight architecture may provide insights into LLM interpretability and efficiency in reasoning, relevant for deploying and securing models.",
+      "seenAt": "2026-10-03T07:55:06+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2abbc58dbfb06c3",
+      "url": "https://huggingface.co/RekaAI/Reka-Inverse-Dynamics-Model",
+      "title": "RekaAI/Reka-Inverse-Dynamics-Model",
+      "source": "HF org — Reka",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model may provide insights into the dynamics of LLM behavior, relevant for understanding internal mechanisms and improving inference efficiency in production.",
+      "seenAt": "2026-10-03T07:55:08+00:00",
+      "status": "radar"
     }
   ]
 }
