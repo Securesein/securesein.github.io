@@ -36,7 +36,7 @@ import traceback
 
 from channels import benchmark_triggers
 from core import llm as llm_module
-from core.adapters import epoch
+from core.adapters import epoch, hf_leaderboard
 from core.constants import EPOCH_BACKFILL_START
 from core.measurements import Store
 from core.registry import load_registry
@@ -53,6 +53,11 @@ ADAPTERS = {
         bundle_path=ctx.fixtures if ctx.fixtures and ctx.fixtures.suffix == ".zip" else None,
         since=EPOCH_BACKFILL_START,
     ),
+    # The vendor half of the table. Epoch supplies independent numbers;
+    # this supplies what the vendor claimed for the same models, which
+    # is the only thing that can make vendor_vs_thirdparty_gap fire.
+    # Costs no model call, so it cannot move the spend ceilings.
+    "hf_leaderboard": lambda registry, ctx: hf_leaderboard.collect(registry, ctx),
 }
 
 

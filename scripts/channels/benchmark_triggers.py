@@ -119,28 +119,74 @@ def evaluate(ctx, store: Store, config: dict | None = None) -> list[dict]:
             for entry_id, record in rows
             if record["measuredBy"] == "vendor"
         }
+        # Compared against the RANGE of the independent readings, not
+        # against each one in turn.
+        #
+        # Epoch runs one model at several reasoning efforts and stores
+        # each as its own record, so glm-5-2 on GPQA Diamond is 91.86 at
+        # max effort, 87.88 at low and 71.21 at none. A vendor quoting
+        # 91.2 is quoting its best configuration and agrees with the
+        # max-effort run to within 0.7. Comparing the claim to each
+        # record in turn fires on the `none` run and reports "a 20.0
+        # point gap", which is a false accusation against a named
+        # company — and it would have fired on the very first run of
+        # this channel for three separate vendors.
+        #
+        # A claim landing anywhere inside the spread an independent
+        # evaluator already measured is a vendor quoting its best
+        # configuration, which is normal and not a story. Only a claim
+        # outside that spread is one.
+        by_model: dict[str, list[tuple[str, dict]]] = {}
         for entry_id, record in independent:
-            claim = vendor_claims.get(record["model"])
-            if claim is None:
+            by_model.setdefault(record["model"], []).append((entry_id, record))
+
+        for model_id, (claim_id, claim_record) in vendor_claims.items():
+            readings = [
+                pair
+                for pair in by_model.get(model_id, [])
+                # An Elo and a percentage are not comparable.
+                if pair[1]["unit"] == claim_record["unit"]
+            ]
+            if not readings:
                 continue
-            claim_id, claim_record = claim
-            if entry_id not in new_records and claim_id not in new_records:
+            if claim_id not in new_records and not any(
+                entry_id in new_records for entry_id, _ in readings
+            ):
                 continue  # already reported on a previous run
-            if record["unit"] != claim_record["unit"]:
-                continue  # an Elo and a percentage are not comparable
-            gap = abs(float(claim_record["value"]) - float(record["value"]))
-            if gap >= gap_pp:
-                fired.append(
-                    _fired(
-                        "vendor_vs_thirdparty_gap",
-                        weights,
-                        f"{record['model']} on {benchmark.name}: "
-                        f"{claim_record['evaluator']} claims "
-                        f"{claim_record['value']}, {record['evaluator']} measured "
-                        f"{record['value']} — a {gap:.1f} point gap",
-                        [claim_id, entry_id],
-                    )
+
+            claim_value = float(claim_record["value"])
+            lowest = min(readings, key=lambda pair: float(pair[1]["value"]))
+            highest = max(readings, key=lambda pair: float(pair[1]["value"]))
+            low, high = float(lowest[1]["value"]), float(highest[1]["value"])
+
+            if claim_value > high:
+                gap, nearest = claim_value - high, highest
+            elif claim_value < low:
+                gap, nearest = low - claim_value, lowest
+            else:
+                continue  # inside the independently measured spread
+            if gap < gap_pp:
+                continue
+
+            measured = (
+                f"{low}" if lowest[0] == highest[0]
+                else f"{low} to {high} across {len(readings)} runs"
+            )
+            # Both edges are cited, not just the nearest: the detail
+            # names both numbers and G5 rejects a roundup citing a
+            # figure that is not one of the referenced measurements.
+            refs = [claim_id, nearest[0], lowest[0], highest[0]]
+            fired.append(
+                _fired(
+                    "vendor_vs_thirdparty_gap",
+                    weights,
+                    f"{model_id} on {benchmark.name}: "
+                    f"{claim_record['evaluator']} claims {claim_record['value']}, "
+                    f"{nearest[1]['evaluator']} measured {measured} — the claim is "
+                    f"{gap:.1f} points outside the independently measured range",
+                    list(dict.fromkeys(refs)),
                 )
+            )
 
     # A frontier model being measured for the first time is worth a
     # sentence even when it does not top anything.

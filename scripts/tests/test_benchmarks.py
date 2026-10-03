@@ -287,3 +287,77 @@ def test_the_collection_shows_a_vendor_claim_next_to_an_independent_run():
     third = {(r["benchmark"], r["model"]) for r in records if r["measuredBy"] == "thirdparty"}
     assert vendor, "no vendor claims were backfilled"
     assert vendor & third, "no model has both a vendor claim and an independent run"
+
+
+# --- the vendor-vs-independent gap -----------------------------------
+#
+# The highest-weighted trigger in the channel, and the one that names a
+# company in public. These are regression tests for a real defect:
+# comparing a claim against each independent record in turn fired on
+# Epoch's lowest reasoning-effort run and reported a 20-point gap for a
+# vendor whose claim matched Epoch's own max-effort run to within 0.7.
+
+
+class _FakeStore:
+    """Enough of a Store for benchmark_triggers.evaluate()."""
+
+    def __init__(self, existing: dict, pending: dict):
+        self.existing = existing
+        self.pending = pending
+
+
+def _keyed(*records: dict) -> dict:
+    return {measurement_id(record): record for record in records}
+
+
+def _gaps(existing: dict, pending: dict) -> list[dict]:
+    from channels import benchmark_triggers
+
+    fired = benchmark_triggers.evaluate(None, _FakeStore(existing, pending))
+    return [t for t in fired if t["trigger"] == "vendor_vs_thirdparty_gap"]
+
+
+def _independent(value: float, effort: str) -> dict:
+    return _record(
+        model="glm-5-2",
+        vendor="zhipu",
+        value=value,
+        conditions={"shots": 0, "tools": False, "reasoningEffort": effort},
+    )
+
+
+def _claim(value: float) -> dict:
+    return _record(
+        model="glm-5-2",
+        vendor="zhipu",
+        value=value,
+        measuredBy="vendor",
+        evaluator="Vendor model card (zai-org)",
+        conditions={"notes": "Self-reported in the model card; conditions not stated"},
+    )
+
+
+def test_a_vendor_claim_inside_the_measured_spread_is_not_a_gap():
+    """Epoch runs one model at several reasoning efforts. A vendor
+    quoting its best configuration agrees with the best of those runs,
+    and reporting that as a discrepancy is a false accusation."""
+    existing = _keyed(_independent(91.86, "max"), _independent(71.21, "none"))
+    gaps = _gaps(existing, _keyed(_claim(91.2)))
+    assert not gaps, f"claim of 91.2 sits inside 71.21-91.86 and must not fire: {gaps}"
+
+
+def test_a_vendor_claim_outside_the_measured_spread_is_a_gap():
+    existing = _keyed(_independent(60.54, "none"))
+    gaps = _gaps(existing, _keyed(_claim(75.2)))
+    assert len(gaps) == 1, f"claim of 75.2 is above every reading of 60.54: {gaps}"
+    assert "75.2" in gaps[0]["detail"] and "60.54" in gaps[0]["detail"]
+
+
+def test_a_gap_cites_every_measurement_its_wording_names():
+    """G5 rejects a roundup quoting a number that is not one of the
+    cited measurements, so the range's edges have to be in `refs`."""
+    existing = _keyed(_independent(40.0, "none"), _independent(55.0, "max"))
+    gaps = _gaps(existing, _keyed(_claim(95.0)))
+    assert len(gaps) == 1
+    cited = {existing[ref]["value"] for ref in gaps[0]["refs"] if ref in existing}
+    assert {40.0, 55.0} <= cited, f"both edges must be cited, got {cited}"
