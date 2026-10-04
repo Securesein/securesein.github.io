@@ -156,6 +156,21 @@
       "whyRelevant": "This release may provide insights into generative AI models, but its relevance to mechanistic interpretability and LLM internals is limited.",
       "seenAt": "2026-10-03T22:01:20+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rb8a1e64ac765168",
+      "url": "https://huggingface.co/google/DiarizationLM-Gemma-4-E4B-v1",
+      "title": "google/DiarizationLM-Gemma-4-E4B-v1",
+      "source": "HF org — Google (Gemma)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's focus on speaker diarization can enhance understanding of LLMs' internal workings and improve inference efficiency in real-world applications.",
+      "seenAt": "2026-10-04T16:01:23+00:00",
+      "status": "radar"
     }
   ]
 }
