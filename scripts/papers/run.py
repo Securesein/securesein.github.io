@@ -60,10 +60,31 @@ from telegram import api  # noqa: E402
 # and <summary> is the bare abstract (the RSS feed prefixed it with
 # "Abstract:", which ABSTRACT_RE stripped — its fallback already handled
 # the unprefixed case).
-FEED_URL = (
-    "https://export.arxiv.org/api/query?search_query="
-    "cat:cs.LG+OR+cat:cs.CL+OR+cat:cs.AI+OR+cat:cs.NE+OR+cat:stat.ML"
-    "&sortBy=submittedDate&sortOrder=descending&max_results=300"
+def _arxiv(categories: str, limit: int) -> str:
+    return (
+        "https://export.arxiv.org/api/query?search_query="
+        + "+OR+".join(f"cat:{c}" for c in categories.split())
+        + f"&sortBy=submittedDate&sortOrder=descending&max_results={limit}"
+    )
+
+
+# TWO QUERIES, NOT ONE COMBINED QUERY.
+#
+# cs.LG and cs.CL alone put out several hundred papers a day, so the
+# newest 300 across a combined query are almost entirely those two: on a
+# representative day a merged query matched 220 llm, 20 rl, 15
+# neural_nets and exactly 1 security. cs.CR does get its own volume —
+# it is simply never recent enough, relative to cs.LG, to reach the cut.
+# Giving it its own query and its own allowance is what makes a security
+# paper reachable at all. dedup() handles the overlap.
+#
+# This is only the security PAPERS. The practitioner security sources —
+# advisories, OWASP, MITRE ATLAS, prompt-injection writeups, tooling —
+# are a different kind of thing and cannot come through this funnel,
+# which requires an arxiv.org/abs/ id per item.
+FEED_URLS = (
+    _arxiv("cs.LG cs.CL cs.AI cs.NE stat.ML", 300),
+    _arxiv("cs.CR", 120),
 )
 USER_AGENT = "SecureseinReader/0.1 (+https://securesein.github.io/)"
 FEED_TIMEOUT = 40
@@ -89,10 +110,20 @@ ABSTRACT_RE = re.compile(r"Abstract:\s*(.*)", re.IGNORECASE | re.DOTALL)
 # --- fetch -------------------------------------------------------------
 
 
-def fetch_feed(url: str = FEED_URL) -> list[dict]:
-    """One HTTP GET, parsed into plain dicts. Never raises — a failed
-    fetch is a quiet, empty digest, not a crashed run (§9.1's asymmetry:
-    a false negative here costs nothing, a crash costs a missed morning)."""
+def fetch_feed(urls: tuple[str, ...] | str = FEED_URLS) -> list[dict]:
+    """Each URL fetched and parsed into plain dicts. Never raises — a
+    failed fetch is a quiet, empty digest, not a crashed run (§9.1's
+    asymmetry: a false negative here costs nothing, a crash costs a
+    missed morning). One dead query does not take the others with it."""
+    if isinstance(urls, str):
+        urls = (urls,)
+    items: list[dict] = []
+    for url in urls:
+        items.extend(_fetch_one(url))
+    return items
+
+
+def _fetch_one(url: str) -> list[dict]:
     try:
         response = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=FEED_TIMEOUT)
         response.raise_for_status()
@@ -192,13 +223,52 @@ def keyword_score(item: dict, profile: dict) -> tuple[float, str | None]:
 
 
 def keyword_prefilter(items: list[dict], profile: dict, cap: int = KEYWORD_SURVIVOR_CAP) -> list[dict]:
+    """Top `cap` by keyword score, but each bucket's `min_per_digest`
+    is reserved first.
+
+    The cap used to be bucket-blind, which quietly made `min_per_digest`
+    unenforceable for any minority bucket: it only constrains what the
+    DIGEST picks from the survivors, so a bucket cut here is gone before
+    it is ever considered. On a representative 300-paper day llm matched
+    220 and took 80 of the 85 slots, while neural_nets (15 matches) and
+    security (1) were discarded wholesale — both with min_per_digest: 1.
+    """
     scored = []
     for item in items:
         score, bucket = keyword_score(item, profile)
         if score > 0 and bucket:
             scored.append({**item, "keyword_score": score, "bucket": bucket})
     scored.sort(key=lambda i: i["keyword_score"], reverse=True)
-    return scored[:cap]
+
+    picked: list[dict] = []
+    taken: set[str] = set()
+    for name, spec in profile.get("buckets", {}).items():
+        want = int(spec.get("min_per_digest", 0))
+        for item in scored:
+            if want <= 0 or len(picked) >= cap:
+                break
+            if item["bucket"] == name and item["id"] not in taken:
+                picked.append(item)
+                taken.add(item["id"])
+                want -= 1
+    for item in scored:
+        if len(picked) >= cap:
+            break
+        if item["id"] not in taken:
+            picked.append(item)
+            taken.add(item["id"])
+    picked.sort(key=lambda i: i["keyword_score"], reverse=True)
+    return picked
+
+
+def _bucket_enum(profile: dict) -> str:
+    """The bucket names the triage model may answer with, read from the
+    profile rather than hardcoded. The enum used to be a literal
+    "llm|neural_nets|rl" in the prompt below, so adding a bucket to
+    papers_profile.yaml silently left the model unable to name it — it
+    would recategorise a security paper into one of the three it had
+    been told about."""
+    return "|".join(profile.get("buckets", {})) or "llm"
 
 
 TRIAGE_SYSTEM = """You triage arXiv abstracts for a personal reading digest, not a \
@@ -214,12 +284,12 @@ Clinical/medical/healthcare applications of general ML/LLM techniques are \
 over-represented in the raw feed relative to how novel they usually are -- score \
 these lower unless the methodological contribution itself (not just the domain) \
 is genuinely novel.
-Return strict JSON: {"papers": [{"id": "...", "bucket": "llm|neural_nets|rl", \
+Return strict JSON: {"papers": [{"id": "...", "bucket": "%BUCKETS%", \
 "score": <0-100>, "one_line": "<one sentence, what it actually claims>"}]}
 one_line must be a genuine claim from the abstract, not a restated title."""
 
 
-def triage_batch(llm: LLM, batch: list[dict]) -> list[dict]:
+def triage_batch(llm: LLM, batch: list[dict], profile: dict | None = None) -> list[dict]:
     listing = "\n\n".join(
         f"id: {p['id']}\nbucket (pre-sorted, may be wrong): {p['bucket']}\n"
         f"title: {p['title']}\nabstract: {p['abstract'][:1200]}"
@@ -238,7 +308,7 @@ def triage_batch(llm: LLM, batch: list[dict]) -> list[dict]:
     result = llm.json(
         listing,
         model="gpt-4o-mini",
-        system=TRIAGE_SYSTEM,
+        system=TRIAGE_SYSTEM.replace("%BUCKETS%", _bucket_enum(profile or {})),
         offline=offline_stub if llm.offline else None,
         label="papers-triage",
     )
@@ -254,7 +324,8 @@ def triage_batch(llm: LLM, batch: list[dict]) -> list[dict]:
     return out
 
 
-def triage(llm: LLM, survivors: list[dict], max_calls: int) -> list[dict]:
+def triage(llm: LLM, survivors: list[dict], max_calls: int,
+           profile: dict | None = None) -> list[dict]:
     scored = []
     for start in range(0, len(survivors), TRIAGE_BATCH_SIZE):
         if start // TRIAGE_BATCH_SIZE >= max_calls:
@@ -263,13 +334,44 @@ def triage(llm: LLM, survivors: list[dict], max_calls: int) -> list[dict]:
                   file=sys.stderr)
             break
         batch = survivors[start:start + TRIAGE_BATCH_SIZE]
-        scored.extend(triage_batch(llm, batch))
+        scored.extend(triage_batch(llm, batch, profile))
     return scored
 
 
-def rank_and_cap(scored: list[dict], cap: int = DAILY_CAP) -> list[dict]:
+def rank_and_cap(scored: list[dict], cap: int = DAILY_CAP,
+                 profile: dict | None = None) -> list[dict]:
+    """Top `cap` by triage score, with each bucket's `min_per_digest`
+    reserved first.
+
+    This is the stage the setting is named after, and it was the second
+    of two places that ignored it — keyword_prefilter() being the first.
+    With both bucket-blind, a minority bucket could not reach the digest
+    however high it scored: on a representative day the one security
+    paper that survived the prefilter lost all twelve slots to llm.
+    """
     scored = sorted(scored, key=lambda p: p.get("score", 0), reverse=True)
-    return scored[:cap]
+    buckets = (profile or {}).get("buckets", {})
+    if not buckets:
+        return scored[:cap]
+
+    picked: list[dict] = []
+    taken: set[str] = set()
+    for name, spec in buckets.items():
+        want = int(spec.get("min_per_digest", 0))
+        for item in scored:
+            if want <= 0 or len(picked) >= cap:
+                break
+            if item.get("bucket") == name and item["id"] not in taken:
+                picked.append(item)
+                taken.add(item["id"])
+                want -= 1
+    for item in scored:
+        if len(picked) >= cap:
+            break
+        if item["id"] not in taken:
+            picked.append(item)
+            taken.add(item["id"])
+    return sorted(picked, key=lambda p: p.get("score", 0), reverse=True)
 
 
 # --- render + send -------------------------------------------------------
@@ -344,7 +446,8 @@ def main(argv: list[str] | None = None) -> int:
         return 3
 
     try:
-        scored = triage(llm, survivors, max_calls=budget["max_llm_calls_per_run"])
+        scored = triage(llm, survivors, max_calls=budget["max_llm_calls_per_run"],
+                        profile=profile)
     except BudgetExceeded as exc:
         print(f"\n  SPEND CEILING — run aborted: {exc}", file=sys.stderr)
         if llm.guard is not None:
@@ -362,7 +465,7 @@ def main(argv: list[str] | None = None) -> int:
         spend_module.record_run(llm.guard, channel="papers")
     print(f"  {len(scored)} scored by triage ({llm.calls} model call(s))")
 
-    picks = rank_and_cap(scored)
+    picks = rank_and_cap(scored, profile=profile)
     text = render(picks, total_new=len(items))
     print()
     print(text)

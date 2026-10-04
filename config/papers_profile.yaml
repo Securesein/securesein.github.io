@@ -79,6 +79,41 @@ buckets:
       - Q-learning
       - actor-critic
 
+  # The security papers out of cs.CR. Deliberately about attacks on and
+  # through MODELS, not general infosec: cs.CR is a large category and
+  # most of it is cryptography, protocols and network security with
+  # nothing to do with this site. The practitioner security sources
+  # (OWASP, MITRE ATLAS, advisories, prompt-injection writeups) are a
+  # different kind of thing and are not reachable from this funnel,
+  # which needs an arXiv id per item.
+  security:
+    weight: 1.0
+    min_per_digest: 1
+    keywords:
+      - prompt injection
+      - jailbreak
+      - adversarial example
+      - adversarial attack
+      - data poisoning
+      - backdoor
+      - model extraction
+      - model stealing
+      - membership inference
+      - training data extraction
+      - red team
+      - red-teaming
+      - guardrail
+      - safety filter
+      - alignment faking
+      - sandbagging
+      - deceptive alignment
+      - reward hacking
+      - agent security
+      - sandbox escape
+      - privilege escalation
+      - exfiltration
+      - supply chain attack
+
 # Downweighted, not dropped (owner request: medical/clinical papers were
 # showing up too often, but should still surface occasionally when they're
 # genuinely strong -- unlike `exclude`, this only multiplies the keyword
