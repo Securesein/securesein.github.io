@@ -73,6 +73,14 @@ MAX_AGE_DAYS = 21
 # first run without this, 8 of 10 picks came from one blog.
 PER_SOURCE_CAP = 3
 
+# Below this, an item does not go in however empty the digest is. A
+# short digest of things that matter is the product; a padded one is
+# not. The first live run filled half its slots with items the triage
+# model had itself described as "not specific to LLM systems" and
+# "lacks concrete security implications" — they were selected because
+# min_per_digest reserved a slot and nothing better had cleared.
+MIN_SCORE = 55
+
 
 # --- fetch ---------------------------------------------------------------
 
@@ -171,6 +179,12 @@ changes what you would check for.
 Score LOW: version bumps, dependency updates, changelogs with no named \
 capability, marketing, conference announcements, anything whose \
 security content is a passing mention.
+
+SCORE BELOW 40, whatever its quality, anything that is not about AI or \
+LLM systems. Several of these sources are general security publications \
+and most of what they publish is excellent and irrelevant here: \
+cryptographic primitives, identity protocols, memory safety, compliance \
+guidance with no model in view. A well-written post about SAML is a 20.
 
 Be harsh. Most release notes are a 20. An item that merely mentions \
 "security" is not a security item.
@@ -306,7 +320,9 @@ def main(argv: list[str] | None = None) -> int:
         spend_module.record_run(llm.guard, channel="security-intel")
 
     print(f"  {len(scored)} scored by triage ({llm.calls} model call(s))")
-    picks = cap_per_source(rank_and_cap(scored, cap=DAILY_CAP * 3, profile=profile))[:DAILY_CAP]
+    good = [p for p in scored if p.get("score", 0) >= MIN_SCORE]
+    print(f"  {len(good)} at or above the score floor of {MIN_SCORE}")
+    picks = cap_per_source(rank_and_cap(good, cap=DAILY_CAP * 3, profile=profile))[:DAILY_CAP]
     text = render(picks, total=len(items))
     print()
     print(text)
