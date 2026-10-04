@@ -1,0 +1,60 @@
+name: Reader — security intel
+
+# ############################################################
+# #  MANUAL TRIGGER ONLY. THERE IS DELIBERATELY NO `schedule`. #
+# #                                                            #
+# #  Like papers.yml, the real cadence comes from an external  #
+# #  cron-job.org job POSTing to this workflow's dispatches    #
+# #  endpoint. See ARCHITECTURE-STATE.md §7 for why that is    #
+# #  the arrangement and what it costs.                        #
+# #                                                            #
+# #  THIS WORKFLOW CANNOT PUBLISH ANYTHING. It reads feeds,    #
+# #  filters, triages and sends one plain Telegram message.    #
+# #  There is no write path to src/content, the ledger or any  #
+# #  profile, and `permissions: contents: read` enforces it.   #
+# #                                                            #
+# #  It defaults to RENDER ONLY. `send` has to be set to true  #
+# #  per run for anything to reach Telegram.                   #
+# ############################################################
+on:
+  workflow_dispatch:
+    inputs:
+      send:
+        description: "Actually send it to Telegram (leave false to render only)"
+        type: boolean
+        default: false
+      offline_llm:
+        description: "Use the deterministic stand-in, no API calls at all"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  security-intel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch, triage and render (send only if requested)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          # Its own chat if one has been created, otherwise it shares
+          # Reader's. Either way it is NOT the main TELEGRAM_CHAT_ID the
+          # rest of the pipeline talks in. Add a
+          # TELEGRAM_SECURITY_CHAT_ID secret to split the two streams.
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_SECURITY_CHAT_ID || secrets.TELEGRAM_PAPERS_CHAT_ID }}
+        run: |
+          python scripts/papers/security.py \
+            ${{ inputs.send && '--publish' || '--dry-run' }} \
+            ${{ inputs.offline_llm && '--offline-llm' || '' }}

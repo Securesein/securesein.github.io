@@ -1,0 +1,5 @@
+{
+  "_comment": "Separate from papers_budget.json on purpose: two readers sharing one daily allowance means whichever runs first can starve the other. These are LLM CALL caps; the dollar ceilings in config/budgets.json apply on top and are enforced inside core/llm.py regardless.",
+  "max_llm_calls_per_run": 4,
+  "max_llm_calls_per_day": 8
+}

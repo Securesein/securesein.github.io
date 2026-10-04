@@ -1,0 +1,148 @@
+# The security intel Reader's reading profile.
+#
+# Hand-edited only, like papers_profile.yaml and interest_profile.yaml.
+# No learning loop.
+#
+# This is a READING filter for a Telegram digest, not a publishing
+# filter. Nothing it selects is ever written to the site — the owner
+# reads it and decides by hand whether anything deserves a post.
+#
+# It has to work harder than the papers profile does. The papers Reader
+# draws from arXiv, where everything is at least a paper; this one draws
+# from sources that are mostly NOT security: the Hugging Face blog is
+# 873 items of model launches and tutorials, and NIST publishes about
+# all of metrology. Without a real filter those two drown everything
+# else. The exclude list below is therefore the first thing to tune.
+
+buckets:
+  # Someone demonstrating a way in. The reason this feed exists.
+  attacks:
+    weight: 1.0
+    min_per_digest: 2
+    keywords:
+      - prompt injection
+      - indirect prompt injection
+      - jailbreak
+      - exfiltration
+      - data exfiltration
+      - tool poisoning
+      - rug pull
+      - confused deputy
+      - privilege escalation
+      - sandbox escape
+      - supply chain
+      - typosquat
+      - malicious model
+      - pickle
+      - deserialization
+      - remote code execution
+      - RCE
+      - CVE
+      - zero-day
+      - proof of concept
+      - exploit
+      - attack chain
+      - red team
+      - adversarial
+
+  # The surface everything is currently being built on, and the one
+  # moving fastest: agents, tool calling, MCP servers.
+  agents:
+    weight: 1.0
+    min_per_digest: 1
+    keywords:
+      - MCP
+      - Model Context Protocol
+      - agent
+      - agentic
+      - tool call
+      - tool use
+      - function calling
+      - autonomous
+      - computer use
+      - browser agent
+      - sandbox
+
+  # Scanners, guardrails, eval harnesses. Lower weight on purpose: a
+  # version bump is not news, a new detection class is.
+  defence:
+    weight: 0.7
+    min_per_digest: 1
+    keywords:
+      - guardrail
+      - scanner
+      - detection
+      - mitigation
+      - defense
+      - defence
+      - hardening
+      - probe
+      - evaluation harness
+      - safety filter
+      - content filter
+      - watermark
+      - provenance
+      - sandboxing
+      - least privilege
+
+  # Frameworks, standards, threat matrices. Rare but load-bearing.
+  governance:
+    weight: 0.6
+    min_per_digest: 0
+    keywords:
+      - ATLAS
+      - OWASP
+      - NIST
+      - framework
+      - standard
+      - guidance
+      - risk management
+      - threat model
+      - taxonomy
+      - compliance
+      - audit
+
+# Dropped before anything is scored. The highest-leverage knob here,
+# because two of the sources are general-purpose and would otherwise
+# dominate: the Hugging Face blog publishes model launches and
+# tutorials, and NIST publishes about measurement science.
+exclude:
+  - fine-tune your own
+  - getting started with
+  - introducing our new model
+  - now available on
+  - partners with
+  - quantum
+  - metrology
+  - calibration service
+  - semiconductor
+  - manufacturing
+  - biometric
+  - forensic science
+  - disaster resilience
+  - wildland fire
+  - earthquake
+  - building code
+  - webinar
+  - workshop announcement
+  - call for papers
+  - job opening
+  - we are hiring
+
+# Downweighted rather than dropped: a release note is worth seeing when
+# it names a new capability, and not worth seeing when it is a patch
+# bump. The LLM triage can tell the difference; the keyword filter
+# cannot, so it only reduces the score rather than removing the item.
+penalize:
+  factor: 0.5
+  keywords:
+    - bump
+    - patch release
+    - dependency update
+    - changelog
+    - "v0."
+    - snapshot
+    - nightly
+    - "-rc"
+    - typo
+    - readme

@@ -1,0 +1,135 @@
+{
+  "_comment": "Sources for the security intel Reader (scripts/papers/security.py). NOT a publishing channel — nothing here can write a post. These are the PRACTITIONER security sources: advisories, attack writeups, defensive tooling and standards. The security PAPERS live in the papers Reader's cs.CR bucket instead; this file deliberately contains no arXiv. Every entry was fetched on 2026-10-04 and the item count and newest-item date below are measured, not assumed.",
+  "feeds": [
+    {
+      "naam": "Embrace The Red (Johann Rehberger)",
+      "url": "https://embracethered.com/blog/index.xml",
+      "type": "rss",
+      "tier": "primary",
+      "vendor": "-",
+      "verified": true,
+      "note": "The single highest-signal source in this file. Prompt injection, agent exploitation, data exfiltration through LLM tooling, usually with a working proof of concept. 2026-10-04: 232 items, newest 2026-09-30."
+    },
+    {
+      "naam": "Trail of Bits — Blog",
+      "url": "https://blog.trailofbits.com/feed/",
+      "type": "rss",
+      "tier": "primary",
+      "vendor": "-",
+      "verified": true,
+      "note": "Security research house. Not AI-only, so the keyword profile does the filtering. 2026-10-04: 20 items, newest 2026-10-02."
+    },
+    {
+      "naam": "Hugging Face — Blog",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "type": "rss",
+      "tier": "primary",
+      "vendor": "-",
+      "verified": true,
+      "note": "HIGH VOLUME (873 items) and mostly not security. Carried only because HF is where supply-chain incidents on the model hub get written up. The keyword profile must do real work here."
+    },
+    {
+      "naam": "NIST — AI news and publications",
+      "url": "https://www.nist.gov/news-events/news/rss.xml",
+      "type": "rss",
+      "tier": "corroborating",
+      "vendor": "-",
+      "verified": true,
+      "note": "All of NIST, not just AI. Standards and framework updates; slow but occasionally load-bearing. 2026-10-04: 40 items, newest 2026-09-28."
+    },
+    {
+      "naam": "Inspect (UK AI Security Institute)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_ai/releases.atom",
+      "type": "atom",
+      "tier": "primary",
+      "vendor": "-",
+      "verified": true,
+      "note": "The evaluation harness AISI builds its safety evals on. Release notes name new eval types. 2026-10-04: 10 items, newest 2026-10-02 — actively developed."
+    },
+    {
+      "naam": "mcp-scan (Invariant Labs)",
+      "url": "https://github.com/invariantlabs-ai/mcp-scan/releases.atom",
+      "type": "atom",
+      "tier": "primary",
+      "vendor": "-",
+      "verified": true,
+      "note": "Scanner for MCP server vulnerabilities — tool poisoning, rug pulls, cross-origin escalation. 2026-10-04: 10 items, newest 2026-09-29."
+    },
+    {
+      "naam": "garak (NVIDIA) — LLM vulnerability scanner",
+      "url": "https://github.com/NVIDIA/garak/releases.atom",
+      "type": "atom",
+      "tier": "corroborating",
+      "vendor": "nvidia",
+      "verified": true,
+      "note": "New probe classes are the interesting part; the version bumps are not. 2026-10-04: 10 items, newest 2026-09-09."
+    },
+    {
+      "naam": "Model Context Protocol — servers",
+      "url": "https://github.com/modelcontextprotocol/servers/releases.atom",
+      "type": "atom",
+      "tier": "corroborating",
+      "vendor": "-",
+      "verified": true,
+      "note": "MCP is a live attack surface and this is where its reference servers change. 2026-10-04: 10 items, newest 2026-08-31."
+    },
+    {
+      "naam": "Guardrails AI",
+      "url": "https://github.com/guardrails-ai/guardrails/releases.atom",
+      "type": "atom",
+      "tier": "community",
+      "vendor": "-",
+      "verified": true,
+      "note": "Defensive tooling. 2026-10-04: 10 items, newest 2026-08-14 — slow but alive."
+    },
+    {
+      "naam": "MITRE ATLAS — navigator data",
+      "url": "https://github.com/mitre-atlas/atlas-navigator-data/releases.atom",
+      "type": "atom",
+      "tier": "corroborating",
+      "vendor": "-",
+      "verified": true,
+      "note": "The adversarial-ML threat matrix. Updates are rare but each one means a new documented technique. 2026-10-04: 10 items, newest 2026-04-30."
+    },
+    {
+      "naam": "OWASP Top 10 for LLM Applications",
+      "url": "https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/releases.atom",
+      "type": "atom",
+      "tier": "primary",
+      "vendor": "-",
+      "verified": true,
+      "inScope": false,
+      "scopeNote": "Fetches fine (3 items) but the newest release is 2024-11-18 — 23 months old. The Top 10 is a document that is revised every year or two, so a releases feed for it is silent almost always. Kept as a record of the decision; revisit if a 2027 edition lands."
+    },
+    {
+      "naam": "llm-guard (Protect AI)",
+      "url": "https://github.com/protectai/llm-guard/releases.atom",
+      "type": "atom",
+      "tier": "community",
+      "vendor": "-",
+      "verified": true,
+      "inScope": false,
+      "scopeNote": "Fetches fine (10 items) but the newest release is 2025-05-19, 17 months old. Treat as abandoned until proven otherwise."
+    },
+    {
+      "naam": "HiddenLayer — Research",
+      "url": "https://hiddenlayer.com/innovation-hub/",
+      "type": "html",
+      "tier": "corroborating",
+      "vendor": "-",
+      "verified": false,
+      "inScope": false,
+      "scopeNote": "No feed; would need the HTML adapter pointed at a page whose structure has not been checked. Left out of scope rather than guessed at."
+    },
+    {
+      "naam": "GitHub Advisory Database — ML/AI packages",
+      "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+      "type": "html",
+      "tier": "primary",
+      "vendor": "-",
+      "verified": false,
+      "inScope": false,
+      "scopeNote": "The obvious gap in this file: real CVEs against torch, transformers, vllm, gradio and friends. The HTML page is a search UI, not a feed. GitHub's GraphQL securityAdvisories API would do it properly but needs a token and an adapter. Worth building; not guessed at here."
+    }
+  ]
+}
