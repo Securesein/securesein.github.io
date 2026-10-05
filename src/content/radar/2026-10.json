@@ -171,6 +171,21 @@
       "whyRelevant": "This model's focus on speaker diarization can enhance understanding of LLMs' internal workings and improve inference efficiency in real-world applications.",
       "seenAt": "2026-10-04T16:01:23+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r884bff8c7463722",
+      "url": "https://huggingface.co/ibm-granite/granite-timeseries-ensemble-r1",
+      "title": "ibm-granite/granite-timeseries-ensemble-r1",
+      "source": "HF org — IBM Granite",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into ensemble methods that could enhance reasoning efficiency and model performance in LLMs, relevant for deployment and interpretability.",
+      "seenAt": "2026-10-05T22:01:33+00:00",
+      "status": "radar"
     }
   ]
 }
