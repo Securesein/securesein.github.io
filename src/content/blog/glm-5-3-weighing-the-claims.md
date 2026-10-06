@@ -75,14 +75,11 @@ This is the part worth slowing down on, because the loudest version of this stor
 
 ## What this means for practitioners
 
-Strip away the vendor positioning and the practical signal is boring but important: **the window between a published fix and a weaponized exploit is collapsing.** A $20, eight-hour run turned a disclosed CVE into a working chain. That changes the math for anyone managing fleets of devices.
+Strip away the vendor positioning and the practical signal is boring but important: **the window between a published fix and a weaponized exploit is collapsing.** A $20, eight-hour run turned a disclosed CVE into a working chain.
 
-If you run EMM/MDM at scale, the concrete implications:
+That makes n-day, not 0-day, the realistic threat. You do not need to assume nation-state capability to be exposed; the cheap, repeatable case is turning *public* fixes into working exploits, which makes your exposure window exactly your deployment lag.
 
-- **Patch latency is now a security control, not hygiene.** Browser engines, OS versions, and management agents on managed devices need to move from "patched within the cycle" toward "patched as fast as the pipeline allows." The attacker's turnaround just got measured in hours.
-- **N-day is the realistic threat, not 0-day.** You don't need to assume nation-state 0-day capability to be exposed. The cheap, repeatable case is turning *public* fixes into exploits — which means your exposure window is exactly your deployment lag.
-- **Harden what abliteration can't touch.** Model-side safeguards are, demonstrably, not a control you can rely on for open weights. Your controls are the usual ones — attack-surface reduction, least privilege, network segmentation, EDR, and fast patching — and they matter more, not less.
-- **Defenders should use the capable tools too.** The same reasoning that finds bugs for attackers finds them for you. Within your policy and legal boundaries, capable models belong in your own vulnerability-management and triage workflow.
+Two things follow. Model-side safeguards are demonstrably not a control you can lean on for open weights, so the controls that carry the weight are the ordinary ones — attack-surface reduction, least privilege, segmentation, and patching fast — and they matter more, not less. And the capability cuts both ways: the same reasoning that finds bugs for an attacker finds them for you, which is an argument for putting capable models into your own triage workflow rather than keeping them out of it.
 
 ## Bottom line
 
