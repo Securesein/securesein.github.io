@@ -254,6 +254,37 @@
       "whyRelevant": "Mistral Large 4's architecture and open-weight model provide insights into LLM internals, aiding mechanistic interpretability and enhancing deployment strategies.",
       "seenAt": "2026-10-06T16:01:37+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r0ac368b8a0bc273",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-5-2026",
+      "title": "We've added capabilities.thinking.types.disabled to the Models API . GET /v1/models and GET /v1/models/{model_id} now report whether each model accepts thinking: {type: \"disabled\"}",
+      "source": "Anthropic — Claude docs release notes",
+      "section": "release",
+      "topics": [
+        "reasoning"
+      ],
+      "qualityScore": 50.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This update provides insights into model reasoning capabilities, relevant for understanding LLM internals and enhancing inference efficiency in production.",
+      "seenAt": "2026-10-06T22:01:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8fa7f48356b2925",
+      "url": "https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/",
+      "title": "Bring multimodal semantic search to the edge with EmbeddingGemma 2",
+      "source": "Google Developers Blog",
+      "section": "release",
+      "topics": [
+        "multimodal",
+        "inference"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 58.1,
+      "whyRelevant": "This item discusses deploying multimodal semantic search at the edge, relevant for understanding inference efficiency and local model serving.",
+      "seenAt": "2026-10-06T22:01:37+00:00",
+      "status": "radar"
     }
   ]
 }
