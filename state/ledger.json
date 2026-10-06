@@ -119,6 +119,22 @@
       "publishedAt": "2026-10-03T07:40:12+00:00",
       "qualityScore": 100.0,
       "relevanceScore": 100.0
+    },
+    {
+      "slug": "glm-5-3-by-z-ai-now-available-on-amazon-bedrock",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-10-06T04:02:40+00:00",
+      "qualityScore": 80.0,
+      "relevanceScore": 71.0
+    },
+    {
+      "slug": "amazon-nova-2-5-sonic-enhances-real-time-voice-agent-capabilities",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-10-06T04:02:43+00:00",
+      "qualityScore": 65.0,
+      "relevanceScore": 54.2
     }
   ]
 }

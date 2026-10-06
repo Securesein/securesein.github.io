@@ -1,3 +1,21 @@
 {
-  "entities": {}
+  "entities": {
+    "zhipu/GLM/5.3/availability": {
+      "slug": "glm-5-3-by-z-ai-now-available-on-amazon-bedrock",
+      "coveredAt": "2026-10-06T04:02:40+00:00",
+      "facts": [
+        "ga_date",
+        "open_weights",
+        "pricing"
+      ]
+    },
+    "amazon/Nova/2.5 Sonic/version_bump": {
+      "slug": "amazon-nova-2-5-sonic-enhances-real-time-voice-agent-capabilities",
+      "coveredAt": "2026-10-06T04:02:43+00:00",
+      "facts": [
+        "ga_date",
+        "pricing"
+      ]
+    }
+  }
 }
