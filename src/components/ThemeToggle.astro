@@ -65,7 +65,7 @@
   // Kept in step with the page colour, or the mobile browser keeps
   // painting its own bar in the theme the reader just left.
   const syncThemeColour = (next: string) => {
-    const colour = next === "dark" ? "#0f1215" : "#ffffff";
+    const colour = next === "dark" ? "#0f1215" : "#f7f7fa";
     document
       .querySelectorAll('meta[name="theme-color"]')
       .forEach((tag) => tag.setAttribute("content", colour));

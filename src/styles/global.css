@@ -29,37 +29,49 @@
   /* Light is the base palette; every token is defined here, so no
      colour has its only definition inside a media query. */
   color-scheme: light;
-  --ink: #14181d;      /* near-black, slightly cool */
-  /* White, since the light-mode panel treatment swapped figure and
-     ground: the page is the white, and the head of a page is the
-     tinted surface sitting on it. Cards used to lift off a cool grey
-     ground; on white they are carried by their ring and shadow
-     instead (--card-shadow), which is why that token keeps a 1px ring
-     rather than relying on fill alone. */
-  --paper: #ffffff;
-  --rule: #d8dce0;     /* hairlines and dividers */
-  --muted: #5c6670;    /* secondary text, dates, meta */
-  --signal: #1f5c4a;   /* the single accent — deep green, used sparingly */
-  --surface: #f1f3f4;  /* subtle fills: provenance box, chips */
+
+  /* "LAB LIGHT" (light-mode handoff §2). Light mode is not an inverted
+     dark mode; it is the same room with the lights on. Cool paper with
+     a trace of violet in it, ink with the same trace, and the brand
+     gradient as the one place colour appears.
+
+     What this replaces: a white page carrying a warm cream panel at
+     the head of it, with FIVE accents competing on top — green for
+     links, amber for buttons, brown for eyebrows, violet for secondary
+     buttons, and the violet-cyan gradient. On white they fought. There
+     are two accent roles now and no third:
+
+       ACTION    amber, and only as a fill — the primary button and the
+                 active filter chip. Never as text on light.
+       IDENTITY  violet — links, focus ring, secondary button, eyebrow.
+
+     Green is gone from light entirely. */
+  --ink: #14131a;      /* near-black, a trace of violet */
+  /* Not white. Cards are white; the page they sit on is a step below
+     it, so a card is carried by being lighter than its ground rather
+     than by shadow alone. */
+  --paper: #f7f7fa;
+  --rule: #e4e3eb;     /* hairlines and dividers */
+  --muted: #5d5a69;    /* secondary text, dates, meta */
+  --signal: #4f2fc0;   /* links and focus — violet, was deep green */
+  --surface: #efeef4;  /* subtle fills: provenance box, chips */
   --raised: #ffffff;   /* cards that need to sit above the page */
 
-  /* The panel (light-mode-paneel handoff). Warm, not neutral grey:
-     neutral grey next to white reads as "disabled", warm grey reads
-     as paper. The step away from white is only about 4% — more turns
-     the head of the page into a banner.
-     --sweep-blend is the other half of the idea. In dark mode the
-     hero sweep is light crossing a dark field; on white nothing can
-     light up, so the same layer just hazes it lilac. Multiplying
-     instead makes the sweep thicken the ink it passes over. */
-  --hero-surface: linear-gradient(180deg, #f5f3ef 0%, #f2f0ea 100%);
-  --hero-edge: rgba(11, 11, 13, 0.1);
-  --sweep-blend: multiply;
-  /* The bar reads as part of the page, not as a third surface: one
-     hairline under it doubles as the panel's top edge. Opaque, so it
-     doesn't pick up the panel's tint through its own blur while the
-     hero scrolls past underneath. */
-  --header-bg: #ffffff;
-  --footer-bg: var(--hero-surface);
+  /* THE HERO HAS NO PANEL (light-mode handoff §2a, hero-overgang §1).
+     These three used to draw one: a cream gradient, a hairline along
+     its bottom edge, and a multiply blend so the sweep thickened the
+     ink it crossed instead of hazing it. The panel and its hairline
+     were half of the hard edge under the hero; the brown multiply read
+     as a stain rather than as light. Hero and page now share one
+     surface in both modes, which is why all three resolve to nothing. */
+  --hero-surface: none;
+  --hero-edge: transparent;
+  --sweep-blend: normal;
+  /* Translucent over the page's own colour rather than opaque white:
+     with the panel gone there is no second surface for it to avoid
+     picking up, and the existing backdrop blur does the rest. */
+  --header-bg: color-mix(in srgb, var(--bg) 82%, transparent);
+  --footer-bg: var(--surface);
 
   /* Names the components speak. Kept as a thin layer over the palette
      above so a future repaint is one block, not a find-and-replace. */
@@ -97,11 +109,15 @@
      --violet is the "identity" accent for focus rings and secondary-
      button borders, named apart from --brand above so it never
      collides with that gradient's own meaning. */
-  --amber: #e09a2b;
+  --amber: #e8a23a;
   --amber-ink: #1a1206;
-  --amber-text: #8a5a00;
-  --violet: #6d3ff3;
-  --violet-ink: #6d3ff3;
+  /* Amber as TEXT is retired in light (handoff §2a): the eyebrow it
+     existed for now uses --violet-ink, and amber is a fill-only
+     accent. Kept pointing at the violet so any straggler reading it
+     lands on the right colour rather than on brown. */
+  --amber-text: var(--violet-ink);
+  --violet: #5b34d6;      /* 6.8:1 on paper */
+  --violet-ink: #4f2fc0;  /* 7.9:1 on paper — the text/link weight */
 
   /* Card model. Light lifts each item onto a soft raised card with a
      hairline ring and a gentle shadow; dark keeps the flat, rule-
@@ -109,10 +125,14 @@
      modes flip from one place and dark stays exactly as it was: there,
      the card fill/radius/shadow all go to nothing and a top divider does
      the separating instead. */
-  --card-bg: var(--raised);
+  --card-bg: #ffffff;
   --card-radius: 14px;
-  --card-shadow: 0 0 0 1px rgba(20, 24, 29, 0.06), 0 6px 18px -8px rgba(20, 24, 29, 0.16);
-  --card-shadow-hover: 0 0 0 1px rgba(20, 24, 29, 0.09), 0 14px 30px -10px rgba(20, 24, 29, 0.24);
+  /* Lighter than before, because a card is now white on tinted paper
+     rather than white on white. It no longer has to be carried by
+     shadow alone, so the shadow can stop doing the work that the
+     colour step does. */
+  --card-shadow: 0 0 0 1px rgba(20, 19, 26, 0.07), 0 1px 2px rgba(20, 19, 26, 0.04), 0 8px 24px -16px rgba(20, 19, 26, 0.18);
+  --card-shadow-hover: 0 0 0 1px rgba(20, 19, 26, 0.12), 0 2px 4px rgba(20, 19, 26, 0.05), 0 18px 34px -18px rgba(20, 19, 26, 0.28);
   --card-gap: 0.8rem;
   --card-pad: 1.4rem;
   --card-lift: -2px;

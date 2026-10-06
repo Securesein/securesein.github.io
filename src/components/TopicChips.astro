@@ -40,11 +40,14 @@ const { topics, nested = false } = Astro.props;
     border-radius: 999px;
     /* A faint wash in the brand's own violet→cyan family — the same
        gradient as the logo and the kind pill, at a whisper, so the
-       chips belong to one palette rather than colour-coding each topic. */
+       chips belong to one palette rather than colour-coding each topic.
+       Mixed into --raised rather than --surface since light mode's
+       paper gained a tint: --surface and the page are now close enough
+       that a chip on it stopped reading as a chip. */
     background: linear-gradient(
       105deg,
-      color-mix(in srgb, var(--brand-from) 8%, var(--surface)),
-      color-mix(in srgb, var(--brand-to) 8%, var(--surface))
+      color-mix(in srgb, var(--brand-from) 8%, var(--raised)),
+      color-mix(in srgb, var(--brand-to) 8%, var(--raised))
     );
     color: var(--text-muted);
     font-family: var(--font-sans);

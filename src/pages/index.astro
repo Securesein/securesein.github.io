@@ -109,6 +109,7 @@ const siteJsonLd = {
        footer or any other page — see the style block. -->
   <div class="mh-page">
     <section class="masthead" data-hero-bg={HERO_BACKGROUND}>
+      <div class="masthead__fx" aria-hidden="true"></div>
       <div class="container container--wide masthead-inner">
         <Eyebrow center label={sectionsEyebrow} />
 
@@ -216,48 +217,50 @@ const siteJsonLd = {
      --border-strong PostCard/NewsRow already read, so it gets its own
      token instead of overloading that one with a different meaning. */
   .mh-page {
-    /* Was #fffdfb, a hair of warmth across the whole homepage. The
-       panel now carries that warmth in the hero alone, so the body of
-       the page matches every other page's white exactly rather than
-       being almost-but-not-quite it. */
-    --paper: #ffffff;
-    --ink: #16130f;
-    --rule: #ede8e2;
-    --muted: #5e584f;
-    --surface: #f7f4f0;
-    --bg: var(--paper);
-    --text: var(--ink);
-    --text-muted: var(--muted);
-    --border: var(--rule);
-    --border-strong: color-mix(in srgb, var(--rule) 70%, var(--muted));
+    /* How far the glow carries on below the hero, and over how much
+       height it fades out (hero-overgang handoff §1b). */
+    --hero-bleed: 8rem;
+    --hero-fade: 26rem;
+    /* The sheen sits at -30% horizontally too. `clip` rather than
+       `hidden` so that overflow never becomes a scrollbar. */
+    overflow-x: clip;
 
-    --ink-soft: #4b463f;
-    --display: #0c0a08;
-    --accent: #e09a2b;
-    --accent-ink: #1a1206;
-    --brand: #6d3ff3;
-    --brand-ink: #6d3ff3;
-    --card-border: #ded8d1;
+    /* PAGE-SPECIFIC TOKENS ONLY, AS ALIASES (light-mode handoff §2b).
+       This block used to re-declare the whole palette — --paper,
+       --ink, --rule, --muted, --surface and the semantic tokens on top
+       of them — in a warm key, while global.css declared a cool one.
+       Header, footer and every other page were cool; the homepage was
+       warm; and the seam between them showed directly under the header
+       and on every navigation. The palette now has exactly one source,
+       and what stays here is only what is genuinely page-specific. */
+    --ink-soft: color-mix(in srgb, var(--ink) 78%, var(--paper));
+    --display: var(--ink);
+    --accent: var(--amber);
+    --accent-ink: var(--amber-ink);
+    --brand: var(--violet);
+    --brand-ink: var(--violet-ink);
+    --card-border: color-mix(in srgb, var(--rule) 80%, var(--muted));
 
     /* Topography hero background (hero-topografie-en-about handoff):
        mixed from --brand/--accent/--ink rather than given their own
-       hardcoded per-theme hex pair, for the same reason --node/--edge
-       (the constellation background this replaces) were — .mh-page
-       redeclares --brand/--accent/--ink for itself in all three blocks
-       below, so a color-mix() referencing them resolves against THIS
-       element's own cascade and inherits that correctness for free. */
+       hardcoded per-theme hex pair. */
     --topo: color-mix(in srgb, var(--ink) 9%, transparent);
-    --glow-a: color-mix(in srgb, var(--brand) 15%, transparent);
-    --glow-b: color-mix(in srgb, var(--accent) 12%, transparent);
 
-    /* Dot-matrix variant (dotmatrix handoff A2). Literal in light,
-       unlike the tokens above, because the light and dark sweeps are
-       not the same colour doing the same job: dark adds violet light
-       to a dark field, light multiplies a warm brown into the panel
-       so the sweep thickens ink instead of hazing it. There is no one
-       hue to derive both from. */
-    --dot: rgba(38, 29, 14, 0.15);
-    --sheen: rgba(160, 118, 58, 0.2);
+    /* Hero effects, light (light-mode handoff §2b/§2c). The sheen was
+       a brown multiplied into the panel, which on a light page reads
+       as a stain rather than as light; it is now violet at normal
+       blend, and the glow below it is the brand gradient's own two
+       hues so the hero's only colour is the mark's colour. */
+    /* Light only: dark re-declares it to `none` in its own blocks. */
+    --btn-primary-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.4) inset,
+      0 6px 16px -8px rgba(232, 162, 58, 0.55);
+    --section-mark: var(--violet);
+
+    --dot: rgba(20, 19, 26, 0.11);
+    --sheen: rgba(91, 52, 214, 0.07);
+    --glow-a: color-mix(in srgb, #8b5cf6 10%, transparent);
+    --glow-b: color-mix(in srgb, #22d3ee 8%, transparent);
 
     background: var(--bg);
     color: var(--text);
@@ -287,6 +290,8 @@ const siteJsonLd = {
       --glow-a: color-mix(in srgb, var(--brand) 20%, transparent);
       --glow-b: color-mix(in srgb, var(--accent) 12%, transparent);
 
+      --btn-primary-shadow: none;
+      --section-mark: var(--accent);
       --dot: color-mix(in srgb, var(--ink) 14%, transparent);
       --sheen: color-mix(in srgb, var(--brand) 12%, transparent);
     }
@@ -315,6 +320,8 @@ const siteJsonLd = {
     --glow-a: color-mix(in srgb, var(--brand) 20%, transparent);
     --glow-b: color-mix(in srgb, var(--accent) 12%, transparent);
 
+    --btn-primary-shadow: none;
+    --section-mark: var(--accent);
     --dot: color-mix(in srgb, var(--ink) 14%, transparent);
     --sheen: color-mix(in srgb, var(--brand) 12%, transparent);
   }
@@ -326,33 +333,53 @@ const siteJsonLd = {
      pseudo-elements' z-index:-1 scoped to this section rather than
      punching through to .mh-page; overflow:hidden clips whatever
      overmat either background asks for. */
-  /* The panel (light-mode-paneel handoff §3). Both values resolve to
-     nothing in dark mode, so this one rule serves both. isolation is
-     now load-bearing rather than tidy: without it the multiply sweep
-     below would multiply against everything behind the hero instead
-     of against the panel alone. */
+  /* THE HERO HAS NO SURFACE OF ITS OWN (hero-overgang handoff §1).
+     It used to: a tinted panel with an inset hairline along its
+     bottom, and `overflow: hidden` to clip the backgrounds. That
+     clipping was the visible defect. The sheen sits at `inset: -30%`
+     with no mask, so it ran far below the section and was sliced off
+     dead straight at the panel's edge — the horizontal line across the
+     page — while its narrow diagonal band produced the angled edge at
+     the left.
+
+     Hero and page now share one background, and every effect lives on
+     a single layer that fades to transparent before the clip. Nothing
+     has an edge, so there is no edge to see. */
   .masthead {
     position: relative;
     isolation: isolate;
+  }
+
+  /* The glow now carries on past the hero and under this content, so
+     the content has to sit above it — otherwise "Taken apart" and the
+     model-update rows pick up the tint. */
+  .mh-page > .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* The effect layer. Clipping still happens, but on an element whose
+     own mask has already faded it out by the time the clip arrives,
+     and it extends past the hero so the glow carries on under the
+     section cards instead of stopping at them. */
+  .masthead__fx {
+    position: absolute;
+    inset: 0 0 calc(-1 * var(--hero-bleed)) 0;
+    z-index: -1;
     overflow: hidden;
-    background: var(--hero-surface);
-    /* An inset shadow rather than a border-bottom: --hero-edge is
-       transparent in dark, but a transparent border still occupies
-       its 1px, which pushed everything below the hero down by a pixel
-       and made dark mode not quite identical any more. A shadow draws
-       the panel's edge without taking up any layout. */
-    box-shadow: inset 0 -1px 0 var(--hero-edge);
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - var(--hero-fade)), transparent 100%);
+            mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - var(--hero-fade)), transparent 100%);
   }
 
   /* --- "topo": warped contour lines, static (hero-topografie
      handoff). The -30% overmat is what feDisplacementMap needs — it
      pulls edges inward, so without it the warp visibly tapers off at
      the sides. */
-  .masthead[data-hero-bg="topo"]::before {
+  .masthead[data-hero-bg="topo"] .masthead__fx::before {
     content: "";
     position: absolute;
     inset: -30%;
-    z-index: -1;
     background: repeating-radial-gradient(
       ellipse 58% 50% at 50% 42%,
       transparent 0 24px,
@@ -363,11 +390,10 @@ const siteJsonLd = {
             mask-image: radial-gradient(ellipse 74% 66% at 50% 38%, #000 18%, transparent 78%);
   }
 
-  .masthead[data-hero-bg="topo"]::after {
+  .masthead[data-hero-bg="topo"] .masthead__fx::after {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -1;
     background:
       radial-gradient(ellipse 52% 44% at 50% -6%, var(--glow-a), transparent 72%),
       radial-gradient(ellipse 42% 34% at 80% 46%, var(--glow-b), transparent 72%);
@@ -377,26 +403,55 @@ const siteJsonLd = {
      (dotmatrix handoff A3). The sweep is a transform on its own layer
      so it runs on the compositor — deliberately no filter or
      box-shadow on it, which would throw that away and repaint the
-     hero every frame. */
-  .masthead[data-hero-bg="dots"]::before {
+     hero every frame.
+
+     The glow underneath is new in light (handoff §2c): without it the
+     light hero is grey dots on grey paper. Both stops are the brand
+     gradient's own hues, so the one place the page shows colour is the
+     same colour the logo star is. */
+  .masthead[data-hero-bg="dots"] .masthead__fx {
+    background:
+      radial-gradient(ellipse 55% 45% at 50% -8%, var(--glow-a), transparent 70%),
+      radial-gradient(ellipse 40% 32% at 82% 40%, var(--glow-b), transparent 72%);
+  }
+
+  /* LIGHT ONLY. The dots hero never had a glow; the topo variant did,
+     and --glow-a/b exist for that one. Letting them through here gave
+     dark a violet-and-amber wash it did not have before, and the brief
+     for this change is that dark stays as it was apart from the
+     transition. The topo variant keeps its own glow either way. */
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme="light"])) .masthead[data-hero-bg="dots"] .masthead__fx {
+      background: none;
+    }
+  }
+  :global(:root[data-theme="dark"]) .masthead[data-hero-bg="dots"] .masthead__fx {
+    background: none;
+  }
+
+  .masthead[data-hero-bg="dots"] .masthead__fx::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -1;
     background-image: radial-gradient(var(--dot) 1px, transparent 1px);
     background-size: 24px 24px;
-    -webkit-mask-image: radial-gradient(ellipse 72% 62% at 50% 34%, #000 8%, transparent 74%);
-            mask-image: radial-gradient(ellipse 72% 62% at 50% 34%, #000 8%, transparent 74%);
+    -webkit-mask-image: radial-gradient(ellipse 72% 62% at 50% 30%, #000 8%, transparent 74%);
+            mask-image: radial-gradient(ellipse 72% 62% at 50% 30%, #000 8%, transparent 74%);
   }
 
-  .masthead[data-hero-bg="dots"]::after {
+  /* Wider, softer flanks than the original 42/50/58: those three stops
+     made a band narrow enough that its own edges read as a hard
+     diagonal line rather than as light passing over. */
+  .masthead[data-hero-bg="dots"] .masthead__fx::after {
     content: "";
     position: absolute;
     inset: -30%;
-    z-index: -1;
-    background: linear-gradient(112deg, transparent 42%, var(--sheen) 50%, transparent 58%);
-    /* multiply in light, normal in dark. The transparent stops leave
-       the panel untouched either way, so no extra mask is needed. */
+    background: linear-gradient(112deg,
+      transparent 28%,
+      color-mix(in srgb, var(--sheen) 60%, transparent) 42%,
+      var(--sheen) 50%,
+      color-mix(in srgb, var(--sheen) 60%, transparent) 58%,
+      transparent 72%);
     mix-blend-mode: var(--sweep-blend);
     animation: heroSweep 16s linear infinite;
   }
@@ -409,16 +464,15 @@ const siteJsonLd = {
   @media (prefers-reduced-motion: reduce) {
     /* Still drawn, just not moving — the dots are the background, not
        the animation (dotmatrix handoff C2). */
-    .masthead[data-hero-bg="dots"]::after { animation: none; }
+    .masthead[data-hero-bg="dots"] .masthead__fx::after { animation: none; }
   }
 
   @media print {
-    .masthead { background: none; box-shadow: none; }
-    .masthead::before, .masthead::after { display: none; }
+    .masthead__fx { display: none; }
   }
 
   .masthead-inner {
-    padding-block: 6.5rem 6rem;
+    padding-block: 6.5rem 4.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -477,10 +531,27 @@ const siteJsonLd = {
     stroke-linecap: round;
     stroke-linejoin: round;
   }
-  .btn--primary { background: var(--accent); color: var(--accent-ink); }
+  /* The one primary action, and the only place amber appears as a
+     fill. The inner highlight and the tinted drop keep the pill from
+     lying flat on the paper now that there is no panel behind it
+     (light-mode handoff §2c); both resolve to nothing in dark, where
+     the pill already sits on a dark field. */
+  .btn--primary {
+    background: var(--accent);
+    color: var(--accent-ink);
+    box-shadow: var(--btn-primary-shadow, none);
+  }
   .btn--primary:hover { filter: brightness(1.06); }
-  .btn--brand { border: 1px solid var(--brand); color: var(--brand-ink); font-weight: 500; }
-  .btn--brand:hover { background: color-mix(in srgb, var(--brand) 12%, transparent); }
+
+  /* A full-strength 1px violet border reads as hard next to the amber
+     pill on light paper, so the border is mixed back and the text
+     carries the colour instead. */
+  .btn--brand {
+    border: 1px solid color-mix(in srgb, var(--brand) 45%, transparent);
+    color: var(--brand-ink);
+    font-weight: 500;
+  }
+  .btn--brand:hover { background: color-mix(in srgb, var(--brand) 8%, transparent); }
 
   /* Split into label/prefix/title so the mobile layout (below) can
      turn "Latest: <title>" into a two-line block with the arrow
@@ -506,8 +577,13 @@ const siteJsonLd = {
     text-decoration: none;
     transition: border-color 120ms ease;
   }
-  .section-card--lead { border-top-color: var(--accent); }
-  .section-card:hover { border-top-color: var(--accent); }
+  /* Violet, not amber (light-mode handoff §2c): amber is the ACTION
+     accent and stays exclusive to the one primary button, so a section
+     card marking itself with it was a second thing claiming to be the
+     thing to click. --section-mark is amber in dark, where that
+     collision does not arise and the existing look is kept. */
+  .section-card--lead { border-top-color: var(--section-mark); }
+  .section-card:hover { border-top-color: var(--section-mark); }
   .section-card__name { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
   .section-card__desc { font-size: 0.875rem; line-height: 1.45; color: var(--text-muted); }
 
@@ -518,7 +594,11 @@ const siteJsonLd = {
   /* mobiel-homepage-fixes #3/#4/#5 — desktop (>700px) is untouched;
      everything below only takes effect under this breakpoint. */
   @media (max-width: 700px) {
-    .masthead-inner { padding-block: 3.5rem 4rem; }
+    /* Less hero to carry the glow, so less bleed and a shorter fade —
+       26rem of fade under a 4rem hero bottom would start fading before
+       the dots had finished. */
+    .mh-page { --hero-bleed: 4rem; --hero-fade: 16rem; }
+    .masthead-inner { padding-block: 3.5rem 3rem; }
     .masthead__title { margin-top: 1.5rem; }
     .masthead__tagline { max-width: 26ch; margin: 1.25rem 0 1.875rem; font-size: 1.125rem; }
 
@@ -528,7 +608,7 @@ const siteJsonLd = {
        space the rings out so fewer of them fit across the narrower
        width, and give the mask more overmatting room since it eats
        into the edges more aggressively at this scale. */
-    .masthead[data-hero-bg="topo"]::before {
+    .masthead[data-hero-bg="topo"] .masthead__fx::before {
       inset: -45%;
       background: repeating-radial-gradient(
         ellipse 78% 44% at 50% 38%,
@@ -537,7 +617,7 @@ const siteJsonLd = {
       );
       filter: url(#seinWarpSm);
     }
-    .masthead[data-hero-bg="topo"]::after {
+    .masthead[data-hero-bg="topo"] .masthead__fx::after {
       background:
         radial-gradient(ellipse 80% 30% at 50% -4%, var(--glow-a), transparent 72%),
         radial-gradient(ellipse 70% 26% at 70% 52%, var(--glow-b), transparent 72%);
@@ -545,12 +625,12 @@ const siteJsonLd = {
 
     /* Tighter grid, and a slower sweep: the same speed across less
        width reads as hurried (dotmatrix handoff A4). */
-    .masthead[data-hero-bg="dots"]::before {
+    .masthead[data-hero-bg="dots"] .masthead__fx::before {
       background-size: 20px 20px;
       -webkit-mask-image: radial-gradient(ellipse 88% 50% at 50% 32%, #000 6%, transparent 72%);
               mask-image: radial-gradient(ellipse 88% 50% at 50% 32%, #000 6%, transparent 72%);
     }
-    .masthead[data-hero-bg="dots"]::after { animation-duration: 22s; }
+    .masthead[data-hero-bg="dots"] .masthead__fx::after { animation-duration: 22s; }
 
     /* #4: actions stack, and the "Latest" pill becomes a two-line
        block (small label over the title) instead of one long line
@@ -619,7 +699,7 @@ const siteJsonLd = {
   .lane-heading a { color: inherit; }
 
   /* The asymmetry is the point: one large thing, one dense list. */
-  .split { display: grid; gap: 2.8rem; padding-top: 2.8rem; }
+  .split { display: grid; gap: 2.8rem; padding-top: 3.5rem; }
   @media (min-width: 900px) {
     .split { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 3.4rem; }
   }
@@ -637,13 +717,18 @@ const siteJsonLd = {
     .start-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 
+  /* A raised card with a violet spine, not a grey fill with a green
+     one (light-mode handoff §2d). --signal is violet now, so the spine
+     follows the palette on its own; the fill moves to the card
+     treatment so this block sits on the paper the same way every other
+     card does. */
   .reading {
     margin-top: 3.2rem;
     padding: 1.5rem;
-    border: 1px solid var(--rule);
     border-left: 2px solid var(--signal);
     border-radius: var(--radius-sm);
-    background: var(--surface);
+    background: var(--raised);
+    box-shadow: var(--card-shadow);
   }
   .reading .lane-heading { border-bottom-color: color-mix(in srgb, var(--rule) 60%, transparent); }
   .reading-link { display: flex; align-items: baseline; gap: 1rem; color: var(--text); }

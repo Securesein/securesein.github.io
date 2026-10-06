@@ -55,7 +55,7 @@ const ogImageAlt = imageAlt ?? `${SITE.title} — ${SITE.subTagline}`;
          under the browser bar is the nav, which matches the page.
          Two media-scoped tags so this is right before any script
          runs; an explicit theme choice rewrites both (see below). -->
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#f7f7fa" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0f1215" media="(prefers-color-scheme: dark)" />
     {noindex && <meta name="robots" content="noindex, follow" />}
 
@@ -107,7 +107,7 @@ const ogImageAlt = imageAlt ?? `${SITE.title} — ${SITE.subTagline}`;
           const saved = localStorage.getItem("theme");
           if (saved === "dark" || saved === "light") {
             document.documentElement.setAttribute("data-theme", saved);
-            const colour = saved === "dark" ? "#0f1215" : "#ffffff";
+            const colour = saved === "dark" ? "#0f1215" : "#f7f7fa";
             document
               .querySelectorAll('meta[name="theme-color"]')
               .forEach(function (tag) { tag.setAttribute("content", colour); });
