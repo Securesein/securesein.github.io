@@ -285,6 +285,115 @@
       "whyRelevant": "This item discusses deploying multimodal semantic search at the edge, relevant for understanding inference efficiency and local model serving.",
       "seenAt": "2026-10-06T22:01:37+00:00",
       "status": "radar"
+    },
+    {
+      "id": "ra097ef0d441a721",
+      "url": "https://openai.com/index/gpt-6-for-everyone",
+      "title": "GPT-6 and Intelligent UI for everyone",
+      "source": "OpenAI — News",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "The release of GPT-6 may provide insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and improving inference efficiency.",
+      "seenAt": "2026-10-07T22:02:06+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re99e3e9c1b0cca8",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-7-2026-4",
+      "title": "We've launched Claude Haiku 5.5 ( claude-haiku-5-5 ), our most capable model tuned for high-volume and latency-sensitive work. It has a 1M token context window , 128k max output to",
+      "source": "Anthropic — Claude docs release notes",
+      "section": "release",
+      "topics": [
+        "llms",
+        "inference",
+        "reasoning"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "This model's high token context and output capabilities may enhance reasoning efficiency and local inference for deploying LLMs in production.",
+      "seenAt": "2026-10-07T22:02:08+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rb94843bc5639c8e",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-6-2026",
+      "title": "We've added capabilities.server_tools to the Models API . GET /v1/models and GET /v1/models/{model_id} now report whether each model accepts the web search and code execution tools",
+      "source": "Anthropic — Claude docs release notes",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 55.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This update provides insights into model capabilities, aiding in understanding LLM behavior and enhancing security and efficiency in deployment.",
+      "seenAt": "2026-10-07T22:02:09+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r651ddd0c43d10b8",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/claude-haiku-5-5-aws/",
+      "title": "Claude Haiku 5.5 is now available on AWS",
+      "source": "AWS — What's New",
+      "section": "release",
+      "topics": [
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "Claude Haiku 5.5's availability on AWS may provide insights into LLM deployment and serving, relevant for understanding model efficiency and security.",
+      "seenAt": "2026-10-07T22:02:11+00:00",
+      "status": "promoted",
+      "promotedTo": "claude-haiku-5-5-launches-on-aws"
+    },
+    {
+      "id": "r85216c6112f19d7",
+      "url": "https://huggingface.co/LiquidAI/d1-3B-w8a8",
+      "title": "LiquidAI/d1-3B-w8a8",
+      "source": "HF org — Liquid AI",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's open weights and architecture provide insights into LLM internals, aiding research in mechanistic interpretability and efficient reasoning.",
+      "seenAt": "2026-10-07T22:02:13+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r884144c7d9af0f2",
+      "url": "https://huggingface.co/LiquidAI/d1-omni-600M",
+      "title": "LiquidAI/d1-omni-600M",
+      "source": "HF org — Liquid AI",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "LiquidAI/d1-omni-600M offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively.",
+      "seenAt": "2026-10-07T22:02:15+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf0fba3a253bc0f4",
+      "url": "https://huggingface.co/LiquidAI/d1-3B",
+      "title": "LiquidAI/d1-3B",
+      "source": "HF org — Liquid AI",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "LiquidAI/d1-3B offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
+      "seenAt": "2026-10-07T22:02:17+00:00",
+      "status": "radar"
     }
   ]
 }
