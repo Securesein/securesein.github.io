@@ -409,6 +409,21 @@
       "whyRelevant": "This release provides insights into model compatibility and performance, relevant for understanding LLM behavior and optimizing deployment strategies.",
       "seenAt": "2026-10-08T04:01:14+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rf6e419d4eb70360",
+      "url": "https://developers.openai.com/api/docs/guides/decisions",
+      "title": "Decisions API with GPT-6 Luna",
+      "source": "OpenAI — Release notes",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "The Decisions API with GPT-6 Luna offers insights into LLM decision-making processes, relevant for understanding internal workings and enhancing inference efficiency.",
+      "seenAt": "2026-10-08T16:01:32+00:00",
+      "status": "radar"
     }
   ]
 }
