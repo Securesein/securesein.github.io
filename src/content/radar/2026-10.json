@@ -394,6 +394,21 @@
       "whyRelevant": "LiquidAI/d1-3B offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
       "seenAt": "2026-10-07T22:02:17+00:00",
       "status": "radar"
+    },
+    {
+      "id": "re0e468cd169f6ae",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-1-2026",
+      "title": "Dreams (research preview) now supports Claude Opus 5.5, Claude Fable 5.1, and Claude Sonnet 5.5. See Supported models .",
+      "source": "Anthropic — Claude docs release notes",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 35.2,
+      "whyRelevant": "This release provides insights into model compatibility and performance, relevant for understanding LLM behavior and optimizing deployment strategies.",
+      "seenAt": "2026-10-08T04:01:14+00:00",
+      "status": "radar"
     }
   ]
 }
