@@ -439,6 +439,81 @@
       "whyRelevant": "The discussion on GPT-6's architecture and UI enhancements may provide insights into LLM interpretability and deployment strategies relevant to your interests.",
       "seenAt": "2026-10-09T04:01:19+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rd5e9e4d292acdbe",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog#10-08-2026",
+      "title": "Deep Research Agent deep-research-pro-preview-12-2025 deprecation :\nThe deep-research-pro-preview-12-2025 agent is deprecated and will be shut down on October 23,\n2026 . Migrate yo",
+      "source": "Google — Gemini API release notes",
+      "section": "release",
+      "topics": [
+        "agents"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This deprecation notice is relevant for understanding the lifecycle and maintenance of LLM agents, impacting deployment and security considerations.",
+      "seenAt": "2026-10-09T10:01:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r51941f04422f4c0",
+      "url": "https://huggingface.co/nvidia/agile_one_s_place_ssd_n17_24050",
+      "title": "nvidia/agile_one_s_place_ssd_n17_24050",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into model deployment and serving, relevant for understanding LLM efficiency and security in production environments.",
+      "seenAt": "2026-10-09T10:01:28+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r4f658df2fb3ea40",
+      "url": "https://huggingface.co/nvidia/agile_one_s_walk_n2_1680",
+      "title": "nvidia/agile_one_s_walk_n2_1680",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item provides insights into LLM deployment and efficiency, relevant for understanding model serving and security in production environments.",
+      "seenAt": "2026-10-09T10:01:30+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rdb01c0206a716a4",
+      "url": "https://huggingface.co/nvidia/agile_one_s_pick_ssd_n17_58000",
+      "title": "nvidia/agile_one_s_pick_ssd_n17_58000",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item is relevant as it may provide insights into deploying and serving models efficiently, which is crucial for LLM applications.",
+      "seenAt": "2026-10-09T10:01:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5aa1362082d7c8e",
+      "url": "https://huggingface.co/nvidia/agile_one_s_pick_ssd_n17_40000",
+      "title": "nvidia/agile_one_s_pick_ssd_n17_40000",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item is relevant for exploring efficient model deployment and serving, which is crucial for practical applications of LLMs in production environments.",
+      "seenAt": "2026-10-09T10:01:33+00:00",
+      "status": "radar"
     }
   ]
 }
