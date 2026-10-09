@@ -514,6 +514,22 @@
       "whyRelevant": "This item is relevant for exploring efficient model deployment and serving, which is crucial for practical applications of LLMs in production environments.",
       "seenAt": "2026-10-09T10:01:33+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rf56ddcb300622a4",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-7-2026",
+      "title": "Code written for Claude Haiku 4.5 can break on Claude Haiku 5.5. Manual extended thinking ( budget_tokens ), the sampling parameters temperature , top_p , and top_k , and assistant",
+      "source": "Anthropic — Claude docs release notes",
+      "section": "release",
+      "topics": [
+        "llms",
+        "reasoning"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 61.3,
+      "whyRelevant": "This item highlights potential inconsistencies in LLM behavior across versions, relevant for understanding model reliability and security in production environments.",
+      "seenAt": "2026-10-09T16:01:17+00:00",
+      "status": "radar"
     }
   ]
 }
