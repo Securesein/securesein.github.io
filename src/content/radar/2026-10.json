@@ -450,8 +450,8 @@
         "agents"
       ],
       "qualityScore": 25.0,
-      "relevanceScore": 11.2,
-      "whyRelevant": "This deprecation notice is relevant for understanding the lifecycle and maintenance of LLM agents, impacting deployment and security considerations.",
+      "relevanceScore": 21.2,
+      "whyRelevant": "The deprecation of gemini-3.7-flash and its replacement with gemini-3.8-flash may impact deployment strategies and model serving in production environments.",
       "seenAt": "2026-10-09T10:01:25+00:00",
       "status": "radar"
     },
@@ -529,6 +529,36 @@
       "relevanceScore": 61.3,
       "whyRelevant": "This item highlights potential inconsistencies in LLM behavior across versions, relevant for understanding model reliability and security in production environments.",
       "seenAt": "2026-10-09T16:01:17+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd0cea650fc78227",
+      "url": "https://huggingface.co/mistralai/LIDstral-Arabic",
+      "title": "mistralai/LIDstral-Arabic",
+      "source": "HF org — Mistral",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying open-weight models effectively.",
+      "seenAt": "2026-10-09T22:01:29+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf40e020621d9ec9",
+      "url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-Arabic",
+      "title": "mistralai/Voxtral-Mini-4B-Realtime-Arabic",
+      "source": "HF org — Mistral",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's open-weight architecture allows for local inference, which is crucial for understanding LLM mechanisms and enhancing security in deployment.",
+      "seenAt": "2026-10-09T22:01:31+00:00",
       "status": "radar"
     }
   ]
