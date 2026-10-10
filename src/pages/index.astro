@@ -446,6 +446,7 @@ const siteJsonLd = {
     content: "";
     position: absolute;
     inset: -30%;
+    --sweep-travel: 30%;
     background: linear-gradient(112deg,
       transparent 28%,
       color-mix(in srgb, var(--sheen) 60%, transparent) 42%,
@@ -457,8 +458,8 @@ const siteJsonLd = {
   }
 
   @keyframes heroSweep {
-    from { transform: translateX(-30%); }
-    to   { transform: translateX(30%); }
+    from { transform: translateX(calc(-1 * var(--sweep-travel))); }
+    to   { transform: translateX(var(--sweep-travel)); }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -630,7 +631,23 @@ const siteJsonLd = {
       -webkit-mask-image: radial-gradient(ellipse 88% 50% at 50% 32%, #000 6%, transparent 72%);
               mask-image: radial-gradient(ellipse 88% 50% at 50% 32%, #000 6%, transparent 72%);
     }
-    .masthead[data-hero-bg="dots"] .masthead__fx::after { animation-duration: 22s; }
+    /* Travel is a percentage of the sweep's OWN box, which inset:-30%
+       has already made 160% of the hero — so translateX(30%) moves it
+       187px while the overmat it has to hide behind is only 117px. The
+       box's own right edge lands at 82% of the viewport. On a wide
+       hero that edge sits past the gradient's last stop and there is
+       nothing left to see; at ~390px the hero is taller than it is
+       wide, so a 112deg gradient varies almost entirely top-to-bottom
+       and the band is still at full strength when the box stops — a
+       hard vertical line down the right of the screen on load, and
+       down the left later in the cycle. 15% is the most this box can
+       travel and still keep both edges off-screen (the limit is
+       18.75%); the gradient itself is untouched, so the hero looks the
+       same, it just drifts a little less far. */
+    .masthead[data-hero-bg="dots"] .masthead__fx::after {
+      --sweep-travel: 15%;
+      animation-duration: 22s;
+    }
 
     /* #4: actions stack, and the "Latest" pill becomes a two-line
        block (small label over the title) instead of one long line

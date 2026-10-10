@@ -200,8 +200,14 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
          One below the sheet's 49 instead: over the page, under the
          menu. */
       z-index: 48;
-      background: color-mix(in srgb, var(--ink) 45%, transparent);
-      backdrop-filter: blur(2px);
+      background: var(--scrim);
+      /* No backdrop-filter here, deliberately. .site-header has one,
+         which makes it a backdrop root: a blur on a descendant can
+         only see what is painted inside the header, so in Chromium it
+         did nothing at all while Safari blurred the page — the same
+         markup, two different screens. A flat dim is the same
+         everywhere, and it was the veil rather than the blur that was
+         doing the damage. */
     }
 
     .nav-menu__sheet {

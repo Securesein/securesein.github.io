@@ -72,6 +72,12 @@
      picking up, and the existing backdrop blur does the rest. */
   --header-bg: color-mix(in srgb, var(--bg) 82%, transparent);
   --footer-bg: var(--surface);
+  /* The dim behind an open overlay. Deliberately NOT derived from
+     --ink: ink flips to near-white in dark, and a 45% white veil over
+     a dark page is a glow, not a dim — it lifted the whole page below
+     the open menu into grey. A scrim is a shadow; it is the same dark
+     in both modes, and only its strength differs. */
+  --scrim: rgba(12, 11, 18, 0.55);
 
   /* Names the components speak. Kept as a thin layer over the palette
      above so a future repaint is one block, not a find-and-replace. */
@@ -217,6 +223,9 @@
     --sweep-blend: normal;
     --header-bg: color-mix(in srgb, var(--bg) 86%, transparent);
     --footer-bg: var(--bg-elevated);
+    /* Darker than light's: there is less contrast between the page and
+       a dim on it here, so it takes more of the dim to read as one. */
+    --scrim: rgba(6, 6, 10, 0.68);
   }
 }
 
@@ -249,6 +258,7 @@
   --sweep-blend: normal;
   --header-bg: color-mix(in srgb, var(--bg) 86%, transparent);
   --footer-bg: var(--bg-elevated);
+  --scrim: rgba(6, 6, 10, 0.68);
 
   /* Subtle cards, same model as light — see the media-query block above. */
   --card-bg: var(--raised);
