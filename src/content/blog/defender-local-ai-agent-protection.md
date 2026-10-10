@@ -1,6 +1,6 @@
 ---
-title: "Your Agent Runs as You: Defender's Local AI Agent Discovery and Runtime Protection"
-description: "Coding agents like Claude Code and Copilot CLI inherit your identity, your tokens and your reach. Microsoft Defender for Endpoint can now find them and inspect them at runtime. What it does, how to roll it out with Intune, and where the gaps still are."
+title: "Your agent runs as you: governing local AI agents with Microsoft Defender and BeyondTrust"
+description: "Coding agents like Claude Code and Copilot CLI inherit your identity, your tokens and your reach. A deep dive into Microsoft Defender's local agent discovery and runtime protection, BeyondTrust's privilege-based approach, and what that means for endpoint management teams."
 pubDate: 2026-10-10
 kind: "enterprise"
 format: "deepdive"
@@ -10,15 +10,15 @@ model: "Claude"
 contributions:
   chose: true
 hero: "/images/defender-local-ai-agent-protection/hero.png"
-heroAlt: "A person and an AI agent on one endpoint sharing a single identity, with runtime checkpoints letting the agent through to cloud APIs, source code and MCP tools while blocking secrets and production."
+heroAlt: "A terminal session in which an AI agent lists development buckets, then is stopped from listing production buckets: the content scan finds no injection and the user is allowed, but the agent policy denies production scope and escalates to a human."
 ---
-> **Status check (October 2026):** local agent discovery is available on Windows, with macOS and WSL in preview. Runtime protection is a Windows-only public preview. Settings, coverage and licensing are still moving. Verify against the Microsoft Learn pages linked at the end before you build a design on this.
+> **Status check (October 2026):** local agent discovery is available on Windows, with macOS and WSL in preview. Runtime protection is a Windows-only public preview. BeyondTrust's AI Agent Security was in private beta at the time of writing. Settings, coverage and licensing are still moving. Verify against the vendor documentation linked at the end before you build a design on this.
 
 ## The problem in one sentence
 
 When someone starts Claude Code, Copilot CLI or Cursor on a managed laptop, the agent runs **as that person**: same user context, same tokens, same SSO sessions, same cloud CLI profiles, same network position.
 
-That sounds obvious, but it quietly breaks a set of assumptions our endpoint stack has been built on for twenty years. I was reminded of this at a recent AppManagEvent session, where the speaker listed them neatly:
+That sounds obvious, but it quietly breaks a set of assumptions our endpoint stack has been built on for twenty years. We recently attended a BeyondTrust session on exactly this topic at AppManagEvent in Utrecht, and the speaker listed those assumptions neatly:
 
 - A human is at the keyboard making each decision.
 - The thing running is a known binary from a known installer.
@@ -42,7 +42,7 @@ This is the part I find genuinely interesting. Humans are noisy in unpredictable
 - **Open standards.** MCP is a published protocol, and agents keep their MCP configuration in files on disk. Read the config and you know what an agent *can* reach before it reaches it.
 - **Hooks.** The major coding agents expose vendor-supported event interfaces (hooks) at defined points in their loop. A security product can plug into those to see, and stop, what's about to happen.
 
-Microsoft's implementation leans on exactly these properties. Discovery reads processes and configuration. Runtime protection plugs into hooks, or falls back to inspecting LLM traffic on the network.
+Both approaches in this post lean on exactly these properties. Microsoft uses them to find agents and inspect their content. BeyondTrust uses them to tell the agent apart from the human and apply privilege policy to each action. Let's start with Microsoft, because it lands in tooling most EMM teams already run.
 
 ## Part 1: Local AI agent discovery
 
@@ -161,11 +161,9 @@ If you manage endpoint security from the Defender portal instead, the same templ
 
 Runtime protection protects the agents you allow. For the ones you don't, Agent 365 adds a blunt but useful instrument. The **Shadow AI** page in the Microsoft 365 admin center can block an unsanctioned local agent. Enabling it creates an Intune policy (for example "A365 - Block OpenClaw") that blocks common execution paths on enrolled Windows devices. "Common execution paths" is the honest wording: treat it as raising the bar, not as an airtight application control boundary. If you already run WDAC/App Control for Business, that remains the stronger control.
 
-## What this does *not* solve
+## Where Defender stops
 
-This is where it gets interesting, and where I'd be careful not to oversell it to customers.
-
-Defender's runtime protection asks one question: **is this content malicious?** It's built around prompt injection. That's valuable, but it's the EDR-style question. The harder question, and the one the conference session hammered on, is: **is this action permitted, for this actor, right now?**
+Defender's runtime protection asks one question: **is this content malicious?** It's built around prompt injection. That's valuable, but it's the EDR-style question. The harder question, and the one the Utrecht session hammered on, is: **is this action permitted, for this actor, right now?**
 
 Take the scenario from the session's live demo. A developer has a valid AWS profile for production. Their agent is asked to list production buckets. Nothing is injected and nothing is malicious. IAM allows it, because the human is allowed. Defender has no reason to intervene. The only control that stops it is one that **distinguishes the agent from the human** and applies a policy to the agent specifically.
 
@@ -175,7 +173,52 @@ As far as I can see, the Microsoft stack today gives you three pieces:
 - **Threat protection**: prompt injection detection and blocking for supported agents.
 - **Coarse allow/deny**: blocking unsanctioned agents entirely.
 
-What it doesn't (yet) give you is fine-grained, per-action authorization for sanctioned agents. That means rules like "this agent may read the repo and call these MCP tools, but may not touch production credentials or open connections to these hosts", with just-in-time escalation to a human when there's no approved path. That's the gap privilege management vendors are moving into. BeyondTrust is building an AI agent module on top of its Endpoint Privilege Management (currently in private beta), and CrowdStrike's Falcon Guardian includes agent access controls. Expect this category to get crowded quickly.
+What it doesn't (yet) give you is fine-grained, per-action authorization for sanctioned agents. That means rules like "this agent may read the repo and call these MCP tools, but may not touch production credentials or open connections to these hosts". That's exactly the gap BeyondTrust is going after.
+
+## Part 4: The privilege approach, BeyondTrust AI Agent Security
+
+BeyondTrust comes at the problem from Endpoint Privilege Management, the product family that removes local admin rights and elevates applications just in time. Their argument is simple: we already solved standing privilege for humans, so apply the same discipline to the agent that inherits the human's privilege.
+
+### What it is
+
+AI Agent Security is a module on BeyondTrust's **Pathfinder** platform. It was announced at the end of June 2026 as a private beta for design partners, with general availability announced for fall 2026, initially as an add-on to Endpoint Privilege Management. BeyondTrust names Claude Code, Microsoft Copilot, Cursor and OpenAI Codex among the tools it covers.
+
+The product is built around three capabilities:
+
+- **Discover.** Find every AI assistant, copilot and agent on the endpoint, including shadow AI, and map what each one can reach.
+- **Decide before the action.** Approved AI tools get only the permissions their task needs, instead of inheriting the user's full credentials by default. Policy also governs which MCP servers, plugins and external services an agent may connect to.
+- **Attribute.** Trace execution chains back to their source, so each action is recorded as initiated by a human or by an agent. That fixes the "the logs say *you* did it" problem.
+
+### How it works, as shown in the session
+
+The core idea is **separating the agent from the human while they share one identity**. Policy is checked at runtime on the endpoint, for each type of action the agent can take: running a process, executing a command line, reading a file, calling an MCP tool, opening a connection (layer 4) or making an HTTPS request (layer 7), and ultimately reaching production. The human keeps their normal rights. The agent gets the subset you define.
+
+Three design choices stood out to me:
+
+1. **Approved pathways instead of only blocks.** Agentic tasks get secure routes to completion, partly through the agents' own hooks. When there is no approved path, the request **escalates to a person just in time** instead of failing silently. That is JIT elevation, applied to a non-human actor.
+2. **Curated policies.** You don't start from an empty policy set. BeyondTrust's research team, Phantom Labs, maintains risk-rated policies based on how agents actually behave, including research on how agents escape sandboxes and evade EDR. In the session they mentioned a one-click block on an entire model family as an example.
+3. **The allowlisting rollout discipline.** You start in observation mode to learn what normal looks like, then move to warn, then to enforce. New policies can be **simulated** by replaying them against agent activity already recorded in your own environment, so you see the impact before any user feels it.
+
+### The demo
+
+The demo was the most convincing part of the session. In a Windows terminal, Claude Code was asked to list S3 buckets in a development account, which worked. It was then asked to do the same in the production account. The command was stopped by a Pathfinder policy that explicitly denies AI-driven access to the production AWS account. That happened even though IAM allowed it, because the policy enforces production scope at the network layer.
+
+What I found most interesting is what happened next. The agent received a structured message with the violated policy name, the action, the resource and a link to request an exception. It then reported back that this was a deliberate guardrail rather than a permissions issue, and that it would not try to route around it via another tool or SDK path. That's the right behaviour from the agent. It's also exactly why enforcement needs to sit outside the agent, at the action level: a less well-behaved agent might simply try the next path.
+
+### Defender and BeyondTrust side by side
+
+| | Microsoft Defender for Endpoint | BeyondTrust AI Agent Security |
+|---|---|---|
+| **Core question** | Is this content malicious? | Is this action permitted, for this actor, now? |
+| **Primary threat model** | Prompt injection | Unauthorised outcomes from agents doing what they were told |
+| **Agent vs human** | Agent visible in inventory, but runs with the user's rights | Agent gets its own policy subset within the user's context |
+| **Enforcement points** | Agent hooks and LLM network traffic | Process, command line, file, MCP call, network L4/L7, production scope |
+| **No-match behaviour** | Audit or block | Escalate to a human, just in time |
+| **Rollout model** | Audit → block | Observe → warn → enforce, with policy simulation |
+| **Fit for EMM teams** | Native to Intune and Defender, already licensed in E5/E7 | Extra product, natural fit where BeyondTrust EPM is already deployed |
+| **Maturity (Oct 2026)** | Discovery available; runtime protection in preview | Private beta, GA announced for fall 2026 |
+
+My reading: these aren't competitors so much as layers. The session itself argued you'll end up with gateways, EDR-style detection and endpoint runtime policy anyway, and that the real decision is the order in which you put those fences up. Defender gives you the inventory and the injection layer at little extra cost. A privilege layer like BeyondTrust's answers the authorization question that Defender doesn't ask. CrowdStrike's Falcon Guardian, which includes agent access controls, shows the rest of the market is heading the same way.
 
 There's also a useful native layer you shouldn't skip. Coding agents such as Claude Code support **centrally managed settings**, including permission allow/deny rules and hooks, that users can't override. As EMM admins we can deliver those through Intune today. A deny rule on production CLI profiles is crude, but it is per-agent authorization, and it costs nothing.
 
@@ -188,11 +231,11 @@ If I were rolling this out for a customer next week:
 3. **Decide what's sanctioned.** Pick the agents you support, and block the rest through Agent 365 Shadow AI or App Control.
 4. **Pilot runtime protection in audit.** Use a developer device group, both inspection methods, one to two weeks of alert review, then block.
 5. **Harden the sanctioned agents natively.** Push managed settings for permissions and hooks via Intune, and keep production credentials out of default profiles on developer machines.
-6. **Treat per-action authorization as a roadmap item.** Know that it's a gap, and evaluate EPM-style agent controls when the products mature.
+6. **Plan the authorization layer.** Per-action policy for sanctioned agents is the real gap. If the customer already runs BeyondTrust EPM, join the beta or plan an evaluation at GA. Otherwise, put EPM-style agent control on the roadmap.
 
 ## The bigger picture
 
-The principle doesn't change: don't grant access by default, grant only what's needed, only when it's needed, and make every use visible. What changes is that we now apply it to a non-human actor that shares a human's identity. Microsoft has delivered solid groundwork in visibility and injection protection, and it lands in tooling EMM teams already operate: Defender, Intune and the M365 admin center. The authorization layer is next, and it will be fought over.
+The principle doesn't change: don't grant access by default, grant only what's needed, only when it's needed, and make every use visible. What changes is that we now apply it to a non-human actor that shares a human's identity. Microsoft has delivered solid groundwork in visibility and injection protection, in tooling EMM teams already operate. BeyondTrust showed in Utrecht what the next layer looks like: separating the agent from the human and governing each action just in time. That authorization layer is where the market will be fought over.
 
 Your agent runs as you. Until our tooling can tell the two apart, we'll have to govern it like you, and then some.
 
@@ -206,4 +249,6 @@ Your agent runs as you. Until our tooling can tell the two apart, we'll have to 
 - Microsoft Learn: [Set up AI agent runtime protection](https://learn.microsoft.com/en-us/defender-endpoint/configure-ai-agent-runtime-protection)
 - Microsoft Learn: [Defender for Endpoint AI agent support matrix](https://learn.microsoft.com/en-us/defender-endpoint/ai-agent-support-matrix)
 - Microsoft Zero Trust Assessment: [Block unsanctioned local agents on managed endpoints](https://microsoft.github.io/zerotrustassessment/docs/workshop-guidance/AI/AI_177)
+- BeyondTrust: [AI Agent Security product page](https://www.beyondtrust.com/products/ai-agent-security)
+- BeyondTrust: [Press release, AI Agent Security (June 2026)](https://www.beyondtrust.com/press/ai-agent-security)
 - IT Brief UK: [BeyondTrust launches AI agent security beta for endpoints](https://itbrief.co.uk/story/beyondtrust-launches-ai-agent-security-beta-for-endpoints)
