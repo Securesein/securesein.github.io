@@ -451,7 +451,7 @@
       ],
       "qualityScore": 25.0,
       "relevanceScore": 21.2,
-      "whyRelevant": "The deprecation of gemini-3.7-flash and its replacement with gemini-3.8-flash may impact deployment strategies and model serving in production environments.",
+      "whyRelevant": "The deprecation of gemini-3.5-flash and its replacement with gemini-3.6-flash may impact deployment strategies and model serving in production.",
       "seenAt": "2026-10-09T10:01:25+00:00",
       "status": "radar"
     },
@@ -559,6 +559,36 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This model's open-weight architecture allows for local inference, which is crucial for understanding LLM mechanisms and enhancing security in deployment.",
       "seenAt": "2026-10-09T22:01:31+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rcda1276f2e818a6",
+      "url": "https://huggingface.co/nvidia/agile_one_s_place_ssd_n2_1260",
+      "title": "nvidia/agile_one_s_place_ssd_n2_1260",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into model deployment and serving, relevant for understanding practical applications of LLMs in production environments.",
+      "seenAt": "2026-10-10T04:01:19+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r696c4192beadc10",
+      "url": "https://huggingface.co/nvidia/agile_one_s_pickplace_ssd_n2_18200",
+      "title": "nvidia/agile_one_s_pickplace_ssd_n2_18200",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's open-weight architecture allows for local inference, which can enhance understanding of LLM mechanisms and improve deployment efficiency.",
+      "seenAt": "2026-10-10T04:01:20+00:00",
       "status": "radar"
     }
   ]
