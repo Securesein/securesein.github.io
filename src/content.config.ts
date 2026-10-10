@@ -1,6 +1,11 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
-import { KIND_SLUGS, FORMAT_SLUGS, TOPIC_SLUGS } from "./taxonomy";
+import {
+  KIND_SLUGS,
+  FORMAT_SLUGS,
+  TOPIC_SLUGS,
+  DIRECTED_ONLY_SECTIONS,
+} from "./taxonomy";
 import { BENCHMARK_SLUGS } from "./registries";
 
 // Two cutovers, because the archive was written under two different
@@ -263,7 +268,39 @@ const blog = defineCollection({
     .refine((d) => d.format !== "benchmark" || d.kind === "benchmark", {
       message: '`format: "benchmark"` is only valid with `kind: "benchmark"`',
       path: ["format"],
-    }),
+    })
+    // --- directed-only sections ----------------------------------
+    // Fundamentals and Enterprise AI are written by hand. The pipeline
+    // is already kept out of them three other ways — they are absent
+    // from the classifier's prompt, forced to the fallback if a model
+    // names one anyway, and sit at 0 in config/budgets.json — but all
+    // three live in the half of the codebase that would be doing the
+    // publishing. This is the half that would be receiving it, and it
+    // fails the build rather than putting an unreviewed post in a
+    // section whose whole premise is that a human chose it.
+    //
+    // SOFTENED BEFORE SCHEMA_CUTOVER, for exactly one post. The old
+    // two-field pipeline put `understanding-tokens-in-ai-language-models`
+    // (2026-09-03, credit "scout") into Fundamentals, which is the
+    // thing this rule exists to prevent — and it is also why the rule
+    // exists: the post is thin enough that it already carries a
+    // `betterCoveredBy` pointing at the hand-written piece that
+    // replaced it the next day. Re-labelling its credit to make the
+    // build pass would be editing the record of who wrote it, which is
+    // the one field on this site that must stay true. It is
+    // grandfathered where every other pre-cutover rule is, and nothing
+    // published since can take the same route.
+    .refine(
+      (d) =>
+        d.credit !== "scout" ||
+        !DIRECTED_ONLY_SECTIONS.includes(d.kind) ||
+        d.pubDate < SCHEMA_CUTOVER,
+      {
+        message:
+          "this section is hand-directed; an auto-published post cannot be filed here",
+        path: ["kind"],
+      }
+    ),
   // §4.1 rule 4 — every id in `benchmarkRefs` resolves to a real entry
   // in the `benchmarks` collection — is a *cross-collection* check,
   // which a per-entry Zod schema has no way to express. It is enforced

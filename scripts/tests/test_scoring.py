@@ -68,12 +68,17 @@ def test_five_topics_stay_strong_floor_holds():
 
 
 def test_retired_sections_and_topics_are_gone_from_the_vocabulary():
-    """Decision A2, asserted against taxonomy.json itself."""
+    """Decision A2, asserted against taxonomy.json itself.
+
+    Note `enterprise` in the loop below: it stays retired as a TOPIC.
+    It exists as a SECTION slug (Enterprise AI), and the two axes do
+    not share a namespace — which is exactly why this asserts against
+    topic_slugs() and not against the word."""
     assert "practice" not in tax.section_slugs()
     assert "fieldnote" not in tax.format_slugs()
     for slug in ("mobility", "enterprise", "selfhosted", "industry"):
         assert slug not in tax.topic_slugs(), slug
-    assert len(tax.section_slugs()) == 5
+    assert len(tax.section_slugs()) == 6
     assert len(tax.format_slugs()) == 5
     assert len(tax.topic_slugs()) == 13
 

@@ -28,7 +28,8 @@ site has ever shown.
 
 Reader-facing surfaces: `/model-updates`, `/research`, `/security`,
 `/benchmarks` (a measurements table with roundup posts beneath it),
-`/fundamentals` (hand-written explainers), `/topics`, `/threads`,
+`/fundamentals` (hand-written explainers), `/enterprise-ai`
+(hand-written: AI on a managed fleet), `/topics`, `/threads`,
 `/search`.
 
 ### Current totals
@@ -42,7 +43,7 @@ Reader-facing surfaces: `/model-updates`, `/research`, `/security`,
 | Workflows | 11 |
 
 Posts by kind: research 25, security 13, release 9, explainer 5,
-benchmark 2.
+benchmark 2, enterprise 1.
 
 ---
 
@@ -238,7 +239,9 @@ run rather than assuming a clean slate.
 Post budgets (`config/budgets.json`) are separate and count posts, not
 money: hard cap 50 per rolling 7 days, 5 per day, 2 per run, and per
 section per 7 days — release 6, research 6, security 4, benchmark 2,
-explainer 1.
+explainer 1, enterprise 0. A section at 0 is closed to automation:
+ledger.can_publish() refuses it, so Enterprise AI is hand-written by
+construction rather than by convention.
 
 **Measured reality:** the whole of the last 30 days cost about **$0.35**.
 A Benchmarks run with no new data costs **$0.00**; one that writes a
@@ -487,11 +490,14 @@ should be made first-class.
 The axes it rides on already exist in `taxonomy.json`:
 
 - **sections** (`release`, `research`, `benchmark`, `security`,
-  `explainer`) — why would someone read this
+  `enterprise`, `explainer`) — why would someone read this. The last
+  two carry `directedOnly: true`: they are left out of the
+  classifier's prompt, forced to the fallback if a model names one,
+  and rejected by the schema if one ever arrives with credit `scout`
 - **formats** (`news`, `paper`, `benchmark`, `explainer`, `deepdive`) —
   what shape is the piece
 - `/deep-dives` is already a **format view, not a section**: a deep dive
-  can sit in Research, Security or Fundamentals. `/threads` is already
+  can sit in Research, Security, Enterprise AI or Fundamentals. `/threads` is already
   human-curated by design — "nothing auto-generates these".
 
 ### 11.2 The evidence says the commissioned path is the reliable one

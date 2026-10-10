@@ -43,7 +43,7 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
         </svg>
       </a>
       <ThemeToggle />
-      <!-- Below 900px the seven flat links don't fit (mobiel-homepage-
+      <!-- Below 1080px the eight flat links don't fit (mobiel-homepage-
            fixes #1): .nav hides and this <details> panel takes over.
            It sits inside .header-actions so the three icon buttons read
            as one group on the right, rather than stranding the menu
@@ -145,8 +145,19 @@ const isActive = (href: string) => pathname === href || pathname.startsWith(`${h
 
   /* Nav collapse (mobiel-homepage-fixes #1). The brand keeps the left;
      search, theme and the menu button form one group on the right, and
-     the seven flat links move into a fixed sheet under the header. */
-  @media (max-width: 900px) {
+     the eight flat links move into a fixed sheet under the header.
+
+     WAS 900px, raised when Enterprise AI became the sixth section. The
+     nav does not wrap — it is a flex row with overflow — so a row that
+     no longer fits is silently sliced, and the links that get sliced
+     are the last two rather than the new one. Measured at the 1rem
+     default: the row is 738px (599px of links plus seven 20px gaps),
+     and the space left beside the brand and the three icon buttons is
+     the viewport less 295px, so the row stops fitting below 1033px.
+     1080px is that number with enough room for a larger base font.
+     Re-measure this if a section is added, renamed or removed; the
+     hamburger is the better answer at that point, not a tighter gap. */
+  @media (max-width: 1080px) {
     .nav { display: none; }
     /* .nav carried the margin-right:auto that pushed the actions over;
        with it hidden, the actions have to claim that space instead. */

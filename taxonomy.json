@@ -1,5 +1,5 @@
 {
-  "_comment": "Single source of truth for the three orthogonal axes (brief §3.1), read by both the Astro site (src/taxonomy.ts) and the Python pipeline (scripts/core/taxonomy.py). Nothing in src/ or scripts/ may hard-code a section, format or topic string; it reads this file. SECTION answers 'why would someone read this?' and lives in frontmatter as `kind`. FORMAT answers 'what shape is this piece?' and lives as `format`. TOPIC answers 'what is it technically about?' and lives as `topics[]`, 1-3 per post. Decision A2 (PURE AI RESEARCH RADAR) removed the Practice section, the `fieldnote` format, and the `mobility`/`enterprise`/`selfhosted` topics from the brief's fuller draft — see the build report.",
+  "_comment": "Single source of truth for the three orthogonal axes (brief §3.1), read by both the Astro site (src/taxonomy.ts) and the Python pipeline (scripts/core/taxonomy.py). Nothing in src/ or scripts/ may hard-code a section, format or topic string; it reads this file. SECTION answers 'why would someone read this?' and lives in frontmatter as `kind`. FORMAT answers 'what shape is this piece?' and lives as `format`. TOPIC answers 'what is it technically about?' and lives as `topics[]`, 1-3 per post. Decision A2 (PURE AI RESEARCH RADAR) removed the Practice section, the `fieldnote` format, and the `mobility`/`enterprise`/`selfhosted` topics from the brief's fuller draft — see the build report. Note that `enterprise` is since back as a SECTION slug (Enterprise AI); it is not back as a topic, and the two axes do not share a namespace. `directedOnly: true` marks a section the automated pipeline may not file into: it is left out of the classifier's prompt, forced to the fallback if a model names it anyway, sits at 0 in config/budgets.json, which ledger.can_publish() refuses against, and is rejected by the schema if it ever arrives carrying credit `scout`.",
 
   "sections": {
     "release": {
@@ -34,13 +34,23 @@
       "blurb": "Prompt injection, agent hijacking, guardrail removal, supply chain — the failure modes of AI systems.",
       "description": "The security and safety of AI systems: attacks, incidents and the failure modes behind them. Reward hacking lives here, not in Research."
     },
+    "enterprise": {
+      "label": "Enterprise AI",
+      "href": "/enterprise-ai",
+      "plural": "Enterprise AI",
+      "question": "How do we run this in an organisation?",
+      "blurb": "Agents on managed devices, shadow AI, and governing both with the tooling an enterprise already runs.",
+      "description": "AI where an organisation actually meets it: agents on managed endpoints, the identities they borrow, the data they reach, and the policy around all three. Practitioner-oriented. How the technology works is Fundamentals; what it does to a fleet is here.",
+      "directedOnly": true
+    },
     "explainer": {
       "label": "Fundamentals",
       "href": "/fundamentals",
       "plural": "Fundamentals",
       "question": "How does this work, from first principles?",
       "blurb": "One concept, properly explained. Still useful next year.",
-      "description": "One concept, properly explained, no news hook. Written to still make sense in a year."
+      "description": "One concept, properly explained, no news hook. Written to still make sense in a year.",
+      "directedOnly": true
     }
   },
 

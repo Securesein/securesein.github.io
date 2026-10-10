@@ -3,13 +3,16 @@
 
   "_comment_a1": "DECISION A1, as confirmed by the site owner: ~21 posts/week (about 3/day), the brief's own lower assumption, with the section 9 table taken as written EXCEPT the `practice` row, which decision A2 removed along with the section. The targets therefore sum to 19/week rather than the brief's stated ~21. That shortfall is expected and is not a bug to fix — the difference routes into the Radar, which is the whole structural point of section 6.",
 
+  "_comment_zero_targets": "A section at 0 is CLOSED to automation, not merely unbudgeted: ledger.can_publish() refuses with section_budget_exhausted the moment used >= target, and every publication path calls it first. Enterprise AI is written by hand, so 0 is the operating point rather than a number to raise later. The row is present rather than absent on purpose — an absent key also yields target 0 via ledger.target(), but silently, and a reader cannot tell a deliberate lock from a forgotten section. It is carried as a row so the weekly report lists it, so set(targets_7d) still equals the section vocabulary, and so raising it is a visible edit here rather than something that happens by accident elsewhere.",
+
   "hard_cap_7d": 50,
   "targets_7d": {
     "release": 6,
     "research": 6,
     "security": 4,
     "benchmark": 2,
-    "explainer": 1
+    "explainer": 1,
+    "enterprise": 0
   },
   "per_day_cap": 5,
   "per_run_cap": 2,

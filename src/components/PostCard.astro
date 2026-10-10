@@ -184,11 +184,18 @@ const showHero = !!data.hero && !compact;
   }
 
   /* --- structural differentiation by section ---
-     Five sections now, still exactly two markers and no new tokens:
+     Six sections now, still exactly two markers and no new tokens:
      a soft grey left rule for the fast sections, the accent rule (with
      the light-mode brand edge over it) for the ones that take something
      apart, and no rule at all for Fundamentals. Colour is not carrying
-     the distinction — the rule, the type size and the whitespace are. */
+     the distinction — the rule, the type size and the whitespace are.
+
+     Enterprise AI joins Research on the accent rule rather than taking
+     a marker of its own: it is the other section that takes something
+     apart, and a sixth section is not a reason for a third marker. It
+     does not take Research's 1.5rem title, because an Enterprise AI
+     piece carries `format: deepdive` and the format axis already sets
+     that weight — see the deep-dive rule below. */
   .card--release,
   .card--security,
   .card--benchmark {
@@ -202,13 +209,15 @@ const showHero = !!data.hero && !compact;
   .card--explainer { padding-block: 2.1rem; }
   .card--explainer .card-desc { font-size: 1.02rem; }
 
-  .card--research {
+  .card--research,
+  .card--enterprise {
     padding-left: calc(var(--card-pad) + 1.1rem);
     border-left: 2px solid var(--signal);
   }
   /* Light: a brand-gradient edge sits over the green rule; in dark
      --dd-edge is transparent, so the green border does the marking. */
-  .card--research::before {
+  .card--research::before,
+  .card--enterprise::before {
     content: "";
     position: absolute;
     inset: 0 auto 0 0;

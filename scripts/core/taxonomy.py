@@ -60,6 +60,39 @@ def is_section(slug: str) -> bool:
     return slug in sections()
 
 
+def is_directed_only(slug: str) -> bool:
+    """True for a section the automated pipeline may not file into.
+
+    Fundamentals was already treated this way, as a hard-coded
+    `section == "explainer"` check in classify.py — the one thing this
+    module's docstring says must never happen. Enterprise AI is the
+    second such section, so the rule moved into the vocabulary where
+    both halves of the codebase can read it.
+
+    Three locks hold for every section carrying the flag, because one
+    of them is a prompt and a prompt is not an enforcement mechanism:
+      1. section_prompt_block() leaves these sections out, so the
+         classifier is never offered one.
+      2. classify_axes() and deterministic_axes() force the fallback
+         if one is named anyway.
+      3. The Zod schema rejects one carrying credit "scout", which
+         fails the build rather than publishing.
+
+    The budget is NOT part of the flag. `enterprise` sits at 0 in
+    config/budgets.json, which ledger.can_publish() refuses against;
+    `explainer` sits at 1, because Fundamentals is kept out of the
+    *feed* pipeline rather than out of publishing altogether. Read
+    config/budgets.json for what a section may publish, and this flag
+    for what the classifier may file into it.
+    """
+    return bool(sections().get(slug, {}).get("directedOnly"))
+
+
+def autopublish_section_slugs() -> list[str]:
+    """The sections an automated channel may publish into."""
+    return [slug for slug in sections() if not is_directed_only(slug)]
+
+
 def is_format(slug: str) -> bool:
     return slug in formats()
 
@@ -102,10 +135,17 @@ def topic_prompt_block() -> str:
 def section_prompt_block() -> str:
     """The closed section list, rendered for a classifier prompt. Each
     section is described by the question it answers, which is what the
-    classifier is actually being asked to match against."""
+    classifier is actually being asked to match against.
+
+    Directed-only sections are left out entirely rather than listed
+    with an instruction not to pick them. The prompt used to carry
+    'explainer is NEVER correct for a feed item', which is a rule the
+    model has to remember; an option it was never shown is one it
+    cannot choose."""
     return "\n".join(
         f'- "{slug}": {info["label"]} — {info["question"]} {info["description"]}'
         for slug, info in sections().items()
+        if not is_directed_only(slug)
     )
 
 

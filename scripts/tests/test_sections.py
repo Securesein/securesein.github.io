@@ -162,6 +162,51 @@ def test_fundamentals_is_never_classified_into_from_a_feed():
         assert classify.deterministic_axes(_item(title))["section"] != "explainer", title
 
 
+# --- hand-directed sections -------------------------------------------
+
+
+def test_directed_only_sections_are_closed_to_the_pipeline():
+    """Fundamentals and Enterprise AI are written by hand: no regex can
+    produce one, and the classifier prompt never offers one.
+
+    The budget is a separate lock and is deliberately NOT asserted for
+    both. Enterprise AI sits at 0, so ledger.can_publish() refuses it
+    outright. Fundamentals sits at 1 — it is kept out of the feed
+    pipeline, not out of publishing — and asserting 0 here would be
+    quietly redefining that."""
+    import json
+
+    directed = [s for s in tax.section_slugs() if tax.is_directed_only(s)]
+    assert set(directed) == {"explainer", "enterprise"}, directed
+
+    patterns = [slug for slug, _ in classify.SECTION_PATTERNS]
+    prompt = tax.section_prompt_block()
+
+    for slug in directed:
+        assert slug not in patterns, slug
+        assert f'"{slug}"' not in prompt, slug
+
+    # The prompt still has to offer the sections that ARE automated,
+    # or this test would pass on an empty block.
+    for slug in tax.autopublish_section_slugs():
+        assert f'"{slug}"' in prompt, slug
+
+    targets = json.loads(
+        (REPO_ROOT / "config" / "budgets.json").read_text(encoding="utf-8")
+    )["targets_7d"]
+    assert targets["enterprise"] == 0
+
+
+def test_enterprise_ai_is_never_classified_into_from_a_feed():
+    """The Enterprise AI equivalent of the Fundamentals rule above. An
+    endpoint-management headline is a Security or Research candidate,
+    never an automatic Enterprise AI post."""
+    for title in ("Microsoft ships Defender agent discovery for Intune fleets",
+                  "New Entra policy blocks unsanctioned AI agents",
+                  "Shadow AI governance arrives in the M365 admin center"):
+        assert classify.deterministic_axes(_item(title))["section"] != "enterprise", title
+
+
 # --- A2: no Practice --------------------------------------------------
 
 
@@ -196,7 +241,12 @@ def test_every_section_has_a_budget_and_practice_has_none():
     """Decision A1's table: {release 6, research 6, security 4,
     benchmark 2, explainer 1} = 19/week, with the brief's `practice: 2`
     row removed along with the section. The shortfall against the
-    brief's stated ~21 is expected, not a bug."""
+    brief's stated ~21 is expected, not a bug.
+
+    Enterprise AI joins the table at 0 — present so the vocabulary and
+    the budget still match row for row, and so the lock is something a
+    reader can see rather than infer from an absent key. It adds
+    nothing to the weekly total."""
     import json
 
     budgets = json.loads(
@@ -204,7 +254,8 @@ def test_every_section_has_a_budget_and_practice_has_none():
     )
     targets = budgets["targets_7d"]
     assert targets == {
-        "release": 6, "research": 6, "security": 4, "benchmark": 2, "explainer": 1
+        "release": 6, "research": 6, "security": 4, "benchmark": 2,
+        "explainer": 1, "enterprise": 0,
     }
     assert sum(targets.values()) == 19
     assert set(targets) == set(tax.section_slugs())

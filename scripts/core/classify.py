@@ -600,7 +600,12 @@ def deterministic_axes(item) -> dict:
         if pattern.search(text):
             section = slug
             break
-    if not tax.is_section(section):
+    # SECTION_PATTERNS deliberately has no entry for a directed-only
+    # section, so this second clause should be unreachable. It is here
+    # because "no pattern exists" is a property of a list someone could
+    # extend, and the offline classifier is the path that runs when
+    # there is no model to re-check it.
+    if not tax.is_section(section) or tax.is_directed_only(section):
         section = FALLBACK_SECTION
 
     topics = [slug for slug, pattern in TOPIC_PATTERNS.items() if pattern.search(text)]
@@ -638,8 +643,6 @@ Two placement rules that override the obvious reading:
 - A defensive tooling release is rarely worth a post on its own; the
   ATTACK CLASS it responds to is. A new probe family is security; a
   scanner's point release is not.
-- "explainer" (Fundamentals) is NEVER correct for a feed item. Those
-  are written from accumulated material, not from the news.
 
 FORMAT — what shape is this piece? Pick exactly one:
 {formats}
@@ -683,9 +686,14 @@ def classify_axes(llm, item) -> dict:
         return deterministic_axes(item)
 
     section = str(result.get("section") or "")
-    if not tax.is_section(section) or section == "explainer":
-        # Fundamentals is not feed-driven (§8.6); a classifier that says
-        # so is wrong rather than interesting.
+    if not tax.is_section(section) or tax.is_directed_only(section):
+        # Fundamentals is not feed-driven (§8.6) and neither is
+        # Enterprise AI; a classifier that says so is wrong rather than
+        # interesting. The list is the `directedOnly` flag in
+        # taxonomy.json rather than a slug written here, so adding a
+        # hand-directed section does not mean remembering to edit this
+        # line — and these sections are not in the prompt either, so
+        # reaching this branch means the model invented one.
         section = FALLBACK_SECTION
 
     fmt = str(result.get("format") or "")

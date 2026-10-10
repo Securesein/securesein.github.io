@@ -564,8 +564,15 @@ const siteJsonLd = {
     width: 100%;
     margin-top: 6rem;
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 1.75rem;
+    /* One column per section, so the row reads as the site's index
+       rather than as a grid that happens to wrap. Was 5; Enterprise AI
+       made it 6, and a sixth card left to wrap would have sat alone on
+       a second row looking like an afterthought. The count is written
+       out rather than auto-fitted because these cards have no natural
+       minimum width — auto-fit would reflow them at every breakpoint
+       instead of at the two chosen below. */
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1.5rem;
     text-align: left;
   }
   .section-card {

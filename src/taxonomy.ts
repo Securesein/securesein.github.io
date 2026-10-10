@@ -26,6 +26,14 @@ export interface SectionInfo {
   question: string;
   blurb: string;
   description: string;
+  /**
+   * Hand-directed only: the automated pipeline may not file here.
+   * Enforced on the Python side (the section is kept out of the
+   * classifier's prompt and sits at 0 in config/budgets.json) and,
+   * as the last backstop, by the schema — a post in one of these
+   * sections carrying credit "scout" fails the build.
+   */
+  directedOnly?: boolean;
 }
 export interface FormatInfo {
   label: string;
@@ -58,6 +66,17 @@ export const KINDS = SECTION_INFO;
 
 export const SECTION_SLUGS = Object.keys(SECTION_INFO) as [string, ...string[]];
 export const KIND_SLUGS = SECTION_SLUGS;
+
+/**
+ * Sections the automated pipeline may not publish into. Read by the
+ * schema rather than written there, so the list is the vocabulary and
+ * not a second copy of it.
+ */
+export const DIRECTED_ONLY_SECTIONS: readonly string[] = Object.entries(
+  SECTION_INFO
+)
+  .filter(([, info]) => info.directedOnly)
+  .map(([slug]) => slug);
 export const FORMAT_SLUGS = Object.keys(FORMATS) as [string, ...string[]];
 export const TOPIC_SLUGS = Object.keys(TOPICS) as [string, ...string[]];
 
@@ -69,17 +88,22 @@ export type Topic = keyof typeof data.topics & string;
 export type Credit = "scout" | "directed" | "written";
 
 /**
- * Nav and listing order for the five sections. Declared here rather
- * than taken from Object.keys so a reordering is a deliberate edit and
- * not a side effect of how the JSON happens to be written — but it is
+ * Nav and listing order for the sections. Declared here rather than
+ * taken from Object.keys so a reordering is a deliberate edit and not
+ * a side effect of how the JSON happens to be written — but it is
  * still derived from the vocabulary, so a section that exists and is
  * missing here would be caught by the check below.
+ *
+ * Enterprise AI sits after Security and before Fundamentals: it is
+ * where the failure modes Security describes meet a fleet, and
+ * Fundamentals stays last because it is the only evergreen lane.
  */
 export const SECTION_ORDER: Section[] = [
   "release",
   "research",
   "benchmark",
   "security",
+  "enterprise",
   "explainer",
 ];
 export const KIND_ORDER = SECTION_ORDER;
@@ -93,6 +117,7 @@ export const SECTION_ORDER_BY_DEPTH: Section[] = [
   "research",
   "benchmark",
   "security",
+  "enterprise",
   "release",
 ];
 export const KIND_ORDER_BY_DEPTH = SECTION_ORDER_BY_DEPTH;
