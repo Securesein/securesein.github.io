@@ -590,6 +590,36 @@
       "whyRelevant": "This model's open-weight architecture allows for local inference, which can enhance understanding of LLM mechanisms and improve deployment efficiency.",
       "seenAt": "2026-10-10T04:01:20+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r804aa125830b296",
+      "url": "https://huggingface.co/microsoft/AesCode-32B",
+      "title": "microsoft/AesCode-32B",
+      "source": "HF org — Microsoft (Phi)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "AesCode-32B's open-weight model provides insights into LLM internals and can enhance understanding of reasoning efficiency and security in production deployments.",
+      "seenAt": "2026-10-11T04:01:13+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rdd2cb9ff667265f",
+      "url": "https://huggingface.co/microsoft/AesCode-8B",
+      "title": "microsoft/AesCode-8B",
+      "source": "HF org — Microsoft (Phi)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "AesCode-8B's open-weight model provides insights into LLM internals and mechanistic interpretability, relevant for understanding security and inference efficiency in production.",
+      "seenAt": "2026-10-11T04:01:14+00:00",
+      "status": "radar"
     }
   ]
 }
