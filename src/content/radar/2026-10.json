@@ -451,7 +451,7 @@
       ],
       "qualityScore": 25.0,
       "relevanceScore": 21.2,
-      "whyRelevant": "The deprecation of gemini-3.5-flash and its replacement with gemini-3.6-flash may impact deployment strategies and model serving in production.",
+      "whyRelevant": "This deprecation impacts model deployment and version management, relevant for understanding LLM lifecycle and ensuring security in production environments.",
       "seenAt": "2026-10-09T10:01:25+00:00",
       "status": "radar"
     },
@@ -619,6 +619,22 @@
       "relevanceScore": 21.2,
       "whyRelevant": "AesCode-8B's open-weight model provides insights into LLM internals and mechanistic interpretability, relevant for understanding security and inference efficiency in production.",
       "seenAt": "2026-10-11T04:01:14+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r17a7713cd916259",
+      "url": "https://huggingface.co/nvidia/Qwen-Image-NVFP4",
+      "title": "nvidia/Qwen-Image-NVFP4",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms",
+        "multimodal"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 37.1,
+      "whyRelevant": "This release provides insights into multimodal LLMs, which can enhance understanding of internal mechanisms and improve deployment strategies for security and efficiency.",
+      "seenAt": "2026-10-12T22:01:26+00:00",
       "status": "radar"
     }
   ]
