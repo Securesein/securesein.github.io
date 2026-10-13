@@ -654,6 +654,69 @@
       "seenAt": "2026-10-13T16:01:15+00:00",
       "status": "promoted",
       "promotedTo": "google-unveils-gemini-4-argon-for-robotics"
+    },
+    {
+      "id": "r166ee3cb04d4d68",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog#10-13-2026",
+      "title": "Gemini 4 Argon ( gemini-4-argon ) generally available (GA) : Released Gemini 4 Argon ( gemini-4-argon ),\nour most capable model built for complex coding, agentic, math, and science",
+      "source": "Google — Gemini API release notes",
+      "section": "release",
+      "topics": [
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 23.1,
+      "whyRelevant": "Gemini 4 Argon enhances understanding of LLM capabilities in complex tasks, relevant for exploring mechanistic interpretability and improving inference efficiency in production.",
+      "seenAt": "2026-10-13T22:01:35+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6b09416aadad05f",
+      "url": "https://huggingface.co/nvidia/GR00T-N1.7-AppleToPlate-cosine40k-checkpoint-15000",
+      "title": "nvidia/GR00T-N1.7-AppleToPlate-cosine40k-checkpoint-15000",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's open weights and architecture may provide insights into LLM interpretability and efficiency in reasoning, relevant for security and deployment considerations.",
+      "seenAt": "2026-10-13T22:01:36+00:00",
+      "status": "promoted",
+      "promotedTo": "nvidia-s-gr00t-n1-7-appletoplate-model-release"
+    },
+    {
+      "id": "r70de1f9007989ad",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+      "title": "LiquidAI/LFM2.5-24B-A2B",
+      "source": "HF org — Liquid AI",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "LiquidAI/LFM2.5-24B-A2B offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively.",
+      "seenAt": "2026-10-13T22:01:38+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1ab117ad6244911",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-Base",
+      "title": "LiquidAI/LFM2.5-24B-A2B-Base",
+      "source": "HF org — Liquid AI",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "LiquidAI's LFM2.5-24B-A2B-Base model offers insights into LLM architecture and efficiency, relevant for understanding mechanistic interpretability and deploying models effectively.",
+      "seenAt": "2026-10-13T22:01:40+00:00",
+      "status": "promoted",
+      "promotedTo": "liquid-ai-launches-lfm2-5-24b-a2b-base-model"
     }
   ]
 }

@@ -1,3 +1,78 @@
 {
-  "items": []
+  "items": [
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-13T22:01:35+00:00",
+      "score": 6.0,
+      "itemId": "6b6de16d3e933d85",
+      "title": "Gemini 4 Argon ( gemini-4-argon ) generally available (GA) : Released Gemini 4 Argon ( gemini-4-argon ),\nour most capable model built for complex coding, agentic, math, and science",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog#10-13-2026",
+      "source": "Google — Gemini API release notes",
+      "tier": "primary",
+      "entity": "google/Gemini/4 Argon/availability",
+      "eventType": "availability",
+      "vendor": "google",
+      "family": "Gemini",
+      "version": "4 Argon",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_availability +1",
+        "tier1_vendor +1",
+        "corroborated_48h +1"
+      ],
+      "corroborators": [
+        "Google — Gemini API release notes: Gemini 4 Argon ( gemini-4-argon ) generally available (GA) : Released Gemini 4 Argon ( gemini-4-argon ),\nour most capable model built for complex coding, agentic, math, and science"
+      ],
+      "materialFacts": [
+        "ga_date",
+        "pricing"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 23.1,
+      "whyRelevant": "Gemini 4 Argon enhances understanding of LLM capabilities in complex tasks, relevant for exploring mechanistic interpretability and improving inference efficiency in production.",
+      "candidateId": "r166ee3cb04d4d68",
+      "topics": [
+        "llms",
+        "agents"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-13T22:01:38+00:00",
+      "score": 7.0,
+      "itemId": "hf:LiquidAI/LFM2.5-24B-A2B",
+      "title": "LiquidAI/LFM2.5-24B-A2B",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+      "source": "HF org — Liquid AI",
+      "tier": "primary",
+      "entity": "liquid/LFM/2.5-24B-A2B/new_model",
+      "eventType": "new_model",
+      "vendor": "liquid",
+      "family": "LFM",
+      "version": "2.5-24B-A2B",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "LiquidAI/LFM2.5-24B-A2B offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively.",
+      "candidateId": "r70de1f9007989ad",
+      "topics": [
+        "llms"
+      ]
+    }
+  ]
 }
