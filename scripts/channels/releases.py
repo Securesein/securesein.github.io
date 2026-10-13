@@ -587,6 +587,38 @@ def run(ctx) -> int:
 # --- steps 9-10: draft, verify, emit ---------------------------------
 
 
+# What point 2 asks for, per event type. The old prompt asked every
+# item for "what changed versus the previous version" and returned
+# insufficient when it could not be filled — which is most of a launch
+# announcement, because a new model's page says what it does, not how
+# it differs from a predecessor it may not have. Between 6 and 13
+# October that rejected Mistral Large 4, Claude Haiku 5.5,
+# EmbeddingGemma 2, Gemini Nano Banana 2.1's GA, GPT-6's wider rollout
+# and both Microsoft AesCode sizes: thirty items, every one a real
+# release. The three that did get through in the same week all came
+# from AWS "what's new" posts, which are formulaic enough to always
+# state a diff and a region — the bar was accidentally tuned to one
+# publisher's house style rather than to what a release is.
+EVENT_FOCUS = {
+    "new_model": "What the model is for and what it can do — size or "
+                 "class, context window, modality, pricing, licence. If "
+                 "the source compares it to a predecessor, say so; if it "
+                 "does not, do not invent the comparison.",
+    "version_bump": "What changed versus the version it replaces — "
+                    "context window, modality, pricing, reasoning "
+                    "settings, licence. Be concrete.",
+    "availability": "What is newly available and where — which provider, "
+                    "region, plan or tier, and from when. The model may "
+                    "be unchanged; the access to it is the news.",
+    "deprecation": "What is going away, what replaces it, and the dates "
+                   "that matter: shutdown, migration deadline.",
+    "capability_update": "The capability that is new, what it lets you "
+                         "do that you could not do before, and any limit "
+                         "or precondition on it.",
+}
+DEFAULT_FOCUS = EVENT_FOCUS["new_model"]
+
+
 DRAFT_PROMPT = """Write a short release note for a blog about applied
 AI, read by developers, IT/sysadmins and enterprise architects.
 
@@ -595,8 +627,7 @@ Target 150-300 words. Five things, in this order, as flowing prose with
 no headings:
 
 1. One sentence: what shipped, from whom.
-2. What changed versus the previous version — context window, modality,
-   pricing, reasoning settings, licence. Be concrete.
+2. {focus}
 3. Where you can actually run it: API, cloud provider, open weights,
    local runtimes.
 4. What the vendor claims, EXPLICITLY attributed as a vendor claim
@@ -609,8 +640,17 @@ HARD RULES:
   Do not round, do not convert, do not recall a figure from elsewhere.
   A number that is not in the source will be caught and the post
   discarded.
-- If you cannot fill points 2 AND 3 from the source, this was not a
-  release. Return {{"insufficient": true}} and nothing else.
+- Write only what the source supports. Where it is silent — no pricing,
+  no context window, no benchmark — say nothing about that. A short
+  note is correct; a padded one is not.
+- Return {{"insufficient": true}}, and nothing else, ONLY if this source
+  does not describe a release at all: no product is named, or the text
+  says nothing about what it is and nothing about where to get it. A
+  customer story, a research write-up or a partnership announcement is
+  insufficient. A genuine launch that simply does not compare itself to
+  a previous version is NOT insufficient — write it.
+
+THIS ITEM was classified as: {event}.
 
 SOURCE ({publisher}):
 {source}
@@ -628,11 +668,14 @@ def _draft(ctx, row: dict, source_text: str, topics: dict) -> dict | None:
         f'- "{slug}": {info["label"]} — {info["description"]}'
         for slug, info in topics.items()
     )
+    event = str(row.get("eventType") or "")
     data = ctx.llm.json(
         DRAFT_PROMPT.format(
             publisher=row.get("source", ""),
             source=source_text[:8000],
             topics=topic_list,
+            event=event.replace("_", " ") or "model release",
+            focus=EVENT_FOCUS.get(event, DEFAULT_FOCUS),
         ),
         model=llm_module.BLOG_MODEL,
         temperature=0.4,
@@ -648,9 +691,10 @@ def _draft(ctx, row: dict, source_text: str, topics: dict) -> dict | None:
         # 184 times to one Hugging Face repo.
         ctx.queue.drop(row)
         reject(CHANNEL, "no_product_angle", title=row["title"], url=row["url"],
-               detail="the model could not fill what-changed and where-to-run "
-                      "from the source; dropped rather than retried, since the "
-                      "source will not have changed by the next run",
+               detail="the source does not describe a release — nothing named, "
+                      "or nothing about what it is and where to get it; dropped "
+                      "rather than retried, since the source will not have "
+                      "changed by the next run",
                dry_run=ctx.dry_run)
         return None
     if not data.get("title") or not data.get("body"):

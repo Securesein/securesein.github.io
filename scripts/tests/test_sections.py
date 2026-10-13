@@ -261,3 +261,39 @@ def test_every_section_has_a_budget_and_practice_has_none():
     assert set(targets) == set(tax.section_slugs())
     assert budgets["hard_cap_7d"] == 50
     assert "practice" not in targets
+
+
+# --- §8.1 Model Updates: what the draft prompt asks for ---------------
+
+
+def test_every_event_type_has_its_own_focus_in_the_draft_prompt():
+    """The draft's point 2 is per event type, not one question for all.
+
+    It used to ask every item for "what changed versus the previous
+    version" and return insufficient when that could not be answered,
+    which silently rejected thirty real releases in a week — a launch
+    announcement describes what a model does, not how it differs from a
+    predecessor it may not have. An event type missing from the map
+    falls back to the new_model wording, which is survivable but wrong,
+    so the map is asserted to cover the enum rather than assumed to."""
+    assert set(releases.EVENT_FOCUS) == set(classify.EVENT_TYPES)
+    # Only the version-over-version event may demand a comparison.
+    for event, focus in releases.EVENT_FOCUS.items():
+        demands_diff = "versus the version it replaces" in focus
+        assert demands_diff == (event == "version_bump"), event
+
+
+def test_a_launch_without_a_version_comparison_is_not_insufficient():
+    """The insufficiency bar is "this is not a release", not "this
+    release did not compare itself to its predecessor"."""
+    rendered = releases.DRAFT_PROMPT.format(
+        publisher="Mistral", source="...", topics="...",
+        event="new model", focus=releases.EVENT_FOCUS["new_model"],
+    )
+    # Collapsed, because the prompt is wrapped and a sentence that
+    # matters should not stop matching when a line break moves.
+    flat = " ".join(rendered.split())
+    assert "does not compare itself to a previous version is NOT insufficient" in flat
+    assert "do not invent the comparison" in flat
+    # The grounding rule is the one thing that must never soften.
+    assert "must appear verbatim in the source text" in flat
