@@ -117,6 +117,10 @@ class Candidate:
 
     def as_row(self) -> dict:
         return {
+            # Carried so a rejection further down the queue can still
+            # name the feed item it came from — the seen cursor keys on
+            # this, and without it a dropped row cannot be replayed.
+            "itemId": self.item.id,
             "title": self.item.title,
             "url": self.item.url,
             "source": self.item.source.name,
@@ -383,14 +387,18 @@ def build_candidates(ctx, items: list[Item], config: dict) -> tuple[list[Candida
         )
         event = facts.get("eventType", classify_module.NONE)
         if event == classify_module.NONE:
-            reject(CHANNEL, "not_a_release", title=item.title, url=item.url,
+            reject(CHANNEL, "not_a_release",
+                   item_id=item.id,
+                   title=item.title, url=item.url,
                    detail=facts.get("classifier"), dry_run=ctx.dry_run)
             continue
 
         if not facts.get("vendor") or not facts.get("family"):
             hint = facts.get("modelHint") or item.title
             park_unresolved_model(hint, f"releases/{item.source.name}", url=item.url)
-            reject(CHANNEL, "unresolved_vendor", title=item.title, url=item.url,
+            reject(CHANNEL, "unresolved_vendor",
+                   item_id=item.id,
+                   title=item.title, url=item.url,
                    detail=facts, dry_run=ctx.dry_run)
             continue
 
@@ -466,7 +474,9 @@ def run(ctx) -> int:
         # news and falls back to the Radar rather than being published
         # late. Logged with a BUDGET reason, not a quality one — nothing
         # was wrong with it except the week it arrived in.
-        reject(CHANNEL, "queue_expired", title=item.get("title", ""),
+        reject(CHANNEL, "queue_expired",
+               item_id=item.get("itemId",
+               ""), title=item.get("title", ""),
                url=item.get("url", ""), score=item.get("score"),
                detail="expired from the queue before budget freed up",
                dry_run=ctx.dry_run)
@@ -490,7 +500,9 @@ def run(ctx) -> int:
     for candidate in candidates:
         action, coverage = entities.decide(candidate.key, candidate.material_facts)
         if action == "drop":
-            reject(CHANNEL, "entity_covered", title=candidate.item.title,
+            reject(CHANNEL, "entity_covered",
+                   item_id=candidate.item.id,
+                   title=candidate.item.title,
                    url=candidate.item.url,
                    detail=f"{candidate.key} already covered by {coverage.slug}",
                    dry_run=ctx.dry_run)
@@ -508,7 +520,9 @@ def run(ctx) -> int:
 
     for candidate in scored:
         if candidate.score < threshold:
-            reject(CHANNEL, "below_threshold", title=candidate.item.title,
+            reject(CHANNEL, "below_threshold",
+                   item_id=candidate.item.id,
+                   title=candidate.item.title,
                    url=candidate.item.url, score=candidate.score,
                    detail=candidate.reasons, dry_run=ctx.dry_run)
             continue
@@ -574,7 +588,9 @@ def run(ctx) -> int:
             published += 1
         elif attempts >= MAX_PUBLISH_ATTEMPTS:
             queue.drop(row)
-            reject(CHANNEL, "publish_attempts_exhausted", title=row["title"],
+            reject(CHANNEL, "publish_attempts_exhausted",
+                   item_id=row.get("itemId",
+                   ""), title=row["title"],
                    url=row["url"], score=row.get("score"),
                    detail=f"failed to publish {attempts} times; dropped rather "
                           f"than retried every run until the TTL",
@@ -690,7 +706,9 @@ def _draft(ctx, row: dict, source_text: str, topics: dict) -> dict | None:
         # TTL expires it a week later, which is exactly what happened
         # 184 times to one Hugging Face repo.
         ctx.queue.drop(row)
-        reject(CHANNEL, "no_product_angle", title=row["title"], url=row["url"],
+        reject(CHANNEL, "no_product_angle",
+               item_id=row.get("itemId",
+               ""), title=row["title"], url=row["url"],
                detail="the source does not describe a release — nothing named, "
                       "or nothing about what it is and where to get it; dropped "
                       "rather than retried, since the source will not have "
@@ -702,7 +720,9 @@ def _draft(ctx, row: dict, source_text: str, topics: dict) -> dict | None:
 
     valid = [t for t in (data.get("topics") or []) if t in topics][:3]
     if not valid:
-        reject(CHANNEL, "no_valid_topic", title=row["title"], url=row["url"],
+        reject(CHANNEL, "no_valid_topic",
+               item_id=row.get("itemId",
+               ""), title=row["title"], url=row["url"],
                dry_run=ctx.dry_run)
         return None
     return {
@@ -730,7 +750,9 @@ def publish_one(ctx, row: dict, entities: EntityIndex) -> bool:
 
     source_text = fetch_article_text(row["url"], 8000)
     if len(source_text) < 200:
-        reject(CHANNEL, "not_a_release", title=row["title"], url=row["url"],
+        reject(CHANNEL, "not_a_release",
+               item_id=row.get("itemId",
+               ""), title=row["title"], url=row["url"],
                detail="could not fetch enough source text to ground a draft",
                dry_run=ctx.dry_run)
         return False
@@ -753,7 +775,9 @@ def publish_one(ctx, row: dict, entities: EntityIndex) -> bool:
         print(f"    {result.gate}: {'pass' if result.passed else 'FAIL'} — {result.detail}")
         if result.passed:
             continue
-        reject(CHANNEL, GATE_REASONS[result.gate], title=draft["title"],
+        reject(CHANNEL, GATE_REASONS[result.gate],
+               item_id=row.get("itemId",
+               ""), title=draft["title"],
                url=row["url"], score=row.get("score"),
                detail={"gate": result.gate, "why": result.detail,
                        "offending": result.offending, "draft": draft["body"][:2000]},

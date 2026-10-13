@@ -367,3 +367,59 @@ def test_a_corroborating_source_is_never_sent_to_the_classifier():
     assert not calls, f"a corroborating item cost {len(calls)} model call(s)"
     assert not candidates
     assert len(corroborating) == 1, "it must still be available as corroboration"
+
+
+# --- a rejection has to be undoable ----------------------------------
+
+
+def test_a_rejection_records_the_id_the_seen_cursor_keys_on(tmp_path, monkeypatch):
+    """Without it, a gate that turns out to be too strict takes its
+    victims with it.
+
+    That is the October release-draft bug: the prompt demanded a
+    version-over-version comparison, thirty genuine launches were
+    dropped for not having one, and after the fix none could be
+    replayed — their ids were in the seen cursor and the log recorded
+    only a url, while the feeds key on guid. scripts/replay_rejected.py
+    reads this field; the field is what makes it possible at all."""
+    import json
+    from core import state as state_module
+
+    log = tmp_path / "rejected.jsonl"
+    monkeypatch.setattr(state_module, "REJECTED_FILE", log)
+
+    state_module.reject("releases", "not_a_release", item_id="abc123",
+                        title="Introducing Something", url="https://e.xyz/a")
+    # A caller with no id in hand records null, not "", so "no id" and
+    # "not wired up here" stay distinguishable.
+    state_module.reject("releases", "duplicate_title", title="Something")
+
+    rows = [json.loads(l) for l in log.read_text().splitlines() if l.strip()]
+    assert rows[0]["itemId"] == "abc123"
+    assert rows[1]["itemId"] is None
+
+
+def test_the_release_queue_row_carries_the_item_id():
+    """The row outlives the Item, and most release rejections happen
+    after the queue — drafting, the topic check, the gates. So the id
+    has to travel with the row, or those stay unreplayable even with
+    reject() fixed."""
+    from core.feeds import Item, Source
+
+    item = Item(
+        id="guid-not-the-url", title="Introducing Something",
+        url="https://example.test/a", summary="",
+        published="2026-10-13T00:00:00+00:00",
+        source=Source(name="Example", url="https://example.test",
+                      tier="primary"),
+    )
+    row = releases.Candidate(
+        item=item,
+        facts={"eventType": "new_model", "vendor": "openai",
+               "family": "gpt-astra", "version": "6",
+               "openWeights": False, "modality": ["text"]},
+    ).as_row()
+    # The id, not the url — which is the whole point: the feeds key on
+    # guid, so a url is not a substitute for it.
+    assert row["itemId"] == "guid-not-the-url"
+    assert row["itemId"] != row["url"]

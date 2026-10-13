@@ -125,6 +125,7 @@ def reject(
     channel: str,
     reason: str,
     *,
+    item_id: str = "",
     title: str = "",
     url: str = "",
     score: float | None = None,
@@ -133,7 +134,20 @@ def reject(
 ) -> None:
     """One line in state/rejected.jsonl per drop, always. The gates
     write the offending content into `detail` so a rejection can be
-    understood months later without re-fetching the source."""
+    understood months later without re-fetching the source.
+
+    `item_id` is the feed item's id — the same value the seen cursor
+    keys on. Without it a rejection can be read but not undone: when a
+    gate turns out to have been too strict, the items it dropped are
+    unreachable, because their ids are in the cursor and this log only
+    ever recorded a url while the feeds key on guid. That is not
+    hypothetical — the October draft-prompt bug dropped thirty genuine
+    releases, and none of them could be replayed after it was fixed.
+    See scripts/replay_rejected.py, which reads this field.
+
+    Left empty where the caller genuinely has no id (a draft rejected
+    on its own title, for instance). Recorded as null rather than ""
+    so "no id" and "id not wired up here" stay distinguishable."""
     append_jsonl(
         REJECTED_FILE,
         {
@@ -147,6 +161,7 @@ def reject(
                 if reason in EXCLUSION_REASONS
                 else "quality"
             ),
+            "itemId": item_id or None,
             "title": title,
             "url": url,
             "score": score,

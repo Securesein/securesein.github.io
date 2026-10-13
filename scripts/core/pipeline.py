@@ -200,7 +200,9 @@ def run_flow(
         # 1. dedup — cheapest first. A duplicate costs nothing to
         #    detect and everything to publish.
         if is_duplicate(item.title, item.url, archive):
-            reject(channel, "duplicate_url", title=item.title, url=item.url,
+            reject(channel, "duplicate_url",
+                   item_id=item.id,
+                   title=item.title, url=item.url,
                    dry_run=dry_run)
             outcome.duplicates += 1
             continue
@@ -211,7 +213,9 @@ def run_flow(
         #    quality number on something that was never in question.
         fired = excluded(item.title, item.summary, item.source.name, prof)
         if fired:
-            reject(channel, "profile_excluded", title=item.title, url=item.url,
+            reject(channel, "profile_excluded",
+                   item_id=item.id,
+                   title=item.title, url=item.url,
                    detail=fired, dry_run=dry_run)
             outcome.excluded += 1
             continue
@@ -222,7 +226,7 @@ def run_flow(
         if extra_reject:
             reason = extra_reject(item)
             if reason:
-                reject(channel, reason, title=item.title, url=item.url,
+                reject(channel, reason, item_id=item.id, title=item.title, url=item.url,
                        dry_run=dry_run)
                 continue
 
@@ -235,7 +239,9 @@ def run_flow(
             topics=axes["topics"],
         )
         if not candidate.topics:
-            reject(channel, "no_valid_topic", title=item.title, url=item.url,
+            reject(channel, "no_valid_topic",
+                   item_id=item.id,
+                   title=item.title, url=item.url,
                    dry_run=dry_run)
             continue
 
@@ -247,7 +253,9 @@ def run_flow(
         )
         outcome.scores.append(candidate.quality.total)
         if not candidate.quality.passed:
-            reject(channel, "below_quality_gate", title=item.title, url=item.url,
+            reject(channel, "below_quality_gate",
+                   item_id=item.id,
+                   title=item.title, url=item.url,
                    score=candidate.quality.total,
                    detail=candidate.quality.components, dry_run=dry_run)
             outcome.gate_failed += 1
@@ -441,7 +449,9 @@ def publish(
         # everything or fail everything. Neither is a gate.
         print(f"    Skipping — could not read enough source text from {item.url}",
               file=sys.stderr)
-        reject(channel, "below_quality_gate", title=item.title, url=item.url,
+        reject(channel, "below_quality_gate",
+               item_id=item.id,
+               title=item.title, url=item.url,
                detail="source text unavailable; G1 cannot be evaluated",
                dry_run=dry_run)
         return None
