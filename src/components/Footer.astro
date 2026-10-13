@@ -6,7 +6,8 @@ const year = new Date().getFullYear();
 // four deep dives a month should not arrive with forty Scout items.
 const feeds = [
   { label: "Everything", href: "/rss.xml" },
-  ...SECTIONS.map((s) => ({ label: s.label, href: `${s.href}/rss.xml` })),
+  // s.href already ends in a slash, so no separator here.
+  ...SECTIONS.map((s) => ({ label: s.label, href: `${s.href}rss.xml` })),
 ];
 ---
 <footer class="site-footer">

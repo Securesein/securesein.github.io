@@ -4,7 +4,7 @@
   "sections": {
     "release": {
       "label": "Model Updates",
-      "href": "/model-updates",
+      "href": "/model-updates/",
       "plural": "Model Updates",
       "question": "What is new in the model landscape?",
       "blurb": "A model shipped, changed or went away. What actually differs, from the vendor's own words.",
@@ -12,7 +12,7 @@
     },
     "research": {
       "label": "Research",
-      "href": "/research",
+      "href": "/research/",
       "plural": "Research",
       "question": "What have we learned?",
       "blurb": "Mechanism over event: how something works beats the news that it happened.",
@@ -20,7 +20,7 @@
     },
     "benchmark": {
       "label": "Benchmarks",
-      "href": "/benchmarks",
+      "href": "/benchmarks/",
       "plural": "Benchmarks",
       "question": "How good is it actually?",
       "blurb": "What the numbers say, and who measured them.",
@@ -28,7 +28,7 @@
     },
     "security": {
       "label": "Security",
-      "href": "/security",
+      "href": "/security/",
       "plural": "Security",
       "question": "What can go wrong?",
       "blurb": "Prompt injection, agent hijacking, guardrail removal, supply chain — the failure modes of AI systems.",
@@ -36,7 +36,7 @@
     },
     "enterprise": {
       "label": "Enterprise AI",
-      "href": "/enterprise-ai",
+      "href": "/enterprise-ai/",
       "plural": "Enterprise AI",
       "question": "How do we run this in an organisation?",
       "blurb": "Agents on managed devices, shadow AI, and governing both with the tooling an enterprise already runs.",
@@ -45,7 +45,7 @@
     },
     "explainer": {
       "label": "Fundamentals",
-      "href": "/fundamentals",
+      "href": "/fundamentals/",
       "plural": "Fundamentals",
       "question": "How does this work, from first principles?",
       "blurb": "One concept, properly explained. Still useful next year.",

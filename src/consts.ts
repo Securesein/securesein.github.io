@@ -56,7 +56,10 @@ export const SECTIONS = SECTION_ORDER.map((kind) => ({
  */
 export const HERO_BACKGROUND: "topo" | "dots" = "dots";
 
+// Trailing slashes, like the section hrefs in taxonomy.json. The build
+// emits <route>/index.html, and both the canonical tag and the sitemap
+// name the slashed form — so a link without one is a link to a 301.
 export const NAV_LINKS = [
-  { label: "Topics", href: "/topics" },
-  { label: "About", href: "/about" },
+  { label: "Topics", href: "/topics/" },
+  { label: "About", href: "/about/" },
 ];

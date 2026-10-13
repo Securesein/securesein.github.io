@@ -69,7 +69,17 @@ export default defineConfig({
   integrations: [
     sitemap({
       // The two redirect stubs are meta-refresh pages, not content.
-      filter: (page) => !/\/blog\/?$|\/blog\/welcome\/?$/.test(page),
+      //
+      // /search is excluded because it carries <meta name="robots"
+      // content="noindex">. A sitemap is a request to index, so listing
+      // a noindex page asks Google for two opposite things about the
+      // same URL and gets it reported back as an indexing problem —
+      // which is how it turned up in Search Console. Keep this in step
+      // with the `noindex` prop in BaseLayout: a page that sets it does
+      // not belong here. (/404 never reaches this filter; Astro emits
+      // it as 404.html rather than a route.)
+      filter: (page) =>
+        !/\/blog\/?$|\/blog\/welcome\/?$|\/search\/?$/.test(page),
       serialize(item) {
         const slug = item.url.match(/\/blog\/([^/]+)\/?$/)?.[1];
         const stamp = slug && POST_DATES.get(slug);

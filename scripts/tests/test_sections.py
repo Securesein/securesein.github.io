@@ -297,3 +297,25 @@ def test_a_launch_without_a_version_comparison_is_not_insufficient():
     assert "do not invent the comparison" in flat
     # The grounding rule is the one thing that must never soften.
     assert "must appear verbatim in the source text" in flat
+
+
+# --- indexing: one URL form, not two -----------------------------------
+
+
+def test_section_routes_are_declared_with_a_trailing_slash():
+    """The build emits <route>/index.html, and both the canonical tag
+    and the sitemap name the slashed form — so an href without a slash
+    is an internal link to a 301.
+
+    It was not a rounding error: the nav linked six sections and two
+    nav items unslashed, which came to 2048 redirecting links across
+    the built site and showed up in Search Console as pages excluded
+    for redirecting or for pointing their canonical elsewhere.
+
+    Anything composing a longer path onto these (the per-section
+    rss.xml links) must therefore NOT add its own separator."""
+    for slug, info in tax.sections().items():
+        href = info["href"]
+        assert href.startswith("/"), slug
+        assert href.endswith("/"), f'{slug}: "{href}" needs a trailing slash'
+        assert "//" not in href, slug

@@ -8,7 +8,17 @@ import ThemeToggle from "./ThemeToggle.astro";
 
 const { pathname } = Astro.url;
 const links = [...SECTIONS, ...NAV_LINKS];
-const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+// Compared without the trailing slash on either side. The hrefs carry
+// one (they are the canonical URLs), Astro.url.pathname may or may not
+// depending on how the page was reached, and the old `${href}/` prefix
+// test turned into `/topics//` the moment the data gained its slash —
+// which quietly stopped Topics highlighting on a topic page.
+const bare = (p: string) => (p.length > 1 ? p.replace(/\/+$/, "") : p);
+const isActive = (href: string) => {
+  const h = bare(href);
+  const here = bare(pathname);
+  return here === h || here.startsWith(`${h}/`);
+};
 ---
 <header class="site-header">
   <div class="container container--wide header-inner">
