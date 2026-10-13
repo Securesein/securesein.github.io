@@ -2533,6 +2533,29 @@
           "estimated_calls": 0
         }
       }
+    },
+    {
+      "at": "2026-10-13T16:01:20+00:00",
+      "channel": "releases",
+      "calls": 6,
+      "usd": 0.009637,
+      "aborted": false,
+      "by_model": {
+        "gpt-4o-mini": {
+          "calls": 5,
+          "usd": 0.000629,
+          "prompt_tokens": 3216,
+          "completion_tokens": 245,
+          "estimated_calls": 0
+        },
+        "gpt-4o": {
+          "calls": 1,
+          "usd": 0.009007,
+          "prompt_tokens": 2723,
+          "completion_tokens": 220,
+          "estimated_calls": 0
+        }
+      }
     }
   ]
 }

@@ -21,6 +21,11 @@
       "slug": "claude-haiku-5-5-launches-on-aws",
       "coveredAt": "2026-10-07T22:02:28+00:00",
       "facts": []
+    },
+    "google/Gemini/4 Argon/new_model": {
+      "slug": "google-unveils-gemini-4-argon-for-robotics",
+      "coveredAt": "2026-10-13T16:01:20+00:00",
+      "facts": []
     }
   }
 }

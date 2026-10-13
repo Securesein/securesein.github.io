@@ -143,6 +143,14 @@
       "publishedAt": "2026-10-07T22:02:28+00:00",
       "qualityScore": 65.0,
       "relevanceScore": 61.3
+    },
+    {
+      "slug": "google-unveils-gemini-4-argon-for-robotics",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-10-13T16:01:20+00:00",
+      "qualityScore": 50.0,
+      "relevanceScore": 38.2
     }
   ]
 }
