@@ -734,6 +734,36 @@
       "whyRelevant": "HiRO-ACEv2 provides insights into LLM behavior and interpretability, relevant for understanding internal mechanisms and enhancing security and efficiency in model deployment.",
       "seenAt": "2026-10-14T16:01:21+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r12251940b3b4d22",
+      "url": "https://x.ai/news/grok-voice-3",
+      "title": "Introducing Grok Voice 3.0",
+      "source": "xAI — News",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 0.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Grok Voice 3.0 may provide insights into LLM deployment and serving, but its relevance to mechanistic interpretability and internal workings is unclear.",
+      "seenAt": "2026-10-14T22:01:34+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rcbb56a18968ecd4",
+      "url": "https://huggingface.co/microsoft/UserRepGen-4B",
+      "title": "microsoft/UserRepGen-4B",
+      "source": "HF org — Microsoft (Phi)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's open weights and architecture provide insights into LLM internals, aiding research in mechanistic interpretability and efficient reasoning.",
+      "seenAt": "2026-10-14T22:01:36+00:00",
+      "status": "radar"
     }
   ]
 }
