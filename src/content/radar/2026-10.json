@@ -719,6 +719,21 @@
       "seenAt": "2026-10-13T22:01:40+00:00",
       "status": "promoted",
       "promotedTo": "liquid-ai-launches-lfm2-5-24b-a2b-base-model"
+    },
+    {
+      "id": "rd9a7cbedf8c97d5",
+      "url": "https://huggingface.co/allenai/HiRO-ACEv2",
+      "title": "allenai/HiRO-ACEv2",
+      "source": "HF org — Ai2",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "HiRO-ACEv2 provides insights into LLM behavior and interpretability, relevant for understanding internal mechanisms and enhancing security and efficiency in model deployment.",
+      "seenAt": "2026-10-14T16:01:21+00:00",
+      "status": "radar"
     }
   ]
 }
