@@ -669,7 +669,8 @@
       "relevanceScore": 23.1,
       "whyRelevant": "Gemini 4 Argon enhances understanding of LLM capabilities in complex tasks, relevant for exploring mechanistic interpretability and improving inference efficiency in production.",
       "seenAt": "2026-10-13T22:01:35+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "google-releases-gemini-4-argon-for-complex-tasks"
     },
     {
       "id": "r6b09416aadad05f",
@@ -700,7 +701,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "LiquidAI/LFM2.5-24B-A2B offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively.",
       "seenAt": "2026-10-13T22:01:38+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "liquid-ai-releases-lfm2-5-24b-a2b-a-new-reasoning-model"
     },
     {
       "id": "r1ab117ad6244911",

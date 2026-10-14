@@ -40,6 +40,19 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "liquid/LFM/2.5-24B-A2B/new_model": {
+      "slug": "liquid-ai-releases-lfm2-5-24b-a2b-a-new-reasoning-model",
+      "coveredAt": "2026-10-14T04:01:20+00:00",
+      "facts": []
+    },
+    "google/Gemini/4 Argon/availability": {
+      "slug": "google-releases-gemini-4-argon-for-complex-tasks",
+      "coveredAt": "2026-10-14T04:01:25+00:00",
+      "facts": [
+        "ga_date",
+        "pricing"
+      ]
     }
   }
 }
