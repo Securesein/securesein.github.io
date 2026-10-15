@@ -733,7 +733,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "HiRO-ACEv2 provides insights into LLM behavior and interpretability, relevant for understanding internal mechanisms and enhancing security and efficiency in model deployment.",
       "seenAt": "2026-10-14T16:01:21+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "introducing-hiro-acev2-high-resolution-climate-simulation"
     },
     {
       "id": "r12251940b3b4d22",

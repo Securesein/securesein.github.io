@@ -53,6 +53,13 @@
         "ga_date",
         "pricing"
       ]
+    },
+    "ai2/HiRO-ACE/v2/new_model": {
+      "slug": "introducing-hiro-acev2-high-resolution-climate-simulation",
+      "coveredAt": "2026-10-15T10:01:24+00:00",
+      "facts": [
+        "open_weights"
+      ]
     }
   }
 }
