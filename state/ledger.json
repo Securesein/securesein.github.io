@@ -183,6 +183,14 @@
       "publishedAt": "2026-10-14T04:01:25+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 23.1
+    },
+    {
+      "slug": "new-leaders-emerge-in-ai-benchmarking",
+      "section": "benchmark",
+      "channel": "benchmarks",
+      "publishedAt": "2026-10-15T04:00:57+00:00",
+      "qualityScore": 100.0,
+      "relevanceScore": 100.0
     }
   ]
 }

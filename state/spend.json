@@ -2650,6 +2650,22 @@
           "estimated_calls": 0
         }
       }
+    },
+    {
+      "at": "2026-10-15T04:00:57+00:00",
+      "channel": "benchmarks",
+      "calls": 1,
+      "usd": 0.00517,
+      "aborted": false,
+      "by_model": {
+        "gpt-4o": {
+          "calls": 1,
+          "usd": 0.00517,
+          "prompt_tokens": 828,
+          "completion_tokens": 310,
+          "estimated_calls": 0
+        }
+      }
     }
   ]
 }
