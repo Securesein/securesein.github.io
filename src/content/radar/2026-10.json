@@ -765,6 +765,141 @@
       "whyRelevant": "This model's open weights and architecture provide insights into LLM internals, aiding research in mechanistic interpretability and efficient reasoning.",
       "seenAt": "2026-10-14T22:01:36+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r51edf4c643816e6",
+      "url": "https://mistral.ai/news/timestral/",
+      "title": "Introducing Timestral",
+      "source": "Mistral — News",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Timestral's focus on LLMs may provide insights into their internal mechanisms and deployment strategies, relevant for understanding security and inference efficiency.",
+      "seenAt": "2026-10-15T16:01:41+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r46bb49725c3848e",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr",
+      "title": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's architecture and training details may provide insights into LLM interpretability and efficiency, relevant for understanding internal mechanisms and deployment.",
+      "seenAt": "2026-10-15T16:01:42+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r279a5fffa8f43c2",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
+      "title": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's architecture and open-weight design provide insights into LLM internals and facilitate local inference, relevant for security and efficiency in deployment.",
+      "seenAt": "2026-10-15T16:01:44+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r37999c23555d9c7",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "title": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's architecture and open-weight design provide insights into LLM internals, aiding research in mechanistic interpretability and efficient reasoning.",
+      "seenAt": "2026-10-15T16:01:46+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r1da36500fbdda4e",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
+      "title": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's architecture and performance metrics can provide insights into LLM internals and inform security and efficiency considerations for deployment.",
+      "seenAt": "2026-10-15T16:01:47+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rcd15a73f855c316",
+      "url": "https://huggingface.co/mistralai/Timestral-123M",
+      "title": "mistralai/Timestral-123M",
+      "source": "HF org — Mistral",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Timestral-123M offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
+      "seenAt": "2026-10-15T16:01:49+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r0afd844c30d61b8",
+      "url": "https://huggingface.co/mistralai/Timestral-28M",
+      "title": "mistralai/Timestral-28M",
+      "source": "HF org — Mistral",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Timestral-28M offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
+      "seenAt": "2026-10-15T16:01:51+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r88d6ca864eb028a",
+      "url": "https://huggingface.co/mistralai/Timestral-5M",
+      "title": "mistralai/Timestral-5M",
+      "source": "HF org — Mistral",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Timestral-5M offers open-weight models that can enhance understanding of LLM internals and improve reasoning efficiency in production deployments.",
+      "seenAt": "2026-10-15T16:01:52+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r11c18defa6ebdbd",
+      "url": "https://huggingface.co/mistralai/Timestral-209M",
+      "title": "mistralai/Timestral-209M",
+      "source": "HF org — Mistral",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Timestral-209M offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
+      "seenAt": "2026-10-15T16:01:54+00:00",
+      "status": "radar"
     }
   ]
 }
