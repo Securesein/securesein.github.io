@@ -900,6 +900,128 @@
       "whyRelevant": "Timestral-209M offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
       "seenAt": "2026-10-15T16:01:54+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rdabc6eddb37cd48",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#gpt-live-11-and-new-voices-in-chatgpt",
+      "title": "GPT-Live-1.1 and new voices in ChatGPT",
+      "source": "OpenAI — Release notes",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release may provide insights into LLM architecture and deployment, relevant for understanding model behavior and enhancing security in production environments.",
+      "seenAt": "2026-10-15T22:01:36+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r297d4b97d0f2c36",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/muse-spark-open-on-sagemaker-jumpstart/",
+      "title": "Muse Spark Open model now available on Amazon SageMaker JumpStart",
+      "source": "AWS — What's New",
+      "section": "release",
+      "topics": [
+        "llms",
+        "multimodal",
+        "agents"
+      ],
+      "qualityScore": 85.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "The Muse Spark Open model's availability on SageMaker facilitates local inference and deployment, relevant for exploring LLM mechanisms and security in production.",
+      "seenAt": "2026-10-15T22:01:38+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re8159203373e5c9",
+      "url": "https://huggingface.co/nvidia/Nemotron-3.5-Rerank-8B-BF16",
+      "title": "nvidia/Nemotron-3.5-Rerank-8B-BF16",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's open-weight architecture allows for exploration of LLM internals and enhances understanding of reasoning efficiency and security in production environments.",
+      "seenAt": "2026-10-15T22:01:39+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r2f562cf1060541d",
+      "url": "https://huggingface.co/nvidia/ARDY-SOMA-RP-30FPS-KimodoRep-Horizon60",
+      "title": "nvidia/ARDY-SOMA-RP-30FPS-KimodoRep-Horizon60",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model may provide insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively.",
+      "seenAt": "2026-10-15T22:01:40+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8c6e11e1a256450",
+      "url": "https://huggingface.co/nvidia/Kimodo-SOMA-RP-ArdyRep-v1.2",
+      "title": "nvidia/Kimodo-SOMA-RP-ArdyRep-v1.2",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's open-weight architecture allows for local inference, facilitating exploration of LLM interpretability and security in production environments.",
+      "seenAt": "2026-10-15T22:01:42+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8dafc281176c76b",
+      "url": "https://huggingface.co/nvidia/Kimodo-SOMA-RP-v1.2",
+      "title": "nvidia/Kimodo-SOMA-RP-v1.2",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production environments.",
+      "seenAt": "2026-10-15T22:01:43+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r54df6b644c636a9",
+      "url": "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-FP4-Local",
+      "title": "nvidia/Qwen3.8-Flash-Next-FP4-Local",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into local inference capabilities of LLMs, relevant for understanding model deployment and security in production environments.",
+      "seenAt": "2026-10-15T22:01:45+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ra497e469d565ccb",
+      "url": "https://huggingface.co/ibm-granite/granite-switch-4.1-30b",
+      "title": "ibm-granite/granite-switch-4.1-30b",
+      "source": "HF org — IBM Granite",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing model security in production environments.",
+      "seenAt": "2026-10-15T22:01:46+00:00",
+      "status": "radar"
     }
   ]
 }
