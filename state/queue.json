@@ -668,6 +668,73 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-16T10:01:30+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/Hy-Memory-30B-A3B",
+      "title": "tencent/Hy-Memory-30B-A3B",
+      "url": "https://huggingface.co/tencent/Hy-Memory-30B-A3B",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/Hy-Memory/30B-A3B/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "Hy-Memory",
+      "version": "30B-A3B",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's architecture and training methods provide insights into LLM interpretability and efficiency, relevant for understanding internal workings and deployment challenges.",
+      "candidateId": "r6ff2bab368073e9",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-16T10:01:33+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Muse-Spark-Open-816B-A42B-DFlash2",
+      "title": "nvidia/Muse-Spark-Open-816B-A42B-DFlash2",
+      "url": "https://huggingface.co/nvidia/Muse-Spark-Open-816B-A42B-DFlash2",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Muse-Spark/816B-A42B-DFlash2/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Muse-Spark",
+      "version": "816B-A42B-DFlash2",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's open-weight architecture allows for local inference and exploration of LLM mechanisms, relevant for understanding internal workings and enhancing security.",
+      "candidateId": "r0ec142a833912e4",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }
