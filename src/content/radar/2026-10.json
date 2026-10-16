@@ -1067,6 +1067,52 @@
       "whyRelevant": "This model provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
       "seenAt": "2026-10-16T16:01:27+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r13418df8cd6440b",
+      "url": "https://developers.openai.com/api/docs/guides/custom-voices",
+      "title": "Prompt-to-voice and nine new GPT-Live voices",
+      "source": "OpenAI — Release notes",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 35.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release showcases advancements in LLMs' voice capabilities, which may indirectly inform understanding of their internal mechanisms and deployment in production.",
+      "seenAt": "2026-10-16T22:01:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rf8453ed396d3a96",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
+      "title": "Beam model by Reflection is now available on Amazon SageMaker JumpStart and AWS Trainium",
+      "source": "AWS — What's New",
+      "section": "release",
+      "topics": [
+        "reasoning",
+        "agents"
+      ],
+      "qualityScore": 65.0,
+      "relevanceScore": 54.6,
+      "whyRelevant": "The Beam model's availability on AWS facilitates practical experimentation with LLMs, enhancing understanding of their internal mechanisms and deployment in production.",
+      "seenAt": "2026-10-16T22:01:29+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6e4c26291917ee6",
+      "url": "https://huggingface.co/nvidia/GLM-5.3-Flash-FP4-Local",
+      "title": "nvidia/GLM-5.3-Flash-FP4-Local",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model offers open weights for local inference, relevant for exploring LLM mechanisms and enhancing security and efficiency in deployment.",
+      "seenAt": "2026-10-16T22:01:31+00:00",
+      "status": "radar"
     }
   ]
 }
