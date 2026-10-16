@@ -735,6 +735,39 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-16T16:01:27+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/Qwen3-8B-DSpine-b16",
+      "title": "tencent/Qwen3-8B-DSpine-b16",
+      "url": "https://huggingface.co/tencent/Qwen3-8B-DSpine-b16",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/Qwen3/8B-DSpine-b16/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "Qwen3",
+      "version": "8B-DSpine-b16",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "candidateId": "r06931f8a174e768",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }

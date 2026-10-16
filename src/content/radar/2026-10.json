@@ -1052,6 +1052,21 @@
       "whyRelevant": "This model's open-weight architecture allows for local inference and exploration of LLM mechanisms, relevant for understanding internal workings and enhancing security.",
       "seenAt": "2026-10-16T10:01:33+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r06931f8a174e768",
+      "url": "https://huggingface.co/tencent/Qwen3-8B-DSpine-b16",
+      "title": "tencent/Qwen3-8B-DSpine-b16",
+      "source": "HF org — Tencent (Hunyuan)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "seenAt": "2026-10-16T16:01:27+00:00",
+      "status": "radar"
     }
   ]
 }
