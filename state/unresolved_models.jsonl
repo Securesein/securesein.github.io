@@ -808,3 +808,39 @@
 {"at": "2026-10-15T04:00:52+00:00", "name": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4", "source": "hf_leaderboard", "benchmark": "hle", "organization": "nvidia", "seenAt": "2026-10-15"}
 {"at": "2026-10-15T04:00:52+00:00", "name": "Dhanishtha-2.0-0126", "source": "hf_leaderboard", "benchmark": "hle", "organization": "HelpingAI", "seenAt": "2026-10-15"}
 {"at": "2026-10-15T04:00:52+00:00", "name": "A.X-K1", "source": "hf_leaderboard", "benchmark": "hle", "organization": "skt", "seenAt": "2026-10-15"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Muse-Spark-Open-816B-A42B_xhigh", "source": "epoch", "benchmark": "gpqa-diamond", "organization": "Meta AI", "seenAt": "2026-10-15"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "gemini-4-argon_high", "source": "epoch", "benchmark": "gpqa-diamond", "organization": "Google DeepMind", "seenAt": "2026-10-13"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "mistral-large-4-0_high", "source": "epoch", "benchmark": "gpqa-diamond", "organization": "Mistral AI", "seenAt": "2026-10-12"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "muse-wonder-1.0_max", "source": "epoch", "benchmark": "frontiermath", "organization": "Meta AI", "seenAt": "2026-10-12"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Darwin-180B-RSI", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "FINAL-Bench", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Darwin-397B-ZTC", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "FINAL-Bench", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Darwin-398B-JGOS", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "FINAL-Bench", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Darwin-28B-REASON", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "FINAL-Bench", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Darwin-36B-Opus", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "FINAL-Bench", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Darwin-60B-DUO", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "FINAL-Bench", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Ring-2.6-1T", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "inclusionAI", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Darwin-27B-Opus", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "FINAL-Bench", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Ourbox-35B-JGOS", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "FINAL-Bench", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Darwin-31B-Opus", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "FINAL-Bench", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Darwin-4B-David", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "FINAL-Bench", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Darwin-9B-NEG", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "FINAL-Bench", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "JGOS-31B-Citizen", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "JGOS-Model", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "NVIDIA-Nemotron-3-Super-120B-A12B-BF16", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "nvidia", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "nvidia", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "A.X-K1", "source": "hf_leaderboard", "benchmark": "gpqa-diamond", "organization": "skt", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Macaron-V1-Venti", "source": "hf_leaderboard", "benchmark": "swe-bench-verified", "organization": "mindlab-research", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Laguna-M.1", "source": "hf_leaderboard", "benchmark": "swe-bench-verified", "organization": "poolside", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Ring-2.6-1T", "source": "hf_leaderboard", "benchmark": "swe-bench-verified", "organization": "inclusionAI", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Ling-2.6-1T", "source": "hf_leaderboard", "benchmark": "swe-bench-verified", "organization": "inclusionAI", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Laguna-XS-2.1", "source": "hf_leaderboard", "benchmark": "swe-bench-verified", "organization": "poolside", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Laguna-XS.2", "source": "hf_leaderboard", "benchmark": "swe-bench-verified", "organization": "poolside", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "North-Mini-Code-1.0", "source": "hf_leaderboard", "benchmark": "swe-bench-verified", "organization": "CohereLabs", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Ling-2.6-flash", "source": "hf_leaderboard", "benchmark": "swe-bench-verified", "organization": "inclusionAI", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "NVIDIA-Nemotron-3-Super-120B-A12B-BF16", "source": "hf_leaderboard", "benchmark": "swe-bench-verified", "organization": "nvidia", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4", "source": "hf_leaderboard", "benchmark": "swe-bench-verified", "organization": "nvidia", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Agents-A1", "source": "hf_leaderboard", "benchmark": "hle", "organization": "InternScience", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "NVIDIA-Nemotron-3-Super-120B-A12B-BF16", "source": "hf_leaderboard", "benchmark": "hle", "organization": "nvidia", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Ling-3.0-flash", "source": "hf_leaderboard", "benchmark": "hle", "organization": "inclusionAI", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4", "source": "hf_leaderboard", "benchmark": "hle", "organization": "nvidia", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "Dhanishtha-2.0-0126", "source": "hf_leaderboard", "benchmark": "hle", "organization": "HelpingAI", "seenAt": "2026-10-16"}
+{"at": "2026-10-16T04:01:51+00:00", "name": "A.X-K1", "source": "hf_leaderboard", "benchmark": "hle", "organization": "skt", "seenAt": "2026-10-16"}
