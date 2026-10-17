@@ -914,6 +914,39 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-17T10:01:18+00:00",
+      "score": 6.0,
+      "itemId": "hf:deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "source": "HF org — DeepSeek",
+      "tier": "primary",
+      "entity": "deepseek/DeepSeek/4.1/version_bump",
+      "eventType": "version_bump",
+      "vendor": "deepseek",
+      "family": "DeepSeek",
+      "version": "4.1",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_version_bump_major +3"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "DeepSeek-V4.1-Flash-1017 provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and optimizing inference efficiency.",
+      "candidateId": "rd782314f25c8faf",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }

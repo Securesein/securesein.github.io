@@ -1128,6 +1128,21 @@
       "whyRelevant": "This model provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
       "seenAt": "2026-10-17T04:01:52+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rd782314f25c8faf",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "source": "HF org — DeepSeek",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "DeepSeek-V4.1-Flash-1017 provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and optimizing inference efficiency.",
+      "seenAt": "2026-10-17T10:01:18+00:00",
+      "status": "radar"
     }
   ]
 }
