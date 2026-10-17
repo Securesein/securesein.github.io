@@ -877,6 +877,43 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-17T04:01:52+00:00",
+      "score": 9.0,
+      "itemId": "hf:nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
+      "title": "nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Nemotron/1.0/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Nemotron",
+      "version": "1.0",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1",
+        "corroborated_48h +1"
+      ],
+      "corroborators": [
+        "HF org — NVIDIA (Nemotron): nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-NVFP4"
+      ],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
+      "candidateId": "re469ff082907e58",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }
