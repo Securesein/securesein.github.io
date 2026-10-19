@@ -1158,6 +1158,23 @@
       "whyRelevant": "The updates to GPT-6 Pro may enhance understanding of LLM internals and improve inference efficiency, relevant for mechanistic interpretability and model deployment.",
       "seenAt": "2026-10-19T16:01:26+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r8af7eccb0c0fbec",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-bedrock-grok-4-7-govcloud/",
+      "title": "Grok 4.7 is now available on Amazon Bedrock in AWS GovCloud (US)",
+      "source": "AWS — What's New",
+      "section": "release",
+      "topics": [
+        "reasoning",
+        "agents",
+        "inference"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Grok 4.7's release in AWS GovCloud may enhance local inference and reasoning capabilities for LLMs, relevant for security and deployment in sensitive environments.",
+      "seenAt": "2026-10-19T22:01:21+00:00",
+      "status": "radar"
     }
   ]
 }

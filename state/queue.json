@@ -981,6 +981,43 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-19T22:01:21+00:00",
+      "score": 6.0,
+      "itemId": "ec3912cd048a09be47d4f3a92ed0f45245f27882",
+      "title": "Grok 4.7 is now available on Amazon Bedrock in AWS GovCloud (US)",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-bedrock-grok-4-7-govcloud/",
+      "source": "AWS — What's New",
+      "tier": "primary",
+      "entity": "amazon/Grok/4.7/version_bump",
+      "eventType": "version_bump",
+      "vendor": "amazon",
+      "family": "Grok",
+      "version": "4.7",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_version_bump_major +3"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "pricing"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 60.0,
+      "whyRelevant": "Grok 4.7's release in AWS GovCloud may enhance local inference and reasoning capabilities for LLMs, relevant for security and deployment in sensitive environments.",
+      "candidateId": "r8af7eccb0c0fbec",
+      "topics": [
+        "reasoning",
+        "agents",
+        "inference"
+      ]
     }
   ]
 }
