@@ -1143,6 +1143,21 @@
       "whyRelevant": "DeepSeek-V4.1-Flash-1017 provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and optimizing inference efficiency.",
       "seenAt": "2026-10-17T10:01:18+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r2b26b348018e2cc",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#updates-to-gpt-6-pro-model-in-chatgpt",
+      "title": "Updates to GPT-6 Pro in ChatGPT",
+      "source": "OpenAI — Release notes",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "The updates to GPT-6 Pro may enhance understanding of LLM internals and improve inference efficiency, relevant for mechanistic interpretability and model deployment.",
+      "seenAt": "2026-10-19T16:01:26+00:00",
+      "status": "radar"
     }
   ]
 }

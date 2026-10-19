@@ -947,6 +947,40 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-19T16:01:26+00:00",
+      "score": 7.0,
+      "itemId": "16bed727dd1e0a27",
+      "title": "Updates to GPT-6 Pro in ChatGPT",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#updates-to-gpt-6-pro-model-in-chatgpt",
+      "source": "OpenAI — Release notes",
+      "tier": "primary",
+      "entity": "openai/GPT-6 Pro/latest/version_bump",
+      "eventType": "version_bump",
+      "vendor": "openai",
+      "family": "GPT-6 Pro",
+      "version": "latest",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_version_bump_major +3",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "The updates to GPT-6 Pro may enhance understanding of LLM internals and improve inference efficiency, relevant for mechanistic interpretability and model deployment.",
+      "candidateId": "r2b26b348018e2cc",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }
