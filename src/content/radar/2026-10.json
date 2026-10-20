@@ -1175,6 +1175,81 @@
       "whyRelevant": "Grok 4.7's release in AWS GovCloud may enhance local inference and reasoning capabilities for LLMs, relevant for security and deployment in sensitive environments.",
       "seenAt": "2026-10-19T22:01:21+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r82d8dba53ce9ad3",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-15-2026-5",
+      "title": "We've added capabilities.thinking.types.between_tools to the Models API . GET /v1/models and GET /v1/models/{model_id} now report whether each model accepts thinking: {type: \"betwe",
+      "source": "Anthropic — Claude docs release notes",
+      "section": "release",
+      "topics": [
+        "reasoning"
+      ],
+      "qualityScore": 55.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This update enhances understanding of model reasoning capabilities, relevant for exploring LLM interpretability and improving inference efficiency in production environments.",
+      "seenAt": "2026-10-20T04:01:20+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re142eac9c243095",
+      "url": "https://huggingface.co/nvidia/cdf-sim2real-smt-solderlight",
+      "title": "nvidia/cdf-sim2real-smt-solderlight",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into model deployment and serving, relevant for understanding practical applications of LLMs in production environments.",
+      "seenAt": "2026-10-20T04:01:22+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r10d20ee8964f2ad",
+      "url": "https://huggingface.co/nvidia/Cosmos-AnomalyGen-Glass-Nano",
+      "title": "nvidia/Cosmos-AnomalyGen-Glass-Nano",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into model behavior and anomaly detection, relevant for understanding LLM security and interpretability in production environments.",
+      "seenAt": "2026-10-20T04:01:24+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9c3ad40559e1a6a",
+      "url": "https://huggingface.co/nvidia/Cosmos-AnomalyGen-Metal-Nano",
+      "title": "nvidia/Cosmos-AnomalyGen-Metal-Nano",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into model behavior and anomaly detection, relevant for understanding LLM security and interpretability in production environments.",
+      "seenAt": "2026-10-20T04:01:26+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6fa550d3a944019",
+      "url": "https://huggingface.co/nvidia/Cosmos-AnomalyGen-PCB-Nano",
+      "title": "nvidia/Cosmos-AnomalyGen-PCB-Nano",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into model behavior and anomaly detection, relevant for understanding LLM security and interpretability in production environments.",
+      "seenAt": "2026-10-20T04:01:27+00:00",
+      "status": "radar"
     }
   ]
 }

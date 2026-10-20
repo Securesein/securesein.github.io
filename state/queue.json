@@ -1018,6 +1018,176 @@
         "agents",
         "inference"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-20T04:01:20+00:00",
+      "score": 6.0,
+      "itemId": "d2a34834fa065740",
+      "title": "We've added capabilities.thinking.types.between_tools to the Models API . GET /v1/models and GET /v1/models/{model_id} now report whether each model accepts thinking: {type: \"betwe",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-15-2026-5",
+      "source": "Anthropic — Claude docs release notes",
+      "tier": "primary",
+      "entity": "anthropic/Claude/unknown/capability_update",
+      "eventType": "capability_update",
+      "vendor": "anthropic",
+      "family": "Claude",
+      "version": "unknown",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_capability_update +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 55.0,
+      "relevanceScore": 42.7,
+      "whyRelevant": "This update enhances understanding of model reasoning capabilities, relevant for exploring LLM interpretability and improving inference efficiency in production environments.",
+      "candidateId": "r82d8dba53ce9ad3",
+      "topics": [
+        "reasoning"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-20T04:01:22+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/cdf-sim2real-smt-solderlight",
+      "title": "nvidia/cdf-sim2real-smt-solderlight",
+      "url": "https://huggingface.co/nvidia/cdf-sim2real-smt-solderlight",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/cdf-sim2real-smt-solderlight/-/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "cdf-sim2real-smt-solderlight",
+      "version": "",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into model deployment and serving, relevant for understanding practical applications of LLMs in production environments.",
+      "candidateId": "re142eac9c243095",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-20T04:01:24+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Cosmos-AnomalyGen-Glass-Nano",
+      "title": "nvidia/Cosmos-AnomalyGen-Glass-Nano",
+      "url": "https://huggingface.co/nvidia/Cosmos-AnomalyGen-Glass-Nano",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Cosmos-AnomalyGen/-/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Cosmos-AnomalyGen",
+      "version": "",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into model behavior and anomaly detection, relevant for understanding LLM security and interpretability in production environments.",
+      "candidateId": "r10d20ee8964f2ad",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-20T04:01:26+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Cosmos-AnomalyGen-Metal-Nano",
+      "title": "nvidia/Cosmos-AnomalyGen-Metal-Nano",
+      "url": "https://huggingface.co/nvidia/Cosmos-AnomalyGen-Metal-Nano",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Cosmos-AnomalyGen/Metal-Nano/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Cosmos-AnomalyGen",
+      "version": "Metal-Nano",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into model behavior and anomaly detection, relevant for understanding LLM security and interpretability in production environments.",
+      "candidateId": "r9c3ad40559e1a6a",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-20T04:01:27+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Cosmos-AnomalyGen-PCB-Nano",
+      "title": "nvidia/Cosmos-AnomalyGen-PCB-Nano",
+      "url": "https://huggingface.co/nvidia/Cosmos-AnomalyGen-PCB-Nano",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Cosmos-AnomalyGen/PCB-Nano/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Cosmos-AnomalyGen",
+      "version": "PCB-Nano",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into model behavior and anomaly detection, relevant for understanding LLM security and interpretability in production environments.",
+      "candidateId": "r6fa550d3a944019",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }
