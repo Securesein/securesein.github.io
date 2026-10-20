@@ -67,6 +67,20 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "mistral/Timestral/28M/new_model": {
+      "slug": "mistralai-launches-timestral-28m-for-zero-shot-time-series-forecasting",
+      "coveredAt": "2026-10-20T22:01:51+00:00",
+      "facts": [
+        "open_weights"
+      ]
+    },
+    "mistral/Timestral/5M/new_model": {
+      "slug": "mistralai-launches-timestral-5m-for-zero-shot-forecasting",
+      "coveredAt": "2026-10-20T22:01:56+00:00",
+      "facts": [
+        "open_weights"
+      ]
     }
   }
 }

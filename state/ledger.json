@@ -207,6 +207,22 @@
       "publishedAt": "2026-10-20T16:01:31+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 21.2
+    },
+    {
+      "slug": "mistralai-launches-timestral-28m-for-zero-shot-time-series-forecasting",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-10-20T22:01:51+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
+    },
+    {
+      "slug": "mistralai-launches-timestral-5m-for-zero-shot-forecasting",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-10-20T22:01:56+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
     }
   ]
 }

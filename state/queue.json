@@ -242,80 +242,6 @@
     },
     {
       "channel": "releases",
-      "queuedAt": "2026-10-15T16:01:51+00:00",
-      "score": 10.0,
-      "itemId": "hf:mistralai/Timestral-28M",
-      "title": "mistralai/Timestral-28M",
-      "url": "https://huggingface.co/mistralai/Timestral-28M",
-      "source": "HF org — Mistral",
-      "tier": "primary",
-      "entity": "mistral/Timestral/28M/new_model",
-      "eventType": "new_model",
-      "vendor": "mistral",
-      "family": "Timestral",
-      "version": "28M",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "Timestral-28M offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
-      "candidateId": "r0afd844c30d61b8",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-15T16:01:52+00:00",
-      "score": 10.0,
-      "itemId": "hf:mistralai/Timestral-5M",
-      "title": "mistralai/Timestral-5M",
-      "url": "https://huggingface.co/mistralai/Timestral-5M",
-      "source": "HF org — Mistral",
-      "tier": "primary",
-      "entity": "mistral/Timestral/5M/new_model",
-      "eventType": "new_model",
-      "vendor": "mistral",
-      "family": "Timestral",
-      "version": "5M",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "Timestral-5M offers open-weight models that can enhance understanding of LLM internals and improve reasoning efficiency in production deployments.",
-      "candidateId": "r88d6ca864eb028a",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-15T16:01:54+00:00",
       "score": 10.0,
       "itemId": "hf:mistralai/Timestral-209M",
@@ -1148,6 +1074,148 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This item may provide insights into model behavior and anomaly detection, relevant for understanding LLM security and interpretability in production environments.",
       "candidateId": "r6fa550d3a944019",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-20T22:01:41+00:00",
+      "score": 10.0,
+      "itemId": "hf:microsoft/Sentiment-Analysis-7B",
+      "title": "microsoft/Sentiment-Analysis-7B",
+      "url": "https://huggingface.co/microsoft/Sentiment-Analysis-7B",
+      "source": "HF org — Microsoft (Phi)",
+      "tier": "primary",
+      "entity": "microsoft/Sentiment-Analysis/7B/new_model",
+      "eventType": "new_model",
+      "vendor": "microsoft",
+      "family": "Sentiment-Analysis",
+      "version": "7B",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into sentiment analysis, which can enhance understanding of LLM behavior and improve reasoning efficiency in practical applications.",
+      "candidateId": "re7b11e5af76afd9",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-20T22:01:43+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Cosmos3-H-Embodied-Nano",
+      "title": "nvidia/Cosmos3-H-Embodied-Nano",
+      "url": "https://huggingface.co/nvidia/Cosmos3-H-Embodied-Nano",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Cosmos3/H-Embodied-Nano/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Cosmos3",
+      "version": "H-Embodied-Nano",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model may provide insights into LLM architecture and deployment strategies, relevant for understanding mechanistic interpretability and production serving.",
+      "candidateId": "rd199488c47c9a20",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-20T22:01:45+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Cosmos3-H-Dreams",
+      "title": "nvidia/Cosmos3-H-Dreams",
+      "url": "https://huggingface.co/nvidia/Cosmos3-H-Dreams",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Cosmos3/H-Dreams/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Cosmos3",
+      "version": "H-Dreams",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release may provide insights into LLM architecture and deployment strategies relevant to mechanistic interpretability and production serving.",
+      "candidateId": "r510b6c680d28737",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-20T22:01:47+00:00",
+      "score": 10.0,
+      "itemId": "hf:nvidia/RFD4-Proteina-Diffusers",
+      "title": "nvidia/RFD4-Proteina-Diffusers",
+      "url": "https://huggingface.co/nvidia/RFD4-Proteina-Diffusers",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/RFD4/1.0/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "RFD4",
+      "version": "1.0",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item provides insights into model deployment and security, relevant for understanding LLMs' internal workings and enhancing inference efficiency.",
+      "candidateId": "r51ba21fefe6290e",
       "topics": [
         "llms"
       ]

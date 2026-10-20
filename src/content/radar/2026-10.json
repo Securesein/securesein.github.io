@@ -870,7 +870,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "Timestral-28M offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
       "seenAt": "2026-10-15T16:01:51+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "mistralai-launches-timestral-28m-for-zero-shot-time-series-forecasting"
     },
     {
       "id": "r88d6ca864eb028a",
@@ -885,7 +886,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "Timestral-5M offers open-weight models that can enhance understanding of LLM internals and improve reasoning efficiency in production deployments.",
       "seenAt": "2026-10-15T16:01:52+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "mistralai-launches-timestral-5m-for-zero-shot-forecasting"
     },
     {
       "id": "r11c18defa6ebdbd",
@@ -1250,6 +1252,66 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This item may provide insights into model behavior and anomaly detection, relevant for understanding LLM security and interpretability in production environments.",
       "seenAt": "2026-10-20T04:01:27+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re7b11e5af76afd9",
+      "url": "https://huggingface.co/microsoft/Sentiment-Analysis-7B",
+      "title": "microsoft/Sentiment-Analysis-7B",
+      "source": "HF org — Microsoft (Phi)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into sentiment analysis, which can enhance understanding of LLM behavior and improve reasoning efficiency in practical applications.",
+      "seenAt": "2026-10-20T22:01:41+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rd199488c47c9a20",
+      "url": "https://huggingface.co/nvidia/Cosmos3-H-Embodied-Nano",
+      "title": "nvidia/Cosmos3-H-Embodied-Nano",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model may provide insights into LLM architecture and deployment strategies, relevant for understanding mechanistic interpretability and production serving.",
+      "seenAt": "2026-10-20T22:01:43+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r510b6c680d28737",
+      "url": "https://huggingface.co/nvidia/Cosmos3-H-Dreams",
+      "title": "nvidia/Cosmos3-H-Dreams",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release may provide insights into LLM architecture and deployment strategies relevant to mechanistic interpretability and production serving.",
+      "seenAt": "2026-10-20T22:01:45+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r51ba21fefe6290e",
+      "url": "https://huggingface.co/nvidia/RFD4-Proteina-Diffusers",
+      "title": "nvidia/RFD4-Proteina-Diffusers",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item provides insights into model deployment and security, relevant for understanding LLMs' internal workings and enhancing inference efficiency.",
+      "seenAt": "2026-10-20T22:01:47+00:00",
       "status": "radar"
     }
   ]
