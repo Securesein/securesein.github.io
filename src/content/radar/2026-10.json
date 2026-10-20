@@ -854,7 +854,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "Timestral-123M offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
       "seenAt": "2026-10-15T16:01:49+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "mistral-releases-timestral-123m-for-advanced-time-series-forecasting"
     },
     {
       "id": "r0afd844c30d61b8",

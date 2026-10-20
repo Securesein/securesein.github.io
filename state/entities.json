@@ -60,6 +60,13 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "mistral/Timestral/123M/new_model": {
+      "slug": "mistral-releases-timestral-123m-for-advanced-time-series-forecasting",
+      "coveredAt": "2026-10-20T16:01:31+00:00",
+      "facts": [
+        "open_weights"
+      ]
     }
   }
 }

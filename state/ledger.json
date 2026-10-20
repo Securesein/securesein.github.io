@@ -199,6 +199,14 @@
       "publishedAt": "2026-10-15T10:01:24+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 21.2
+    },
+    {
+      "slug": "mistral-releases-timestral-123m-for-advanced-time-series-forecasting",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-10-20T16:01:31+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
     }
   ]
 }

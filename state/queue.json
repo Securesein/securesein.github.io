@@ -242,43 +242,6 @@
     },
     {
       "channel": "releases",
-      "queuedAt": "2026-10-15T16:01:49+00:00",
-      "score": 10.0,
-      "itemId": "hf:mistralai/Timestral-123M",
-      "title": "mistralai/Timestral-123M",
-      "url": "https://huggingface.co/mistralai/Timestral-123M",
-      "source": "HF org — Mistral",
-      "tier": "primary",
-      "entity": "mistral/Timestral/123M/new_model",
-      "eventType": "new_model",
-      "vendor": "mistral",
-      "family": "Timestral",
-      "version": "123M",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "Timestral-123M offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
-      "candidateId": "rcd15a73f855c316",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-15T16:01:51+00:00",
       "score": 10.0,
       "itemId": "hf:mistralai/Timestral-28M",
