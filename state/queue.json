@@ -1213,6 +1213,39 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-21T16:01:52+00:00",
+      "score": 6.0,
+      "itemId": "hf:ibm-granite/granite-speech-5.0-2b",
+      "title": "ibm-granite/granite-speech-5.0-2b",
+      "url": "https://huggingface.co/ibm-granite/granite-speech-5.0-2b",
+      "source": "HF org — IBM Granite",
+      "tier": "primary",
+      "entity": "ibm/granite-speech/5.0/version_bump",
+      "eventType": "version_bump",
+      "vendor": "ibm",
+      "family": "granite-speech",
+      "version": "5.0",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_version_bump_major +3"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "This release may provide insights into multimodal model architectures, relevant for understanding LLM interpretability and deployment in production environments.",
+      "candidateId": "rede2abcb80a9740",
+      "topics": [
+        "multimodal"
+      ]
     }
   ]
 }

@@ -1346,6 +1346,21 @@
       "whyRelevant": "This release provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
       "seenAt": "2026-10-21T04:02:03+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rede2abcb80a9740",
+      "url": "https://huggingface.co/ibm-granite/granite-speech-5.0-2b",
+      "title": "ibm-granite/granite-speech-5.0-2b",
+      "source": "HF org — IBM Granite",
+      "section": "release",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "This release may provide insights into multimodal model architectures, relevant for understanding LLM interpretability and deployment in production environments.",
+      "seenAt": "2026-10-21T16:01:52+00:00",
+      "status": "radar"
     }
   ]
 }
