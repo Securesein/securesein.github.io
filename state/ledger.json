@@ -223,6 +223,22 @@
       "publishedAt": "2026-10-20T22:01:56+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 21.2
+    },
+    {
+      "slug": "mistralai-releases-timestral-209m-for-advanced-time-series-forecasting",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-10-21T04:02:07+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
+    },
+    {
+      "slug": "nvidia-releases-glm-5-3-flash-fp4-local-model",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-10-21T04:02:16+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
     }
   ]
 }

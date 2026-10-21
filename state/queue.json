@@ -242,43 +242,6 @@
     },
     {
       "channel": "releases",
-      "queuedAt": "2026-10-15T16:01:54+00:00",
-      "score": 10.0,
-      "itemId": "hf:mistralai/Timestral-209M",
-      "title": "mistralai/Timestral-209M",
-      "url": "https://huggingface.co/mistralai/Timestral-209M",
-      "source": "HF org — Mistral",
-      "tier": "primary",
-      "entity": "mistral/Timestral/209M/new_model",
-      "eventType": "new_model",
-      "vendor": "mistral",
-      "family": "Timestral",
-      "version": "209M",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "Timestral-209M offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
-      "candidateId": "r11c18defa6ebdbd",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-15T22:01:36+00:00",
       "score": 7.0,
       "itemId": "6b79dc903e1c7585",
@@ -732,43 +695,6 @@
     },
     {
       "channel": "releases",
-      "queuedAt": "2026-10-16T22:01:31+00:00",
-      "score": 10.0,
-      "itemId": "hf:nvidia/GLM-5.3-Flash-FP4-Local",
-      "title": "nvidia/GLM-5.3-Flash-FP4-Local",
-      "url": "https://huggingface.co/nvidia/GLM-5.3-Flash-FP4-Local",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/GLM/5.3/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "GLM",
-      "version": "5.3",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model offers open weights for local inference, relevant for exploring LLM mechanisms and enhancing security and efficiency in deployment.",
-      "candidateId": "r6e4c26291917ee6",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-17T04:01:52+00:00",
       "score": 9.0,
       "itemId": "hf:nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
@@ -1216,6 +1142,74 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This item provides insights into model deployment and security, relevant for understanding LLMs' internal workings and enhancing inference efficiency.",
       "candidateId": "r51ba21fefe6290e",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-21T04:02:01+00:00",
+      "score": 7.0,
+      "itemId": "https://openai.com/index/terminal-x",
+      "title": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
+      "url": "https://openai.com/index/terminal-x",
+      "source": "OpenAI — News",
+      "tier": "primary",
+      "entity": "openai/GPT/6.1/version_bump",
+      "eventType": "version_bump",
+      "vendor": "openai",
+      "family": "GPT",
+      "version": "6.1",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_version_bump_major +3",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 50.0,
+      "relevanceScore": 23.1,
+      "whyRelevant": "This item highlights the performance of an LLM in matching human judgment, relevant for understanding LLM reasoning and inference capabilities.",
+      "candidateId": "raa8847d44cbae33",
+      "topics": [
+        "llms",
+        "agents"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-21T04:02:03+00:00",
+      "score": 7.0,
+      "itemId": "hf:LiquidAI/LFM2.5-24B-A2B-DSpark",
+      "title": "LiquidAI/LFM2.5-24B-A2B-DSpark",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-DSpark",
+      "source": "HF org — Liquid AI",
+      "tier": "primary",
+      "entity": "liquid/LFM/2.5-24B-A2B-DSpark/new_model",
+      "eventType": "new_model",
+      "vendor": "liquid",
+      "family": "LFM",
+      "version": "2.5-24B-A2B-DSpark",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "candidateId": "rc91e882a4096155",
       "topics": [
         "llms"
       ]

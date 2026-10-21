@@ -81,6 +81,20 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "mistral/Timestral/209M/new_model": {
+      "slug": "mistralai-releases-timestral-209m-for-advanced-time-series-forecasting",
+      "coveredAt": "2026-10-21T04:02:07+00:00",
+      "facts": [
+        "open_weights"
+      ]
+    },
+    "nvidia/GLM/5.3/new_model": {
+      "slug": "nvidia-releases-glm-5-3-flash-fp4-local-model",
+      "coveredAt": "2026-10-21T04:02:16+00:00",
+      "facts": [
+        "open_weights"
+      ]
     }
   }
 }

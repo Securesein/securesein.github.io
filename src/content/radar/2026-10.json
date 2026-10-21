@@ -902,7 +902,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "Timestral-209M offers insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
       "seenAt": "2026-10-15T16:01:54+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "mistralai-releases-timestral-209m-for-advanced-time-series-forecasting"
     },
     {
       "id": "rdabc6eddb37cd48",
@@ -1115,7 +1116,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This model offers open weights for local inference, relevant for exploring LLM mechanisms and enhancing security and efficiency in deployment.",
       "seenAt": "2026-10-16T22:01:31+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "nvidia-releases-glm-5-3-flash-fp4-local-model"
     },
     {
       "id": "re469ff082907e58",
@@ -1312,6 +1314,37 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This item provides insights into model deployment and security, relevant for understanding LLMs' internal workings and enhancing inference efficiency.",
       "seenAt": "2026-10-20T22:01:47+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "raa8847d44cbae33",
+      "url": "https://openai.com/index/terminal-x",
+      "title": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
+      "source": "OpenAI — News",
+      "section": "release",
+      "topics": [
+        "llms",
+        "agents"
+      ],
+      "qualityScore": 50.0,
+      "relevanceScore": 23.1,
+      "whyRelevant": "This item highlights the performance of an LLM in matching human judgment, relevant for understanding LLM reasoning and inference capabilities.",
+      "seenAt": "2026-10-21T04:02:01+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "rc91e882a4096155",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-DSpark",
+      "title": "LiquidAI/LFM2.5-24B-A2B-DSpark",
+      "source": "HF org — Liquid AI",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "seenAt": "2026-10-21T04:02:03+00:00",
       "status": "radar"
     }
   ]
