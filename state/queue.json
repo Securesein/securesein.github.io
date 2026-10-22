@@ -2,73 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-10-14T22:01:34+00:00",
-      "score": 6.0,
-      "itemId": "d38f82f737fb77c3",
-      "title": "Introducing Grok Voice 3.0",
-      "url": "https://x.ai/news/grok-voice-3",
-      "source": "xAI — News",
-      "tier": "primary",
-      "entity": "xai/Grok Voice/3.0/version_bump",
-      "eventType": "version_bump",
-      "vendor": "xai",
-      "family": "Grok Voice",
-      "version": "3.0",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_version_bump_major +3"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 0.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "Grok Voice 3.0 may provide insights into LLM deployment and serving, but its relevance to mechanistic interpretability and internal workings is unclear.",
-      "candidateId": "r12251940b3b4d22",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-14T22:01:36+00:00",
-      "score": 8.0,
-      "itemId": "hf:microsoft/UserRepGen-4B",
-      "title": "microsoft/UserRepGen-4B",
-      "url": "https://huggingface.co/microsoft/UserRepGen-4B",
-      "source": "HF org — Microsoft (Phi)",
-      "tier": "primary",
-      "entity": "microsoft/UserRepGen/4B/new_model",
-      "eventType": "new_model",
-      "vendor": "microsoft",
-      "family": "UserRepGen",
-      "version": "4B",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model's open weights and architecture provide insights into LLM internals, aiding research in mechanistic interpretability and efficient reasoning.",
-      "candidateId": "rcbb56a18968ecd4",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-15T16:01:41+00:00",
       "score": 8.0,
       "itemId": "afd30cfaaada418c",
@@ -1245,6 +1178,44 @@
       "candidateId": "rede2abcb80a9740",
       "topics": [
         "multimodal"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-22T04:01:59+00:00",
+      "score": 7.0,
+      "itemId": "73aa6c63960b6738e19ed23000fa18890df45888",
+      "title": "Amazon SageMaker AI now supports custom sequence lengths for serverless model customization jobs",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-custom-sequence-lengths/",
+      "source": "AWS — What's New",
+      "tier": "primary",
+      "entity": "amazon/gpt-oss, Gemma, Llama, Nemotron, Qwen/-/capability_update",
+      "eventType": "capability_update",
+      "vendor": "amazon",
+      "family": "gpt-oss, Gemma, Llama, Nemotron, Qwen",
+      "version": "",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_capability_update +2",
+        "open_weights +2"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 49.0,
+      "whyRelevant": "This release allows for tailored model configurations, which can enhance understanding of LLM behavior and improve inference efficiency in production environments.",
+      "candidateId": "rdccaec21a473442",
+      "topics": [
+        "llms",
+        "agents",
+        "reinforcement-learning"
       ]
     }
   ]

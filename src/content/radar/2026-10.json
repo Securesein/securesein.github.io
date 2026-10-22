@@ -1361,6 +1361,23 @@
       "whyRelevant": "This release may provide insights into multimodal model architectures, relevant for understanding LLM interpretability and deployment in production environments.",
       "seenAt": "2026-10-21T16:01:52+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rdccaec21a473442",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-custom-sequence-lengths/",
+      "title": "Amazon SageMaker AI now supports custom sequence lengths for serverless model customization jobs",
+      "source": "AWS — What's New",
+      "section": "release",
+      "topics": [
+        "llms",
+        "agents",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 49.0,
+      "whyRelevant": "This release allows for tailored model configurations, which can enhance understanding of LLM behavior and improve inference efficiency in production environments.",
+      "seenAt": "2026-10-22T04:01:59+00:00",
+      "status": "radar"
     }
   ]
 }
