@@ -95,6 +95,13 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "microsoft/Sentiment-Analysis/7B/new_model": {
+      "slug": "microsoft-releases-sentiment-analysis-7b-model",
+      "coveredAt": "2026-10-22T16:01:56+00:00",
+      "facts": [
+        "open_weights"
+      ]
     }
   }
 }

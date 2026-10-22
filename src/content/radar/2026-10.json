@@ -1269,7 +1269,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This model provides insights into sentiment analysis, which can enhance understanding of LLM behavior and improve reasoning efficiency in practical applications.",
       "seenAt": "2026-10-20T22:01:41+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "microsoft-releases-sentiment-analysis-7b-model"
     },
     {
       "id": "rd199488c47c9a20",
