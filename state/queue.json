@@ -2,179 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-10-15T16:01:41+00:00",
-      "score": 8.0,
-      "itemId": "afd30cfaaada418c",
-      "title": "Introducing Timestral",
-      "url": "https://mistral.ai/news/timestral/",
-      "source": "Mistral — News",
-      "tier": "primary",
-      "entity": "mistral/Timestral/-/new_model",
-      "eventType": "new_model",
-      "vendor": "mistral",
-      "family": "Timestral",
-      "version": "",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "Timestral's focus on LLMs may provide insights into their internal mechanisms and deployment strategies, relevant for understanding security and inference efficiency.",
-      "candidateId": "r51edf4c643816e6",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-15T16:01:42+00:00",
-      "score": 9.0,
-      "itemId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr",
-      "title": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr",
-      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Nemotron/3.5/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Nemotron",
-      "version": "3.5",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1",
-        "corroborated_48h +1"
-      ],
-      "corroborators": [
-        "HF org — NVIDIA (Nemotron): nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16"
-      ],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model's architecture and training details may provide insights into LLM interpretability and efficiency, relevant for understanding internal mechanisms and deployment.",
-      "candidateId": "r46bb49725c3848e",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-15T16:01:44+00:00",
-      "score": 8.0,
-      "itemId": "hf:nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
-      "title": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
-      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Nemotron/3.5-Bolt-74B-A9B-24GB-LiLiCorr/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Nemotron",
-      "version": "3.5-Bolt-74B-A9B-24GB-LiLiCorr",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model's architecture and open-weight design provide insights into LLM internals and facilitate local inference, relevant for security and efficiency in deployment.",
-      "candidateId": "r279a5fffa8f43c2",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-15T16:01:46+00:00",
-      "score": 8.0,
-      "itemId": "hf:nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
-      "title": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
-      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Nemotron/3.5-Bolt-74B-A9B-BF16/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Nemotron",
-      "version": "3.5-Bolt-74B-A9B-BF16",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model's architecture and open-weight design provide insights into LLM internals, aiding research in mechanistic interpretability and efficient reasoning.",
-      "candidateId": "r37999c23555d9c7",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-15T16:01:47+00:00",
-      "score": 8.0,
-      "itemId": "hf:nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
-      "title": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
-      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Nemotron/3.5-Bolt-74B-A9B-24GB/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Nemotron",
-      "version": "3.5-Bolt-74B-A9B-24GB",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model's architecture and performance metrics can provide insights into LLM internals and inform security and efficiency considerations for deployment.",
-      "candidateId": "r1da36500fbdda4e",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-15T22:01:36+00:00",
       "score": 7.0,
       "itemId": "6b79dc903e1c7585",
@@ -1179,6 +1006,40 @@
         "llms",
         "agents",
         "reinforcement-learning"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-22T22:01:31+00:00",
+      "score": 7.0,
+      "itemId": "801aaec83f00b4ca",
+      "title": "Fast mode is available for Claude Opus 5.5 on Claude Models on Google Cloud (Anthropic managed).",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-22-2026",
+      "source": "Anthropic — Claude docs release notes",
+      "tier": "primary",
+      "entity": "anthropic/Claude/5.5/version_bump",
+      "eventType": "version_bump",
+      "vendor": "anthropic",
+      "family": "Claude",
+      "version": "5.5",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_version_bump_major +3",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release may impact deployment strategies and performance optimization for LLMs, relevant to those interested in serving models efficiently in production.",
+      "candidateId": "r74a449ef675acb6",
+      "topics": [
+        "llms"
       ]
     }
   ]
