@@ -1394,6 +1394,36 @@
       "whyRelevant": "This release may impact deployment strategies and performance optimization for LLMs, relevant to those interested in serving models efficiently in production.",
       "seenAt": "2026-10-22T22:01:31+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r1b1eb616aaee38f",
+      "url": "https://huggingface.co/tencent/WeVisOne-VL-4B",
+      "title": "tencent/WeVisOne-VL-4B",
+      "source": "HF org — Tencent (Hunyuan)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "WeVisOne-VL-4B provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively.",
+      "seenAt": "2026-10-23T10:01:24+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r70912f3022491ff",
+      "url": "https://huggingface.co/tencent/WeVisOne-VL-2B",
+      "title": "tencent/WeVisOne-VL-2B",
+      "source": "HF org — Tencent (Hunyuan)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "WeVisOne-VL-2B offers insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "seenAt": "2026-10-23T10:01:27+00:00",
+      "status": "radar"
     }
   ]
 }

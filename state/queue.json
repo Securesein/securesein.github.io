@@ -760,6 +760,72 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-23T10:01:24+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/WeVisOne-VL-4B",
+      "title": "tencent/WeVisOne-VL-4B",
+      "url": "https://huggingface.co/tencent/WeVisOne-VL-4B",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/WeVisOne/4B/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "WeVisOne",
+      "version": "4B",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "WeVisOne-VL-4B provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively.",
+      "candidateId": "r1b1eb616aaee38f",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-23T10:01:27+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/WeVisOne-VL-2B",
+      "title": "tencent/WeVisOne-VL-2B",
+      "url": "https://huggingface.co/tencent/WeVisOne-VL-2B",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/WeVisOne/VL-2B/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "WeVisOne",
+      "version": "VL-2B",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "WeVisOne-VL-2B offers insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "candidateId": "r70912f3022491ff",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }
