@@ -2,73 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-10-16T10:01:30+00:00",
-      "score": 7.0,
-      "itemId": "hf:tencent/Hy-Memory-30B-A3B",
-      "title": "tencent/Hy-Memory-30B-A3B",
-      "url": "https://huggingface.co/tencent/Hy-Memory-30B-A3B",
-      "source": "HF org — Tencent (Hunyuan)",
-      "tier": "primary",
-      "entity": "tencent/Hy-Memory/30B-A3B/new_model",
-      "eventType": "new_model",
-      "vendor": "tencent",
-      "family": "Hy-Memory",
-      "version": "30B-A3B",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model's architecture and training methods provide insights into LLM interpretability and efficiency, relevant for understanding internal workings and deployment challenges.",
-      "candidateId": "r6ff2bab368073e9",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-16T10:01:33+00:00",
-      "score": 8.0,
-      "itemId": "hf:nvidia/Muse-Spark-Open-816B-A42B-DFlash2",
-      "title": "nvidia/Muse-Spark-Open-816B-A42B-DFlash2",
-      "url": "https://huggingface.co/nvidia/Muse-Spark-Open-816B-A42B-DFlash2",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Muse-Spark/816B-A42B-DFlash2/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Muse-Spark",
-      "version": "816B-A42B-DFlash2",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model's open-weight architecture allows for local inference and exploration of LLM mechanisms, relevant for understanding internal workings and enhancing security.",
-      "candidateId": "r0ec142a833912e4",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-16T16:01:27+00:00",
       "score": 7.0,
       "itemId": "hf:tencent/Qwen3-8B-DSpine-b16",
@@ -823,6 +756,39 @@
       "relevanceScore": 21.2,
       "whyRelevant": "WeVisOne-VL-2B offers insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
       "candidateId": "r70912f3022491ff",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-23T16:01:26+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/Hy-Nomas",
+      "title": "tencent/Hy-Nomas",
+      "url": "https://huggingface.co/tencent/Hy-Nomas",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/Hy-Nomas/-/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "Hy-Nomas",
+      "version": "",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Hy-Nomas provides insights into LLM architectures and training methods, relevant for understanding mechanistic interpretability and improving inference efficiency in production settings.",
+      "candidateId": "r980c9e02d840f58",
       "topics": [
         "llms"
       ]
