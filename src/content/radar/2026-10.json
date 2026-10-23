@@ -1439,6 +1439,21 @@
       "whyRelevant": "Hy-Nomas provides insights into LLM architectures and training methods, relevant for understanding mechanistic interpretability and improving inference efficiency in production settings.",
       "seenAt": "2026-10-23T16:01:26+00:00",
       "status": "radar"
+    },
+    {
+      "id": "re0405348af710bb",
+      "url": "https://huggingface.co/nvidia/InternVideo2-CLIP-anomaly-detection",
+      "title": "nvidia/InternVideo2-CLIP-anomaly-detection",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into anomaly detection techniques relevant for improving LLM security and reasoning efficiency in production environments.",
+      "seenAt": "2026-10-23T22:01:26+00:00",
+      "status": "radar"
     }
   ]
 }

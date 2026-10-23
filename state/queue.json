@@ -2,39 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-10-16T16:01:27+00:00",
-      "score": 7.0,
-      "itemId": "hf:tencent/Qwen3-8B-DSpine-b16",
-      "title": "tencent/Qwen3-8B-DSpine-b16",
-      "url": "https://huggingface.co/tencent/Qwen3-8B-DSpine-b16",
-      "source": "HF org — Tencent (Hunyuan)",
-      "tier": "primary",
-      "entity": "tencent/Qwen3/8B-DSpine-b16/new_model",
-      "eventType": "new_model",
-      "vendor": "tencent",
-      "family": "Qwen3",
-      "version": "8B-DSpine-b16",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
-      "candidateId": "r06931f8a174e768",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-16T22:01:26+00:00",
       "score": 8.0,
       "itemId": "b844252a39f2253f",
@@ -789,6 +756,40 @@
       "relevanceScore": 21.2,
       "whyRelevant": "Hy-Nomas provides insights into LLM architectures and training methods, relevant for understanding mechanistic interpretability and improving inference efficiency in production settings.",
       "candidateId": "r980c9e02d840f58",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-23T22:01:26+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/InternVideo2-CLIP-anomaly-detection",
+      "title": "nvidia/InternVideo2-CLIP-anomaly-detection",
+      "url": "https://huggingface.co/nvidia/InternVideo2-CLIP-anomaly-detection",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/InternVideo2-CLIP/-/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "InternVideo2-CLIP",
+      "version": "",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into anomaly detection techniques relevant for improving LLM security and reasoning efficiency in production environments.",
+      "candidateId": "re0405348af710bb",
       "topics": [
         "llms"
       ]
