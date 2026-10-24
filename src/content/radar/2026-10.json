@@ -1454,6 +1454,21 @@
       "whyRelevant": "This item may provide insights into anomaly detection techniques relevant for improving LLM security and reasoning efficiency in production environments.",
       "seenAt": "2026-10-23T22:01:26+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r66b56eefd452410",
+      "url": "https://huggingface.co/tencent/Hy-Nomas-Diffusers",
+      "title": "tencent/Hy-Nomas-Diffusers",
+      "source": "HF org — Tencent (Hunyuan)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into model architectures and diffusion processes, relevant for understanding LLM internals and enhancing inference efficiency.",
+      "seenAt": "2026-10-24T10:01:22+00:00",
+      "status": "radar"
     }
   ]
 }
