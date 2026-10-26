@@ -1469,6 +1469,36 @@
       "whyRelevant": "This release provides insights into model architectures and diffusion processes, relevant for understanding LLM internals and enhancing inference efficiency.",
       "seenAt": "2026-10-24T10:01:22+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rac744539c68d563",
+      "url": "https://huggingface.co/tencent/Hy-SimulMT-30B-A3B-Interleave",
+      "title": "tencent/Hy-SimulMT-30B-A3B-Interleave",
+      "source": "HF org — Tencent (Hunyuan)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 0.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's architecture and training methods provide insights into LLM behavior, relevant for understanding mechanistic interpretability and improving inference efficiency.",
+      "seenAt": "2026-10-26T11:01:21+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re9d70288c09c2c5",
+      "url": "https://huggingface.co/tencent/Hy-SimulMT-30B-A3B",
+      "title": "tencent/Hy-SimulMT-30B-A3B",
+      "source": "HF org — Tencent (Hunyuan)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying efficient inference in production.",
+      "seenAt": "2026-10-26T11:01:24+00:00",
+      "status": "radar"
     }
   ]
 }

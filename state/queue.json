@@ -684,6 +684,72 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-26T11:01:21+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/Hy-SimulMT-30B-A3B-Interleave",
+      "title": "tencent/Hy-SimulMT-30B-A3B-Interleave",
+      "url": "https://huggingface.co/tencent/Hy-SimulMT-30B-A3B-Interleave",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/Hy-SimulMT/30B-A3B-Interleave/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "Hy-SimulMT",
+      "version": "30B-A3B-Interleave",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 0.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's architecture and training methods provide insights into LLM behavior, relevant for understanding mechanistic interpretability and improving inference efficiency.",
+      "candidateId": "rac744539c68d563",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-26T11:01:24+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/Hy-SimulMT-30B-A3B",
+      "title": "tencent/Hy-SimulMT-30B-A3B",
+      "url": "https://huggingface.co/tencent/Hy-SimulMT-30B-A3B",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/Hy-SimulMT/30B-A3B/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "Hy-SimulMT",
+      "version": "30B-A3B",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying efficient inference in production.",
+      "candidateId": "re9d70288c09c2c5",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }
