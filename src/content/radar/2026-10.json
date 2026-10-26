@@ -1514,6 +1514,21 @@
       "whyRelevant": "CogACT-v2-RoboDojo provides insights into LLMs' internal mechanisms and agent interactions, relevant for understanding security and efficiency in model deployment.",
       "seenAt": "2026-10-26T17:01:26+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r35e334c198740f7",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "title": "Introducing GPT-6.1 Terra",
+      "source": "OpenAI — News",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "GPT-6.1 Terra's advancements in LLM architecture may provide insights into mechanistic interpretability and efficiency in reasoning and inference for model deployment.",
+      "seenAt": "2026-10-26T23:01:54+00:00",
+      "status": "radar"
     }
   ]
 }

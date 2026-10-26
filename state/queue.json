@@ -2,43 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-10-19T22:01:21+00:00",
-      "score": 6.0,
-      "itemId": "ec3912cd048a09be47d4f3a92ed0f45245f27882",
-      "title": "Grok 4.7 is now available on Amazon Bedrock in AWS GovCloud (US)",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-bedrock-grok-4-7-govcloud/",
-      "source": "AWS — What's New",
-      "tier": "primary",
-      "entity": "amazon/Grok/4.7/version_bump",
-      "eventType": "version_bump",
-      "vendor": "amazon",
-      "family": "Grok",
-      "version": "4.7",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_version_bump_major +3"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "pricing"
-      ],
-      "qualityScore": 70.0,
-      "relevanceScore": 60.0,
-      "whyRelevant": "Grok 4.7's release in AWS GovCloud may enhance local inference and reasoning capabilities for LLMs, relevant for security and deployment in sensitive environments.",
-      "candidateId": "r8af7eccb0c0fbec",
-      "topics": [
-        "reasoning",
-        "agents",
-        "inference"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-20T04:01:20+00:00",
       "score": 6.0,
       "itemId": "d2a34834fa065740",
@@ -747,6 +710,43 @@
       "relevanceScore": 21.2,
       "whyRelevant": "CogACT-v2-RoboDojo provides insights into LLMs' internal mechanisms and agent interactions, relevant for understanding security and efficiency in model deployment.",
       "candidateId": "r856d9d2653f1141",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-26T23:01:54+00:00",
+      "score": 8.0,
+      "itemId": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "title": "Introducing GPT-6.1 Terra",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "source": "OpenAI — News",
+      "tier": "primary",
+      "entity": "openai/GPT/6.1/version_bump",
+      "eventType": "version_bump",
+      "vendor": "openai",
+      "family": "GPT",
+      "version": "6.1",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_version_bump_major +3",
+        "tier1_vendor +1",
+        "corroborated_48h +1"
+      ],
+      "corroborators": [
+        "OpenAI — News: GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases"
+      ],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "GPT-6.1 Terra's advancements in LLM architecture may provide insights into mechanistic interpretability and efficiency in reasoning and inference for model deployment.",
+      "candidateId": "r35e334c198740f7",
       "topics": [
         "llms"
       ]
