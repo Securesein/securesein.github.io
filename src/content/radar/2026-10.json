@@ -1499,6 +1499,21 @@
       "whyRelevant": "This model provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying efficient inference in production.",
       "seenAt": "2026-10-26T11:01:24+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r856d9d2653f1141",
+      "url": "https://huggingface.co/microsoft/CogACT-v2-RoboDojo",
+      "title": "microsoft/CogACT-v2-RoboDojo",
+      "source": "HF org — Microsoft (Phi)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "CogACT-v2-RoboDojo provides insights into LLMs' internal mechanisms and agent interactions, relevant for understanding security and efficiency in model deployment.",
+      "seenAt": "2026-10-26T17:01:26+00:00",
+      "status": "radar"
     }
   ]
 }
