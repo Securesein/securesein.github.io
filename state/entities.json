@@ -102,6 +102,13 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "nvidia/RFD4/1.0/new_model": {
+      "slug": "nvidia-and-baker-lab-release-rfd4-prote-na-for-biomolecular-design",
+      "coveredAt": "2026-10-27T17:01:27+00:00",
+      "facts": [
+        "open_weights"
+      ]
     }
   }
 }

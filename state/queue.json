@@ -70,43 +70,6 @@
     },
     {
       "channel": "releases",
-      "queuedAt": "2026-10-20T22:01:47+00:00",
-      "score": 10.0,
-      "itemId": "hf:nvidia/RFD4-Proteina-Diffusers",
-      "title": "nvidia/RFD4-Proteina-Diffusers",
-      "url": "https://huggingface.co/nvidia/RFD4-Proteina-Diffusers",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/RFD4/1.0/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "RFD4",
-      "version": "1.0",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This item provides insights into model deployment and security, relevant for understanding LLMs' internal workings and enhancing inference efficiency.",
-      "candidateId": "r51ba21fefe6290e",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-21T04:02:01+00:00",
       "score": 7.0,
       "itemId": "https://openai.com/index/terminal-x",
@@ -612,6 +575,39 @@
       "candidateId": "rcbeb649caaaff74",
       "topics": [
         "multimodal"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-27T17:01:22+00:00",
+      "score": 7.0,
+      "itemId": "49035d07d373fa90",
+      "title": "Your next sales teammate should be a Grok Bot",
+      "url": "https://x.ai/news/grok-bot-sales",
+      "source": "xAI — News",
+      "tier": "primary",
+      "entity": "xai/Grok/1.0/new_model",
+      "eventType": "new_model",
+      "vendor": "xai",
+      "family": "Grok",
+      "version": "1.0",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 0.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "The Grok Bot's design and deployment insights can enhance understanding of LLMs' internal mechanisms and improve agent security in production environments.",
+      "candidateId": "r2cf69418651c9e4",
+      "topics": [
+        "llms"
       ]
     }
   ]
