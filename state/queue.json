@@ -2,109 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-10-20T22:01:43+00:00",
-      "score": 8.0,
-      "itemId": "hf:nvidia/Cosmos3-H-Embodied-Nano",
-      "title": "nvidia/Cosmos3-H-Embodied-Nano",
-      "url": "https://huggingface.co/nvidia/Cosmos3-H-Embodied-Nano",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Cosmos3/H-Embodied-Nano/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Cosmos3",
-      "version": "H-Embodied-Nano",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model may provide insights into LLM architecture and deployment strategies, relevant for understanding mechanistic interpretability and production serving.",
-      "candidateId": "rd199488c47c9a20",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-20T22:01:45+00:00",
-      "score": 8.0,
-      "itemId": "hf:nvidia/Cosmos3-H-Dreams",
-      "title": "nvidia/Cosmos3-H-Dreams",
-      "url": "https://huggingface.co/nvidia/Cosmos3-H-Dreams",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Cosmos3/H-Dreams/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Cosmos3",
-      "version": "H-Dreams",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This release may provide insights into LLM architecture and deployment strategies relevant to mechanistic interpretability and production serving.",
-      "candidateId": "r510b6c680d28737",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-21T04:02:01+00:00",
-      "score": 7.0,
-      "itemId": "https://openai.com/index/terminal-x",
-      "title": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
-      "url": "https://openai.com/index/terminal-x",
-      "source": "OpenAI — News",
-      "tier": "primary",
-      "entity": "openai/GPT/6.1/version_bump",
-      "eventType": "version_bump",
-      "vendor": "openai",
-      "family": "GPT",
-      "version": "6.1",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_version_bump_major +3",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 50.0,
-      "relevanceScore": 23.1,
-      "whyRelevant": "This item highlights the performance of an LLM in matching human judgment, relevant for understanding LLM reasoning and inference capabilities.",
-      "candidateId": "raa8847d44cbae33",
-      "topics": [
-        "llms",
-        "agents"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-21T04:02:03+00:00",
       "score": 7.0,
       "itemId": "hf:LiquidAI/LFM2.5-24B-A2B-DSpark",
@@ -372,7 +269,8 @@
       "candidateId": "re0405348af710bb",
       "topics": [
         "llms"
-      ]
+      ],
+      "attempts": 1
     },
     {
       "channel": "releases",
@@ -505,44 +403,8 @@
       "candidateId": "r856d9d2653f1141",
       "topics": [
         "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-26T23:01:54+00:00",
-      "score": 8.0,
-      "itemId": "https://openai.com/index/introducing-gpt-6-1-terra",
-      "title": "Introducing GPT-6.1 Terra",
-      "url": "https://openai.com/index/introducing-gpt-6-1-terra",
-      "source": "OpenAI — News",
-      "tier": "primary",
-      "entity": "openai/GPT/6.1/version_bump",
-      "eventType": "version_bump",
-      "vendor": "openai",
-      "family": "GPT",
-      "version": "6.1",
-      "openWeights": false,
-      "modality": [
-        "text"
       ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_version_bump_major +3",
-        "tier1_vendor +1",
-        "corroborated_48h +1"
-      ],
-      "corroborators": [
-        "OpenAI — News: GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases"
-      ],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "GPT-6.1 Terra's advancements in LLM architecture may provide insights into mechanistic interpretability and efficiency in reasoning and inference for model deployment.",
-      "candidateId": "r35e334c198740f7",
-      "topics": [
-        "llms"
-      ]
+      "attempts": 1
     },
     {
       "channel": "releases",
@@ -609,6 +471,109 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-27T23:01:38+00:00",
+      "score": 7.0,
+      "itemId": "e243bc5f4862b97d",
+      "title": "GPT-6.1 Terra in ChatGPT Work, Codex, and the API",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+      "source": "OpenAI — Release notes",
+      "tier": "primary",
+      "entity": "openai/GPT/6.1/version_bump",
+      "eventType": "version_bump",
+      "vendor": "openai",
+      "family": "GPT",
+      "version": "6.1",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_version_bump_major +3",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into the internal workings and deployment of LLMs, relevant for understanding mechanistic interpretability and production serving.",
+      "candidateId": "r02941faf3e7dee3",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-27T23:01:41+00:00",
+      "score": 6.0,
+      "itemId": "5623d1c5c598d11b",
+      "title": "We’ve added capabilities.thinking.types.between_tools to the Models API . GET /v1/models and GET /v1/models/{model_id} now report whether each model accepts thinking: {type: \"betwe",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-15-2026-5",
+      "source": "Anthropic — Claude docs release notes",
+      "tier": "primary",
+      "entity": "anthropic/Claude/-/capability_update",
+      "eventType": "capability_update",
+      "vendor": "anthropic",
+      "family": "Claude",
+      "version": "",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_capability_update +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 50.0,
+      "relevanceScore": 45.7,
+      "whyRelevant": "This update enhances model reasoning capabilities, which is crucial for understanding LLM internals and improving inference efficiency in production environments.",
+      "candidateId": "r82d8dba53ce9ad3",
+      "topics": [
+        "reasoning"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-27T23:01:43+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Metatron-v1",
+      "title": "nvidia/Metatron-v1",
+      "url": "https://huggingface.co/nvidia/Metatron-v1",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Metatron/v1/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Metatron",
+      "version": "v1",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Metatron-v1 provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and optimizing inference efficiency in production environments.",
+      "candidateId": "r9f5c79ede045093",
+      "topics": [
+        "llms"
+      ],
+      "attempts": 1
     }
   ]
 }

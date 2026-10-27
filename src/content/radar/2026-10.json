@@ -1190,9 +1190,9 @@
       "topics": [
         "reasoning"
       ],
-      "qualityScore": 55.0,
-      "relevanceScore": 42.7,
-      "whyRelevant": "This update enhances understanding of model reasoning capabilities, relevant for exploring LLM interpretability and improving inference efficiency in production environments.",
+      "qualityScore": 50.0,
+      "relevanceScore": 45.7,
+      "whyRelevant": "This update enhances model reasoning capabilities, which is crucial for understanding LLM internals and improving inference efficiency in production environments.",
       "seenAt": "2026-10-20T04:01:20+00:00",
       "status": "radar"
     },
@@ -1332,7 +1332,8 @@
       "relevanceScore": 23.1,
       "whyRelevant": "This item highlights the performance of an LLM in matching human judgment, relevant for understanding LLM reasoning and inference capabilities.",
       "seenAt": "2026-10-21T04:02:01+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "terminal-x-enhances-investment-workflows-with-gpt-6-1-sol"
     },
     {
       "id": "rc91e882a4096155",
@@ -1529,7 +1530,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "GPT-6.1 Terra's advancements in LLM architecture may provide insights into mechanistic interpretability and efficiency in reasoning and inference for model deployment.",
       "seenAt": "2026-10-26T23:01:54+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "openai-launches-gpt-6-1-terra"
     },
     {
       "id": "rcbeb649caaaff74",
@@ -1559,6 +1561,36 @@
       "relevanceScore": 21.2,
       "whyRelevant": "The Grok Bot's design and deployment insights can enhance understanding of LLMs' internal mechanisms and improve agent security in production environments.",
       "seenAt": "2026-10-27T17:01:22+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r02941faf3e7dee3",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+      "title": "GPT-6.1 Terra in ChatGPT Work, Codex, and the API",
+      "source": "OpenAI — Release notes",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into the internal workings and deployment of LLMs, relevant for understanding mechanistic interpretability and production serving.",
+      "seenAt": "2026-10-27T23:01:38+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9f5c79ede045093",
+      "url": "https://huggingface.co/nvidia/Metatron-v1",
+      "title": "nvidia/Metatron-v1",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Metatron-v1 provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and optimizing inference efficiency in production environments.",
+      "seenAt": "2026-10-27T23:01:43+00:00",
       "status": "radar"
     }
   ]

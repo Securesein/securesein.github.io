@@ -255,6 +255,22 @@
       "publishedAt": "2026-10-27T17:01:27+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 21.2
+    },
+    {
+      "slug": "openai-launches-gpt-6-1-terra",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-10-27T23:01:52+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
+    },
+    {
+      "slug": "terminal-x-enhances-investment-workflows-with-gpt-6-1-sol",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-10-27T23:01:59+00:00",
+      "qualityScore": 50.0,
+      "relevanceScore": 23.1
     }
   ]
 }
