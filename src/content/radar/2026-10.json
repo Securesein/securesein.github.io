@@ -1594,6 +1594,21 @@
       "seenAt": "2026-10-27T23:01:43+00:00",
       "status": "promoted",
       "promotedTo": "nvidia-releases-metatron-v1-for-interactive-humanoid-control"
+    },
+    {
+      "id": "r691aea7ca2e2710",
+      "url": "https://huggingface.co/allenai/OlmoEarth-v1_2-FT-LFMC-Base",
+      "title": "allenai/OlmoEarth-v1_2-FT-LFMC-Base",
+      "source": "HF org — Ai2",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This model's open-weight architecture allows for local inference and exploration of LLM mechanisms, relevant for understanding interpretability and security in deployment.",
+      "seenAt": "2026-10-28T23:01:30+00:00",
+      "status": "radar"
     }
   ]
 }

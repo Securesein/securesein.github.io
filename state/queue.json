@@ -438,6 +438,42 @@
       "topics": [
         "reasoning"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-28T23:01:30+00:00",
+      "score": 9.0,
+      "itemId": "hf:allenai/OlmoEarth-v1_2-FT-LFMC-Base",
+      "title": "allenai/OlmoEarth-v1_2-FT-LFMC-Base",
+      "url": "https://huggingface.co/allenai/OlmoEarth-v1_2-FT-LFMC-Base",
+      "source": "HF org — Ai2",
+      "tier": "primary",
+      "entity": "ai2/OlmoEarth/v1_2-FT-LFMC-Base/new_model",
+      "eventType": "new_model",
+      "vendor": "ai2",
+      "family": "OlmoEarth",
+      "version": "v1_2-FT-LFMC-Base",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This model's open-weight architecture allows for local inference and exploration of LLM mechanisms, relevant for understanding interpretability and security in deployment.",
+      "candidateId": "r691aea7ca2e2710",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }
