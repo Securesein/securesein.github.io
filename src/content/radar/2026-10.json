@@ -1455,7 +1455,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This item may provide insights into anomaly detection techniques relevant for improving LLM security and reasoning efficiency in production environments.",
       "seenAt": "2026-10-23T22:01:26+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "nvidia-releases-internvideo2-clip-for-anomaly-detection"
     },
     {
       "id": "r66b56eefd452410",
@@ -1591,7 +1592,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "Metatron-v1 provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and optimizing inference efficiency in production environments.",
       "seenAt": "2026-10-27T23:01:43+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "nvidia-releases-metatron-v1-for-interactive-humanoid-control"
     }
   ]
 }

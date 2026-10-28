@@ -2,39 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-10-21T04:02:03+00:00",
-      "score": 7.0,
-      "itemId": "hf:LiquidAI/LFM2.5-24B-A2B-DSpark",
-      "title": "LiquidAI/LFM2.5-24B-A2B-DSpark",
-      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-DSpark",
-      "source": "HF org — Liquid AI",
-      "tier": "primary",
-      "entity": "liquid/LFM/2.5-24B-A2B-DSpark/new_model",
-      "eventType": "new_model",
-      "vendor": "liquid",
-      "family": "LFM",
-      "version": "2.5-24B-A2B-DSpark",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This release provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
-      "candidateId": "rc91e882a4096155",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-21T16:01:52+00:00",
       "score": 6.0,
       "itemId": "hf:ibm-granite/granite-speech-5.0-2b",
@@ -239,41 +206,6 @@
     },
     {
       "channel": "releases",
-      "queuedAt": "2026-10-23T22:01:26+00:00",
-      "score": 8.0,
-      "itemId": "hf:nvidia/InternVideo2-CLIP-anomaly-detection",
-      "title": "nvidia/InternVideo2-CLIP-anomaly-detection",
-      "url": "https://huggingface.co/nvidia/InternVideo2-CLIP-anomaly-detection",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/InternVideo2-CLIP/-/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "InternVideo2-CLIP",
-      "version": "",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This item may provide insights into anomaly detection techniques relevant for improving LLM security and reasoning efficiency in production environments.",
-      "candidateId": "re0405348af710bb",
-      "topics": [
-        "llms"
-      ],
-      "attempts": 1
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-24T10:01:22+00:00",
       "score": 7.0,
       "itemId": "hf:tencent/Hy-Nomas-Diffusers",
@@ -404,7 +336,7 @@
       "topics": [
         "llms"
       ],
-      "attempts": 1
+      "attempts": 2
     },
     {
       "channel": "releases",
@@ -539,41 +471,6 @@
       "topics": [
         "reasoning"
       ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-27T23:01:43+00:00",
-      "score": 8.0,
-      "itemId": "hf:nvidia/Metatron-v1",
-      "title": "nvidia/Metatron-v1",
-      "url": "https://huggingface.co/nvidia/Metatron-v1",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Metatron/v1/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Metatron",
-      "version": "v1",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "Metatron-v1 provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and optimizing inference efficiency in production environments.",
-      "candidateId": "r9f5c79ede045093",
-      "topics": [
-        "llms"
-      ],
-      "attempts": 1
     }
   ]
 }

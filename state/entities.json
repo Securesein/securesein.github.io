@@ -114,6 +114,16 @@
       "slug": "terminal-x-enhances-investment-workflows-with-gpt-6-1-sol",
       "coveredAt": "2026-10-27T23:01:59+00:00",
       "facts": []
+    },
+    "nvidia/InternVideo2-CLIP/-/new_model": {
+      "slug": "nvidia-releases-internvideo2-clip-for-anomaly-detection",
+      "coveredAt": "2026-10-28T05:01:22+00:00",
+      "facts": []
+    },
+    "nvidia/Metatron/v1/new_model": {
+      "slug": "nvidia-releases-metatron-v1-for-interactive-humanoid-control",
+      "coveredAt": "2026-10-28T05:01:26+00:00",
+      "facts": []
     }
   }
 }
