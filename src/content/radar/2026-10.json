@@ -1640,6 +1640,21 @@
       "whyRelevant": "This release provides insights into the architecture and performance of a new open-weight LLM, relevant for understanding mechanistic interpretability and deployment.",
       "seenAt": "2026-10-29T17:01:28+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r9e40aeba6dfa444",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-29-2026",
+      "title": "The Usage and Cost API is now a legacy API, and so are the usage_report , cost_report , user_usage_report , and user_cost_report endpoints of the Claude Enterprise Analytics API . ",
+      "source": "Anthropic — Claude docs release notes",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 35.2,
+      "whyRelevant": "This update on legacy APIs may impact how users analyze LLM performance and cost, relevant for those deploying and optimizing models in production.",
+      "seenAt": "2026-10-29T23:01:47+00:00",
+      "status": "radar"
     }
   ]
 }

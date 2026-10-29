@@ -2,40 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-10-22T22:01:31+00:00",
-      "score": 7.0,
-      "itemId": "801aaec83f00b4ca",
-      "title": "Fast mode is available for Claude Opus 5.5 on Claude Models on Google Cloud (Anthropic managed).",
-      "url": "https://docs.claude.com/en/release-notes/overview#october-22-2026",
-      "source": "Anthropic — Claude docs release notes",
-      "tier": "primary",
-      "entity": "anthropic/Claude/5.5/version_bump",
-      "eventType": "version_bump",
-      "vendor": "anthropic",
-      "family": "Claude",
-      "version": "5.5",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_version_bump_major +3",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This release may impact deployment strategies and performance optimization for LLMs, relevant to those interested in serving models efficiently in production.",
-      "candidateId": "r74a449ef675acb6",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-23T10:01:24+00:00",
       "score": 7.0,
       "itemId": "hf:tencent/WeVisOne-VL-4B",
@@ -470,6 +436,42 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This release provides insights into the architecture and performance of a new open-weight LLM, relevant for understanding mechanistic interpretability and deployment.",
       "candidateId": "r3e5be64594ac0b2",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-29T23:01:47+00:00",
+      "score": 6.0,
+      "itemId": "c283b833648731e6",
+      "title": "The Usage and Cost API is now a legacy API, and so are the usage_report , cost_report , user_usage_report , and user_cost_report endpoints of the Claude Enterprise Analytics API . ",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-29-2026",
+      "source": "Anthropic — Claude docs release notes",
+      "tier": "primary",
+      "entity": "anthropic/Claude/-/deprecation",
+      "eventType": "deprecation",
+      "vendor": "anthropic",
+      "family": "Claude",
+      "version": "",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_deprecation +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "deprecation"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 35.2,
+      "whyRelevant": "This update on legacy APIs may impact how users analyze LLM performance and cost, relevant for those deploying and optimizing models in production.",
+      "candidateId": "r9e40aeba6dfa444",
       "topics": [
         "llms"
       ]
