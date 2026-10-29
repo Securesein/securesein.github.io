@@ -287,6 +287,14 @@
       "publishedAt": "2026-10-28T05:01:26+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 21.2
+    },
+    {
+      "slug": "mistral-large-4-le-chonk-released-with-open-weights",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-10-29T17:01:32+00:00",
+      "qualityScore": 0.0,
+      "relevanceScore": 21.2
     }
   ]
 }

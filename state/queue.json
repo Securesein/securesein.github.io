@@ -436,6 +436,43 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-29T17:01:28+00:00",
+      "score": 10.0,
+      "itemId": "hf:mistralai/Mistral-Large-4-1T-A52B-NVFP4",
+      "title": "mistralai/Mistral-Large-4-1T-A52B-NVFP4",
+      "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B-NVFP4",
+      "source": "HF org — Mistral",
+      "tier": "primary",
+      "entity": "mistral/Mistral-Large/4-1T-A52B-NVFP4/new_model",
+      "eventType": "new_model",
+      "vendor": "mistral",
+      "family": "Mistral-Large",
+      "version": "4-1T-A52B-NVFP4",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into the architecture and performance of a new open-weight LLM, relevant for understanding mechanistic interpretability and deployment.",
+      "candidateId": "r3e5be64594ac0b2",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }

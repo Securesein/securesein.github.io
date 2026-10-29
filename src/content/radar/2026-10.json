@@ -1609,6 +1609,37 @@
       "whyRelevant": "This model's open-weight architecture allows for local inference and exploration of LLM mechanisms, relevant for understanding interpretability and security in deployment.",
       "seenAt": "2026-10-28T23:01:30+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rbd03e4a483646b8",
+      "url": "https://mistral.ai/news/mistral-large-4-oss/",
+      "title": "Le Chonk: Built for Coders, Trusted by Defenders.",
+      "source": "Mistral — News",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 0.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into LLM deployment and security practices, relevant for understanding model behavior and ensuring safe production use.",
+      "seenAt": "2026-10-29T17:01:26+00:00",
+      "status": "promoted",
+      "promotedTo": "mistral-large-4-le-chonk-released-with-open-weights"
+    },
+    {
+      "id": "r3e5be64594ac0b2",
+      "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B-NVFP4",
+      "title": "mistralai/Mistral-Large-4-1T-A52B-NVFP4",
+      "source": "HF org — Mistral",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into the architecture and performance of a new open-weight LLM, relevant for understanding mechanistic interpretability and deployment.",
+      "seenAt": "2026-10-29T17:01:28+00:00",
+      "status": "radar"
     }
   ]
 }

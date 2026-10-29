@@ -124,6 +124,13 @@
       "slug": "nvidia-releases-metatron-v1-for-interactive-humanoid-control",
       "coveredAt": "2026-10-28T05:01:26+00:00",
       "facts": []
+    },
+    "mistral/Le Chonk/-/new_model": {
+      "slug": "mistral-large-4-le-chonk-released-with-open-weights",
+      "coveredAt": "2026-10-29T17:01:32+00:00",
+      "facts": [
+        "open_weights"
+      ]
     }
   }
 }
