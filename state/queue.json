@@ -2,44 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-10-22T04:01:59+00:00",
-      "score": 7.0,
-      "itemId": "73aa6c63960b6738e19ed23000fa18890df45888",
-      "title": "Amazon SageMaker AI now supports custom sequence lengths for serverless model customization jobs",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-custom-sequence-lengths/",
-      "source": "AWS — What's New",
-      "tier": "primary",
-      "entity": "amazon/gpt-oss, Gemma, Llama, Nemotron, Qwen/-/capability_update",
-      "eventType": "capability_update",
-      "vendor": "amazon",
-      "family": "gpt-oss, Gemma, Llama, Nemotron, Qwen",
-      "version": "",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_capability_update +2",
-        "open_weights +2"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 80.0,
-      "relevanceScore": 49.0,
-      "whyRelevant": "This release allows for tailored model configurations, which can enhance understanding of LLM behavior and improve inference efficiency in production environments.",
-      "candidateId": "rdccaec21a473442",
-      "topics": [
-        "llms",
-        "agents",
-        "reinforcement-learning"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-22T22:01:31+00:00",
       "score": 7.0,
       "itemId": "801aaec83f00b4ca",
