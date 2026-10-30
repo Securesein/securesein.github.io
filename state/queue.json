@@ -413,6 +413,76 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-30T23:01:33+00:00",
+      "score": 6.0,
+      "itemId": "4c3a2f6c73b859e3",
+      "title": "We’ve deprecated fast mode for Claude Opus 4.8, with removal on November 30, 2026. After removal, requests to claude-opus-4-8 with speed: \"fast\" will return an error. To continue u",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-30-2026",
+      "source": "Anthropic — Claude docs release notes",
+      "tier": "primary",
+      "entity": "anthropic/Claude Opus/4.8/deprecation",
+      "eventType": "deprecation",
+      "vendor": "anthropic",
+      "family": "Claude Opus",
+      "version": "4.8",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_deprecation +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "deprecation"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This update impacts deployment strategies for LLMs, particularly regarding performance optimization and error handling in production environments.",
+      "candidateId": "r47b573d1c4d161b",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-10-30T23:01:35+00:00",
+      "score": 7.0,
+      "itemId": "hf:nvidia/DeepSeek-V4.1-Flash-1017-NVFP4",
+      "title": "nvidia/DeepSeek-V4.1-Flash-1017-NVFP4",
+      "url": "https://huggingface.co/nvidia/DeepSeek-V4.1-Flash-1017-NVFP4",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/DeepSeek/4.1/version_bump",
+      "eventType": "version_bump",
+      "vendor": "nvidia",
+      "family": "DeepSeek",
+      "version": "4.1",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_version_bump_major +3",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release may provide insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and production serving of models.",
+      "candidateId": "re12a03bcdc70b32",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }

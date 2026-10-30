@@ -1670,6 +1670,36 @@
       "whyRelevant": "This item provides insights into the deployment and serving of LLMs, relevant for understanding production challenges and security in model usage.",
       "seenAt": "2026-10-30T17:01:24+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r47b573d1c4d161b",
+      "url": "https://docs.claude.com/en/release-notes/overview#october-30-2026",
+      "title": "We’ve deprecated fast mode for Claude Opus 4.8, with removal on November 30, 2026. After removal, requests to claude-opus-4-8 with speed: \"fast\" will return an error. To continue u",
+      "source": "Anthropic — Claude docs release notes",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This update impacts deployment strategies for LLMs, particularly regarding performance optimization and error handling in production environments.",
+      "seenAt": "2026-10-30T23:01:33+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re12a03bcdc70b32",
+      "url": "https://huggingface.co/nvidia/DeepSeek-V4.1-Flash-1017-NVFP4",
+      "title": "nvidia/DeepSeek-V4.1-Flash-1017-NVFP4",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release may provide insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and production serving of models.",
+      "seenAt": "2026-10-30T23:01:35+00:00",
+      "status": "radar"
     }
   ]
 }
