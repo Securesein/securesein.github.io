@@ -1655,6 +1655,21 @@
       "whyRelevant": "This update on legacy APIs may impact how users analyze LLM performance and cost, relevant for those deploying and optimizing models in production.",
       "seenAt": "2026-10-29T23:01:47+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r9b320b1de442a7b",
+      "url": "https://huggingface.co/microsoft/Mage-VL-Cowork",
+      "title": "microsoft/Mage-VL-Cowork",
+      "source": "HF org — Microsoft (Phi)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item provides insights into the deployment and serving of LLMs, relevant for understanding production challenges and security in model usage.",
+      "seenAt": "2026-10-30T17:01:24+00:00",
+      "status": "radar"
     }
   ]
 }
