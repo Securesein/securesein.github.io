@@ -2,39 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-10-24T10:01:22+00:00",
-      "score": 7.0,
-      "itemId": "hf:tencent/Hy-Nomas-Diffusers",
-      "title": "tencent/Hy-Nomas-Diffusers",
-      "url": "https://huggingface.co/tencent/Hy-Nomas-Diffusers",
-      "source": "HF org — Tencent (Hunyuan)",
-      "tier": "primary",
-      "entity": "tencent/Hy-Nomas-Diffusers/-/new_model",
-      "eventType": "new_model",
-      "vendor": "tencent",
-      "family": "Hy-Nomas-Diffusers",
-      "version": "",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This release provides insights into model architectures and diffusion processes, relevant for understanding LLM internals and enhancing inference efficiency.",
-      "candidateId": "r66b56eefd452410",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-26T11:01:21+00:00",
       "score": 7.0,
       "itemId": "hf:tencent/Hy-SimulMT-30B-A3B-Interleave",
