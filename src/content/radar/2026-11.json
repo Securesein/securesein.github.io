@@ -1,0 +1,20 @@
+{
+  "month": "2026-11",
+  "items": [
+    {
+      "id": "r2c16a781da93d07",
+      "url": "https://help.openai.com/en/articles/20001193-gpt-rosalind-for-life-sciences-research",
+      "title": "GPT-6 Rosalind Research in Work, Codex, and the API",
+      "source": "OpenAI — Release notes",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item discusses advancements in LLMs, including their internal workings and deployment, relevant for understanding mechanistic interpretability and production serving.",
+      "seenAt": "2026-11-02T17:01:29+00:00",
+      "status": "radar"
+    }
+  ]
+}
