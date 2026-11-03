@@ -131,6 +131,13 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "mistral/Mistral-Large/4-1T-A52B-NVFP4/new_model": {
+      "slug": "mistral-releases-mistral-large-4-nvfp4-model",
+      "coveredAt": "2026-11-03T17:01:51+00:00",
+      "facts": [
+        "open_weights"
+      ]
     }
   }
 }

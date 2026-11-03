@@ -1639,7 +1639,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This release provides insights into the architecture and performance of a new open-weight LLM, relevant for understanding mechanistic interpretability and deployment.",
       "seenAt": "2026-10-29T17:01:28+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "mistral-releases-mistral-large-4-nvfp4-model"
     },
     {
       "id": "r9e40aeba6dfa444",
