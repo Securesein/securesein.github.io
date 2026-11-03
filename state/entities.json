@@ -138,6 +138,18 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "ai2/OlmoEarth/v1_2-FT-LFMC-Base/new_model": {
+      "slug": "allenai-releases-olmoearth-v1-2-ft-lfmc-base-model-for-mapping-live-fuel-moisture-content",
+      "coveredAt": "2026-11-03T23:02:02+00:00",
+      "facts": [
+        "open_weights"
+      ]
+    },
+    "nvidia/DeepSeek/4.1/version_bump": {
+      "slug": "nvidia-releases-quantized-deepseek-v4-1-flash-1017-nvfp4-model",
+      "coveredAt": "2026-11-03T23:02:13+00:00",
+      "facts": []
     }
   }
 }

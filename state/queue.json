@@ -2,73 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-10-27T17:01:22+00:00",
-      "score": 7.0,
-      "itemId": "49035d07d373fa90",
-      "title": "Your next sales teammate should be a Grok Bot",
-      "url": "https://x.ai/news/grok-bot-sales",
-      "source": "xAI — News",
-      "tier": "primary",
-      "entity": "xai/Grok/1.0/new_model",
-      "eventType": "new_model",
-      "vendor": "xai",
-      "family": "Grok",
-      "version": "1.0",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 0.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "The Grok Bot's design and deployment insights can enhance understanding of LLMs' internal mechanisms and improve agent security in production environments.",
-      "candidateId": "r2cf69418651c9e4",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-27T23:01:38+00:00",
-      "score": 7.0,
-      "itemId": "e243bc5f4862b97d",
-      "title": "GPT-6.1 Terra in ChatGPT Work, Codex, and the API",
-      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
-      "source": "OpenAI — Release notes",
-      "tier": "primary",
-      "entity": "openai/GPT/6.1/version_bump",
-      "eventType": "version_bump",
-      "vendor": "openai",
-      "family": "GPT",
-      "version": "6.1",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_version_bump_major +3",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This release provides insights into the internal workings and deployment of LLMs, relevant for understanding mechanistic interpretability and production serving.",
-      "candidateId": "r02941faf3e7dee3",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-10-27T23:01:41+00:00",
       "score": 6.0,
       "itemId": "5623d1c5c598d11b",
@@ -99,42 +32,6 @@
       "candidateId": "r82d8dba53ce9ad3",
       "topics": [
         "reasoning"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-10-28T23:01:30+00:00",
-      "score": 9.0,
-      "itemId": "hf:allenai/OlmoEarth-v1_2-FT-LFMC-Base",
-      "title": "allenai/OlmoEarth-v1_2-FT-LFMC-Base",
-      "url": "https://huggingface.co/allenai/OlmoEarth-v1_2-FT-LFMC-Base",
-      "source": "HF org — Ai2",
-      "tier": "primary",
-      "entity": "ai2/OlmoEarth/v1_2-FT-LFMC-Base/new_model",
-      "eventType": "new_model",
-      "vendor": "ai2",
-      "family": "OlmoEarth",
-      "version": "v1_2-FT-LFMC-Base",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 52.7,
-      "whyRelevant": "This model's open-weight architecture allows for local inference and exploration of LLM mechanisms, relevant for understanding interpretability and security in deployment.",
-      "candidateId": "r691aea7ca2e2710",
-      "topics": [
-        "llms"
       ]
     },
     {
@@ -208,7 +105,8 @@
       "candidateId": "r9b320b1de442a7b",
       "topics": [
         "llms"
-      ]
+      ],
+      "attempts": 1
     },
     {
       "channel": "releases",
@@ -248,40 +146,6 @@
     },
     {
       "channel": "releases",
-      "queuedAt": "2026-10-30T23:01:35+00:00",
-      "score": 7.0,
-      "itemId": "hf:nvidia/DeepSeek-V4.1-Flash-1017-NVFP4",
-      "title": "nvidia/DeepSeek-V4.1-Flash-1017-NVFP4",
-      "url": "https://huggingface.co/nvidia/DeepSeek-V4.1-Flash-1017-NVFP4",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/DeepSeek/4.1/version_bump",
-      "eventType": "version_bump",
-      "vendor": "nvidia",
-      "family": "DeepSeek",
-      "version": "4.1",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_version_bump_major +3",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This release may provide insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and production serving of models.",
-      "candidateId": "re12a03bcdc70b32",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-02T17:01:29+00:00",
       "score": 8.0,
       "itemId": "47abcccc8ff0f1c5",
@@ -312,7 +176,8 @@
       "candidateId": "r2c16a781da93d07",
       "topics": [
         "llms"
-      ]
+      ],
+      "attempts": 1
     },
     {
       "channel": "releases",
@@ -346,6 +211,41 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This item may provide insights into LLM architectures and deployment strategies relevant for understanding mechanistic interpretability and production serving.",
       "candidateId": "r73385334eb32130",
+      "topics": [
+        "llms"
+      ],
+      "attempts": 1
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-03T23:01:56+00:00",
+      "score": 7.0,
+      "itemId": "89dd67c5e747f67b",
+      "title": "Text generated by Claude Mythos 5, Claude Opus 4.7 , and Claude Sonnet 4.6 carries Anthropic’s text watermark on the platforms listed in How Claude marks AI-generated content . On ",
+      "url": "https://docs.claude.com/en/release-notes/overview#november-3-2026",
+      "source": "Anthropic — Claude docs release notes",
+      "tier": "primary",
+      "entity": "anthropic/Claude/4.7/version_bump",
+      "eventType": "version_bump",
+      "vendor": "anthropic",
+      "family": "Claude",
+      "version": "4.7",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_version_bump_major +3",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 50.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item discusses watermarking in LLMs, relevant for understanding model transparency and security in deployment and inference contexts.",
+      "candidateId": "re9d27ee927d1f75",
       "topics": [
         "llms"
       ]

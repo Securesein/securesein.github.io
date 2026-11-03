@@ -303,6 +303,22 @@
       "publishedAt": "2026-11-03T17:01:51+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 21.2
+    },
+    {
+      "slug": "allenai-releases-olmoearth-v1-2-ft-lfmc-base-model-for-mapping-live-fuel-moisture-content",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-03T23:02:02+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 52.7
+    },
+    {
+      "slug": "nvidia-releases-quantized-deepseek-v4-1-flash-1017-nvfp4-model",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-03T23:02:13+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
     }
   ]
 }

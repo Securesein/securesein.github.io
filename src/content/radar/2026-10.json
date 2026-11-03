@@ -1608,7 +1608,8 @@
       "relevanceScore": 52.7,
       "whyRelevant": "This model's open-weight architecture allows for local inference and exploration of LLM mechanisms, relevant for understanding interpretability and security in deployment.",
       "seenAt": "2026-10-28T23:01:30+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "allenai-releases-olmoearth-v1-2-ft-lfmc-base-model-for-mapping-live-fuel-moisture-content"
     },
     {
       "id": "rbd03e4a483646b8",
@@ -1700,7 +1701,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This release may provide insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and production serving of models.",
       "seenAt": "2026-10-30T23:01:35+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "nvidia-releases-quantized-deepseek-v4-1-flash-1017-nvfp4-model"
     }
   ]
 }
