@@ -15,6 +15,21 @@
       "whyRelevant": "This item discusses advancements in LLMs, including their internal workings and deployment, relevant for understanding mechanistic interpretability and production serving.",
       "seenAt": "2026-11-02T17:01:29+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r73385334eb32130",
+      "url": "https://huggingface.co/ByteDance-Seed/GenFirst",
+      "title": "ByteDance-Seed/GenFirst",
+      "source": "HF org — ByteDance Seed",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 0.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into LLM architectures and deployment strategies relevant for understanding mechanistic interpretability and production serving.",
+      "seenAt": "2026-11-03T11:01:19+00:00",
+      "status": "radar"
     }
   ]
 }
