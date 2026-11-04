@@ -1656,7 +1656,8 @@
       "relevanceScore": 35.2,
       "whyRelevant": "This update on legacy APIs may impact how users analyze LLM performance and cost, relevant for those deploying and optimizing models in production.",
       "seenAt": "2026-10-29T23:01:47+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "claude-opus-4-8-fast-mode-deprecation-and-migration-to-opus-5-5"
     },
     {
       "id": "r9b320b1de442a7b",

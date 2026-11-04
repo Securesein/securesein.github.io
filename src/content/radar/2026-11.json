@@ -14,7 +14,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This item discusses advancements in LLMs, including their internal workings and deployment, relevant for understanding mechanistic interpretability and production serving.",
       "seenAt": "2026-11-02T17:01:29+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "openai-launches-gpt-rosalind-for-life-sciences"
     },
     {
       "id": "r73385334eb32130",
@@ -40,7 +41,7 @@
       "topics": [
         "llms"
       ],
-      "qualityScore": 50.0,
+      "qualityScore": 55.0,
       "relevanceScore": 21.2,
       "whyRelevant": "This item discusses watermarking in LLMs, relevant for understanding model transparency and security in deployment and inference contexts.",
       "seenAt": "2026-11-03T23:01:56+00:00",

@@ -150,6 +150,18 @@
       "slug": "nvidia-releases-quantized-deepseek-v4-1-flash-1017-nvfp4-model",
       "coveredAt": "2026-11-03T23:02:13+00:00",
       "facts": []
+    },
+    "openai/GPT/6/new_model": {
+      "slug": "openai-launches-gpt-rosalind-for-life-sciences",
+      "coveredAt": "2026-11-04T05:01:45+00:00",
+      "facts": []
+    },
+    "anthropic/Claude/-/deprecation": {
+      "slug": "claude-opus-4-8-fast-mode-deprecation-and-migration-to-opus-5-5",
+      "coveredAt": "2026-11-04T05:01:53+00:00",
+      "facts": [
+        "deprecation"
+      ]
     }
   }
 }

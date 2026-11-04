@@ -319,6 +319,22 @@
       "publishedAt": "2026-11-03T23:02:13+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 21.2
+    },
+    {
+      "slug": "openai-launches-gpt-rosalind-for-life-sciences",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-04T05:01:45+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
+    },
+    {
+      "slug": "claude-opus-4-8-fast-mode-deprecation-and-migration-to-opus-5-5",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-04T05:01:53+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 35.2
     }
   ]
 }
