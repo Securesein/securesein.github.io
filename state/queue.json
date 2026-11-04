@@ -178,6 +178,42 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-04T23:01:51+00:00",
+      "score": 8.0,
+      "itemId": "https://openai.com/index/devrev-enterprise-self-service",
+      "title": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
+      "url": "https://openai.com/index/devrev-enterprise-self-service",
+      "source": "OpenAI — News",
+      "tier": "primary",
+      "entity": "openai/GPT/6.1 Sol/new_model",
+      "eventType": "new_model",
+      "vendor": "openai",
+      "family": "GPT",
+      "version": "6.1 Sol",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This release may provide insights into LLM reasoning and agent capabilities, relevant for understanding internal mechanisms and enhancing model deployment.",
+      "candidateId": "r981785a01550309",
+      "topics": [
+        "llms",
+        "reasoning",
+        "agents"
+      ]
     }
   ]
 }

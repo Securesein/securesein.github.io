@@ -61,6 +61,23 @@
       "whyRelevant": "This release provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
       "seenAt": "2026-11-04T17:01:25+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r981785a01550309",
+      "url": "https://openai.com/index/devrev-enterprise-self-service",
+      "title": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
+      "source": "OpenAI — News",
+      "section": "release",
+      "topics": [
+        "llms",
+        "reasoning",
+        "agents"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 56.5,
+      "whyRelevant": "This release may provide insights into LLM reasoning and agent capabilities, relevant for understanding internal mechanisms and enhancing model deployment.",
+      "seenAt": "2026-11-04T23:01:51+00:00",
+      "status": "radar"
     }
   ]
 }
