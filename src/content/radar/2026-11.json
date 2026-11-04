@@ -46,6 +46,21 @@
       "whyRelevant": "This item discusses watermarking in LLMs, relevant for understanding model transparency and security in deployment and inference contexts.",
       "seenAt": "2026-11-03T23:01:56+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r549c2886efdfeae",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "title": "moonshotai/Kimi-K3.1-Pro",
+      "source": "HF org — Moonshot AI (Kimi)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "seenAt": "2026-11-04T17:01:25+00:00",
+      "status": "radar"
     }
   ]
 }
