@@ -162,6 +162,11 @@
       "facts": [
         "deprecation"
       ]
+    },
+    "openai/GPT/6.1 Sol/new_model": {
+      "slug": "devrev-launches-autonomous-self-service-with-gpt-6-1-sol",
+      "coveredAt": "2026-11-05T23:02:08+00:00",
+      "facts": []
     }
   }
 }

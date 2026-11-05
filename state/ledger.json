@@ -335,6 +335,14 @@
       "publishedAt": "2026-11-04T05:01:53+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 35.2
+    },
+    {
+      "slug": "devrev-launches-autonomous-self-service-with-gpt-6-1-sol",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-05T23:02:08+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 56.5
     }
   ]
 }
