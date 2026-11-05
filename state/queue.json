@@ -214,6 +214,39 @@
         "reasoning",
         "agents"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-05T17:01:23+00:00",
+      "score": 7.0,
+      "itemId": "hf:ByteDance-Seed/Qwen3-30B-A3B-MoE-SAE",
+      "title": "ByteDance-Seed/Qwen3-30B-A3B-MoE-SAE",
+      "url": "https://huggingface.co/ByteDance-Seed/Qwen3-30B-A3B-MoE-SAE",
+      "source": "HF org — ByteDance Seed",
+      "tier": "primary",
+      "entity": "bytedance/Qwen/3-30B-A3B-MoE-SAE/new_model",
+      "eventType": "new_model",
+      "vendor": "bytedance",
+      "family": "Qwen",
+      "version": "3-30B-A3B-MoE-SAE",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This model's focus on interpretability may provide insights into LLM mechanisms and enhance understanding of reasoning and inference efficiency in production environments.",
+      "candidateId": "r2186e0800f03692",
+      "topics": [
+        "interpretability"
+      ]
     }
   ]
 }

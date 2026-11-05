@@ -78,6 +78,21 @@
       "whyRelevant": "This release may provide insights into LLM reasoning and agent capabilities, relevant for understanding internal mechanisms and enhancing model deployment.",
       "seenAt": "2026-11-04T23:01:51+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r2186e0800f03692",
+      "url": "https://huggingface.co/ByteDance-Seed/Qwen3-30B-A3B-MoE-SAE",
+      "title": "ByteDance-Seed/Qwen3-30B-A3B-MoE-SAE",
+      "source": "HF org — ByteDance Seed",
+      "section": "release",
+      "topics": [
+        "interpretability"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 59.4,
+      "whyRelevant": "This model's focus on interpretability may provide insights into LLM mechanisms and enhance understanding of reasoning and inference efficiency in production environments.",
+      "seenAt": "2026-11-05T17:01:23+00:00",
+      "status": "radar"
     }
   ]
 }
