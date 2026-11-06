@@ -207,6 +207,42 @@
         "llms"
       ],
       "attempts": 1
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-06T11:01:27+00:00",
+      "score": 9.0,
+      "itemId": "hf:ByteDance-Seed/Cola2",
+      "title": "ByteDance-Seed/Cola2",
+      "url": "https://huggingface.co/ByteDance-Seed/Cola2",
+      "source": "HF org — ByteDance Seed",
+      "tier": "primary",
+      "entity": "bytedance/Cola2/1.0/new_model",
+      "eventType": "new_model",
+      "vendor": "bytedance",
+      "family": "Cola2",
+      "version": "1.0",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Cola2's open-weight model facilitates local inference and mechanistic interpretability, relevant for understanding LLM internals and enhancing reasoning efficiency in production.",
+      "candidateId": "rf50a301612c666d",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }

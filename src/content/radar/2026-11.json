@@ -124,6 +124,21 @@
       "whyRelevant": "This model provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
       "seenAt": "2026-11-05T23:01:52+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rf50a301612c666d",
+      "url": "https://huggingface.co/ByteDance-Seed/Cola2",
+      "title": "ByteDance-Seed/Cola2",
+      "source": "HF org — ByteDance Seed",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Cola2's open-weight model facilitates local inference and mechanistic interpretability, relevant for understanding LLM internals and enhancing reasoning efficiency in production.",
+      "seenAt": "2026-11-06T11:01:27+00:00",
+      "status": "radar"
     }
   ]
 }
