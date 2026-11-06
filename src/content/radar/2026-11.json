@@ -139,6 +139,37 @@
       "whyRelevant": "Cola2's open-weight model facilitates local inference and mechanistic interpretability, relevant for understanding LLM internals and enhancing reasoning efficiency in production.",
       "seenAt": "2026-11-06T11:01:27+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rc93446c09fc4939",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-cyber",
+      "title": "GPT-6-Cyber for authorized vulnerability research",
+      "source": "OpenAI — Release notes",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item is relevant as it discusses a specific application of LLMs in cybersecurity, which intersects with model deployment and security considerations.",
+      "seenAt": "2026-11-06T23:01:29+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re5a487dd15bf6ed",
+      "url": "https://developers.openai.com/api/docs/models/gpt-image-2.6-sunburst",
+      "title": "ChatGPT Images 2.6 and GPT Image 2.6 Sunburst and Flare",
+      "source": "OpenAI — Release notes",
+      "section": "release",
+      "topics": [
+        "llms",
+        "multimodal"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 37.1,
+      "whyRelevant": "This release may provide insights into multimodal LLM capabilities, relevant for understanding internal mechanisms and enhancing inference efficiency in production environments.",
+      "seenAt": "2026-11-06T23:01:32+00:00",
+      "status": "radar"
     }
   ]
 }
