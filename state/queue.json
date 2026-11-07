@@ -2,42 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-10-30T23:01:33+00:00",
-      "score": 6.0,
-      "itemId": "4c3a2f6c73b859e3",
-      "title": "We’ve deprecated fast mode for Claude Opus 4.8, with removal on November 30, 2026. After removal, requests to claude-opus-4-8 with speed: \"fast\" will return an error. To continue u",
-      "url": "https://docs.claude.com/en/release-notes/overview#october-30-2026",
-      "source": "Anthropic — Claude docs release notes",
-      "tier": "primary",
-      "entity": "anthropic/Claude Opus/4.8/deprecation",
-      "eventType": "deprecation",
-      "vendor": "anthropic",
-      "family": "Claude Opus",
-      "version": "4.8",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_deprecation +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "deprecation"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This update impacts deployment strategies for LLMs, particularly regarding performance optimization and error handling in production environments.",
-      "candidateId": "r47b573d1c4d161b",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-03T23:01:56+00:00",
       "score": 7.0,
       "itemId": "89dd67c5e747f67b",
@@ -311,6 +275,45 @@
       "topics": [
         "llms",
         "multimodal"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-07T05:01:48+00:00",
+      "score": 6.0,
+      "itemId": "86b5725a099e9e140e215d5df331c144076d8067",
+      "title": "Kimi K3.1 Pro (Highspeed) now available on Amazon Bedrock",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/moonshot-ai-kimi-k3-1-pro-on-amazon-bedrock",
+      "source": "AWS — What's New",
+      "tier": "primary",
+      "entity": "moonshot/Kimi/3.1 Pro/availability",
+      "eventType": "availability",
+      "vendor": "moonshot",
+      "family": "Kimi",
+      "version": "3.1 Pro",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_availability +1",
+        "open_weights +2"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "ga_date",
+        "open_weights"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "The Kimi K3.1 Pro's high-speed capabilities may enhance local inference efficiency for deploying LLMs in production, relevant to your interests.",
+      "candidateId": "r9579730c1ffa66d",
+      "topics": [
+        "agents",
+        "llms",
+        "inference"
       ]
     }
   ]

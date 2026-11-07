@@ -170,6 +170,23 @@
       "whyRelevant": "This release may provide insights into multimodal LLM capabilities, relevant for understanding internal mechanisms and enhancing inference efficiency in production environments.",
       "seenAt": "2026-11-06T23:01:32+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r9579730c1ffa66d",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/moonshot-ai-kimi-k3-1-pro-on-amazon-bedrock",
+      "title": "Kimi K3.1 Pro (Highspeed) now available on Amazon Bedrock",
+      "source": "AWS — What's New",
+      "section": "release",
+      "topics": [
+        "agents",
+        "llms",
+        "inference"
+      ],
+      "qualityScore": 70.0,
+      "relevanceScore": 70.0,
+      "whyRelevant": "The Kimi K3.1 Pro's high-speed capabilities may enhance local inference efficiency for deploying LLMs in production, relevant to your interests.",
+      "seenAt": "2026-11-07T05:01:48+00:00",
+      "status": "radar"
     }
   ]
 }
