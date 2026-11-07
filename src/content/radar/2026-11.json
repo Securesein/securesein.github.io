@@ -187,6 +187,21 @@
       "whyRelevant": "The Kimi K3.1 Pro's high-speed capabilities may enhance local inference efficiency for deploying LLMs in production, relevant to your interests.",
       "seenAt": "2026-11-07T05:01:48+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r933fb9737a01f17",
+      "url": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16",
+      "title": "tencent/Qwen3.8-27B-DSpine-b16",
+      "source": "HF org — Tencent (Hunyuan)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's architecture and open weights provide insights into LLM internals and facilitate local inference, relevant for mechanistic interpretability and deployment.",
+      "seenAt": "2026-11-07T17:01:20+00:00",
+      "status": "radar"
     }
   ]
 }

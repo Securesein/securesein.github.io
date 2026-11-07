@@ -315,6 +315,39 @@
         "llms",
         "inference"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-07T17:01:20+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/Qwen3.8-27B-DSpine-b16",
+      "title": "tencent/Qwen3.8-27B-DSpine-b16",
+      "url": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/Qwen/3.8/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "Qwen",
+      "version": "3.8",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's architecture and open weights provide insights into LLM internals and facilitate local inference, relevant for mechanistic interpretability and deployment.",
+      "candidateId": "r933fb9737a01f17",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }
