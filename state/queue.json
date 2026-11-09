@@ -348,6 +348,44 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-09T23:01:33+00:00",
+      "score": 7.0,
+      "itemId": "28a4e6cdea785599",
+      "title": "We’ve launched Claude Fable 5.2 ( claude-fable-5-2 ), built for demanding reasoning and long-horizon agentic work. Claude Mythos 5.2 ( claude-mythos-5-2 ) offers the same capabilit",
+      "url": "https://docs.claude.com/en/release-notes/overview#november-9-2026",
+      "source": "Anthropic — Claude docs release notes",
+      "tier": "primary",
+      "entity": "anthropic/Claude Fable/5.2/version_bump",
+      "eventType": "version_bump",
+      "vendor": "anthropic",
+      "family": "Claude Fable",
+      "version": "5.2",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_version_bump_major +3",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "pricing"
+      ],
+      "qualityScore": 80.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "This release focuses on enhancing reasoning capabilities in LLMs, which is crucial for understanding their internal mechanisms and improving inference efficiency.",
+      "candidateId": "r5d96dad3ab8b467",
+      "topics": [
+        "llms",
+        "reasoning",
+        "agents"
+      ]
     }
   ]
 }

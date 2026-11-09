@@ -202,6 +202,23 @@
       "whyRelevant": "This model's architecture and open weights provide insights into LLM internals and facilitate local inference, relevant for mechanistic interpretability and deployment.",
       "seenAt": "2026-11-07T17:01:20+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r5d96dad3ab8b467",
+      "url": "https://docs.claude.com/en/release-notes/overview#november-9-2026",
+      "title": "We’ve launched Claude Fable 5.2 ( claude-fable-5-2 ), built for demanding reasoning and long-horizon agentic work. Claude Mythos 5.2 ( claude-mythos-5-2 ) offers the same capabilit",
+      "source": "Anthropic — Claude docs release notes",
+      "section": "release",
+      "topics": [
+        "llms",
+        "reasoning",
+        "agents"
+      ],
+      "qualityScore": 50.0,
+      "relevanceScore": 35.2,
+      "whyRelevant": "This release highlights toolset support for LLMs, relevant for understanding internal mechanisms and enhancing inference efficiency in production environments.",
+      "seenAt": "2026-11-09T23:01:33+00:00",
+      "status": "radar"
     }
   ]
 }
