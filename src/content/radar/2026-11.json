@@ -233,7 +233,8 @@
       "relevanceScore": 25.2,
       "whyRelevant": "This model's multimodal capabilities may provide insights into LLM interpretability and efficiency in reasoning, relevant for understanding internal mechanisms and deployment.",
       "seenAt": "2026-11-10T17:01:25+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "minimax-h3-image-pe-new-prompt-expansion-model-for-image-generation"
     },
     {
       "id": "r01bb1208db1a275",

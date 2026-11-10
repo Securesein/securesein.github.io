@@ -167,6 +167,13 @@
       "slug": "devrev-launches-autonomous-self-service-with-gpt-6-1-sol",
       "coveredAt": "2026-11-05T23:02:08+00:00",
       "facts": []
+    },
+    "minimax/MiniMax-H3/Image-PE/new_model": {
+      "slug": "minimax-h3-image-pe-new-prompt-expansion-model-for-image-generation",
+      "coveredAt": "2026-11-10T23:01:55+00:00",
+      "facts": [
+        "open_weights"
+      ]
     }
   }
 }
