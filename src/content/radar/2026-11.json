@@ -219,6 +219,36 @@
       "whyRelevant": "This release highlights toolset support for LLMs, relevant for understanding internal mechanisms and enhancing inference efficiency in production environments.",
       "seenAt": "2026-11-09T23:01:33+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r09b812e7c387377",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image-PE",
+      "title": "MiniMaxAI/MiniMax-H3-Image-PE",
+      "source": "HF org — MiniMax",
+      "section": "release",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "This model's multimodal capabilities may provide insights into LLM interpretability and efficiency in reasoning, relevant for understanding internal mechanisms and deployment.",
+      "seenAt": "2026-11-10T17:01:25+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r01bb1208db1a275",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+      "title": "MiniMaxAI/MiniMax-H3-Image",
+      "source": "HF org — MiniMax",
+      "section": "release",
+      "topics": [
+        "multimodal"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "This model's multimodal capabilities may provide insights into LLM interpretability and efficiency in reasoning, relevant for deploying and securing models.",
+      "seenAt": "2026-11-10T17:01:27+00:00",
+      "status": "radar"
     }
   ]
 }
