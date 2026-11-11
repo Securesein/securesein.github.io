@@ -60,7 +60,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This release provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
       "seenAt": "2026-11-04T17:01:25+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "moonshot-ai-launches-kimi-k3-1-pro"
     },
     {
       "id": "r981785a01550309",
@@ -155,7 +156,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This item is relevant as it discusses a specific application of LLMs in cybersecurity, which intersects with model deployment and security considerations.",
       "seenAt": "2026-11-06T23:01:29+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "openai-launches-gpt-6-cyber-model-via-api"
     },
     {
       "id": "re5a487dd15bf6ed",

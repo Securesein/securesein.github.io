@@ -367,6 +367,22 @@
       "publishedAt": "2026-11-11T05:01:55+00:00",
       "qualityScore": 40.0,
       "relevanceScore": 21.2
+    },
+    {
+      "slug": "openai-launches-gpt-6-cyber-model-via-api",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-11T11:01:27+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
+    },
+    {
+      "slug": "moonshot-ai-launches-kimi-k3-1-pro",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-11T11:01:30+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
     }
   ]
 }

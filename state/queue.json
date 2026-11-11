@@ -2,39 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-11-04T17:01:25+00:00",
-      "score": 7.0,
-      "itemId": "hf:moonshotai/Kimi-K3.1-Pro",
-      "title": "moonshotai/Kimi-K3.1-Pro",
-      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
-      "source": "HF org — Moonshot AI (Kimi)",
-      "tier": "primary",
-      "entity": "moonshot/Kimi/K3.1-Pro/new_model",
-      "eventType": "new_model",
-      "vendor": "moonshot",
-      "family": "Kimi",
-      "version": "K3.1-Pro",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This release provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
-      "candidateId": "r549c2886efdfeae",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-05T17:01:23+00:00",
       "score": 7.0,
       "itemId": "hf:ByteDance-Seed/Qwen3-30B-A3B-MoE-SAE",
@@ -64,77 +31,6 @@
       "candidateId": "r2186e0800f03692",
       "topics": [
         "interpretability"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-11-06T11:01:27+00:00",
-      "score": 9.0,
-      "itemId": "hf:ByteDance-Seed/Cola2",
-      "title": "ByteDance-Seed/Cola2",
-      "url": "https://huggingface.co/ByteDance-Seed/Cola2",
-      "source": "HF org — ByteDance Seed",
-      "tier": "primary",
-      "entity": "bytedance/Cola2/1.0/new_model",
-      "eventType": "new_model",
-      "vendor": "bytedance",
-      "family": "Cola2",
-      "version": "1.0",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "Cola2's open-weight model facilitates local inference and mechanistic interpretability, relevant for understanding LLM internals and enhancing reasoning efficiency in production.",
-      "candidateId": "rf50a301612c666d",
-      "topics": [
-        "llms"
-      ],
-      "attempts": 2
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-11-06T23:01:29+00:00",
-      "score": 8.0,
-      "itemId": "3e12aeb038edfc8d",
-      "title": "GPT-6-Cyber for authorized vulnerability research",
-      "url": "https://developers.openai.com/api/docs/models/gpt-6-cyber",
-      "source": "OpenAI — Release notes",
-      "tier": "primary",
-      "entity": "openai/GPT-6/-/new_model",
-      "eventType": "new_model",
-      "vendor": "openai",
-      "family": "GPT-6",
-      "version": "",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This item is relevant as it discusses a specific application of LLMs in cybersecurity, which intersects with model deployment and security considerations.",
-      "candidateId": "rc93446c09fc4939",
-      "topics": [
-        "llms"
       ]
     },
     {
