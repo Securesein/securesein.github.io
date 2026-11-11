@@ -143,7 +143,7 @@
     {
       "channel": "releases",
       "queuedAt": "2026-11-09T23:01:33+00:00",
-      "score": 7.0,
+      "score": 6.0,
       "itemId": "28a4e6cdea785599",
       "title": "We’ve launched Claude Fable 5.2 ( claude-fable-5-2 ), built for demanding reasoning and long-horizon agentic work. Claude Mythos 5.2 ( claude-mythos-5-2 ) offers the same capabilit",
       "url": "https://docs.claude.com/en/release-notes/overview#november-9-2026",
@@ -241,6 +241,39 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This model's open weights and architecture provide insights into LLM internals, aiding research in mechanistic interpretability and efficient reasoning.",
       "candidateId": "re8c4d9a8cbab77f",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-11T23:01:31+00:00",
+      "score": 7.0,
+      "itemId": "d99a0fab6b688a1d",
+      "title": "Introducing Grok Bot 1.0",
+      "url": "https://x.ai/news/grok-bot-1-0",
+      "source": "xAI — News",
+      "tier": "primary",
+      "entity": "xai/Grok Bot/1.0/new_model",
+      "eventType": "new_model",
+      "vendor": "xai",
+      "family": "Grok Bot",
+      "version": "1.0",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 0.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Grok Bot 1.0 may provide insights into LLM deployment and operational efficiency, but lacks depth in mechanistic interpretability and internal workings.",
+      "candidateId": "re31c17dbbe3f793",
       "topics": [
         "llms"
       ]

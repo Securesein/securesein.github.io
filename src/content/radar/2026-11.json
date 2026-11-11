@@ -218,9 +218,9 @@
         "reasoning",
         "agents"
       ],
-      "qualityScore": 50.0,
+      "qualityScore": 25.0,
       "relevanceScore": 35.2,
-      "whyRelevant": "This release highlights toolset support for LLMs, relevant for understanding internal mechanisms and enhancing inference efficiency in production environments.",
+      "whyRelevant": "This release provides insights into model support that can inform deployment strategies and security considerations for LLMs in production environments.",
       "seenAt": "2026-11-09T23:01:33+00:00",
       "status": "radar"
     },
@@ -268,6 +268,21 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This model's open weights and architecture provide insights into LLM internals, aiding research in mechanistic interpretability and efficient reasoning.",
       "seenAt": "2026-11-11T17:01:29+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "re31c17dbbe3f793",
+      "url": "https://x.ai/news/grok-bot-1-0",
+      "title": "Introducing Grok Bot 1.0",
+      "source": "xAI — News",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 0.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Grok Bot 1.0 may provide insights into LLM deployment and operational efficiency, but lacks depth in mechanistic interpretability and internal workings.",
+      "seenAt": "2026-11-11T23:01:31+00:00",
       "status": "radar"
     }
   ]
