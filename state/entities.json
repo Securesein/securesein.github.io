@@ -174,6 +174,18 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "ai2/Molmo/2-4B-tb/new_model": {
+      "slug": "introducing-molmo2-4b-tb-a-vision-language-model-for-robotics",
+      "coveredAt": "2026-11-11T05:01:49+00:00",
+      "facts": [
+        "open_weights"
+      ]
+    },
+    "openai/GPT/6 Cyber/new_model": {
+      "slug": "openai-releases-gpt-6-cyber-for-enhanced-cybersecurity",
+      "coveredAt": "2026-11-11T05:01:55+00:00",
+      "facts": []
     }
   }
 }

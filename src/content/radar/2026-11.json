@@ -108,7 +108,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This item discusses advancements in aligned cybersecurity agents, relevant for understanding LLM security and their deployment in real-world applications.",
       "seenAt": "2026-11-05T23:01:50+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "openai-releases-gpt-6-cyber-for-enhanced-cybersecurity"
     },
     {
       "id": "rd5215c4f01c0245",
@@ -123,7 +124,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This model provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
       "seenAt": "2026-11-05T23:01:52+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "introducing-molmo2-4b-tb-a-vision-language-model-for-robotics"
     },
     {
       "id": "rf50a301612c666d",
