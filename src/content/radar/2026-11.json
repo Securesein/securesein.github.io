@@ -284,6 +284,40 @@
       "whyRelevant": "Grok Bot 1.0 may provide insights into LLM deployment and operational efficiency, but lacks depth in mechanistic interpretability and internal workings.",
       "seenAt": "2026-11-11T23:01:31+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r1f5e80ecd028db8",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/ornith-1-0-9b-ornith-1-0-35b-on-sagemaker-jumpstart/",
+      "title": "Ornith-1.0-9B and Ornith-1.0-35B models now available on Amazon SageMaker JumpStart",
+      "source": "AWS — What's New",
+      "section": "release",
+      "topics": [
+        "llms",
+        "agents",
+        "reinforcement-learning"
+      ],
+      "qualityScore": 95.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "These models provide open-weight options for exploring LLM internals and deploying them in production, relevant for mechanistic interpretability and inference efficiency.",
+      "seenAt": "2026-11-12T05:01:51+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r8fb2921730aed5b",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/",
+      "title": "DeepSeek-V4-Pro, DeepSeek-V4-Flash, and DeepSeek-V4.1-Flash models now available on Amazon SageMaker JumpStart",
+      "source": "AWS — What's New",
+      "section": "release",
+      "topics": [
+        "llms",
+        "reasoning",
+        "agents"
+      ],
+      "qualityScore": 95.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "These models provide open-weight options for exploring LLM internals and enhancing reasoning efficiency in production environments.",
+      "seenAt": "2026-11-12T05:01:54+00:00",
+      "status": "radar"
     }
   ]
 }

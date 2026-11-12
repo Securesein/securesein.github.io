@@ -277,6 +277,86 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-12T05:01:51+00:00",
+      "score": 7.0,
+      "itemId": "03fba84e76b2bb2cd0cf13aa4cce5e2c0f8bb648",
+      "title": "Ornith-1.0-9B and Ornith-1.0-35B models now available on Amazon SageMaker JumpStart",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/ornith-1-0-9b-ornith-1-0-35b-on-sagemaker-jumpstart/",
+      "source": "AWS — What's New",
+      "tier": "primary",
+      "entity": "amazon/Ornith/1.0/availability",
+      "eventType": "availability",
+      "vendor": "amazon",
+      "family": "Ornith",
+      "version": "1.0",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_availability +1",
+        "open_weights +2",
+        "benchmark_claims_present +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "ga_date",
+        "open_weights",
+        "benchmark_claim"
+      ],
+      "qualityScore": 95.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "These models provide open-weight options for exploring LLM internals and deploying them in production, relevant for mechanistic interpretability and inference efficiency.",
+      "candidateId": "r1f5e80ecd028db8",
+      "topics": [
+        "llms",
+        "agents",
+        "reinforcement-learning"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-12T05:01:54+00:00",
+      "score": 6.0,
+      "itemId": "207a39dbc5b502aba399bf68a4f579ee65521079",
+      "title": "DeepSeek-V4-Pro, DeepSeek-V4-Flash, and DeepSeek-V4.1-Flash models now available on Amazon SageMaker JumpStart",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/",
+      "source": "AWS — What's New",
+      "tier": "primary",
+      "entity": "amazon/DeepSeek/V4/availability",
+      "eventType": "availability",
+      "vendor": "amazon",
+      "family": "DeepSeek",
+      "version": "V4",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_availability +1",
+        "open_weights +2"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "ga_date",
+        "open_weights"
+      ],
+      "qualityScore": 95.0,
+      "relevanceScore": 63.2,
+      "whyRelevant": "These models provide open-weight options for exploring LLM internals and enhancing reasoning efficiency in production environments.",
+      "candidateId": "r8fb2921730aed5b",
+      "topics": [
+        "llms",
+        "reasoning",
+        "agents"
+      ]
     }
   ]
 }
