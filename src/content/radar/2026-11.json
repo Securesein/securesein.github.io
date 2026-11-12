@@ -318,6 +318,21 @@
       "whyRelevant": "These models provide open-weight options for exploring LLM internals and enhancing reasoning efficiency in production environments.",
       "seenAt": "2026-11-12T05:01:54+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rdc5ef85beff3915",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#retiring-advanced-and-standard-voice",
+      "title": "Retiring Advanced and Standard Voice",
+      "source": "OpenAI — Release notes",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item is relevant as it may impact the deployment and serving of LLMs, affecting their interpretability and security in production environments.",
+      "seenAt": "2026-11-12T23:01:22+00:00",
+      "status": "radar"
     }
   ]
 }
