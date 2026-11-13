@@ -2,41 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-11-06T23:01:32+00:00",
-      "score": 7.0,
-      "itemId": "13b47b35a4eb83d1",
-      "title": "ChatGPT Images 2.6 and GPT Image 2.6 Sunburst and Flare",
-      "url": "https://developers.openai.com/api/docs/models/gpt-image-2.6-sunburst",
-      "source": "OpenAI — Release notes",
-      "tier": "primary",
-      "entity": "openai/ChatGPT Images/2.6/version_bump",
-      "eventType": "version_bump",
-      "vendor": "openai",
-      "family": "ChatGPT Images",
-      "version": "2.6",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_version_bump_major +3",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 37.1,
-      "whyRelevant": "This release may provide insights into multimodal LLM capabilities, relevant for understanding internal mechanisms and enhancing inference efficiency in production environments.",
-      "candidateId": "re5a487dd15bf6ed",
-      "topics": [
-        "llms",
-        "multimodal"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-07T05:01:48+00:00",
       "score": 6.0,
       "itemId": "86b5725a099e9e140e215d5df331c144076d8067",
@@ -72,39 +37,6 @@
         "agents",
         "llms",
         "inference"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-11-07T17:01:20+00:00",
-      "score": 7.0,
-      "itemId": "hf:tencent/Qwen3.8-27B-DSpine-b16",
-      "title": "tencent/Qwen3.8-27B-DSpine-b16",
-      "url": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16",
-      "source": "HF org — Tencent (Hunyuan)",
-      "tier": "primary",
-      "entity": "tencent/Qwen/3.8/new_model",
-      "eventType": "new_model",
-      "vendor": "tencent",
-      "family": "Qwen",
-      "version": "3.8",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model's architecture and open weights provide insights into LLM internals and facilitate local inference, relevant for mechanistic interpretability and deployment.",
-      "candidateId": "r933fb9737a01f17",
-      "topics": [
-        "llms"
       ]
     },
     {
@@ -210,7 +142,8 @@
       "candidateId": "re8c4d9a8cbab77f",
       "topics": [
         "llms"
-      ]
+      ],
+      "attempts": 1
     },
     {
       "channel": "releases",
