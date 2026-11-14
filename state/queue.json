@@ -2,45 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-11-07T05:01:48+00:00",
-      "score": 6.0,
-      "itemId": "86b5725a099e9e140e215d5df331c144076d8067",
-      "title": "Kimi K3.1 Pro (Highspeed) now available on Amazon Bedrock",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/moonshot-ai-kimi-k3-1-pro-on-amazon-bedrock",
-      "source": "AWS — What's New",
-      "tier": "primary",
-      "entity": "moonshot/Kimi/3.1 Pro/availability",
-      "eventType": "availability",
-      "vendor": "moonshot",
-      "family": "Kimi",
-      "version": "3.1 Pro",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_availability +1",
-        "open_weights +2"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "ga_date",
-        "open_weights"
-      ],
-      "qualityScore": 70.0,
-      "relevanceScore": 70.0,
-      "whyRelevant": "The Kimi K3.1 Pro's high-speed capabilities may enhance local inference efficiency for deploying LLMs in production, relevant to your interests.",
-      "candidateId": "r9579730c1ffa66d",
-      "topics": [
-        "agents",
-        "llms",
-        "inference"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-09T23:01:33+00:00",
       "score": 6.0,
       "itemId": "28a4e6cdea785599",
