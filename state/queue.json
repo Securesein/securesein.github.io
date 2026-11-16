@@ -254,6 +254,392 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-16T23:01:39+00:00",
+      "score": 8.0,
+      "itemId": "f91cdb9cc8907f27",
+      "title": "OpenAI CSAM Image Classifier",
+      "url": "https://developers.openai.com/api/docs/guides/csam-classifier",
+      "source": "OpenAI — Release notes",
+      "tier": "primary",
+      "entity": "openai/CSAM Image Classifier/1.0/new_model",
+      "eventType": "new_model",
+      "vendor": "openai",
+      "family": "CSAM Image Classifier",
+      "version": "1.0",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "The OpenAI CSAM Image Classifier provides insights into multimodal model behavior, relevant for understanding LLM security and interpretability in production environments.",
+      "candidateId": "r8b9c547f34dbdc5",
+      "topics": [
+        "multimodal"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-16T23:01:41+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-spec-3B",
+      "title": "nvidia/Nemotron-Labs-Sigma-distill-spec-3B",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-spec-3B",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Nemotron/1.0/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Nemotron",
+      "version": "1.0",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
+      "candidateId": "rb4eaa7e04594d16",
+      "topics": [
+        "training"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-16T23:01:43+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-8B-nfe16",
+      "title": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe16",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-8B-nfe16",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Nemotron/Sigma-distill-8B-nfe16/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Nemotron",
+      "version": "Sigma-distill-8B-nfe16",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
+      "candidateId": "r5c0aec89e7fd86e",
+      "topics": [
+        "training"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-16T23:01:45+00:00",
+      "score": 10.0,
+      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-8B-nfe8",
+      "title": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe8",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-8B-nfe8",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Nemotron/distill-8B-nfe8/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Nemotron",
+      "version": "distill-8B-nfe8",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This release provides insights into training methods that could enhance understanding of LLM internals and improve inference efficiency in production environments.",
+      "candidateId": "r271fbac047ec99b",
+      "topics": [
+        "training"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-16T23:01:48+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-8B-nfe4",
+      "title": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe4",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-8B-nfe4",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Nemotron/Sigma-distill-8B-nfe4/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Nemotron",
+      "version": "Sigma-distill-8B-nfe4",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This release provides insights into training methods that could enhance understanding of LLM internals and improve inference efficiency in production environments.",
+      "candidateId": "r14a935eb050cef1",
+      "topics": [
+        "training"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-16T23:01:50+00:00",
+      "score": 10.0,
+      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-8B-nfe2",
+      "title": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe2",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-8B-nfe2",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Nemotron/distill-8B-nfe2/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Nemotron",
+      "version": "distill-8B-nfe2",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This release provides insights into training methods that could enhance understanding of LLM internals and improve inference efficiency in production environments.",
+      "candidateId": "r13072a2022b097c",
+      "topics": [
+        "training"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-16T23:01:53+00:00",
+      "score": 10.0,
+      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-3B-nfe8",
+      "title": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe8",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-3B-nfe8",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Nemotron/Sigma-distill-3B-nfe8/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Nemotron",
+      "version": "Sigma-distill-3B-nfe8",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
+      "candidateId": "r8af2407400f1a20",
+      "topics": [
+        "training"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-16T23:01:55+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-spec-8B",
+      "title": "nvidia/Nemotron-Labs-Sigma-distill-spec-8B",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-spec-8B",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Nemotron/Sigma-distill-spec-8B/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Nemotron",
+      "version": "Sigma-distill-spec-8B",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
+      "candidateId": "ra9d9607e2349ace",
+      "topics": [
+        "training"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-16T23:01:57+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-3B-nfe16",
+      "title": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe16",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-3B-nfe16",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Nemotron/Sigma-distill-3B-nfe16/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Nemotron",
+      "version": "Sigma-distill-3B-nfe16",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
+      "candidateId": "rea6d184dd07cf30",
+      "topics": [
+        "training"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-16T23:01:59+00:00",
+      "score": 8.0,
+      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-3B-nfe4",
+      "title": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe4",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-3B-nfe4",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Nemotron/Sigma-distill-3B-nfe4/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Nemotron",
+      "version": "Sigma-distill-3B-nfe4",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
+      "candidateId": "r54fb4b886d1737a",
+      "topics": [
+        "training"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-16T23:02:01+00:00",
+      "score": 10.0,
+      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-3B-nfe2",
+      "title": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe2",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-3B-nfe2",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "tier": "primary",
+      "entity": "nvidia/Nemotron/Sigma-distill-3B-nfe2/new_model",
+      "eventType": "new_model",
+      "vendor": "nvidia",
+      "family": "Nemotron",
+      "version": "Sigma-distill-3B-nfe2",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2,
+      "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
+      "candidateId": "r913eca282ea65ba",
+      "topics": [
+        "training"
+      ]
     }
   ]
 }
