@@ -499,6 +499,21 @@
       "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
       "seenAt": "2026-11-16T23:02:01+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r6663c456f6bfdcb",
+      "url": "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4-QAD",
+      "title": "nvidia/Qwen3.8-Flash-Next-NVFP4-QAD",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release may provide insights into LLM architecture and deployment practices relevant to mechanistic interpretability and production serving.",
+      "seenAt": "2026-11-17T11:01:28+00:00",
+      "status": "radar"
     }
   ]
 }
