@@ -514,6 +514,36 @@
       "whyRelevant": "This release may provide insights into LLM architecture and deployment practices relevant to mechanistic interpretability and production serving.",
       "seenAt": "2026-11-17T11:01:28+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rca0de299d1179e3",
+      "url": "https://huggingface.co/nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
+      "title": "nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into LLM architectures and weights, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
+      "seenAt": "2026-11-17T17:01:41+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "ref401d150015e20",
+      "url": "https://huggingface.co/nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+      "title": "nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into LLM architectures and weights, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
+      "seenAt": "2026-11-17T17:01:43+00:00",
+      "status": "radar"
     }
   ]
 }
