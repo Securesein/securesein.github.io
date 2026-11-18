@@ -321,7 +321,8 @@
       "candidateId": "r271fbac047ec99b",
       "topics": [
         "training"
-      ]
+      ],
+      "attempts": 1
     },
     {
       "channel": "releases",
@@ -353,43 +354,6 @@
       "relevanceScore": 11.2,
       "whyRelevant": "This release provides insights into training methods that could enhance understanding of LLM internals and improve inference efficiency in production environments.",
       "candidateId": "r14a935eb050cef1",
-      "topics": [
-        "training"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-11-16T23:01:50+00:00",
-      "score": 10.0,
-      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-8B-nfe2",
-      "title": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe2",
-      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-8B-nfe2",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Nemotron/distill-8B-nfe2/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Nemotron",
-      "version": "distill-8B-nfe2",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 11.2,
-      "whyRelevant": "This release provides insights into training methods that could enhance understanding of LLM internals and improve inference efficiency in production environments.",
-      "candidateId": "r13072a2022b097c",
       "topics": [
         "training"
       ]
@@ -745,6 +709,42 @@
       "topics": [
         "llms",
         "reasoning"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-18T05:01:23+00:00",
+      "score": 8.0,
+      "itemId": "hf:tencent/Hy4-flash",
+      "title": "tencent/Hy4-flash",
+      "url": "https://huggingface.co/tencent/Hy4-flash",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/Hy4-flash/-/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "Hy4-flash",
+      "version": "",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "corroborated_48h +1"
+      ],
+      "corroborators": [
+        "HF org — Tencent (Hunyuan): tencent/Hy4-flash-base"
+      ],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Hy4-flash offers insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "candidateId": "rc38af7f5e448585",
+      "topics": [
+        "llms"
       ]
     }
   ]

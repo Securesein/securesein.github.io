@@ -391,6 +391,14 @@
       "publishedAt": "2026-11-13T05:01:17+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 21.2
+    },
+    {
+      "slug": "nvidia-releases-nemotron-labs-sigma-distill-8b-nfe2-model",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-18T05:01:31+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2
     }
   ]
 }
