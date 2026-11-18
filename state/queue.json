@@ -256,44 +256,6 @@
     },
     {
       "channel": "releases",
-      "queuedAt": "2026-11-16T23:01:45+00:00",
-      "score": 10.0,
-      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-8B-nfe8",
-      "title": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe8",
-      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-8B-nfe8",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Nemotron/distill-8B-nfe8/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Nemotron",
-      "version": "distill-8B-nfe8",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 11.2,
-      "whyRelevant": "This release provides insights into training methods that could enhance understanding of LLM internals and improve inference efficiency in production environments.",
-      "candidateId": "r271fbac047ec99b",
-      "topics": [
-        "training"
-      ],
-      "attempts": 2
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-16T23:01:48+00:00",
       "score": 8.0,
       "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-8B-nfe4",
@@ -325,44 +287,6 @@
       "topics": [
         "training"
       ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-11-16T23:01:53+00:00",
-      "score": 10.0,
-      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-3B-nfe8",
-      "title": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe8",
-      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-3B-nfe8",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Nemotron/Sigma-distill-3B-nfe8/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Nemotron",
-      "version": "Sigma-distill-3B-nfe8",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 11.2,
-      "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
-      "candidateId": "r8af2407400f1a20",
-      "topics": [
-        "training"
-      ],
-      "attempts": 1
     },
     {
       "channel": "releases",
@@ -465,44 +389,6 @@
       "topics": [
         "training"
       ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-11-16T23:02:01+00:00",
-      "score": 10.0,
-      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-3B-nfe2",
-      "title": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe2",
-      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-3B-nfe2",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Nemotron/Sigma-distill-3B-nfe2/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Nemotron",
-      "version": "Sigma-distill-3B-nfe2",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 11.2,
-      "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
-      "candidateId": "r913eca282ea65ba",
-      "topics": [
-        "training"
-      ],
-      "attempts": 1
     },
     {
       "channel": "releases",

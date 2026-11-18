@@ -440,7 +440,8 @@
       "relevanceScore": 11.2,
       "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
       "seenAt": "2026-11-16T23:01:53+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "nvidia-releases-nemotron-labs-sigma-distill-3b-nfe8-model"
     },
     {
       "id": "ra9d9607e2349ace",
@@ -500,7 +501,8 @@
       "relevanceScore": 11.2,
       "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
       "seenAt": "2026-11-16T23:02:01+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "nvidia-releases-nemotron-labs-sigma-distill-3b-nfe2-model"
     },
     {
       "id": "r6663c456f6bfdcb",
