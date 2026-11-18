@@ -378,7 +378,8 @@
       "relevanceScore": 11.2,
       "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
       "seenAt": "2026-11-16T23:01:43+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "nvidia-releases-nemotron-labs-sigma-distill-8b-nfe16-model"
     },
     {
       "id": "r271fbac047ec99b",
@@ -529,7 +530,8 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This release provides insights into LLM architectures and weights, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
       "seenAt": "2026-11-17T17:01:41+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "nvidia-releases-llama-3-2-1b-qwen3-8-27b-draft-model"
     },
     {
       "id": "ref401d150015e20",

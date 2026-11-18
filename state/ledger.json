@@ -399,6 +399,22 @@
       "publishedAt": "2026-11-18T05:01:31+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 11.2
+    },
+    {
+      "slug": "nvidia-releases-llama-3-2-1b-qwen3-8-27b-draft-model",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-18T11:01:22+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
+    },
+    {
+      "slug": "nvidia-releases-nemotron-labs-sigma-distill-8b-nfe16-model",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-18T11:01:33+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 11.2
     }
   ]
 }

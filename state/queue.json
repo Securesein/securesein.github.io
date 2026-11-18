@@ -33,7 +33,7 @@
       "topics": [
         "llms"
       ],
-      "attempts": 1
+      "attempts": 2
     },
     {
       "channel": "releases",
@@ -216,7 +216,8 @@
       "candidateId": "r8b9c547f34dbdc5",
       "topics": [
         "multimodal"
-      ]
+      ],
+      "attempts": 1
     },
     {
       "channel": "releases",
@@ -250,41 +251,8 @@
       "candidateId": "rb4eaa7e04594d16",
       "topics": [
         "training"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-11-16T23:01:43+00:00",
-      "score": 8.0,
-      "itemId": "hf:nvidia/Nemotron-Labs-Sigma-distill-8B-nfe16",
-      "title": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe16",
-      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-distill-8B-nfe16",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Nemotron/Sigma-distill-8B-nfe16/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Nemotron",
-      "version": "Sigma-distill-8B-nfe16",
-      "openWeights": false,
-      "modality": [
-        "text"
       ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 11.2,
-      "whyRelevant": "This release provides insights into training methodologies that can enhance understanding of LLM internals and improve inference efficiency in production environments.",
-      "candidateId": "r5c0aec89e7fd86e",
-      "topics": [
-        "training"
-      ]
+      "attempts": 1
     },
     {
       "channel": "releases",
@@ -322,7 +290,7 @@
       "topics": [
         "training"
       ],
-      "attempts": 1
+      "attempts": 2
     },
     {
       "channel": "releases",
@@ -393,7 +361,8 @@
       "candidateId": "r8af2407400f1a20",
       "topics": [
         "training"
-      ]
+      ],
+      "attempts": 1
     },
     {
       "channel": "releases",
@@ -532,7 +501,8 @@
       "candidateId": "r913eca282ea65ba",
       "topics": [
         "training"
-      ]
+      ],
+      "attempts": 1
     },
     {
       "channel": "releases",
@@ -564,43 +534,6 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This release may provide insights into LLM architecture and deployment practices relevant to mechanistic interpretability and production serving.",
       "candidateId": "r6663c456f6bfdcb",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-11-17T17:01:41+00:00",
-      "score": 10.0,
-      "itemId": "hf:nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
-      "title": "nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
-      "url": "https://huggingface.co/nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Llama/3.2/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Llama",
-      "version": "3.2",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This release provides insights into LLM architectures and weights, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
-      "candidateId": "rca0de299d1179e3",
       "topics": [
         "llms"
       ]

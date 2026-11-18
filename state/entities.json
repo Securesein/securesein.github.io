@@ -208,6 +208,18 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "nvidia/Llama/3.2/new_model": {
+      "slug": "nvidia-releases-llama-3-2-1b-qwen3-8-27b-draft-model",
+      "coveredAt": "2026-11-18T11:01:22+00:00",
+      "facts": [
+        "open_weights"
+      ]
+    },
+    "nvidia/Nemotron/Sigma-distill-8B-nfe16/new_model": {
+      "slug": "nvidia-releases-nemotron-labs-sigma-distill-8b-nfe16-model",
+      "coveredAt": "2026-11-18T11:01:33+00:00",
+      "facts": []
     }
   }
 }
