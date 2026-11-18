@@ -2,41 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-11-11T17:01:29+00:00",
-      "score": 8.0,
-      "itemId": "hf:nvidia/Kimi-K3.1-Pro-NVFP4",
-      "title": "nvidia/Kimi-K3.1-Pro-NVFP4",
-      "url": "https://huggingface.co/nvidia/Kimi-K3.1-Pro-NVFP4",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Kimi/K3.1-Pro-NVFP4/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Kimi",
-      "version": "K3.1-Pro-NVFP4",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model's open weights and architecture provide insights into LLM internals, aiding research in mechanistic interpretability and efficient reasoning.",
-      "candidateId": "re8c4d9a8cbab77f",
-      "topics": [
-        "llms"
-      ],
-      "attempts": 2
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-11T23:01:31+00:00",
       "score": 7.0,
       "itemId": "d99a0fab6b688a1d",
@@ -562,6 +527,43 @@
       "relevanceScore": 21.2,
       "whyRelevant": "Hy4-flash offers insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
       "candidateId": "rc38af7f5e448585",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-18T23:01:20+00:00",
+      "score": 10.0,
+      "itemId": "hf:microsoft/Aion-1.0-Instruct-2.3B",
+      "title": "microsoft/Aion-1.0-Instruct-2.3B",
+      "url": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+      "source": "HF org — Microsoft (Phi)",
+      "tier": "primary",
+      "entity": "microsoft/Aion/1.0/new_model",
+      "eventType": "new_model",
+      "vendor": "microsoft",
+      "family": "Aion",
+      "version": "1.0",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "candidateId": "r5cb1c2f37c87f41",
       "topics": [
         "llms"
       ]

@@ -595,6 +595,21 @@
       "whyRelevant": "Hy4-flash offers insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
       "seenAt": "2026-11-18T05:01:23+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r5cb1c2f37c87f41",
+      "url": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+      "title": "microsoft/Aion-1.0-Instruct-2.3B",
+      "source": "HF org — Microsoft (Phi)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "seenAt": "2026-11-18T23:01:20+00:00",
+      "status": "radar"
     }
   ]
 }
