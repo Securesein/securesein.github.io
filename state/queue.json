@@ -2,39 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-11-11T23:01:31+00:00",
-      "score": 7.0,
-      "itemId": "d99a0fab6b688a1d",
-      "title": "Introducing Grok Bot 1.0",
-      "url": "https://x.ai/news/grok-bot-1-0",
-      "source": "xAI — News",
-      "tier": "primary",
-      "entity": "xai/Grok Bot/1.0/new_model",
-      "eventType": "new_model",
-      "vendor": "xai",
-      "family": "Grok Bot",
-      "version": "1.0",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 0.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "Grok Bot 1.0 may provide insights into LLM deployment and operational efficiency, but lacks depth in mechanistic interpretability and internal workings.",
-      "candidateId": "re31c17dbbe3f793",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-12T05:01:51+00:00",
       "score": 7.0,
       "itemId": "03fba84e76b2bb2cd0cf13aa4cce5e2c0f8bb648",
