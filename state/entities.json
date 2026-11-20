@@ -234,6 +234,13 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "microsoft/Aion/1.0/new_model": {
+      "slug": "microsoft-unveils-aion-1-0-instruct-for-on-device-ai",
+      "coveredAt": "2026-11-20T05:02:12+00:00",
+      "facts": [
+        "open_weights"
+      ]
     }
   }
 }

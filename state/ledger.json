@@ -431,6 +431,14 @@
       "publishedAt": "2026-11-18T17:01:28+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 11.2
+    },
+    {
+      "slug": "microsoft-unveils-aion-1-0-instruct-for-on-device-ai",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-20T05:02:12+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
     }
   ]
 }

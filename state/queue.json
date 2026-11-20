@@ -2,42 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-11-12T23:01:22+00:00",
-      "score": 6.0,
-      "itemId": "0b3f009ceb72ebd0",
-      "title": "Retiring Advanced and Standard Voice",
-      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#retiring-advanced-and-standard-voice",
-      "source": "OpenAI — Release notes",
-      "tier": "primary",
-      "entity": "openai/Voice/-/deprecation",
-      "eventType": "deprecation",
-      "vendor": "openai",
-      "family": "Voice",
-      "version": "",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_deprecation +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "deprecation"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This item is relevant as it may impact the deployment and serving of LLMs, affecting their interpretability and security in production environments.",
-      "candidateId": "rdc5ef85beff3915",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-16T23:01:39+00:00",
       "score": 8.0,
       "itemId": "f91cdb9cc8907f27",
@@ -420,43 +384,6 @@
     },
     {
       "channel": "releases",
-      "queuedAt": "2026-11-18T23:01:20+00:00",
-      "score": 10.0,
-      "itemId": "hf:microsoft/Aion-1.0-Instruct-2.3B",
-      "title": "microsoft/Aion-1.0-Instruct-2.3B",
-      "url": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
-      "source": "HF org — Microsoft (Phi)",
-      "tier": "primary",
-      "entity": "microsoft/Aion/1.0/new_model",
-      "eventType": "new_model",
-      "vendor": "microsoft",
-      "family": "Aion",
-      "version": "1.0",
-      "openWeights": true,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "open_weights +2",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [
-        "open_weights"
-      ],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This model provides insights into LLM architecture and deployment, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
-      "candidateId": "r5cb1c2f37c87f41",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-19T11:01:11+00:00",
       "score": 7.0,
       "itemId": "hf:tencent/WeVisForensics",
@@ -486,6 +413,72 @@
       "candidateId": "rd1c6c6e7356d32e",
       "topics": [
         "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-20T05:02:05+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/Hy4-base",
+      "title": "tencent/Hy4-base",
+      "url": "https://huggingface.co/tencent/Hy4-base",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/Hy4/base/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "Hy4",
+      "version": "base",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "Hy4-base provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
+      "candidateId": "r89866f0f158ad64",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-20T05:02:08+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/WeMM-Video-2B",
+      "title": "tencent/WeMM-Video-2B",
+      "url": "https://huggingface.co/tencent/WeMM-Video-2B",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/WeMM-Video/2B/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "WeMM-Video",
+      "version": "2B",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "This model's multimodal capabilities may provide insights into LLM interpretability and efficiency in reasoning, relevant for understanding internal mechanisms and deployment.",
+      "candidateId": "r78964bd9426c799",
+      "topics": [
+        "multimodal"
       ]
     }
   ]
