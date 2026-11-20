@@ -480,6 +480,138 @@
       "topics": [
         "multimodal"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-20T11:01:21+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/WeMM-Video-2B-NVFP4",
+      "title": "tencent/WeMM-Video-2B-NVFP4",
+      "url": "https://huggingface.co/tencent/WeMM-Video-2B-NVFP4",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/WeMM-Video/2B-NVFP4/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "WeMM-Video",
+      "version": "2B-NVFP4",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "This model's multimodal capabilities may provide insights into LLM interpretability and efficiency in reasoning, relevant for understanding internal mechanisms and deployment.",
+      "candidateId": "r5ab03ec8127d5ea",
+      "topics": [
+        "multimodal"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-20T11:01:23+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/WeMM-Video-4B-NVFP4",
+      "title": "tencent/WeMM-Video-4B-NVFP4",
+      "url": "https://huggingface.co/tencent/WeMM-Video-4B-NVFP4",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/WeMM-Video/4B-NVFP4/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "WeMM-Video",
+      "version": "4B-NVFP4",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "This model's multimodal capabilities may provide insights into LLM interpretability and efficiency in reasoning, relevant for understanding internal mechanisms and deployment.",
+      "candidateId": "r8a8459fdeb709ba",
+      "topics": [
+        "multimodal"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-20T11:01:25+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/WeMM-Video-4B",
+      "title": "tencent/WeMM-Video-4B",
+      "url": "https://huggingface.co/tencent/WeMM-Video-4B",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/WeMM-Video/4B/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "WeMM-Video",
+      "version": "4B",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "This model's multimodal capabilities may provide insights into LLM interpretability and efficiency in reasoning, relevant for understanding internal mechanisms and deployment.",
+      "candidateId": "r159d97ac96bbb2c",
+      "topics": [
+        "multimodal"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-20T11:01:27+00:00",
+      "score": 7.0,
+      "itemId": "hf:tencent/WeMM-Video-9B-NVFP4",
+      "title": "tencent/WeMM-Video-9B-NVFP4",
+      "url": "https://huggingface.co/tencent/WeMM-Video-9B-NVFP4",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/WeMM-Video/9B-NVFP4/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "WeMM-Video",
+      "version": "9B-NVFP4",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 25.2,
+      "whyRelevant": "This model's multimodal capabilities may provide insights into LLM interpretability and efficiency in reasoning, relevant for understanding internal mechanisms and deployment.",
+      "candidateId": "rc9bbd60608dc300",
+      "topics": [
+        "multimodal"
+      ]
     }
   ]
 }
