@@ -612,6 +612,42 @@
       "topics": [
         "multimodal"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-20T23:01:38+00:00",
+      "score": 9.0,
+      "itemId": "hf:allenai/ACE2.5-ERA5",
+      "title": "allenai/ACE2.5-ERA5",
+      "url": "https://huggingface.co/allenai/ACE2.5-ERA5",
+      "source": "HF org — Ai2",
+      "tier": "primary",
+      "entity": "ai2/ACE/2.5/new_model",
+      "eventType": "new_model",
+      "vendor": "ai2",
+      "family": "ACE",
+      "version": "2.5",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "ACE2.5-ERA5 provides insights into LLM behavior and performance, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "candidateId": "rb509869c14e5791",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }

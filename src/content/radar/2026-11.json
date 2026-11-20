@@ -716,6 +716,21 @@
       "whyRelevant": "This model's multimodal capabilities may provide insights into LLM interpretability and efficiency in reasoning, relevant for understanding internal mechanisms and deployment.",
       "seenAt": "2026-11-20T11:01:27+00:00",
       "status": "radar"
+    },
+    {
+      "id": "rb509869c14e5791",
+      "url": "https://huggingface.co/allenai/ACE2.5-ERA5",
+      "title": "allenai/ACE2.5-ERA5",
+      "source": "HF org — Ai2",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "ACE2.5-ERA5 provides insights into LLM behavior and performance, relevant for understanding mechanistic interpretability and enhancing inference efficiency in production settings.",
+      "seenAt": "2026-11-20T23:01:38+00:00",
+      "status": "radar"
     }
   ]
 }
