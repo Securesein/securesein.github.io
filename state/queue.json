@@ -648,6 +648,78 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-21T05:01:57+00:00",
+      "score": 6.0,
+      "itemId": "579952",
+      "title": "Retirement: Support for Azure Functions OpenAI Extension ends on April 20, 2027",
+      "url": "https://azure.microsoft.com/updates?id=579952",
+      "source": "Microsoft — Azure updates",
+      "tier": "primary",
+      "entity": "microsoft/Azure Functions OpenAI Extension/-/deprecation",
+      "eventType": "deprecation",
+      "vendor": "microsoft",
+      "family": "Azure Functions OpenAI Extension",
+      "version": "",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_deprecation +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "deprecation"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 52.7,
+      "whyRelevant": "This item is relevant as it impacts the deployment and serving of LLMs in production using Azure Functions, affecting operational efficiency and security.",
+      "candidateId": "r82a923cd1deb92c",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-21T05:01:59+00:00",
+      "score": 9.0,
+      "itemId": "hf:allenai/LitAgent-Joint-SFT-9B-lg7eae-2n",
+      "title": "allenai/LitAgent-Joint-SFT-9B-lg7eae-2n",
+      "url": "https://huggingface.co/allenai/LitAgent-Joint-SFT-9B-lg7eae-2n",
+      "source": "HF org — Ai2",
+      "tier": "primary",
+      "entity": "ai2/LitAgent/Joint-SFT-9B-lg7eae-2n/new_model",
+      "eventType": "new_model",
+      "vendor": "ai2",
+      "family": "LitAgent",
+      "version": "Joint-SFT-9B-lg7eae-2n",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 0.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's open-weight architecture allows for local inference and exploration of LLM mechanisms, relevant for understanding security and reasoning efficiency.",
+      "candidateId": "r95d15702f18b32e",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }
