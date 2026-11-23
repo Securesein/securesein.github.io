@@ -786,6 +786,79 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-23T23:01:36+00:00",
+      "score": 6.0,
+      "itemId": "baedb3cf478ed259",
+      "title": "We announced the deprecation of the Claude Opus 4.5 model ( claude-opus-4-5-20251101 and claude-opus-4-5 ), with retirement on the Claude API scheduled for January 22, 2027. We rec",
+      "url": "https://docs.claude.com/en/release-notes/overview#november-23-2026",
+      "source": "Anthropic — Claude docs release notes",
+      "tier": "primary",
+      "entity": "anthropic/Claude Opus/4.5/deprecation",
+      "eventType": "deprecation",
+      "vendor": "anthropic",
+      "family": "Claude Opus",
+      "version": "4.5",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_deprecation +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "deprecation"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "The deprecation of Claude Opus 4.5 highlights the importance of understanding model lifecycles and implications for deploying and maintaining LLMs in production.",
+      "candidateId": "rdcb36e28b566a7a",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-23T23:01:38+00:00",
+      "score": 6.0,
+      "itemId": "577474",
+      "title": "Retirement: Azure AI Content Safety selected features will be retired on April 30, 2027",
+      "url": "https://azure.microsoft.com/updates?id=577474",
+      "source": "Microsoft — Azure updates",
+      "tier": "primary",
+      "entity": "microsoft/Azure AI Content Safety/-/deprecation",
+      "eventType": "deprecation",
+      "vendor": "microsoft",
+      "family": "Azure AI Content Safety",
+      "version": "",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_deprecation +2",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "deprecation"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 46.6,
+      "whyRelevant": "This retirement may impact the deployment and safety of LLMs in production, affecting interpretability and security measures in AI applications.",
+      "candidateId": "rd4fd12722a5430e",
+      "topics": [
+        "ai-safety",
+        "multimodal"
+      ]
     }
   ]
 }
