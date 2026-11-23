@@ -761,6 +761,21 @@
       "whyRelevant": "This model's open-weight architecture allows for local inference and exploration of LLM mechanisms, relevant for understanding security and reasoning efficiency.",
       "seenAt": "2026-11-21T05:01:59+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r6df1cc97850abad",
+      "url": "https://huggingface.co/tencent/WeMM-Ecom-35B-A3B",
+      "title": "tencent/WeMM-Ecom-35B-A3B",
+      "source": "HF org — Tencent (Hunyuan)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's architecture and training methods provide insights into LLM behavior, relevant for understanding mechanistic interpretability and enhancing inference efficiency.",
+      "seenAt": "2026-11-23T11:01:20+00:00",
+      "status": "radar"
     }
   ]
 }

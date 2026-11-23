@@ -4413,6 +4413,22 @@
           "estimated_calls": 0
         }
       }
+    },
+    {
+      "at": "2026-11-23T11:01:20+00:00",
+      "channel": "releases",
+      "calls": 3,
+      "usd": 0.000192,
+      "aborted": false,
+      "by_model": {
+        "gpt-4o-mini": {
+          "calls": 3,
+          "usd": 0.000192,
+          "prompt_tokens": 750,
+          "completion_tokens": 132,
+          "estimated_calls": 0
+        }
+      }
     }
   ]
 }
