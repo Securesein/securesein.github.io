@@ -2,40 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-11-17T11:01:28+00:00",
-      "score": 8.0,
-      "itemId": "hf:nvidia/Qwen3.8-Flash-Next-NVFP4-QAD",
-      "title": "nvidia/Qwen3.8-Flash-Next-NVFP4-QAD",
-      "url": "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4-QAD",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Qwen/3.8/new_model",
-      "eventType": "new_model",
-      "vendor": "nvidia",
-      "family": "Qwen",
-      "version": "3.8",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4",
-        "tier1_vendor +1"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This release may provide insights into LLM architecture and deployment practices relevant to mechanistic interpretability and production serving.",
-      "candidateId": "r6663c456f6bfdcb",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-17T17:01:43+00:00",
       "score": 8.0,
       "itemId": "hf:nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
