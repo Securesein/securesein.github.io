@@ -2,43 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-11-17T17:01:43+00:00",
-      "score": 8.0,
-      "itemId": "hf:nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
-      "title": "nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
-      "url": "https://huggingface.co/nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
-      "source": "HF org — NVIDIA (Nemotron)",
-      "tier": "primary",
-      "entity": "nvidia/Qwen/3.8/version_bump",
-      "eventType": "version_bump",
-      "vendor": "nvidia",
-      "family": "Qwen",
-      "version": "3.8",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_version_bump_major +3",
-        "tier1_vendor +1",
-        "corroborated_48h +1"
-      ],
-      "corroborators": [
-        "HF org — NVIDIA (Nemotron): nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft"
-      ],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "This release provides insights into LLM architectures and weights, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
-      "candidateId": "ref401d150015e20",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-17T23:01:41+00:00",
       "score": 7.0,
       "itemId": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
