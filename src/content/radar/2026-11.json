@@ -822,6 +822,66 @@
       "whyRelevant": "This retirement may impact the deployment and safety of LLMs in production, affecting interpretability and security measures in AI applications.",
       "seenAt": "2026-11-23T23:01:38+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r40f23ce8b2c3347",
+      "url": "https://huggingface.co/tencent/OmniEVIE-4B",
+      "title": "tencent/OmniEVIE-4B",
+      "source": "HF org — Tencent (Hunyuan)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "OmniEVIE-4B's open-weight model provides insights into LLM internals and mechanistic interpretability, relevant for enhancing reasoning efficiency and security in production.",
+      "seenAt": "2026-11-24T05:02:07+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "refcb80affdfd60a",
+      "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Preview-BF16",
+      "title": "baidu/ERNIE-5.5-Flash-Preview-BF16",
+      "source": "HF org — Baidu (ERNIE)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model's open-weight architecture allows for local inference and exploration of LLM mechanisms, relevant for understanding internal workings and enhancing security.",
+      "seenAt": "2026-11-24T05:02:09+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r95b90f3b542a22d",
+      "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Preview",
+      "title": "baidu/ERNIE-5.5-Flash-Preview",
+      "source": "HF org — Baidu (ERNIE)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This release provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively.",
+      "seenAt": "2026-11-24T05:02:12+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r7999fdcda9c3443",
+      "url": "https://huggingface.co/nvidia/MiMo-V2.6-Flash-RL-NVFP4",
+      "title": "nvidia/MiMo-V2.6-Flash-RL-NVFP4",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "reinforcement-learning"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 28.2,
+      "whyRelevant": "This release focuses on reinforcement learning, which may provide insights into model training and deployment strategies relevant to LLMs and their interpretability.",
+      "seenAt": "2026-11-24T05:02:14+00:00",
+      "status": "radar"
     }
   ]
 }
