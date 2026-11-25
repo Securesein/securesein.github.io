@@ -447,6 +447,22 @@
       "publishedAt": "2026-11-25T05:02:07+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 21.2
+    },
+    {
+      "slug": "tencent-releases-wevisforensics-for-ai-generated-video-detection",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-25T11:01:54+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
+    },
+    {
+      "slug": "tencent-releases-hy4-moe-model-for-multimodal-ai-applications",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-25T11:01:58+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
     }
   ]
 }

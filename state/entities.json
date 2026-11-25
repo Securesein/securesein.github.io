@@ -248,6 +248,16 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "tencent/WeVisForensics/-/new_model": {
+      "slug": "tencent-releases-wevisforensics-for-ai-generated-video-detection",
+      "coveredAt": "2026-11-25T11:01:54+00:00",
+      "facts": []
+    },
+    "tencent/Hy4/base/new_model": {
+      "slug": "tencent-releases-hy4-moe-model-for-multimodal-ai-applications",
+      "coveredAt": "2026-11-25T11:01:58+00:00",
+      "facts": []
     }
   }
 }

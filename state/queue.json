@@ -2,72 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-11-19T11:01:11+00:00",
-      "score": 7.0,
-      "itemId": "hf:tencent/WeVisForensics",
-      "title": "tencent/WeVisForensics",
-      "url": "https://huggingface.co/tencent/WeVisForensics",
-      "source": "HF org — Tencent (Hunyuan)",
-      "tier": "primary",
-      "entity": "tencent/WeVisForensics/-/new_model",
-      "eventType": "new_model",
-      "vendor": "tencent",
-      "family": "WeVisForensics",
-      "version": "",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "WeVisForensics provides insights into LLM behavior, aiding understanding of internal mechanisms and security implications, relevant for deploying and interpreting models effectively.",
-      "candidateId": "rd1c6c6e7356d32e",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
-      "queuedAt": "2026-11-20T05:02:05+00:00",
-      "score": 7.0,
-      "itemId": "hf:tencent/Hy4-base",
-      "title": "tencent/Hy4-base",
-      "url": "https://huggingface.co/tencent/Hy4-base",
-      "source": "HF org — Tencent (Hunyuan)",
-      "tier": "primary",
-      "entity": "tencent/Hy4/base/new_model",
-      "eventType": "new_model",
-      "vendor": "tencent",
-      "family": "Hy4",
-      "version": "base",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 21.2,
-      "whyRelevant": "Hy4-base provides insights into LLM architecture and performance, relevant for understanding mechanistic interpretability and deploying models effectively in production.",
-      "candidateId": "r89866f0f158ad64",
-      "topics": [
-        "llms"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-20T05:02:08+00:00",
       "score": 7.0,
       "itemId": "hf:tencent/WeMM-Video-2B",
@@ -301,7 +235,8 @@
       "candidateId": "r95d15702f18b32e",
       "topics": [
         "llms"
-      ]
+      ],
+      "attempts": 1
     },
     {
       "channel": "releases",
