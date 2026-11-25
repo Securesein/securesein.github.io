@@ -241,6 +241,13 @@
       "facts": [
         "open_weights"
       ]
+    },
+    "ai2/ACE/2.5/new_model": {
+      "slug": "allenai-releases-ace2-5-era5-climate-emulator",
+      "coveredAt": "2026-11-25T05:02:07+00:00",
+      "facts": [
+        "open_weights"
+      ]
     }
   }
 }

@@ -439,6 +439,14 @@
       "publishedAt": "2026-11-20T05:02:12+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 21.2
+    },
+    {
+      "slug": "allenai-releases-ace2-5-era5-climate-emulator",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-25T05:02:07+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
     }
   ]
 }
