@@ -258,6 +258,16 @@
       "slug": "tencent-releases-hy4-moe-model-for-multimodal-ai-applications",
       "coveredAt": "2026-11-25T11:01:58+00:00",
       "facts": []
+    },
+    "nvidia/Nemotron/3.5-Rerank-1B-BF16/new_model": {
+      "slug": "nvidia-releases-nemotron-3-5-rerank-1b-bf16-for-multimodal-retrieval",
+      "coveredAt": "2026-11-25T23:01:33+00:00",
+      "facts": []
+    },
+    "tencent/WeMM-Video/2B/new_model": {
+      "slug": "tencent-releases-wemm-video-2b-for-multimodal-understanding",
+      "coveredAt": "2026-11-25T23:01:39+00:00",
+      "facts": []
     }
   }
 }

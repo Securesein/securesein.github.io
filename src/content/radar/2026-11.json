@@ -657,7 +657,8 @@
       "relevanceScore": 25.2,
       "whyRelevant": "This model's multimodal capabilities may provide insights into LLM interpretability and efficiency in reasoning, relevant for understanding internal mechanisms and deployment.",
       "seenAt": "2026-11-20T05:02:08+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "tencent-releases-wemm-video-2b-for-multimodal-understanding"
     },
     {
       "id": "r5ab03ec8127d5ea",
@@ -885,6 +886,22 @@
       "whyRelevant": "This release focuses on reinforcement learning, which may provide insights into model training and deployment strategies relevant to LLMs and their interpretability.",
       "seenAt": "2026-11-24T05:02:14+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r5048ea4a2abf586",
+      "url": "https://huggingface.co/nvidia/Nemotron-3.5-Rerank-1B-BF16",
+      "title": "nvidia/Nemotron-3.5-Rerank-1B-BF16",
+      "source": "HF org — NVIDIA (Nemotron)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model provides insights into LLM performance and efficiency, relevant for understanding internal mechanisms and enhancing deployment strategies.",
+      "seenAt": "2026-11-25T23:01:26+00:00",
+      "status": "promoted",
+      "promotedTo": "nvidia-releases-nemotron-3-5-rerank-1b-bf16-for-multimodal-retrieval"
     }
   ]
 }

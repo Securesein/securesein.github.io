@@ -463,6 +463,22 @@
       "publishedAt": "2026-11-25T11:01:58+00:00",
       "qualityScore": 25.0,
       "relevanceScore": 21.2
+    },
+    {
+      "slug": "nvidia-releases-nemotron-3-5-rerank-1b-bf16-for-multimodal-retrieval",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-25T23:01:33+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2
+    },
+    {
+      "slug": "tencent-releases-wemm-video-2b-for-multimodal-understanding",
+      "section": "release",
+      "channel": "releases",
+      "publishedAt": "2026-11-25T23:01:39+00:00",
+      "qualityScore": 25.0,
+      "relevanceScore": 25.2
     }
   ]
 }
