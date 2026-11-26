@@ -917,6 +917,51 @@
       "whyRelevant": "CogACT2-LIBERO provides insights into LLM architectures and mechanisms, relevant for understanding internal workings and enhancing model security and inference efficiency.",
       "seenAt": "2026-11-26T17:01:13+00:00",
       "status": "radar"
+    },
+    {
+      "id": "r24c4337dfc46dda",
+      "url": "https://huggingface.co/microsoft/CogACT2-RoboDojo",
+      "title": "microsoft/CogACT2-RoboDojo",
+      "source": "HF org — Microsoft (Phi)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "CogACT2-RoboDojo provides insights into LLMs' internal mechanisms and deployment strategies, relevant for understanding security and efficiency in model inference.",
+      "seenAt": "2026-11-26T23:01:19+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r6e5990e84dc2297",
+      "url": "https://huggingface.co/microsoft/CogACT2-RoboTwin-CleanRandom",
+      "title": "microsoft/CogACT2-RoboTwin-CleanRandom",
+      "source": "HF org — Microsoft (Phi)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into LLM deployment and security, relevant for understanding mechanistic interpretability and inference efficiency in production environments.",
+      "seenAt": "2026-11-26T23:01:21+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r9ccd6dc570c44c1",
+      "url": "https://huggingface.co/microsoft/CogACT2-RoboTwin-Clean",
+      "title": "microsoft/CogACT2-RoboTwin-Clean",
+      "source": "HF org — Microsoft (Phi)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model may provide insights into LLM behavior and deployment strategies, relevant for understanding mechanistic interpretability and production serving.",
+      "seenAt": "2026-11-26T23:01:23+00:00",
+      "status": "radar"
     }
   ]
 }

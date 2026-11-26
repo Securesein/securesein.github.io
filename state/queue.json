@@ -473,6 +473,108 @@
       "topics": [
         "llms"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-26T23:01:19+00:00",
+      "score": 8.0,
+      "itemId": "hf:microsoft/CogACT2-RoboDojo",
+      "title": "microsoft/CogACT2-RoboDojo",
+      "url": "https://huggingface.co/microsoft/CogACT2-RoboDojo",
+      "source": "HF org — Microsoft (Phi)",
+      "tier": "primary",
+      "entity": "microsoft/CogACT/2/new_model",
+      "eventType": "new_model",
+      "vendor": "microsoft",
+      "family": "CogACT",
+      "version": "2",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "CogACT2-RoboDojo provides insights into LLMs' internal mechanisms and deployment strategies, relevant for understanding security and efficiency in model inference.",
+      "candidateId": "r24c4337dfc46dda",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-26T23:01:21+00:00",
+      "score": 8.0,
+      "itemId": "hf:microsoft/CogACT2-RoboTwin-CleanRandom",
+      "title": "microsoft/CogACT2-RoboTwin-CleanRandom",
+      "url": "https://huggingface.co/microsoft/CogACT2-RoboTwin-CleanRandom",
+      "source": "HF org — Microsoft (Phi)",
+      "tier": "primary",
+      "entity": "microsoft/CogACT2/RoboTwin-CleanRandom/new_model",
+      "eventType": "new_model",
+      "vendor": "microsoft",
+      "family": "CogACT2",
+      "version": "RoboTwin-CleanRandom",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This item may provide insights into LLM deployment and security, relevant for understanding mechanistic interpretability and inference efficiency in production environments.",
+      "candidateId": "r6e5990e84dc2297",
+      "topics": [
+        "llms"
+      ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-26T23:01:23+00:00",
+      "score": 8.0,
+      "itemId": "hf:microsoft/CogACT2-RoboTwin-Clean",
+      "title": "microsoft/CogACT2-RoboTwin-Clean",
+      "url": "https://huggingface.co/microsoft/CogACT2-RoboTwin-Clean",
+      "source": "HF org — Microsoft (Phi)",
+      "tier": "primary",
+      "entity": "microsoft/CogACT2/RoboTwin-Clean/new_model",
+      "eventType": "new_model",
+      "vendor": "microsoft",
+      "family": "CogACT2",
+      "version": "RoboTwin-Clean",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model may provide insights into LLM behavior and deployment strategies, relevant for understanding mechanistic interpretability and production serving.",
+      "candidateId": "r9ccd6dc570c44c1",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }
