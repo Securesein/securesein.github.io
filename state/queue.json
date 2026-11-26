@@ -439,6 +439,40 @@
       "topics": [
         "reinforcement-learning"
       ]
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-26T17:01:13+00:00",
+      "score": 8.0,
+      "itemId": "hf:microsoft/CogACT2-LIBERO",
+      "title": "microsoft/CogACT2-LIBERO",
+      "url": "https://huggingface.co/microsoft/CogACT2-LIBERO",
+      "source": "HF org — Microsoft (Phi)",
+      "tier": "primary",
+      "entity": "microsoft/CogACT/2-LIBERO/new_model",
+      "eventType": "new_model",
+      "vendor": "microsoft",
+      "family": "CogACT",
+      "version": "2-LIBERO",
+      "openWeights": false,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "tier1_vendor +1"
+      ],
+      "corroborators": [],
+      "materialFacts": [],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "CogACT2-LIBERO provides insights into LLM architectures and mechanisms, relevant for understanding internal workings and enhancing model security and inference efficiency.",
+      "candidateId": "r08de10e840e7484",
+      "topics": [
+        "llms"
+      ]
     }
   ]
 }
