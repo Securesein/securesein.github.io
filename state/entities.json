@@ -268,6 +268,11 @@
       "slug": "tencent-releases-wemm-video-2b-for-multimodal-understanding",
       "coveredAt": "2026-11-25T23:01:39+00:00",
       "facts": []
+    },
+    "tencent/WeMM-Video/2B-NVFP4/new_model": {
+      "slug": "tencent-releases-wemm-video-2b-for-bilingual-audio-visual-understanding",
+      "coveredAt": "2026-11-27T11:01:39+00:00",
+      "facts": []
     }
   }
 }

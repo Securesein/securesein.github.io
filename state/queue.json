@@ -2,39 +2,6 @@
   "items": [
     {
       "channel": "releases",
-      "queuedAt": "2026-11-20T11:01:21+00:00",
-      "score": 7.0,
-      "itemId": "hf:tencent/WeMM-Video-2B-NVFP4",
-      "title": "tencent/WeMM-Video-2B-NVFP4",
-      "url": "https://huggingface.co/tencent/WeMM-Video-2B-NVFP4",
-      "source": "HF org — Tencent (Hunyuan)",
-      "tier": "primary",
-      "entity": "tencent/WeMM-Video/2B-NVFP4/new_model",
-      "eventType": "new_model",
-      "vendor": "tencent",
-      "family": "WeMM-Video",
-      "version": "2B-NVFP4",
-      "openWeights": false,
-      "modality": [
-        "text"
-      ],
-      "classifier": "model",
-      "scoreReasons": [
-        "primary_source +3",
-        "event_new_model +4"
-      ],
-      "corroborators": [],
-      "materialFacts": [],
-      "qualityScore": 25.0,
-      "relevanceScore": 25.2,
-      "whyRelevant": "This model's multimodal capabilities may provide insights into LLM interpretability and efficiency in reasoning, relevant for understanding internal mechanisms and deployment.",
-      "candidateId": "r5ab03ec8127d5ea",
-      "topics": [
-        "multimodal"
-      ]
-    },
-    {
-      "channel": "releases",
       "queuedAt": "2026-11-20T11:01:23+00:00",
       "score": 7.0,
       "itemId": "hf:tencent/WeMM-Video-4B-NVFP4",
@@ -472,7 +439,8 @@
       "candidateId": "r08de10e840e7484",
       "topics": [
         "llms"
-      ]
+      ],
+      "attempts": 1
     },
     {
       "channel": "releases",
@@ -506,7 +474,8 @@
       "candidateId": "r24c4337dfc46dda",
       "topics": [
         "llms"
-      ]
+      ],
+      "attempts": 1
     },
     {
       "channel": "releases",
@@ -540,7 +509,8 @@
       "candidateId": "r6e5990e84dc2297",
       "topics": [
         "llms"
-      ]
+      ],
+      "attempts": 1
     },
     {
       "channel": "releases",
@@ -574,7 +544,45 @@
       "candidateId": "r9ccd6dc570c44c1",
       "topics": [
         "llms"
-      ]
+      ],
+      "attempts": 1
+    },
+    {
+      "channel": "releases",
+      "queuedAt": "2026-11-27T11:01:30+00:00",
+      "score": 9.0,
+      "itemId": "hf:tencent/Hy-Embodied-Apexio-1.0",
+      "title": "tencent/Hy-Embodied-Apexio-1.0",
+      "url": "https://huggingface.co/tencent/Hy-Embodied-Apexio-1.0",
+      "source": "HF org — Tencent (Hunyuan)",
+      "tier": "primary",
+      "entity": "tencent/Hy-Embodied-Apexio/1.0/new_model",
+      "eventType": "new_model",
+      "vendor": "tencent",
+      "family": "Hy-Embodied-Apexio",
+      "version": "1.0",
+      "openWeights": true,
+      "modality": [
+        "text"
+      ],
+      "classifier": "model",
+      "scoreReasons": [
+        "primary_source +3",
+        "event_new_model +4",
+        "open_weights +2"
+      ],
+      "corroborators": [],
+      "materialFacts": [
+        "open_weights"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model may provide insights into LLM architecture and deployment strategies, relevant for understanding mechanistic interpretability and production serving.",
+      "candidateId": "r5543f509b1c3ad7",
+      "topics": [
+        "llms"
+      ],
+      "attempts": 1
     }
   ]
 }

@@ -673,7 +673,8 @@
       "relevanceScore": 25.2,
       "whyRelevant": "This model's multimodal capabilities may provide insights into LLM interpretability and efficiency in reasoning, relevant for understanding internal mechanisms and deployment.",
       "seenAt": "2026-11-20T11:01:21+00:00",
-      "status": "radar"
+      "status": "promoted",
+      "promotedTo": "tencent-releases-wemm-video-2b-for-bilingual-audio-visual-understanding"
     },
     {
       "id": "r8a8459fdeb709ba",
@@ -961,6 +962,21 @@
       "relevanceScore": 21.2,
       "whyRelevant": "This model may provide insights into LLM behavior and deployment strategies, relevant for understanding mechanistic interpretability and production serving.",
       "seenAt": "2026-11-26T23:01:23+00:00",
+      "status": "radar"
+    },
+    {
+      "id": "r5543f509b1c3ad7",
+      "url": "https://huggingface.co/tencent/Hy-Embodied-Apexio-1.0",
+      "title": "tencent/Hy-Embodied-Apexio-1.0",
+      "source": "HF org — Tencent (Hunyuan)",
+      "section": "release",
+      "topics": [
+        "llms"
+      ],
+      "qualityScore": 25.0,
+      "relevanceScore": 21.2,
+      "whyRelevant": "This model may provide insights into LLM architecture and deployment strategies, relevant for understanding mechanistic interpretability and production serving.",
+      "seenAt": "2026-11-27T11:01:30+00:00",
       "status": "radar"
     }
   ]
